@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 const SITE_TITLE = 'Custom Gift Hampers & Chocolate Bouquets | Hamper Queen';
@@ -6,10 +6,20 @@ const SITE_DESCRIPTION =
   'Custom gift hampers and chocolate bouquets from ₹799 — velvet trunks, photo keepsakes, same-day dispatch from Mumbai with free delivery across India.';
 const SITE_URL = 'https://hamper-queen.vercel.app';
 
+export const viewport: Viewport = {
+  themeColor: '#141210',
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
+  manifest: '/manifest.webmanifest',
+  appleWebApp: {
+    title: 'Hamper Queen',
+    capable: true,
+    statusBarStyle: 'default',
+  },
   keywords: [
     'custom gift hampers',
     'chocolate bouquets',
@@ -67,6 +77,7 @@ const organizationJsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/hamper.png`,
   telephone: '+918080580105',
+  email: 'mailto:hamperqueen20@gmail.com',
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+918080580105',

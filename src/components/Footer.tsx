@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, Sparkles, Crown } from 'lucide-react';
 import { HamperQueenLogo } from './HamperQueenLogo';
 import { LanguageMode } from '../types';
 import { TRANSLATIONS } from '../data/translations';
+import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
 
 interface FooterProps {
   onNavigate: (tab: string) => void;
@@ -11,6 +12,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate, language = 'en' }) => {
   const t = TRANSLATIONS[language];
+  const { phone, phoneDisplay, email } = HAMPER_QUEEN_OFFICIAL_CONTACT;
 
   return (
     <footer className="bg-[#FFFDF9] text-[#141414] border-t border-[#EAE5D9] pt-16 pb-12 overflow-x-hidden">
@@ -79,7 +81,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, language = 'en' }) =
               <div className="pt-2 border-t border-[#F0EBE0] flex items-center justify-between">
                 <span className="text-[11px] text-[#7A7264] font-medium">Have a special request?</span>
                 <a
-                  href="https://wa.me/918080580105?text=Hi%20Ms.%20Supriya%2C%20I%20would%20like%20to%20discuss%20a%20custom%20hamper%20order."
+                  href={`https://wa.me/91${phone}?text=${encodeURIComponent(
+                    'Hi Ms. Supriya, I would like to discuss a custom hamper order.'
+                  )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs font-bold text-[#8C6821] hover:underline cursor-pointer"
@@ -195,15 +199,32 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, language = 'en' }) =
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#B8860B] shrink-0" />
-                <span className="font-semibold text-[#141414]">Call / WhatsApp: +91 8080580105</span>
+                <a
+                  href={`tel:+91${phone}`}
+                  className="font-semibold text-[#141414] hover:text-[#B8860B] transition-colors cursor-pointer underline-offset-2 hover:underline"
+                >
+                  Call / WhatsApp: {phoneDisplay}
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#B8860B] shrink-0" />
-                <span>hamperqueen20@gmail.com</span>
+                <a
+                  href={`mailto:${email}?subject=${encodeURIComponent('Hamper Queen Order Enquiry')}`}
+                  className="text-[#141414] hover:text-[#B8860B] transition-colors cursor-pointer underline-offset-2 hover:underline break-all"
+                >
+                  {email}
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Crown className="w-4 h-4 text-[#B8860B] shrink-0" />
-                <span className="font-semibold text-[#141414]">Instagram: @hamper_queen</span>
+                <a
+                  href="https://www.instagram.com/hamper_queen/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-[#141414] hover:text-[#B8860B] transition-colors cursor-pointer underline-offset-2 hover:underline"
+                >
+                  Instagram: @hamper_queen
+                </a>
               </li>
             </ul>
 

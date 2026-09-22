@@ -4,6 +4,7 @@ import { BROCHURES } from '../data/itemsData';
 import { BrochureItem } from '../types';
 import { ItemGraphic } from './ItemGraphic';
 import { royaleLogger } from '../utils/logger';
+import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
 
 export const BrochuresSection: React.FC = () => {
   const [activePreviewBrochure, setActivePreviewBrochure] = useState<BrochureItem | null>(null);
@@ -29,9 +30,9 @@ DESCRIPTION:
 ${brochure.description}
 
 ATELIER CONTACT:
-WhatsApp / Call: +91 8080580105
+WhatsApp / Call: ${HAMPER_QUEEN_OFFICIAL_CONTACT.phoneDisplay}
 Instagram: @hamper_queen
-Email: hamperqueen20@gmail.com
+Email: ${HAMPER_QUEEN_OFFICIAL_CONTACT.email}
 "We wrapped these gifts with love and care"
     `.trim();
 
