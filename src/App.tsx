@@ -139,22 +139,42 @@ export default function App() {
 
   // Handlers
   const handleAddItemToHamper = (item: LuxuryItem) => {
-    if (customHamper.items.length >= customHamper.vessel.capacity) {
-      alert(`The ${customHamper.vessel.name} has reached its maximum capacity of ${customHamper.vessel.capacity} items.`);
-      royaleLogger.warn('App', `Hamper capacity reached: ${customHamper.vessel.capacity}`);
-      return;
-    }
     setCustomHamper((prev) => ({
       ...prev,
       items: [...prev.items, item],
     }));
+    royaleLogger.action('App', `Added to cart: ${item.name}`);
   };
 
-  const handleRemoveItemFromHamper = (index: number) => {
+  const handleRemoveItemFromHamper = (itemId: string) => {
     setCustomHamper((prev) => ({
       ...prev,
-      items: prev.items.filter((_, i) => i !== index),
+      items: prev.items.filter((i) => i.id !== itemId),
     }));
+    royaleLogger.action('App', `Removed item row from cart: ${itemId}`);
+  };
+
+  const handleIncreaseItemQuantity = (itemId: string) => {
+    setCustomHamper((prev) => {
+      const lastIdx = prev.items.map((i) => i.id).lastIndexOf(itemId);
+      if (lastIdx === -1) return prev;
+      const next = [...prev.items];
+      next.splice(lastIdx + 1, 0, next[lastIdx]);
+      return { ...prev, items: next };
+    });
+  };
+
+  const handleDecreaseItemQuantity = (itemId: string) => {
+    setCustomHamper((prev) => {
+      const lastIdx = prev.items.map((i) => i.id).lastIndexOf(itemId);
+      if (lastIdx === -1) return prev;
+      return { ...prev, items: prev.items.filter((_, i) => i !== lastIdx) };
+    });
+  };
+
+  const handleClearCart = () => {
+    setCustomHamper((prev) => ({ ...prev, items: [] }));
+    royaleLogger.action('App', 'Cart cleared');
   };
 
   const handleAttachCardToHamper = (card: CalligraphyCard) => {
@@ -379,6 +399,9 @@ export default function App() {
         onClose={() => setIsHamperDrawerOpen(false)}
         customHamper={customHamper}
         onRemoveItem={handleRemoveItemFromHamper}
+        onIncreaseItem={handleIncreaseItemQuantity}
+        onDecreaseItem={handleDecreaseItemQuantity}
+        onClearCart={handleClearCart}
         onOpenAtelier={() => {
           setIsHamperDrawerOpen(false);
           setActiveTab('atelier');

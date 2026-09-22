@@ -194,6 +194,27 @@ export const BOX_VARIANT_SIZES: Record<string, 'sm' | 'md' | 'lg'> = {
   women: 'sm',
 };
 
+export type BoxShape = 'cube' | 'wide' | 'tall' | 'long';
+
+/** Aspect multipliers applied to a size preset's edge, normalized so the
+ *  largest axis stays ~1.0 and every shape fits the same scene box. */
+export const BOX_SHAPES: Record<BoxShape, { w: number; h: number; d: number; label: string }> = {
+  cube: { w: 1.0, h: 1.0, d: 1.0, label: 'Classic Cube' },
+  wide: { w: 1.0, h: 0.64, d: 0.9, label: 'Wide Casket' },
+  tall: { w: 0.72, h: 1.0, d: 0.72, label: 'Tall Trunk' },
+  long: { w: 0.7, h: 0.6, d: 1.0, label: 'Long Keepsake' },
+};
+
+/** Give the hero theme chips visibly different box proportions. */
+export const BOX_VARIANT_SHAPES: Record<string, BoxShape> = {
+  royal: 'tall',
+  chocolate: 'cube',
+  obsidian: 'wide',
+  men: 'long',
+  coffee: 'cube',
+  women: 'wide',
+};
+
 export interface BoxSizePreset {
   edge: number;
   lidRimH: number;

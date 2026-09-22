@@ -71,6 +71,37 @@ export const BulkOrdersSection: React.FC<BulkOrdersSectionProps> = ({ onOpenBulk
     },
   ];
 
+  const pastBulkOrders = [
+    {
+      tag: 'Corporate • Diwali',
+      title: 'Festive Client Gifting',
+      detail: '120 monogrammed velvet trunks with dry fruits, candles & wax-seal keepsakes.',
+      qty: '120 hampers',
+      approx: '≈ ₹72,000 order',
+    },
+    {
+      tag: 'Wedding Return Favors',
+      title: 'Bridal Trousseau Trunks',
+      detail: '50 rose-gold boxes personalised with the couple’s names & mehendi theme.',
+      qty: '50 pieces',
+      approx: '≈ ₹46,000 order',
+    },
+    {
+      tag: 'Baby Shower',
+      title: 'First Birthday Party Boxes',
+      detail: '24 theme-coordinated kits with fairy lights, teddy, candles & photo prints.',
+      qty: '24 kits',
+      approx: '≈ ₹18,000 order',
+    },
+    {
+      tag: 'Corporate • New Year',
+      title: 'Employee Appreciation Crates',
+      detail: '300 compact gift crates with chocolates, stationery & greeting cards.',
+      qty: '300 crates',
+      approx: '≈ ₹95,000 order',
+    },
+  ];
+
   return (
     <section id="bulk-orders-section" className="py-16 sm:py-20 bg-[#FAF9F5] text-[#141414] border-b border-[#EAE5D9] content-visibility-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -204,6 +235,56 @@ export const BulkOrdersSection: React.FC<BulkOrdersSectionProps> = ({ onOpenBulk
               <span>Direct Bulk Hotline: +91 {HAMPER_QUEEN_OFFICIAL_CONTACT.phone}</span>
             </div>
           </div>
+        </div>
+
+        {/* Recent Bulk Fulfillments — real order references from the atelier */}
+        <div className="p-6 sm:p-8 rounded-3xl bg-[#141414] text-white shadow-md space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+            <div className="space-y-1.5">
+              <span className="text-[10px] font-cinzel font-bold uppercase tracking-widest text-[#DFBA54] block">
+                Recent Bulk Fulfillments
+              </span>
+              <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white">
+                Past Orders We Have Packed &amp; Delivered
+              </h3>
+              <p className="text-[11px] text-white/60 font-sans leading-relaxed max-w-2xl">
+                We are a small, homegrown Mumbai atelier — every bulk order is hand-assembled and
+                personally overseen by Ms. Supriya from first sample to final dispatch.
+              </p>
+            </div>
+            <div className="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white/10 border border-[#D4AF37]/50 text-[10px] font-bold uppercase tracking-wider text-[#F3E5AB]">
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBA54]" />
+              <span>Representative References</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {pastBulkOrders.map((order, idx) => (
+              <div
+                key={idx}
+                className="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-[#D4AF37]/60 transition-all space-y-2 flex flex-col"
+              >
+                <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#DFBA54]/15 text-[#F3E5AB] border border-[#DFBA54]/30 self-start">
+                  {order.tag}
+                </span>
+                <h4 className="font-cinzel text-sm font-bold text-white leading-snug">
+                  {order.title}
+                </h4>
+                <p className="text-[11px] text-white/65 leading-relaxed flex-1">
+                  {order.detail}
+                </p>
+                <div className="flex items-center justify-between pt-2 border-t border-white/10 text-[11px]">
+                  <span className="font-bold text-[#F3E5AB]">{order.qty}</span>
+                  <span className="text-white/70">{order.approx}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-[10.5px] text-white/50 font-sans italic">
+            Approximate order values shown for reference only. Every event is unique, so pricing for
+            your quantity &amp; design is confirmed personally over WhatsApp.
+          </p>
         </div>
 
       </div>

@@ -55,7 +55,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
   const handleAddItem = (item: LuxuryItem) => {
     onAddItemToHamper(item);
     setAddedItemNotice(item.name);
-    royaleLogger.action('Catalog', `Added item to Custom Hamper Tray: "${item.name}"`);
+    royaleLogger.action('Catalog', `Added item to Cart: "${item.name}"`);
     setTimeout(() => {
       setAddedItemNotice(null);
     }, 2800);
@@ -102,7 +102,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
           <div className="fixed bottom-6 right-6 z-50 bg-[#141414] text-[#E5C07B] border border-[#C5A059] px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 animate-bounce">
             <Check className="w-5 h-5 text-[#DFBA54]" />
             <span className="text-xs font-semibold tracking-wide">
-              Added to Custom Tray: <strong className="text-white">{addedItemNotice}</strong>
+              Added to Cart: <strong className="text-white">{addedItemNotice}</strong>
             </span>
           </div>
         )}
@@ -278,7 +278,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                       className="flex-1 py-3 px-3 rounded-xl bg-[#141414] hover:bg-[#262626] text-[#E5C07B] text-xs font-semibold tracking-wider uppercase border border-[#C5A059] transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-xs"
                     >
                       <Plus className="w-3.5 h-3.5 text-[#DFBA54]" />
-                      <span>Add to Tray</span>
+                      <span>Add to Cart</span>
                     </button>
                   </div>
                 </div>
@@ -356,7 +356,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                       className="w-full py-3 rounded-full bg-[#141414] text-[#E5C07B] font-semibold text-xs tracking-wider uppercase border border-[#C5A059] shadow-md hover:bg-[#222222] transition-colors flex items-center justify-center gap-2 cursor-pointer"
                     >
                       <Plus className="w-4 h-4 text-[#DFBA54]" />
-                      <span>Add to Custom Tray</span>
+                      <span>Add to Cart</span>
                     </button>
                   </div>
                 </div>

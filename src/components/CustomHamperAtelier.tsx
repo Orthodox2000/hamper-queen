@@ -37,7 +37,8 @@ import {
   GripVertical,
   Crown,
 } from 'lucide-react';
-import { CustomHamper, LuxuryItem } from '../types';
+import { CustomHamper, LuxuryItem, VesselOption, RibbonOption, WaxSealOption, ItemCategory, PricingTier } from '../types';
+import { VESSEL_OPTIONS, RIBBON_OPTIONS, WAX_SEAL_OPTIONS } from '../data/itemsData';
 import {
   triggerGoldConfetti,
   triggerPartyPopperConfetti,
@@ -155,6 +156,38 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
       return copy;
     });
     setActiveSlotIndex(null);
+    triggerGoldConfetti(0.5, 0.5);
+  };
+
+  // Place a customer-typed "own item" suggestion into a specific slot
+  const handleSuggestCustomItem = (name: string, slotIndex: number) => {
+    const newItem: BrandedItem = {
+      id: `custom-${Date.now()}`,
+      name,
+      brand: 'Custom',
+      category: 'chocolates',
+      simpleName: name,
+      description: 'Custom Item Suggested by Customer',
+      weightOrQty: '1 Custom Item',
+      unitPriceApprox: 100,
+      colorScheme: {
+        bg: '#1E293B',
+        text: '#FFFFFF',
+        border: '#D4AF37',
+        accent: '#94A3B8',
+      },
+    };
+    setSlots((prev) => {
+      const copy = [...prev];
+      if (slotIndex >= 0 && slotIndex < copy.length) {
+        copy[slotIndex] = newItem;
+      } else {
+        const firstEmpty = copy.findIndex((s) => s === null);
+        if (firstEmpty !== -1) copy[firstEmpty] = newItem;
+      }
+      return copy;
+    });
+    setActiveSlotIndex(slotIndex);
     triggerGoldConfetti(0.5, 0.5);
   };
 
@@ -317,6 +350,106 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
       : 350;
 
   const itemsTotal = filledItems.reduce((acc, curr) => acc + curr.unitPriceApprox, 0);
+
+  // --- CART BRIDGE: convert atelier packaging + slots into a Hamper Queen Cart ---
+  const vesselFromPackaging = (pkg: PackagingSizeOption): VesselOption => {
+    if (pkg.illustrationType === 'velvet_hatbox')
+      return {
+        id: `vessel-${pkg.id}`,
+        name: pkg.name,
+        type: 'hatbox',
+        capacity: pkg.slotCount,
+        subtitle: pkg.subtitle,
+        description: pkg.recommendedFor,
+        colorName: 'Midnight Noir & Gold',
+        imageSvgId: 'vessel-parisian-hatbox',
+        tier: 'Imperial',
+        dimensions: pkg.dimensions,
+      };
+    if (pkg.type === 'bouquet')
+      return {
+        id: `vessel-${pkg.id}`,
+        name: pkg.name,
+        type: 'silk_wrap',
+        capacity: pkg.slotCount,
+        subtitle: pkg.subtitle,
+        description: pkg.recommendedFor,
+        colorName: 'Ebony, Gold & Sheer Ivory',
+        imageSvgId: 'bouquet-crimson-cascade',
+        tier: 'Prestige',
+        dimensions: pkg.dimensions,
+      };
+    return {
+      id: `vessel-${pkg.id}`,
+      name: pkg.name,
+      type: 'trunk',
+      capacity: pkg.slotCount,
+      subtitle: pkg.subtitle,
+      description: pkg.recommendedFor,
+      colorName: 'Ivory & Gilded Brass',
+      imageSvgId: 'vessel-royal-trunk',
+      tier: 'Grandeur',
+      dimensions: pkg.dimensions,
+    };
+  };
+
+  const categoryFromBranded = (b: BrandedItem): { category: ItemCategory; imageSvgId: string } => {
+    switch (b.category) {
+      case 'keepsakes':
+      case 'photos':
+        return { category: 'keepsake_vessels', imageSvgId: 'keepsake-crystal-flutes' };
+      case 'roses_decor':
+        return { category: 'artisanal_bouquets', imageSvgId: 'bouquet-crimson-cascade' };
+      case 'lights':
+      case 'gift_wrap':
+        return { category: 'embellishments', imageSvgId: 'embellishment-satin-ribbon' };
+      case 'party_fun':
+        return { category: 'royal_hampers', imageSvgId: 'hamper-crown-sovereign' };
+      default:
+        return { category: 'gourmet_sweets', imageSvgId: 'gourmet-gold-truffles' };
+    }
+  };
+
+  const luxuryItemFromBranded = (b: BrandedItem): LuxuryItem => {
+    const mapped = categoryFromBranded(b);
+    return {
+      id: b.id,
+      name: b.name,
+      category: mapped.category,
+      subtitle: b.simpleName || b.description,
+      description: b.description,
+      details: [b.brand, b.weightOrQty],
+      royalHighlights: b.isPhoto ? ['Custom polaroid photo insert'] : [b.descriptionHinglish ?? b.simpleName],
+      occasions: ['Custom Atelier Curations'],
+      palette: { primary: b.colorScheme.bg, accent: b.colorScheme.accent, label: b.colorScheme.accent },
+      imageSvgId: mapped.imageSvgId,
+      userCustomImage: b.photoUrl,
+      estimatedTier: 'Grandeur',
+      approximateUnitValue: b.unitPriceApprox,
+    };
+  };
+
+  const ribbonForSelection = (): RibbonOption => {
+    const match = RIBBON_OPTIONS.find((r) => r.colorHex.toUpperCase() === selectedRibbon.hex.toUpperCase());
+    return match || RIBBON_OPTIONS[0];
+  };
+
+  const waxSealForSelection = (): WaxSealOption => (hasWaxSeal ? WAX_SEAL_OPTIONS[0] : WAX_SEAL_OPTIONS[1]);
+
+  const handleAddToCart = () => {
+    if (!onSaveToHamper) return;
+    const hamper: CustomHamper = {
+      id: `atelier-${Date.now()}`,
+      vessel: vesselFromPackaging(selectedPackaging),
+      items: filledItems.map((b) => luxuryItemFromBranded(b)),
+      ribbon: ribbonForSelection(),
+      waxSeal: waxSealForSelection(),
+      botanicalSprig: false,
+      createdAt: Date.now(),
+    };
+    triggerGrandCelebration();
+    onSaveToHamper(hamper);
+  };
   const addOnsTotal = (hasWaxSeal ? 50 : 0) + (includePartyPopper ? 60 : 0) + (includeFairyLights ? 50 : 0);
   const rawSubtotal = baseBoxEstimate + itemsTotal + addOnsTotal;
   const subtotal = Math.max(199, rawSubtotal);
@@ -657,6 +790,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
               onSelectSlot={(idx) => setActiveSlotIndex(idx)}
               onRemoveItemFromSlot={handleRemoveItem}
               onDropItemIntoSlot={handleDropItemIntoSlot}
+              onSuggestCustomItem={handleSuggestCustomItem}
               ribbonColorHex={selectedRibbon.hex}
               hasLights={includeFairyLights}
               hasWaxSeal={hasWaxSeal}
@@ -1276,6 +1410,18 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
 
             {/* High Impact WhatsApp Button */}
             <div className="space-y-3">
+              {onSaveToHamper && (
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={handleAddToCart}
+                  disabled={filledItems.length === 0}
+                  className="w-full bg-[#141414] disabled:bg-[#3A3A3A] disabled:cursor-not-allowed text-[#DFBA54] p-4 font-bold text-sm sm:text-base uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer border border-[#D4AF37]"
+                >
+                  <Gift className="w-6 h-6 text-[#DFBA54]" />
+                  Add This Hamper to Cart
+                </motion.button>
+              )}
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

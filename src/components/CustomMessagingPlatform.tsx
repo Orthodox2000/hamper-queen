@@ -204,7 +204,7 @@ export const CustomMessagingPlatform: React.FC<CustomMessagingPlatformProps> = (
               {attachedNotification && (
                 <div className="mt-4 p-3 bg-[#F2F8F4] border border-[#38A169]/40 rounded-xl text-center text-xs font-semibold text-[#276749] flex items-center justify-center gap-2">
                   <Check className="w-4 h-4 text-[#38A169]" />
-                  <span>Attached to Your Custom Hamper Tray</span>
+                  <span>Attached to Your Hamper Cart</span>
                 </div>
               )}
 

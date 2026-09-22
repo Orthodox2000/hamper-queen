@@ -25,7 +25,7 @@
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100vw;
   }
 
@@ -33,7 +33,7 @@
     font-family: var(--font-sans);
     color: #141414;
     background-color: #FFFFFF;
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100vw;
   }
 
@@ -78,20 +78,20 @@
 @keyframes item-pop-up {
   0% {
     opacity: 0;
-    transform: translateY(18px) scale(0.85) translateZ(0);
+    transform: translateY(22px) scale(0.85) translateZ(0);
   }
   60% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    transform: translateY(0) scale(1) translateZ(16px);
+    transform: translateY(0) scale(1) translateZ(24px);
   }
 }
 
 .item-pop {
   opacity: 0;
-  transform: translateY(18px) scale(0.85) translateZ(0);
+  transform: translateY(22px) scale(0.85) translateZ(0);
   animation: item-pop-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: var(--pop-delay, 0ms);
   will-change: transform;

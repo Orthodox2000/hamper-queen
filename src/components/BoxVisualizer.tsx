@@ -25,6 +25,7 @@ interface BoxVisualizerProps {
   onSelectSlot: (index: number) => void;
   onRemoveItemFromSlot: (index: number) => void;
   onDropItemIntoSlot?: (slotIndex: number, item: BrandedItem) => void;
+  onSuggestCustomItem?: (name: string, slotIndex: number) => void;
   ribbonColorHex?: string;
   hasLights?: boolean;
   hasWaxSeal?: boolean;
@@ -38,6 +39,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
   onSelectSlot,
   onRemoveItemFromSlot,
   onDropItemIntoSlot,
+  onSuggestCustomItem,
   ribbonColorHex = '#D4AF37',
   hasLights = false,
   hasWaxSeal = false,
@@ -46,6 +48,8 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
   const [lightsActive, setLightsActive] = useState(true);
   const [visualMode, setVisualMode] = useState<'slots' | 'exterior'>('slots');
   const [dragOverSlotIndex, setDragOverSlotIndex] = useState<number | null>(null);
+  const [suggestionText, setSuggestionText] = useState('');
+  const [suggestionSlot, setSuggestionSlot] = useState<number | null>(null);
 
   const isBouquet = packaging.type === 'bouquet';
   const isPhotoBouquet = packaging.illustrationType === 'photo_bouquet';
@@ -67,6 +71,72 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
     if (totalCount <= 9) return 'grid-cols-3 sm:grid-cols-3 md:grid-cols-3';
     return 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4'; // 12 slots
   };
+
+  // Mini "type your own item" suggestion form (styled like an empty tile slot)
+  const renderSuggestionInput = (slotIndex: number) => (
+    <div
+      className="w-full mt-2 pt-2 border-t border-dashed border-[#D8CCA8]"
+      onClick={(e) => e.stopPropagation()}
+      onDragOver={(e) => e.stopPropagation()}
+      onDragLeave={(e) => e.stopPropagation()}
+      onDrop={(e) => e.stopPropagation()}
+    >
+      {suggestionSlot === slotIndex ? (
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const name = suggestionText.trim();
+            if (name && onSuggestCustomItem) {
+              onSuggestCustomItem(name, slotIndex);
+              setSuggestionText('');
+              setSuggestionSlot(null);
+            }
+          }}
+          className="space-y-1.5"
+        >
+          <input
+            autoFocus
+            type="text"
+            value={suggestionText}
+            onChange={(e) => setSuggestionText(e.target.value)}
+            placeholder="Type your own item…"
+            className="w-full text-[10px] px-2 py-1.5 rounded-md border border-[#D8CCA8] bg-white text-[#141414] placeholder:text-stone-400 focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B]/40 outline-none"
+          />
+          <div className="flex items-center gap-1.5">
+            <button
+              type="submit"
+              className="flex-1 px-2 py-1.5 rounded-md bg-[#B8860B] hover:bg-[#8C6821] text-white text-[10px] font-bold uppercase tracking-wide transition-colors cursor-pointer"
+            >
+              Send Suggestion
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setSuggestionSlot(null);
+                setSuggestionText('');
+              }}
+              className="px-2 py-1.5 rounded-md bg-white border border-[#E5DAC2] text-[#7A7264] text-[10px] font-bold uppercase transition-colors cursor-pointer hover:bg-[#FAF8F2]"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      ) : (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            setSuggestionSlot(slotIndex);
+          }}
+          className="w-full py-1.5 rounded-md border border-[#D8CCA8] bg-white/70 hover:bg-[#FAF7F0] hover:border-[#B8860B] text-[10px] font-semibold text-[#8C6821] transition-colors cursor-pointer flex items-center justify-center gap-1"
+        >
+          <Sparkles className="w-3 h-3 text-[#B8860B]" />
+          Need something else? Suggest your own item…
+        </button>
+      )}
+    </div>
+  );
 
   return (
     <div className="w-full bg-white rounded-2xl border border-[#D4AF37]/30 shadow-lg overflow-hidden transition-all duration-300">
@@ -408,6 +478,8 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                     <span className="text-[10px] text-[#7A7264] mt-0.5">
                       {isPhotoBouquet ? 'Polaroid Print' : 'Treat or Flower'}
                     </span>
+
+                    {renderSuggestionInput(index)}
                   </motion.div>
                 );
               })}
@@ -643,6 +715,8 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                     <span className="text-[10px] text-[#7A7264] mt-0.5">
                       Drag &amp; drop or click
                     </span>
+
+                    {renderSuggestionInput(index)}
                   </motion.div>
                 );
               })}

@@ -135,7 +135,7 @@ export const Header: React.FC<HeaderProps> = ({
             })}
           </nav>
 
-          {/* Action Buttons: Royal Tray + Mobile Menu */}
+          {/* Action Buttons: Royal Cart + Mobile Menu */}
           <div className="flex items-center gap-2.5">
 
             {/* Custom Hamper Staging Drawer Trigger */}
@@ -149,7 +149,7 @@ export const Header: React.FC<HeaderProps> = ({
             >
               <ShoppingBag className="w-4 h-4 text-[#DFBA54]" />
               <span className="text-[11px] font-sans font-bold tracking-widest uppercase hidden sm:inline">
-                ROYAL TRAY
+                ROYAL CART
               </span>
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full text-xs font-bold bg-[#800E17] text-white border border-[#DFBA54]/50 ml-0.5">
                 {activeHamper.items.length}
