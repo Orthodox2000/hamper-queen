@@ -1,24 +1,80 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-const siteTitle = 'Hamper Queen — Custom Gift Hampers & Chocolate Bouquets';
-const siteDescription =
-  'Custom hampers and chocolate bouquets from ₹799. Velvet trunks, personalised photo keepsakes, same-day dispatch from Mumbai, free delivery over ₹499 across India.';
+const SITE_TITLE = 'Custom Gift Hampers & Chocolate Bouquets | Hamper Queen';
+const SITE_DESCRIPTION =
+  'Custom gift hampers and chocolate bouquets from ₹799 — velvet trunks, photo keepsakes, same-day dispatch from Mumbai with free delivery across India.';
+const SITE_URL = 'https://hamper-queen.vercel.app';
 
 export const metadata: Metadata = {
-  title: siteTitle,
-  description: siteDescription,
-  metadataBase: new URL('https://hamperqueen.example.com'),
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  keywords: [
+    'custom gift hampers',
+    'chocolate bouquets',
+    'gift hampers Mumbai',
+    'personalised hampers',
+    'birthday gift hampers',
+    'luxury gifting',
+    'photo keepsake hampers',
+    'valentine chocolate bouquets',
+    'bulk corporate gifts',
+    'Hamper Queen',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: siteTitle,
-    description: siteDescription,
     type: 'website',
+    locale: 'en_IN',
+    url: SITE_URL,
+    siteName: 'Hamper Queen',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Hamper Queen — custom gift hampers & chocolate bouquets',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteTitle,
-    description: siteDescription,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ['/opengraph-image'],
   },
+};
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE_URL}/#organization`,
+  name: 'Hamper Queen',
+  url: SITE_URL,
+  logo: `${SITE_URL}/hamper.png`,
+  telephone: '+918080580105',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+918080580105',
+    contactType: 'sales',
+    areaServed: 'IN',
+    availableLanguage: ['English', 'Hindi'],
+  },
+  description: SITE_DESCRIPTION,
 };
 
 export default function RootLayout({
@@ -35,6 +91,10 @@ export default function RootLayout({
         />
         <link rel="preload" href="/fonts/TheSeasons-Regular.woff2" as="font" type="font/woff2" crossOrigin="" />
         <link rel="preload" href="/fonts/TheSeasons-Bold.woff2" as="font" type="font/woff2" crossOrigin="" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         {children}
       </body>
     </html>
