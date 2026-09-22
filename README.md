@@ -15,9 +15,9 @@ Hamper Queen is a high-converting, single-page gifting storefront built on the N
 
 ## Features
 
-- **Interactive 3D unbox experience** — theme switcher, item pop-out animations, auto-rotation
+- **Interactive 3D unbox experience** — theme switcher, shape variants (cube / wide / tall / long), hand-tied bouquet mode, item pop-out animations, auto-rotation
 - **Customise Atelier** — pick a vessel, add luxury items up to capacity, tie ribbon, stamp a wax seal
-- **Royal Tray** — persistent slide-over hamper staging drawer with live item count
+- **Royal Cart** — persistent slide-over cart with quantity steppers, subtotals, free delivery over ₹499, and one-tap add-from-Atelier
 - **Hamper Builder & Calligraphy Scribe** — 4-step builder and bespoke card/message studio
 - **Booking & Concierge Desk** — order + map pin-pointing modal, bulk/corporate gifting flow
 - **WhatsApp ordering** — one-tap `wa.me` checkout with prefilled message
