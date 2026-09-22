@@ -39,7 +39,7 @@ export const RoyalInspirationGallery: React.FC<RoyalInspirationGalleryProps> = (
   };
 
   return (
-    <section id="royal-inspirations-section" className="py-16 sm:py-24 bg-white text-[#141414] relative border-b border-[#EAE5D9]">
+    <section id="royal-inspirations-section" className="py-16 sm:py-24 bg-white text-[#141414] relative border-b border-[#EAE5D9] content-visibility-auto">
       
       {/* Royal Guilloche Divider */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">

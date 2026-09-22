@@ -1,3 +1,18 @@
+/**
+ * ThreeDGiftBox.tsx
+ * -----------------------------------------------------------------------------
+ * Pure-CSS 3D gift box used as the hero centerpiece.
+ *
+ * Behaviour:
+ *  - Gentle auto-rotation (rotateY) until the pointer engages the box.
+ *  - Clicking toggles the unbox state: the lid lifts and tilts backward so its
+ *    decorated top stays visible (never inverting), the camera tilts up to look
+ *    into the box, and the nestled items rise above the velvet bed.
+ *  - All four side faces are fully dressed (themed gradient + gold ribbon +
+ *    royal medallion + brand label) so no side ever reads as "empty".
+ *  - Lid skirts and ribbons pick up the active theme colors for contrast.
+ */
+
 import React, { useState, useRef, useEffect } from 'react';
 import { Gift, Crown } from 'lucide-react';
 import { BOX_THEMES, BOX_SIZE_PRESETS, BoxTheme } from '../data/boxThemes';
@@ -15,6 +30,13 @@ interface ThreeDGiftBoxProps {
   size?: BoxSize;
 }
 
+/** Camera tilt used while the box is closed / open. */
+const TILT_CLOSED = -15;
+const TILT_OPEN = -34;
+
+/* -------------------------------------------------------------------------- */
+/* Medallion emblem shared by every face                                       */
+/* -------------------------------------------------------------------------- */
 interface FaceEmblemProps {
   theme: BoxTheme;
   logoClass: string;
@@ -27,7 +49,7 @@ const FaceEmblem: React.FC<FaceEmblemProps> = ({ theme, logoClass, withLabel = f
       <img src="/hamper.png" alt="Hamper Queen logo" className="w-full h-full object-contain rounded-full" draggable={false} />
     </div>
     {withLabel && (
-      <span className="text-[7px] font-sans font-bold tracking-widest text-[#F3E5AB] uppercase">
+      <span className="text-[7px] font-sans font-bold tracking-widest text-[#F3E5AB] uppercase text-center px-1 leading-tight">
         Hamper Queen
       </span>
     )}
@@ -41,7 +63,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
   size = 'md',
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [rotateX, setRotateX] = useState(-15);
+  const [rotateX, setRotateX] = useState(TILT_CLOSED);
   const [rotateY, setRotateY] = useState(30);
   const [isHovered, setIsHovered] = useState(false);
   const [isAutoRotating, setIsAutoRotating] = useState(true);
@@ -74,6 +96,11 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
     return () => clearInterval(interval);
   }, [isAutoRotating, isHovered]);
 
+  // Tilt the camera up into the box while it is open so items stay visible.
+  useEffect(() => {
+    setRotateX(isOpen ? TILT_OPEN : TILT_CLOSED);
+  }, [isOpen]);
+
   // Interactive mouse tilt tracking
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current) return;
@@ -82,13 +109,14 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
     setRotateY(Math.max(-45, Math.min(45, x * 0.25)));
-    setRotateX(Math.max(-35, Math.min(15, -y * 0.25 - 15)));
+    const base = isOpen ? TILT_OPEN : TILT_CLOSED;
+    setRotateX(Math.max(-38, Math.min(15, -y * 0.25 + base)));
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
     setIsAutoRotating(true);
-    setRotateX(-15);
+    setRotateX(isOpen ? TILT_OPEN : TILT_CLOSED);
   };
 
   const toggleOpen = () => {
@@ -156,7 +184,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
 
               {/* Nestled Item 1: Cadbury Silk Mini Bar */}
               <div className={`w-full z-10 ${isOpen ? 'item-pop' : 'opacity-0'}`} style={popDelay(0)}>
-                <div className="w-full bg-gradient-to-r from-[#20003B] via-[#4A0072] to-[#20003B] border border-amber-300/80 rounded px-1.5 py-0.5 shadow-sm flex items-center justify-between text-[8px] text-amber-200 font-bold transition-transform duration-300 ease-out hover:[transform:translateZ(22px)_scale(1.03)]">
+                <div className="w-full bg-gradient-to-r from-[#20003B] via-[#4A0072] to-[#20003B] border border-amber-300/80 rounded px-1.5 py-0.5 shadow-sm flex items-center justify-between text-[8px] text-amber-200 font-bold">
                   <span className="truncate">CADBURY SILK</span>
                   <span className="text-[7px] text-white/90">Pure Cocoa</span>
                 </div>
@@ -164,7 +192,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
 
               {/* Nestled Item 2: Ferrero Rocher Spheres + Wax Seal */}
               <div className={`w-full z-10 ${isOpen ? 'item-pop' : 'opacity-0'}`} style={popDelay(1)}>
-                <div className="w-full flex items-center justify-between gap-1 transition-transform duration-300 ease-out hover:[transform:translateZ(22px)_scale(1.03)]">
+                <div className="w-full flex items-center justify-between gap-1">
                   <div className="flex items-center gap-1 bg-gradient-to-r from-amber-600 to-yellow-500 rounded px-1.5 py-0.5 border border-amber-200 text-[7.5px] font-bold text-black shadow-xs">
                     <span>✨</span>
                     <span>Ferrero</span>
@@ -181,7 +209,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
 
               {/* Nestled Item 3: Velvet Rose Keepsake */}
               <div className={`w-full z-10 ${isOpen ? 'item-pop' : 'opacity-0'}`} style={popDelay(2)}>
-                <div className="w-full bg-gradient-to-r from-rose-950 via-rose-900 to-rose-950 border border-rose-400/50 rounded px-1 py-0.5 text-center text-[7px] text-rose-200 font-semibold tracking-wider uppercase transition-transform duration-300 ease-out hover:[transform:translateZ(22px)_scale(1.03)]">
+                <div className="w-full bg-gradient-to-r from-rose-950 via-rose-900 to-rose-950 border border-rose-400/50 rounded px-1 py-0.5 text-center text-[7px] text-rose-200 font-semibold tracking-wider uppercase">
                   🌹 Hand-Tied Ribbon & Scribe Note
                 </div>
               </div>
@@ -209,20 +237,20 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
             </div>
           )}
 
-          {/* 3D Box LID (Tilts and lifts when open) */}
+          {/* 3D BOX LID — lifts and tilts backward; decorated top stays upright */}
           <div
             className="absolute inset-0 transition-all duration-700 ease-out"
             style={{
               transformStyle: 'preserve-3d',
               transformOrigin: 'top center',
               transform: isOpen
-                ? `translateY(${lidLift}px) rotateX(-115deg) translateZ(15px)`
+                ? `translateY(${lidLift}px) rotateX(-72deg) translateZ(8px)`
                 : 'translateY(0px)',
             }}
           >
-            {/* Top Face of the Lid */}
+            {/* Top Face of the Lid (brand-ribbon rosette) */}
             <div
-              className={`absolute bg-gradient-to-br ${theme.lidTop} ${theme.faceBorder} shadow-lg flex items-center justify-center`}
+              className={`absolute bg-gradient-to-br ${theme.lidTop} ${theme.faceBorder} shadow-lg flex items-center justify-center overflow-hidden`}
               style={{
                 width: `${lid}px`,
                 height: `${lid}px`,
@@ -234,70 +262,130 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
               <div className="absolute w-6 h-full bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A059] shadow-sm" />
               <div className="absolute h-6 w-full bg-gradient-to-b from-[#D4AF37] via-[#F3E5AB] to-[#C5A059] shadow-sm" />
 
-              {/* 3D Ribbon Rosette Bow on Top */}
-              <div className="relative z-10 w-9 h-9 rounded-full bg-gradient-to-br from-[#DFBA54] via-[#F3E5AB] to-[#996515] border border-white shadow-md flex items-center justify-center">
+              {/* 3D Ribbon Rosette Bow on Top (theme accent) */}
+              <div
+                className="relative z-10 w-9 h-9 rounded-full border border-white shadow-md flex items-center justify-center"
+                style={{ background: `linear-gradient(135deg, ${theme.ribbonHex}, #F3E5AB 55%, #996515)` }}
+              >
                 <Crown className="w-4 h-4 text-[#5C0A10]" />
               </div>
             </div>
 
-            {/* Lid Rim / Skirt (front, back, left, right) */}
+            {/* Underside of the Lid (velvet inner) — keeps the lid from ever looking empty */}
             <div
-              className={`absolute bg-[#3B060B] ${theme.faceBorder}`}
-              style={{ transform: `translateZ(${half + 1}px) translateY(-1px)`, width: `${lid}px`, height: `${rimH}px`, borderRadius: '2px' }}
+              className={`absolute ${theme.faceBorder} flex items-center justify-center overflow-hidden`}
+              style={{
+                width: `${lid}px`,
+                height: `${lid}px`,
+                transform: `rotateX(90deg) translateZ(${half}px) rotateY(180deg)`,
+                background: `linear-gradient(to bottom, ${theme.bedBg}, #000)`,
+                borderRadius: '6px',
+              }}
+            >
+              <div className="w-6 h-full bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A059] opacity-60" />
+              <div className="absolute inset-2 rounded border border-dashed border-[#DFBA54]/40" />
+            </div>
+
+            {/* Lid Rim / Skirt — themed to match each side of the base */}
+            <div
+              className={`absolute ${theme.faceBorder}`}
+              style={{
+                background: `linear-gradient(to bottom, ${theme.ribbonHex}, ${theme.backFace})`,
+                transform: `translateZ(${half + 1}px) translateY(-1px)`,
+                width: `${lid}px`,
+                height: `${rimH}px`,
+                borderRadius: '2px',
+              }}
             />
             <div
-              className={`absolute bg-[#1E0430] ${theme.faceBorder}`}
-              style={{ transform: `rotateY(180deg) translateZ(${half + 1}px) translateY(-1px)`, width: `${lid}px`, height: `${rimH}px` }}
+              className={`absolute ${theme.faceBorder}`}
+              style={{
+                background: theme.backFace,
+                transform: `rotateY(180deg) translateZ(${half + 1}px) translateY(-1px)`,
+                width: `${lid}px`,
+                height: `${rimH}px`,
+              }}
             />
             <div
-              className={`absolute bg-[#240640] ${theme.faceBorder}`}
-              style={{ transform: `rotateY(-90deg) translateZ(${half + 1}px) translateY(-1px)`, width: `${lid}px`, height: `${rimH}px` }}
+              className={`absolute ${theme.faceBorder}`}
+              style={{
+                background: theme.leftFace,
+                transform: `rotateY(-90deg) translateZ(${half + 1}px) translateY(-1px)`,
+                width: `${lid}px`,
+                height: `${rimH}px`,
+              }}
             />
             <div
-              className={`absolute bg-[#2A0748] ${theme.faceBorder}`}
-              style={{ transform: `rotateY(90deg) translateZ(${half + 1}px) translateY(-1px)`, width: `${lid}px`, height: `${rimH}px` }}
+              className={`absolute ${theme.faceBorder}`}
+              style={{
+                background: theme.rightFace,
+                transform: `rotateY(90deg) translateZ(${half + 1}px) translateY(-1px)`,
+                width: `${lid}px`,
+                height: `${rimH}px`,
+              }}
             />
           </div>
 
-          {/* 3D Box BASE FACES */}
+          {/* ---------------------------------------------------------------- */}
+          {/* 3D BOX BASE FACES — ribbon, themed accent band, medallion, label  */}
+          {/* ---------------------------------------------------------------- */}
 
           {/* Front Face */}
           <div
             className={`absolute bg-gradient-to-b ${theme.frontFace} ${theme.faceBorder} shadow-md flex flex-col items-center justify-center p-2`}
             style={{ width: `${faceW}px`, height: `${faceH}px`, transform: `translateZ(${faceZ}px) translateY(${faceDrop}px)`, borderRadius: '4px' }}
           >
-            {/* Vertical Ribbon */}
             <div className="absolute w-5 h-full bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A059] opacity-90" />
-
-            {/* Front Royal Medallion */}
+            <div className="absolute bottom-1.5 inset-x-2 h-1 rounded-full opacity-70" style={{ backgroundColor: theme.ribbonHex }} />
             <FaceEmblem theme={theme} logoClass={preset.logo} withLabel />
           </div>
 
           {/* Back Face */}
           <div
-            className={`absolute ${theme.backFace} ${theme.faceBorder} flex items-center justify-center`}
-            style={{ width: `${faceW}px`, height: `${faceH}px`, transform: `rotateY(180deg) translateZ(${faceZ}px) translateY(${faceDrop}px)` }}
+            className={`absolute ${theme.faceBorder} flex flex-col items-center justify-center overflow-hidden`}
+            style={{
+              width: `${faceW}px`,
+              height: `${faceH}px`,
+              transform: `rotateY(180deg) translateZ(${faceZ}px) translateY(${faceDrop}px)`,
+              background: `linear-gradient(to bottom, ${theme.backFace}, ${theme.leftFace})`,
+              borderRadius: '4px',
+            }}
           >
             <div className="w-5 h-full bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A059] opacity-75" />
+            <div className="absolute top-1.5 inset-x-2 h-1 rounded-full opacity-70" style={{ backgroundColor: theme.ribbonHex }} />
             <FaceEmblem theme={theme} logoClass={preset.logo} />
           </div>
 
           {/* Left Face */}
           <div
-            className={`absolute ${theme.leftFace} ${theme.faceBorder} flex items-center justify-center`}
-            style={{ width: `${faceW}px`, height: `${faceH}px`, transform: `rotateY(-90deg) translateZ(${faceZ}px) translateY(${faceDrop}px)` }}
+            className={`absolute ${theme.faceBorder} flex flex-col items-center justify-center overflow-hidden`}
+            style={{
+              width: `${faceW}px`,
+              height: `${faceH}px`,
+              transform: `rotateY(-90deg) translateZ(${faceZ}px) translateY(${faceDrop}px)`,
+              background: `linear-gradient(to bottom, ${theme.leftFace}, ${theme.backFace})`,
+              borderRadius: '4px',
+            }}
           >
             <div className="w-5 h-full bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A059] opacity-80" />
-            <FaceEmblem theme={theme} logoClass={preset.logo} />
+            <div className="absolute bottom-1.5 inset-x-2 h-1 rounded-full opacity-70" style={{ backgroundColor: theme.ribbonHex }} />
+            <FaceEmblem theme={theme} logoClass={preset.logo} withLabel />
           </div>
 
           {/* Right Face */}
           <div
-            className={`absolute ${theme.rightFace} ${theme.faceBorder} flex items-center justify-center`}
-            style={{ width: `${faceW}px`, height: `${faceH}px`, transform: `rotateY(90deg) translateZ(${faceZ}px) translateY(${faceDrop}px)` }}
+            className={`absolute ${theme.faceBorder} flex flex-col items-center justify-center overflow-hidden`}
+            style={{
+              width: `${faceW}px`,
+              height: `${faceH}px`,
+              transform: `rotateY(90deg) translateZ(${faceZ}px) translateY(${faceDrop}px)`,
+              background: `linear-gradient(to bottom, ${theme.rightFace}, ${theme.backFace})`,
+              borderRadius: '4px',
+            }}
           >
             <div className="w-5 h-full bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C5A059] opacity-80" />
-            <FaceEmblem theme={theme} logoClass={preset.logo} />
+            <div className="absolute top-1.5 inset-x-2 h-1 rounded-full opacity-70" style={{ backgroundColor: theme.ribbonHex }} />
+            <FaceEmblem theme={theme} logoClass={preset.logo} withLabel />
           </div>
 
           {/* Bottom Face */}

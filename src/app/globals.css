@@ -74,24 +74,64 @@
   background: #C5A059;
 }
 
-/* 3D Gift Box: items pop out of the velvet bed */
+/* 3D Gift Box: items pop out of the velvet bed and rise toward the viewer */
 @keyframes item-pop-up {
   0% {
     opacity: 0;
-    transform: translateY(16px) scale(0.9);
+    transform: translateY(18px) scale(0.85) translateZ(0);
   }
   60% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1) translateZ(16px);
   }
 }
 
 .item-pop {
   opacity: 0;
-  transform: translateY(16px) scale(0.9);
+  transform: translateY(18px) scale(0.85) translateZ(0);
   animation: item-pop-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: var(--pop-delay, 0ms);
+  will-change: transform;
+}
+
+/* Hero background skeleton shimmer while the next/image lazy-loads */
+@keyframes hq-skeleton-pulse {
+  0%, 100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.hq-skeleton {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(212, 175, 55, 0.16) 0 12px,
+    rgba(212, 175, 55, 0.28) 12px 24px
+  );
+  animation: hq-skeleton-pulse 1.4s ease-in-out infinite;
+}
+
+/* Only render paint work that is likely on screen */
+@media (min-width: 768px) {
+  .content-visibility-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 800px;
+  }
+}
+
+/* Honour users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

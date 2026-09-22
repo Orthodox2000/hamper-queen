@@ -1,3 +1,14 @@
+/**
+ * HamperQueenShowcase.tsx
+ * -----------------------------------------------------------------------------
+ * Product grid with category tabs, search, expandable item checklists, and
+ * booking/WhatsApp/customise actions.
+ *
+ * With `spotlightOnly` (homepage), only the FEATURED_HOME_IDS trio is shown
+ * until "Show More Hampers & Bouquets" expands the grid in place; the full
+ * catalog tab keeps the complete filter/search UI.
+ */
+
 import React, { useState } from 'react';
 import { 
   Sparkles, 
@@ -37,18 +48,33 @@ interface HamperQueenShowcaseProps {
   onCustomizeProduct: (product: HamperQueenProduct) => void;
   onOpenScribe: () => void;
   onOpenBooking?: (product?: HamperQueenProduct, isBulk?: boolean) => void;
+  /** When true (homepage), only the spotlight trio is rendered until "Show More". */
+  spotlightOnly?: boolean;
 }
+
+/**
+ * The three hand-picked spotlight products shown first on the homepage.
+ * Order matters: Pocket Delight (from ₹199), KitKat Bouquet (Customer Favorite),
+ * Elegant Pink (Top Birthday Pick).
+ */
+export const FEATURED_HOME_IDS = [
+  'starter-pocket-delight',
+  'bouquet-chocolate-kitkat',
+  'hamper-1-elegant-pink',
+];
 
 export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
   language,
   onCustomizeProduct,
   onOpenScribe,
   onOpenBooking,
+  spotlightOnly = false,
 }) => {
   const t = TRANSLATIONS[language];
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
+  const [showFeaturedMore, setShowFeaturedMore] = useState<boolean>(false);
 
   const toggleExpandCard = (id: string) => {
     setExpandedCards((prev) => ({
@@ -57,7 +83,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
     }));
   };
 
-  // Filter products
+  // Filter products (only used once the full catalog is revealed)
   const filteredProducts = HAMPER_QUEEN_PRODUCTS.filter((prod) => {
     const itemCode = getHamperQueenItemCode(prod);
     const matchesCategory = selectedCategory === 'all' || prod.category === selectedCategory;
@@ -69,6 +95,17 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
       prod.itemsIncluded.some((item) => item.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
+
+  // Homepage spotlight: the featured trio first, expanding in place to the full menu.
+  const featuredList = FEATURED_HOME_IDS
+    .map((id) => HAMPER_QUEEN_PRODUCTS.find((p) => p.id === id))
+    .filter((p): p is HamperQueenProduct => Boolean(p));
+
+  const visibleProducts = spotlightOnly
+    ? (showFeaturedMore ? featuredList.concat(HAMPER_QUEEN_PRODUCTS.filter((p) => !FEATURED_HOME_IDS.includes(p.id))) : featuredList)
+    : filteredProducts;
+
+  const showCatalogControls = !spotlightOnly || showFeaturedMore;
 
   const handleWhatsAppOrder = (product: HamperQueenProduct) => {
     triggerGoldConfetti(0.5, 0.5);
@@ -87,7 +124,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
   };
 
   return (
-    <section id="hamper-queen-catalog-section" className="py-16 sm:py-20 bg-white text-[#141414] border-b border-[#EAE5D9]">
+    <section id="hamper-queen-catalog-section" className="py-16 sm:py-20 bg-white text-[#141414] border-b border-[#EAE5D9] content-visibility-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header: Pure White & Gold Elegance */}
@@ -113,7 +150,8 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
         </div>
 
         {/* BULK ORDERS & PARTY GIFTS NOTIFICATION BANNER */}
-        <div className="mb-12 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#141414] via-[#241E16] to-[#141414] text-white border border-[#D4AF37]/60 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
+        {showCatalogControls && (
+          <div className="mb-12 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#141414] via-[#241E16] to-[#141414] text-white border border-[#D4AF37]/60 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/20 border border-[#D4AF37] flex items-center justify-center text-[#DFBA54] shrink-0">
               <Package className="w-5 h-5" />
@@ -144,9 +182,11 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
+        )}
 
         {/* Filter Controls & Search Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-[#EAE5D9]">
+        {showCatalogControls && (
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-[#EAE5D9]">
           
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center gap-2">
@@ -185,10 +225,11 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
           </div>
 
         </div>
+        )}
 
         {/* Product Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProducts.map((prod) => {
+          {visibleProducts.map((prod) => {
             const isExpanded = expandedCards[prod.id] || false;
             const itemCode = getHamperQueenItemCode(prod);
             const substitutions = getHamperQueenSubstitutions(prod);
@@ -338,6 +379,29 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
             );
           })}
         </div>
+
+        {/* Homepage Spotlight: "Show More" expands in place to the full menu */}
+        {spotlightOnly && !showFeaturedMore && (
+          <div className="mt-10 flex flex-col items-center gap-3">
+            <button
+              onClick={() => {
+                setShowFeaturedMore(true);
+                royaleLogger.action('Showcase', 'Expanded homepage spotlight to full catalog');
+              }}
+              className="group px-7 py-3.5 rounded-full bg-[#141414] hover:bg-[#2A2018] text-[#F3E5AB] border border-[#D4AF37] font-cinzel text-sm font-bold tracking-wider uppercase shadow-md transition-all flex items-center gap-2 cursor-pointer"
+            >
+              <span>Show More Hampers &amp; Bouquets</span>
+              <ArrowRight className="w-4 h-4 text-[#DFBA54] transition-transform group-hover:translate-x-1" />
+            </button>
+            <p className="text-[11px] text-[#6B6559] font-sans">
+              {HAMPER_QUEEN_PRODUCTS.length - featuredList.length} more options • from ₹{HAMPER_QUEEN_PRODUCTS.reduce((min, p) => {
+                const match = p.approxPrice.match(/₹([0-9,]+)/);
+                const val = match ? Number(match[1].replace(/,/g, '')) : Infinity;
+                return val < min ? val : min;
+              }, Infinity)} onward
+            </p>
+          </div>
+        )}
 
         {/* Custom Order Callout Footer */}
         <div className="mt-16 p-8 rounded-3xl bg-gradient-to-r from-[#FFFDF9] via-white to-[#FAF8F5] border-2 border-[#D4AF37]/40 shadow-md text-center space-y-4">

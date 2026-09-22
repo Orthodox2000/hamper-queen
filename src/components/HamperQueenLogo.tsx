@@ -21,16 +21,16 @@ export const HamperQueenLogo: React.FC<HamperQueenLogoProps> = ({
 }) => {
   // Dimension helpers
   const iconDimensions = {
-    sm: 'w-7 h-7',
-    md: 'w-9 h-9',
-    lg: 'w-11 h-11',
+    sm: 'w-8 h-8',
+    md: 'w-10 h-10',
+    lg: 'w-13 h-13 sm:w-14 sm:h-14',
     hero: 'w-16 h-16 sm:w-20 sm:h-20',
   }[size];
 
   const titleSize = {
     sm: 'text-base tracking-[0.18em]',
     md: 'text-lg sm:text-xl tracking-[0.2em]',
-    lg: 'text-xl sm:text-2xl lg:text-3xl tracking-[0.2em]',
+    lg: 'text-lg sm:text-2xl lg:text-3xl tracking-[0.2em]',
     hero: 'text-3xl sm:text-4xl md:text-5xl tracking-[0.25em]',
   }[size];
 

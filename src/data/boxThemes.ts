@@ -1,3 +1,11 @@
+/**
+ * boxThemes.ts
+ * -----------------------------------------------------------------------------
+ * Design tokens for the interactive 3D gift box: per-theme colors (bed, faces,
+ * ribbons), size presets (sm/md/lg), the chip-variant list, and the
+ * BOX_VARIANT_SIZES map that gives each chip a visibly different box size.
+ */
+
 export interface BoxTheme {
   id: string;
   label: string;
@@ -66,9 +74,9 @@ export const BOX_THEMES = {
     boxLabel: 'Obsidian & Gold Gourmet Box',
     lidTop: 'from-[#241B12] via-[#191008] to-[#0D0904]',
     frontFace: 'from-[#2A2015] via-[#1B130A] to-[#0C0805]',
-    backFace: '#110B06',
-    leftFace: '#160F08',
-    rightFace: '#1B130A',
+    backFace: '#1B130A',
+    leftFace: '#221810',
+    rightFace: '#291E13',
     bottomFace: '#080604',
     faceBorder: 'border-[#DFBA54]/50',
   } as BoxTheme,
@@ -102,9 +110,9 @@ export const BOX_THEMES = {
     boxLabel: 'Artisan Espresso Wooden Tray',
     lidTop: 'from-[#38200F] via-[#281608] to-[#160C04]',
     frontFace: 'from-[#41270F] via-[#2E1A0A] to-[#180D05]',
-    backFace: '#1C1006',
-    leftFace: '#241507',
-    rightFace: '#2A1909',
+    backFace: '#281709',
+    leftFace: '#301E0B',
+    rightFace: '#3A2411',
     bottomFace: '#120A04',
     faceBorder: 'border-[#D97706]/50',
   } as BoxTheme,
@@ -138,9 +146,9 @@ export const BOX_THEMES = {
     boxLabel: 'Royal Atelier Velvet Hamper',
     lidTop: 'from-[#2E0A45] via-[#1F0630] to-[#140419]',
     frontFace: 'from-[#350849] via-[#280538] to-[#1A0326]',
-    backFace: '#1E0430',
-    leftFace: '#240640',
-    rightFace: '#2A0748',
+    backFace: '#240539',
+    leftFace: '#2E084D',
+    rightFace: '#350A5A',
     bottomFace: '#120418',
     faceBorder: 'border-[#DFBA54]/60',
   } as BoxTheme,
@@ -172,6 +180,19 @@ export const BOX_THEME_VARIANTS: BoxTheme[] = [
   BOX_THEMES.coffee,
   BOX_THEMES.women,
 ];
+
+/**
+ * Box size per theme variant so switching a chip visibly changes the box
+ * dimensions (royal/chocolate => large, obsidian/men => medium, coffee/women => small).
+ */
+export const BOX_VARIANT_SIZES: Record<string, 'sm' | 'md' | 'lg'> = {
+  royal: 'lg',
+  chocolate: 'lg',
+  obsidian: 'md',
+  men: 'md',
+  coffee: 'sm',
+  women: 'sm',
+};
 
 export interface BoxSizePreset {
   edge: number;

@@ -251,6 +251,7 @@ export default function App() {
             {/* Complete Hamper Queen Catalog: Bouquets, 12 Birthday Hampers & Specialty Boxes */}
             <HamperQueenShowcase
               language={language}
+              spotlightOnly
               onCustomizeProduct={handleCustomizeHamperQueenProduct}
               onOpenBooking={handleOpenBooking}
               onOpenScribe={() => {

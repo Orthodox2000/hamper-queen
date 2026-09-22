@@ -1,3 +1,14 @@
+/**
+ * Header.tsx
+ * -----------------------------------------------------------------------------
+ * Site chrome: slim announcement bar + main navigation row.
+ *
+ *  - Navbar height is padding-driven (min-h-14 / sm:min-h-16) for a compact,
+ *    airy feel; the brand logo emblem is sized up (size="lg" crest).
+ *  - Stable ids used by tests/tools: #nav-link-*, #mobile-nav-*,
+ *    #btn-open-hamper-drawer, #btn-mobile-menu.
+ */
+
 import React, { useState } from 'react';
 import { Crown, Sparkles, ShoppingBag, Menu, X, Globe, Compass, Gift, MessageCircle } from 'lucide-react';
 import { CustomHamper, LanguageMode } from '../types';
@@ -46,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({
     <header className="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-[#D4AF37]/30 shadow-xs">
       
       {/* 1. Announcement Top Bar: Tagline + WhatsApp / Book Order / Language */}
-      <div className="bg-gradient-to-r from-[#141210] via-[#2A2318] to-[#141210] text-[#F3E5AB] text-xs py-1.5 px-4 sm:px-8 border-b border-[#D4AF37]/40 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 shadow-xs">
+      <div className="bg-gradient-to-r from-[#141210] via-[#2A2318] to-[#141210] text-[#F3E5AB] text-[11px] py-1 px-4 sm:px-8 border-b border-[#D4AF37]/40 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 shadow-xs">
         <div className="hidden lg:flex items-center gap-2.5 text-[#EDE8DF] tracking-wide uppercase text-[11px]">
           <span className="inline-block w-2 h-2 rounded-full bg-[#DFBA54] animate-pulse" />
           <span className="font-medium text-white/90">Handcrafted Bouquets • 12 Birthday Hampers • Wax Sealed Keepsakes</span>
@@ -91,7 +102,7 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* 2. Main Navigation Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-22 py-2">
+        <div className="flex items-center justify-between gap-3 py-1 min-h-14 sm:min-h-16">
 
           {/* Brand Logo */}
           <HamperQueenLogo

@@ -72,7 +72,7 @@ export const BulkOrdersSection: React.FC<BulkOrdersSectionProps> = ({ onOpenBulk
   ];
 
   return (
-    <section id="bulk-orders-section" className="py-16 sm:py-20 bg-[#FAF9F5] text-[#141414] border-b border-[#EAE5D9]">
+    <section id="bulk-orders-section" className="py-16 sm:py-20 bg-[#FAF9F5] text-[#141414] border-b border-[#EAE5D9] content-visibility-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Header */}

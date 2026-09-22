@@ -49,7 +49,7 @@ Email: ${HAMPER_QUEEN_OFFICIAL_CONTACT.email}
   };
 
   return (
-    <section id="brochures-section" className="py-16 bg-white border-t border-[#EAE5D9]">
+    <section id="brochures-section" className="py-16 bg-white border-t border-[#EAE5D9] content-visibility-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

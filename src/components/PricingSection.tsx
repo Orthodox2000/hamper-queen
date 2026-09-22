@@ -23,7 +23,7 @@ export const PricingSection: React.FC = () => {
   const totalEstimate = baseVesselCost + itemsCost + floralCost + whiteGloveCost + plaqueCost;
 
   return (
-    <section id="pricing-section" className="py-16 bg-white border-t border-[#EAE5D9]">
+    <section id="pricing-section" className="py-16 bg-white border-t border-[#EAE5D9] content-visibility-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header with Explicit Modularity */}

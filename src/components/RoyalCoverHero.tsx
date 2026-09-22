@@ -1,3 +1,15 @@
+/**
+ * RoyalCoverHero.tsx
+ * -----------------------------------------------------------------------------
+ * Full-viewport homepage hero.
+ *
+ *  - Full-width scene strip (all breakpoints) with centered founder line below.
+ *  - Lightweight background imagery (q=45&w=1200) with a shimmer skeleton
+ *    until each next/image finishes loading; only the first scene is priority.
+ *  - Right column hosts the interactive ThreeDGiftBox; box size follows the
+ *    selected theme variant via BOX_VARIANT_SIZES.
+ */
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { ArrowRight, MessageCircle, Heart, ChevronDown, Image as ImageIcon, Gift, Sparkles, MapPin, Zap, ShieldCheck, Crown } from 'lucide-react';
@@ -7,7 +19,7 @@ import { royaleLogger } from '../utils/logger';
 import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
 import { triggerGoldConfetti } from '../utils/confetti';
 import { ThreeDGiftBox, type BoxVariant } from './ThreeDGiftBox';
-import { BOX_THEME_VARIANTS } from '../data/boxThemes';
+import { BOX_THEME_VARIANTS, BOX_VARIANT_SIZES } from '../data/boxThemes';
 
 interface RoyalCoverHeroProps {
   language: LanguageMode;
@@ -20,36 +32,36 @@ interface RoyalCoverHeroProps {
   onOpenAtelier?: () => void;
 }
 
-// Curated high-resolution background scenes
+// Curated high-resolution background scenes (downscaled/sharper params for a lighter, faster hero)
 const HERO_BACKGROUND_SCENES = [
   {
     id: 'sovereign_hamper',
     label: 'Artisan Hamper',
-    url: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=70&w=1800&auto=format&fit=crop',
+    url: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=45&w=1200&auto=format&fit=crop',
     alt: 'Opulent celebration hamper with fine ribbons and artisanal chocolates',
   },
   {
     id: 'velvet_roses_bouquet',
     label: 'Handcrafted Bouquet',
-    url: 'https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=70&w=1800&auto=format&fit=crop',
+    url: 'https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=45&w=1200&auto=format&fit=crop',
     alt: 'Hand-tied velvet crimson rose bouquet wrapped in luxury florist paper',
   },
   {
     id: 'bespoke_gourmet_crate',
     label: 'Luxury Gift Box',
-    url: 'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=70&w=1800&auto=format&fit=crop',
+    url: 'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=45&w=1200&auto=format&fit=crop',
     alt: 'Luxury custom presentation gift crate with gold-tied ribbons and warm light',
   },
   {
     id: 'candlelit_keepsake',
     label: 'Keepsake & Lights',
-    url: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=70&w=1800&auto=format&fit=crop',
+    url: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=45&w=1200&auto=format&fit=crop',
     alt: 'Romantic candlelit photo and chocolate hamper with fairy lights',
   },
   {
     id: 'imperial_trunk',
     label: 'Imperial Trunk',
-    url: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=70&w=1800&auto=format&fit=crop',
+    url: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=45&w=1200&auto=format&fit=crop',
     alt: 'Royal vintage leather and gold celebration trunk hamper',
   },
 ];
@@ -64,11 +76,13 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
   const t = TRANSLATIONS[language];
   const [activeBgIdx, setActiveBgIdx] = useState<number>(0);
   const [boxVariant, setBoxVariant] = useState<BoxVariant>('royal');
+  const [bgLoaded, setBgLoaded] = useState<boolean>(false);
 
   const currentBg = HERO_BACKGROUND_SCENES[activeBgIdx] || HERO_BACKGROUND_SCENES[0];
 
   const handleSelectBg = (idx: number) => {
     setActiveBgIdx(idx);
+    setBgLoaded(false);
     triggerGoldConfetti(0.5, 0.4);
     royaleLogger.action('CoverHero', `Switched background scene to: ${HERO_BACKGROUND_SCENES[idx].label}`);
   };
@@ -99,6 +113,10 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
       {/* 100dvh Full Page Background Image with Crossfade */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#241B12] via-[#120E0A] to-[#0A0704]" />
+        <div
+          key={`skeleton-${currentBg.url}`}
+          className={`absolute inset-0 hq-skeleton transition-opacity duration-700 ${bgLoaded ? 'opacity-0' : 'opacity-100'}`}
+        />
         <Image
           key={currentBg.url}
           src={currentBg.url}
@@ -107,7 +125,8 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
           fill
           sizes="100vw"
           priority={activeBgIdx === 0}
-          className="object-cover object-center scale-102 transition-all duration-1000 ease-out"
+          onLoad={() => setBgLoaded(true)}
+          className={`object-cover object-center scale-[1.02] transition-all duration-1000 ease-out ${bgLoaded ? 'opacity-100' : 'opacity-0'}`}
         />
 
         {/* Luminous & High-Contrast Scrim to ensure crisp readability */}
@@ -116,32 +135,37 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.65)_100%)]" />
       </div>
 
-      {/* Top Bar: Founder & Origin Story Tagline + Scene Switchers */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 flex flex-wrap items-center justify-between gap-3">
-        {/* Founder Credential Box */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-black/60 backdrop-blur-md rounded-lg border border-white/20 text-[#F3E5AB] text-xs font-semibold tracking-wide shadow-md">
-          <Crown className="w-3.5 h-3.5 text-[#DFBA54] shrink-0" />
-          <span className="truncate max-w-[280px] sm:max-w-none">
-            Founded by <strong>Ms. Supriya Khandekar</strong> • Homegrown Mumbai Gifting Boutique
-          </span>
-        </div>
+      {/* Top Bar: Full-width Scene Strip (visible on all breakpoints) + Founder Line */}
+      <div className="relative z-10 w-full mt-3 sm:mt-5">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 space-y-2">
+          {/* Full-width Scene Selector */}
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 bg-black/50 backdrop-blur-md px-2 py-2 rounded-2xl border border-white/20 shadow-md w-full">
+            <span className="flex items-center gap-1 px-1 sm:px-2 text-[#DFBA54] text-[10px] sm:text-[11px] font-sans font-bold tracking-[0.14em] uppercase shrink-0">
+              <ImageIcon className="w-3.5 h-3.5 shrink-0" />
+              <span className="hidden sm:inline">Scene</span>
+            </span>
+            {HERO_BACKGROUND_SCENES.map((scene, idx) => (
+              <button
+                key={scene.id}
+                onClick={() => handleSelectBg(idx)}
+                className={`px-2 sm:px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-seasons tracking-wider uppercase transition-all cursor-pointer border ${
+                  activeBgIdx === idx
+                    ? 'bg-[#D4AF37] text-[#141414] font-bold shadow-xs border-[#F3E5AB]'
+                    : 'text-white/80 border-white/15 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {scene.label}
+              </button>
+            ))}
+          </div>
 
-        {/* Scene Selector */}
-        <div className="hidden md:flex items-center bg-black/50 backdrop-blur-md p-1 rounded-lg border border-white/20 shadow-md">
-          <ImageIcon className="w-3.5 h-3.5 text-[#DFBA54] mx-2 shrink-0" />
-          {HERO_BACKGROUND_SCENES.map((scene, idx) => (
-            <button
-              key={scene.id}
-              onClick={() => handleSelectBg(idx)}
-              className={`px-2.5 py-1 rounded-md text-[11px] font-seasons tracking-wider uppercase transition-all cursor-pointer ${
-                activeBgIdx === idx
-                  ? 'bg-[#D4AF37] text-[#141414] font-bold shadow-xs'
-                  : 'text-white/80 hover:text-white hover:bg-white/10'
-              }`}
-            >
-              {scene.label}
-            </button>
-          ))}
+          {/* Founder Line Below the Scene Strip */}
+          <div className="flex items-center justify-center gap-1.5 text-center px-2">
+            <Crown className="w-3.5 h-3.5 text-[#DFBA54] shrink-0" />
+            <span className="text-[11px] sm:text-xs text-[#F3E5AB] font-sans font-semibold tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+              Founded by <strong>Ms. Supriya Khandekar</strong> — Homegrown Mumbai Gifting Boutique
+            </span>
+          </div>
         </div>
       </div>
 
@@ -257,8 +281,8 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                 <span>Interactive 3D Unboxing</span>
               </div>
 
-              {/* Box Theme Switcher */}
-              <div className="flex items-center gap-1.5 mb-4">
+              {/* Box Theme Switcher (wraps on small screens) */}
+              <div className="flex flex-wrap items-center justify-center gap-1.5 mb-4">
                 {BOX_THEME_VARIANTS.map((th) => (
                   <button
                     key={th.id}
@@ -268,7 +292,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                       royaleLogger.action('CoverHero', `Switched 3D box theme to: ${th.label}`);
                     }}
                     title={`${th.label} — ${th.boxLabel}`}
-                    className={`px-2.5 py-1 rounded-full text-[9.5px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
+                    className={`px-2 py-0.5 rounded-full text-[9px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
                       boxVariant === th.id
                         ? 'bg-[#D4AF37] text-[#141414] border-[#F3E5AB] shadow-xs'
                         : 'bg-black/40 text-white/75 border-white/20 hover:text-white hover:bg-white/10'
@@ -279,10 +303,10 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                 ))}
               </div>
 
-              {/* The 3D Gift Box Component */}
+              {/* The 3D Gift Box Component — size follows the selected theme variant */}
               <ThreeDGiftBox
                 variant={boxVariant}
-                size="md"
+                size={BOX_VARIANT_SIZES[boxVariant] || 'md'}
                 onOpenAtelier={onOpenCustomised || onOpenAtelier}
               />
 
