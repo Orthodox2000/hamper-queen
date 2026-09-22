@@ -58,9 +58,12 @@ export const Header: React.FC<HeaderProps> = ({
       
       {/* 1. Announcement Top Bar: Tagline + WhatsApp / Book Order / Language */}
       <div className="bg-gradient-to-r from-[#141210] via-[#2A2318] to-[#141210] text-[#F3E5AB] text-[11px] py-1 px-4 sm:px-8 border-b border-[#D4AF37]/40 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 shadow-xs">
-        <div className="hidden lg:flex items-center gap-2.5 text-[#EDE8DF] tracking-wide uppercase text-[11px]">
-          <span className="inline-block w-2 h-2 rounded-full bg-[#DFBA54] animate-pulse" />
-          <span className="font-medium text-white/90">Handcrafted Bouquets • 12 Birthday Hampers • Wax Sealed Keepsakes</span>
+        <div className="hidden lg:flex items-center gap-2.5 text-[#EDE8DF] tracking-wide text-[11px]"> <div className="flex items-center justify-center gap-1.5 text-center px-2">
+            <Crown className="w-3.5 h-3.5 text-[#DFBA54] shrink-0" />
+            <span className="text-[11px] sm:text-xs text-[#F3E5AB] font-sans font-semibold tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+              Founded by <strong>Ms. Supriya Khandekar</strong> — Homegrown Gifting Boutique
+            </span>
+          </div>
         </div>
 
         <div className="lg:hidden flex items-center gap-1.5">

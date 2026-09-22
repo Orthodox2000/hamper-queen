@@ -142,9 +142,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 space-y-2">
           {/* Full-width Scene Selector */}
           <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 bg-black/50 backdrop-blur-md px-2 py-2 rounded-2xl border border-white/20 shadow-md w-full">
-            <span className="flex items-center gap-1 px-1 sm:px-2 text-[#DFBA54] text-[10px] sm:text-[11px] font-sans font-bold tracking-[0.14em] uppercase shrink-0">
-              <ImageIcon className="w-3.5 h-3.5 shrink-0" />
-              <span className="hidden sm:inline">Scene</span>
+            <span className="flex items-center gap-1 px-1 sm:px-2 text-[#DFBA54] text-[10px] sm:text-[11px] font-sans font-bold tracking-[0.14em] uppercase shrink-0"> 
             </span>
             {HERO_BACKGROUND_SCENES.map((scene, idx) => (
               <button
@@ -161,13 +159,8 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
             ))}
           </div>
 
-          {/* Founder Line Below the Scene Strip */}
-          <div className="flex items-center justify-center gap-1.5 text-center px-2">
-            <Crown className="w-3.5 h-3.5 text-[#DFBA54] shrink-0" />
-            <span className="text-[11px] sm:text-xs text-[#F3E5AB] font-sans font-semibold tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
-              Founded by <strong>Ms. Supriya Khandekar</strong> — Homegrown Mumbai Gifting Boutique
-            </span>
-          </div>
+          {/* Founder Line Below the Scene Strip i have moved it and keep it that way. */}
+          
         </div>
       </div>
 
