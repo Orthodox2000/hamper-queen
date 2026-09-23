@@ -11,7 +11,7 @@ import { royaleLogger } from '../../../utils/logger';
 
 export default function CatalogPage() {
   const router = useRouter();
-  const { language, setCustomHamper, addItemToHamper, openBooking } = useShopStore();
+  const { language, setCustomHamper, addItemToHamper, openBooking, addProductToCart } = useShopStore();
 
   const goScribe = () => {
     royaleLogger.action('Navigation', 'User navigated to tab: scribe');
@@ -40,6 +40,7 @@ export default function CatalogPage() {
         onCustomizeProduct={handleCustomizeProduct}
         onOpenBooking={openBooking}
         onOpenScribe={goScribe}
+        onAddToCart={(p) => { addProductToCart(p.id, true); royaleLogger.action('Catalog', `Added to cart: ${p.name} (${p.id})`); }}
       />
 
       <CatalogSection onAddItemToHamper={addItemToHamper} />

@@ -20,6 +20,7 @@ import {
   CalendarCheck,
   Tag,
   Wand2,
+  ShoppingBag,
 } from 'lucide-react';
 import { 
   HAMPER_QUEEN_PRODUCTS, 
@@ -39,6 +40,8 @@ interface HamperQueenShowcaseProps {
   onCustomizeProduct: (product: HamperQueenProduct) => void;
   onOpenScribe: () => void;
   onOpenBooking?: (product?: HamperQueenProduct, isBulk?: boolean) => void;
+  /** When set, shows an "Add to Cart" action on every product card. */
+  onAddToCart?: (product: HamperQueenProduct) => void;
   /** When true (homepage), only the spotlight trio is rendered until "Show More". */
   spotlightOnly?: boolean;
 }
@@ -59,6 +62,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
   onCustomizeProduct,
   onOpenScribe,
   onOpenBooking,
+  onAddToCart,
   spotlightOnly = false,
 }) => {
   const t = TRANSLATIONS[language];
@@ -317,14 +321,25 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
                       <span>Book & Pinpoint Delivery</span>
                     </button>
 
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className={`grid gap-2 ${onAddToCart ? 'grid-cols-3' : 'grid-cols-2'}`}>
+                      {/* Add to Cart (unified checkout) */}
+                      {onAddToCart && (
+                        <button
+                          onClick={() => onAddToCart(prod)}
+                          className="py-2 px-3 rounded-xl bg-[#FAF5E8] hover:bg-[#F3E5AB] text-[#8C6821] border border-[#D4AF37] font-cinzel text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+                        >
+                          <ShoppingBag className="w-3.5 h-3.5 text-[#B8860B]" />
+                          <span>Add</span>
+                        </button>
+                      )}
+
                       {/* WhatsApp Inquiry Button */}
                       <button
                         onClick={() => handleWhatsAppOrder(prod)}
                         className="py-2 px-3 rounded-xl bg-[#25D366] hover:bg-[#20BA5A] text-white font-sans text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
                       >
                         <MessageCircle className="w-3.5 h-3.5 fill-white" />
-                        <span>Order on WA</span>
+                        <span>on WA</span>
                       </button>
 
                       {/* Customize in Studio */}

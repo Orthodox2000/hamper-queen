@@ -32,6 +32,11 @@ export function ShopChrome({ children }: { children: React.ReactNode }) {
     isBulkBooking,
     openBooking,
     closeBooking,
+    productCartLines,
+    removeProductLine,
+    increaseProductLine,
+    decreaseProductLine,
+    applyCatalogOverride,
   } = useShopStore();
 
   return (
@@ -62,6 +67,11 @@ export function ShopChrome({ children }: { children: React.ReactNode }) {
           closeHamperDrawer();
           openBooking(undefined, false);
         }}
+        productCartLines={productCartLines}
+        onRemoveProductLine={removeProductLine}
+        onIncreaseProductLine={increaseProductLine}
+        onDecreaseProductLine={decreaseProductLine}
+        applyCatalogOverride={applyCatalogOverride}
       />
 
       <BookingOrderModal
@@ -70,6 +80,9 @@ export function ShopChrome({ children }: { children: React.ReactNode }) {
         preSelectedProduct={selectedBookingProduct}
         customHamper={customHamper}
         initialBulkMode={isBulkBooking}
+        productCartLines={productCartLines}
+        onOrderPlaced={clearCart}
+        applyCatalogOverride={applyCatalogOverride}
       />
 
       <Footer language={language} />

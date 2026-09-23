@@ -1,7 +1,11 @@
 import React, { useMemo } from 'react';
-import { X, Trash2, ArrowRight, Sparkles, ShoppingBag, Plus, Minus } from 'lucide-react';
+import { X, Trash2, ArrowRight, Sparkles, ShoppingBag, Plus, Minus, Gift } from 'lucide-react';
 import { CustomHamper } from '../types';
 import { ItemGraphic } from './ItemGraphic';
+import { HamperQueenGraphic } from './HamperQueenGraphic';
+import { HAMPER_QUEEN_PRODUCTS, HamperQueenProduct } from '../data/hamperQueenCatalog';
+import { ProductCartLine } from '../store/shop-store';
+import { parsePriceString, formatINR } from '../utils/pricing';
 import { royaleLogger } from '../utils/logger';
 
 interface HamperDrawerProps {
@@ -14,12 +18,17 @@ interface HamperDrawerProps {
   onClearCart: () => void;
   onOpenAtelier: () => void;
   onOpenBooking?: () => void;
+  productCartLines: ProductCartLine[];
+  onRemoveProductLine: (productId: string) => void;
+  onIncreaseProductLine: (productId: string) => void;
+  onDecreaseProductLine: (productId: string) => void;
+  applyCatalogOverride?: (product: HamperQueenProduct) => HamperQueenProduct;
 }
 
 const FREE_DELIVERY_THRESHOLD = 499;
 const DELIVERY_FEE = 49;
 
-interface CartLine {
+interface AtelierLine {
   id: string;
   name: string;
   subtitle: string;
@@ -39,9 +48,14 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
   onClearCart,
   onOpenAtelier,
   onOpenBooking,
+  productCartLines,
+  onRemoveProductLine,
+  onIncreaseProductLine,
+  onDecreaseProductLine,
+  applyCatalogOverride,
 }) => {
-  const lines: CartLine[] = useMemo(() => {
-    const map = new Map<string, CartLine>();
+  const atelierLines: AtelierLine[] = useMemo(() => {
+    const map = new Map<string, AtelierLine>();
     customHamper.items.forEach((item) => {
       const existing = map.get(item.id);
       if (existing) {
@@ -61,13 +75,37 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
     return Array.from(map.values());
   }, [customHamper.items]);
 
-  const subtotal = useMemo(
-    () => lines.reduce((sum, line) => sum + line.unitValue * line.qty, 0),
-    [lines]
-  );
+  const productLines = useMemo(() => {
+    return productCartLines
+      .map((line) => {
+        const base = HAMPER_QUEEN_PRODUCTS.find((p) => p.id === line.productId);
+        if (!base) return null;
+        const product = applyCatalogOverride ? applyCatalogOverride(base) : base;
+        return {
+          productId: product.id,
+          name: product.name,
+          itemCode: product.itemCode,
+          priceDisplay: product.approxPrice,
+          priceValue: parsePriceString(product.approxPrice),
+          graphicId: product.graphicId,
+          product,
+          qty: line.qty,
+        };
+      })
+      .filter((l): l is NonNullable<typeof l> => Boolean(l));
+  }, [productCartLines, applyCatalogOverride]);
+
+  const subtotal = useMemo(() => {
+    const products = productLines.reduce((sum, l) => sum + l.priceValue * l.qty, 0);
+    const atelier = atelierLines.reduce((sum, line) => sum + line.unitValue * line.qty, 0);
+    return products + atelier;
+  }, [productLines, atelierLines]);
+
   const delivery = subtotal === 0 ? 0 : subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
   const grandTotal = subtotal + delivery;
-  const totalQty = customHamper.items.length;
+  const totalQty = atelierLines.reduce((s, l) => s + l.qty, 0) + productLines.reduce((s, l) => s + l.qty, 0);
+  const hasCustomItems = atelierLines.length > 0 || customHamper.items.length > 0;
+  const isEmpty = totalQty === 0;
 
   if (!isOpen) return null;
 
@@ -93,7 +131,7 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
                   Your Hamper Cart
                 </h3>
                 <p className="text-xs text-[#787163]">
-                  {totalQty === 0 ? 'Cart is empty' : `${totalQty} item${totalQty === 1 ? '' : 's'} · ${customHamper.vessel.name}`}
+                  {isEmpty ? 'Cart is empty' : `${totalQty} item${totalQty === 1 ? '' : 's'} · free delivery above INR ${FREE_DELIVERY_THRESHOLD}`}
                 </p>
               </div>
             </div>
@@ -108,7 +146,7 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
 
           {/* Drawer Items List */}
           <div className="flex-1 overflow-y-auto p-6 space-y-3">
-            {lines.length === 0 ? (
+            {isEmpty ? (
               <div className="text-center py-16 space-y-3">
                 <div className="w-14 h-14 rounded-full bg-[#F3EFE6] text-[#C5A059] mx-auto flex items-center justify-center">
                   <Sparkles className="w-7 h-7" />
@@ -117,7 +155,7 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
                   Your Cart is Currently Empty
                 </h4>
                 <p className="font-cormorant text-xs text-[#6B6557] max-w-xs mx-auto">
-                  Add artisanal Ecuadorian stems, 24K gold truffles, or crystal flutes from our collection.
+                  Add prebuilt hampers, chocolates, or builder items from our collection — then proceed straight to checkout.
                 </p>
                 <button
                   onClick={() => {
@@ -131,73 +169,108 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
               </div>
             ) : (
               <>
-                {lines.map((line) => (
-                  <div
-                    key={line.id}
-                    className="bg-white p-3 rounded-2xl border border-[#E5DAC2] shadow-xs"
-                  >
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="w-14 h-14 bg-[#FAF9F5] rounded-xl p-1 flex items-center justify-center flex-shrink-0">
-                        <ItemGraphic id={line.imageSvgId} size="sm" />
+                {productLines.length > 0 && (
+                  <>
+                    <span className="block text-[10px] font-cinzel font-bold uppercase tracking-widest text-[#8C6821] pt-1">
+                      Prebuilt Hampers
+                    </span>
+                    {productLines.map((line) => (
+                      <div key={line.productId} className="bg-white p-3 rounded-2xl border border-[#E5DAC2] shadow-xs">
+                        <div className="flex items-center justify-between gap-3">
+                          <div className="w-14 h-14 bg-[#FAF9F5] rounded-xl p-1 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                            <HamperQueenGraphic graphicId={line.graphicId} product={line.product} size="sm" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h5 className="font-cinzel text-xs font-bold text-[#141414] truncate">{line.name}</h5>
+                            <p className="text-[10px] text-[#8C6821] font-semibold">{line.itemCode}</p>
+                            <span className="text-[10px] text-[#554F42] font-sans">{line.priceDisplay} each</span>
+                          </div>
+                          <button
+                            onClick={() => onRemoveProductLine(line.productId)}
+                            className="p-1.5 text-[#800E17] hover:bg-[#FBEBEB] rounded-lg transition-colors cursor-pointer flex-shrink-0"
+                            title="Remove from cart"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        </div>
+                        <div className="mt-2.5 flex items-center justify-between gap-2">
+                          <div className="flex items-center gap-2">
+                            <button
+                              onClick={() => onDecreaseProductLine(line.productId)}
+                              className="w-7 h-7 rounded-full bg-[#F3EFE6] hover:bg-[#EADFC7] text-[#554F42] flex items-center justify-center transition-colors cursor-pointer"
+                              title="Decrease quantity"
+                            >
+                              <Minus className="w-3.5 h-3.5" />
+                            </button>
+                            <span className="text-sm font-bold text-[#141414] w-5 text-center">{line.qty}</span>
+                            <button
+                              onClick={() => onIncreaseProductLine(line.productId)}
+                              className="w-7 h-7 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] flex items-center justify-center transition-colors cursor-pointer"
+                              title="Increase quantity"
+                            >
+                              <Plus className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+                          <span className="text-xs font-cinzel font-bold text-[#141414]">{formatINR(line.priceValue * line.qty)}</span>
+                        </div>
                       </div>
+                    ))}
+                  </>
+                )}
 
-                      <div className="flex-1 min-w-0">
-                        <h5 className="font-cinzel text-xs font-bold text-[#141414] truncate">
-                          {line.name}
-                        </h5>
-                        <p className="font-cormorant text-xs text-[#6B6557] truncate">
-                          {line.subtitle}
-                        </p>
-                        <span className="text-[10px] text-[#8C6821] font-semibold">
-                          ✦ {line.tier} Tier
-                        </span>
-                        {line.unitValue > 0 && (
-                          <span className="text-[10px] text-[#554F42] font-sans ml-1.5">
-                            INR {line.unitValue.toLocaleString('en-IN')} each
+                {hasCustomItems && (
+                  <>
+                    <span className="block text-[10px] font-cinzel font-bold uppercase tracking-widest text-[#8C6821] pt-2">
+                      Atelier Custom Items
+                    </span>
+                    {atelierLines.map((line) => (
+                      <div key={line.id} className="bg-white p-3 rounded-2xl border border-[#E5DAC2] shadow-xs">
+                        <div className="flex items-center justify-between gap-3">
+                          <div className="w-14 h-14 bg-[#FAF9F5] rounded-xl p-1 flex items-center justify-center flex-shrink-0">
+                            <ItemGraphic id={line.imageSvgId} size="sm" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h5 className="font-cinzel text-xs font-bold text-[#141414] truncate">{line.name}</h5>
+                            <p className="font-cormorant text-xs text-[#6B6557] truncate">{line.subtitle}</p>
+                            <span className="text-[10px] text-[#8C6821] font-semibold">✦ {line.tier} Tier</span>
+                            {line.unitValue > 0 && (
+                              <span className="text-[10px] text-[#554F42] font-sans ml-1.5">INR {line.unitValue.toLocaleString('en-IN')} each</span>
+                            )}
+                          </div>
+                          <button
+                            onClick={() => onRemoveItem(line.id)}
+                            className="p-1.5 text-[#800E17] hover:bg-[#FBEBEB] rounded-lg transition-colors cursor-pointer flex-shrink-0"
+                            title="Remove line from cart"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        </div>
+                        <div className="mt-2.5 flex items-center justify-between gap-2">
+                          <div className="flex items-center gap-2">
+                            <button
+                              onClick={() => onDecreaseItem(line.id)}
+                              className="w-7 h-7 rounded-full bg-[#F3EFE6] hover:bg-[#EADFC7] text-[#554F42] flex items-center justify-center transition-colors cursor-pointer"
+                              title="Decrease quantity"
+                            >
+                              <Minus className="w-3.5 h-3.5" />
+                            </button>
+                            <span className="text-sm font-bold text-[#141414] w-5 text-center">{line.qty}</span>
+                            <button
+                              onClick={() => onIncreaseItem(line.id)}
+                              className="w-7 h-7 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] flex items-center justify-center transition-colors cursor-pointer"
+                              title="Increase quantity"
+                            >
+                              <Plus className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+                          <span className="text-xs font-cinzel font-bold text-[#141414]">
+                            {line.unitValue > 0 ? `INR ${(line.unitValue * line.qty).toLocaleString('en-IN')}` : 'Value on request'}
                           </span>
-                        )}
+                        </div>
                       </div>
-
-                      <button
-                        onClick={() => {
-                          onRemoveItem(line.id);
-                          royaleLogger.action('HamperDrawer', `Removed line: ${line.name}`);
-                        }}
-                        className="p-1.5 text-[#800E17] hover:bg-[#FBEBEB] rounded-lg transition-colors cursor-pointer flex-shrink-0"
-                        title="Remove line from cart"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </button>
-                    </div>
-
-                    <div className="mt-2.5 flex items-center justify-between gap-2">
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={() => onDecreaseItem(line.id)}
-                          className="w-7 h-7 rounded-full bg-[#F3EFE6] hover:bg-[#EADFC7] text-[#554F42] flex items-center justify-center transition-colors cursor-pointer"
-                          title="Decrease quantity"
-                        >
-                          <Minus className="w-3.5 h-3.5" />
-                        </button>
-                        <span className="text-sm font-bold text-[#141414] w-5 text-center">
-                          {line.qty}
-                        </span>
-                        <button
-                          onClick={() => onIncreaseItem(line.id)}
-                          className="w-7 h-7 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] flex items-center justify-center transition-colors cursor-pointer"
-                          title="Increase quantity"
-                        >
-                          <Plus className="w-3.5 h-3.5" />
-                        </button>
-                      </div>
-                      <span className="text-xs font-cinzel font-bold text-[#141414]">
-                        {line.unitValue > 0
-                          ? `INR ${(line.unitValue * line.qty).toLocaleString('en-IN')}`
-                          : 'Value on request'}
-                      </span>
-                    </div>
-                  </div>
-                ))}
+                    ))}
+                  </>
+                )}
 
                 <button
                   onClick={() => {
@@ -214,11 +287,11 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
           </div>
 
           {/* Drawer Footer */}
-          {lines.length > 0 && (
+          {!isEmpty && (
             <div className="p-6 bg-white border-t border-[#EADFC7] space-y-3">
               <div className="flex items-center justify-between text-xs text-[#554F42]">
                 <span>Items Subtotal</span>
-                <strong className="text-[#141414]">INR {subtotal.toLocaleString('en-IN')}</strong>
+                <strong className="text-[#141414]">{formatINR(subtotal)}</strong>
               </div>
               <div className="flex items-center justify-between text-xs text-[#554F42]">
                 <span>Delivery Fee</span>
@@ -233,20 +306,22 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
               )}
               <div className="flex items-center justify-between pt-2 border-t border-[#EADFC7] text-sm">
                 <span className="font-sans font-semibold text-[#554F42]">Grand Total</span>
-                <strong className="font-cinzel text-lg text-[#141414]">INR {grandTotal.toLocaleString('en-IN')}</strong>
+                <strong className="font-cinzel text-lg text-[#141414]">{formatINR(grandTotal)}</strong>
               </div>
-              <div className="rounded-xl bg-[#FAF9F5] border border-[#E5DAC2] px-3 py-2.5 space-y-1.5">
-                <div className="flex items-center justify-between text-[11px] text-[#554F42]">
-                  <span>Presentation Vessel:</span>
-                  <strong className="text-[#141414]">{customHamper.vessel.name}</strong>
+              {hasCustomItems && (
+                <div className="rounded-xl bg-[#FAF9F5] border border-[#E5DAC2] px-3 py-2.5 space-y-1.5">
+                  <div className="flex items-center justify-between text-[11px] text-[#554F42]">
+                    <span>Presentation Vessel:</span>
+                    <strong className="text-[#141414]">{customHamper.vessel.name}</strong>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px] text-[#554F42]">
+                    <span>Ribbon & Seal:</span>
+                    <span className="font-semibold text-[#800E17]">
+                      {customHamper.ribbon.name.split(' ')[0]} • {customHamper.waxSeal.stampDesign.toUpperCase()}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center justify-between text-[11px] text-[#554F42]">
-                  <span>Ribbon & Seal:</span>
-                  <span className="font-semibold text-[#800E17]">
-                    {customHamper.ribbon.name.split(' ')[0]} • {customHamper.waxSeal.stampDesign.toUpperCase()}
-                  </span>
-                </div>
-              </div>
+              )}
 
               <div className="space-y-2 pt-1">
                 {onOpenBooking && (
@@ -257,7 +332,7 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
                     }}
                     className="w-full py-4 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] text-xs font-cinzel font-bold uppercase tracking-wider border border-[#D4AF37] shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
-                    <span>Proceed to Book & Pinpoint Delivery</span>
+                    <span>Proceed to Checkout</span>
                     <ArrowRight className="w-4 h-4 text-[#DFBA54]" />
                   </button>
                 )}

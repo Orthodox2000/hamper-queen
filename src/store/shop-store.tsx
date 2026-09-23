@@ -20,6 +20,15 @@ import { HamperQueenProduct } from '../data/hamperQueenCatalog';
 import { triggerMouseClickConfetti } from '../utils/confetti';
 import { royaleLogger } from '../utils/logger';
 
+/** A prebuilt catalog product added to the royal cart. */
+export interface ProductCartLine {
+  productId: string;
+  qty: number;
+}
+
+/** Admin catalog override fields (name/price/subtitle/etc.) keyed by product id. */
+export type CatalogOverrides = Record<string, Partial<HamperQueenProduct>>;
+
 // Deterministic default curation — empty cart by default (user directive).
 const DEFAULT_CUSTOM_HAMPER: CustomHamper = {
   id: 'HQ-ROYAL-DEFAULT',
@@ -50,6 +59,13 @@ interface ShopStoreValue {
   isBulkBooking: boolean;
   openBooking: (product?: HamperQueenProduct, isBulk?: boolean) => void;
   closeBooking: () => void;
+  productCartLines: ProductCartLine[];
+  addProductToCart: (productId: string, openDrawer?: boolean) => void;
+  increaseProductLine: (productId: string) => void;
+  decreaseProductLine: (productId: string) => void;
+  removeProductLine: (productId: string) => void;
+  catalogOverrides: CatalogOverrides;
+  applyCatalogOverride: (product: HamperQueenProduct) => HamperQueenProduct;
 }
 
 const ShopStoreContext = createContext<ShopStoreValue | null>(null);
@@ -148,6 +164,101 @@ export function ShopStoreProvider({ children }: { children: React.ReactNode }) {
 
   const closeBooking = useCallback(() => setIsBookingModalOpen(false), []);
 
+  // Prebuilt product cart lines (persisted for the unified cart → checkout flow)
+  const [productCartLines, setProductCartLines] = useState<ProductCartLine[]>([]);
+  const [productCartLoaded, setProductCartLoaded] = useState(false);
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('hamper_queen_product_cart');
+      if (saved) {
+        const parsed = JSON.parse(saved) as ProductCartLine[];
+        if (Array.isArray(parsed)) {
+          setProductCartLines(
+            parsed.filter((l) => typeof l?.productId === 'string' && typeof l?.qty === 'number')
+          );
+        }
+      }
+    } catch {
+      // Ignore storage errors
+    } finally {
+      setProductCartLoaded(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!productCartLoaded) return;
+    try {
+      localStorage.setItem('hamper_queen_product_cart', JSON.stringify(productCartLines));
+    } catch {
+      // Ignore storage errors
+    }
+  }, [productCartLines, productCartLoaded]);
+
+  const addProductToCart = useCallback(
+    (productId: string, openDrawer: boolean = true) => {
+      setProductCartLines((prev) => {
+        const existing = prev.find((l) => l.productId === productId);
+        if (existing) {
+          return prev.map((l) => (l.productId === productId ? { ...l, qty: l.qty + 1 } : l));
+        }
+        return [...prev, { productId, qty: 1 }];
+      });
+      royaleLogger.action('Store', `Added prebuilt product to cart: ${productId}`);
+      if (openDrawer) setIsHamperDrawerOpen(true);
+    },
+    []
+  );
+
+  const increaseProductLine = useCallback((productId: string) => {
+    setProductCartLines((prev) =>
+      prev.map((l) => (l.productId === productId ? { ...l, qty: l.qty + 1 } : l))
+    );
+  }, []);
+
+  const decreaseProductLine = useCallback((productId: string) => {
+    setProductCartLines((prev) =>
+      prev
+        .map((l) => (l.productId === productId ? { ...l, qty: l.qty - 1 } : l))
+        .filter((l) => l.qty > 0)
+    );
+  }, []);
+
+  const removeProductLine = useCallback((productId: string) => {
+    setProductCartLines((prev) => prev.filter((l) => l.productId !== productId));
+  }, []);
+
+  // Admin catalog overrides (name/price/subtitle…), merged at runtime.
+  const [catalogOverrides, setCatalogOverrides] = useState<CatalogOverrides>({});
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch('/api/catalog', { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (cancelled || !data?.products) return;
+        const map: CatalogOverrides = {};
+        for (const product of data.products as HamperQueenProduct[]) {
+          const base = product as Partial<HamperQueenProduct>;
+          map[product.id] = base as Partial<HamperQueenProduct>;
+        }
+        setCatalogOverrides(map);
+      })
+      .catch(() => {
+        // Static catalog fallback already in place
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const applyCatalogOverride = useCallback(
+    (product: HamperQueenProduct): HamperQueenProduct => {
+      return { ...product, ...(catalogOverrides[product.id] ?? {}) };
+    },
+    [catalogOverrides]
+  );
+
   const addItemToHamper = useCallback((item: LuxuryItem) => {
     setCustomHamper((prev) => ({ ...prev, items: [...prev.items, item] }));
     royaleLogger.action('Store', `Added to cart: ${item.name}`);
@@ -178,6 +289,7 @@ export function ShopStoreProvider({ children }: { children: React.ReactNode }) {
 
   const clearCart = useCallback(() => {
     setCustomHamper((prev) => ({ ...prev, items: [] }));
+    setProductCartLines([]);
     royaleLogger.action('Store', 'Cart cleared');
   }, []);
 
@@ -204,6 +316,13 @@ export function ShopStoreProvider({ children }: { children: React.ReactNode }) {
     isBulkBooking,
     openBooking,
     closeBooking,
+    productCartLines,
+    addProductToCart,
+    increaseProductLine,
+    decreaseProductLine,
+    removeProductLine,
+    catalogOverrides,
+    applyCatalogOverride,
   };
 
   return <ShopStoreContext.Provider value={value}>{children}</ShopStoreContext.Provider>;

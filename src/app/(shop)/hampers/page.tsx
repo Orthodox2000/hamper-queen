@@ -10,7 +10,7 @@ import { royaleLogger } from '../../../utils/logger';
 
 export default function HampersPage() {
   const router = useRouter();
-  const { language, setCustomHamper, openBooking } = useShopStore();
+  const { language, setCustomHamper, openBooking, addProductToCart } = useShopStore();
 
   const goScribe = () => {
     royaleLogger.action('Navigation', 'User navigated to tab: scribe');
@@ -38,6 +38,7 @@ export default function HampersPage() {
       onCustomizeProduct={handleCustomizeProduct}
       onOpenBooking={openBooking}
       onOpenScribe={goScribe}
+      onAddToCart={(p) => { addProductToCart(p.id, true); royaleLogger.action('Hampers', `Added to cart: ${p.name} (${p.id})`); }}
     />
   );
 }

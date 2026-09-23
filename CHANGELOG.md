@@ -2,6 +2,21 @@
 
 All notable changes to Hamper Queen are documented here. Grouped by audience value.
 
+## 2.1.0 — 2026-09-23 — Order tracking, admin fulfilment & privacy-safe checkout
+
+Easier to prove where your gift is, and easier for the atelier to fulfil it.
+
+### Features
+- **Order placement with a shareable tracking ID** — booking an order now returns a `HQ-XXXXXX` id (e.g. `HQ-NMHRSS`) and a **Public Tracking** page so recipients can see live delivery/payment status without any account. Free 3-letter delivery mapping stays consumer-friendly.
+- **Admin fulfilment studio at `/admin`** — password-gated dashboard with an orders list, a per-order **Fulfilment** editor, and a **Catalog Management** override manager (edit hampers, categories and prices; category edits flow instantly into the gallery, override layer merges on top of the shipped catalogue).
+- **Privacy-safe track API** — the public tracking endpoint never leaks IP info, user-agent, referer or contact details returned values are sanitised to the essentials a customer actually needs.
+
+### Security
+- **Every admin route, API and editor is gated** — unauthenticated requests get a 401 (APIs) or a login form (pages) and never see admin data; wrong-password login is rejected; the session (httpOnly cookie) can be revoked via logout, after which every gate closes again flavors.
+
+### Fixes
+- **Tracker page reads the API response shape correctly** — the page's client code now uses the flat returned order object (was reading a nested `data.order` that never existed), so public tracking renders consistently.
+
 ## 2.0.0 — 2026-09-23 — Real pages & a perfectly sealed gift box
 
 The storefront grew from one long page into dedicated pages, and the 3D gift box now seals perfectly in every size.

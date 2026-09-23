@@ -122,6 +122,11 @@ The Studio
                   {t.nav.lookbooks}
                 </Link>
               </li>
+              <li>
+                <Link href="/track" className="hover:text-[#B8860B] transition-colors cursor-pointer font-semibold text-[#8C6821]">
+                  Track Your Order
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -183,6 +188,10 @@ The Studio
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs">
+            <Link href="/track" className="hover:text-[#B8860B] transition-colors cursor-pointer font-semibold text-[#8C6821]">
+              Track Your Order
+            </Link>
+            <span className="text-[#D8CCA8]">•</span>
             <Link href="/terms-of-service" className="hover:text-[#B8860B] transition-colors cursor-pointer">
               Terms of Service
             </Link>

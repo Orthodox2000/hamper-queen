@@ -14,7 +14,7 @@ import { royaleLogger } from "../../utils/logger";
 
 export function RootHome() {
   const router = useRouter();
-  const { language, setCustomHamper, openBooking } = useShopStore();
+  const { language, setCustomHamper, openBooking, addProductToCart } = useShopStore();
 
   const goToTab = (tab: string) => {
     royaleLogger.action("Navigation", `User navigated to tab: ${tab}`);
@@ -91,6 +91,7 @@ export function RootHome() {
           goToTab("scribe");
           goTop();
         }}
+        onAddToCart={(p) => { addProductToCart(p.id, true); royaleLogger.action('Home', `Added to cart: ${p.name} (${p.id})`); }}
       />
 
       <BulkOrdersSection onOpenBulkBooking={() => openBooking(undefined, true)} />

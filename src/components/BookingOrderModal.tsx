@@ -24,11 +24,20 @@ import {
   ExternalLink,
   Navigation,
   CheckCircle,
+  Plus,
+  Minus,
+  Loader2,
+  Trash2,
+  Lock,
+  Search,
 } from 'lucide-react';
 import { HAMPER_QUEEN_PRODUCTS, HamperQueenProduct, HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
 import { CustomHamper } from '../types';
 import { triggerGrandCelebration, triggerGoldConfetti } from '../utils/confetti';
 import { royaleLogger } from '../utils/logger';
+import { MapPicker } from './MapPicker';
+import { parsePriceString } from '../utils/pricing';
+import type { ProductCartLine } from '../store/shop-store';
 
 interface BookingOrderModalProps {
   isOpen: boolean;
@@ -36,6 +45,22 @@ interface BookingOrderModalProps {
   preSelectedProduct?: HamperQueenProduct | null;
   customHamper?: CustomHamper | null;
   initialBulkMode?: boolean;
+  productCartLines?: ProductCartLine[];
+  onOrderPlaced?: () => void;
+  applyCatalogOverride?: (product: HamperQueenProduct) => HamperQueenProduct;
+}
+
+interface CheckoutLine {
+  key: string;
+  kind: 'product' | 'custom_hamper';
+  productId?: string;
+  qty: number;
+  name: string;
+  itemCode?: string;
+  priceDisplay: string;
+  priceValue: number;
+  itemsIncluded?: string[];
+  product?: HamperQueenProduct;
 }
 
 export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
@@ -44,6 +69,9 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
   preSelectedProduct,
   customHamper,
   initialBulkMode = false,
+  productCartLines = [],
+  onOrderPlaced,
+  applyCatalogOverride,
 }) => {
   // Staged Checkout Flow:
   // Step 1: Gift Selection, Personalization & Client Contact (No location asked initially)
@@ -56,7 +84,11 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
   );
   const [bulkQuantity, setBulkQuantity] = useState<number>(15);
 
-  // Selected item code
+  // Unified cart lines (prebuilt products + custom atelier hamper)
+  const [checkoutLines, setCheckoutLines] = useState<CheckoutLine[]>([]);
+  const [lineError, setLineError] = useState('');
+
+  // Selected item code for the "add another product" dropdown
   const [selectedProductId, setSelectedProductId] = useState<string>(
     preSelectedProduct ? preSelectedProduct.id : customHamper ? 'custom-atelier' : HAMPER_QUEEN_PRODUCTS[0].id
   );
@@ -67,20 +99,138 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
   const [mobilePhone, setMobilePhone] = useState('');
   const [altPhone, setAltPhone] = useState('');
 
-  // Geolocation & Delivery Address (Step 2)
+  // Delivery Address (Step 2)
   const [streetAddress, setStreetAddress] = useState('');
   const [flatBuilding, setFlatBuilding] = useState('');
   const [landmark, setLandmark] = useState('');
   const [city, setCity] = useState('Mumbai');
   const [pincode, setPincode] = useState('');
-  
+
+  // Payment method & formalities
+  const [paymentOption, setPaymentOption] = useState<'upi' | 'bank_transfer' | 'advance_cod'>('upi');
+  const [formalitiesAccepted, setFormalitiesAccepted] = useState(true);
+  const [consentGiven, setConsentGiven] = useState(false);
+
   // Interactive Map Pin coordinates (Default: Mumbai coordinates)
   const [geoLat, setGeoLat] = useState<number>(19.0760);
   const [geoLng, setGeoLng] = useState<number>(72.8777);
-  const [isLocating, setIsLocating] = useState<boolean>(false);
-  const [locationStatus, setLocationStatus] = useState<string>('Click pin or "Detect Location" to pin-point');
+  const [geoLabel, setGeoLabel] = useState<string | undefined>(undefined);
 
-  // Occasion & Timing
+  // Submission state
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [bookingRef, setBookingRef] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [orderError, setOrderError] = useState('');
+  const [isCopied, setIsCopied] = useState(false);
+  const [step1Error, setStep1Error] = useState('');
+  const [step2Error, setStep2Error] = useState('');
+
+  // Build the unified checkout lines whenever the modal opens.
+  useEffect(() => {
+    if (!isOpen) return;
+    const lines: CheckoutLine[] = [];
+    const seen = new Set<string>();
+
+    if (preSelectedProduct) {
+      const product = applyCatalogOverride ? applyCatalogOverride(preSelectedProduct) : preSelectedProduct;
+      lines.push({
+        key: `preselect-${product.id}`,
+        kind: 'product',
+        productId: product.id,
+        qty: 1,
+        name: product.name,
+        itemCode: product.itemCode,
+        priceDisplay: product.approxPrice,
+        priceValue: parsePriceString(product.approxPrice),
+        itemsIncluded: product.itemsIncluded,
+        product,
+      });
+      seen.add(product.id);
+    }
+
+    for (const line of productCartLines) {
+      if (seen.has(line.productId)) continue;
+      const base = HAMPER_QUEEN_PRODUCTS.find((p) => p.id === line.productId);
+      if (!base) continue;
+      const product = applyCatalogOverride ? applyCatalogOverride(base) : base;
+      lines.push({
+        key: `product-${product.id}`,
+        kind: 'product',
+        productId: product.id,
+        qty: Math.max(1, line.qty),
+        name: product.name,
+        itemCode: product.itemCode,
+        priceDisplay: product.approxPrice,
+        priceValue: parsePriceString(product.approxPrice),
+        itemsIncluded: product.itemsIncluded,
+        product,
+      });
+      seen.add(product.id);
+    }
+
+    const hamperItems = customHamper?.items ?? [];
+    if (!seen.has('custom-atelier') && hamperItems.length > 0) {
+      const value = hamperItems.reduce((sum, item) => sum + (item.approximateUnitValue ?? 0), 0);
+      lines.push({
+        key: 'custom-atelier',
+        kind: 'custom_hamper',
+        qty: 1,
+        name: `Custom Atelier Hamper (${hamperItems.length} items)`,
+        priceDisplay: value > 0 ? `INR ${value.toLocaleString('en-IN')}` : 'On request',
+        priceValue: value,
+        itemsIncluded: hamperItems.map((i) => i.name),
+      });
+    }
+
+    setCheckoutLines(lines);
+    setSelectedProductId(
+      preSelectedProduct ? preSelectedProduct.id : lines[0]?.productId ?? HAMPER_QUEEN_PRODUCTS[0].id
+    );
+  }, [isOpen, preSelectedProduct, productCartLines, customHamper, applyCatalogOverride]);
+
+  const handleAddLine = () => {
+    const product = HAMPER_QUEEN_PRODUCTS.find((p) => p.id === selectedProductId);
+    if (!product) return;
+    const effective = applyCatalogOverride ? applyCatalogOverride(product) : product;
+    setCheckoutLines((prev) => {
+      const existing = prev.find((l) => l.kind === 'product' && l.productId === effective.id);
+      if (existing) {
+        return prev.map((l) => (l.key === existing.key ? { ...l, qty: l.qty + 1 } : l));
+      }
+      return [
+        ...prev,
+        {
+          key: `product-${effective.id}`,
+          kind: 'product',
+          productId: effective.id,
+          qty: 1,
+          name: effective.name,
+          itemCode: effective.itemCode,
+          priceDisplay: effective.approxPrice,
+          priceValue: parsePriceString(effective.approxPrice),
+          itemsIncluded: effective.itemsIncluded,
+          product: effective,
+        },
+      ];
+    });
+  };
+
+  const updateLineQty = (key: string, delta: number) => {
+    setCheckoutLines((prev) =>
+      prev
+        .map((l) => (l.key === key ? { ...l, qty: Math.max(0, l.qty + delta) } : l))
+        .filter((l) => l.qty > 0)
+    );
+  };
+
+  const removeLine = (key: string) => {
+    setCheckoutLines((prev) => prev.filter((l) => l.key !== key));
+  };
+
+  const orderSubtotal = checkoutLines.reduce((sum, l) => sum + l.priceValue * l.qty, 0);
+  const orderDeliveryFee = orderSubtotal === 0 ? 0 : orderSubtotal >= 499 ? 0 : 49;
+  const orderGrandTotal = orderSubtotal + orderDeliveryFee;
+  const primaryProduct = checkoutLines.find((l) => l.kind === 'product')?.product;
   const [occasion, setOccasion] = useState('Birthday Celebration');
   const [deliveryDate, setDeliveryDate] = useState(() => {
     const d = new Date();
@@ -102,17 +252,6 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
   const [addonPolaroids, setAddonPolaroids] = useState(false);
   const [customNotes, setCustomNotes] = useState('');
 
-  // Payment method & formalities
-  const [paymentOption, setPaymentOption] = useState<'upi' | 'bank_transfer' | 'advance_cod'>('upi');
-  const [formalitiesAccepted, setFormalitiesAccepted] = useState(true);
-
-  // Submission state
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [bookingRef, setBookingRef] = useState('');
-  const [isCopied, setIsCopied] = useState(false);
-  const [step1Error, setStep1Error] = useState('');
-  const [step2Error, setStep2Error] = useState('');
-
   // Reset step to 1 when modal is reopened
   useEffect(() => {
     if (isOpen) {
@@ -120,15 +259,10 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
       setIsSubmitted(false);
       setStep1Error('');
       setStep2Error('');
+      setOrderError('');
+      setConsentGiven(false);
     }
   }, [isOpen]);
-
-  // Sync state when preSelectedProduct changes
-  useEffect(() => {
-    if (preSelectedProduct) {
-      setSelectedProductId(preSelectedProduct.id);
-    }
-  }, [preSelectedProduct]);
 
   useEffect(() => {
     if (initialBulkMode) {
@@ -137,9 +271,6 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
   }, [initialBulkMode]);
 
   if (!isOpen) return null;
-
-  // Find active product
-  const activeProduct = HAMPER_QUEEN_PRODUCTS.find((p) => p.id === selectedProductId);
 
   // Calculate bulk discount tier
   const getBulkDiscountInfo = (qty: number) => {
@@ -152,53 +283,14 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
   const bulkTier = getBulkDiscountInfo(bulkQuantity);
 
-  // HTML5 Geolocation detect
-  const handleDetectLocation = () => {
-    if (!navigator.geolocation) {
-      setLocationStatus('Geolocation not supported by this browser. Please click on the pin map.');
-      return;
-    }
-    setIsLocating(true);
-    setLocationStatus('Pinpointing your exact GPS coordinates...');
-
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        const lat = parseFloat(pos.coords.latitude.toFixed(5));
-        const lng = parseFloat(pos.coords.longitude.toFixed(5));
-        setGeoLat(lat);
-        setGeoLng(lng);
-        setIsLocating(false);
-        setLocationStatus(`📍 GPS Pin Locked: ${lat}, ${lng} (Accuracy: ~${Math.round(pos.coords.accuracy)}m)`);
-        triggerGoldConfetti(0.5, 0.4);
-      },
-      (err) => {
-        setIsLocating(false);
-        setLocationStatus('Location access denied or unavailable. Please click directly on the pin map.');
-      },
-      { enableHighAccuracy: true, timeout: 10000 }
-    );
-  };
-
-  // Click on interactive map canvas to reposition pin
-  const handleMapClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
-
-    // Map Mumbai bounding box range
-    const newLat = parseFloat((19.30 - y * 0.40).toFixed(4));
-    const newLng = parseFloat((72.75 + x * 0.35).toFixed(4));
-
-    setGeoLat(newLat);
-    setGeoLng(newLng);
-    setLocationStatus(`📍 Pin Positioned: ${newLat}, ${newLng}`);
-    triggerGoldConfetti(e.clientX / window.innerWidth, e.clientY / window.innerHeight);
-  };
-
   // Step 1 Validation & Proceed to Step 2
   const handleProceedToStep2 = () => {
     if (!fullName.trim() || !mobilePhone.trim()) {
       setStep1Error('Please enter your Full Name and WhatsApp Mobile Number to proceed.');
+      return;
+    }
+    if (checkoutLines.length === 0) {
+      setStep1Error('Please add at least one item to your order before proceeding.');
       return;
     }
     setStep1Error('');
@@ -210,41 +302,114 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
     if (formEl) formEl.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Step 2 Submission & Validation
-  const handleFinalSubmit = (e: React.FormEvent) => {
+  // Step 2 Submission & Validation → save the order to MongoDB via the API
+  const handleFinalSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (checkoutLines.length === 0) {
+      setStep2Error('Please add at least one item to your order.');
+      return;
+    }
     if (!flatBuilding.trim() || !streetAddress.trim() || !pincode.trim()) {
       setStep2Error('Please enter your Flat/Building, Street/Area, and Pincode to confirm your pinned delivery location.');
       return;
     }
+    if (!consentGiven) {
+      setStep2Error('Please accept the data-consent checkbox to continue. We only use your details to process and deliver this order.');
+      return;
+    }
 
     setStep2Error('');
-    const ref = `HQ-BKG-${Math.floor(100000 + Math.random() * 900000)}`;
-    setBookingRef(ref);
-    setIsSubmitted(true);
-    triggerGrandCelebration();
-    royaleLogger.action('Booking', `Submitted booking: ${ref} by ${fullName}`);
+    setOrderError('');
+    setIsSubmitting(true);
+
+    const addons: string[] = [];
+    if (addonFairyLights) addons.push('Warm LED Fairy Lights');
+    if (addonPartyPopper) addons.push('Celebration Gold Party Popper');
+    if (addonPolaroids) addons.push('Custom Polaroid Memory Prints');
+
+    try {
+      const res = await fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          orderType,
+          bulkQuantity: orderType === 'bulk' ? bulkQuantity : undefined,
+          lines: checkoutLines.map((l) => ({
+            kind: l.kind,
+            productId: l.productId,
+            qty: l.qty,
+            name: l.name,
+            itemCode: l.itemCode,
+            priceDisplay: l.priceDisplay,
+            priceValue: l.priceValue,
+            itemsIncluded: l.itemsIncluded ?? [],
+            notes: l.kind === 'custom_hamper' ? (l.itemsIncluded ?? []).slice(0, 10).join(', ') : undefined,
+          })),
+          customer: {
+            fullName,
+            email,
+            mobilePhone,
+            altPhone,
+            recipientName,
+          },
+          delivery: {
+            flatBuilding,
+            streetAddress,
+            landmark,
+            city,
+            pincode,
+            geo: { lat: geoLat, lng: geoLng, label: geoLabel },
+          },
+          preferences: {
+            occasion,
+            deliveryDate,
+            timeSlot,
+            waxSealDesign,
+            cardMessage,
+            addons,
+            customNotes,
+          },
+          payment: { method: paymentOption },
+          consent: true,
+          browserLanguage: typeof navigator !== 'undefined' ? navigator.language : undefined,
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.trackingId) {
+        throw new Error(data.error || 'Could not save your order right now.');
+      }
+
+      setBookingRef(data.trackingId as string);
+      setIsSubmitted(true);
+      onOrderPlaced?.();
+      triggerGrandCelebration();
+      royaleLogger.action('Booking', `Order created: ${data.trackingId} by ${fullName}`);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Something went wrong. Please try again or order on WhatsApp.';
+      setOrderError(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Generate automated WhatsApp text
   const generateWhatsAppMessage = (refId: string) => {
-    const productName =
-      selectedProductId === 'custom-atelier'
-        ? `Custom Hamper (${customHamper?.items.length || 0} items)`
-        : activeProduct?.name || 'Hamper Queen Gift';
+    const linesList = checkoutLines
+      .map((l) => `• ${l.name} (${l.qty} × ${l.priceDisplay})`)
+      .join('\n');
 
-    const itemCode =
-      selectedProductId === 'custom-atelier'
-        ? '#HQ-ATELIER-CUSTOM'
-        : activeProduct?.itemCode || `#HQ-PROD-${selectedProductId.slice(0, 6).toUpperCase()}`;
-
-    const itemsSummary =
-      selectedProductId === 'custom-atelier'
-        ? customHamper?.items.map((i) => `• ${i.name}`).join('\n') || 'Custom handpicked items'
-        : activeProduct?.itemsIncluded.slice(0, 5).map((i) => `• ${i}`).join('\n') || '';
+    const itemsSummary = checkoutLines
+      .slice(0, 3)
+      .map((l) => {
+        const inside = (l.itemsIncluded ?? []).slice(0, 4).map((i) => `   • ${i}`).join('\n');
+        return `• ${l.name}${inside ? `\n${inside}` : ''}`;
+      })
+      .join('\n');
 
     const mapLink = `https://maps.google.com/?q=${geoLat},${geoLng}`;
+    const trackLink = `https://hamper-queen.vercel.app/track/${refId}`;
 
     const addOnsList: string[] = [];
     if (addonFairyLights) addOnsList.push('Warm LED Fairy Lights');
@@ -252,12 +417,11 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
     if (addonPolaroids) addOnsList.push('Custom Polaroid Memory Prints');
 
     return encodeURIComponent(
-      `👑 *HAMPER QUEEN OFFICIAL BOOKING & ORDER INQUIRY*\n` +
+      `👑 *HAMPER QUEEN OFFICIAL ORDER CONFIRMATION*\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-      `🔖 *Booking Ref:* ${refId}\n` +
-      `📦 *Item Code:* ${itemCode}\n` +
-      `🎁 *Product:* ${productName}\n` +
-      `🛍️ *Order Type:* ${orderType === 'bulk' ? `BULK ORDER (${bulkQuantity} Hampers - ${bulkTier.discount})` : 'Individual Gift Hamper (Qty: 1)'}\n` +
+      `🔖 *Tracking ID:* ${refId}\n` +
+      `🛒 *Order Contents:*\n${linesList}\n` +
+      `🛍️ *Order Type:* ${orderType === 'bulk' ? `BULK ORDER (${bulkQuantity} Hampers - ${bulkTier.discount})` : 'Individual Gift Hamper'}\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
       `👤 *Client Name:* ${fullName || 'Valued Guest'}\n` +
       `📞 *Mobile:* ${mobilePhone || 'Not provided'}\n` +
@@ -282,8 +446,10 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
       `💳 *Payment Preference:* ${paymentOption.toUpperCase()}\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
       `📋 *WHAT IS PRESENT (INCLUDED ITEMS):*\n` +
-      `${itemsSummary}\n` +
+      `${itemsSummary || linesList}\n` +
       `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
+      `💳 *Payment:* Payment details will be shared on WhatsApp shortly to confirm this order.\n` +
+      `🔍 *Track your order:* ${trackLink}\n\n` +
       `Please confirm availability, final customized invoice, and dispatch schedule.`
     );
   };
@@ -482,59 +648,152 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                   )}
                 </div>
 
-                {/* 2. PRODUCT SELECTION & WHAT IS INCLUDED */}
+                {/* 2. CART ITEMS & WHAT IS INCLUDED */}
                 <div className="space-y-3">
                   <label className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#141414] flex items-center gap-2">
                     <Layers className="w-4 h-4 text-[#B8860B]" />
-                    <span>2. Select Offering / Item Code</span>
+                    <span>2. Your Cart Items & Quantities</span>
                   </label>
 
-                  <select
-                    value={selectedProductId}
-                    onChange={(e) => setSelectedProductId(e.target.value)}
-                    className="w-full px-4 py-3 rounded-2xl bg-white border border-[#D4AF37]/70 text-xs font-semibold text-[#141414] focus:outline-hidden focus:border-[#B8860B] shadow-2xs cursor-pointer"
-                  >
-                    {customHamper && (
-                      <option value="custom-atelier">
-                        🎨 Current Custom Hamper ({customHamper.items.length} items custom built)
-                      </option>
-                    )}
-                    <optgroup label="12 Customizable Birthday Hampers">
-                      {HAMPER_QUEEN_PRODUCTS.filter((p) => p.category === 'birthday_hampers').map((prod) => (
-                        <option key={prod.id} value={prod.id}>
-                          {prod.itemCode || '#HQ-HMP'} - {prod.name} ({prod.approxPrice})
-                        </option>
+                  {lineError && (
+                    <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs">
+                      {lineError}
+                    </div>
+                  )}
+
+                  {checkoutLines.length === 0 ? (
+                    <div className="p-6 rounded-2xl bg-[#FAF9F5] border border-dashed border-[#C5A059] text-center text-xs text-[#6B6559]">
+                      Your cart is empty. Add a hamper or custom items below to continue.
+                    </div>
+                  ) : (
+                    <div className="space-y-2.5">
+                      {checkoutLines.map((line) => (
+                        <div key={line.key} className="bg-white p-3.5 rounded-2xl border border-[#D4AF37]/50 shadow-2xs">
+                          <div className="flex items-center justify-between gap-3">
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2">
+                                <Gift className="w-4 h-4 text-[#B8860B] shrink-0" />
+                                <h5 className="font-cinzel text-xs font-bold text-[#141414] truncate">{line.name}</h5>
+                              </div>
+                              <p className="text-[10px] text-[#8C6821] font-semibold mt-0.5">
+                                {line.itemCode ?? (line.kind === 'custom_hamper' ? '#HQ-ATELIER-CUSTOM' : line.productId)}
+                                {' • '}{line.priceDisplay} each
+                              </p>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() => removeLine(line.key)}
+                              className="p-1.5 text-[#800E17] hover:bg-[#FBEBEB] rounded-lg transition-colors cursor-pointer shrink-0"
+                              title="Remove item"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          </div>
+
+                          <div className="mt-2.5 flex items-center justify-between gap-2">
+                            <div className="flex items-center gap-2">
+                              <button
+                                type="button"
+                                onClick={() => updateLineQty(line.key, -1)}
+                                className="w-7 h-7 rounded-full bg-[#F3EFE6] hover:bg-[#EADFC7] text-[#554F42] flex items-center justify-center transition-colors cursor-pointer"
+                                title="Decrease quantity"
+                              >
+                                <Minus className="w-3.5 h-3.5" />
+                              </button>
+                              <span className="text-sm font-bold text-[#141414] w-5 text-center">{line.qty}</span>
+                              <button
+                                type="button"
+                                onClick={() => updateLineQty(line.key, 1)}
+                                className="w-7 h-7 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] flex items-center justify-center transition-colors cursor-pointer"
+                                title="Increase quantity"
+                              >
+                                <Plus className="w-3.5 h-3.5" />
+                              </button>
+                            </div>
+                            <span className="text-xs font-cinzel font-bold text-[#141414]">
+                              {line.priceValue > 0 ? `INR ${(line.priceValue * line.qty).toLocaleString('en-IN')}` : 'Value on request'}
+                            </span>
+                          </div>
+                        </div>
                       ))}
-                    </optgroup>
-                    <optgroup label="Signature Bouquets">
-                      {HAMPER_QUEEN_PRODUCTS.filter((p) => p.category === 'bouquets').map((prod) => (
-                        <option key={prod.id} value={prod.id}>
-                          {prod.itemCode || '#HQ-BKT'} - {prod.name} ({prod.approxPrice})
-                        </option>
-                      ))}
-                    </optgroup>
-                    <optgroup label="Specialty Gift Boxes & Trays">
-                      {HAMPER_QUEEN_PRODUCTS.filter(
-                        (p) => p.category === 'specialty_boxes' || p.category === 'gourmet_trays'
-                      ).map((prod) => (
-                        <option key={prod.id} value={prod.id}>
-                          {prod.itemCode || '#HQ-BOX'} - {prod.name} ({prod.approxPrice})
-                        </option>
-                      ))}
-                    </optgroup>
-                  </select>
+                    </div>
+                  )}
+
+                  {/* Add another product */}
+                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                    <select
+                      value={selectedProductId}
+                      onChange={(e) => setSelectedProductId(e.target.value)}
+                      className="flex-1 px-4 py-3 rounded-2xl bg-white border border-[#D4AF37]/70 text-xs font-semibold text-[#141414] focus:outline-hidden focus:border-[#B8860B] shadow-2xs cursor-pointer"
+                    >
+                      <optgroup label="12 Customizable Birthday Hampers">
+                        {HAMPER_QUEEN_PRODUCTS.filter((p) => p.category === 'birthday_hampers').map((prod) => (
+                          <option key={prod.id} value={prod.id}>
+                            {prod.itemCode || '#HQ-HMP'} - {prod.name} ({prod.approxPrice})
+                          </option>
+                        ))}
+                      </optgroup>
+                      <optgroup label="Signature Bouquets">
+                        {HAMPER_QUEEN_PRODUCTS.filter((p) => p.category === 'bouquets').map((prod) => (
+                          <option key={prod.id} value={prod.id}>
+                            {prod.itemCode || '#HQ-BKT'} - {prod.name} ({prod.approxPrice})
+                          </option>
+                        ))}
+                      </optgroup>
+                      <optgroup label="Specialty Gift Boxes & Trays">
+                        {HAMPER_QUEEN_PRODUCTS.filter(
+                          (p) => p.category === 'specialty_boxes' || p.category === 'gourmet_trays'
+                        ).map((prod) => (
+                          <option key={prod.id} value={prod.id}>
+                            {prod.itemCode || '#HQ-BOX'} - {prod.name} ({prod.approxPrice})
+                          </option>
+                        ))}
+                      </optgroup>
+                    </select>
+                    <button
+                      type="button"
+                      onClick={handleAddLine}
+                      className="px-5 py-3 rounded-2xl bg-[#141414] hover:bg-[#252525] text-[#DFBA54] text-xs font-cinzel font-bold border border-[#D4AF37] transition-all flex items-center justify-center gap-2 cursor-pointer shrink-0"
+                    >
+                      <Plus className="w-4 h-4" />
+                      <span>Add Item</span>
+                    </button>
+                  </div>
+                  <p className="text-[10px] text-[#6B6559]">
+                    Items in your cart are saved to your real Hamper Queen order. Adjust quantities before proceeding — after checkout the cart clears automatically.
+                  </p>
+
+                  {/* Order totals preview */}
+                  {checkoutLines.length > 0 && (
+                    <div className="p-4 rounded-2xl bg-white border border-[#EAE5D9] shadow-2xs space-y-1.5 text-xs">
+                      <div className="flex items-center justify-between text-[#524B40]">
+                        <span>Items Subtotal</span>
+                        <strong className="text-[#141414]">{orderSubtotal > 0 ? `INR ${orderSubtotal.toLocaleString('en-IN')}` : 'On request'}</strong>
+                      </div>
+                      <div className="flex items-center justify-between text-[#524B40]">
+                        <span>Delivery Fee</span>
+                        <strong className={orderDeliveryFee === 0 ? 'text-[#1E7B3C]' : 'text-[#141414]'}>
+                          {orderDeliveryFee === 0 ? 'FREE' : `INR ${orderDeliveryFee}`}
+                        </strong>
+                      </div>
+                      <div className="flex items-center justify-between pt-1.5 border-t border-[#EAE5D9] text-sm">
+                        <span className="font-semibold">Grand Total (approx)</span>
+                        <strong className="font-cinzel text-[#B8860B]">{orderGrandTotal > 0 ? `INR ${orderGrandTotal.toLocaleString('en-IN')}` : 'On request'}</strong>
+                      </div>
+                    </div>
+                  )}
 
                   {/* What is Present (Included items preview) */}
-                  {activeProduct && (
+                  {primaryProduct && (
                     <div className="p-4 rounded-2xl bg-white border border-[#EAE5D9] shadow-2xs space-y-2 text-xs">
                       <div className="flex items-center justify-between">
                         <span className="font-cinzel font-bold text-[#141414]">
-                          What is Present in {activeProduct.name}:
+                          What is Present in {primaryProduct.name}:
                         </span>
-                        <span className="font-bold text-[#B8860B]">{activeProduct.approxPrice}</span>
+                        <span className="font-bold text-[#B8860B]">{primaryProduct.approxPrice}</span>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pt-1">
-                        {activeProduct.itemsIncluded.map((item, idx) => (
+                        {(primaryProduct.itemsIncluded ?? []).map((item, idx) => (
                           <div key={idx} className="flex items-start gap-1.5 text-[11px] text-[#524B40]">
                             <CheckCircle2 className="w-3.5 h-3.5 text-[#16A34A] shrink-0 mt-0.5" />
                             <span>{item}</span>
@@ -830,13 +1089,25 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                   </div>
                 )}
 
+                {/* Server / network error banner */}
+                {orderError && (
+                  <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2">
+                    <AlertCircle className="w-4 h-4 shrink-0" />
+                    <span>{orderError}</span>
+                  </div>
+                )}
+
                 {/* Order Recap Banner */}
                 <div className="p-4 rounded-2xl bg-white border border-[#D4AF37] shadow-xs flex flex-wrap items-center justify-between gap-3 text-xs">
                   <div className="flex items-center gap-2.5">
                     <Gift className="w-4 h-4 text-[#B8860B]" />
                     <div>
                       <span className="text-[10px] text-[#8C6821] font-bold uppercase tracking-wider block">Booking For:</span>
-                      <strong className="text-[#141414] font-cinzel">{activeProduct?.name || 'Custom Hamper'}</strong>
+                      <strong className="text-[#141414] font-cinzel">
+                        {checkoutLines.length > 0
+                          ? checkoutLines.map((l) => `${l.name} × ${l.qty}`).join(' + ')
+                          : 'Custom Hamper'}
+                      </strong>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 text-[#524B40]">
@@ -875,69 +1146,27 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                     <div>
                       <label className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#141414] flex items-center gap-2">
                         <MapPin className="w-4 h-4 text-[#B8860B]" />
-                        <span>1. Pinpoint Exact Delivery Spot on Map</span>
+                        <span>1. Pinpoint Exact Delivery Spot on Live Map</span>
                       </label>
                       <p className="text-[11px] text-[#6B6559] mt-0.5">
-                        Tap anywhere on the map to place the gold delivery pin, or click auto-detect.
+                        Drag the gold pin, search your address, or press locate to drop the exact delivery spot.
                       </p>
                     </div>
-
-                    {/* Detect GPS Button */}
-                    <button
-                      type="button"
-                      onClick={handleDetectLocation}
-                      disabled={isLocating}
-                      className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#141414] text-[#DFBA54] text-xs font-cinzel font-bold border border-[#D4AF37] hover:bg-[#282828] transition-all shadow-xs cursor-pointer self-start sm:self-auto"
-                    >
-                      <Compass className={`w-3.5 h-3.5 ${isLocating ? 'animate-spin' : ''}`} />
-                      <span>{isLocating ? 'Detecting GPS...' : '📍 Auto-Detect My Location'}</span>
-                    </button>
+                    <span className="text-[10px] px-2 py-1 rounded-full bg-[#16A34A]/10 text-[#1E7B3C] font-bold uppercase tracking-wider self-start sm:self-auto">
+                      Live Interactive Map
+                    </span>
                   </div>
 
-                  {/* Interactive Visual Map Canvas with Draggable/Clickable Crosshair Pin */}
-                  <div className="rounded-2xl overflow-hidden border-2 border-[#D4AF37]/70 shadow-sm bg-[#EFEADF] relative">
-                    <div
-                      onClick={handleMapClick}
-                      className="w-full h-56 relative cursor-crosshair bg-cover bg-center select-none"
-                      style={{
-                        backgroundImage: `radial-gradient(circle, #D4AF37 1px, transparent 1px), linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.06) 1px, #FAF7F0 1px)`,
-                        backgroundSize: '24px 24px, 48px 48px, 48px 48px',
-                      }}
-                    >
-                      {/* Decorative Map Arteries */}
-                      <div className="absolute inset-0 opacity-25 pointer-events-none">
-                        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0,80 Q250,140 500,90 T1000,160" fill="none" stroke="#B8860B" strokeWidth="4" />
-                          <path d="M120,0 Q180,150 220,300" fill="none" stroke="#B8860B" strokeWidth="3" />
-                          <path d="M420,0 Q390,120 480,300" fill="none" stroke="#B8860B" strokeWidth="2.5" />
-                        </svg>
-                      </div>
-
-                      {/* Pin Drop Element */}
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none animate-bounce">
-                        <div className="w-10 h-10 rounded-full bg-[#141414] border-2 border-[#DFBA54] text-[#DFBA54] flex items-center justify-center shadow-xl">
-                          <MapPin className="w-6 h-6 fill-[#DFBA54] text-[#141414]" />
-                        </div>
-                        <span className="px-2.5 py-1 rounded-md bg-[#141414]/95 text-white text-[10px] font-bold font-cinzel tracking-wider mt-1 border border-[#DFBA54]/50 shadow-md whitespace-nowrap">
-                          Delivery Pin ({geoLat}, {geoLng})
-                        </span>
-                      </div>
-
-                      {/* Click Instruction Banner */}
-                      <div className="absolute bottom-2.5 left-2.5 right-2.5 p-2 rounded-xl bg-white/95 backdrop-blur-md border border-[#D4AF37]/50 flex items-center justify-between text-[11px] text-[#524B40] shadow-xs">
-                        <span className="truncate max-w-[220px] sm:max-w-none">{locationStatus}</span>
-                        <a
-                          href={`https://maps.google.com/?q=${geoLat},${geoLng}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-[#8C6821] font-bold hover:underline inline-flex items-center gap-1 shrink-0"
-                        >
-                          <span>Verify in Google Maps</span>
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                  <MapPicker
+                    lat={geoLat}
+                    lng={geoLng}
+                    label={geoLabel}
+                    onLocationChange={(lat, lng, label) => {
+                      setGeoLat(lat);
+                      setGeoLng(lng);
+                      setGeoLabel(label);
+                    }}
+                  />
                 </div>
 
                 {/* PART 2: RELEVANT INFO TO CONFIRM PINNED LOCATION IS 100% ACCURATE */}
@@ -1082,6 +1311,27 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                       I understand Hamper Queen makes custom hampers with fresh stock. Rates vary as per exact customization and chocolate counts (approx INR 149 to INR 899). Formal invoice will be verified directly on WhatsApp with Ms. Supriya.
                     </span>
                   </label>
+
+                  {/* Privacy & Data Consent (required) */}
+                  <label className="flex items-start gap-2 text-[11px] text-[#524B40] cursor-pointer pt-1 border-t border-[#EAE0C8]">
+                    <input
+                      type="checkbox"
+                      checked={consentGiven}
+                      onChange={(e) => setConsentGiven(e.target.checked)}
+                      className="mt-0.5 accent-[#B8860B]"
+                    />
+                    <span className="leading-relaxed">
+                      I consent to Hamper Queen storing my order details, delivery address, GPS pin, and device/connection info (server-detected region) solely to process, fulfil, and deliver this order and to contact me on WhatsApp/phone. I will receive a payment receipt and tracking ID for this order.
+                    </span>
+                  </label>
+
+                  {/* No live payment gateway notice */}
+                  <div className="p-3 rounded-xl bg-white border border-[#D4AF37]/60 text-[11px] text-[#524B40] flex items-start gap-2">
+                    <Lock className="w-4 h-4 text-[#B8860B] shrink-0 mt-0.5" />
+                    <span>
+                      Secure ordering — your custom invoice and payment details will be shared by Hamper Queen on WhatsApp shortly after you confirm. No payment is collected on this website yet.
+                    </span>
+                  </div>
                 </div>
 
                 {/* Step 2 Bottom Action Bar */}
@@ -1110,9 +1360,11 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
                     <button
                       type="submit"
-                      className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] font-cinzel font-bold text-xs uppercase tracking-wider border border-[#D4AF37] shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      disabled={isSubmitting}
+                      className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] font-cinzel font-bold text-xs uppercase tracking-wider border border-[#D4AF37] shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-wait"
                     >
-                      <span>Confirm Booking & Launch WhatsApp Order →</span>
+                      {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Lock className="w-4 h-4" />}
+                      <span>{isSubmitting ? 'Saving Your Order...' : 'Confirm Order & Get Tracking ID →'}</span>
                     </button>
                   </div>
                 </div>
@@ -1133,24 +1385,24 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
             <div className="space-y-2">
               <span className="text-xs font-cinzel font-bold uppercase tracking-widest text-[#8C6821]">
-                Booking Form Successfully Processed
+                Order Successfully Placed
               </span>
               <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-[#141414]">
-                Your Royal Booking is Ready!
+                Your Tracking ID is Ready!
               </h3>
               <p className="text-xs text-[#6B6559] max-w-md mx-auto">
-                Reference Code <strong className="text-[#141414]">{bookingRef}</strong> has been created. Connect directly to Hamper Queen on WhatsApp to lock in your order with Ms. Supriya Khandekar.
+                Your order <strong className="text-[#141414]">{bookingRef}</strong> is saved. Share this code with your recipient to track delivery. Payment details + formal invoice will be shared on WhatsApp shortly.
               </p>
             </div>
 
-            {/* Official Booking Summary Card */}
+            {/* Official Order Summary Card */}
             <div className="max-w-xl mx-auto p-5 rounded-2xl bg-white border-2 border-[#D4AF37]/50 shadow-sm text-left space-y-3 text-xs">
               <div className="flex items-center justify-between pb-2 border-b border-[#EAE5D9]">
                 <span className="font-cinzel font-bold text-sm text-[#141414]">
-                  Booking Reference: {bookingRef}
+                  Tracking ID: {bookingRef}
                 </span>
                 <span className="px-2.5 py-0.5 rounded-full bg-[#FAF5E8] text-[#8C6821] font-bold text-[10px] border border-[#D4AF37]/40">
-                  {orderType === 'bulk' ? `Bulk (${bulkQuantity} Units)` : 'Individual Gift'}
+                  Awaiting Payment
                 </span>
               </div>
 
@@ -1164,8 +1416,10 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                   <strong className="text-[#141414]">{deliveryDate}</strong> ({timeSlot})
                 </div>
                 <div>
-                  <span className="block text-[10px] text-[#8C6821] font-semibold uppercase">Selected Item:</span>
-                  <strong className="text-[#141414]">{activeProduct?.name || 'Custom Hamper'}</strong>
+                  <span className="block text-[10px] text-[#8C6821] font-semibold uppercase">Order Contents:</span>
+                  <strong className="text-[#141414]">
+                    {checkoutLines.length > 0 ? checkoutLines.map((l) => `${l.name} × ${l.qty}`).join(', ') : 'Custom Hamper'}
+                  </strong>
                 </div>
                 <div>
                   <span className="block text-[10px] text-[#8C6821] font-semibold uppercase">Map Pin Location:</span>
@@ -1187,30 +1441,45 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                   {flatBuilding}, {streetAddress}{landmark ? `, Near ${landmark}` : ''}, {city} - {pincode}
                 </strong>
               </div>
+
+              <div className="pt-2 border-t border-[#EAE5D9] rounded-xl bg-[#FAF5E8] p-3 text-[11px] text-[#524B40]">
+                <span className="font-bold text-[#8C6821]">Payment Pending: </span>
+                We'll share the payment receipt and final invoice on WhatsApp. Your order is confirmed the moment payment clears.
+              </div>
             </div>
 
-            {/* Actions: Direct WhatsApp Send + Copy + Print */}
+            {/* Actions: Track + WhatsApp + Copy + Print */}
             <div className="max-w-xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href={`/track/${bookingRef}`}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto flex-1 py-4 px-6 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] font-sans font-bold text-xs border border-[#D4AF37] shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
+              >
+                <Search className="w-4 h-4" />
+                <span>Track This Order Live</span>
+              </a>
+
               <button
                 onClick={handleLaunchWhatsApp}
                 className="w-full sm:w-auto flex-1 py-4 px-6 rounded-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-sans font-bold text-xs shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Send className="w-4 h-4 fill-white" />
-                <span>Send via WhatsApp (+91 8080580105)</span>
+                <span>Confirm on WhatsApp</span>
               </button>
 
               <button
                 onClick={handleCopySummary}
-                className="w-full sm:w-auto py-4 px-5 rounded-full bg-white border border-[#D4AF37] text-xs font-cinzel font-bold text-[#141414] hover:bg-[#FAF9F5] shadow-xs flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto p-3.5 rounded-full bg-white border border-[#D4AF37] text-[#524B40] hover:text-[#141414] shadow-xs flex items-center justify-center gap-2 cursor-pointer"
+                title="Copy Summary"
               >
                 {isCopied ? <Check className="w-4 h-4 text-[#16A34A]" /> : <Copy className="w-4 h-4 text-[#8C6821]" />}
-                <span>{isCopied ? 'Copied to Clipboard!' : 'Copy Summary'}</span>
               </button>
 
               <button
                 onClick={() => window.print()}
                 className="w-full sm:w-auto p-3.5 rounded-full bg-white border border-[#E5E0D6] text-[#524B40] hover:text-[#141414] shadow-xs cursor-pointer"
-                title="Print Booking Slip"
+                title="Print Order Slip"
               >
                 <Printer className="w-4 h-4" />
               </button>
