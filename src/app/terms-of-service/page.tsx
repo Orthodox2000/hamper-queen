@@ -58,7 +58,7 @@ export default function TermsOfServicePage() {
         <p>
           We dispatch within Mumbai and across Indian pin codes. Same-day or next-day dispatch is offered for most
           hampers but depends on stock, order time and location. Delivery timelines are estimates, not guarantees.
-          Free delivery is offered on orders above the amount displayed on the website at the time of booking.
+          Free delivery above the amount shown on the website at the time of booking.
         </p>
       </LegalSection>
 

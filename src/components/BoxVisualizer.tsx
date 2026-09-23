@@ -50,6 +50,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
   const [dragOverSlotIndex, setDragOverSlotIndex] = useState<number | null>(null);
   const [suggestionText, setSuggestionText] = useState('');
   const [suggestionSlot, setSuggestionSlot] = useState<number | null>(null);
+  const [quickItemText, setQuickItemText] = useState('');
 
   const isBouquet = packaging.type === 'bouquet';
   const isPhotoBouquet = packaging.illustrationType === 'photo_bouquet';
@@ -263,7 +264,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
           <div className="w-full sm:w-1/2 space-y-4">
             <div>
               <span className="text-[10px] font-bold text-[#DFBA54] uppercase tracking-widest">
-                Artisan Atelier Exterior View
+                Artisan Hamper Exterior View
               </span>
               <h4 className="font-seasons text-2xl sm:text-3xl font-bold text-white mt-1">
                 {packaging.name}
@@ -299,7 +300,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
               }}
               className="w-full py-3 rounded-xl bg-[#B8860B] hover:bg-[#8C6821] text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg border border-[#DFBA54]"
             >
-              <Layers className="w-4 h-4" /> Open Atelier & Arrange Items ({filledCount}/{totalCount} Filled)
+              <Layers className="w-4 h-4" /> Open Hamper & Arrange Items ({filledCount}/{totalCount} Filled)
             </button>
           </div>
         </div>
@@ -435,7 +436,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                           {item.simpleName}
                         </h4>
                         <span className="text-[11px] font-extrabold text-[#8C6821]">
-                          ₹{item.unitPriceApprox}
+                          INR {item.unitPriceApprox}
                         </span>
                       </div>
                     </motion.div>
@@ -503,6 +504,12 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
               <p className="text-[11px] text-[#7A7264] font-serif italic mt-2">
                 Hand-gathered with floral sticks, imported tissue wraps, and golden ribbon bow.
               </p>
+
+              {/* "+ Much More In Every Bouquet" constant chip */}
+              <div className="inline-flex items-center justify-center gap-1.5 mt-3 px-3.5 py-1.5 rounded-full bg-[#141414]/90 border border-[#DFBA54]/70 text-[10px] font-bold text-[#F3E5AB] tracking-widest uppercase shadow-md">
+                <Gift className="w-3 h-3 text-[#DFBA54]" />
+                <span>+ Much More In Every Bouquet</span>
+              </div>
             </div>
 
           </div>
@@ -647,7 +654,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                           {item.simpleName}
                         </h4>
                         <span className="text-[11px] font-extrabold text-[#8C6821]">
-                          ₹{item.unitPriceApprox}
+                          INR {item.unitPriceApprox}
                         </span>
                       </div>
                     </motion.div>
@@ -721,6 +728,14 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                 );
               })}
             </div>
+
+            {/* "+ Much More In Every Box" constant chip */}
+            <div className="relative z-10 mt-3 pt-3 border-t border-[#E8DFC9] flex justify-center">
+              <div className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#141414]/90 border border-[#DFBA54]/70 text-[10px] font-bold text-[#F3E5AB] tracking-widest uppercase shadow-md">
+                <Gift className="w-3 h-3 text-[#DFBA54]" />
+                <span>+ Much More In Every Box</span>
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -742,6 +757,38 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
             </span>
           )}
         </div>
+
+        {/* Always-visible "Type your own item" quick add */}
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            const name = quickItemText.trim();
+            if (!name || isFull || !onSuggestCustomItem) return;
+            const nextEmpty = slots.findIndex((s) => !s);
+            if (nextEmpty !== -1) {
+              onSuggestCustomItem(name, nextEmpty);
+              setQuickItemText('');
+            }
+          }}
+          className="flex-1 min-w-[220px] max-w-md flex items-center gap-1.5 mx-auto"
+        >
+          <input
+            type="text"
+            value={quickItemText}
+            onChange={(e) => setQuickItemText(e.target.value)}
+            disabled={isFull}
+            placeholder={isFull ? 'All slots are packed…' : 'Type your own item (auto-fills first empty slot)'}
+            aria-label="Type your own item"
+            className="flex-1 text-[11px] px-3 py-2 rounded-lg border bg-white text-[#141414] placeholder:text-stone-400 focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B]/40 outline-none disabled:bg-[#F2ECE0] disabled:text-stone-400"
+          />
+          <button
+            type="submit"
+            disabled={isFull || !quickItemText.trim()}
+            className="shrink-0 px-3 py-2 rounded-lg bg-[#B8860B] hover:bg-[#8C6821] disabled:bg-[#E0D9C8] disabled:cursor-not-allowed text-white text-[11px] font-bold uppercase tracking-wide transition-colors cursor-pointer"
+          >
+            Add
+          </button>
+        </form>
 
         <div className="flex items-center gap-2">
           {filledCount > 0 && (

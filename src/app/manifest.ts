@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Hamper Queen — Custom Gift Hampers & Chocolate Bouquets',
     short_name: 'Hamper Queen',
     description:
-      'Custom gift hampers and chocolate bouquets from ₹799 — velvet trunks, photo keepsakes, same-day dispatch from Mumbai.',
+      'Custom gift hampers and chocolate bouquets from INR 799 — velvet trunks, photo keepsakes, same-day dispatch from Mumbai.',
     start_url: '/',
     display: 'standalone',
     background_color: '#FFFDF9',

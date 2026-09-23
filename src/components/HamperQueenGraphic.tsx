@@ -120,7 +120,7 @@ export const HamperQueenGraphic: React.FC<HamperQueenGraphicProps> = ({
       <div className="relative z-10 flex items-center justify-between pt-1.5 border-t border-[#EADFC8] text-[8px] sm:text-[9px]">
         <div className="flex items-center gap-1 text-emerald-700 font-semibold">
           <Sparkles className="w-2.5 h-2.5 text-emerald-600 shrink-0" />
-          <span>FREE Delivery Above ₹499</span>
+          <span>Free Delivery Above INR 499</span>
         </div>
         <span className="text-[#8C6821] font-serif italic">Custom Gift Packaging</span>
       </div>

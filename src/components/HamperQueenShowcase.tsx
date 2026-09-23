@@ -13,18 +13,9 @@ import React, { useState } from 'react';
 import { 
   Sparkles, 
   MessageCircle, 
-  Check, 
   Search, 
-  Filter, 
   Heart, 
-  Info, 
   ArrowRight, 
-  Gift, 
-  Layers, 
-  ShoppingBag,
-  ExternalLink,
-  ChevronDown,
-  ChevronUp,
   Package,
   CalendarCheck,
   Tag,
@@ -54,7 +45,7 @@ interface HamperQueenShowcaseProps {
 
 /**
  * The three hand-picked spotlight products shown first on the homepage.
- * Order matters: Pocket Delight (from ₹199), KitKat Bouquet (Customer Favorite),
+ * Order matters: Pocket Delight (from INR 149), KitKat Bouquet (Customer Favorite),
  * Elegant Pink (Top Birthday Pick).
  */
 export const FEATURED_HOME_IDS = [
@@ -73,15 +64,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
   const t = TRANSLATIONS[language];
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
   const [showFeaturedMore, setShowFeaturedMore] = useState<boolean>(false);
-
-  const toggleExpandCard = (id: string) => {
-    setExpandedCards((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
 
   // Filter products (only used once the full catalog is revealed)
   const filteredProducts = HAMPER_QUEEN_PRODUCTS.filter((prod) => {
@@ -230,7 +213,6 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
         {/* Product Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {visibleProducts.map((prod) => {
-            const isExpanded = expandedCards[prod.id] || false;
             const itemCode = getHamperQueenItemCode(prod);
             const substitutions = getHamperQueenSubstitutions(prod);
 
@@ -285,55 +267,39 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
                     </p>
                   </div>
 
-                  {/* WHAT IS PRESENT (INCLUDED ITEMS) */}
+                  {/* WHAT IS PRESENT (AT-A-GLANCE PILLS) */}
                   <div className="pt-2 border-t border-[#F0ECE1] space-y-2">
                     <div className="flex items-center justify-between">
                       <span className="text-[11px] font-cinzel font-bold text-[#141414] uppercase tracking-wider">
-                        What is Present:
+                        What's Inside
                       </span>
                       <span className="text-[10px] text-[#16A34A] font-semibold">
                         {prod.itemsIncluded.length} items included
                       </span>
                     </div>
 
-                    <ul className="space-y-1.5">
-                      {prod.itemsIncluded.slice(0, isExpanded ? prod.itemsIncluded.length : 3).map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-xs text-[#524B40]">
-                          <Check className="w-3.5 h-3.5 text-[#16A34A] shrink-0 mt-0.5" />
-                          <span className="leading-tight">{item}</span>
-                        </li>
+                    <div className="flex flex-wrap gap-1.5">
+                      {prod.itemsIncluded.slice(0, 3).map((item, idx) => (
+                        <span key={idx} className="px-2.5 py-1 rounded-full bg-[#FAF7F0] border border-[#E8DFC9] text-[10px] text-[#524B40] font-medium leading-none">
+                          {item}
+                        </span>
                       ))}
-                    </ul>
-
-                    {prod.itemsIncluded.length > 3 && (
-                      <button
-                        onClick={() => toggleExpandCard(prod.id)}
-                        className="text-[11px] font-semibold text-[#8C6821] hover:text-[#141414] flex items-center gap-1 cursor-pointer pt-1"
-                      >
-                        <span>{isExpanded ? 'Show Less' : `+ View ${prod.itemsIncluded.length - 3} More Items`}</span>
-                        {isExpanded ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
-                      </button>
-                    )}
+                      {prod.itemsIncluded.length > 3 && (
+                        <span className="px-2.5 py-1 rounded-full bg-[#FEF3E2] border border-[#F5D9A9] text-[10px] text-[#8C6821] font-semibold leading-none">
+                          +{prod.itemsIncluded.length - 3} more fillers
+                        </span>
+                      )}
+                    </div>
                   </div>
 
-                  {/* WHAT IS CUSTOMIZABLE (SUBSTITUTIONS) */}
-                  <div className="pt-2 border-t border-[#F0ECE1] space-y-1.5">
-                    <span className="text-[10px] font-cinzel font-bold text-[#8C6821] uppercase tracking-wider block">
-                      ✦ Customization & Substitutions Possible:
+                  {/* ABSTRACTED CUSTOMIZATION HINT */}
+                  <div className="pt-2 border-t border-[#F0ECE1]">
+                    <span className="text-[10px] font-cinzel font-bold text-[#8C6821] uppercase tracking-wider">
+                      ✦ Fully Customizable
                     </span>
-                    <ul className="space-y-1 text-[11px] text-[#6B6559]">
-                      {substitutions.slice(0, 2).map((sub, idx) => (
-                        <li key={idx} className="flex items-start gap-1.5">
-                          <span className="text-[#B8860B]">•</span>
-                          <span>{sub}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Pricing Note */}
-                  <div className="pt-2 text-[10px] text-[#8C6821] italic bg-[#FFFDF9] p-2 rounded-lg border border-[#F3EFE6]">
-                    <span>ℹ️ {prod.pricingNote}</span>
+                    <p className="text-[11px] text-[#6B6559] leading-snug mt-1 font-cormorant italic">
+                      {substitutions[0]}
+                    </p>
                   </div>
 
                   {/* Card Bottom Actions: 3 Actions */}
@@ -361,7 +327,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
                         <span>Order on WA</span>
                       </button>
 
-                      {/* Customize in Atelier */}
+                      {/* Customize in Studio */}
                       <button
                         onClick={() => onCustomizeProduct(prod)}
                         className="py-2 px-3 rounded-xl bg-white hover:bg-[#FAF9F5] text-[#141414] border border-[#E5DAC2] font-cinzel text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
@@ -394,8 +360,8 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
               <ArrowRight className="w-4 h-4 text-[#DFBA54] transition-transform group-hover:translate-x-1" />
             </button>
             <p className="text-[11px] text-[#6B6559] font-sans">
-              {HAMPER_QUEEN_PRODUCTS.length - featuredList.length} more options • from ₹{HAMPER_QUEEN_PRODUCTS.reduce((min, p) => {
-                const match = p.approxPrice.match(/₹([0-9,]+)/);
+              {HAMPER_QUEEN_PRODUCTS.length - featuredList.length} more options • from INR {HAMPER_QUEEN_PRODUCTS.reduce((min, p) => {
+                const match = p.approxPrice.match(/INR ([0-9,]+)/);
                 const val = match ? Number(match[1].replace(/,/g, '')) : Infinity;
                 return val < min ? val : min;
               }, Infinity)} onward
@@ -415,7 +381,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
           </h3>
 
           <p className="font-cormorant text-sm sm:text-base text-[#6B6559] max-w-2xl mx-auto leading-relaxed">
-            Every celebration is distinct. We craft custom hampers ranging from ₹1,000 to ₹2,500+ with your preferred chocolates, cosmetics, colors, and personalized photos.
+            Every celebration is distinct. We craft custom hampers ranging from INR 149 to INR 899+ with your preferred chocolates, cosmetics, colors, and personalized photos.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">

@@ -142,7 +142,7 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                 </div>
                 <button
                   onClick={handleResetHamper}
-                  title="Reset Atelier Curation"
+                  title="Reset Curation"
                   className="p-1.5 rounded-full hover:bg-[#F3EFE6] text-[#787163] hover:text-[#800E17] transition-colors cursor-pointer"
                 >
                   <RefreshCw className="w-4 h-4" />
@@ -691,7 +691,7 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                       Royal Commission Dispatched to Concierge
                     </h4>
                     <p className="text-xs text-[#2F855A]">
-                      Your inquiry has been logged. An Atelier Concierge will contact you within 2 hours to confirm delivery timeline and presentation specifics.
+                      Your inquiry has been logged. A Hamper Queen concierge will contact you within 2 hours to confirm delivery timeline and presentation specifics.
                     </p>
                   </div>
                 ) : (

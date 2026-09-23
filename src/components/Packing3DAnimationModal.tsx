@@ -82,7 +82,7 @@ export const Packing3DAnimationModal: React.FC<Packing3DAnimationModalProps> = (
           {/* Top Brand Tag */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/50 border border-[#DFBA54]/50 text-amber-200 text-xs font-cinzel font-bold tracking-widest uppercase mb-3">
             <Crown className="w-3.5 h-3.5 text-[#DFBA54]" />
-            <span>Hamper Queen Atelier • Packing Ceremony</span>
+            <span>Hamper Queen • Packing Ceremony</span>
           </div>
 
           <h3 className="font-seasons text-2xl sm:text-3xl font-bold text-white mb-1">

@@ -59,7 +59,7 @@ Email: ${HAMPER_QUEEN_OFFICIAL_CONTACT.email}
             <span>Digital Lookbooks & Editions</span>
           </div>
           <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#141414] tracking-tight">
-            Official Atelier Catalogues
+            Official Catalogue Collection
           </h2>
           <p className="font-cormorant text-lg text-[#554F42] mt-2">
             Peruse our curated volumes for weddings, executive corporate honors, and fresh floral collections. Available for instant digital preview or immediate download.

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, ArrowRight, CheckCircle2, Gift, Heart, Crown, Shield, Layers } from 'lucide-react';
+import { Sparkles, ArrowRight, Crown } from 'lucide-react';
 import { ROYAL_INSPIRATIONS, RoyalInspiration } from '../data/inspirationData';
 import { TRANSLATIONS } from '../data/translations';
 import { LanguageMode } from '../types';
@@ -164,29 +164,6 @@ export const RoyalInspirationGallery: React.FC<RoyalInspirationGalleryProps> = (
                   <p className="font-cormorant text-base text-[#8C6821] font-semibold mt-1">
                     {language === 'hinglish' ? insp.subtitleHinglish : insp.subtitleEn}
                   </p>
-                  <p className="text-sm text-[#5C5549] mt-3 leading-relaxed">
-                    {language === 'hinglish' ? insp.storyHinglish : insp.storyEn}
-                  </p>
-                </div>
-
-                {/* Curated Elements Pill Grid */}
-                <div>
-                  <div className="flex items-center gap-2 text-xs font-cinzel uppercase tracking-wider text-[#A89878] mb-2.5">
-                    <Layers className="w-3.5 h-3.5 text-[#D4AF37]" />
-                    <span>{t.inspiration.includedTreasures}</span>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-2">
-                    {insp.curatedItems.map((item) => (
-                      <div
-                        key={item.id}
-                        className="p-2 rounded-lg bg-[#F8F6F0] border border-[#E8E3D7] flex items-center gap-2 text-xs"
-                      >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#8C6821] shrink-0" />
-                        <span className="font-medium text-[#2E2C28] truncate">{item.name}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
 
                 {/* Action Buttons */}
@@ -218,7 +195,7 @@ export const RoyalInspirationGallery: React.FC<RoyalInspirationGalleryProps> = (
           <div className="space-y-2 text-center md:text-left">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/40 text-[#F5E7A3] text-xs font-cinzel uppercase tracking-widest">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Royal Scribe Atelier</span>
+              <span>Royal Scribe Studio</span>
             </span>
             <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-[#F3E5AB]">
               {language === 'hinglish'

@@ -143,7 +143,7 @@ export const CustomMessagingPlatform: React.FC<CustomMessagingPlatformProps> = (
                 {/* Card Top: Salutation */}
                 <div className="space-y-1">
                   <span className="text-[9px] uppercase tracking-[0.25em] text-[#C5A059] block font-cinzel">
-                    Hamper Queen Royal Atelier
+                    Hamper Queen Royal Studio
                   </span>
                   <h4 className="font-cinzel text-base sm:text-lg font-bold tracking-wide">
                     {recipient || 'To Honored Recipient'}

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * RoyalCoverHero.tsx
  * -----------------------------------------------------------------------------
  * Full-viewport homepage hero.
@@ -10,9 +10,9 @@
  *    selected theme variant via BOX_VARIANT_SIZES.
  */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { ArrowRight, MessageCircle, Heart, ChevronDown, Image as ImageIcon, Gift, Sparkles, MapPin, Zap, ShieldCheck, Crown } from 'lucide-react';
+import { ArrowRight, MessageCircle, ChevronDown, Image as ImageIcon, Gift, Sparkles, MapPin, Zap, ShieldCheck, Crown } from 'lucide-react';
 import { TRANSLATIONS } from '../data/translations';
 import { LanguageMode } from '../types';
 import { royaleLogger } from '../utils/logger';
@@ -89,6 +89,15 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
     royaleLogger.action('CoverHero', `Switched background scene to: ${HERO_BACKGROUND_SCENES[idx].label}`);
   };
 
+  // Auto-rotate the background every 10s (no selection UI â€” decor only).
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveBgIdx((prev) => (prev + 1) % HERO_BACKGROUND_SCENES.length);
+      setBgLoaded(false);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
+
   const handleWhatsAppInquiry = () => {
     triggerGoldConfetti(0.5, 0.5);
     const text = encodeURIComponent(
@@ -137,33 +146,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.65)_100%)]" />
       </div>
 
-      {/* Top Bar: Full-width Scene Strip (visible on all breakpoints) + Founder Line */}
-      <div className="relative z-10 w-full mt-2 sm:mt-3">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 space-y-2">
-          {/* Full-width Scene Selector */}
-          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 bg-black/50 backdrop-blur-md px-2 py-2 rounded-2xl border border-white/20 shadow-md w-full">
-            <span className="flex items-center gap-1 px-1 sm:px-2 text-[#DFBA54] text-[10px] sm:text-[11px] font-sans font-bold tracking-[0.14em] uppercase shrink-0"> 
-            </span>
-            {HERO_BACKGROUND_SCENES.map((scene, idx) => (
-              <button
-                key={scene.id}
-                onClick={() => handleSelectBg(idx)}
-                className={`px-2 sm:px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-seasons tracking-wider uppercase transition-all cursor-pointer border ${
-                  activeBgIdx === idx
-                    ? 'bg-[#D4AF37] text-[#141414] font-bold shadow-xs border-[#F3E5AB]'
-                    : 'text-white/80 border-white/15 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                {scene.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Founder Line Below the Scene Strip i have moved it and keep it that way. */}
-          
-        </div>
-      </div>
-
       {/* Main Hero Stage: Balanced 2-Column Responsive Layout */}
       <div className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 my-auto py-5 sm:py-7">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
@@ -174,11 +156,8 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
             {/* Value & Delivery Policy Banner */}
             <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-[#D4AF37]/60 text-[#F3E5AB] text-xs font-cinzel font-bold tracking-wider uppercase shadow-md">
               <Zap className="w-3.5 h-3.5 text-[#DFBA54] animate-pulse" />
-              <span>Smallest Order from ₹199 (+delivery)</span>
-              <span className="text-white/40 hidden sm:inline">•</span>
-              <span className="text-emerald-300 normal-case font-sans font-semibold text-[11px]">
-                FREE Delivery on Orders Above ₹499
-              </span>
+              <span>Experience to remember</span>
+             
             </div>
 
             {/* Main Headline */}
@@ -189,7 +168,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
               </h1>
 
               <p className="font-sans text-sm sm:text-base text-[#EDE8DF] leading-relaxed max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] font-normal">
-                Direct from Ms. Supriya Khandekar’s Mumbai boutique. Custom velvet boxes, chocolate bouquets, and personalized photo keepsakes—handcrafted, dispatched same-day, delivered across India.
+                Handcrafted hampers, chocolate bouquets &amp; photo keepsakes â€” packed with love and dispatched same-day across India.
               </p>
             </div>
 
@@ -207,14 +186,14 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
                 <div>
                   <span className="font-bold text-white block text-[11px] sm:text-xs">Free Delivery</span>
-                  <span className="text-[10px] text-emerald-300">On all orders &gt; ₹499</span>
+                  <span className="text-[10px] text-emerald-300">On orders above INR 499</span>
                 </div>
               </div>
 
               <div className="p-2.5 rounded-xl bg-black/55 backdrop-blur-md border border-white/15 flex flex-col sm:flex-row items-center sm:items-start gap-1.5 sm:gap-2 text-center sm:text-left">
                 <Sparkles className="w-4 h-4 text-[#DFBA54] shrink-0" />
                 <div>
-                  <span className="font-bold text-white block text-[11px] sm:text-xs">From ₹199</span>
+                  <span className="font-bold text-white block text-[11px] sm:text-xs">From INR 149</span>
                   <span className="text-[10px] text-amber-200">Pocket to Royal</span>
                 </div>
               </div>
@@ -243,7 +222,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                 onClick={handleScrollToContent}
                 className="flex-1 sm:flex-none px-5 py-3.5 rounded-xl bg-black/70 hover:bg-black/90 text-white border border-[#DFBA54]/70 font-cinzel text-xs font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-lg"
               >
-                <span>View Menu (From ₹199)</span>
+                <span>View Menu (From INR 149)</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#DFBA54]" />
               </button>
 
@@ -257,13 +236,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                 <span>WhatsApp Supriya</span>
               </button>
             </div>
-
-            {/* Founder Note */}
-            <p className="text-[11px] text-white/70 italic flex items-center gap-1.5 pt-0.5">
-              <Heart className="w-3 h-3 text-[#FB7185] fill-[#FB7185] shrink-0" />
-              <span>&ldquo;We wrap each gift with love and care, as if it were for our own family.&rdquo; — Ms. Supriya Khandekar</span>
-            </p>
-
           </div>
 
           {/* Right Column: Interactive 3D Gift Box Centerpiece (5 cols) */}
@@ -286,7 +258,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                       triggerGoldConfetti(0.4, 0.35);
                       royaleLogger.action('CoverHero', `Switched 3D box theme to: ${th.label}`);
                     }}
-                    title={`${th.label} — ${th.boxLabel}`}
+                    title={`${th.label} â€” ${th.boxLabel}`}
                     className={`px-2 py-0.5 rounded-full text-[9px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
                       boxVariant === th.id
                         ? 'bg-[#D4AF37] text-[#141414] border-[#F3E5AB] shadow-xs'
@@ -318,8 +290,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                     {tp === 'bouquet' ? 'Bouquet' : 'Hampers'}
                   </button>
                 ))}
-                {boxType === 'box' &&
-                  (Object.keys(BOX_SHAPES) as BoxShape[]).map((sh) => (
+                {(Object.keys(BOX_SHAPES) as BoxShape[]).map((sh) => (
                     <button
                       key={sh}
                       onClick={() => {
@@ -327,7 +298,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                         triggerGoldConfetti(0.35, 0.3);
                         royaleLogger.action('CoverHero', `Switched 3D box shape to: ${sh}`);
                       }}
-                      title={`${BOX_SHAPES[sh].label} — ${sh} proportions`}
+                      title={`${BOX_SHAPES[sh].label} â€” ${sh} proportions`}
                       className={`px-2.5 py-0.5 rounded-full text-[9px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
                         boxShape === sh
                           ? 'bg-[#D4AF37] text-[#141414] border-[#F3E5AB] shadow-xs'
@@ -339,7 +310,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                   ))}
               </div>
 
-              {/* The 3D Gift Box Component — size follows the selected theme variant */}
+              {/* The 3D Gift Box Component â€” size follows the selected theme variant */}
               <ThreeDGiftBox
                 variant={boxVariant}
                 size={BOX_VARIANT_SIZES[boxVariant] || 'md'}
@@ -347,18 +318,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                 type={boxType}
                 onOpenAtelier={onOpenCustomised || onOpenAtelier}
               />
-
-              {/* Explanation Caption */}
-              <div className="mt-3 pt-2.5 border-t border-white/15 w-full text-center space-y-1">
-                <p className="text-xs font-cinzel font-bold text-[#F3E5AB]">
-                  {boxType === 'bouquet' ? 'Hand-Tied Velvet Bouquets' : 'Custom Velvet Rigid Trunks'}
-                </p>
-                <p className="text-[11px] text-white/75 font-sans leading-relaxed">
-                  {boxType === 'bouquet'
-                    ? 'Every bouquet fuses silk-velvet roses, gourmet truffles, micro-fairy lights, and a hand-stamped wax seal — wrapped in bespoke florist kraft.'
-                    : 'Every box includes hand-stamped wax seals, custom polaroid prints, warm micro-fairy lights, and gourmet confections.'}
-                </p>
-              </div>
 
             </div>
           </div>

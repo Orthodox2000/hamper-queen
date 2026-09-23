@@ -2,7 +2,7 @@
   <img width="140" alt="Hamper Queen" src="https://github.com/Orthodox2000/hamper-queen/raw/main/public/hamper.png" />
   <h1>Hamper Queen</h1>
   <p><strong>Luxury Gifting Atelier · Mumbai</strong></p>
-  <p>Custom gift hampers &amp; chocolate bouquets from ₹799 — velvet trunks, photo keepsakes, wax seals, and same-day dispatch.</p>
+  <p>Custom gift hampers &amp; chocolate bouquets from INR 149 — velvet trunks, photo keepsakes, wax seals, and same-day dispatch.</p>
   <p>
     <a href="https://hamper-queen.vercel.app">hamper-queen.vercel.app</a> ·
     WhatsApp <a href="https://wa.me/918080580105">8080580105</a>
@@ -11,13 +11,13 @@
 
 ## Overview
 
-Hamper Queen is a high-converting, single-page gifting storefront built on the Next.js 16 App Router. Customers explore the catalogue, unbox an animated 3D gift box, customize hampers item-by-item, and order directly through WhatsApp or the in-app booking/concierge desk — all with celebratory confetti sprinkled throughout.
+Hamper Queen is a high-converting gifting storefront built on the Next.js 16 App Router. Customers explore the catalogue, unbox an animated 3D gift box, customize hampers item-by-item, and order directly through WhatsApp or the in-app booking/concierge desk — all with celebratory confetti sprinkled throughout.
 
 ## Features
 
 - **Interactive 3D unbox experience** — theme switcher, shape variants (cube / wide / tall / long), hand-tied bouquet mode, item pop-out animations, auto-rotation
 - **Customise Atelier** — pick a vessel, add luxury items up to capacity, tie ribbon, stamp a wax seal
-- **Royal Cart** — persistent slide-over cart with quantity steppers, subtotals, free delivery over ₹499, and one-tap add-from-Atelier
+- **Royal Cart** — persistent slide-over cart with quantity steppers, subtotals, free delivery above INR 499, and one-tap add-from-Atelier
 - **Hamper Builder & Calligraphy Scribe** — 4-step builder and bespoke card/message studio
 - **Booking & Concierge Desk** — order + map pin-pointing modal, bulk/corporate gifting flow
 - **WhatsApp ordering** — one-tap `wa.me` checkout with prefilled message
@@ -94,10 +94,15 @@ If you deploy to a custom domain, update `SITE_URL` in `src/app/layout.tsx` (it 
 ```text
 src/
 ├── app/
-│   ├── layout.tsx            # SEO metadata, fonts, JSON-LD
+│   ├── layout.tsx            # root SEO metadata, fonts, JSON-LD
+│   ├── (shop)/
+│   │   ├── layout.tsx        # shop chrome (header, footer, cart drawer)
+│   │   └── <route>/page.tsx  # home, customised, catalog, hampers, bulk,
+│   │                          #   inspirations, atelier, scribe, brochures, pricing
 │   ├── opengraph-image.tsx   # generated 1200x630 social card
 │   ├── globals.css           # Tailwind v4 + brand fonts
-│   └── page.tsx              # client entry → <App/>
+│   └── terms-of-service | privacy-policy | eula   # legal pages
+├── store/shop-store.tsx      # client state: cart, language, drawer, booking
 ├── components/               # Header, hero, 3D box, sections, modals
 ├── data/                     # catalog, themes, items, translations
 ├── utils/                    # confetti, logger, audio

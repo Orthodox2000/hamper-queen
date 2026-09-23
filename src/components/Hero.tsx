@@ -67,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3EFE6] border border-[#D4AF37]/40 text-[#8C6821] text-xs uppercase tracking-widest font-semibold">
               <Sparkles className="w-3.5 h-3.5 text-[#DFBA54]" />
-              <span>Custom Gifts • Same-Day Dispatch • Free Delivery Over ₹499</span>
+              <span>Custom Gifts • Same-Day Dispatch • Free Delivery Above INR 499</span>
             </div>
 
             <h1 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#141414] leading-[1.18]">
@@ -77,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({
             </h1>
 
             <p className="font-cormorant text-lg sm:text-xl text-[#4A463E] leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Build your own hamper—mix chocolates, dry fruits, skincare, and keepsakes—or pick a ready-made bouquet. Velvet trunks with wax seals from ₹799, same-day dispatch, and delivery across India.
+              Build your own hamper—mix chocolates, dry fruits, skincare, and keepsakes—or pick a ready-made bouquet. Velvet trunks with wax seals from INR 799, same-day dispatch, and delivery across India.
             </p>
 
             {/* Primary CTAs */}

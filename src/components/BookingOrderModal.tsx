@@ -316,7 +316,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                   Hamper Queen Concierge Booking
                 </h3>
                 <span className="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-[#DFBA54]/20 border border-[#DFBA54]/40 text-[#DFBA54] text-[10px] font-cinzel font-bold">
-                  Official Atelier
+                  Official Hamper Queen
                 </span>
               </div>
               <p className="text-xs text-white/70">
@@ -673,7 +673,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                           onChange={(e) => setAddonFairyLights(e.target.checked)}
                           className="accent-[#B8860B]"
                         />
-                        <span>Warm Fairy Lights (+₹99)</span>
+                        <span>Warm Fairy Lights (+INR 99)</span>
                       </label>
                       <label className="flex items-center gap-2 text-xs text-[#524B40] cursor-pointer p-2 rounded-lg hover:bg-[#FAF9F5]">
                         <input
@@ -682,7 +682,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                           onChange={(e) => setAddonPartyPopper(e.target.checked)}
                           className="accent-[#B8860B]"
                         />
-                        <span>Gold Party Popper (+₹99)</span>
+                        <span>Gold Party Popper (+INR 99)</span>
                       </label>
                       <label className="flex items-center gap-2 text-xs text-[#524B40] cursor-pointer p-2 rounded-lg hover:bg-[#FAF9F5]">
                         <input
@@ -691,7 +691,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                           onChange={(e) => setAddonPolaroids(e.target.checked)}
                           className="accent-[#B8860B]"
                         />
-                        <span>Custom Polaroid Prints (+₹149)</span>
+                        <span>Custom Polaroid Prints (+INR 149)</span>
                       </label>
                     </div>
                   </div>
@@ -1079,7 +1079,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                       className="mt-0.5 accent-[#B8860B]"
                     />
                     <span>
-                      I understand Hamper Queen makes custom hampers with fresh stock. Rates vary as per exact customization and chocolate counts (approx ₹1,000 to ₹2,500). Formal invoice will be verified directly on WhatsApp with Ms. Supriya.
+                      I understand Hamper Queen makes custom hampers with fresh stock. Rates vary as per exact customization and chocolate counts (approx INR 149 to INR 899). Formal invoice will be verified directly on WhatsApp with Ms. Supriya.
                     </span>
                   </label>
                 </div>

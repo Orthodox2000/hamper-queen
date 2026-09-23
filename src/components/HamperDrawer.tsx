@@ -153,7 +153,7 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
                         </span>
                         {line.unitValue > 0 && (
                           <span className="text-[10px] text-[#554F42] font-sans ml-1.5">
-                            ₹{line.unitValue.toLocaleString('en-IN')} each
+                            INR {line.unitValue.toLocaleString('en-IN')} each
                           </span>
                         )}
                       </div>
@@ -192,7 +192,7 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
                       </div>
                       <span className="text-xs font-cinzel font-bold text-[#141414]">
                         {line.unitValue > 0
-                          ? `₹${(line.unitValue * line.qty).toLocaleString('en-IN')}`
+                          ? `INR ${(line.unitValue * line.qty).toLocaleString('en-IN')}`
                           : 'Value on request'}
                       </span>
                     </div>
@@ -218,22 +218,22 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
             <div className="p-6 bg-white border-t border-[#EADFC7] space-y-3">
               <div className="flex items-center justify-between text-xs text-[#554F42]">
                 <span>Items Subtotal</span>
-                <strong className="text-[#141414]">₹{subtotal.toLocaleString('en-IN')}</strong>
+                <strong className="text-[#141414]">INR {subtotal.toLocaleString('en-IN')}</strong>
               </div>
               <div className="flex items-center justify-between text-xs text-[#554F42]">
                 <span>Delivery Fee</span>
                 <strong className={delivery === 0 ? 'text-[#1E7B3C]' : 'text-[#141414]'}>
-                  {delivery === 0 ? 'FREE' : `₹${delivery.toLocaleString('en-IN')}`}
+                  {delivery === 0 ? 'FREE' : `INR ${delivery.toLocaleString('en-IN')}`}
                 </strong>
               </div>
               {delivery > 0 && (
                 <p className="text-[10px] text-[#8C6821] font-sans">
-                  Free delivery on orders above ₹{FREE_DELIVERY_THRESHOLD} — add more or it will be added at checkout.
+                  Free delivery above INR {FREE_DELIVERY_THRESHOLD} — add more or it will be added at checkout.
                 </p>
               )}
               <div className="flex items-center justify-between pt-2 border-t border-[#EADFC7] text-sm">
                 <span className="font-sans font-semibold text-[#554F42]">Grand Total</span>
-                <strong className="font-cinzel text-lg text-[#141414]">₹{grandTotal.toLocaleString('en-IN')}</strong>
+                <strong className="font-cinzel text-lg text-[#141414]">INR {grandTotal.toLocaleString('en-IN')}</strong>
               </div>
               <div className="rounded-xl bg-[#FAF9F5] border border-[#E5DAC2] px-3 py-2.5 space-y-1.5">
                 <div className="flex items-center justify-between text-[11px] text-[#554F42]">
@@ -269,7 +269,7 @@ export const HamperDrawer: React.FC<HamperDrawerProps> = ({
                   }}
                   className="w-full py-3 rounded-full bg-white hover:bg-[#FAF9F5] text-[#554F42] text-xs font-semibold uppercase tracking-wider border border-[#E5DAC2] transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>Customize in Atelier Studio</span>
+                  <span>Customize in Hamper Studio</span>
                 </button>
               </div>
             </div>

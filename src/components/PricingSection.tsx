@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DollarSign, ShieldCheck, Check, Sparkles, HelpCircle, Calculator, Sliders, ArrowRight } from 'lucide-react';
+import { IndianRupee, ShieldCheck, Check, Sparkles, HelpCircle, Calculator, Sliders, ArrowRight } from 'lucide-react';
 import { PRICING_TIERS_CONFIG } from '../data/itemsData';
 import { royaleLogger } from '../utils/logger';
 
@@ -15,11 +15,11 @@ export const PricingSection: React.FC = () => {
   const [customBrassPlaque, setCustomBrassPlaque] = useState<boolean>(true);
 
   // Calculate estimated investment
-  const baseVesselCost = vesselType === 'trunk' ? 180 : vesselType === 'wicker' ? 95 : 85;
-  const itemsCost = itemCount * 42;
-  const floralCost = floralUpgrade === 'volcanic_50roses' ? 190 : floralUpgrade === 'rare_orchids' ? 140 : 65;
-  const whiteGloveCost = whiteGloveDelivery ? 60 : 0;
-  const plaqueCost = customBrassPlaque ? 45 : 0;
+  const baseVesselCost = vesselType === 'trunk' ? 149 : vesselType === 'wicker' ? 79 : 69;
+  const itemsCost = itemCount * 60;
+  const floralCost = floralUpgrade === 'volcanic_50roses' ? 199 : floralUpgrade === 'rare_orchids' ? 149 : 75;
+  const whiteGloveCost = whiteGloveDelivery ? 59 : 0;
+  const plaqueCost = customBrassPlaque ? 49 : 0;
   const totalEstimate = baseVesselCost + itemsCost + floralCost + whiteGloveCost + plaqueCost;
 
   return (
@@ -29,7 +29,7 @@ export const PricingSection: React.FC = () => {
         {/* Section Header with Explicit Modularity */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF5E8] border border-[#EAE0C8] text-[#8C6821] text-xs uppercase tracking-widest font-cinzel font-bold mb-3">
-            <DollarSign className="w-3.5 h-3.5 text-[#B8860B]" />
+            <IndianRupee className="w-3.5 h-3.5 text-[#B8860B]" />
             <span>Dedicated Pricing & Investment Guidance</span>
           </div>
           <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#141414] tracking-tight">
@@ -149,7 +149,7 @@ export const PricingSection: React.FC = () => {
                     href="#atelier-builder-section"
                     className="w-full py-3 rounded-xl bg-[#141414] hover:bg-[#262626] text-[#E5C07B] text-xs font-bold uppercase tracking-wider border border-[#C5A059] flex items-center justify-center gap-2 transition-colors"
                   >
-                    <span>Assemble in Atelier</span>
+                    <span>Design in Hamper Studio</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#DFBA54]" />
                   </a>
                 </div>
@@ -184,9 +184,9 @@ export const PricingSection: React.FC = () => {
                 </label>
                 <div className="grid grid-cols-3 gap-2">
                   {[
-                    { id: 'wicker', label: 'Willow Wicker ($95)' },
-                    { id: 'hatbox', label: 'Hatbox ($85)' },
-                    { id: 'trunk', label: 'Velvet Trunk ($180)' },
+                    { id: 'wicker', label: 'Willow Wicker (INR 79)' },
+                    { id: 'hatbox', label: 'Hatbox (INR 69)' },
+                    { id: 'trunk', label: 'Velvet Trunk (INR 149)' },
                   ].map((v) => (
                     <button
                       key={v.id}
@@ -209,7 +209,7 @@ export const PricingSection: React.FC = () => {
                   <label className="text-xs font-bold uppercase tracking-wider text-[#141414]">
                     Curated Items Count: {itemCount}
                   </label>
-                  <span className="text-xs text-[#787163]">($42 avg per item)</span>
+                  <span className="text-xs text-[#787163]">(INR 60 avg per item)</span>
                 </div>
                 <input
                   type="range"
@@ -232,16 +232,16 @@ export const PricingSection: React.FC = () => {
                   onChange={(e) => setFloralUpgrade(e.target.value as any)}
                   className="w-full text-xs p-3 bg-[#FAF9F5] border border-[#E5DAC2] rounded-xl text-[#141414] focus:outline-none focus:border-[#C5A059] cursor-pointer"
                 >
-                  <option value="standard">Standard Garden Blooms ($65)</option>
-                  <option value="rare_orchids">Rare Cascading Phalaenopsis Orchids ($140)</option>
-                  <option value="volcanic_50roses">50-Stem Ecuadorian Red Rose Cascade ($190)</option>
+                  <option value="standard">Standard Garden Blooms (INR 75)</option>
+                  <option value="rare_orchids">Rare Cascading Phalaenopsis Orchids (INR 149)</option>
+                  <option value="volcanic_50roses">50-Stem Ecuadorian Red Rose Cascade (INR 199)</option>
                 </select>
               </div>
 
               {/* Checkbox Options */}
               <div className="space-y-3 pt-2">
                 <div className="flex items-center justify-between text-xs">
-                  <span className="font-semibold text-[#141414]">White-Glove Butler Hand Delivery (+$60)</span>
+                  <span className="font-semibold text-[#141414]">White-Glove Butler Hand Delivery (+INR 59)</span>
                   <input
                     type="checkbox"
                     checked={whiteGloveDelivery}
@@ -250,7 +250,7 @@ export const PricingSection: React.FC = () => {
                   />
                 </div>
                 <div className="flex items-center justify-between text-xs">
-                  <span className="font-semibold text-[#141414]">Hand-Engraved Brass Plaque (+$45)</span>
+                  <span className="font-semibold text-[#141414]">Hand-Engraved Brass Plaque (+INR 49)</span>
                   <input
                     type="checkbox"
                     checked={customBrassPlaque}
@@ -265,10 +265,10 @@ export const PricingSection: React.FC = () => {
             <div className="bg-[#FAF9F5] rounded-2xl border border-[#C5A059]/70 p-6 flex flex-col justify-between">
               <div>
                 <span className="text-[10px] uppercase font-bold tracking-widest text-[#8C6821] block">
-                  Estimated Atelier Quote
+                  Estimated Custom Quote
                 </span>
                 <div className="font-cinzel text-4xl font-bold text-[#141414] mt-2">
-                  ${totalEstimate}
+                  INR {totalEstimate}
                 </div>
                 <p className="font-cormorant text-xs text-[#6E6759] italic mt-1">
                   Includes Italian silk ribbon tie, deckle-edge card, and authentic wax seal stamp.
@@ -277,26 +277,26 @@ export const PricingSection: React.FC = () => {
                 <div className="space-y-1.5 pt-4 text-xs text-[#524C40] border-t border-[#E8DFCA] mt-4">
                   <div className="flex justify-between">
                     <span>Base Vessel:</span>
-                    <span className="font-semibold">${baseVesselCost}</span>
+                    <span className="font-semibold">INR {baseVesselCost}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>{itemCount} Curated Luxuries:</span>
-                    <span className="font-semibold">${itemsCost}</span>
+                    <span className="font-semibold">INR {itemsCost}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Floral Suite:</span>
-                    <span className="font-semibold">${floralCost}</span>
+                    <span className="font-semibold">INR {floralCost}</span>
                   </div>
                   {whiteGloveDelivery && (
                     <div className="flex justify-between text-[#800E17]">
                       <span>White-Glove Butler Service:</span>
-                      <span className="font-semibold">+$60</span>
+                      <span className="font-semibold">+INR 59</span>
                     </div>
                   )}
                   {customBrassPlaque && (
                     <div className="flex justify-between text-[#8C6821]">
                       <span>Brass Plaque Monogramming:</span>
-                      <span className="font-semibold">+$45</span>
+                      <span className="font-semibold">+INR 49</span>
                     </div>
                   )}
                 </div>
@@ -304,10 +304,10 @@ export const PricingSection: React.FC = () => {
 
               <a
                 href="#atelier-builder-section"
-                onClick={() => royaleLogger.action('Pricing', `Calculated estimate: $${totalEstimate}`)}
+                onClick={() => royaleLogger.action('Pricing', `Calculated estimate: INR ${totalEstimate}`)}
                 className="w-full mt-6 py-4 rounded-full bg-[#141414] hover:bg-[#252525] text-[#E5C07B] text-xs font-bold uppercase tracking-wider border border-[#C5A059] flex items-center justify-center gap-2 shadow-md transition-all text-center"
               >
-                <span>Assemble in Atelier</span>
+                <span>Design in Hamper Studio</span>
                 <ArrowRight className="w-4 h-4 text-[#DFBA54]" />
               </a>
             </div>

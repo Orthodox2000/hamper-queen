@@ -10,6 +10,8 @@
  */
 
 import React, { useState } from 'react';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import { Crown, Sparkles, ShoppingBag, Menu, X, Globe, Compass, Gift, MessageCircle } from 'lucide-react';
 import { CustomHamper, LanguageMode } from '../types';
 import { TRANSLATIONS } from '../data/translations';
@@ -18,8 +20,6 @@ import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
 import { triggerGoldConfetti } from '../utils/confetti';
 
 interface HeaderProps {
-  activeTab: string;
-  setActiveTab: (tab: string) => void;
   activeHamper: CustomHamper;
   onOpenHamperDrawer: () => void;
   onOpenBooking?: () => void;
@@ -28,8 +28,6 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({
-  activeTab,
-  setActiveTab,
   activeHamper,
   onOpenHamperDrawer,
   onOpenBooking,
@@ -38,11 +36,13 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = TRANSLATIONS[language];
+  const pathname = usePathname();
+  const router = useRouter();
 
   const navItems = [
-    { id: 'home', label: t.nav.home, icon: Crown },
-    { id: 'customised', label: t.nav.customised, icon: Gift },
-    { id: 'catalog', label: t.nav.collections, icon: Compass },
+    { id: 'home', label: t.nav.home, icon: Crown, href: '/' },
+    { id: 'customised', label: t.nav.customised, icon: Gift, href: '/customised' },
+    { id: 'catalog', label: t.nav.collections, icon: Compass, href: '/catalog' },
   ];
 
   const handleWhatsApp = () => {
@@ -51,6 +51,11 @@ export const Header: React.FC<HeaderProps> = ({
       `Hi Hamper Queen! I would like to inquire about customized luxury hampers & bouquets.`
     );
     window.open(`https://wa.me/91${HAMPER_QUEEN_OFFICIAL_CONTACT.phone}?text=${text}`, '_blank');
+  };
+
+  const isRouteActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
   };
 
   return (
@@ -69,7 +74,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="lg:hidden flex items-center gap-1.5">
           <Sparkles className="w-3 h-3 text-[#DFBA54]" />
           <span className="font-sans font-semibold text-[#F3E5AB] text-[11px] tracking-wider uppercase">
-            Luxury Gifting Atelier • Mumbai
+            Luxury Gifting Studio • Mumbai
           </span>
         </div>
 
@@ -107,25 +112,23 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-3 py-1 min-h-14 sm:min-h-16">
 
-          {/* Brand Logo */}
+{/* Brand Logo */}
           <HamperQueenLogo
             size="lg"
             showSubtitle={false}
-            onClick={() => setActiveTab('home')}
+            onClick={() => router.push('/')}
           />
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-1.5">
             {navItems.map((item) => {
-              const isActive = activeTab === item.id;
+              const isActive = isRouteActive(item.href);
               return (
-                <button
+                <Link
                   key={item.id}
                   id={`nav-link-${item.id}`}
-                  onClick={() => {
-                    triggerGoldConfetti(0.5, 0.4);
-                    setActiveTab(item.id);
-                  }}
+                  href={item.href}
+                  onClick={() => triggerGoldConfetti(0.5, 0.4)}
                   className={`relative px-4 py-2 rounded-lg text-xs font-sans font-semibold tracking-wide uppercase transition-all duration-200 flex items-center cursor-pointer whitespace-nowrap shrink-0 border ${
                     isActive
                       ? 'bg-[#141414] text-[#F3E5AB] border-[#B8860B] shadow-sm ring-1 ring-[#DFBA54]/30'
@@ -133,7 +136,7 @@ export const Header: React.FC<HeaderProps> = ({
                   }`}
                 >
                   <span>{item.label}</span>
-                </button>
+                </Link>
               );
             })}
           </nav>
@@ -174,16 +177,16 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#FFFDF9] border-b border-[#D4AF37]/40 px-4 pt-3 pb-5 space-y-1 shadow-lg">
-          {navItems.map((item) => {
+{navItems.map((item) => {
             const Icon = item.icon;
-            const isActive = activeTab === item.id;
+            const isActive = isRouteActive(item.href);
             return (
-              <button
+              <Link
                 key={item.id}
                 id={`mobile-nav-${item.id}`}
+                href={item.href}
                 onClick={() => {
                   triggerGoldConfetti(0.5, 0.4);
-                  setActiveTab(item.id);
                   setMobileMenuOpen(false);
                 }}
                 className={`w-full text-left px-4 py-3 rounded-lg text-xs font-sans font-semibold uppercase tracking-wide flex items-center justify-between transition-colors ${
@@ -196,7 +199,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <Icon className={`w-4 h-4 ${isActive ? 'text-[#DFBA54]' : 'text-[#8C6821]'}`} />
                   <span>{item.label}</span>
                 </div>
-              </button>
+              </Link>
             );
           })}
 

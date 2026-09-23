@@ -77,28 +77,28 @@ export const BulkOrdersSection: React.FC<BulkOrdersSectionProps> = ({ onOpenBulk
       title: 'Festive Client Gifting',
       detail: '120 monogrammed velvet trunks with dry fruits, candles & wax-seal keepsakes.',
       qty: '120 hampers',
-      approx: '≈ ₹72,000 order',
+      approx: '≈ INR 72,000 order',
     },
     {
       tag: 'Wedding Return Favors',
       title: 'Bridal Trousseau Trunks',
       detail: '50 rose-gold boxes personalised with the couple’s names & mehendi theme.',
       qty: '50 pieces',
-      approx: '≈ ₹46,000 order',
+      approx: '≈ INR 46,000 order',
     },
     {
       tag: 'Baby Shower',
       title: 'First Birthday Party Boxes',
       detail: '24 theme-coordinated kits with fairy lights, teddy, candles & photo prints.',
       qty: '24 kits',
-      approx: '≈ ₹18,000 order',
+      approx: '≈ INR 18,000 order',
     },
     {
       tag: 'Corporate • New Year',
       title: 'Employee Appreciation Crates',
       detail: '300 compact gift crates with chocolates, stationery & greeting cards.',
       qty: '300 crates',
-      approx: '≈ ₹95,000 order',
+      approx: '≈ INR 95,000 order',
     },
   ];
 

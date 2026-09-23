@@ -128,7 +128,7 @@ export const TRANSLATIONS: Record<LanguageMode, TranslationDict> = {
       eyebrow: 'Custom Hampers • Same-Day Dispatch',
       headline: 'Custom Luxury Hampers, Priced Honestly',
       subheadline:
-        'Pick a ready-made gift or build your own. Premium chocolates, velvet trunks, chocolate bouquets, and photo keepsakes—from ₹799, free delivery over ₹499, same-day dispatch across India.',
+        'Pick a ready-made gift or build your own. Premium chocolates, velvet trunks, chocolate bouquets, and photo keepsakes—from INR 799, free delivery above INR 499, same-day dispatch across India.',
       unveilBtn: 'See Inside the Hamper',
       buildBtn: 'Build Your Own',
       exploreBtn: 'Browse Ready-Made',
@@ -144,7 +144,7 @@ export const TRANSLATIONS: Record<LanguageMode, TranslationDict> = {
       clickToUnbox: 'Tap to Open',
       unboxedBadge: 'Preview Ready',
       itemsInside: "What's Inside",
-      royalDelivery: 'Same-Day Dispatch + Free Delivery Over ₹499',
+      royalDelivery: 'Same-Day Dispatch + Free Delivery Above INR 499',
     },
     inspiration: {
       eyebrow: 'Real Gift Inspirations',
@@ -233,7 +233,7 @@ export const TRANSLATIONS: Record<LanguageMode, TranslationDict> = {
       eyebrow: 'Custom Hampers • Same-Day Dispatch',
       headline: 'Custom Luxury Hampers, Sahi Dam Par',
       subheadline:
-        'Ready-made lo ya apna hamper banao. Premium chocolates, velvet trunks, chocolate bouquets aur photo keepsakes—₹799 se shuru, ₹499 par free delivery, same-day dispatch poore India mein.',
+        'Ready-made lo ya apna hamper banao. Premium chocolates, velvet trunks, chocolate bouquets aur photo keepsakes—INR 799 se shuru, INR 499 par free delivery, same-day dispatch poore India mein.',
       unveilBtn: 'Hamper Ke Andar Dekho',
       buildBtn: 'Apna Hamper Banao',
       exploreBtn: 'Ready-Made Dekho',
@@ -249,7 +249,7 @@ export const TRANSLATIONS: Record<LanguageMode, TranslationDict> = {
       clickToUnbox: 'Kholo',
       unboxedBadge: 'Preview Ready',
       itemsInside: 'Andar Kya Hai',
-      royalDelivery: 'Same-Day Dispatch + ₹499 Par Free Delivery',
+      royalDelivery: 'Same-Day Dispatch + INR 499 Par Free Delivery',
     },
     inspiration: {
       eyebrow: 'Asli Gift Inspirations',
@@ -338,7 +338,7 @@ export const TRANSLATIONS: Record<LanguageMode, TranslationDict> = {
       eyebrow: 'Custom Hampers • Same-Day Dispatch',
       headline: 'Custom Luxury Hampers, Priced Honestly • सही दाम पर कस्टम हैंपर्स',
       subheadline:
-        'Ready-made pick karein ya apna hamper banayein. Premium chocolates, velvet trunks, chocolate bouquets, aur photo keepsakes—from ₹799, free delivery over ₹499. (₹799 से शुरू, ₹499 पर फ्री डिलीवरी)',
+        'Ready-made pick karein ya apna hamper banayein. Premium chocolates, velvet trunks, chocolate bouquets, aur photo keepsakes—from INR 799, free delivery above INR 499. (INR 799 से शुरू, INR 499 पर फ्री डिलीवरी)',
       unveilBtn: 'See Inside • हैंपर देखें',
       buildBtn: 'Build Your Own • हैंपर बनाएं',
       exploreBtn: 'Browse Ready-Made • संग्रह देखें',
@@ -354,7 +354,7 @@ export const TRANSLATIONS: Record<LanguageMode, TranslationDict> = {
       clickToUnbox: 'Tap to Open • खोलें',
       unboxedBadge: 'Preview Ready • प्रीव्यू तैयार',
       itemsInside: "What's Inside • मुख्य उपहार",
-      royalDelivery: 'Same-Day Dispatch + Free Delivery Over ₹499',
+      royalDelivery: 'Same-Day Dispatch + Free Delivery Above INR 499',
     },
     inspiration: {
       eyebrow: 'Real Gift Ideas • असली प्रेरणा',

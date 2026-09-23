@@ -169,7 +169,7 @@ const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
           height: `${coneH}px`,
           transform: 'translateX(-50%)',
           background: 'linear-gradient(to bottom, #E5C990 0%, #D4AC6A 30%, #C1934E 72%, #A87B3C 100%)',
-          clipPath: 'polygon(18% 0, 82% 0, 100% 92%, 50% 100%, 0 92%)',
+          clipPath: 'polygon(0% 0, 100% 0, 100% 70%, 82% 78%, 50% 100%, 18% 78%, 0% 70%)',
           borderRadius: '6px 6px 0 0',
         }}
       >
@@ -187,7 +187,7 @@ const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
         {/* Wax seal dress card */}
         <div className="absolute left-1/2 bottom-[4%] -translate-x-1/2 px-2.5 py-1 rounded-md bg-black/70 border border-[#DFBA54]/70 flex items-center gap-1">
           <Sparkles className="w-2.5 h-2.5 text-[#DFBA54]" />
-          <span className="text-[7px] font-bold text-[#F3E5AB] tracking-widest uppercase">Atelier Bouquet</span>
+          <span className="text-[7px] font-bold text-[#F3E5AB] tracking-widest uppercase">Signature Bouquet</span>
         </div>
       </div>
 
@@ -200,7 +200,7 @@ const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
           <div className="px-3 py-1.5 rounded-xl bg-black/85 backdrop-blur-md border border-[#DFBA54] text-center shadow-2xl">
             <div className="flex items-center justify-center gap-1.5 text-[#F3E5AB] text-[10.5px] font-cinzel font-bold tracking-wider uppercase">
               <Crown className="w-3.5 h-3.5 text-[#DFBA54]" />
-              <span>Atelier Bouquet Unboxed</span>
+              <span>Bouquet Unboxed</span>
             </div>
             <div className="text-[9px] text-white/80 font-sans mt-0.5">Roses • Chocolates • Fairy Lights • Wax Seal</div>
           </div>
@@ -236,24 +236,29 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
   const boxH = Math.round(edge * aspect.h);
   const boxD = Math.round(edge * aspect.d);
 
-  const faceW = boxW - 4;
-  const faceH = boxH - 20;
-  const sideW = boxD - 4;
-  const sideH = faceH;
-  const lidW = boxW + 2;
-  const lidD = boxD + 2;
+  // Faces match the exact footprint so every edge joins its neighbour flush.
+  // `shapeTopY` vertically centres the box inside the square scene so wide/tall/
+  // long shapes never float off-centre ("not aligned to edge").
+  const faceW = boxW;
+  const faceH = boxH;
+  const sideW = boxD;
+  const sideH = boxH;
+  const lidW = boxW;
+  const lidD = boxD;
   const bedW = boxW - 8;
   const bedD = boxD - 8;
   const rimH = preset.lidRimH;
   const halfW = boxW / 2;
   const halfH = boxH / 2;
   const halfD = boxD / 2;
-  const bedZ = halfH - rimH;
-  const faceDrop = Math.round(boxH * 0.14);
-  const shadowZ = halfD + 15;
-  const lidLift = Math.round(-boxH * 0.75);
+  const shapeTopY = Math.round((edge - boxH) / 2);
+  const bedZ = Math.round(-(shapeTopY + rimH));
+  const shadowZ = Math.round(shapeTopY + boxH + 15);
+  // Lid roof plane must sit `rimH` above the box rim for every shape.
+  const lidRoofZ = Math.round(rimH);
+  const lidUnderZ = lidRoofZ - 1;
+  const lidLift = Math.round(-(boxH * 0.75 + shapeTopY));
   const glowOffsetY = Math.round(-boxH * 0.36);
-  const plaqueZ = Math.round(halfH + 20);
 
   // Bouquet proportions (tall & slender — unlike any box shape)
   const isBouquet = type === 'bouquet';
@@ -421,27 +426,6 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
             </div>
           )}
 
-          {/* Clean, Non-Crooked Unboxing Plaque Floating Gently Above Box */}
-          {isOpen && (
-            <div
-              className="absolute -top-16 inset-x-[-32px] pointer-events-none transition-all duration-700 ease-out flex flex-col items-center justify-center"
-              style={{
-                transformStyle: 'preserve-3d',
-                transform: `translateZ(${plaqueZ}px)`,
-              }}
-            >
-              <div className="px-3 py-1.5 rounded-xl bg-black/85 backdrop-blur-md border border-[#DFBA54] text-center shadow-2xl">
-                <div className="flex items-center justify-center gap-1.5 text-[#F3E5AB] text-[10.5px] font-cinzel font-bold tracking-wider uppercase">
-                  <Crown className="w-3.5 h-3.5 text-[#DFBA54]" />
-                  <span>Atelier Hamper Unboxed</span>
-                </div>
-                <div className="text-[9px] text-white/80 font-sans mt-0.5">
-                  Cadbury Silk • Ferrero • Fairy Lights • Wax Seal
-                </div>
-              </div>
-            </div>
-          )}
-
           {/* 3D BOX LID — lifts straight up with a gentle lean toward the viewer;
               the decorated top stays fully visible (never inverts) */}
           <div
@@ -460,7 +444,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
               style={{
                 width: `${lidW}px`,
                 height: `${lidD}px`,
-                transform: `rotateX(90deg) translateZ(${halfH}px)`,
+                transform: `translateY(${shapeTopY - halfD}px) rotateX(90deg) translateZ(${lidRoofZ}px)`,
                 borderRadius: '6px',
               }}
             >
@@ -483,7 +467,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
               style={{
                 width: `${lidW}px`,
                 height: `${lidD}px`,
-                transform: `rotateX(90deg) translateZ(${halfH}px) rotateY(180deg)`,
+                transform: `translateY(${shapeTopY - halfD}px) rotateX(90deg) translateZ(${lidUnderZ}px) rotateY(180deg)`,
                 background: `linear-gradient(to bottom, ${theme.bedBg}, #000)`,
                 borderRadius: '6px',
               }}
@@ -497,7 +481,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
               className={`absolute ${theme.faceBorder}`}
               style={{
                 background: `linear-gradient(to bottom, ${theme.ribbonHex}, ${theme.backFace})`,
-                transform: `translateZ(${halfD + 1}px) translateY(-1px)`,
+                transform: `translateY(${shapeTopY - rimH}px) translateZ(${halfD}px)`,
                 width: `${lidW}px`,
                 height: `${rimH}px`,
                 borderRadius: '2px',
@@ -507,7 +491,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
               className={`absolute ${theme.faceBorder}`}
               style={{
                 background: theme.backFace,
-                transform: `rotateY(180deg) translateZ(${halfD + 1}px) translateY(-1px)`,
+                transform: `translateY(${shapeTopY - rimH}px) rotateY(180deg) translateZ(${halfD}px)`,
                 width: `${lidW}px`,
                 height: `${rimH}px`,
               }}
@@ -516,16 +500,16 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
               className={`absolute ${theme.faceBorder}`}
               style={{
                 background: theme.leftFace,
-                transform: `rotateY(-90deg) translateZ(${halfW + 1}px) translateY(-1px)`,
+                transform: `translateY(${shapeTopY - rimH}px) rotateY(-90deg) translateZ(${halfD}px)`,
                 width: `${lidD}px`,
                 height: `${rimH}px`,
               }}
             />
-            <div
+<div
               className={`absolute ${theme.faceBorder}`}
               style={{
-                background: theme.rightFace,
-                transform: `rotateY(90deg) translateZ(${halfW + 1}px) translateY(-1px)`,
+                background: theme.leftFace,
+                transform: `translateY(${shapeTopY - rimH}px) rotateY(90deg) translateZ(${boxW - halfD}px)`,
                 width: `${lidD}px`,
                 height: `${rimH}px`,
               }}
@@ -539,7 +523,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
           {/* Front Face */}
           <div
             className={`absolute bg-gradient-to-b ${theme.frontFace} ${theme.faceBorder} shadow-md flex flex-col items-center justify-center p-2`}
-            style={{ width: `${faceW}px`, height: `${faceH}px`, transform: `translateZ(${halfD}px) translateY(${faceDrop}px)`, borderRadius: '4px' }}
+            style={{ width: `${faceW}px`, height: `${faceH}px`, transform: `translateZ(${halfD}px) translateY(${shapeTopY}px)`, borderRadius: '4px' }}
           >
             {/* Centered cross ribbon: both lines cross behind the emblem */}
             <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[7px] bg-gradient-to-b from-[#D4AF37] via-[#F3E5AB] to-[#C5A059] opacity-90" />
@@ -553,7 +537,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
             style={{
               width: `${faceW}px`,
               height: `${faceH}px`,
-              transform: `rotateY(180deg) translateZ(${halfD}px) translateY(${faceDrop}px)`,
+              transform: `rotateY(180deg) translateZ(${halfD}px) translateY(${shapeTopY}px)`,
               background: `linear-gradient(to bottom, ${theme.backFace}, ${theme.leftFace})`,
               borderRadius: '4px',
             }}
@@ -569,7 +553,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
             style={{
               width: `${sideW}px`,
               height: `${sideH}px`,
-              transform: `rotateY(-90deg) translateZ(${halfW}px) translateY(${faceDrop}px)`,
+              transform: `rotateY(-90deg) translateZ(${halfD}px) translateY(${shapeTopY}px)`,
               background: `linear-gradient(to bottom, ${theme.leftFace}, ${theme.backFace})`,
               borderRadius: '4px',
             }}
@@ -585,7 +569,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
             style={{
               width: `${sideW}px`,
               height: `${sideH}px`,
-              transform: `rotateY(90deg) translateZ(${halfW}px) translateY(${faceDrop}px)`,
+              transform: `rotateY(90deg) translateZ(${boxW - halfD}px) translateY(${shapeTopY}px)`,
               background: `linear-gradient(to bottom, ${theme.rightFace}, ${theme.backFace})`,
               borderRadius: '4px',
             }}
@@ -598,7 +582,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
           {/* Bottom Face */}
           <div
             className={`absolute ${theme.bottomFace} shadow-2xl`}
-            style={{ width: `${faceW}px`, height: `${sideW}px`, transform: `rotateX(-90deg) translateZ(${halfH}px)` }}
+            style={{ width: `${boxW}px`, height: `${boxD}px`, transform: `rotateX(-90deg) translateZ(${shapeTopY + boxH - halfD}px)` }}
           />
 
           {/* Shadow Below Box */}

@@ -73,7 +73,7 @@ export default function OpengraphImage() {
             color: gold,
           }}
         >
-          Luxury Gifting Atelier · Mumbai
+          Luxury Gifting Studio · Mumbai
         </div>
       </div>
     ),

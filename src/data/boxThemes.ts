@@ -143,7 +143,7 @@ export const BOX_THEMES = {
     ribbonHex: '#DFBA54',
     accentText: 'text-amber-200',
     badgeBg: 'bg-[#350849] text-amber-200 border-amber-500/50',
-    boxLabel: 'Royal Atelier Velvet Hamper',
+    boxLabel: 'Royal Velvet Hamper',
     lidTop: 'from-[#2E0A45] via-[#1F0630] to-[#140419]',
     frontFace: 'from-[#350849] via-[#280538] to-[#1A0326]',
     backFace: '#240539',
@@ -200,9 +200,9 @@ export type BoxShape = 'cube' | 'wide' | 'tall' | 'long';
  *  largest axis stays ~1.0 and every shape fits the same scene box. */
 export const BOX_SHAPES: Record<BoxShape, { w: number; h: number; d: number; label: string }> = {
   cube: { w: 1.0, h: 1.0, d: 1.0, label: 'Classic Cube' },
-  wide: { w: 1.0, h: 0.64, d: 0.9, label: 'Wide Casket' },
-  tall: { w: 0.72, h: 1.0, d: 0.72, label: 'Tall Trunk' },
-  long: { w: 0.7, h: 0.6, d: 1.0, label: 'Long Keepsake' },
+  wide: { w: 1.0, h: 0.72, d: 1.0, label: 'Wide Casket' },
+  tall: { w: 0.8, h: 1.0, d: 0.8, label: 'Tall Trunk' },
+  long: { w: 1.0, h: 0.68, d: 0.6, label: 'Long Keepsake' },
 };
 
 /** Give the hero theme chips visibly different box proportions. */

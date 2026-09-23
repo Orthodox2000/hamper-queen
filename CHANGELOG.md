@@ -2,12 +2,24 @@
 
 All notable changes to Hamper Queen are documented here. Grouped by audience value.
 
+## 2.0.0 — 2026-09-23 — Real pages & a perfectly sealed gift box
+
+The storefront grew from one long page into dedicated pages, and the 3D gift box now seals perfectly in every size.
+
+### Features
+- **Dedicated pages for every section** — the storefront now runs on its own pages with real URLs: `/` home, `/customised`, `/catalog`, `/hampers`, `/bulk`, `/inspirations`, `/atelier`, `/scribe`, `/brochures` and `/pricing`. Header and footer links jump straight to the right page, and legal pages stay separate from the shop.
+- **Shared cart state** — one store powers the badge, drawer, booking modal and pages, with the cart saved in the browser. The cart opens empty by default.
+
+### Fixes
+- **3D gift box seals perfectly in every size** — the lid, ribbon and rosette now close flush on all four box shapes (Cube, Wide, Tall and Long). Before, the Long and Tall boxes had misaligned lids and side faces; now all six faces meet edge-to-edge with the lid sitting level on top.
+- **Same wording everywhere** — "Free delivery above INR 499" is used in one form across the site (prices use INR words, never the ₹ symbol).
+
 ## 1.1.0 — 2026-09-22 — Shopping cart & 3D variants
 
 New ways to build and preview your gift before you order.
 
 ### Features
-- **Complete shopping cart** — the old slide-over tray is now a real cart: quantities with +/− steppers, per-line subtotals, cart subtotal, a delivery fee that drops to FREE on orders over ₹499, grand total, per-line removal, and a clear-cart button. It opens from the header (`ROYAL CART`) and the badge always shows the live item count.
+- **Complete shopping cart** — the old slide-over tray is now a real cart: quantities with +/− steppers, per-line subtotals, cart subtotal, a delivery fee that drops to FREE on orders over INR 499, grand total, per-line removal, and a clear-cart button. It opens from the header (`ROYAL CART`) and the badge always shows the live item count.
 - **Add a custom Atelier hamper straight to your cart** — at the final "Summary" step there is a one-tap *Add This Hamper to Cart* button that converts your chosen packaging, slots, ribbon and wax seal into cart lines; the drawer opens instantly so you can review.
 - **Unlimited cart size** — the vessel capacity cap is gone for catalogue additions, so the cart never blocks a purchase.
 - **3D gift boxes now come in different sizes & lengths** — switched territory brings four proportions: Classic Cube, Wide Casket, Tall Trunk and Long Keepsake, all share the same themes, cross-ribbon dressing and unboxing animation.

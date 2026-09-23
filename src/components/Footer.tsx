@@ -18,11 +18,10 @@ import { TRANSLATIONS } from '../data/translations';
 import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
 
 interface FooterProps {
-  onNavigate: (tab: string) => void;
   language?: LanguageMode;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, language = 'en' }) => {
+export const Footer: React.FC<FooterProps> = ({ language = 'en' }) => {
   const t = TRANSLATIONS[language];
   const { phone, phoneDisplay, email, tagline } = HAMPER_QUEEN_OFFICIAL_CONTACT;
 
@@ -80,48 +79,48 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, language = 'en' }) =
           {/* Quick Navigation Links (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-seasons text-xs font-bold uppercase tracking-widest text-[#141414]">
-              The Atelier
+The Studio
             </h4>
             <ul className="space-y-2 text-xs text-[#6B6559]">
               <li>
-                <button onClick={() => onNavigate('home')} className="hover:text-[#B8860B] transition-colors cursor-pointer">
+                <Link href="/" className="hover:text-[#B8860B] transition-colors cursor-pointer">
                   {t.nav.home}
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => onNavigate('inspirations')} className="hover:text-[#B8860B] transition-colors cursor-pointer">
+                <Link href="/inspirations" className="hover:text-[#B8860B] transition-colors cursor-pointer">
                   {t.nav.inspirations}
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => onNavigate('customised')} className="hover:text-[#B8860B] transition-colors cursor-pointer font-bold text-[#8C6821]">
+                <Link href="/customised" className="hover:text-[#B8860B] transition-colors cursor-pointer font-bold text-[#8C6821]">
                   {t.nav.customised}
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => onNavigate('catalog')} className="hover:text-[#B8860B] transition-colors cursor-pointer">
+                <Link href="/catalog" className="hover:text-[#B8860B] transition-colors cursor-pointer">
                   {t.nav.collections}
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => onNavigate('atelier')} className="hover:text-[#B8860B] transition-colors cursor-pointer">
+                <Link href="/atelier" className="hover:text-[#B8860B] transition-colors cursor-pointer">
                   {t.nav.atelier}
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => onNavigate('scribe')} className="hover:text-[#B8860B] transition-colors cursor-pointer">
+                <Link href="/scribe" className="hover:text-[#B8860B] transition-colors cursor-pointer">
                   {t.nav.calligraphy}
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => onNavigate('pricing')} className="hover:text-[#B8860B] transition-colors cursor-pointer">
+                <Link href="/pricing" className="hover:text-[#B8860B] transition-colors cursor-pointer">
                   {t.nav.pricing}
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => onNavigate('brochures')} className="hover:text-[#B8860B] transition-colors cursor-pointer">
+                <Link href="/brochures" className="hover:text-[#B8860B] transition-colors cursor-pointer">
                   {t.nav.lookbooks}
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -134,7 +133,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, language = 'en' }) =
             <ul className="space-y-2.5 text-xs text-[#524B40]">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#B8860B] shrink-0 mt-0.5" />
-                <span>Hamper Queen Atelier & Studio • Handcrafted Packaging & Dispatch</span>
+                <span>Hamper Queen Studio • Handcrafted Packaging & Dispatch</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#B8860B] shrink-0" />

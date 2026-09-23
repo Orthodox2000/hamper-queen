@@ -340,14 +340,14 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
   const filledItems = slots.filter(Boolean) as BrandedItem[];
   const baseBoxEstimate =
     selectedPackaging.id === 'box-pocket-2'
-      ? 100
+      ? 129
       : selectedPackaging.id === 'box-small-4'
-      ? 150
+      ? 149
       : selectedPackaging.type === 'bouquet'
-      ? 200
+      ? 199
       : selectedPackaging.id === 'box-medium-6'
-      ? 250
-      : 350;
+      ? 249
+      : 299;
 
   const itemsTotal = filledItems.reduce((acc, curr) => acc + curr.unitPriceApprox, 0);
 
@@ -420,7 +420,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
       description: b.description,
       details: [b.brand, b.weightOrQty],
       royalHighlights: b.isPhoto ? ['Custom polaroid photo insert'] : [b.descriptionHinglish ?? b.simpleName],
-      occasions: ['Custom Atelier Curations'],
+      occasions: ['Custom Studio Curations'],
       palette: { primary: b.colorScheme.bg, accent: b.colorScheme.accent, label: b.colorScheme.accent },
       imageSvgId: mapped.imageSvgId,
       userCustomImage: b.photoUrl,
@@ -452,7 +452,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
   };
   const addOnsTotal = (hasWaxSeal ? 50 : 0) + (includePartyPopper ? 60 : 0) + (includeFairyLights ? 50 : 0);
   const rawSubtotal = baseBoxEstimate + itemsTotal + addOnsTotal;
-  const subtotal = Math.max(199, rawSubtotal);
+  const subtotal = Math.max(149, rawSubtotal);
   const isFreeDelivery = subtotal >= 499;
   const deliveryFee = isFreeDelivery ? 0 : 49;
   const estimatedGrandTotal = subtotal + deliveryFee;
@@ -464,9 +464,9 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
     const itemListText = filledItems
       .map((item, idx) => {
         if (item.isPhoto) {
-          return `  ${idx + 1}. [Polaroid Photo Memory] "${item.photoCaption || 'Memories'}" (~₹${item.unitPriceApprox})`;
+          return `  ${idx + 1}. [Polaroid Photo Memory] "${item.photoCaption || 'Memories'}" (~INR ${item.unitPriceApprox})`;
         }
-        return `  ${idx + 1}. ${item.name} (~₹${item.unitPriceApprox})`;
+        return `  ${idx + 1}. ${item.name} (~INR ${item.unitPriceApprox})`;
       })
       .join('\n');
 
@@ -477,7 +477,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
         ? '🚚 Next-Day Morning Dispatch'
         : `📅 Scheduled Date: ${deliveryDate || 'As scheduled'}`;
 
-    const message = `👑 *NAMASTE HAMPER QUEEN!* 👑\n\nI would like to confirm my custom hamper order from the Hamper Queen Atelier:\n\n📦 *PACKAGING SELECTED:*\n- Packaging: ${selectedPackaging.name}\n- Capacity: ${selectedPackaging.slotCount} Slots (${filledItems.length} Filled)\n- Dimensions: ${selectedPackaging.dimensions}\n\n🍫 *ITEMS & GIFTS IN SLOTS:*\n${itemListText || '  (Please suggest bestselling treats)'}\n\n🎀 *PACKAGING & FINISHING TOUCHES:*\n- Ribbon: ${selectedRibbon.name} Satin Bow\n- Outer Wrap: ${wrappingSheet}\n- Base Bedding: ${cushionBed}\n- Royal Wax Seal: ${hasWaxSeal ? 'Yes (Imperial Crest Stamped with Gold Dust)' : 'No'}\n- Fairy Lighting: ${includeFairyLights ? 'Warm Fairy LED Lights Included' : 'Standard'}\n\n💌 *PERSONAL GREETING & OCCASION:*\n- Occasion: ${selectedOccasion}\n- To (Recipient): ${recipientName || 'Special Someone'}\n- From (Sender): ${senderName || 'Sender'}\n- Handwritten Card Message: "${cardMessage}"\n\n🚚 *DELIVERY & DISPATCH DETAILS:*\n- Recipient Name: ${recipientName || 'Not specified'}\n- Recipient Phone: ${recipientPhone || 'Not specified'}\n- Sender Contact: ${senderName || 'Sender'} (${senderPhone || 'Not specified'})\n- Address: ${deliveryAddress || 'To be shared on WhatsApp'}\n- City / Pincode: ${deliveryCity} - ${deliveryPincode || '400001'}\n- Dispatch Preference: ${speedLabel}\n${specialInstructions ? `- Special Instructions: ${specialInstructions}\n` : ''}\n💰 *ORDER VALUE & PRICING:*\n- Subtotal: ₹${subtotal}\n- Delivery Fee: ${isFreeDelivery ? 'FREE (Unlocked for orders ₹499+)' : `₹${deliveryFee} (Standard Delivery)`}\n- *GRAND TOTAL:* Approx ₹${estimatedGrandTotal}\n\nPlease confirm availability and payment details. Thank you!`;
+    const message = `👑 *NAMASTE HAMPER QUEEN!* 👑\n\nI would like to confirm my custom hamper order from the Hamper Queen Studio:\n\n📦 *PACKAGING SELECTED:*\n- Packaging: ${selectedPackaging.name}\n- Capacity: ${selectedPackaging.slotCount} Slots (${filledItems.length} Filled)\n- Dimensions: ${selectedPackaging.dimensions}\n\n🍫 *ITEMS & GIFTS IN SLOTS:*\n${itemListText || '  (Please suggest bestselling treats)'}\n\n🎀 *PACKAGING & FINISHING TOUCHES:*\n- Ribbon: ${selectedRibbon.name} Satin Bow\n- Outer Wrap: ${wrappingSheet}\n- Base Bedding: ${cushionBed}\n- Royal Wax Seal: ${hasWaxSeal ? 'Yes (Imperial Crest Stamped with Gold Dust)' : 'No'}\n- Fairy Lighting: ${includeFairyLights ? 'Warm Fairy LED Lights Included' : 'Standard'}\n\n💌 *PERSONAL GREETING & OCCASION:*\n- Occasion: ${selectedOccasion}\n- To (Recipient): ${recipientName || 'Special Someone'}\n- From (Sender): ${senderName || 'Sender'}\n- Handwritten Card Message: "${cardMessage}"\n\n🚚 *DELIVERY & DISPATCH DETAILS:*\n- Recipient Name: ${recipientName || 'Not specified'}\n- Recipient Phone: ${recipientPhone || 'Not specified'}\n- Sender Contact: ${senderName || 'Sender'} (${senderPhone || 'Not specified'})\n- Address: ${deliveryAddress || 'To be shared on WhatsApp'}\n- City / Pincode: ${deliveryCity} - ${deliveryPincode || '400001'}\n- Dispatch Preference: ${speedLabel}\n${specialInstructions ? `- Special Instructions: ${specialInstructions}\n` : ''}\n💰 *ORDER VALUE & PRICING:*\n- Subtotal: INR ${subtotal}\n- Delivery Fee: ${isFreeDelivery ? 'FREE (Unlocked for orders INR 499+)' : `INR ${deliveryFee} (Standard Delivery)`}\n- *GRAND TOTAL:* Approx INR ${estimatedGrandTotal}\n\nPlease confirm availability and payment details. Thank you!`;
 
     const encoded = encodeURIComponent(message);
     const url = `https://wa.me/918080580105?text=${encoded}`;
@@ -523,7 +523,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
               { num: 1, label: '1. Select Hamper Box', sub: `${selectedPackaging.slotCount} Slots chosen` },
               { num: 2, label: '2. Fill Items & Photos', sub: `${filledItems.length}/${selectedPackaging.slotCount} Slots Filled` },
               { num: 3, label: '3. Wrapping & Message', sub: `${selectedRibbon.name}` },
-              { num: 4, label: '4. Summary & WhatsApp', sub: `₹${estimatedGrandTotal} approx` },
+              { num: 4, label: '4. Summary & WhatsApp', sub: `INR ${estimatedGrandTotal} approx` },
             ].map((step) => {
               const isActive = currentStage === step.num;
               const isPast = currentStage > step.num;
@@ -904,7 +904,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     </div>
                     <div>
                       <label className="text-[11px] font-bold text-stone-700 block mb-1">
-                        Estimated Value (₹)
+                        Estimated Value (INR )
                       </label>
                       <input
                         type="number"
@@ -980,7 +980,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
 
                     <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between">
                       <span className="text-xs font-extrabold text-[#B8860B]">
-                        ₹{item.unitPriceApprox}
+                        INR {item.unitPriceApprox}
                       </span>
                       <button
                         type="button"
@@ -1008,7 +1008,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
 
               <div className="flex items-center gap-3">
                 <span className="text-xs font-bold text-stone-600">
-                  Total Value: <span className="text-sm font-extrabold text-[#B8860B]">₹{estimatedGrandTotal}</span>
+                  Total Value: <span className="text-sm font-extrabold text-[#B8860B]">INR {estimatedGrandTotal}</span>
                 </span>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
@@ -1132,7 +1132,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     }}
                     className="w-4 h-4 accent-[#B8860B]"
                   />
-                  <span>Handmade Gold Wax Seal (+₹70)</span>
+                  <span>Handmade Gold Wax Seal (+INR 70)</span>
                 </label>
 
                 <label className="flex items-center gap-2 text-xs font-bold text-stone-800 cursor-pointer">
@@ -1158,7 +1158,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     }}
                     className="w-4 h-4 accent-[#B8860B]"
                   />
-                  <span>Golden Party Popper (+₹60)</span>
+                  <span>Golden Party Popper (+INR 60)</span>
                 </label>
               </div>
             </div>
@@ -1313,7 +1313,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                   />
                   <div>
                     <h3 className="font-seasons text-base sm:text-lg font-bold text-[#141414]">
-                      Hamper Queen Atelier Receipt
+                      Hamper Queen Order Receipt
                     </h3>
                     <p className="text-xs text-stone-500">
                       Custom Order • Contact: +91 {HAMPER_QUEEN_OFFICIAL_CONTACT.phone}
@@ -1346,7 +1346,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                             </span>
                           )}
                         </div>
-                        <span className="font-bold text-stone-700">~₹{item.unitPriceApprox}</span>
+                        <span className="font-bold text-stone-700">~INR {item.unitPriceApprox}</span>
                       </div>
                     ))}
                   </div>
@@ -1400,7 +1400,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
               <div className="border-t-2 border-stone-200 pt-4 flex items-center justify-between">
                 <div>
                   <span className="text-xs text-stone-500 block">Total Approximate Price</span>
-                  <span className="text-xl font-extrabold text-[#B8860B]">₹{estimatedGrandTotal}</span>
+                  <span className="text-xl font-extrabold text-[#B8860B]">INR {estimatedGrandTotal}</span>
                 </div>
                 <span className="text-[11px] text-stone-500 max-w-xs text-right">
                   Final price is confirmed on WhatsApp based on packaging and customization availability.

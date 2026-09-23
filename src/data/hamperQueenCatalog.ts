@@ -31,10 +31,10 @@ export const HAMPER_QUEEN_OFFICIAL_CONTACT = {
   instagram: 'hamper_queen',
   instagramUrl: 'https://instagram.com/hamper_queen',
   tagline: 'We wrapped these gifts with love and care',
-  minOrder: 199,
+  minOrder: 149,
   freeDeliveryThreshold: 499,
   deliveryFeeUnderThreshold: 49,
-  pricingPolicy: 'Smallest order starts from ₹199 (+delivery) • Curated gifts from ₹299, ₹399 & ₹499 • FREE Delivery on orders above ₹499!',
+  pricingPolicy: 'Smallest order starts from INR 149 (+delivery) • Curated gifts from INR 149, INR 199, INR 399 & INR 499 • Free delivery on orders above INR 499!',
 };
 
 // Automatic stable item code resolver
@@ -81,8 +81,8 @@ export const getHamperQueenSubstitutions = (prod: HamperQueenProduct): string[] 
     return [
       'Swap chocolate brand (Cadbury Dairy Milk / KitKat / Ferrero Rocher)',
       'Choice of ribbon & paper wrap color (Gold, Blush Pink, Midnight Navy, Teal)',
-      'Add custom printed Polaroid photos with wooden clips (+₹149)',
-      'Add LED fairy lights string inside bouquet (+₹99)',
+      'Add custom printed Polaroid photos with wooden clips (+INR 149)',
+      'Add LED fairy lights string inside bouquet (+INR 99)',
     ];
   }
   if (prod.category === 'birthday_hampers') {
@@ -103,7 +103,7 @@ export const getHamperQueenSubstitutions = (prod: HamperQueenProduct): string[] 
 
 export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
   // ==========================================
-  // STARTER & BUDGET DELIGHTS (From ₹199 & ₹299)
+  // STARTER & BUDGET DELIGHTS (From INR 149 & INR 299)
   // ==========================================
   {
     id: 'starter-pocket-delight',
@@ -122,9 +122,9 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Artisanal Pocket Gift Box with Satin Ribbon',
       'Handwritten Calligraphy Message Card',
     ],
-    approxPrice: '₹199 (+delivery)',
-    pricingNote: 'Smallest order size! Standard delivery applies under ₹499',
-    badge: 'Starting at ₹199',
+    approxPrice: 'INR 149 (+delivery)',
+    pricingNote: 'Smallest order size! Free delivery above INR 499',
+    badge: 'Starting at INR 149',
     themeColor: {
       bg: '#FFFDF9',
       accent: '#DFBA54',
@@ -151,10 +151,11 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Preserved Crimson Velvet Rose Bloom',
       'Gold Dust Imperial Wax Seal Stamp',
       'Luxury Gift Box with Double-Faced Satin Bow',
+      'Crunchy Roasted Almond Nut Mix',
     ],
-    approxPrice: '₹299 (+delivery)',
-    pricingNote: 'Add items above ₹499 for FREE Delivery!',
-    badge: 'Popular • ₹299',
+    approxPrice: 'INR 199 (+delivery)',
+    pricingNote: 'Add items above INR 499 for free delivery!',
+    badge: 'Popular • INR 199',
     themeColor: {
       bg: '#FFF8F8',
       accent: '#BE185D',
@@ -181,10 +182,13 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Nestle KitKat 4-Finger Crisp Wafer Bar',
       'Warm Golden LED Fairy Lights (Batteries Included)',
       'Handcrafted Velvet Bedding & Gold Rosette',
+      'Crunchy Nestle Munch Bar',
+      'Ferrero Rocher Golden Pair',
+      'Custom Celebration Topper Card',
     ],
-    approxPrice: '₹399 (+delivery)',
-    pricingNote: 'Eligible for FREE Delivery when combined with any add-on > ₹499',
-    badge: 'Trending • ₹399',
+    approxPrice: 'INR 299 (+delivery)',
+    pricingNote: 'Eligible for free delivery on orders above INR 499',
+    badge: 'Trending • INR 299',
     themeColor: {
       bg: '#FAF5FF',
       accent: '#7E22CE',
@@ -215,7 +219,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Decorative Floral Sprigs & Heart Embellishments',
       'Customized Calligraphy Message Tag',
     ],
-    approxPrice: '₹799 - ₹1,499',
+    approxPrice: 'INR 349 - INR 599',
     pricingNote: 'Price depends on chocolate count & wrap style',
     badge: 'Customer Favorite',
     themeColor: {
@@ -245,7 +249,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Handcrafted Floral Fillers',
       'Personalized Royal Note Card',
     ],
-    approxPrice: '₹899 - ₹1,699',
+    approxPrice: 'INR 399 - INR 649',
     pricingNote: 'Rate depends on biscuit packs & box styling',
     badge: 'Indulgent Treat',
     themeColor: {
@@ -275,7 +279,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Soft Sage-Green & White Tissue Wrap',
       'Sky-Blue Organza Bow',
     ],
-    approxPrice: '₹1,199 - ₹2,199',
+    approxPrice: 'INR 449 - INR 699',
     pricingNote: 'Rate customized according to jewelry selection',
     badge: 'Trending Gift',
     themeColor: {
@@ -305,7 +309,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Matte Navy Blue & Black Structured Wrap',
       'Monochrome Ribbon Accent',
     ],
-    approxPrice: '₹1,299 - ₹2,399',
+    approxPrice: 'INR 449 - INR 699',
     pricingNote: 'Customizable with branded grooming products',
     badge: 'For Him Special',
     themeColor: {
@@ -334,7 +338,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Charcoal Black Sculpted Fan Wrap',
       'Golden Ribbon Tie & Custom Handwritten Note',
     ],
-    approxPrice: '₹999 - ₹1,799',
+    approxPrice: 'INR 449 - INR 699',
     pricingNote: 'Rate based on number of photo prints & lights',
     badge: 'Most Sentimental',
     themeColor: {
@@ -364,7 +368,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Cream Satin Ribbon with Golden Border',
       'Celebration Topper Card',
     ],
-    approxPrice: '₹849 - ₹1,499',
+    approxPrice: 'INR 349 - INR 599',
     pricingNote: 'Available in Pink or Blue theme packaging',
     badge: 'Joyful & Cute',
     themeColor: {
@@ -400,9 +404,11 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Artisan Chocolates',
       'Custom Birthday Card',
       'Premium Rigid Gift Box with Satin Ribbon',
+      'Silk Pocket Scarf / Chunky Scrunchie Set',
+      'Mini Honey Jar',
     ],
-    approxPrice: '₹1,699 - ₹2,499',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 399',
+    pricingNote: 'Custom Hampers | From INR 399 (Approx.)',
     badge: 'Top Birthday Pick',
     themeColor: {
       bg: '#FFF5F7',
@@ -434,9 +440,10 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Ultra-Soft Cozy Socks',
       'Gourmet Chocolates',
       'Personalized Birthday Note Card',
+      'Sleep Mist / Lavender Pillow Spray',
     ],
-    approxPrice: '₹1,599 - ₹2,399',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 399',
+    pricingNote: 'Custom Hampers | From INR 399 (Approx.)',
     badge: 'Spa & Wellness',
     themeColor: {
       bg: '#FDF8F6',
@@ -467,9 +474,11 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Mini Potted Green Plant / Faux Succulent',
       'Custom Personalized Keychain',
       'Birthday Card & Decorative Storage Basket',
+      'Golden Honey Dipper Sticks',
+      'Hazelnut Spread Mini Jar',
     ],
-    approxPrice: '₹1,499 - ₹2,299',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 399',
+    pricingNote: 'Custom Hampers | From INR 399 (Approx.)',
     badge: 'Morning Brew',
     themeColor: {
       bg: '#FAF7F2',
@@ -500,9 +509,13 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Preserved Floral Sprigs',
       'Velvet-Lined Premium Gift Box',
       'Calligraphy Birthday Card',
+      'Gold Dust Wax Seal Stamp',
+      'Silk Ribbon Hair Ties',
+      'Satin Fabric Scrunchie',
+      'Mini Pearl Studs',
     ],
-    approxPrice: '₹1,699 - ₹2,499',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 499',
+    pricingNote: 'Custom Hampers | From INR 499 (Approx.)',
     badge: 'Glamour & Sparkle',
     themeColor: {
       bg: '#FFFDF9',
@@ -533,9 +546,13 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Assorted Chocolates',
       'Custom Birthday Card',
       'Signature Rigid Gift Box with Ribbon',
+      'Chunky Resin Statement Chain',
+      'Embellished Hair Band',
+      'Silk Scarf Pocket Square',
+      'Phone Charm Strap',
     ],
-    approxPrice: '₹1,799 - ₹2,500',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 499',
+    pricingNote: 'Custom Hampers | From INR 499 (Approx.)',
     badge: 'Fashionista Special',
     themeColor: {
       bg: '#FFF8F8',
@@ -566,9 +583,11 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Effervescent Bath Bombs',
       'Artisan Milk Chocolates',
       'Birthday Wishes Card',
+      'Rose Eau de Parfum Mist',
+      'Gold Clothespin Photo Clips',
     ],
-    approxPrice: '₹1,599 - ₹2,499',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 399',
+    pricingNote: 'Custom Hampers | From INR 399 (Approx.)',
     badge: 'Radiant Glow',
     themeColor: {
       bg: '#FBFDF9',
@@ -598,9 +617,12 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Chocolate Vanilla Aromatherapy Candle',
       'Artisan Birthday Card with Wax Seal',
       'Signature Black & Gold Gift Box',
+      'Lotus Biscoff Cookie Packs',
+      'Caramel Stroopwafel Wafers',
+      'Dark Chocolate Covered Almonds',
     ],
-    approxPrice: '₹1,499 - ₹2,399',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 399',
+    pricingNote: 'Custom Hampers | From INR 399 (Approx.)',
     badge: 'Pure Indulgence',
     themeColor: {
       bg: '#FDF9F5',
@@ -631,9 +653,11 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Super-Soft Woolen Cozy Socks',
       'Gourmet Chocolates',
       'Heartfelt Birthday Note',
+      'Stress-Relief Lavender Pillow Mist',
+      'Wooden Aromatherapy Diffuser',
     ],
-    approxPrice: '₹1,499 - ₹2,199',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 399',
+    pricingNote: 'Custom Hampers | From INR 399 (Approx.)',
     badge: 'Pure Serenity',
     themeColor: {
       bg: '#F5F9FA',
@@ -663,9 +687,12 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Bergamot & Green Tea Scented Candle',
       'Mini Preserved Green Flora / Plant',
       'Classic Decorative Tray Box',
+      'Golden Honey Jar with Dipper',
+      'Floral Spoon Gift Set',
+      'Butter Cookies Mini Tin',
     ],
-    approxPrice: '₹1,399 - ₹2,199',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 399',
+    pricingNote: 'Custom Hampers | From INR 399 (Approx.)',
     badge: 'Cozy Moments',
     themeColor: {
       bg: '#F6FBF6',
@@ -696,9 +723,13 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Preserved Pink Florals',
       'Birthday Wishes Card with Wax Seal',
       'Premium Gift Box',
+      'Name-Embossed Premium Keychain',
+      'Rose-Gold Hair Claw',
+      'Velvet Jewelry Pouch',
+      'Engraved Wooden Gift Tag',
     ],
-    approxPrice: '₹1,799 - ₹2,499',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 499',
+    pricingNote: 'Custom Hampers | From INR 499 (Approx.)',
     badge: 'Custom Name Stamped',
     themeColor: {
       bg: '#FAF5FF',
@@ -729,8 +760,8 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Gourmet Dark Chocolates',
       'Birthday Card in Simple Elegant Box',
     ],
-    approxPrice: '₹1,299 - ₹1,999',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 299',
+    pricingNote: 'Custom Hampers | From INR 299 (Approx.)',
     badge: 'Clean Aesthetic',
     themeColor: {
       bg: '#F9FAFB',
@@ -761,9 +792,13 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Hydrating Self-Care Item',
       'Birthday Wishes Card',
       'Signature Luxury Gift Box',
+      'Dried Flower Bookmark Set',
+      'Silk Hair Ribbon',
+      'Scented Drawer Sachets',
+      'Golden Confetti Sprinkles',
     ],
-    approxPrice: '₹1,699 - ₹2,499',
-    pricingNote: 'Custom Hampers | From 1,000 to 2,500 (Approx.)',
+    approxPrice: 'INR 499',
+    pricingNote: 'Custom Hampers | From INR 499 (Approx.)',
     badge: 'Complete Delight',
     themeColor: {
       bg: '#FFF7ED',
@@ -795,8 +830,8 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Golden Zari Embroidered Ribbon & Tassels',
       'Personalized Family Crest & Royal Calligraphy Card',
     ],
-    approxPrice: '₹2,199 - ₹4,500',
-    pricingNote: 'Rate as per customization & trunk dimensions',
+    approxPrice: 'INR 499 - INR 899',
+    pricingNote: 'Custom large hampers (Approx.)',
     badge: 'Bridal & Trousseau',
     themeColor: {
       bg: '#FFF5F5',
@@ -825,7 +860,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Pocket Perfume & Chocolate Bar Pairing',
       'Embossed Hamper Queen Wax Seal',
     ],
-    approxPrice: '₹1,299 - ₹2,499',
+    approxPrice: 'INR 399 - INR 649',
     pricingNote: 'Customizable with client-supplied clothing items',
     badge: 'For Gentlemen',
     themeColor: {
@@ -855,7 +890,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Ferrero Rocher & Cocoa Truffles Cascade',
       'Custom Love Letter Scribe Card with Wax Seal',
     ],
-    approxPrice: '₹1,499 - ₹2,699',
+    approxPrice: 'INR 399 - INR 649',
     pricingNote: 'Rate as per customization & flower type',
     badge: 'Anniversary & Love',
     themeColor: {
@@ -884,7 +919,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Assorted Golden Ferrero Rocher Truffles',
       'Gold Embossed Certificate of Best Wishes',
     ],
-    approxPrice: '₹999 - ₹1,899',
+    approxPrice: 'INR 349 - INR 549',
     pricingNote: 'Rate as per customization',
     badge: 'Timepiece Special',
     themeColor: {
@@ -915,7 +950,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Crystal Cellophane Wrap with Giant Yellow Rosette Puff',
       'Personalized Family Greeting Tag',
     ],
-    approxPrice: '₹1,099 - ₹2,199',
+    approxPrice: 'INR 399 - INR 599',
     pricingNote: 'Rate as per customization & item selections',
     badge: 'Real Client Favorite',
     themeColor: {
@@ -946,7 +981,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       '4 Custom Polaroid Memory Prints with Miniature Wooden Clips',
       'Hand-Stamped Wax Sealed Calligraphy Love Scroll',
     ],
-    approxPrice: '₹1,699 - ₹2,899',
+    approxPrice: 'INR 499 - INR 899',
     pricingNote: 'Custom polaroid printing & wax seal stamp included',
     badge: 'Midnight Bestseller',
     themeColor: {
@@ -978,7 +1013,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Pure Kashmiri Saffron Infused Forest Honey Jar with Wooden Dipper',
       'Royal Gold Brocade Ribbon & Traditional Shahi Seal',
     ],
-    approxPrice: '₹2,199 - ₹3,499',
+    approxPrice: 'INR 599 - INR 949',
     pricingNote: 'Air-tight sealed fresh batch; zero preservatives',
     badge: 'Festive Grandeur',
     themeColor: {
@@ -1010,7 +1045,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Gourmet Congratulations Truffles for the Proud Parents',
       'Chiffon Pastel Ribbon & Baby Feet Wax Stamp Seal',
     ],
-    approxPrice: '₹1,499 - ₹2,499',
+    approxPrice: 'INR 499 - INR 799',
     pricingNote: 'Available in Pastel Blue, Blush Pink, or Gender-Neutral Mint/Cream',
     badge: 'New Born Miracle',
     themeColor: {
@@ -1042,7 +1077,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Sleek Hardbound Pocket Journal with Ribbon Bookmark',
       'Custom Corporate Logo Metallic Tag & Elegant Black Satin Ribbon',
     ],
-    approxPrice: '₹1,799 - ₹3,199',
+    approxPrice: 'INR 599 - INR 949',
     pricingNote: 'Bulk discounts available for corporate orders 10+ units',
     badge: 'Corporate High Impact',
     themeColor: {
