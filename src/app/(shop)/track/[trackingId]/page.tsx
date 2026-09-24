@@ -42,7 +42,7 @@ export default function TrackStatusPage({ params }: Props) {
       fetch(`/api/orders/track/${encodeURIComponent(cleaned)}`)
         .then(async (res) => {
           if (!active) return;
-          if (res.status === 404) {
+          if (!res.ok) {
             setNotFound(true);
             setLoading(false);
             return;

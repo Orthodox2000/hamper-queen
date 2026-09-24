@@ -17,6 +17,7 @@ export interface TranslationDict {
     lookbooks: string;
     customised: string;
     royalTray: string;
+    track: string;
     itemsCount: string;
     emptyTray: string;
     diagnostics: string;
@@ -120,6 +121,7 @@ export const TRANSLATIONS: Record<LanguageMode, TranslationDict> = {
       lookbooks: 'Lookbook',
       customised: 'Customise Box & Bouquet',
       royalTray: 'Your Hamper Cart',
+      track: 'Track Order',
       itemsCount: 'items in cart',
       emptyTray: 'Cart is empty',
       diagnostics: 'Diagnostics',
@@ -225,6 +227,7 @@ export const TRANSLATIONS: Record<LanguageMode, TranslationDict> = {
       lookbooks: 'Lookbook',
       customised: 'Apna Box / Bouquet Banao',
       royalTray: 'Aapka Hamper Cart',
+      track: 'Order Track Karo',
       itemsCount: 'items cart mein',
       emptyTray: 'Cart abhi khali hai',
       diagnostics: 'Logs',
@@ -330,6 +333,7 @@ export const TRANSLATIONS: Record<LanguageMode, TranslationDict> = {
       lookbooks: 'Lookbook • विवरणिका',
       customised: 'Customise Box • अपना बॉक्स बनाएं',
       royalTray: 'Your Cart • आपका कार्ट',
+      track: 'Track Order • ऑर्डर ट्रैक करें',
       itemsCount: 'items in cart',
       emptyTray: 'Cart is empty • कार्ट खाली है',
       diagnostics: 'Logs • सिस्टम लॉग्स',

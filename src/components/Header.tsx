@@ -12,7 +12,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Crown, Sparkles, ShoppingBag, Menu, X, Globe, Compass, Gift, MessageCircle } from 'lucide-react';
+import { Crown, Sparkles, ShoppingBag, Menu, X, Globe, Compass, Gift, MessageCircle, Search } from 'lucide-react';
 import { CustomHamper, LanguageMode } from '../types';
 import { TRANSLATIONS } from '../data/translations';
 import { HamperQueenLogo } from './HamperQueenLogo';
@@ -42,6 +42,7 @@ export const Header: React.FC<HeaderProps> = ({
   const navItems = [
     { id: 'home', label: t.nav.home, icon: Crown, href: '/' },
     { id: 'customised', label: t.nav.customised, icon: Gift, href: '/customised' },
+    { id: 'track', label: t.nav.track, icon: Search, href: '/track' },
     { id: 'catalog', label: t.nav.collections, icon: Compass, href: '/catalog' },
   ];
 

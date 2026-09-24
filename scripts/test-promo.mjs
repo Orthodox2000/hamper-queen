@@ -19,7 +19,7 @@ import { createInterface } from 'node:readline/promises';
 import { connectMongo } from './lib/db-utils.mjs';
 
 const BASE = process.env.HQ_BASE_URL || 'http://127.0.0.1:3000';
-const PHONE_MARKER = '+1000000000'; // identifies orders this suite creates
+const PHONE_MARKER = '9876001111'; // identifies orders this suite creates (10-digit Indian number)
 
 /** Minimal .env loader next to the other scripts (never overrides real env). */
 function loadEnv(file = '.env') {

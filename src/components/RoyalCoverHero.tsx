@@ -208,7 +208,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
               <div className="p-2.5 rounded-xl bg-black/55 backdrop-blur-md border border-white/15 flex flex-col sm:flex-row items-center sm:items-start gap-1.5 sm:gap-2 text-center sm:text-left">
                 <Sparkles className="w-4 h-4 text-[#DFBA54] shrink-0" />
                 <div>
-                  <span className="font-bold text-white block text-[11px] sm:text-xs">From INR 149</span>
+                  <span className="font-bold text-white block text-[11px] sm:text-xs">From INR 140</span>
                   <span className="text-[10px] text-amber-200">Pocket to Royal</span>
                 </div>
               </div>
@@ -237,7 +237,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                 onClick={handleScrollToContent}
                 className="flex-1 sm:flex-none px-5 py-3.5 rounded-xl bg-black/70 hover:bg-black/90 text-white border border-[#DFBA54]/70 font-cinzel text-xs font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-lg"
               >
-                <span>View Menu (From INR 149)</span>
+                <span>View Menu (From INR 140)</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#DFBA54]" />
               </button>
 

@@ -29,11 +29,23 @@ ${brochure.highlights.map((h) => `• ${h}`).join('\n')}
 DESCRIPTION:
 ${brochure.description}
 
+PRICING AT A GLANCE (TRANSPARENT):
+• Orders start from INR 140 (+delivery)
+• ≈ INR 70 per curated item for 2 - 5 items
+• INR 399 (6 items) | INR 499 (7 items) | +INR 50 per item beyond 7
+• Free delivery on orders above INR 499 (Mumbai)
+
+HOW IT WORKS:
+1. Choose your style
+2. Select items from our menu
+3. Tell us any personal preferences
+4. We customize & deliver with love
+
 ATELIER CONTACT:
 WhatsApp / Call: ${HAMPER_QUEEN_OFFICIAL_CONTACT.phoneDisplay}
 Instagram: @hamper_queen
 Email: ${HAMPER_QUEEN_OFFICIAL_CONTACT.email}
-"We wrapped these gifts with love and care"
+"Gift your loved ones, make your little moments memorable with us"
     `.trim();
 
     const blob = new Blob([documentContent], { type: 'text/plain' });
@@ -62,7 +74,7 @@ Email: ${HAMPER_QUEEN_OFFICIAL_CONTACT.email}
             Official Catalogue Collection
           </h2>
           <p className="font-cormorant text-lg text-[#554F42] mt-2">
-            Peruse our curated volumes for weddings, executive corporate honors, and fresh floral collections. Available for instant digital preview or immediate download.
+            Six complete volumes: our signature hamper menu, category boxes, bouquet collections, bridal trousseau, corporate honors, and seasonal floral studio. Available for instant digital preview or immediate download.
           </p>
         </div>
 

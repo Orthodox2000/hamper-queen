@@ -48,7 +48,7 @@ interface HamperQueenShowcaseProps {
 
 /**
  * The three hand-picked spotlight products shown first on the homepage.
- * Order matters: Pocket Delight (from INR 149), KitKat Bouquet (Customer Favorite),
+ * Order matters: Pocket Delight (from INR 280), KitKat Bouquet (Customer Favorite),
  * Elegant Pink (Top Birthday Pick).
  */
 export const FEATURED_HOME_IDS = [
@@ -396,7 +396,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
           </h3>
 
           <p className="font-cormorant text-sm sm:text-base text-[#6B6559] max-w-2xl mx-auto leading-relaxed">
-            Every celebration is distinct. We craft custom hampers ranging from INR 149 to INR 899+ with your preferred chocolates, cosmetics, colors, and personalized photos.
+            Every celebration is distinct. We craft custom hampers ranging from INR 140 to INR 899+ with your preferred chocolates, cosmetics, colors, and personalized photos.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">

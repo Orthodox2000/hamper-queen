@@ -100,10 +100,28 @@ function cleanString(value: unknown): string {
   return typeof value === 'string' ? value.trim() : '';
 }
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+/** Normalize an Indian mobile number ("+91 98765 43210", "919876543210", "09876543210") to 10 digits, or '' when invalid. */
+export function normalizePhone(value: unknown): string {
+  const digits = cleanString(value).replace(/\D/g, '');
+  const candidate =
+    digits.length === 12 && digits.startsWith('91')
+      ? digits.slice(2)
+      : digits.length === 11 && digits.startsWith('0')
+      ? digits.slice(1)
+      : digits;
+  return /^[6-9]\d{9}$/.test(candidate) ? candidate : '';
+}
+
 export function validateOrderPayload(payload: Partial<CreateOrderPayload>): string[] {
   const errors: string[] = [];
   if (!cleanString(payload.customer?.fullName)) errors.push('Full name is required.');
-  if (!cleanString(payload.customer?.mobilePhone)) errors.push('WhatsApp mobile number is required.');
+  if (!normalizePhone(payload.customer?.mobilePhone)) {
+    errors.push('Enter a valid 10-digit WhatsApp mobile number.');
+  }
+  const email = cleanString(payload.customer?.email);
+  if (email && !EMAIL_REGEX.test(email)) errors.push('Enter a valid email address.');
   if (!Array.isArray(payload.lines) || payload.lines.length === 0) {
     errors.push('Please add at least one item to your order.');
   }
@@ -112,6 +130,10 @@ export function validateOrderPayload(payload: Partial<CreateOrderPayload>): stri
   if (!/^\d{6}$/.test(cleanString(payload.delivery?.pincode))) errors.push('Enter a valid 6-digit pincode.');
   if (!Number.isFinite(payload.delivery?.geo?.lat) || !Number.isFinite(payload.delivery?.geo?.lng)) {
     errors.push('Please confirm your exact delivery pin on the map.');
+  }
+  const deliveryDate = cleanString(payload.preferences?.deliveryDate);
+  if (deliveryDate && Number.isNaN(Date.parse(deliveryDate))) {
+    errors.push('Choose a valid delivery date.');
   }
   if (payload.consent !== true) {
     errors.push('Please accept the data-consent to submit your order.');
@@ -162,7 +184,7 @@ export async function createOrder(
     customer: {
       fullName: cleanString(payload.customer.fullName),
       email: cleanString(payload.customer.email),
-      mobilePhone: cleanString(payload.customer.mobilePhone),
+      mobilePhone: normalizePhone(payload.customer.mobilePhone) || cleanString(payload.customer.mobilePhone),
       altPhone: cleanString(payload.customer.altPhone),
       recipientName: cleanString(payload.customer.recipientName),
     },

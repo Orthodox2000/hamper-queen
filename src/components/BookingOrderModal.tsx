@@ -43,6 +43,14 @@ import { MapPicker } from './MapPicker';
 import { parsePriceString } from '../utils/pricing';
 import type { ProductCartLine } from '../store/shop-store';
 
+/** Normalize an Indian mobile number to its 10 digits ("+91 98765 43210" → "9876543210"). */
+function normalizeClientPhone(value: string): string {
+  const digits = value.replace(/\D/g, '');
+  if (digits.length === 12 && digits.startsWith('91')) return digits.slice(2);
+  if (digits.length === 11 && digits.startsWith('0')) return digits.slice(1);
+  return digits;
+}
+
 interface BookingOrderModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -310,12 +318,21 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
   // Step 1 Validation & Proceed to Step 2
   const handleProceedToStep2 = () => {
-    if (!fullName.trim() || !mobilePhone.trim()) {
-      setStep1Error('Please enter your Full Name and WhatsApp Mobile Number to proceed.');
+    if (!fullName.trim()) {
+      setStep1Error('Please enter your Full Name to proceed.');
       return;
     }
     if (checkoutLines.length === 0) {
       setStep1Error('Please add at least one item to your order before proceeding.');
+      return;
+    }
+    const phoneDigits = normalizeClientPhone(mobilePhone);
+    if (phoneDigits.length !== 10 || !/^[6-9]\d{9}$/.test(phoneDigits)) {
+      setStep1Error('Please enter a valid 10-digit WhatsApp mobile number (e.g. +91 98765 43210).');
+      return;
+    }
+    if (email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim())) {
+      setStep1Error('Please enter a valid email address, or leave it blank.');
       return;
     }
     setStep1Error('');
@@ -384,6 +401,10 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
     }
     if (!flatBuilding.trim() || !streetAddress.trim() || !pincode.trim()) {
       setStep2Error('Please enter your Flat/Building, Street/Area, and Pincode to confirm your pinned delivery location.');
+      return;
+    }
+    if (!/^\d{6}$/.test(pincode.trim())) {
+      setStep2Error('Enter a valid 6-digit pincode for your delivery location.');
       return;
     }
     if (!consentGiven) {
@@ -1525,7 +1546,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                       className="mt-0.5 accent-[#B8860B]"
                     />
                     <span>
-                      I understand Hamper Queen makes custom hampers with fresh stock. Rates vary as per exact customization and chocolate counts (approx INR 149 to INR 899). Formal invoice will be verified directly on WhatsApp with Ms. Supriya.
+                      I understand Hamper Queen makes custom hampers with fresh stock. Rates vary as per exact customization and chocolate counts (approx INR 140 to INR 899). Formal invoice will be verified directly on WhatsApp with Ms. Supriya.
                     </span>
                   </label>
 

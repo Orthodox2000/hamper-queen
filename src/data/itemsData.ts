@@ -452,6 +452,57 @@ export const WAX_SEAL_OPTIONS: WaxSealOption[] = [
 // DIGITAL LOOKBOOKS / BROCHURES
 export const BROCHURES: BrochureItem[] = [
   {
+    id: 'brochure-signature-hampers',
+    title: 'Signature Hampers: The 12 Occasion Collection',
+    subtitle: '12 curated birthday & celebration hampers from our real menu — every item counted and priced openly',
+    tag: 'Signature Hampers',
+    pages: 32,
+    description:
+      'Our flagship menu of 12 birthday and celebration hampers, exactly as we wrap them: Self-Care, Jewellery, Coffee-Lover, Elegant Pink, Fashion, Luxury Skincare, Chocolate Indulgence, Wellness & Relaxation, Tea Time, Personalised, Minimal & Chic, and Floral & Lifestyle. Transparent pricing at ≈ INR 70 per curated item.',
+    highlights: [
+      '12 hampers with their actual item-by-item menus',
+      '≈ INR 70 per curated item • Signature hampers from INR 499',
+      'How It Works: choose your style, select items, share preferences, we deliver with love',
+      'Free delivery on orders above INR 499 in Mumbai',
+    ],
+    downloadName: 'Hamper_Queen_Signature_Hampers_Menu.pdf',
+    coverGraphic: 'graphic-hamper-elegant-pink',
+  },
+  {
+    id: 'brochure-categories-boxes',
+    title: 'Gifting Categories & Signature Boxes',
+    subtitle: 'Anniversary, Engagement, Wedding, Birthday, chocolate hampers & designer gift boxes',
+    tag: 'Categories & Boxes',
+    pages: 24,
+    description:
+      'Every way we say congratulations: wedding & engagement hampers, anniversary and birthday boxes, chocolate hampers, bouquets, and our signature dress, shirt, heart and watch gift boxes. Made and priced as per your customization.',
+    highlights: [
+      'Dress & Trousseau, Shirt & Cufflinks, Heart and Watch gift boxes',
+      'Wedding, Engagement, Anniversary & Birthday hampers',
+      'Chocolate hampers, bouquets & keepsake crates',
+      'Gift your loved ones — make your little moments memorable with us',
+    ],
+    downloadName: 'Hamper_Queen_Categories_Boxes.pdf',
+    coverGraphic: 'graphic-box-heart',
+  },
+  {
+    id: 'brochure-bouquets-menu',
+    title: 'Bouquets by Hamper Queen',
+    subtitle: 'Chocolate, accessory & photo bouquets — hand-wrapped in Mumbai, from INR 280',
+    tag: 'Bouquets Menu',
+    pages: 20,
+    description:
+      'Our flowers-for-everyone bouquets: KitKat & Dark Fantasy chocolate bouquets, women accessory florals, men grooming bouquets, and fully custom Polaroid photo memory bouquets. Each bouquet is arranged by hand the same day it ships.',
+    highlights: [
+      'KitKat, Dark Fantasy, Kinder Joy & photo memory bouquets',
+      'Women accessory & men grooming styled arrangements',
+      'Add-ons: wax seals, calligraphy tags, fairy lights & custom prints',
+      'Hand-wrapped in Mumbai with same-day dispatch',
+    ],
+    downloadName: 'Hamper_Queen_Bouquets_Menu.pdf',
+    coverGraphic: 'graphic-kitkat-bouquet',
+  },
+  {
     id: 'brochure-weddings',
     title: 'Imperial Wedding & Trousseau Curation',
     subtitle: '2026/2027 Bridal Catalogue of Heirloom Hampers & Floral Suites',
@@ -522,7 +573,7 @@ export const PRICING_TIERS_CONFIG: PricingTierDetail[] = [
     id: 'tier-prestige',
     name: 'The Prestige Tier',
     subtitle: 'Elegant Expressions of Grace & Taste',
-    priceRange: 'INR 149 – INR 299',
+    priceRange: 'INR 140 – INR 350',
     curationHighlights: [
       'Choice of Parisian Hatbox or Medium Woven Basket',
       '2 to 5 Artisanal Gourmet Delicacies or Floral Accents',
@@ -537,10 +588,10 @@ export const PRICING_TIERS_CONFIG: PricingTierDetail[] = [
     id: 'tier-imperial',
     name: 'The Imperial Tier',
     subtitle: 'Richly Layered Luxury with Keepsake Accents',
-    priceRange: 'INR 399 – INR 599',
+    priceRange: 'INR 399 – INR 549',
     curationHighlights: [
       'Large Golden Willow Hamper or 50-Stem Grand Bouquet',
-      '10 to 12 Rare Items: 24K Truffles, Amber Candle, Crystal Goblets',
+      '6 to 8 Curated Items: Truffles, scented candle, keepsake accents',
       'Custom Wax Seal Stamped in Imperial Crimson or Gold',
       'Preserved Botanical Sprig & Silk Lining Accents',
       'Dedicated Concierge Status Updates',
@@ -553,7 +604,7 @@ export const PRICING_TIERS_CONFIG: PricingTierDetail[] = [
     id: 'tier-sovereign',
     name: 'The Custom Creator',
     subtitle: 'The Crown Jewel of Custom Royal Gifting',
-    priceRange: 'INR 699+',
+    priceRange: 'INR 599+',
     curationHighlights: [
       'Full Quilted Ivory Velvet & Solid Brass Heirloom Trunk',
       'Everything included: Vintage reserves, Kashmir saffron, 24K leaf',

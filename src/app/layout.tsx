@@ -3,7 +3,7 @@ import './globals.css';
 
 const SITE_TITLE = 'Custom Gift Hampers & Chocolate Bouquets | Hamper Queen';
 const SITE_DESCRIPTION =
-  'Custom gift hampers and chocolate bouquets from INR 149 — velvet trunks, photo keepsakes, same-day dispatch from Mumbai with free delivery above INR 499.';
+  'Custom gift hampers and chocolate bouquets from INR 140 — velvet trunks, photo keepsakes, same-day dispatch from Mumbai with free delivery above INR 499.';
 const SITE_URL = 'https://hamper-queen.vercel.app';
 
 export const viewport: Viewport = {
