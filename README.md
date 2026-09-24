@@ -19,8 +19,11 @@ Hamper Queen is a high-converting gifting storefront built on the Next.js 16 App
 - **Customise Atelier** — pick a vessel, add luxury items up to capacity, tie ribbon, stamp a wax seal
 - **Royal Cart** — persistent slide-over cart with quantity steppers, subtotals, free delivery above INR 499, and one-tap add-from-Atelier
 - **Hamper Builder & Calligraphy Scribe** — 4-step builder and bespoke card/message studio
-- **Booking & Concierge Desk** — order + map pin-pointing modal, bulk/corporate gifting flow
-- **WhatsApp ordering** — one-tap `wa.me` checkout with prefilled message
+- **Booking & Concierge Desk** — order + map pin-pointing modal, bulk/corporate gifting flow, coupon codes with cut-stamp redeem animation
+- **Promo codes & coupons** — single-use codes (repeatable per event) with flat/percentage discounts, admin manager UI, live validation at checkout, automatic burn on order creation with rollback if the order fails
+- **Admin panel** — DB-backed staff accounts (scrypt + sessions), order tracking dashboard, catalog override manager, promo manager, team/staff management
+- **Order tracking** — public track-by-ID page with live timeline, promo savings and delivery pin
+- **WhatsApp ordering** — one-tap `wa.me` checkout with prefilled message (includes applied coupon savings)
 - **Multilingual copy layer** — `en`, `hinglish`, `bilingual` translation map (saved to localStorage)
 - **Confetti system** — gold, party, romantic and grand-celebration bursts (canvas + CSS fallback)
 - **Responsive & accessibility-oriented** — verified at 1440 / 1024 / 390 with zero horizontal overflow
@@ -31,8 +34,8 @@ Hamper Queen is a high-converting gifting storefront built on the Next.js 16 App
 | --- | --- |
 | Framework | [Next.js 16](https://nextjs.org) (App Router, static prerender) |
 | UI | React 19, Tailwind CSS v4, lucide-react icons |
-| Motion | CSS 3D transforms, canvas-confetti 1.9 |
-| Data | `mongodb` driver (Atlas pending), localStorage persistence |
+| Motion | CSS 3D transforms, canvas-confetti 1.9, motion 12 |
+| Data | MongoDB Atlas (`mongodb` driver), scrypt-hashed staff accounts + 7-day sessions |
 | Deploy target | Vercel |
 
 ## Getting Started
@@ -58,16 +61,30 @@ npm run start      # serves the production build on :3000
 | `npm run start` | Serve production build |
 | `npm run lint` | TypeScript typecheck (`tsc --noEmit`) |
 | `npm run db:test` | Ping MongoDB Atlas (reads `MONGODB_URI`) |
+| `npm run db:bootstrap` | Idempotent bootstrap: collections, indexes, owner admin account |
+| `npm run db:test-promo` | Promo integration suite against the running dev server (validates then cleans up) |
 
 ## Environment Variables
 
-Copy `.env.example` to `.env` and fill in values. `.env*` is gitignored — never commit real credentials.
+Copy `.env.example` to `.env` and fill in values. `.env*` is gitignored — never commit real credentials. Runtime admin auth lives entirely in MongoDB (`adminUsers` + `sessions`); no admin passwords are read from the environment by the app.
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
-| `MONGODB_URI` | For DB features | Atlas connection string, e.g. `mongodb+srv://user:<db_password>@cluster0.abcd.mongodb.net/?appName=Cluster0` |
+| `MONGODB_URI` | Yes (DB features) | Atlas connection string, e.g. `mongodb+srv://user:<db_password>@cluster0.abcd.mongodb.net/?appName=Cluster0` |
+| `HQ_BOOTSTRAP_ADMIN_USER` | Bootstrap only | First owner-admin username (falls back to an interactive prompt) |
+| `HQ_BOOTSTRAP_ADMIN_PASSWORD` | Bootstrap only | First owner-admin password (falls back to an interactive prompt) |
+| `HQ_ADMIN_USER` / `HQ_ADMIN_PASS` | `db:test-promo` only | Owner credentials used by the promo integration suite |
 | `GEMINI_API_KEY` | No (planned) | Reserved for AI-assisted gifting prompts |
 | `APP_URL` | No | Public origin for absolute links (canonical/SEO) |
+
+### First-time database setup
+
+```bash
+cp .env.example .env        # add your MONGODB_URI
+npm run db:test             # verify the Atlas connection
+npm run db:bootstrap        # create collections, indexes, and the owner admin
+npm run dev                 # sign in at /admin with the owner account
+```
 
 **MongoDB connection test**
 
@@ -75,7 +92,13 @@ Copy `.env.example` to `.env` and fill in values. `.env*` is gitignored — neve
 npm run db:test
 ```
 
-Replace the `<db_password>` placeholder in `.env` with your Atlas database-user password first. The script uses the Stable API (`ServerApiVersion.v1`), pings `admin`, and prints `You successfully connected to MongoDB!`. It redacts the URI in output and fails with a clear message if the placeholder is still present.
+The script uses the Stable API (`ServerApiVersion.v1`), pings `admin`, and prints `You successfully connected to MongoDB!`. It redacts the URI in output and fails with a clear message if the placeholder is still present.
+
+> **Atlas note:** some networks block mongodb+dns `Srv`/`Txt` lookups. `db:bootstrap` and `db:test` automatically fall back to a direct `mongodb://` URI built from known shard hosts; the Next.js runtime uses the standard `mongodb+srv://` string from `.env` (works fine when deployed and in most local setups).
+
+### Database schema
+
+See [`docs/db-schema.md`](docs/db-schema.md) for the collections, indexes, and documents the app maintains.
 
 ## SEO & Metadata
 
@@ -99,15 +122,28 @@ src/
 │   │   ├── layout.tsx        # shop chrome (header, footer, cart drawer)
 │   │   └── <route>/page.tsx  # home, customised, catalog, hampers, bulk,
 │   │                          #   inspirations, atelier, scribe, brochures, pricing
+│   │   ├── track/            # public order tracking by ID
+│   ├── admin/                # login, dashboard, catalog, promo, staff apps
+│   ├── api/
+│   │   ├── orders[/id]       # order create/list/update/delete (admin-guarded)
+│   │   ├── orders/track/…    # public tracking lookup (sanitised)
+│   │   ├── promo/validate    # coupon preview (never burns)
+│   │   └── admin/            # login, logout, catalog, promo, staff
 │   ├── opengraph-image.tsx   # generated 1200x630 social card
 │   ├── globals.css           # Tailwind v4 + brand fonts
 │   └── terms-of-service | privacy-policy | eula   # legal pages
 ├── store/shop-store.tsx      # client state: cart, language, drawer, booking
 ├── components/               # Header, hero, 3D box, sections, modals
 ├── data/                     # catalog, themes, items, translations
+├── lib/                      # orders, tracking, catalog, auth (DB-backed), promo, mongo
 ├── utils/                    # confetti, logger, audio
 └── types/index.ts
-scripts/test-mongo.mjs        # Atlas connection test
+scripts/
+├── test-mongo.mjs            # Atlas connection test
+├── lib/db-utils.mjs          # shared Mongo connect + scrypt helpers
+├── bootstrap-db.mjs          # collections, indexes, owner admin
+└── test-promo.mjs            # promo integration suite (validate/redeem/burn)
+docs/db-schema.md             # database schema reference
 public/                       # hamper.png logo, The Seasons woff2 fonts
 ```
 
