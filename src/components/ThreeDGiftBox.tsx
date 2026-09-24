@@ -19,7 +19,20 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Gift, Crown, Sparkles } from 'lucide-react';
-import { BOX_THEMES, BOX_SIZE_PRESETS, BOX_SHAPES, BoxTheme, BoxShape } from '../data/boxThemes';
+import {
+  BOX_THEMES,
+  BOX_SIZE_PRESETS,
+  BOX_SHAPES,
+  BoxTheme,
+  BoxShape,
+  ContainerType,
+  BouquetPalette,
+  BOUQUET_PALETTES,
+  TrayFinish,
+  TRAY_FINISHES,
+  BagColor,
+  BAG_COLORS,
+} from '../data/boxThemes';
 import { triggerGoldConfetti } from '../utils/confetti';
 
 type BoxSize = 'sm' | 'md' | 'lg';
@@ -33,7 +46,10 @@ interface ThreeDGiftBoxProps {
   variant?: BoxVariant;
   size?: BoxSize;
   shape?: BoxShape;
-  type?: 'box' | 'bouquet';
+  type?: ContainerType;
+  bouquetPalette?: string;
+  trayFinish?: string;
+  bagColor?: string;
 }
 
 /** Camera tilt used while the box is closed / open. */
@@ -63,36 +79,26 @@ const FaceEmblem: React.FC<FaceEmblemProps> = ({ theme, logoClass, withLabel = f
 );
 
 /* -------------------------------------------------------------------------- */
-/* Hand-tied bouquet assembly — tall & slender, never looks like a trunk       */
+/* Hand-tied bouquet assembly — tall & slender, never looks like a trunk.     */
+/* Fully recolourable via the selected BouquetPalette (blooms, cone, satin).  */
 /* -------------------------------------------------------------------------- */
 interface BouquetAssemblyProps {
-  theme: BoxTheme;
+  palette: BouquetPalette;
   isOpen: boolean;
   W: number;
   H: number;
   coneH: number;
   bloomY: number;
-  rimH: number;
   className: string;
 }
 
-const BLOOM_COLORS = [
-  '#B93A45',
-  '#D4AF37',
-  '#8E3B5B',
-  '#C9A05F',
-  '#F3E5AB',
-  '#A52A3A',
-];
-
 const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
-  theme,
+  palette,
   isOpen,
   W,
   H,
   coneH,
   bloomY,
-  rimH,
   className,
 }) => {
   const bloomZ = 26;
@@ -128,7 +134,7 @@ const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
         ))}
       </div>
 
-      {/* Bloom cluster — staggered across the wrappers lip */}
+      {/* Bloom cluster — staggered across the wrappers lip, palette-tinted */}
       <div className="absolute left-1/2 -translate-x-1/2" style={{ top: `${bloomY}px`, width: `${W * 0.9}px`, height: `${H * 0.3}px` }}>
         {blooms.map((b, i) => (
           <div
@@ -139,7 +145,7 @@ const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
               top: '42%',
               width: `${b.s}px`,
               height: `${b.s}px`,
-              background: `radial-gradient(circle at 32% 28%, rgba(255,255,255,0.55), ${BLOOM_COLORS[i % BLOOM_COLORS.length]} 58%, #2A0A0A)`,
+              background: `radial-gradient(circle at 32% 28%, rgba(255,255,255,0.55), ${palette.blooms[i % palette.blooms.length]} 58%, ${palette.sashKnot})`,
               transform: `translate(-50%, -68%) translateZ(${bloomZ + b.d}px)`,
             }}
           >
@@ -161,14 +167,14 @@ const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
         ))}
       </div>
 
-      {/* Kraft paper cone with crisp fold lines */}
+      {/* Palette-tinted paper cone with crisp fold lines */}
       <div
         className="absolute left-1/2 bottom-0"
         style={{
           width: `${W * 0.9}px`,
           height: `${coneH}px`,
           transform: 'translateX(-50%)',
-          background: 'linear-gradient(to bottom, #E5C990 0%, #D4AC6A 30%, #C1934E 72%, #A87B3C 100%)',
+          background: palette.cone,
           clipPath: 'polygon(0% 0, 100% 0, 100% 70%, 82% 78%, 50% 100%, 18% 78%, 0% 70%)',
           borderRadius: '6px 6px 0 0',
         }}
@@ -178,9 +184,9 @@ const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
         <div className="absolute inset-x-[16%] top-[12%] bottom-[10%] border-x border-[#8A6328]/25" />
         {/* Satin tie at the base of the cone */}
         <div className="absolute left-1/2 bottom-[14%] -translate-x-1/2 flex items-center justify-center" style={{ transformOrigin: 'center', translate: '-50% 0' }}>
-          <div className="w-16 h-3 rounded-full bg-gradient-to-r from-[#8a1d2f] via-[#C0392B] to-[#8a1d2f] shadow" style={{ transform: 'rotate(-8deg)' }} />
-          <div className="w-16 h-3 rounded-full bg-gradient-to-r from-[#8a1d2f] via-[#C0392B] to-[#8a1d2f] shadow -ml-3" style={{ transform: 'rotate(8deg)' }} />
-          <div className="absolute w-5 h-5 rounded-full bg-[#7a1626] border border-[#E8B64C]/50 flex items-center justify-center">
+          <div className="w-16 h-3 rounded-full shadow" style={{ background: palette.satin, transform: 'rotate(-8deg)' }} />
+          <div className="w-16 h-3 rounded-full shadow -ml-3" style={{ background: palette.satin, transform: 'rotate(8deg)' }} />
+          <div className="absolute w-5 h-5 rounded-full border border-[#E8B64C]/50 flex items-center justify-center" style={{ background: palette.sashKnot }}>
             <Crown className="w-2.5 h-2.5 text-[#F3E5AB]" />
           </div>
         </div>
@@ -210,6 +216,233 @@ const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
   );
 };
 
+/* -------------------------------------------------------------------------- */
+/* Wooden / ethnic flat gift tray — wide & low with a cellophane dome         */
+/* -------------------------------------------------------------------------- */
+interface TrayAssemblyProps {
+  finish: TrayFinish;
+  isOpen: boolean;
+  W: number;
+  plateH: number;
+  archH: number;
+  className: string;
+}
+
+const TrayAssembly: React.FC<TrayAssemblyProps> = ({ finish, isOpen, W, plateH, archH, className }) => {
+  const bedW = Math.round(W * 0.86);
+  const contentRowY = Math.round(plateH * 0.28);
+  const items = [
+    { x: 16, c: '#FFF6C9', s: 16 },
+    { x: 30, c: '#E8B64C', s: 20 },
+    { x: 44, c: '#C2344A', s: 22 },
+    { x: 58, c: '#DEB887', s: 18 },
+    { x: 72, c: '#F3E5AB', s: 20 },
+    { x: 84, c: '#A52A3A', s: 16 },
+  ];
+  return (
+    <div className="absolute inset-0 [transform-style:preserve-3d]">
+      {/* Wooden plate */}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 overflow-hidden"
+        style={{
+          bottom: `${plateH * 0.08}px`,
+          width: `${W}px`,
+          height: `${plateH}px`,
+          borderRadius: '16px',
+          background: finish.body,
+          boxShadow: '0 10px 24px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -6px 14px rgba(0,0,0,0.35)',
+        }}
+      >
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 8%, rgba(255,255,255,0.28), transparent 55%)' }} />
+        <div className="absolute inset-x-[6%] top-1/2 h-px bg-black/25 -translate-y-1/2" />
+        <div className="absolute inset-x-[6%] top-[58%] h-px bg-black/15 -translate-y-1/2" />
+        {/* Rim */}
+        <div className="absolute inset-0 rounded-[16px] border-2" style={{ borderColor: finish.rim, opacity: 0.8 }} />
+      </div>
+
+      {/* Bed contents — sweet jars, roses & fairy lights */}
+      <div className="absolute left-1/2 -translate-x-1/2" style={{ bottom: `${plateH * 0.34}px`, width: `${bedW}px`, height: `${archH}px` }}>
+        {items.map((it, i) => {
+          const isRosette = i === 3;
+          return (
+            <div
+              key={i}
+              className={`absolute rounded-full ${isRosette ? 'border border-amber-300/70' : 'rounded-b-sm'} ${isOpen ? 'scale-105' : 'scale-100'} transition-transform duration-700`}
+              style={{
+                left: `${it.x}%`,
+                bottom: '16%',
+                width: `${it.s * 2.1}px`,
+                height: `${it.s * 2.6}px`,
+                transform: `translateX(-50%) translateZ(${10 + i * 3}px)`,
+                background: it.c,
+                boxShadow: `0 0 ${8 + i}px rgba(243,229,171,${0.25 + i * 0.05})`,
+              }}
+            >
+              <div className="absolute inset-x-1 top-1 h-1 rounded-full bg-white/50" />
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Cellophane dome over the tray */}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 pointer-events-none"
+        style={{
+          bottom: `${plateH * 0.3}px`,
+          width: `${W * 0.9}px`,
+          height: `${archH}px`,
+          borderRadius: '50% 50% 8px 8px',
+          background: `linear-gradient(to top, transparent 0%, ${finish.cellophane} 55%, ${finish.cellophane})`,
+          border: '1px solid rgba(255,255,255,0.35)',
+          boxShadow: '0 6px 18px rgba(0,0,0,0.18), inset 0 0 22px rgba(255,255,255,0.12)',
+          transform: `translateX(-50%) translateZ(${6}px)`,
+        }}
+      >
+        <div className="absolute inset-x-[10%] top-2 h-px bg-white/45" style={{ transform: 'rotate(-6deg)' }} />
+        <div className="absolute inset-x-[12%] top-6 h-px bg-white/30" style={{ transform: 'rotate(4deg)' }} />
+      </div>
+
+      {/* Giant sunburst rosette on the front lip */}
+      <div className="absolute left-1/2 -translate-x-1/2 flex items-end justify-center" style={{ bottom: `${plateH * 0.02}px`, transform: 'translateX(-50%) translateZ(14px)' }}>
+        {finish.rosette.map((c, i) => (
+          <div
+            key={i}
+            className="rounded-full border border-[#F3E5AB]/50"
+            style={{
+              width: `${40 - i * 7}px`,
+              height: `${40 - i * 7}px`,
+              marginLeft: i === 0 ? 0 : '-8px',
+              background: `radial-gradient(circle at 35% 30%, rgba(255,255,255,0.6), ${c})`,
+              zIndex: finish.rosette.length - i,
+            }}
+          />
+        ))}
+        <div className="absolute -bottom-1 w-3.5 h-3.5 rounded-full bg-black/80 border border-[#DFBA54] flex items-center justify-center z-10">
+          <Crown className="w-2 h-2 text-[#F3E5AB]" />
+        </div>
+      </div>
+
+      {/* Soft ground shadow */}
+      <div className={`absolute left-1/2 bg-black/60 rounded-full blur-xl pointer-events-none ${className}`} style={{ width: `${W * 0.8}px`, height: `18px`, transform: `translateX(-50%) rotateX(90deg) translateZ(-${plateH * 0.55}px)` }} />
+
+      {/* Label plaque */}
+      <div className="absolute left-1/2 -translate-x-1/2 px-2.5 py-1 rounded-md bg-black/70 border border-[#DFBA54]/70 flex items-center gap-1.5" style={{ top: '2%', transform: 'translateX(-50%) translateZ(20px)' }}>
+        <Sparkles className="w-2.5 h-2.5 text-[#DFBA54]" />
+        <span className="text-[7px] font-bold text-[#F3E5AB] tracking-widest uppercase">Celebration Gift Tray</span>
+      </div>
+    </div>
+  );
+};
+
+/* -------------------------------------------------------------------------- */
+/* Premium gift bag — pleated body, tissue spill, arched handles              */
+/* -------------------------------------------------------------------------- */
+interface BagAssemblyProps {
+  color: BagColor;
+  isOpen: boolean;
+  W: number;
+  H: number;
+  className: string;
+}
+
+const BagAssembly: React.FC<BagAssemblyProps> = ({ color, isOpen, W, H, className }) => {
+  const bagH = Math.round(H * 0.8);
+  const sideW = Math.round(W * 0.16);
+  const tissueBits = [
+    { x: 20, h: 0.32, z: 6 },
+    { x: 40, h: 0.42, z: 12 },
+    { x: 60, h: 0.38, z: 16 },
+    { x: 80, h: 0.3, z: 8 },
+  ];
+  return (
+    <div className="absolute inset-0 [transform-style:preserve-3d]">
+      {/* Right pleat */}
+      <div
+        className="absolute"
+        style={{
+          right: '0px',
+          top: `${H - bagH + 4}px`,
+          width: `${sideW}px`,
+          height: `${bagH - 6}px`,
+          transform: 'rotateY(8deg)',
+          background: 'rgba(0,0,0,0.28)',
+          borderRadius: '0 10px 10px 0',
+        }}
+      />
+      {/* Left pleat */}
+      <div
+        className="absolute"
+        style={{
+          left: '0px',
+          top: `${H - bagH + 4}px`,
+          width: `${sideW}px`,
+          height: `${bagH - 6}px`,
+          transform: 'rotateY(-8deg)',
+          background: 'rgba(0,0,0,0.28)',
+          borderRadius: '10px 0 0 10px',
+        }}
+      />
+
+      {/* Bag front body */}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 overflow-hidden"
+        style={{
+          bottom: '0px',
+          width: `${W}px`,
+          height: `${bagH}px`,
+          borderRadius: '2px 2px 14px 14px',
+          background: color.body,
+          boxShadow: '0 12px 26px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.2)',
+        }}
+      >
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(100deg, rgba(255,255,255,0.14) 0%, transparent 30%, transparent 75%, rgba(0,0,0,0.22) 100%)' }} />
+        {/* Waist band */}
+        <div
+          className="absolute inset-x-0 top-[58%] h-[14px]"
+          style={{
+            background: color.band,
+            borderTop: '1px solid rgba(243,229,171,0.5)',
+            borderBottom: '1px solid rgba(0,0,0,0.35)',
+          }}
+        />
+        {/* Brand tag */}
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-[12%] px-2 py-0.5 rounded-sm bg-black/70 border border-[#DFBA54]/60 flex items-center gap-1">
+          <Crown className="w-2 h-2 text-[#DFBA54]" />
+          <span className="text-[6.5px] font-bold text-[#F3E5AB] tracking-widest uppercase">Hamper Queen</span>
+        </div>
+      </div>
+
+      {/* Tissue spilling from the opening */}
+      <div className="absolute left-1/2 -translate-x-1/2" style={{ top: `${H - bagH - 2}px`, width: `${W * 0.86}px`, height: `${H * 0.26}px` }}>
+        {tissueBits.map((t, i) => (
+          <div
+            key={i}
+            className={`absolute bottom-0 rounded-t-lg ${isOpen ? 'scale-105' : 'scale-100'} transition-transform duration-700`}
+            style={{
+              left: `${t.x}%`,
+              width: `${W * 0.22}px`,
+              height: `${H * 0.26 * t.h}px`,
+              transform: `translateX(-50%) translateZ(${t.z}px) rotate(${(i - 1.5) * 4}deg)`,
+              background: `linear-gradient(to bottom, ${color.tissue}D9, ${color.tissue}99)`,
+              boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
+              clipPath: 'polygon(0 0, 100% 0, 94% 100%, 6% 100%)',
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Arched handles */}
+      <div className="absolute left-1/2 -translate-x-1/2" style={{ top: `${H - bagH - H * 0.18}px`, width: `${W * 0.6}px`, height: `${H * 0.16}px`, transform: 'translateX(-50%) translateZ(4px)' }}>
+        <div className="absolute inset-0 rounded-t-full" style={{ border: `5px solid ${color.handle}`, borderBottom: '0', opacity: 0.95 }} />
+        <div className="absolute inset-x-[8%] bottom-0 h-px bg-black/25" />
+      </div>
+
+      {/* Soft ground shadow */}
+      <div className={`absolute left-1/2 bg-black/60 rounded-full blur-xl pointer-events-none ${className}`} style={{ width: `${W * 0.8}px`, height: `18px`, transform: `translateX(-50%) rotateX(90deg) translateZ(-${bagH * 0.06}px)` }} />
+    </div>
+  );
+};
+
 export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
   onOpenAtelier,
   className = '',
@@ -217,6 +450,9 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
   size = 'md',
   shape = 'cube',
   type = 'box',
+  bouquetPalette = 'crimson',
+  trayFinish = 'ethnic',
+  bagColor = 'obsidian',
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [rotateX, setRotateX] = useState(TILT_CLOSED);
@@ -228,6 +464,9 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
   const theme = BOX_THEMES[variant as keyof typeof BOX_THEMES] || BOX_THEMES.royal;
   const preset = BOX_SIZE_PRESETS[size];
   const aspect = BOX_SHAPES[shape] || BOX_SHAPES.cube;
+  const bouquetPaletteObj = BOUQUET_PALETTES[bouquetPalette] || BOUQUET_PALETTES.crimson;
+  const trayFinishObj = TRAY_FINISHES[trayFinish] || TRAY_FINISHES.ethnic;
+  const bagColorObj = BAG_COLORS[bagColor] || BAG_COLORS.obsidian;
 
   // Cuboid dimensions (width × height × depth) so boxes can be wide, tall,
   // long or a classic cube — always normalized to fit the same scene box.
@@ -262,17 +501,28 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
 
   // Bouquet proportions (tall & slender — unlike any box shape)
   const isBouquet = type === 'bouquet';
+  const isTray = type === 'tray';
+  const isBag = type === 'bag';
+  const isFlat = isBouquet || isTray || isBag; // sway (never full-spin) types
+
   const bouquetW = Math.round(edge * 1.3);
   const bouquetH = Math.round(edge * 1.68);
   const bouquetConeH = Math.round(bouquetH * 0.6);
   const bouquetBloomY = Math.round(bouquetH * 0.16);
   const bouquetShadowZ = halfH + 28;
 
+  const trayW = Math.round(edge * 1.55);
+  const trayPlateH = Math.round(edge * 0.38);
+  const trayArchH = Math.round(edge * 0.5);
+
+  const bagW = Math.round(edge * 0.85);
+  const bagH = Math.round(edge * 1.5);
+
   // Gentle auto-rotation when not hovering or interacting.
-  // Bouquets sway softly (never spin edge-on); boxes rotate fully.
+  // Bouquets, trays & bags sway softly (never spin edge-on); boxes rotate fully.
   useEffect(() => {
     if (!isAutoRotating || isHovered) return;
-    if (isBouquet) {
+    if (isFlat) {
       const interval = setInterval(() => {
         setRotateY((prev) => Math.sin(Date.now() / 850) * 16);
         setRotateX((prev) => -18 + Math.sin(Date.now() / 1200) * 3);
@@ -283,7 +533,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
       setRotateY((prev) => (prev + 0.6) % 360);
     }, 30);
     return () => clearInterval(interval);
-  }, [isAutoRotating, isHovered, isBouquet]);
+  }, [isAutoRotating, isHovered, isFlat]);
 
   // Tilt the camera up into the box while it is open so items stay visible.
   useEffect(() => {
@@ -313,7 +563,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
     setIsOpen(next);
     setIsAutoRotating(!next);
     if (next) {
-      if (!isBouquet) {
+      if (!isFlat) {
         const facing = rotateY % 360;
         if (facing > 20 && facing < 340) {
           setRotateY(30);
@@ -342,20 +592,32 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
         className={`${preset.scene} flex items-center justify-center cursor-grab active:cursor-grabbing`}
         style={{ perspective: `${900 + (size === 'sm' ? 0 : size === 'lg' ? 300 : 200)}px` }}
         onClick={toggleOpen}
-        title={isBouquet ? 'Click to Enchant & Explore 3D Royal Bouquet' : 'Click to Unbox & Explore 3D Royal Gift'}
+        title={
+            isBouquet
+              ? 'Click to Enchant & Explore 3D Royal Bouquet'
+              : isTray
+                ? 'Click to Explore 3D Celebration Gift Tray'
+                : isBag
+                  ? 'Click to Explore 3D Premium Gift Bag'
+                  : 'Click to Unbox & Explore 3D Royal Gift'
+          }
       >
         {/* The 3D Box Assembly */}
         <div
           className="relative transition-transform duration-300 ease-out"
           style={{
-            width: isBouquet ? `${bouquetW}px` : `${edge}px`,
-            height: isBouquet ? `${bouquetH}px` : `${edge}px`,
+            width: isTray ? `${trayW}px` : isBag ? `${bagW}px` : isBouquet ? `${bouquetW}px` : `${edge}px`,
+            height: isTray ? `${trayArchH + trayPlateH}px` : isBag ? `${bagH}px` : isBouquet ? `${bouquetH}px` : `${edge}px`,
             transformStyle: 'preserve-3d',
             transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
           }}
         >
           {isBouquet ? (
-            <BouquetAssembly theme={theme} isOpen={isOpen} W={bouquetW} H={bouquetH} coneH={bouquetConeH} bloomY={bouquetBloomY} rimH={rimH} className={`${preset.shadow}`} />
+            <BouquetAssembly palette={bouquetPaletteObj} isOpen={isOpen} W={bouquetW} H={bouquetH} coneH={bouquetConeH} bloomY={bouquetBloomY} className={`${preset.shadow}`} />
+          ) : isTray ? (
+            <TrayAssembly finish={trayFinishObj} isOpen={isOpen} W={trayW} plateH={trayPlateH} archH={trayArchH} className={`${preset.shadow}`} />
+          ) : isBag ? (
+            <BagAssembly color={bagColorObj} isOpen={isOpen} W={bagW} H={bagH} className={`${preset.shadow}`} />
           ) : (
             <>
           {/* Internal Glow When Opened */}
@@ -602,7 +864,23 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
           className="px-4 py-1.5 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-[#DFBA54]/60 text-[#F3E5AB] text-xs font-cinzel font-bold tracking-wider uppercase transition-all shadow-lg flex items-center gap-1.5 cursor-pointer transform hover:scale-105"
         >
           <Gift className="w-3.5 h-3.5 text-[#DFBA54]" />
-          <span>{isBouquet ? (isOpen ? 'Close Enchanted Bouquet' : 'Click to Enchant Bouquet') : isOpen ? 'Close 3D Gift Box' : 'Click to Unbox 3D Gift'}</span>
+          <span>
+            {isBouquet
+              ? isOpen
+                ? 'Close Enchanted Bouquet'
+                : 'Click to Enchant Bouquet'
+              : isTray
+                ? isOpen
+                  ? 'Close Celebration Tray'
+                  : 'Click to Unveil Tray'
+                : isBag
+                  ? isOpen
+                    ? 'Close Premium Gift Bag'
+                    : 'Click to Peek Inside Bag'
+                  : isOpen
+                    ? 'Close 3D Gift Box'
+                    : 'Click to Unbox 3D Gift'}
+          </span>
         </button>
 
         <div className="flex items-center gap-3 text-[10px] text-white/70 font-sans tracking-wide">

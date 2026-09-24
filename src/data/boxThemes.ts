@@ -246,3 +246,145 @@ export const BOX_SIZE_PRESETS: Record<'sm' | 'md' | 'lg', BoxSizePreset> = {
     logo: 'w-9 h-9',
   },
 };
+
+/* -------------------------------------------------------------------------- */
+/* Container types for the hero 3D — box, bouquet, wooden/ethnic tray, bag     */
+/* -------------------------------------------------------------------------- */
+
+export type ContainerType = 'box' | 'bouquet' | 'tray' | 'bag';
+
+export const CONTAINER_LABELS: Record<ContainerType, string> = {
+  box: 'Hampers',
+  bouquet: 'Bouquet',
+  tray: 'Tray',
+  bag: 'Gift Bag',
+};
+
+/** Bloom + paper palette that fully recolours the 3D bouquet. */
+export interface BouquetPalette {
+  id: string;
+  label: string;
+  blooms: string[];   // per-bloom radial-gradient center colors
+  cone: string;       // linear-gradient for the paper cone
+  satin: string;      // linear-gradient for the satin tie sash
+  sashKnot: string;   // solid color for the tie medallion / knot
+}
+
+export const BOUQUET_PALETTES: Record<string, BouquetPalette> = {
+  crimson: {
+    id: 'crimson',
+    label: 'Crimson Royale',
+    blooms: ['#C2344A', '#D4AF37', '#8E3B5B', '#E8B64C', '#F3E5AB', '#A52A3A'],
+    cone: 'linear-gradient(to bottom, #E5C990 0%, #D4AC6A 30%, #C1934E 72%, #A87B3C 100%)',
+    satin: 'linear-gradient(to right, #8a1d2f, #C0392B, #8a1d2f)',
+    sashKnot: '#7a1626',
+  },
+  blush: {
+    id: 'blush',
+    label: 'Blush Pastel',
+    blooms: ['#F9A8D4', '#FBCFE8', '#FDE68A', '#FDA4AF', '#E9D5FF', '#F5D0FE'],
+    cone: 'linear-gradient(to bottom, #F6EAD9 0%, #EFD8BC 30%, #E0BC92 72%, #C99B6B 100%)',
+    satin: 'linear-gradient(to right, #E11D48, #FB7185, #E11D48)',
+    sashKnot: '#BE123C',
+  },
+  gold: {
+    id: 'gold',
+    label: 'Obsidian Gold',
+    blooms: ['#D4AF37', '#F3E5AB', '#B8860B', '#C9A05F', '#E8B64C', '#996515'],
+    cone: 'linear-gradient(to bottom, #2A2015 0%, #1B130A 30%, #120C08 72%, #0A0704 100%)',
+    satin: 'linear-gradient(to right, #996515, #D4AF37, #996515)',
+    sashKnot: '#6E4A0B',
+  },
+  royal: {
+    id: 'royal',
+    label: 'Royal Violet',
+    blooms: ['#7C3AED', '#A78BFA', '#D4AF37', '#6D28D9', '#F3E5AB', '#8B5CF6'],
+    cone: 'linear-gradient(to bottom, #3B0764 0%, #2E0860 30%, #1E0440 72%, #14032A 100%)',
+    satin: 'linear-gradient(to right, #5B21B6, #8B5CF6, #5B21B6)',
+    sashKnot: '#4C1D95',
+  },
+};
+
+export const BOUQUET_PALETTE_LIST: { id: string; label: string; swatch: string }[] = [
+  { id: 'crimson', label: 'Crimson Royale', swatch: '#C2344A' },
+  { id: 'blush', label: 'Blush Pastel', swatch: '#F9A8D4' },
+  { id: 'gold', label: 'Obsidian Gold', swatch: '#D4AF37' },
+  { id: 'royal', label: 'Royal Violet', swatch: '#7C3AED' },
+];
+
+/** Wood finish for the flat ethnic gift tray. */
+export interface TrayFinish {
+  id: string;
+  label: string;
+  body: string;       // linear-gradient wood/pattern of the tray bed
+  rim: string;        // solid rim edge
+  cellophane: string; // translucent arch tint over the tray
+  rosette: string[];  // rosette petal colors
+}
+
+export const TRAY_FINISHES: Record<string, TrayFinish> = {
+  ethnic: {
+    id: 'ethnic',
+    label: 'Golden Ethnic Tray',
+    body: 'linear-gradient(120deg, #8A5A2B 0%, #C89B4E 40%, #A9742F 70%, #6E461C 100%)',
+    rim: '#5E3A16',
+    cellophane: 'rgba(243, 229, 171, 0.22)',
+    rosette: ['#F3E5AB', '#D4AF37', '#FDE68A', '#C9A05F'],
+  },
+  walnut: {
+    id: 'walnut',
+    label: 'Walnut Wood Tray',
+    body: 'linear-gradient(120deg, #3A2413 0%, #5C3A1E 40%, #4A2C15 70%, #2A170C 100%)',
+    rim: '#241207',
+    cellophane: 'rgba(255, 244, 214, 0.16)',
+    rosette: ['#F6E7C1', '#D9B26B', '#EFD9A0', '#B98A45'],
+  },
+};
+
+export const TRAY_FINISH_LIST: { id: string; label: string; swatch: string }[] = [
+  { id: 'ethnic', label: 'Golden Ethnic Tray', swatch: '#C89B4E' },
+  { id: 'walnut', label: 'Walnut Wood Tray', swatch: '#5C3A1E' },
+];
+
+/** Colour for the premium gift bag 3D container. */
+export interface BagColor {
+  id: string;
+  label: string;
+  body: string;       // linear-gradient bag exterior
+  band: string;       // linear-gradient waist band
+  handle: string;     // handle / rope color
+  tissue: string;     // tissue spilling from the top
+}
+
+export const BAG_COLORS: Record<string, BagColor> = {
+  obsidian: {
+    id: 'obsidian',
+    label: 'Obsidian',
+    body: 'linear-gradient(to bottom, #241B12 0%, #191008 55%, #0D0904 100%)',
+    band: 'linear-gradient(to right, #996515, #D4AF37, #996515)',
+    handle: '#D4AF37',
+    tissue: '#F3E5AB',
+  },
+  blush: {
+    id: 'blush',
+    label: 'Blush',
+    body: 'linear-gradient(to bottom, #F8C8DC 0%, #F2A9C9 55%, #E88BB5 100%)',
+    band: 'linear-gradient(to right, #E11D48, #FB7185, #E11D48)',
+    handle: '#BE123C',
+    tissue: '#FFF1F5',
+  },
+  royal: {
+    id: 'royal',
+    label: 'Royal',
+    body: 'linear-gradient(to bottom, #2E0A45 0%, #1F0630 55%, #140419 100%)',
+    band: 'linear-gradient(to right, #5B21B6, #8B5CF6, #5B21B6)',
+    handle: '#DFBA54',
+    tissue: '#EDE9FE',
+  },
+};
+
+export const BAG_COLOR_LIST: { id: string; label: string; swatch: string }[] = [
+  { id: 'obsidian', label: 'Obsidian', swatch: '#241B12' },
+  { id: 'blush', label: 'Blush', swatch: '#F2A9C9' },
+  { id: 'royal', label: 'Royal', swatch: '#2E0A45' },
+];

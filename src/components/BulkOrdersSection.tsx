@@ -22,28 +22,34 @@ interface BulkOrdersSectionProps {
 export const BulkOrdersSection: React.FC<BulkOrdersSectionProps> = ({ onOpenBulkBooking }) => {
   const bulkTiers = [
     {
-      qty: '10 - 24 Hampers',
+      qty: '5 - 10 Hampers',
       discount: '5% Off',
       tag: 'Tier 1',
       perk: 'Custom Event Tag with Name/Logo',
     },
     {
-      qty: '25 - 49 Hampers',
+      qty: '11 - 24 Hampers',
       discount: '10% Off',
-      tag: 'Tier 2 (Popular)',
+      tag: 'Tier 2',
       perk: 'Complimentary Wax Seal & Theme Ribbons',
     },
     {
-      qty: '50 - 99 Hampers',
+      qty: '25 - 49 Hampers',
       discount: '15% Off',
-      tag: 'Tier 3',
-      perk: 'Custom Packaging Box Colors & Free Delivery in Mumbai',
+      tag: 'Tier 3 (Popular)',
+      perk: 'Custom Packaging Box Colors Matched to Your Theme',
+    },
+    {
+      qty: '50 - 99 Hampers',
+      discount: '20% Off',
+      tag: 'Tier 4',
+      perk: 'Free Delivery in Mumbai & Priority Batch Dispatch',
     },
     {
       qty: '100+ Hampers',
-      discount: '20% Off',
+      discount: '30% Off',
       tag: 'Royal Enterprise Tier',
-      perk: 'Custom Design, Dedicated Support & Priority Batch Dispatch',
+      perk: 'Custom Design, Dedicated Studio Support & Priority Dispatch',
     },
   ];
 
@@ -73,32 +79,46 @@ export const BulkOrdersSection: React.FC<BulkOrdersSectionProps> = ({ onOpenBulk
 
   const pastBulkOrders = [
     {
-      tag: 'Corporate • Diwali',
-      title: 'Festive Client Gifting',
-      detail: '120 monogrammed velvet trunks with dry fruits, candles & wax-seal keepsakes.',
-      qty: '120 hampers',
-      approx: '≈ INR 72,000 order',
+      tag: 'Party Favorites',
+      title: 'Birthday Gift Bags',
+      detail: '16 hand-packed gift bags with chocolates, candles & photo tags — our go-to small-party size.',
+      qty: '16 bags',
+      approx: '≈ INR 18,000 order',
     },
     {
-      tag: 'Wedding Return Favors',
-      title: 'Bridal Trousseau Trunks',
-      detail: '50 rose-gold boxes personalised with the couple’s names & mehendi theme.',
-      qty: '50 pieces',
-      approx: '≈ INR 46,000 order',
+      tag: 'Corporate • New Joiner',
+      title: 'Employee Welcome Kits',
+      detail: '36 onboarding crates with snacks, stationery & a handwritten founder note.',
+      qty: '36 crates',
+      approx: '≈ INR 40,000 order',
     },
     {
       tag: 'Baby Shower',
       title: 'First Birthday Party Boxes',
       detail: '24 theme-coordinated kits with fairy lights, teddy, candles & photo prints.',
       qty: '24 kits',
-      approx: '≈ INR 18,000 order',
+      approx: '≈ INR 26,000 order',
+    },
+    {
+      tag: 'Wedding Return Favors',
+      title: 'Bridal Trousseau Trunks',
+      detail: '50 rose-gold boxes personalised with the couple’s names & mehendi theme.',
+      qty: '50 pieces',
+      approx: '≈ INR 55,000 order',
+    },
+    {
+      tag: 'Corporate • Diwali',
+      title: 'Festive Client Gifting',
+      detail: '120 monogrammed velvet trunks with dry fruits, candles & wax-seal keepsakes.',
+      qty: '120 hampers',
+      approx: '≈ INR 132,000 order',
     },
     {
       tag: 'Corporate • New Year',
       title: 'Employee Appreciation Crates',
       detail: '300 compact gift crates with chocolates, stationery & greeting cards.',
       qty: '300 crates',
-      approx: '≈ INR 95,000 order',
+      approx: '≈ INR 330,000 order',
     },
   ];
 
@@ -199,7 +219,7 @@ export const BulkOrdersSection: React.FC<BulkOrdersSectionProps> = ({ onOpenBulk
             </button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {bulkTiers.map((tier, idx) => (
               <div
                 key={idx}
@@ -258,7 +278,7 @@ export const BulkOrdersSection: React.FC<BulkOrdersSectionProps> = ({ onOpenBulk
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {pastBulkOrders.map((order, idx) => (
               <div
                 key={idx}

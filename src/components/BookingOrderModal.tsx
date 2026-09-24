@@ -298,10 +298,11 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
   // Calculate bulk discount tier
   const getBulkDiscountInfo = (qty: number) => {
-    if (qty >= 100) return { discount: '20% Royal Enterprise Discount', badge: 'Tier 4 - 20% OFF' };
-    if (qty >= 50) return { discount: '15% Gala Party Discount', badge: 'Tier 3 - 15% OFF' };
-    if (qty >= 25) return { discount: '10% Celebration Event Discount', badge: 'Tier 2 - 10% OFF' };
-    if (qty >= 10) return { discount: '5% Bulk Gifting Discount', badge: 'Tier 1 - 5% OFF' };
+    if (qty >= 100) return { discount: '30% Royal Enterprise Discount', badge: 'Tier 5 - 30% OFF' };
+    if (qty >= 50) return { discount: '20% Grand Gala Discount', badge: 'Tier 4 - 20% OFF' };
+    if (qty >= 25) return { discount: '15% Celebration Event Discount', badge: 'Tier 3 - 15% OFF' };
+    if (qty >= 11) return { discount: '10% Bulk Gifting Discount', badge: 'Tier 2 - 10% OFF' };
+    if (qty >= 5) return { discount: '5% Starter Bulk Discount', badge: 'Tier 1 - 5% OFF' };
     return { discount: 'Standard Volume Pricing', badge: 'Bulk Tier' };
   };
 

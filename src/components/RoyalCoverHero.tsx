@@ -19,7 +19,19 @@ import { royaleLogger } from '../utils/logger';
 import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
 import { triggerGoldConfetti } from '../utils/confetti';
 import { ThreeDGiftBox, type BoxVariant } from './ThreeDGiftBox';
-import { BOX_THEME_VARIANTS, BOX_VARIANT_SIZES, BOX_SHAPES, type BoxShape } from '../data/boxThemes';
+import {
+  BOX_THEME_VARIANTS,
+  BOX_VARIANT_SIZES,
+  BOX_SHAPES,
+  BOUQUET_PALETTE_LIST,
+  TRAY_FINISH_LIST,
+  BAG_COLOR_LIST,
+  CONTAINER_LABELS,
+  type BoxShape,
+  type ContainerType,
+} from '../data/boxThemes';
+
+const CONTAINER_ORDER: ContainerType[] = ['box', 'bouquet', 'tray', 'bag'];
 
 interface RoyalCoverHeroProps {
   language: LanguageMode;
@@ -77,7 +89,10 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
   const [activeBgIdx, setActiveBgIdx] = useState<number>(0);
   const [boxVariant, setBoxVariant] = useState<BoxVariant>('royal');
   const [boxShape, setBoxShape] = useState<BoxShape>('cube');
-  const [boxType, setBoxType] = useState<'box' | 'bouquet'>('box');
+  const [boxType, setBoxType] = useState<ContainerType>('box');
+  const [bouquetPalette, setBouquetPalette] = useState<string>('crimson');
+  const [trayFinish, setTrayFinish] = useState<string>('ethnic');
+  const [bagColor, setBagColor] = useState<string>('obsidian');
   const [bgLoaded, setBgLoaded] = useState<boolean>(false);
 
   const currentBg = HERO_BACKGROUND_SCENES[activeBgIdx] || HERO_BACKGROUND_SCENES[0];
@@ -248,49 +263,154 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                 <span>Interactive 3D Unboxing</span>
               </div>
 
-              {/* Box Theme Switcher (wraps on small screens) */}
-              <div className="flex flex-wrap items-center justify-center gap-1.5 mb-3">
-                {BOX_THEME_VARIANTS.map((th) => (
-                  <button
-                    key={th.id}
-                    onClick={() => {
-                      setBoxVariant(th.id as BoxVariant);
-                      triggerGoldConfetti(0.4, 0.35);
-                      royaleLogger.action('CoverHero', `Switched 3D box theme to: ${th.label}`);
-                    }}
-                    title={`${th.label} â€” ${th.boxLabel}`}
-                    className={`px-2 py-0.5 rounded-full text-[9px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
-                      boxVariant === th.id
-                        ? 'bg-[#D4AF37] text-[#141414] border-[#F3E5AB] shadow-xs'
-                        : 'bg-black/40 text-white/75 border-white/20 hover:text-white hover:bg-white/10'
-                    }`}
-                  >
-                    {th.label}
-                  </button>
-                ))}
+              {/* Container Type Slider — Box ↔ Bouquet ↔ Tray ↔ Bag */}
+              <div className="w-full max-w-[300px] px-1 mb-3">
+                <input
+                  type="range"
+                  min={0}
+                  max={3}
+                  step={1}
+                  value={CONTAINER_ORDER.indexOf(boxType)}
+                  onChange={(e) => {
+                    const next = CONTAINER_ORDER[parseInt(e.target.value, 10)];
+                    if (next !== boxType) {
+                      setBoxType(next);
+                      triggerGoldConfetti(0.4, 0.3);
+                      royaleLogger.action('CoverHero', `Switched 3D container type to: ${next}`);
+                    }
+                  }}
+                  aria-label="Choose 3D container — hampers, bouquet, tray or gift bag"
+                  className="w-full accent-[#B8860B] cursor-pointer"
+                />
+                <div className="flex items-center justify-between mt-1">
+                  {CONTAINER_ORDER.map((ct, i) => (
+                    <button
+                      key={ct}
+                      onClick={() => {
+                        if (ct !== boxType) {
+                          setBoxType(ct);
+                          triggerGoldConfetti(0.4, 0.3);
+                          royaleLogger.action('CoverHero', `Switched 3D container type to: ${ct}`);
+                        }
+                      }}
+                      title={CONTAINER_LABELS[ct]}
+                      className={`px-1.5 py-0.5 rounded-full text-[9px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
+                        boxType === ct
+                          ? 'text-[#F3E5AB] border-[#DFBA54]'
+                          : i < CONTAINER_ORDER.indexOf(boxType)
+                            ? 'text-white/45 border-white/10'
+                            : 'text-white/45 border-white/10 hover:text-white/75'
+                      }`}
+                    >
+                      {CONTAINER_LABELS[ct]}
+                    </button>
+                  ))}
+                </div>
               </div>
 
-              {/* Box Shape + Container Type Switcher (sizes & lengths of trunks, or hand-tied bouquets) */}
-              <div className="flex flex-wrap items-center justify-center gap-1.5 mb-3">
-                {(['box', 'bouquet'] as const).map((tp) => (
-                  <button
-                    key={tp}
-                    onClick={() => {
-                      setBoxType(tp);
-                      triggerGoldConfetti(0.4, 0.3);
-                      royaleLogger.action('CoverHero', `Switched 3D container type to: ${tp}`);
-                    }}
-                    title={tp === 'bouquet' ? 'Hand-tied 3D bouquet' : '3D gift trunk'}
-                    className={`px-2.5 py-0.5 rounded-full text-[9px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
-                      boxType === tp
-                        ? 'bg-[#D4AF37] text-[#141414] border-[#F3E5AB] shadow-xs'
-                        : 'bg-black/40 text-white/75 border-white/20 hover:text-white hover:bg-white/10'
-                    }`}
-                  >
-                    {tp === 'bouquet' ? 'Bouquet' : 'Hampers'}
-                  </button>
-                ))}
-                {(Object.keys(BOX_SHAPES) as BoxShape[]).map((sh) => (
+              {/* Colour swatches — per active container type */}
+              {boxType === 'box' ? (
+                <div className="flex flex-wrap items-center justify-center gap-1.5 mb-3">
+                  {BOX_THEME_VARIANTS.map((th) => (
+                    <button
+                      key={th.id}
+                      onClick={() => {
+                        setBoxVariant(th.id as BoxVariant);
+                        triggerGoldConfetti(0.4, 0.35);
+                        royaleLogger.action('CoverHero', `Switched 3D box theme to: ${th.label}`);
+                      }}
+                      title={`${th.label} — ${th.boxLabel}`}
+                      className={`px-2 py-0.5 rounded-full text-[9px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
+                        boxVariant === th.id
+                          ? 'bg-[#D4AF37] text-[#141414] border-[#F3E5AB] shadow-xs'
+                          : 'bg-black/40 text-white/75 border-white/20 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      {th.label}
+                    </button>
+                  ))}
+                </div>
+              ) : boxType === 'bouquet' ? (
+                <div className="flex flex-wrap items-center justify-center gap-1.5 mb-3">
+                  {BOUQUET_PALETTE_LIST.map((pal) => (
+                    <button
+                      key={pal.id}
+                      onClick={() => {
+                        setBouquetPalette(pal.id);
+                        triggerGoldConfetti(0.4, 0.35);
+                        royaleLogger.action('CoverHero', `Switched bouquet palette to: ${pal.label}`);
+                      }}
+                      title={`Bouquet palette — ${pal.label}`}
+                      className={`flex items-center gap-1.5 px-2 py-1 rounded-full text-[9px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
+                        bouquetPalette === pal.id
+                          ? 'bg-[#D4AF37] text-[#141414] border-[#F3E5AB] shadow-xs'
+                          : 'bg-black/40 text-white/75 border-white/20 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <span
+                        className="w-2.5 h-2.5 rounded-full border border-white/40"
+                        style={{ background: pal.swatch }}
+                      />
+                      {pal.label}
+                    </button>
+                  ))}
+                </div>
+              ) : boxType === 'tray' ? (
+                <div className="flex flex-wrap items-center justify-center gap-1.5 mb-3">
+                  {TRAY_FINISH_LIST.map((fin) => (
+                    <button
+                      key={fin.id}
+                      onClick={() => {
+                        setTrayFinish(fin.id);
+                        triggerGoldConfetti(0.4, 0.35);
+                        royaleLogger.action('CoverHero', `Switched tray finish to: ${fin.label}`);
+                      }}
+                      title={`Tray finish — ${fin.label}`}
+                      className={`flex items-center gap-1.5 px-2 py-1 rounded-full text-[9px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
+                        trayFinish === fin.id
+                          ? 'bg-[#D4AF37] text-[#141414] border-[#F3E5AB] shadow-xs'
+                          : 'bg-black/40 text-white/75 border-white/20 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <span
+                        className="w-2.5 h-2.5 rounded-full border border-white/40"
+                        style={{ background: fin.swatch }}
+                      />
+                      {fin.label}
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-wrap items-center justify-center gap-1.5 mb-3">
+                  {BAG_COLOR_LIST.map((col) => (
+                    <button
+                      key={col.id}
+                      onClick={() => {
+                        setBagColor(col.id);
+                        triggerGoldConfetti(0.4, 0.35);
+                        royaleLogger.action('CoverHero', `Switched bag colour to: ${col.label}`);
+                      }}
+                      title={`Gift bag colour — ${col.label}`}
+                      className={`flex items-center gap-1.5 px-2 py-1 rounded-full text-[9px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
+                        bagColor === col.id
+                          ? 'bg-[#D4AF37] text-[#141414] border-[#F3E5AB] shadow-xs'
+                          : 'bg-black/40 text-white/75 border-white/20 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <span
+                        className="w-2.5 h-2.5 rounded-full border border-white/40"
+                        style={{ background: col.swatch }}
+                      />
+                      {col.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {/* Box shape chips — only for the hamper box */}
+              {boxType === 'box' && (
+                <div className="flex flex-wrap items-center justify-center gap-1.5 mb-3">
+                  {(Object.keys(BOX_SHAPES) as BoxShape[]).map((sh) => (
                     <button
                       key={sh}
                       onClick={() => {
@@ -298,7 +418,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                         triggerGoldConfetti(0.35, 0.3);
                         royaleLogger.action('CoverHero', `Switched 3D box shape to: ${sh}`);
                       }}
-                      title={`${BOX_SHAPES[sh].label} â€” ${sh} proportions`}
+                      title={`${BOX_SHAPES[sh].label} — ${sh} proportions`}
                       className={`px-2.5 py-0.5 rounded-full text-[9px] font-sans font-bold tracking-wider uppercase transition-all cursor-pointer border ${
                         boxShape === sh
                           ? 'bg-[#D4AF37] text-[#141414] border-[#F3E5AB] shadow-xs'
@@ -308,14 +428,18 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                       {BOX_SHAPES[sh].label}
                     </button>
                   ))}
-              </div>
+                </div>
+              )}
 
-              {/* The 3D Gift Box Component â€” size follows the selected theme variant */}
+              {/* The 3D container — size follows the selected theme variant */}
               <ThreeDGiftBox
                 variant={boxVariant}
                 size={BOX_VARIANT_SIZES[boxVariant] || 'md'}
                 shape={boxShape}
                 type={boxType}
+                bouquetPalette={bouquetPalette}
+                trayFinish={trayFinish}
+                bagColor={bagColor}
                 onOpenAtelier={onOpenCustomised || onOpenAtelier}
               />
 
