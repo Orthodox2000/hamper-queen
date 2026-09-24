@@ -19,6 +19,20 @@ interface CreatePromoBody {
   minSubtotal?: number;
   expiresAt?: string | null;
   active?: boolean;
+  generate?: boolean;
+  prefix?: string;
+}
+
+const GEN_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+
+function randomSuffix(len = 6): string {
+  let s = '';
+  for (let i = 0; i < len; i++) s += GEN_ALPHABET[Math.floor(Math.random() * GEN_ALPHABET.length)];
+  return s;
+}
+
+function escapeRegex(value: string): string {
+  return value.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
 }
 
 function cleanString(value: unknown, max: number): string {
@@ -72,9 +86,14 @@ export async function POST(request: NextRequest) {
   const minSubtotal = rawMin === null || rawMin === undefined || rawMin === '' ? null : Number(rawMin);
   const expiresAt = body.expiresAt ? String(body.expiresAt) : null;
   const active = body.active !== false;
+  const generate = body.generate === true;
+  const prefix = cleanString(body.prefix, 9).toUpperCase();
 
-  if (!code) return NextResponse.json({ error: 'A promo code is required (max 16 letters/numbers).' }, { status: 400 });
-  if (!/^[A-Z0-9-]{1,16}$/.test(code)) {
+  if (generate && prefix && !/^[A-Z0-9-]{1,9}$/.test(prefix)) {
+    return NextResponse.json({ error: 'Code prefix: use only A-Z, 0-9 and dashes (max 9 chars).' }, { status: 400 });
+  }
+  if (!generate && !code) return NextResponse.json({ error: 'A promo code is required (max 16 letters/numbers).' }, { status: 400 });
+  if (!generate && !/^[A-Z0-9-]{1,16}$/.test(code)) {
     return NextResponse.json({ error: 'Use only A-Z, 0-9 and dashes (max 16 chars).' }, { status: 400 });
   }
   if (!kind) return NextResponse.json({ error: 'Pick a discount type: flat or percent.' }, { status: 400 });
@@ -84,8 +103,33 @@ export async function POST(request: NextRequest) {
   try {
     const collection = await getPromoCodesCollection();
     const now = new Date().toISOString();
-    const docs = Array.from({ length: count }, () => ({
-      code,
+
+    let codes: string[];
+    if (generate) {
+      const prefixPattern = prefix ? `^${escapeRegex(prefix)}-` : '^[A-Z0-9]{6}$';
+      const existingRows = await collection
+        .find({ code: { $regex: prefixPattern } }, { projection: { code: 1 } })
+        .toArray();
+      const used = new Set<string>(existingRows.map((r) => r.code as string));
+      codes = [];
+      let attempts = 0;
+      while (codes.length < count && attempts < count * 80) {
+        attempts++;
+        const candidate = prefix ? `${prefix}-${randomSuffix()}` : randomSuffix();
+        if (!used.has(candidate)) {
+          used.add(candidate);
+          codes.push(candidate);
+        }
+      }
+      if (codes.length < count) {
+        return NextResponse.json({ error: 'Could not generate enough unique codes — try a different prefix.' }, { status: 409 });
+      }
+    } else {
+      codes = Array.from({ length: count }, () => code);
+    }
+
+    const docs = codes.map((c) => ({
+      code: c,
       discount: { kind, value },
       eventName: cleanString(body.eventName, 80) || undefined,
       minSubtotal,
@@ -96,7 +140,10 @@ export async function POST(request: NextRequest) {
       updatedAt: now,
     }));
     const result = await collection.insertMany(docs);
-    return NextResponse.json({ inserted: result.insertedCount, code }, { status: 201 });
+    return NextResponse.json(
+      generate ? { inserted: result.insertedCount, generated: true, codes } : { inserted: result.insertedCount, code },
+      { status: 201 },
+    );
   } catch (err) {
     console.error('create promos failed:', err);
     return NextResponse.json({ error: 'Could not create promo codes.' }, { status: 503 });

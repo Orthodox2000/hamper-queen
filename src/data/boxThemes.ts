@@ -265,7 +265,8 @@ export interface BouquetPalette {
   id: string;
   label: string;
   blooms: string[];   // per-bloom radial-gradient center colors
-  cone: string;       // linear-gradient for the paper cone
+  papers: string[];   // layered wrapper gradients (outer deep leaf -> inner lining)
+  cone: string;       // linear-gradient for the front ice-cream cone taper
   satin: string;      // linear-gradient for the satin tie sash
   sashKnot: string;   // solid color for the tie medallion / knot
 }
@@ -275,6 +276,12 @@ export const BOUQUET_PALETTES: Record<string, BouquetPalette> = {
     id: 'crimson',
     label: 'Crimson Royale',
     blooms: ['#C2344A', '#D4AF37', '#8E3B5B', '#E8B64C', '#F3E5AB', '#A52A3A'],
+    papers: [
+      'linear-gradient(to top, #3B060B 0%, #7A1626 52%, #A52A3A 100%)',
+      'linear-gradient(to top, #5C0A10 0%, #C2344A 52%, #D64550 100%)',
+      'linear-gradient(to top, #8A6328 0%, #D4AF37 52%, #F3E5AB 100%)',
+      'linear-gradient(to top, #A87B3C 0%, #E5C990 52%, #F6EAD9 100%)',
+    ],
     cone: 'linear-gradient(to bottom, #E5C990 0%, #D4AC6A 30%, #C1934E 72%, #A87B3C 100%)',
     satin: 'linear-gradient(to right, #8a1d2f, #C0392B, #8a1d2f)',
     sashKnot: '#7a1626',
@@ -283,6 +290,12 @@ export const BOUQUET_PALETTES: Record<string, BouquetPalette> = {
     id: 'blush',
     label: 'Blush Pastel',
     blooms: ['#F9A8D4', '#FBCFE8', '#FDE68A', '#FDA4AF', '#E9D5FF', '#F5D0FE'],
+    papers: [
+      'linear-gradient(to top, #6B2C5E 0%, #A44A9C 52%, #D9A9D2 100%)',
+      'linear-gradient(to top, #A1103F 0%, #E11D48 52%, #FB7185 100%)',
+      'linear-gradient(to top, #D9970E 0%, #FDE68A 52%, #FEF3C7 100%)',
+      'linear-gradient(to top, #CDB292 0%, #F6EAD9 52%, #FDF6EC 100%)',
+    ],
     cone: 'linear-gradient(to bottom, #F6EAD9 0%, #EFD8BC 30%, #E0BC92 72%, #C99B6B 100%)',
     satin: 'linear-gradient(to right, #E11D48, #FB7185, #E11D48)',
     sashKnot: '#BE123C',
@@ -291,7 +304,13 @@ export const BOUQUET_PALETTES: Record<string, BouquetPalette> = {
     id: 'gold',
     label: 'Obsidian Gold',
     blooms: ['#D4AF37', '#F3E5AB', '#B8860B', '#C9A05F', '#E8B64C', '#996515'],
-    cone: 'linear-gradient(to bottom, #2A2015 0%, #1B130A 30%, #120C08 72%, #0A0704 100%)',
+    papers: [
+      'linear-gradient(to top, #0A0704 0%, #171007 52%, #2A2015 100%)',
+      'linear-gradient(to top, #2A1806 0%, #6E4A0B 52%, #A67C14 100%)',
+      'linear-gradient(to top, #8A6328 0%, #D4AF37 52%, #E8B64C 100%)',
+      'linear-gradient(to top, #7E6B45 0%, #C9B893 52%, #EFE4CB 100%)',
+    ],
+    cone: 'linear-gradient(to bottom, #8A6328 0%, #5C3E12 32%, #2A1806 70%, #0A0704 100%)',
     satin: 'linear-gradient(to right, #996515, #D4AF37, #996515)',
     sashKnot: '#6E4A0B',
   },
@@ -299,7 +318,13 @@ export const BOUQUET_PALETTES: Record<string, BouquetPalette> = {
     id: 'royal',
     label: 'Royal Violet',
     blooms: ['#7C3AED', '#A78BFA', '#D4AF37', '#6D28D9', '#F3E5AB', '#8B5CF6'],
-    cone: 'linear-gradient(to bottom, #3B0764 0%, #2E0860 30%, #1E0440 72%, #14032A 100%)',
+    papers: [
+      'linear-gradient(to top, #14032A 0%, #2E0860 52%, #43217E 100%)',
+      'linear-gradient(to top, #3B0764 0%, #6D28D9 52%, #8B5CF6 100%)',
+      'linear-gradient(to top, #8A6328 0%, #D4AF37 52%, #F3E5AB 100%)',
+      'linear-gradient(to top, #A78BFA 0%, #C9B8E8 52%, #F1EDFB 100%)',
+    ],
+    cone: 'linear-gradient(to bottom, #2E0860 0%, #1E0440 30%, #14032A 72%, #0B0118 100%)',
     satin: 'linear-gradient(to right, #5B21B6, #8B5CF6, #5B21B6)',
     sashKnot: '#4C1D95',
   },
@@ -318,7 +343,7 @@ export interface TrayFinish {
   label: string;
   body: string;       // linear-gradient wood/pattern of the tray bed
   rim: string;        // solid rim edge
-  cellophane: string; // translucent arch tint over the tray
+  cloth: string;      // pleated silk cover draped over the arranged items
   rosette: string[];  // rosette petal colors
 }
 
@@ -328,7 +353,7 @@ export const TRAY_FINISHES: Record<string, TrayFinish> = {
     label: 'Golden Ethnic Tray',
     body: 'linear-gradient(120deg, #8A5A2B 0%, #C89B4E 40%, #A9742F 70%, #6E461C 100%)',
     rim: '#5E3A16',
-    cellophane: 'rgba(243, 229, 171, 0.22)',
+    cloth: 'linear-gradient(to top, #A9742F 0%, #C89B4E 32%, #D4AF37 62%, #F3E5AB 84%, #FFF7E0 100%)',
     rosette: ['#F3E5AB', '#D4AF37', '#FDE68A', '#C9A05F'],
   },
   walnut: {
@@ -336,7 +361,7 @@ export const TRAY_FINISHES: Record<string, TrayFinish> = {
     label: 'Walnut Wood Tray',
     body: 'linear-gradient(120deg, #3A2413 0%, #5C3A1E 40%, #4A2C15 70%, #2A170C 100%)',
     rim: '#241207',
-    cellophane: 'rgba(255, 244, 214, 0.16)',
+    cloth: 'linear-gradient(to top, #57121F 0%, #7E2436 32%, #A63040 62%, #D45D55 84%, #FBEAE2 100%)',
     rosette: ['#F6E7C1', '#D9B26B', '#EFD9A0', '#B98A45'],
   },
 };
