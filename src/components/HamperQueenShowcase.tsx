@@ -160,7 +160,6 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
 
           <button
             onClick={() => {
-              triggerGoldConfetti(0.5, 0.5);
               if (onOpenBooking) onOpenBooking(undefined, true);
             }}
             className="w-full sm:w-auto px-5 py-3 rounded-full bg-[#DFBA54] hover:bg-[#C5A059] text-[#141414] font-cinzel font-bold text-xs uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-1.5 shrink-0 cursor-pointer"
@@ -312,7 +311,6 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
                     {/* Primary Action: Book with Geolocation Form */}
                     <button
                       onClick={() => {
-                        triggerGoldConfetti(0.5, 0.5);
                         if (onOpenBooking) onOpenBooking(prod, false);
                       }}
                       className="w-full py-3 px-4 rounded-xl bg-[#141414] hover:bg-[#2A2A2A] text-[#DFBA54] border border-[#D4AF37] font-cinzel text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
@@ -402,7 +400,6 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <button
               onClick={() => {
-                triggerGoldConfetti(0.5, 0.5);
                 if (onOpenBooking) onOpenBooking(undefined, false);
               }}
               className="px-6 py-3 rounded-full bg-[#141414] text-[#DFBA54] border border-[#D4AF37] font-cinzel text-xs font-bold uppercase tracking-wider shadow-md hover:bg-[#242424] transition-all flex items-center gap-2 cursor-pointer"
@@ -413,7 +410,6 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
 
             <button
               onClick={() => {
-                triggerGoldConfetti(0.5, 0.5);
                 if (onOpenBooking) onOpenBooking(undefined, true);
               }}
               className="px-6 py-3 rounded-full bg-[#FAF5E8] text-[#8C6821] border border-[#D4AF37] font-cinzel text-xs font-bold uppercase tracking-wider shadow-xs hover:bg-[#F3E5AB] transition-all flex items-center gap-2 cursor-pointer"

@@ -180,7 +180,6 @@ export const BulkOrdersSection: React.FC<BulkOrdersSectionProps> = ({ onOpenBulk
                   <div className="pt-3 border-t border-[#F0ECE1]">
                     <button
                       onClick={() => {
-                        triggerGoldConfetti(0.5, 0.5);
                         onOpenBulkBooking();
                       }}
                       className="w-full py-3 px-4 rounded-xl bg-[#FAF9F5] hover:bg-[#141414] text-[#8C6821] hover:text-[#DFBA54] border border-[#E5DAC2] hover:border-[#D4AF37] text-xs font-cinzel font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer"

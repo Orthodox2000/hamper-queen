@@ -17,7 +17,7 @@ import React, { createContext, useCallback, useContext, useEffect, useState } fr
 import { CustomHamper, LanguageMode, LuxuryItem, CalligraphyCard } from '../types';
 import { VESSEL_OPTIONS, RIBBON_OPTIONS, WAX_SEAL_OPTIONS } from '../data/itemsData';
 import { HamperQueenProduct } from '../data/hamperQueenCatalog';
-import { triggerMouseClickConfetti } from '../utils/confetti';
+
 import { royaleLogger } from '../utils/logger';
 
 /** A prebuilt catalog product added to the royal cart. */
@@ -127,24 +127,6 @@ export function ShopStoreProvider({ children }: { children: React.ReactNode }) {
       // Ignore local storage write errors
     }
   }, [customHamper, hamperLoaded]);
-
-  // Global Mouse Click Confetti Trigger on Interactive Elements
-  useEffect(() => {
-    const handleGlobalClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement | null;
-      if (
-        target?.closest('button') ||
-        target?.closest('a') ||
-        target?.closest('select') ||
-        target?.closest('[role="button"]') ||
-        target?.closest('.cursor-pointer')
-      ) {
-        triggerMouseClickConfetti(e.clientX, e.clientY);
-      }
-    };
-    window.addEventListener('click', handleGlobalClick);
-    return () => window.removeEventListener('click', handleGlobalClick);
-  }, []);
 
   // Drawer + Booking modal state
   const [isHamperDrawerOpen, setIsHamperDrawerOpen] = useState(false);

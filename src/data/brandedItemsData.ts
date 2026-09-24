@@ -47,6 +47,15 @@ export interface PackagingSizeOption {
     | 'acrylic_chest';
 }
 
+// Return the bespoke ItemGraphic id for specialty chest packagings whose
+// external photo was not accurate; null keeps the real photograph instead.
+export function packagingArtSvgId(pkg: PackagingSizeOption): string | null {
+  if (pkg.illustrationType === 'velvet_hatbox') return 'packaging-velvet-hatbox';
+  if (pkg.illustrationType === 'acrylic_chest') return 'packaging-acrylic-chest';
+  if (pkg.illustrationType === 'xl_trunk') return 'packaging-heritage-trunk';
+  return null;
+}
+
 export interface PreMadeSuggestion {
   id: string;
   title: string;

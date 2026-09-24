@@ -14,7 +14,17 @@
  *  - Lid skirts and ribbons pick up the active theme colors for contrast.
  *  - `shape` changes the box proportions (cube / wide casket / tall trunk / long
  *    keepsake) so different sizes & lengths are shown.
- *  - `type="bouquet"` renders the hand-tied 3D bouquet instead of the trunk.
+ *  - `type="bouquet"` renders a fully volumetric hand-tied bouquet: a tapered
+ *    10-panel paper cone (rotateY + rotateX flare) with a dark hollow core, a
+ *    true 3D bloom ring orbiting the wrapper mouth, pale satin tie & wax card.
+ *  - `type="tray"` renders a volumetric ethnic gift tray: an 8-panel radial drum
+ *    wall, a horizontal bed disc with standing keepsakes, a latitude-ring silk
+ *    bell dome with crown rosette and cloth drape flaps.
+ *  - `type="bag"` renders a volumetric pleated gift bag: front & rear faces,
+ *    trapezoid side pleats, a bottom plane, a mouth rim ellipse, tilted tissue
+ *    puffs and depth-separated twin handle arcs.
+ *  - Bouquets, trays & bags sway gently instead of spinning so their front
+ *    always reads clearly.
  */
 
 import React, { useState, useRef, useEffect } from 'react';
@@ -103,15 +113,12 @@ const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
 }) => {
   const bloomZ = 26;
   const lipY = bloomY + 34;
-  const blooms = [
-    { x: 16, d: -14, s: 34 },
-    { x: 28, d: 6, s: 42 },
-    { x: 40, d: -6, s: 38 },
-    { x: 52, d: 14, s: 46 },
-    { x: 64, d: -8, s: 38 },
-    { x: 76, d: 8, s: 42 },
-    { x: 88, d: -12, s: 30 },
-  ];
+  const coneR = Math.round(W * 0.24);
+  const mouthY = Math.round(H - coneH * 0.9);
+  const WRAP_RING = Array.from({ length: 10 }, (_, i) => ({
+    theta: i * 36 - 144,
+    w: Math.round(coneR * 0.82),
+  }));
   return (
     <div className="absolute inset-0 [transform-style:preserve-3d]">
       {/* Leaf fan tucked behind the blooms */}
@@ -127,103 +134,125 @@ const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
               background: 'linear-gradient(to top, #3E6723, #5B8A2F 70%, #2E5018)',
               clipPath: 'polygon(50% 0, 100% 100%, 0 100%)',
               borderRadius: '50% 50% 0 0',
-              transform: `translateZ(${bloomZ + 30}px) rotate(${i % 2 ? '-' : ''}${6 + i * 3}deg)`,
+              transform: `translateZ(${bloomZ + 6}px) rotate(${i % 2 ? '-' : ''}${6 + i * 3}deg)`,
               opacity: 0.85,
             }}
           />
         ))}
       </div>
 
-      {/* Bloom cluster — staggered across the wrappers lip, palette-tinted */}
-      <div className="absolute left-1/2 -translate-x-1/2" style={{ top: `${bloomY}px`, width: `${W * 0.9}px`, height: `${H * 0.3}px` }}>
-        {blooms.map((b, i) => (
-          <div
-            key={i}
-            className={`absolute rounded-full border border-white/30 shadow-lg transition-transform duration-700 ${isOpen ? 'scale-105' : 'scale-100'}`}
-            style={{
-              left: `${b.x}%`,
-              top: '42%',
-              width: `${b.s}px`,
-              height: `${b.s}px`,
-              background: `radial-gradient(circle at 32% 28%, rgba(255,255,255,0.55), ${palette.blooms[i % palette.blooms.length]} 58%, ${palette.sashKnot})`,
-              transform: `translate(-50%, -68%) translateZ(${bloomZ + b.d}px)`,
-            }}
-          >
-            <div className="absolute inset-[15%] rounded-full border border-[#F3E5AB]/25" />
-          </div>
-        ))}
-        {/* Glowing fairy-light tips sprinkled through the blooms */}
-        {[22, 38, 56, 70].map((x, i) => (
+      {/* Bloom mouth-ring — a true 3D sphere of blooms orbiting the wrapper mouth */}
+      <div
+        className="absolute left-1/2"
+        style={{
+          top: `${mouthY - coneR}px`,
+          width: `${coneR * 2}px`,
+          height: `${coneR * 2}px`,
+          transform: 'translateX(-50%)',
+          transformStyle: 'preserve-3d',
+        }}
+      >
+        {Array.from({ length: 8 }, (_, i) => {
+          const s = 20 + (i % 3) * 3;
+          const b = palette.blooms[i % palette.blooms.length];
+          return (
+            <div
+              key={i}
+              className={`absolute rounded-full border border-white/30 shadow-lg transition-transform duration-700 ${isOpen ? 'scale-105' : 'scale-100'}`}
+              style={{
+                left: '50%',
+                top: '50%',
+                width: `${s}px`,
+                height: `${s}px`,
+                marginLeft: `${-s / 2}px`,
+                marginTop: `${-s / 2}px`,
+                background: `radial-gradient(circle at 32% 28%, rgba(255,255,255,0.55), ${b} 58%, ${palette.sashKnot})`,
+                transform: `rotateY(${i * 45}deg) translateZ(${coneR}px)`,
+              }}
+            >
+              <div className="absolute inset-[15%] rounded-full border border-[#F3E5AB]/25" />
+            </div>
+          );
+        })}
+        {/* Glowing fairy-light tips sprinkled through the bloom ring */}
+        {Array.from({ length: 6 }, (_, i) => (
           <span
             key={`l-${i}`}
             className="absolute w-1.5 h-1.5 rounded-full bg-[#FFF6C9] shadow-[0_0_6px_2px_rgba(243,229,171,0.9)]"
             style={{
-              left: `${x}%`,
-              top: `${30 + (i % 2) * 14}%`,
-              transform: `translateZ(${bloomZ + 20}px)`,
+              left: '50%',
+              top: '50%',
+              marginLeft: '-3px',
+              marginTop: '-3px',
+              transform: `rotateY(${i * 60 + 22}deg) translateZ(${Math.round(coneR * 1.14)}px) rotateX(${i % 2 ? -10 : 12}deg)`,
               animation: `twinkle ${1.6 + i * 0.35}s ease-in-out ${i * 0.2}s infinite`,
             }}
           />
         ))}
       </div>
 
-      {/* Ice-cream-cone wrap — layered multi-colour paper fans + front taper */}
-      <div className="absolute left-1/2 bottom-0" style={{ width: `${W * 0.98}px`, height: `${coneH * 0.96}px`, transform: 'translateX(-50%)', transformOrigin: '50% 100%' }}>
-        {/* Fanned coloured papers (deep leaf outside -> light lining inside) */}
-        {[
-          { rot: -13, zI: 0 },
-          { rot: -4, zI: 1 },
-          { rot: 6, zI: 2 },
-          { rot: 15, zI: 3 },
-        ].map((fan, i) => {
-          const paper = palette.papers[i % palette.papers.length];
-          return (
-            <div
-              key={i}
-              className="absolute bottom-0 left-1/2"
-              style={{
-                width: `${W * 1.02}px`,
-                height: `${coneH * 0.94}px`,
-                borderRadius: '12px 12px 0 0',
-                clipPath: 'polygon(50% 100%, 99% 6%, 94% 0, 84% 7%, 74% 0, 64% 7%, 54% 0, 44% 7%, 34% 0, 24% 7%, 14% 0, 6% 5%, 1% 12%)',
-                background: paper,
-                transform: `translateX(-50%) rotate(${fan.rot}deg)`,
-                zIndex: fan.zI,
-                boxShadow: 'inset 0 0 24px rgba(0,0,0,0.28)',
-              }}
-            >
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(115deg, rgba(255,255,255,0.22) 0%, transparent 48%, rgba(0,0,0,0.24) 100%)' }} />
-              <div className="absolute inset-x-0 top-0 h-px bg-white/40" />
-            </div>
-          );
-        })}
-
-        {/* Front pointed cone — the "ice-cream cone" silhouette */}
+      {/* Volumetric wrappers — 10 tapered panels radiating to form the paper cone */}
+      <div
+        className="absolute left-1/2 bottom-0 [transform-style:preserve-3d]"
+        style={{ width: `${coneR * 2}px`, height: `${coneH * 0.96}px`, transform: 'translateX(-50%)' }}
+      >
+        {/* Dark hollow read through the flared mouth */}
         <div
           className="absolute left-1/2 bottom-0"
           style={{
-            width: `${W * 0.84}px`,
-            height: `${coneH * 0.92}px`,
-            transform: 'translateX(-50%)',
-            zIndex: 10,
-            background: palette.cone,
-            clipPath: 'polygon(0% 0, 100% 0, 82% 62%, 50% 100%, 18% 62%)',
-            borderRadius: '10px 10px 2px 2px',
+            width: `${Math.round(coneR * 1.8)}px`,
+            height: `${coneH * 0.9}px`,
+            transform: 'translateX(-50%) rotateX(-15deg)',
+            transformOrigin: '50% 100%',
+            background: 'linear-gradient(to bottom, #241A0F 0%, #0C0805 70%, #050302 100%)',
+            clipPath: 'polygon(0 0, 100% 0, 55% 100%, 45% 100%)',
+          }}
+        />
+
+        {/* Tapered wrapper panels — pointed bottom, flared top */}
+        {WRAP_RING.map((p, i) => (
+          <div
+            key={i}
+            className="absolute left-1/2 bottom-0"
+            style={{
+              width: `${p.w}px`,
+              height: `${coneH * 0.96}px`,
+              transform: `translateX(-50%) rotateY(${p.theta}deg) translateZ(${Math.round(coneR * 0.98)}px) rotateX(-15deg)`,
+              transformOrigin: '50% 100%',
+              background: palette.papers[i % palette.papers.length],
+              clipPath: 'polygon(0 0, 100% 0, 57% 100%, 43% 100%)',
+              boxShadow: 'inset 0 0 24px rgba(0,0,0,0.28)',
+            }}
+          >
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(115deg, rgba(255,255,255,0.22) 0%, transparent 48%, rgba(0,0,0,0.24) 100%)' }} />
+            <div className="absolute inset-x-0 top-0 h-px bg-white/40" />
+          </div>
+        ))}
+
+        {/* Satin tie + wax card bound to the front panel */}
+        <div
+          className="absolute left-1/2 top-0"
+          style={{
+            width: `${Math.round(coneR * 0.82)}px`,
+            height: `${Math.round(coneH * 0.96)}px`,
+            transform: `translateX(-50%) translateZ(${Math.round(coneR * 0.98 + 14)}px)`,
+            transformOrigin: '50% 100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+            paddingBottom: '8%',
+            gap: '12%',
           }}
         >
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(115deg, rgba(255,255,255,0.35) 0%, transparent 26%, transparent 74%, rgba(0,0,0,0.18) 100%)' }} />
-          <div className="absolute left-1/2 top-0 bottom-[12%] w-px bg-black/10" />
-          <div className="absolute inset-x-0 top-[10%] h-px bg-[#8A6328]/30" />
-          {/* Satin tie binding the wrap just above the point */}
-          <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center" style={{ bottom: '12%', transform: 'translateX(-50%)', transformOrigin: 'center' }}>
+          <div className="relative flex items-center justify-center">
             <div className="w-16 h-3 rounded-full shadow" style={{ background: palette.satin, transform: 'rotate(-9deg)' }} />
             <div className="w-16 h-3 rounded-full shadow -ml-3" style={{ background: palette.satin, transform: 'rotate(9deg)' }} />
             <div className="absolute w-5 h-5 rounded-full border border-[#E8B64C]/50 flex items-center justify-center" style={{ background: palette.sashKnot }}>
               <Crown className="w-2.5 h-2.5 text-[#F3E5AB]" />
             </div>
           </div>
-          {/* Wax seal dress card */}
-          <div className="absolute left-1/2 bottom-[3%] -translate-x-1/2 px-2.5 py-1 rounded-md bg-black/70 border border-[#DFBA54]/70 flex items-center gap-1">
+          <div className="rounded-md bg-black/70 border border-[#DFBA54]/70 flex items-center gap-1 px-2.5 py-1">
             <Sparkles className="w-2.5 h-2.5 text-[#DFBA54]" />
             <span className="text-[7px] font-bold text-[#F3E5AB] tracking-widest uppercase">Signature Bouquet</span>
           </div>
@@ -262,140 +291,156 @@ interface TrayAssemblyProps {
 }
 
 const TrayAssembly: React.FC<TrayAssemblyProps> = ({ finish, isOpen, W, plateH, archH, className }) => {
-  const bedW = Math.round(W * 0.86);
-  const contentRowY = Math.round(plateH * 0.28);
-  const items = [
-    { x: 16, c: '#FFF6C9', s: 16 },
-    { x: 30, c: '#E8B64C', s: 20 },
-    { x: 44, c: '#C2344A', s: 22 },
-    { x: 58, c: '#DEB887', s: 18 },
-    { x: 72, c: '#F3E5AB', s: 20 },
-    { x: 84, c: '#A52A3A', s: 16 },
+  const trayH = archH + plateH;
+  const bedDia = Math.round(W * 0.92);
+  const drumR = bedDia / 2;
+  const wallH = Math.round(plateH * 0.7);
+  const drumTopY = Math.round(trayH - wallH);
+  const drumCenterY = Math.round(trayH - wallH / 2);
+  const domeH = Math.round(archH * 0.96);
+  const RINGS = [0.84, 0.64, 0.42, 0.2];
+  const DRUM = Array.from({ length: 8 }, (_, i) => ({ theta: i * 45 }));
+  const contents = [
+    { x: -84, c: '#FFF6C9', h: 0.5 },
+    { x: -48, c: '#E8B64C', h: 0.62 },
+    { x: -14, c: '#C2344A', h: 0.55 },
+    { x: 18, c: '#DEB887', h: 0.58 },
+    { x: 52, c: '#F3E5AB', h: 0.6 },
+    { x: 84, c: '#A52A3A', h: 0.5 },
   ];
   return (
     <div className="absolute inset-0 [transform-style:preserve-3d]">
-      {/* Wooden platter — wide, flat & low so it never reads as a box */}
+      {/* Radial drum wall — 8 tangential panels standing on the rim */}
+      {DRUM.map((p, i) => (
+        <div
+          key={i}
+          className="absolute left-1/2"
+          style={{
+            width: `${Math.round(drumR * 0.8)}px`,
+            height: `${wallH}px`,
+            top: `${drumCenterY}px`,
+            marginTop: `${-wallH / 2}px`,
+            transform: `translateX(-50%) rotateY(${p.theta}deg) translateZ(${drumR}px) rotateY(90deg)`,
+            background: finish.body,
+            boxShadow: 'inset 0 0 18px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2)',
+          }}
+        >
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(115deg, rgba(255,255,255,0.2) 0%, transparent 50%, rgba(0,0,0,0.28) 100%)' }} />
+        </div>
+      ))}
+
+      {/* Wooden bed disc — the flat platter the keepsakes sit on */}
       <div
-        className="absolute left-1/2 -translate-x-1/2 overflow-hidden"
+        className="absolute left-1/2"
         style={{
-          bottom: `${plateH * 0.08}px`,
-          width: `${W}px`,
-          height: `${plateH}px`,
-          borderRadius: '14px',
-          background: finish.body,
-          boxShadow: '0 10px 24px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -6px 14px rgba(0,0,0,0.35)',
+          width: `${bedDia}px`,
+          height: `${bedDia}px`,
+          top: `${drumCenterY}px`,
+          marginTop: `${-bedDia / 2}px`,
+          transform: `translateX(-50%) rotateX(90deg) translateZ(${-wallH / 2}px)`,
+          borderRadius: '50%',
+          background: finish.rim,
+          boxShadow: '0 6px 18px rgba(0,0,0,0.45), inset 0 0 0 2px rgba(243,229,171,0.3), inset 0 0 30px rgba(0,0,0,0.35)',
+        }}
+      />
+
+      {/* Bed contents — keepsakes standing upright on the platter */}
+      <div
+        className="absolute left-1/2 [transform-style:preserve-3d]"
+        style={{
+          width: `${Math.round(bedDia * 0.9)}px`,
+          height: `${wallH}px`,
+          top: `${drumCenterY}px`,
+          marginTop: `${-wallH / 2}px`,
+          transform: `translateX(-50%) rotateX(90deg) translateZ(${-wallH / 2 + 2}px)`,
         }}
       >
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 8%, rgba(255,255,255,0.28), transparent 55%)' }} />
-        <div className="absolute inset-x-[6%] top-1/2 h-px bg-black/25 -translate-y-1/2" />
-        <div className="absolute inset-x-[6%] top-[58%] h-px bg-black/15 -translate-y-1/2" />
-        {/* Etched gold guest ring + raised outer rim */}
-        <div className="absolute inset-x-[7%] top-[14%] bottom-[12%] rounded-full border border-[#F3E5AB]/25" />
-        {/* Rim */}
-        <div className="absolute inset-0 rounded-[14px] border-[3px]" style={{ borderColor: finish.rim, opacity: 0.9 }} />
-        <div className="absolute inset-y-1.5 inset-x-0 bottom-0 rounded-b-[14px] border border-[#F3E5AB]/30 pointer-events-none" />
-      </div>
-
-      {/* Bed contents — sweet jars, roses & fairy lights */}
-      <div className="absolute left-1/2 -translate-x-1/2" style={{ bottom: `${plateH * 0.34}px`, width: `${bedW}px`, height: `${archH}px` }}>
-        {items.map((it, i) => {
-          const isRosette = i === 3;
-          return (
+        <div className={`absolute inset-0 flex items-center justify-center gap-1 ${isOpen ? 'scale-110' : 'scale-100'} transition-transform duration-700`}>
+          {contents.map((it, i) => (
             <div
               key={i}
-              className={`absolute rounded-full ${isRosette ? 'border border-amber-300/70' : 'rounded-b-sm'} ${isOpen ? 'scale-105' : 'scale-100'} transition-transform duration-700`}
+              className="rounded-sm border border-white/25"
               style={{
-                left: `${it.x}%`,
-                bottom: '16%',
-                width: `${it.s * 2.1}px`,
-                height: `${it.s * 2.6}px`,
-                transform: `translateX(-50%) translateZ(${10 + i * 3}px)`,
-                background: it.c,
-                boxShadow: `0 0 ${8 + i}px rgba(243,229,171,${0.25 + i * 0.05})`,
+                width: `${Math.round(wallH * 0.28)}px`,
+                height: `${Math.round(wallH * it.h)}px`,
+                background: `radial-gradient(circle at 35% 30%, rgba(255,255,255,0.5), ${it.c})`,
+                boxShadow: `0 0 ${8 + i}px rgba(243,229,171,0.35)`,
               }}
-            >
-              <div className="absolute inset-x-1 top-1 h-1 rounded-full bg-white/50" />
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Shirred silk cover draped over the arranged items */}
-      <div
-        className="absolute left-1/2 -translate-x-1/2 pointer-events-none"
-        style={{
-          bottom: `${plateH * 0.26}px`,
-          width: `${W * 0.84}px`,
-          height: `${archH * 0.92}px`,
-          borderRadius: '50% 50% 14px 14px',
-          background: finish.cloth,
-          border: '1px solid rgba(255,255,255,0.35)',
-          boxShadow: '0 8px 20px rgba(0,0,0,0.22), inset 0 0 28px rgba(255,255,255,0.22), inset 0 -12px 22px rgba(0,0,0,0.25)',
-          transform: `translateX(-50%) translateZ(6px)`,
-        }}
-      >
-        {/* Vertical silk pleats */}
-        <div
-          className="absolute inset-0"
-          style={{
-            borderRadius: '50% 50% 14px 14px',
-            background: 'repeating-linear-gradient(90deg, transparent 0 13px, rgba(0,0,0,0.14) 13px 14px, transparent 14px 28px, rgba(255,255,255,0.16) 28px 29px)',
-          }}
-        />
-        {/* Gathered top drawstring */}
-        <div className="absolute left-1/2 top-[5%] -translate-x-1/2 w-7 h-7 rounded-full bg-black/25 blur-[2px]" />
-        <div className="absolute left-1/2 top-[7%] -translate-x-1/2 w-4 h-4 rounded-full bg-black/35 border border-[#F3E5AB]/40" />
-        {/* Sheen sweep */}
-        <div
-          className="absolute inset-0"
-          style={{
-            borderRadius: '50% 50% 14px 14px',
-            background: 'linear-gradient(115deg, rgba(255,255,255,0.35) 0%, transparent 42%, transparent 70%, rgba(0,0,0,0.18) 100%)',
-          }}
-        />
-        {/* Cloth edges draping over the tray rim */}
-        {[
-          { x: 8, rot: -9, z: 14, w: 0.26, h: 0.42 },
-          { x: 36, rot: -3, z: 8, w: 0.22, h: 0.5 },
-          { x: 64, rot: 3, z: 8, w: 0.22, h: 0.48 },
-          { x: 90, rot: 10, z: 14, w: 0.24, h: 0.4 },
-        ].map((flap, i) => (
-          <div
-            key={i}
-            className="absolute"
-            style={{
-              top: '70%',
-              left: `${flap.x}%`,
-              width: `${W * flap.w}px`,
-              height: `${archH * flap.h}px`,
-              borderRadius: '0 0 55% 55%',
-              background: finish.cloth,
-              transform: `translateX(-50%) translateZ(${flap.z}px) rotate(${flap.rot}deg)`,
-              boxShadow: 'inset 0 -10px 16px rgba(0,0,0,0.3)',
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Giant sunburst rosette on the front lip */}
-      <div className="absolute left-1/2 -translate-x-1/2 flex items-end justify-center" style={{ bottom: `${plateH * 0.02}px`, transform: 'translateX(-50%) translateZ(14px)' }}>
-        {finish.rosette.map((c, i) => (
-          <div
-            key={i}
-            className="rounded-full border border-[#F3E5AB]/50"
-            style={{
-              width: `${40 - i * 7}px`,
-              height: `${40 - i * 7}px`,
-              marginLeft: i === 0 ? 0 : '-8px',
-              background: `radial-gradient(circle at 35% 30%, rgba(255,255,255,0.6), ${c})`,
-              zIndex: finish.rosette.length - i,
-            }}
-          />
-        ))}
-        <div className="absolute -bottom-1 w-3.5 h-3.5 rounded-full bg-black/80 border border-[#DFBA54] flex items-center justify-center z-10">
-          <Crown className="w-2 h-2 text-[#F3E5AB]" />
+            />
+          ))}
         </div>
       </div>
+
+      {/* Silk bell dome — latitude rings shrink as they climb off the rim */}
+      {RINGS.map((frac, i) => {
+        const rr = Math.round(drumR * frac);
+        return (
+          <div
+            key={`ring-${i}`}
+            className="absolute left-1/2"
+            style={{
+              width: `${rr * 2}px`,
+              height: `${rr * 2}px`,
+              top: `${drumTopY}px`,
+              marginTop: `${-rr}px`,
+              transform: `translateX(-50%) rotateX(90deg) translateZ(${Math.round(domeH * (1 - frac) * 0.66)}px)`,
+              borderRadius: '50%',
+              border: `7px solid ${finish.cloth}`,
+              boxShadow: i === 0 ? '0 10px 24px rgba(0,0,0,0.25)' : 'inset 0 0 12px rgba(255,255,255,0.15)',
+              background: 'rgba(255,255,255,0.05)',
+            }}
+          />
+        );
+      })}
+
+      {/* Crown rosette capping the dome apex */}
+      <div
+        className="absolute left-1/2 flex items-end justify-center"
+        style={{
+          top: `${drumTopY}px`,
+          transform: `translateX(-50%) translateZ(${Math.round(domeH * 0.6)}px)`,
+        }}
+      >
+        {finish.rosette.map((c, j) => (
+          <div
+            key={j}
+            className="rounded-full border border-[#F3E5AB]/50"
+            style={{
+              width: `${28 - j * 5}px`,
+              height: `${28 - j * 5}px`,
+              marginLeft: j === 0 ? 0 : '-6px',
+              background: `radial-gradient(circle at 35% 30%, rgba(255,255,255,0.6), ${c})`,
+              zIndex: finish.rosette.length - j,
+            }}
+          />
+        ))}
+        <div className="absolute -bottom-1 w-3 h-3 rounded-full bg-black/80 border border-[#DFBA54] flex items-center justify-center z-10">
+          <Crown className="w-1.5 h-1.5 text-[#F3E5AB]" />
+        </div>
+      </div>
+
+      {/* Cloth drape flaps hanging over the front rim */}
+      {[
+        { dx: -84, rot: -8, w: 0.24, h: 0.5 },
+        { dx: -28, rot: -2, w: 0.2, h: 0.42 },
+        { dx: 30, rot: 3, w: 0.2, h: 0.46 },
+        { dx: 86, rot: 9, w: 0.22, h: 0.4 },
+      ].map((flap, i) => (
+        <div
+          key={`flap-${i}`}
+          className="absolute"
+          style={{
+            top: `${drumTopY}px`,
+            left: '50%',
+            width: `${W * flap.w}px`,
+            height: `${wallH * flap.h}px`,
+            borderRadius: '0 0 55% 55%',
+            background: finish.cloth,
+            transform: `translateX(-50%) translateX(${flap.dx}px) translateZ(${Math.round(drumR * 0.55)}px) rotate(${flap.rot}deg)`,
+            boxShadow: 'inset 0 -10px 16px rgba(0,0,0,0.3)',
+          }}
+        />
+      ))}
 
       {/* Soft ground shadow */}
       <div className={`absolute left-1/2 bg-black/60 rounded-full blur-xl pointer-events-none ${className}`} style={{ width: `${W * 0.8}px`, height: `18px`, transform: `translateX(-50%) rotateX(90deg) translateZ(-${plateH * 0.55}px)` }} />
@@ -421,98 +466,127 @@ interface BagAssemblyProps {
 }
 
 const BagAssembly: React.FC<BagAssemblyProps> = ({ color, isOpen, W, H, className }) => {
-  const bagH = Math.round(H * 0.8);
-  const sideW = Math.round(W * 0.16);
+  const bagH = Math.round(H * 0.82);
+  const depth = Math.round(W * 0.32);
+  const halfW = Math.round(W / 2);
+  const mouthY = H - bagH;
+  const rimW = Math.round(W * 0.7);
   const tissueBits = [
-    { x: 20, h: 0.32, z: 6 },
-    { x: 40, h: 0.42, z: 12 },
-    { x: 60, h: 0.38, z: 16 },
-    { x: 80, h: 0.3, z: 8 },
+    { dx: -92, h: 0.4, z: -10 },
+    { dx: -30, h: 0.52, z: -2 },
+    { dx: 32, h: 0.48, z: 6 },
+    { dx: 92, h: 0.42, z: 14 },
   ];
   return (
     <div className="absolute inset-0 [transform-style:preserve-3d]">
-      {/* Right pleat */}
+      {/* Rear face — the far wall of the bag, seen while it sways */}
       <div
-        className="absolute"
+        className="absolute left-1/2 overflow-hidden"
         style={{
-          right: '0px',
-          top: `${H - bagH + 4}px`,
-          width: `${sideW}px`,
-          height: `${bagH - 6}px`,
-          transform: 'rotateY(8deg)',
-          background: 'rgba(0,0,0,0.28)',
-          borderRadius: '0 10px 10px 0',
-        }}
-      />
-      {/* Left pleat */}
-      <div
-        className="absolute"
-        style={{
-          left: '0px',
-          top: `${H - bagH + 4}px`,
-          width: `${sideW}px`,
-          height: `${bagH - 6}px`,
-          transform: 'rotateY(-8deg)',
-          background: 'rgba(0,0,0,0.28)',
-          borderRadius: '10px 0 0 10px',
-        }}
-      />
-
-      {/* Bag front body */}
-      <div
-        className="absolute left-1/2 -translate-x-1/2 overflow-hidden"
-        style={{
-          bottom: '0px',
           width: `${W}px`,
           height: `${bagH}px`,
-          borderRadius: '2px 2px 14px 14px',
+          top: `${mouthY}px`,
+          transform: `translateX(-50%) rotateY(180deg) translateZ(${depth}px)`,
+          borderRadius: '2px 2px 16px 16px',
+          background: `linear-gradient(100deg, ${color.body}, ${color.band})`,
+          boxShadow: 'inset 0 0 30px rgba(0,0,0,0.55)',
+        }}
+      >
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(115deg, rgba(255,255,255,0.08) 0%, transparent 60%, rgba(0,0,0,0.35) 100%)' }} />
+      </div>
+
+      {/* Side pleats — trapezoids nesting the front & rear faces */}
+      {[1, -1].map((side) => (
+        <div
+          key={`pleat-${side}`}
+          className="absolute"
+          style={{
+            width: `${depth + 4}px`,
+            height: `${bagH - 2}px`,
+            top: `${mouthY + 1}px`,
+            left: '50%',
+            transform: `translateX(-50%) rotateY(${90 * side}deg) translateZ(${halfW}px)`,
+            background: color.band,
+            clipPath: 'polygon(0 0, 100% 0, 88% 100%, 12% 100%)',
+            boxShadow: 'inset 0 0 16px rgba(0,0,0,0.4)',
+          }}
+        />
+      ))}
+
+      {/* Front face — pleated body with waist band & brand tag */}
+      <div
+        className="absolute left-1/2 overflow-hidden"
+        style={{
+          width: `${W}px`,
+          height: `${bagH}px`,
+          top: `${mouthY}px`,
+          transform: `translateX(-50%) translateZ(2px)`,
+          borderRadius: '2px 2px 16px 16px',
           background: color.body,
           boxShadow: '0 12px 26px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.2)',
         }}
       >
         <div className="absolute inset-0" style={{ background: 'linear-gradient(100deg, rgba(255,255,255,0.14) 0%, transparent 30%, transparent 75%, rgba(0,0,0,0.22) 100%)' }} />
-        {/* Waist band */}
-        <div
-          className="absolute inset-x-0 top-[58%] h-[14px]"
-          style={{
-            background: color.band,
-            borderTop: '1px solid rgba(243,229,171,0.5)',
-            borderBottom: '1px solid rgba(0,0,0,0.35)',
-          }}
-        />
-        {/* Brand tag */}
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-[12%] px-2 py-0.5 rounded-sm bg-black/70 border border-[#DFBA54]/60 flex items-center gap-1">
+        <div className="absolute inset-x-0 top-[58%] h-[14px]" style={{ background: color.band, borderTop: '1px solid rgba(243,229,171,0.5)', borderBottom: '1px solid rgba(0,0,0,0.35)' }} />
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-[9%] px-2 py-0.5 rounded-sm bg-black/70 border border-[#DFBA54]/60 flex items-center gap-1">
           <Crown className="w-2 h-2 text-[#DFBA54]" />
           <span className="text-[6.5px] font-bold text-[#F3E5AB] tracking-widest uppercase">Hamper Queen</span>
         </div>
       </div>
 
-      {/* Tissue spilling from the opening */}
-      <div className="absolute left-1/2 -translate-x-1/2" style={{ top: `${H - bagH - 2}px`, width: `${W * 0.86}px`, height: `${H * 0.26}px` }}>
+      {/* Bottom plane — shallow ellipse closing the pleat drop */}
+      <div
+        className="absolute left-1/2"
+        style={{
+          width: `${W}px`,
+          height: `${depth}px`,
+          top: `${mouthY + bagH}px`,
+          marginTop: `${-depth / 2}px`,
+          transform: `translateX(-50%) rotateX(90deg) translateZ(${-depth / 2}px)`,
+          borderRadius: '50%',
+          background: color.band,
+          boxShadow: 'inset 0 0 20px rgba(0,0,0,0.5)',
+        }}
+      />
+
+      {/* Mouth rim — dark ellipse showing the open depth of the bag */}
+      <div
+        className="absolute left-1/2"
+        style={{
+          width: `${rimW}px`,
+          height: `${depth}px`,
+          top: `${mouthY}px`,
+          marginTop: `${-depth / 2}px`,
+          transform: `translateX(-50%) rotateX(90deg) translateZ(${-depth / 2}px)`,
+          borderRadius: '50%',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.55))',
+          border: `2px solid ${color.band}`,
+        }}
+      />
+
+      {/* Tissue puffs spilling out of the mouth — tilted toward the viewer */}
+      <div className="absolute left-1/2 [transform-style:preserve-3d]" style={{ width: `${W}px`, height: `${depth}px`, top: `${mouthY - 4}px` }}>
         {tissueBits.map((t, i) => (
           <div
             key={i}
             className={`absolute bottom-0 rounded-t-lg ${isOpen ? 'scale-105' : 'scale-100'} transition-transform duration-700`}
             style={{
-              left: `${t.x}%`,
-              width: `${W * 0.22}px`,
+              left: '50%',
+              width: `${W * 0.24}px`,
               height: `${H * 0.26 * t.h}px`,
-              transform: `translateX(-50%) translateZ(${t.z}px) rotate(${(i - 1.5) * 4}deg)`,
-              background: `linear-gradient(to bottom, ${color.tissue}D9, ${color.tissue}99)`,
-              boxShadow: '0 2px 6px rgba(0,0,0,0.25)',
-              clipPath: 'polygon(0 0, 100% 0, 94% 100%, 6% 100%)',
+              transform: `translateX(-50%) translateX(${t.dx}%) rotateX(-40deg) translateZ(${t.z}px) rotate(${(i - 1.5) * 4}deg)`,
+              background: `linear-gradient(to bottom, ${color.tissue}E6, ${color.tissue}99)`,
+              boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+              clipPath: 'polygon(0 0, 100% 0, 92% 100%, 8% 100%)',
             }}
           />
         ))}
       </div>
 
-      {/* Arched handles — popped well in front of the tissue so they read as the
-          near handle, with the legs tucked into the bag mouth */}
-      <div className="absolute left-1/2 -translate-x-1/2" style={{ top: `${H - bagH - H * 0.12}px`, width: `${W * 0.62}px`, height: `${H * 0.2}px`, transform: 'translateX(-50%) translateZ(30px) rotateX(-6deg)' }}>
-        <div className="absolute inset-0 rounded-t-full" style={{ border: `5px solid ${color.handle}`, borderBottom: '0', opacity: 0.98, boxShadow: '0 3px 6px rgba(0,0,0,0.25)' }} />
-        <div className="absolute inset-x-[7%] bottom-0 h-px bg-black/25" />
-        {/* Grip shadow where the arch meets the bag lip */}
-        <div className="absolute -inset-x-1 -bottom-0.5 h-2 bg-black/20 blur-[2px]" />
+      {/* Twin handle arcs — rear on the far lip, front arched over the mouth */}
+      <div className="absolute left-1/2 [transform-style:preserve-3d]" style={{ width: `${W * 0.5}px`, height: `${H * 0.18}px`, top: `${mouthY - H * 0.13}px` }}>
+        <div className="absolute inset-0 rounded-t-full" style={{ border: `5px solid ${color.handle}`, borderBottom: '0', transform: `rotateY(180deg) translateZ(${depth - 6}px) rotateX(6deg)`, opacity: 0.85 }} />
+        <div className="absolute inset-0 rounded-t-full" style={{ border: `5px solid ${color.handle}`, borderBottom: '0', transform: `translateZ(6px) rotateX(-8deg)`, boxShadow: '0 3px 6px rgba(0,0,0,0.3)' }} />
       </div>
 
       {/* Soft ground shadow */}
@@ -602,7 +676,7 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
     if (!isAutoRotating || isHovered) return;
     if (isFlat) {
       const interval = setInterval(() => {
-        setRotateY((prev) => Math.sin(Date.now() / 850) * 16);
+        setRotateY((prev) => Math.sin(Date.now() / 850) * 26);
         setRotateX((prev) => -18 + Math.sin(Date.now() / 1200) * 3);
       }, 40);
       return () => clearInterval(interval);

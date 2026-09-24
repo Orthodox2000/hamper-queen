@@ -17,7 +17,7 @@ import { TRANSLATIONS } from '../data/translations';
 import { LanguageMode } from '../types';
 import { royaleLogger } from '../utils/logger';
 import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
-import { triggerGoldConfetti } from '../utils/confetti';
+
 import { ThreeDGiftBox, type BoxVariant } from './ThreeDGiftBox';
 import {
   BOX_THEME_VARIANTS,
@@ -100,11 +100,10 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
   const handleSelectBg = (idx: number) => {
     setActiveBgIdx(idx);
     setBgLoaded(false);
-    triggerGoldConfetti(0.5, 0.4);
     royaleLogger.action('CoverHero', `Switched background scene to: ${HERO_BACKGROUND_SCENES[idx].label}`);
   };
 
-  // Auto-rotate the background every 10s (no selection UI â€” decor only).
+  // Auto-rotate the background every 10s (decor only, no selection UI).
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveBgIdx((prev) => (prev + 1) % HERO_BACKGROUND_SCENES.length);
@@ -114,7 +113,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
   }, []);
 
   const handleWhatsAppInquiry = () => {
-    triggerGoldConfetti(0.5, 0.5);
     const text = encodeURIComponent(
       `Hi Ms. Supriya / Hamper Queen! I need a customized luxury hamper / bouquet urgently. Please share quick options!`
     );
@@ -122,7 +120,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
   };
 
   const handleScrollToContent = () => {
-    triggerGoldConfetti(0.5, 0.5);
     const catalogEl = document.getElementById('hamper-queen-catalog-section');
     if (catalogEl) {
       catalogEl.scrollIntoView({ behavior: 'smooth' });
@@ -183,7 +180,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
               </h1>
 
               <p className="font-sans text-sm sm:text-base text-[#EDE8DF] leading-relaxed max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] font-normal">
-                Handcrafted hampers, chocolate bouquets &amp; photo keepsakes â€” packed with love and dispatched same-day across India.
+                Handcrafted hampers, chocolate bouquets &amp; photo keepsakes packed with love and dispatched same-day across India.
               </p>
             </div>
 
@@ -221,7 +218,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                 <button
                   id="btn-hero-customise-box"
                   onClick={() => {
-                    triggerGoldConfetti(0.5, 0.5);
                     onOpenCustomised();
                   }}
                   className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#DFBA54] via-[#F3E5AB] to-[#C5A059] hover:from-[#F3E5AB] hover:to-[#DFBA54] text-[#141414] font-cinzel text-xs sm:text-sm font-black tracking-wider uppercase transition-all duration-300 shadow-[0_4px_20px_rgba(223,186,84,0.4)] flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5 border border-white"
@@ -275,7 +271,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                     const next = CONTAINER_ORDER[parseInt(e.target.value, 10)];
                     if (next !== boxType) {
                       setBoxType(next);
-                      triggerGoldConfetti(0.4, 0.3);
                       royaleLogger.action('CoverHero', `Switched 3D container type to: ${next}`);
                     }
                   }}
@@ -289,7 +284,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                       onClick={() => {
                         if (ct !== boxType) {
                           setBoxType(ct);
-                          triggerGoldConfetti(0.4, 0.3);
                           royaleLogger.action('CoverHero', `Switched 3D container type to: ${ct}`);
                         }
                       }}
@@ -316,7 +310,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                       key={th.id}
                       onClick={() => {
                         setBoxVariant(th.id as BoxVariant);
-                        triggerGoldConfetti(0.4, 0.35);
                         royaleLogger.action('CoverHero', `Switched 3D box theme to: ${th.label}`);
                       }}
                       title={`${th.label} — ${th.boxLabel}`}
@@ -337,7 +330,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                       key={pal.id}
                       onClick={() => {
                         setBouquetPalette(pal.id);
-                        triggerGoldConfetti(0.4, 0.35);
                         royaleLogger.action('CoverHero', `Switched bouquet palette to: ${pal.label}`);
                       }}
                       title={`Bouquet palette — ${pal.label}`}
@@ -362,7 +354,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                       key={fin.id}
                       onClick={() => {
                         setTrayFinish(fin.id);
-                        triggerGoldConfetti(0.4, 0.35);
                         royaleLogger.action('CoverHero', `Switched tray finish to: ${fin.label}`);
                       }}
                       title={`Tray finish — ${fin.label}`}
@@ -387,7 +378,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                       key={col.id}
                       onClick={() => {
                         setBagColor(col.id);
-                        triggerGoldConfetti(0.4, 0.35);
                         royaleLogger.action('CoverHero', `Switched bag colour to: ${col.label}`);
                       }}
                       title={`Gift bag colour — ${col.label}`}
@@ -415,7 +405,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                       key={sh}
                       onClick={() => {
                         setBoxShape(sh);
-                        triggerGoldConfetti(0.35, 0.3);
                         royaleLogger.action('CoverHero', `Switched 3D box shape to: ${sh}`);
                       }}
                       title={`${BOX_SHAPES[sh].label} — ${sh} proportions`}

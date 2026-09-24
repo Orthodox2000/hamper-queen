@@ -45,16 +45,16 @@ function getConfettiEngine(): confetti.CreateTypes | typeof confetti {
 function triggerDomSparkles(originX: number, originY: number, colors: string[]) {
   if (typeof document === 'undefined') return;
 
-  const count = 18;
+  const count = 8;
   const startX = originX * window.innerWidth;
   const startY = originY * window.innerHeight;
 
   for (let i = 0; i < count; i++) {
     const el = document.createElement('div');
     const color = colors[i % colors.length];
-    const size = Math.floor(Math.random() * 8) + 6;
+    const size = Math.floor(Math.random() * 4) + 5;
     const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5);
-    const distance = Math.floor(Math.random() * 120) + 60;
+    const distance = Math.floor(Math.random() * 70) + 40;
     const destX = Math.cos(angle) * distance;
     const destY = Math.sin(angle) * distance - 40;
 
@@ -96,13 +96,13 @@ export const triggerGoldConfetti = (originX = 0.5, originY = 0.6) => {
 
   try {
     engine({
-      particleCount: 65,
-      spread: 75,
+      particleCount: 28,
+      spread: 55,
       origin: { x: originX, y: originY },
       colors,
-      ticks: 240,
+      ticks: 150,
       gravity: 0.85,
-      scalar: 1.15,
+      scalar: 1,
       zIndex: 999999,
       disableForReducedMotion: false,
     });
@@ -123,7 +123,7 @@ export const triggerPartyPopperConfetti = (originX = 0.5, originY = 0.5) => {
   try {
     // Left burst
     engine({
-      particleCount: 50,
+      particleCount: 22,
       angle: 60,
       spread: 65,
       origin: { x: Math.max(0.1, originX - 0.2), y: originY },
@@ -134,7 +134,7 @@ export const triggerPartyPopperConfetti = (originX = 0.5, originY = 0.5) => {
 
     // Right burst
     engine({
-      particleCount: 50,
+      particleCount: 22,
       angle: 120,
       spread: 65,
       origin: { x: Math.min(0.9, originX + 0.2), y: originY },
@@ -158,8 +158,8 @@ export const triggerRomanticConfetti = (originX = 0.5, originY = 0.6) => {
 
   try {
     engine({
-      particleCount: 60,
-      spread: 80,
+      particleCount: 28,
+      spread: 60,
       origin: { x: originX, y: originY },
       colors,
       shapes: ['circle', 'square'],
@@ -178,9 +178,9 @@ export const triggerRomanticConfetti = (originX = 0.5, originY = 0.6) => {
  */
 export const triggerGrandCelebration = () => {
   const engine = getConfettiEngine();
-  const duration = 3 * 1000;
+  const duration = 1600;
   const animationEnd = Date.now() + duration;
-  const defaults = { startVelocity: 35, spread: 360, ticks: 80, zIndex: 999999, disableForReducedMotion: false };
+  const defaults = { startVelocity: 32, spread: 360, ticks: 70, zIndex: 999999, disableForReducedMotion: false };
 
   triggerDomSparkles(0.5, 0.5, ['#D4AF37', '#FFD700', '#FF1493', '#9333EA', '#10B981']);
 
@@ -189,7 +189,7 @@ export const triggerGrandCelebration = () => {
     if (timeLeft <= 0) {
       return clearInterval(interval);
     }
-    const particleCount = 60 * (timeLeft / duration);
+    const particleCount = 26 * (timeLeft / duration);
     try {
       engine({
         ...defaults,
@@ -220,10 +220,10 @@ export const triggerMouseClickConfetti = (clientX: number, clientY: number) => {
 
   try {
     engine({
-      particleCount: 16,
+      particleCount: 10,
       spread: 50,
       startVelocity: 16,
-      ticks: 45,
+      ticks: 40,
       origin: { x: originX, y: originY },
       colors: ['#DFBA54', '#D4AF37', '#F3E5AB', '#FFE885', '#FFFDF9', '#C5A059'],
       shapes: ['circle', 'square'],

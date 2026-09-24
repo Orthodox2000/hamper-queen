@@ -17,7 +17,7 @@ import { CustomHamper, LanguageMode } from '../types';
 import { TRANSLATIONS } from '../data/translations';
 import { HamperQueenLogo } from './HamperQueenLogo';
 import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
-import { triggerGoldConfetti } from '../utils/confetti';
+
 
 interface HeaderProps {
   activeHamper: CustomHamper;
@@ -47,7 +47,6 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   const handleWhatsApp = () => {
-    triggerGoldConfetti(0.5, 0.4);
     const text = encodeURIComponent(
       `Hi Hamper Queen! I would like to inquire about customized luxury hampers & bouquets.`
     );
@@ -92,7 +91,6 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               id="btn-open-booking-header"
               onClick={() => {
-                triggerGoldConfetti(0.5, 0.5);
                 onOpenBooking();
               }}
               className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF5E8] hover:bg-[#F3E5AB] text-[#8C6821] border border-[#D4AF37] text-[10.5px] font-bold tracking-wide uppercase transition-all shadow-xs cursor-pointer"
@@ -129,7 +127,6 @@ export const Header: React.FC<HeaderProps> = ({
                   key={item.id}
                   id={`nav-link-${item.id}`}
                   href={item.href}
-                  onClick={() => triggerGoldConfetti(0.5, 0.4)}
                   className={`relative px-4 py-2 rounded-lg text-xs font-sans font-semibold tracking-wide uppercase transition-all duration-200 flex items-center cursor-pointer whitespace-nowrap shrink-0 border ${
                     isActive
                       ? 'bg-[#141414] text-[#F3E5AB] border-[#B8860B] shadow-sm ring-1 ring-[#DFBA54]/30'
@@ -149,7 +146,6 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               id="btn-open-hamper-drawer"
               onClick={() => {
-                triggerGoldConfetti(0.5, 0.5);
                 onOpenHamperDrawer();
               }}
               className="relative flex items-center gap-2 px-3.5 py-2 rounded-lg bg-gradient-to-r from-[#141414] to-[#24211E] text-[#F3E5AB] border border-[#D4AF37] hover:from-[#262626] hover:to-[#33302B] transition-all cursor-pointer shadow-md transform hover:-translate-y-0.5"
@@ -187,7 +183,6 @@ export const Header: React.FC<HeaderProps> = ({
                 id={`mobile-nav-${item.id}`}
                 href={item.href}
                 onClick={() => {
-                  triggerGoldConfetti(0.5, 0.4);
                   setMobileMenuOpen(false);
                 }}
                 className={`w-full text-left px-4 py-3 rounded-lg text-xs font-sans font-semibold uppercase tracking-wide flex items-center justify-between transition-colors ${
@@ -208,7 +203,6 @@ export const Header: React.FC<HeaderProps> = ({
             {onOpenBooking && (
               <button
                 onClick={() => {
-                  triggerGoldConfetti(0.5, 0.5);
                   onOpenBooking();
                   setMobileMenuOpen(false);
                 }}

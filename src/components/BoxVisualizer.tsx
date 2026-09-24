@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { PackagingSizeOption, BrandedItem } from '../data/brandedItemsData';
+import { PackagingSizeOption, BrandedItem, packagingArtSvgId } from '../data/brandedItemsData';
 import { BrandedProductGraphic } from './BrandedProductGraphic';
+import { ItemGraphic } from './ItemGraphic';
 import {
   Plus,
   X,
@@ -16,7 +17,7 @@ import {
   Layers,
   Flower2,
 } from 'lucide-react';
-import { triggerGoldConfetti } from '../utils/confetti';
+
 
 interface BoxVisualizerProps {
   packaging: PackagingSizeOption;
@@ -57,6 +58,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
   const isHeartBouquet = packaging.illustrationType === 'heart_bouquet';
   const isVelvetHatbox = packaging.illustrationType === 'velvet_hatbox';
   const isAcrylicChest = packaging.illustrationType === 'acrylic_chest';
+  const artSvgId = packagingArtSvgId(packaging);
   const filledCount = slots.filter(Boolean).length;
   const totalCount = packaging.slotCount;
   const isFull = filledCount === totalCount;
@@ -145,14 +147,22 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
       {/* 1. Header Bar: Hamper Thumbnail, Title & Mode Switcher */}
       <div className="bg-[#FAF9F5] border-b border-[#E8E1CE] p-4 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          {/* Real Outer Hamper Image Thumbnail with slight rounding */}
-          <div className="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-xl border border-[#D4AF37]/50 overflow-hidden bg-white shadow-xs">
-            <img
-              src={packaging.imageUrl}
-              alt={packaging.name}
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-cover object-center"
-            />
+          {/* Real Outer Hamper Image Thumbnail or Regenerated Bespoke Art */}
+          <div
+            className={`relative w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-xl border border-[#D4AF37]/50 overflow-hidden bg-white shadow-xs ${
+              artSvgId ? 'flex items-center justify-center' : ''
+            }`}
+          >
+            {artSvgId ? (
+              <ItemGraphic id={artSvgId} size="sm" className="scale-[0.68]" />
+            ) : (
+              <img
+                src={packaging.imageUrl}
+                alt={packaging.name}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover object-center"
+              />
+            )}
             {packaging.popularBadge && (
               <span className="absolute bottom-0 inset-x-0 bg-[#B8860B] text-white text-[7.5px] font-bold text-center py-0.5 uppercase tracking-wide">
                 {packaging.popularBadge.split(' ')[0]}
@@ -182,7 +192,6 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
             <button
               onClick={() => {
                 setVisualMode('slots');
-                triggerGoldConfetti(0.5, 0.4);
               }}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
                 visualMode === 'slots'
@@ -196,7 +205,6 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
             <button
               onClick={() => {
                 setVisualMode('exterior');
-                triggerGoldConfetti(0.5, 0.4);
               }}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
                 visualMode === 'exterior'
@@ -216,7 +224,6 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
               whileTap={{ scale: 0.96 }}
               onClick={() => {
                 setLightsActive(!lightsActive);
-                if (!lightsActive) triggerGoldConfetti(0.5, 0.4);
               }}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer ${
                 lightsActive
@@ -236,13 +243,31 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
         /* EXTERIOR SHOWCASE: Full Real Hamper Image Preview with slight rounding */
         <div className="relative p-6 sm:p-8 bg-[#181614] text-white flex flex-col sm:flex-row items-center gap-6 min-h-[340px]">
           <div className="w-full sm:w-1/2 h-64 sm:h-80 relative rounded-xl overflow-hidden border border-[#D4AF37]/60 shadow-2xl">
-            <img
-              src={packaging.imageUrl}
-              alt={packaging.name}
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/25 pointer-events-none" />
+            {artSvgId ? (
+              <>
+                <div
+                  className="w-full h-full flex items-center justify-center"
+                  style={{ background: 'radial-gradient(circle at 50% 38%, #2B251E 0%, #181614 72%)' }}
+                >
+                  <ItemGraphic
+                    id={artSvgId}
+                    size="xl"
+                    className="transform hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20 pointer-events-none" />
+              </>
+            ) : (
+              <>
+                <img
+                  src={packaging.imageUrl}
+                  alt={packaging.name}
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/25 pointer-events-none" />
+              </>
+            )}
 
             {/* Satin Ribbon Band */}
             <div
@@ -296,7 +321,6 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
             <button
               onClick={() => {
                 setVisualMode('slots');
-                triggerGoldConfetti(0.5, 0.5);
               }}
               className="w-full py-3 rounded-xl bg-[#B8860B] hover:bg-[#8C6821] text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-lg border border-[#DFBA54]"
             >
@@ -373,7 +397,6 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                       whileTap={{ scale: 0.97 }}
                       onClick={() => {
                         onSelectSlot(index);
-                        triggerGoldConfetti(0.5, 0.5);
                       }}
                       className={`group relative bg-white rounded-xl border-2 p-2 sm:p-3 flex flex-col justify-between cursor-pointer transition-all duration-200 shadow-sm hover:shadow-md ${
                         isSelected
@@ -451,7 +474,6 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                     whileTap={{ scale: 0.97 }}
                     onClick={() => {
                       onSelectSlot(index);
-                      triggerGoldConfetti(0.5, 0.5);
                     }}
                     className={`relative rounded-xl border-2 border-dashed p-3 flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 min-h-[135px] sm:min-h-[155px] ${
                       isSelected
@@ -589,7 +611,6 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                       }}
                       onClick={() => {
                         onSelectSlot(index);
-                        triggerGoldConfetti(0.5, 0.5);
                       }}
                       className={`group relative bg-white rounded-xl border-2 p-2 sm:p-3 flex flex-col justify-between cursor-pointer transition-all duration-200 shadow-xs hover:shadow-md ${
                         isDragOver
@@ -690,7 +711,6 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                     }}
                     onClick={() => {
                       onSelectSlot(index);
-                      triggerGoldConfetti(0.5, 0.5);
                     }}
                     className={`relative rounded-xl border-2 border-dashed p-3 flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 min-h-[135px] sm:min-h-[155px] ${
                       isDragOver

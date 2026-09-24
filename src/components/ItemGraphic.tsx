@@ -81,6 +81,21 @@ function renderGraphic(id: string) {
         <stop offset="60%" stopColor="#F5F1E6" />
         <stop offset="100%" stopColor="#E2DAC6" />
       </linearGradient>
+      <linearGradient id="velvetRoseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#D9527F" />
+        <stop offset="45%" stopColor="#B02A5C" />
+        <stop offset="100%" stopColor="#6E1235" />
+      </linearGradient>
+      <linearGradient id="crystalGlassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.92" />
+        <stop offset="55%" stopColor="#E8FFFB" stopOpacity="0.42" />
+        <stop offset="100%" stopColor="#A9E8DC" stopOpacity="0.3" />
+      </linearGradient>
+      <linearGradient id="walnutTrunkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#6B4322" />
+        <stop offset="50%" stopColor="#4A2B12" />
+        <stop offset="100%" stopColor="#2B180A" />
+      </linearGradient>
       <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
         <feDropShadow dx="0" dy="8" stdDeviation="6" floodColor="#1A1505" floodOpacity="0.18" />
       </filter>
@@ -519,6 +534,106 @@ function renderGraphic(id: string) {
             <path d="M -8 10 L -45 75 L -25 70 L 0 14 Z" fill="url(#goldGradient)" stroke="#7A5612" strokeWidth="0.8" />
             <path d="M 8 10 L 45 75 L 25 70 L 0 14 Z" fill="url(#goldGradient)" stroke="#7A5612" strokeWidth="0.8" />
           </g>
+        </svg>
+      );
+
+    // 15. PACKAGING: ROYAL VELVET ROUND HAT BOX
+    case 'packaging-velvet-hatbox':
+      return (
+        <svg viewBox="0 0 240 220" className="w-full h-full drop-shadow-xl overflow-visible">
+          {defs}
+          <ellipse cx="120" cy="202" rx="72" ry="12" fill="#000000" opacity="0.16" />
+          {/* Cylindrical velvet body */}
+          <path d="M 48 88 L 48 176 C 48 200, 192 200, 192 176 L 192 88 Z" fill="url(#velvetRoseGradient)" stroke="url(#goldGradient)" strokeWidth="1.5" />
+          {/* Vertical velvet shading */}
+          <path d="M 88 88 L 84 183 M 118 88 L 118 201 M 152 88 L 156 183" stroke="#5A0E2C" strokeWidth="1.5" strokeDasharray="2,8" opacity="0.5" />
+          {/* Gold foil trim bands */}
+          <rect x="50" y="92" width="140" height="9" rx="4" fill="url(#goldGradient)" stroke="#7A5612" strokeWidth="0.6" />
+          <rect x="50" y="165" width="140" height="9" rx="4" fill="url(#goldGradient)" stroke="#7A5612" strokeWidth="0.6" />
+          {/* Top opening with interior velvet */}
+          <ellipse cx="120" cy="88" rx="72" ry="26" fill="#4A0E1F" stroke="url(#goldGradient)" strokeWidth="2" />
+          <ellipse cx="120" cy="88" rx="66" ry="21" fill="url(#velvetRoseGradient)" opacity="0.7" />
+          {/* Gold foil crown emblem */}
+          <path d="M 103 126 L 108 142 L 132 142 L 137 126 L 127 134 L 120 123 L 113 134 Z" fill="url(#goldGradient)" stroke="#8C6821" strokeWidth="0.5" />
+          <text x="120" y="160" fill="#D4AF37" fontSize="7" fontFamily="serif" textAnchor="middle" letterSpacing="2">ROYALE VELVET</text>
+          {/* Golden cord & tassel */}
+          <path d="M 46 96 C 34 124, 34 146, 50 148" fill="none" stroke="url(#goldGradient)" strokeWidth="3" />
+          <polygon points="48,148 40,180 56,180" fill="url(#goldGradient)" />
+          {/* Lid tilted open to the side */}
+          <ellipse cx="158" cy="72" rx="64" ry="23" fill="url(#velvetRoseGradient)" stroke="url(#goldGradient)" strokeWidth="2" transform="rotate(-12, 158, 72)" opacity="0.95" />
+          <ellipse cx="158" cy="72" rx="50" ry="16" fill="#5A0E2C" opacity="0.6" transform="rotate(-12, 158, 72)" />
+          <ellipse cx="158" cy="52" rx="7" ry="3.5" fill="url(#goldGradient)" transform="rotate(-12, 158, 52)" />
+        </svg>
+      );
+
+    // 16. PACKAGING: CRYSTAL ACRYLIC KEEPSAKE CHEST
+    case 'packaging-acrylic-chest':
+      return (
+        <svg viewBox="0 0 240 230" className="w-full h-full drop-shadow-xl overflow-visible">
+          {defs}
+          <ellipse cx="120" cy="208" rx="90" ry="13" fill="#000000" opacity="0.13" />
+          {/* Inner acrylic back panel */}
+          <rect x="48" y="118" width="150" height="72" rx="7" fill="#C8F2EA" opacity="0.5" stroke="#7EC4B8" strokeWidth="1" />
+          {/* 3x3 keepsake slot grid */}
+          <g stroke="#C5A059" strokeWidth="1" opacity="0.85">
+            {[0, 1, 2].map((r) => (
+              [0, 1, 2].map((c) => (
+                <rect key={`${r}-${c}`} x={54 + c * 48} y={124 + r * 20} width={42} height={16} rx="3" fill="#FFFFFF" opacity="0.35" />
+              ))
+            ))}
+          </g>
+          {/* Clear acrylic front panel */}
+          <rect x="36" y="108" width="170" height="84" rx="7" fill="url(#crystalGlassGradient)" stroke="#0D9488" strokeWidth="1.8" />
+          {/* Glass sheen highlights */}
+          <path d="M 44 112 L 92 112 L 44 160 Z" fill="#FFFFFF" opacity="0.35" />
+          <path d="M 140 116 L 188 116 L 188 140 L 150 140 Z" fill="#FFFFFF" opacity="0.18" />
+          {/* Gold rim & base rail */}
+          <rect x="36" y="108" width="170" height="6" rx="3" fill="url(#goldGradient)" stroke="#8C6821" strokeWidth="0.6" />
+          <rect x="36" y="186" width="170" height="6" rx="3" fill="url(#goldGradient)" stroke="#8C6821" strokeWidth="0.6" />
+          {/* Brass side hinges */}
+          <rect x="32" y="128" width="7" height="26" rx="3" fill="url(#goldGradient)" />
+          <rect x="201" y="128" width="7" height="26" rx="3" fill="url(#goldGradient)" />
+          {/* Golden feet */}
+          <rect x="48" y="192" width="14" height="8" rx="2" fill="url(#goldGradient)" />
+          <rect x="178" y="192" width="14" height="8" rx="2" fill="url(#goldGradient)" />
+          {/* Vintage golden lock clasp */}
+          <rect x="70" y="100" width="100" height="10" rx="4" fill="url(#goldGradient)" stroke="#8C6821" strokeWidth="0.7" />
+          <path d="M 103 96 L 103 100 L 137 100 L 137 96 Z" fill="url(#goldGradient)" />
+          <rect x="106" y="74" width="26" height="22" rx="4" fill="url(#goldGradient)" stroke="#8C6821" strokeWidth="0.8" />
+          <path d="M 112 76 L 112 70 A 7 7 0 0 1 126 70 L 126 76" fill="none" stroke="#8C6821" strokeWidth="3" strokeLinecap="round" />
+          <circle cx="119" cy="86" r="2.5" fill="#4A340A" />
+        </svg>
+      );
+
+    // 17. PACKAGING: SOVEREIGN HERITAGE TRUNK
+    case 'packaging-heritage-trunk':
+      return (
+        <svg viewBox="0 0 240 220" className="w-full h-full drop-shadow-xl overflow-visible">
+          {defs}
+          <ellipse cx="120" cy="200" rx="92" ry="13" fill="#000000" opacity="0.15" />
+          {/* Walnut trunk body */}
+          <rect x="30" y="82" width="180" height="106" rx="7" fill="url(#walnutTrunkGradient)" stroke="url(#goldGradient)" strokeWidth="2" />
+          {/* Wood panel seams & rivets */}
+          <line x1="94" y1="86" x2="94" y2="184" stroke="#241305" strokeWidth="1.5" opacity="0.6" />
+          <line x1="146" y1="86" x2="146" y2="184" stroke="#241305" strokeWidth="1.5" opacity="0.6" />
+          <circle cx="94" cy="134" r="2" fill="url(#goldGradient)" />
+          <circle cx="146" cy="134" r="2" fill="url(#goldGradient)" />
+          {/* Horizontal brass band */}
+          <rect x="30" y="126" width="180" height="5" fill="url(#goldGradient)" stroke="#8C6821" strokeWidth="0.5" />
+          {/* Brass corner brackets */}
+          <path d="M 30 82 L 54 82 L 54 92 L 40 92 L 40 106 L 30 106 Z" fill="url(#goldGradient)" stroke="#7A5612" strokeWidth="0.7" />
+          <path d="M 210 82 L 186 82 L 186 92 L 200 92 L 200 106 L 210 106 Z" fill="url(#goldGradient)" stroke="#7A5612" strokeWidth="0.7" />
+          <path d="M 30 188 L 54 188 L 54 178 L 40 178 L 40 164 L 30 164 Z" fill="url(#goldGradient)" stroke="#7A5612" strokeWidth="0.7" />
+          <path d="M 210 188 L 186 188 L 186 178 L 200 178 L 200 164 L 210 164 Z" fill="url(#goldGradient)" stroke="#7A5612" strokeWidth="0.7" />
+          {/* Two brass latches */}
+          <rect x="82" y="118" width="15" height="46" rx="6" fill="url(#goldGradient)" stroke="#7A5612" strokeWidth="0.8" />
+          <rect x="143" y="118" width="15" height="46" rx="6" fill="url(#goldGradient)" stroke="#7A5612" strokeWidth="0.8" />
+          <circle cx="89.5" cy="124" r="2" fill="#4A340A" />
+          <circle cx="150.5" cy="124" r="2" fill="#4A340A" />
+          {/* Gold monogram crest plate */}
+          <rect x="102" y="96" width="36" height="30" rx="3" fill="url(#goldGradient)" stroke="#7A5612" strokeWidth="1" />
+          <path d="M 120 101 L 126 112 L 114 112 Z" fill="#4A340A" />
+          <circle cx="120" cy="117" r="2.5" fill="#4A340A" />
         </svg>
       );
 

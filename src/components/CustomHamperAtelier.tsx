@@ -4,11 +4,13 @@ import {
   BRANDED_ITEMS_CATALOG,
   PACKAGING_SIZE_OPTIONS,
   PRE_MADE_SUGGESTIONS,
+  packagingArtSvgId,
   BrandedItem,
   PackagingSizeOption,
 } from '../data/brandedItemsData';
 import { BoxVisualizer } from './BoxVisualizer';
 import { BrandedProductGraphic } from './BrandedProductGraphic';
+import { ItemGraphic } from './ItemGraphic';
 import { PhotoCustomizerModal } from './PhotoCustomizerModal';
 import { Packing3DAnimationModal } from './Packing3DAnimationModal';
 import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
@@ -260,7 +262,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
       return copy;
     });
     setActiveSlotIndex(index);
-    triggerGoldConfetti(0.5, 0.4);
   };
 
   // Quick Load Suggestion
@@ -318,7 +319,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
     setCustomItemName('');
     setCustomItemNote('');
     setIsCreatingCustomItem(false);
-    triggerGoldConfetti(0.5, 0.5);
   };
 
   // Filter Catalog Items
@@ -534,7 +534,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                   whileTap={{ scale: 0.98 }}
                   onClick={() => {
                     setCurrentStage(step.num as 1 | 2 | 3 | 4);
-                    triggerGoldConfetti(0.5, 0.3);
                   }}
                   className={`p-3 text-left border-2 transition-all cursor-pointer ${
                     isActive
@@ -584,7 +583,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     key={tab.id}
                     onClick={() => {
                       setPackagingTypeTab(tab.id as any);
-                      triggerGoldConfetti(0.5, 0.4);
                     }}
                     className={`px-3 py-1.5 text-xs font-bold transition-all cursor-pointer ${
                       packagingTypeTab === tab.id
@@ -609,6 +607,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                 return true;
               }).map((pkg) => {
                 const isSelected = selectedPackaging.id === pkg.id;
+                const pkgArtSvgId = packagingArtSvgId(pkg);
                 return (
                   <motion.div
                     key={pkg.id}
@@ -621,15 +620,30 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                         : 'border-stone-200 hover:border-stone-400 hover:shadow-md'
                     }`}
                   >
-                    {/* Real Hamper Photo */}
-                    <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-stone-100">
-                      <img
-                        src={pkg.imageUrl}
-                        alt={pkg.name}
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover object-center transform group-hover:scale-106 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
+                    {/* Real Hamper Photo or Regenerated Bespoke Art */}
+                    <div
+                      className={`relative h-48 sm:h-52 w-full overflow-hidden flex items-center justify-center ${
+                        pkgArtSvgId ? '' : 'bg-stone-100'
+                      }`}
+                      style={pkgArtSvgId ? { backgroundColor: pkg.bgHex } : undefined}
+                    >
+                      {pkgArtSvgId ? (
+                        <ItemGraphic
+                          id={pkgArtSvgId}
+                          size="lg"
+                          className="transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <>
+                          <img
+                            src={pkg.imageUrl}
+                            alt={pkg.name}
+                            referrerPolicy="no-referrer"
+                            className="w-full h-full object-cover object-center transform group-hover:scale-106 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
+                        </>
+                      )}
 
                       {/* Top Badges */}
                       <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
@@ -648,8 +662,10 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
 
                       {/* Price Banner Overlay */}
                       <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-white">
-                        <span className="text-xs font-bold drop-shadow-sm">{pkg.dimensions}</span>
-                        <span className="text-xs font-extrabold text-[#F3E5AB] drop-shadow-sm">
+                        <span className={`text-xs font-bold drop-shadow-sm ${pkgArtSvgId ? 'bg-black/45 px-2 py-0.5 rounded' : ''}`}>
+                          {pkg.dimensions}
+                        </span>
+                        <span className={`text-xs font-extrabold text-[#F3E5AB] drop-shadow-sm ${pkgArtSvgId ? 'bg-black/45 px-2 py-0.5 rounded' : ''}`}>
                           {pkg.approxPriceRange}
                         </span>
                       </div>
@@ -700,7 +716,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                 whileTap={{ scale: 0.98 }}
                 onClick={() => {
                   setCurrentStage(2);
-                  triggerGoldConfetti(0.5, 0.4);
                 }}
                 className="bg-[#B8860B] text-white px-8 py-3 text-xs font-bold uppercase tracking-wider hover:bg-[#8C6821] flex items-center gap-2 shadow-sm cursor-pointer"
               >
@@ -716,12 +731,21 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
             {/* Quick Change Hamper Bar with Real Photo */}
             <div className="bg-stone-100 border border-stone-300 p-3 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <img
-                  src={selectedPackaging.imageUrl}
-                  alt={selectedPackaging.name}
-                  referrerPolicy="no-referrer"
-                  className="w-12 h-12 object-cover border border-[#D4AF37]"
-                />
+                {packagingArtSvgId(selectedPackaging) ? (
+                  <div
+                    className="w-12 h-12 flex items-center justify-center border border-[#D4AF37]"
+                    style={{ backgroundColor: selectedPackaging.bgHex }}
+                  >
+                    <ItemGraphic id={packagingArtSvgId(selectedPackaging)!} size="sm" className="scale-[0.68]" />
+                  </div>
+                ) : (
+                  <img
+                    src={selectedPackaging.imageUrl}
+                    alt={selectedPackaging.name}
+                    referrerPolicy="no-referrer"
+                    className="w-12 h-12 object-cover border border-[#D4AF37]"
+                  />
+                )}
                 <div>
                   <span className="text-[10px] uppercase font-bold text-[#B8860B]">Selected Packaging</span>
                   <h4 className="font-seasons text-sm font-bold text-stone-900">{selectedPackaging.name}</h4>
@@ -733,7 +757,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                 <button
                   onClick={() => {
                     setCurrentStage(1);
-                    triggerGoldConfetti(0.5, 0.4);
                   }}
                   className="px-3 py-1.5 text-xs font-bold bg-white hover:bg-stone-200 border border-stone-300 text-stone-800 transition-colors"
                 >
@@ -832,7 +855,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                       key={cat.id}
                       onClick={(e) => {
                         setActiveCategoryFilter(cat.id as any);
-                        triggerGoldConfetti(0.5, 0.4);
                       }}
                       className={`px-3 py-1 text-xs font-bold border transition-colors cursor-pointer ${
                         activeCategoryFilter === cat.id
@@ -850,7 +872,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                       const target = activeSlotIndex ?? slots.findIndex((s) => s === null);
                       setPhotoModalTargetSlot(target !== -1 ? target : 0);
                       setIsPhotoModalOpen(true);
-                      triggerRomanticConfetti(0.5, 0.5);
                     }}
                     className="px-3 py-1 text-xs font-bold border border-indigo-600 bg-indigo-50 text-indigo-900 hover:bg-indigo-100 flex items-center gap-1 cursor-pointer"
                   >
@@ -997,9 +1018,8 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
             {/* Bottom Actions */}
             <div className="flex flex-wrap items-center justify-between gap-3 pt-6 border-t border-stone-200">
               <button
-                onClick={() => {
+onClick={() => {
                   setCurrentStage(1);
-                  triggerGoldConfetti(0.5, 0.4);
                 }}
                 className="text-xs font-bold uppercase tracking-wider text-stone-700 hover:text-black flex items-center gap-1.5 cursor-pointer"
               >
@@ -1015,7 +1035,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                   whileTap={{ scale: 0.98 }}
                   onClick={() => {
                     setCurrentStage(3);
-                    triggerGoldConfetti(0.5, 0.4);
                   }}
                   className="bg-[#B8860B] text-white px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-[#8C6821] flex items-center gap-2 shadow-sm cursor-pointer"
                 >
@@ -1060,7 +1079,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     whileTap={{ scale: 0.98 }}
                     onClick={() => {
                       setSelectedRibbon(ribbon);
-                      triggerGoldConfetti(0.5, 0.5);
                     }}
                     className={`p-3 border-2 text-left flex items-center gap-2.5 transition-all bg-white cursor-pointer ${
                       selectedRibbon.hex === ribbon.hex
@@ -1128,7 +1146,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     checked={hasWaxSeal}
                     onChange={(e) => {
                       setHasWaxSeal(e.target.checked);
-                      if (e.target.checked) triggerGoldConfetti(0.5, 0.5);
                     }}
                     className="w-4 h-4 accent-[#B8860B]"
                   />
@@ -1141,7 +1158,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     checked={includeFairyLights}
                     onChange={(e) => {
                       setIncludeFairyLights(e.target.checked);
-                      if (e.target.checked) triggerGoldConfetti(0.5, 0.5);
                     }}
                     className="w-4 h-4 accent-[#B8860B]"
                   />
@@ -1154,7 +1170,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     checked={includePartyPopper}
                     onChange={(e) => {
                       setIncludePartyPopper(e.target.checked);
-                      if (e.target.checked) triggerPartyPopperConfetti(0.5, 0.5);
                     }}
                     className="w-4 h-4 accent-[#B8860B]"
                   />
@@ -1182,7 +1197,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     key={occ}
                     onClick={() => {
                       setSelectedOccasion(occ);
-                      triggerGoldConfetti(0.5, 0.5);
                     }}
                     className={`px-3 py-1.5 text-xs font-bold border transition-colors cursor-pointer ${
                       selectedOccasion === occ
@@ -1250,7 +1264,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     type="button"
                     onClick={() => {
                       setCardMessage(preset);
-                      triggerRomanticConfetti(0.5, 0.5);
                     }}
                     className="text-[10px] text-amber-900 bg-amber-100 hover:bg-amber-200 px-2 py-0.5 border border-amber-300 cursor-pointer"
                   >
@@ -1265,7 +1278,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
               <button
                 onClick={() => {
                   setCurrentStage(2);
-                  triggerGoldConfetti(0.5, 0.4);
                 }}
                 className="text-xs font-bold uppercase tracking-wider text-stone-700 hover:text-black flex items-center gap-1.5 cursor-pointer"
               >
@@ -1274,9 +1286,8 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => {
-                  setCurrentStage(4);
-                  triggerGoldConfetti(0.5, 0.4);
+onClick={() => {
+                  setCurrentStage(2);
                 }}
                 className="bg-[#B8860B] text-white px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-[#8C6821] flex items-center gap-2 shadow-sm cursor-pointer"
               >
@@ -1442,7 +1453,6 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
               <button
                 onClick={() => {
                   setCurrentStage(2);
-                  triggerGoldConfetti(0.5, 0.4);
                 }}
                 className="text-xs font-bold text-stone-600 hover:text-black underline flex items-center gap-1 cursor-pointer"
               >

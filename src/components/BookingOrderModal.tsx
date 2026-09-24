@@ -337,7 +337,6 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
     }
     setStep1Error('');
     setCheckoutStep(2);
-    triggerGoldConfetti(0.5, 0.4);
 
     // Smooth scroll to top of modal form
     const formEl = document.getElementById('booking-modal-scrollable');
