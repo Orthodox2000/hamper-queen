@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import {
   X,
   MapPin,
@@ -30,6 +31,9 @@ import {
   Trash2,
   Lock,
   Search,
+  TicketPercent,
+  Scissors,
+  BadgeCheck,
 } from 'lucide-react';
 import { HAMPER_QUEEN_PRODUCTS, HamperQueenProduct, HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
 import { CustomHamper } from '../types';
@@ -227,9 +231,24 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
     setCheckoutLines((prev) => prev.filter((l) => l.key !== key));
   };
 
+  // Promo / coupon state (validated via /api/promo/validate; burned at order creation)
+  const [promoInput, setPromoInput] = useState('');
+  const [promo, setPromo] = useState<null | {
+    code: string;
+    kind: 'flat' | 'percent';
+    value: number;
+    discount: number;
+    eventName?: string;
+  }>(null);
+  const [promoStatus, setPromoStatus] = useState<'idle' | 'checking' | 'invalid' | 'error'>('idle');
+  const [promoError, setPromoError] = useState('');
+  const [promoJustApplied, setPromoJustApplied] = useState(false);
+
   const orderSubtotal = checkoutLines.reduce((sum, l) => sum + l.priceValue * l.qty, 0);
   const orderDeliveryFee = orderSubtotal === 0 ? 0 : orderSubtotal >= 499 ? 0 : 49;
-  const orderGrandTotal = orderSubtotal + orderDeliveryFee;
+  const orderDiscount = promo?.discount ?? 0;
+  const orderOriginalGrandTotal = orderSubtotal + orderDeliveryFee;
+  const orderGrandTotal = Math.max(0, orderOriginalGrandTotal - orderDiscount);
   const primaryProduct = checkoutLines.find((l) => l.kind === 'product')?.product;
   const [occasion, setOccasion] = useState('Birthday Celebration');
   const [deliveryDate, setDeliveryDate] = useState(() => {
@@ -261,6 +280,11 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
       setStep2Error('');
       setOrderError('');
       setConsentGiven(false);
+      setPromo(null);
+      setPromoInput('');
+      setPromoStatus('idle');
+      setPromoError('');
+      setPromoJustApplied(false);
     }
   }, [isOpen]);
 
@@ -300,6 +324,53 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
     // Smooth scroll to top of modal form
     const formEl = document.getElementById('booking-modal-scrollable');
     if (formEl) formEl.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Apply a coupon via the preview-only validate endpoint (never burns it)
+  const handleApplyPromo = async () => {
+    const code = promoInput.trim().toUpperCase();
+    setPromoError('');
+    if (!code) {
+      setPromoStatus('invalid');
+      setPromoError('Enter a coupon code first.');
+      return;
+    }
+    setPromoStatus('checking');
+    try {
+      const res = await fetch('/api/promo/validate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code, subtotal: orderSubtotal }),
+      });
+      const data = await res.json().catch(() => null);
+      if (!res.ok || !data?.valid) {
+        setPromoStatus('invalid');
+        setPromoError(data?.error || 'That coupon is invalid, expired, or already used.');
+        return;
+      }
+      setPromo({
+        code: data.code,
+        kind: data.kind,
+        value: data.value,
+        discount: data.discount,
+        eventName: data.eventName,
+      });
+      setPromoInput('');
+      setPromoStatus('idle');
+      setPromoJustApplied(true);
+      triggerGoldConfetti(0.5, 0.62);
+      setTimeout(() => setPromoJustApplied(false), 1600);
+    } catch {
+      setPromoStatus('error');
+      setPromoError('Could not check the coupon right now.');
+    }
+  };
+
+  const handleRemovePromo = () => {
+    setPromo(null);
+    setPromoInput('');
+    setPromoStatus('idle');
+    setPromoError('');
   };
 
   // Step 2 Submission & Validation → save the order to MongoDB via the API
@@ -372,12 +443,19 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
           },
           payment: { method: paymentOption },
           consent: true,
+          promoCode: promo?.code,
           browserLanguage: typeof navigator !== 'undefined' ? navigator.language : undefined,
         }),
       });
 
       const data = await res.json();
       if (!res.ok || !data.trackingId) {
+        if (data.promoError) {
+          setPromo(null);
+          setPromoInput('');
+          setPromoStatus('invalid');
+          setStep2Error('That coupon was just redeemed or is no longer available. Remove it and try again, or continue without it.');
+        }
         throw new Error(data.error || 'Could not save your order right now.');
       }
 
@@ -444,6 +522,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
       (addOnsList.length > 0 ? `✨ *Add-ons:* ${addOnsList.join(', ')}\n` : '') +
       (customNotes ? `📝 *Special Requests/Substitutions:* ${customNotes}\n` : '') +
       `💳 *Payment Preference:* ${paymentOption.toUpperCase()}\n` +
+      (promo && promo.discount > 0 ? `🎟️ *Coupon Applied:* ${promo.code} (−INR ${promo.discount.toLocaleString('en-IN')})\n` : '') +
       `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
       `📋 *WHAT IS PRESENT (INCLUDED ITEMS):*\n` +
       `${itemsSummary || linesList}\n` +
@@ -763,6 +842,109 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                     Items in your cart are saved to your real Hamper Queen order. Adjust quantities before proceeding — after checkout the cart clears automatically.
                   </p>
 
+                  {/* Coupon apply */}
+                  <div className="p-4 rounded-2xl bg-[#FFFDF9] border-2 border-dashed border-[#D4AF37]/60 shadow-2xs">
+                    <div className="flex items-center gap-2 mb-2">
+                      <TicketPercent className="w-4 h-4 text-[#B8860B]" />
+                      <span className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#141414]">
+                        Have a Coupon?
+                      </span>
+                    </div>
+                    <AnimatePresence mode="popLayout">
+                      {promo ? (
+                        <motion.div
+                          key={promo.code}
+                          initial={{ opacity: 1 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0, scale: 0.6, x: 24 }}
+                          transition={{ duration: 0.2 }}
+                          className="relative"
+                        >
+                          <AnimatePresence>
+                            {promoJustApplied && (
+                              <motion.div
+                                initial={{ opacity: 1, scale: 0.35 }}
+                                animate={{ opacity: 0, scale: 2.4 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 1.3, ease: 'easeOut' }}
+                                className="pointer-events-none absolute inset-0 z-10 rounded-xl border-4 border-dashed border-[#B8860B] bg-white/70 flex items-center justify-center"
+                              >
+                                <span className="font-cinzel text-sm font-black text-[#8C6821] tracking-widest -rotate-6">
+                                  CUT &middot; APPLIED
+                                </span>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                          <motion.div
+                            initial={{ opacity: 0, scale: 1.7, y: -8, rotate: -3 }}
+                            animate={{ opacity: 1, scale: 1, y: 0, rotate: 0 }}
+                            transition={{ type: 'spring', stiffness: 360, damping: 20 }}
+                            className="flex items-center justify-between gap-2 p-3 rounded-xl bg-gradient-to-r from-[#141414] to-[#241E16] border border-[#D4AF37]/70 shadow-sm"
+                          >
+                            <div className="flex items-center gap-2 min-w-0">
+                              <Scissors className="w-4 h-4 text-[#DFBA54] shrink-0" />
+                              <div className="min-w-0">
+                                <p className="font-mono text-sm font-extrabold tracking-widest text-[#F3E5AB] truncate">
+                                  {promo.code}
+                                </p>
+                                <p className="text-[10px] text-white/70 truncate">
+                                  {promo.eventName ? `${promo.eventName} · ` : ''}
+                                  {promo.kind === 'percent' ? `${promo.value}% off` : `INR ${promo.value} off`}
+                                </p>
+                              </div>
+                            </div>
+                            <div className="flex items-center gap-2 shrink-0">
+                              <span className="text-xs font-bold text-emerald-300">
+                                −INR {promo.discount.toLocaleString('en-IN')}
+                              </span>
+                              <button
+                                onClick={handleRemovePromo}
+                                aria-label="Remove coupon"
+                                className="p-1 rounded-full hover:bg-white/10 text-white/70 hover:text-white transition-colors cursor-pointer"
+                              >
+                                <X className="w-4 h-4" />
+                              </button>
+                            </div>
+                          </motion.div>
+                        </motion.div>
+                      ) : (
+                        <motion.div key="promo-form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex gap-2">
+                          <input
+                            value={promoInput}
+                            onChange={(e) => setPromoInput(e.target.value.toUpperCase().slice(0, 16))}
+                            placeholder="FIRSTHAMPER"
+                            maxLength={16}
+                            className="flex-1 rounded-xl bg-white border border-[#E3DCCB] px-3 py-2.5 text-xs font-semibold text-[#141414] placeholder-[#A49B8A] uppercase focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/60 focus:border-[#D4AF37]"
+                          />
+                          <button
+                            type="button"
+                            onClick={handleApplyPromo}
+                            disabled={promoStatus === 'checking'}
+                            className="px-4 py-2.5 rounded-xl bg-[#141414] hover:bg-[#252525] disabled:opacity-50 disabled:cursor-not-allowed text-[#DFBA54] text-xs font-cinzel font-bold border border-[#D4AF37] transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                          >
+                            {promoStatus === 'checking' ? (
+                              <>
+                                <Loader2 className="w-3.5 h-3.5 animate-spin" /> Check
+                              </>
+                            ) : (
+                              <>Apply</>
+                            )}
+                          </button>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                    {promoStatus === 'checking' && (
+                      <p className="text-[10px] text-[#8C6821] mt-2 flex items-center gap-1 font-semibold">
+                        Verifying coupon against live inventory…
+                      </p>
+                    )}
+                    {promoError && (
+                      <p className="text-[10px] text-[#B3261E] mt-2 flex items-center gap-1 font-semibold">
+                        <AlertCircle className="w-3.5 h-3.5" /> {promoError}
+                      </p>
+                    )}
+                  </div>
+
                   {/* Order totals preview */}
                   {checkoutLines.length > 0 && (
                     <div className="p-4 rounded-2xl bg-white border border-[#EAE5D9] shadow-2xs space-y-1.5 text-xs">
@@ -776,9 +958,43 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                           {orderDeliveryFee === 0 ? 'FREE' : `INR ${orderDeliveryFee}`}
                         </strong>
                       </div>
+                      <AnimatePresence mode="popLayout">
+                        {orderDiscount > 0 && (
+                          <motion.div
+                            key="discount-row"
+                            initial={{ opacity: 0, x: 16 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ type: 'spring', stiffness: 300, damping: 26 }}
+                            className="flex items-center justify-between text-[#1E7B3C]"
+                          >
+                            <span className="inline-flex items-center gap-1.5">
+                              <BadgeCheck className="w-3.5 h-3.5" /> Coupon {promo?.code}
+                            </span>
+                            <strong>−INR {orderDiscount.toLocaleString('en-IN')}</strong>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                       <div className="flex items-center justify-between pt-1.5 border-t border-[#EAE5D9] text-sm">
                         <span className="font-semibold">Grand Total (approx)</span>
-                        <strong className="font-cinzel text-[#B8860B]">{orderGrandTotal > 0 ? `INR ${orderGrandTotal.toLocaleString('en-IN')}` : 'On request'}</strong>
+                        <div className="text-right">
+                          {orderDiscount > 0 && (
+                            <span className="block text-[11px] text-[#A49B8A] line-through">
+                              {orderOriginalGrandTotal > 0 ? `INR ${orderOriginalGrandTotal.toLocaleString('en-IN')}` : ''}
+                            </span>
+                          )}
+                          <AnimatePresence mode="popLayout">
+                            <motion.strong
+                              key={orderGrandTotal}
+                              initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                              animate={{ opacity: 1, y: 0, scale: 1 }}
+                              transition={{ type: 'spring', stiffness: 320, damping: 24 }}
+                              className="block font-cinzel text-[#B8860B]"
+                            >
+                              {orderGrandTotal > 0 ? `INR ${orderGrandTotal.toLocaleString('en-IN')}` : 'On request'}
+                            </motion.strong>
+                          </AnimatePresence>
+                        </div>
                       </div>
                     </div>
                   )}
@@ -1441,6 +1657,13 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                   {flatBuilding}, {streetAddress}{landmark ? `, Near ${landmark}` : ''}, {city} - {pincode}
                 </strong>
               </div>
+
+              {promo && promo.discount > 0 && (
+                <div className="rounded-xl bg-emerald-50 border border-emerald-200 p-3 text-[11px] text-[#1E7B3C]">
+                  <span className="font-bold">Coupon {promo.code} applied: </span>
+                  You saved INR {promo.discount.toLocaleString('en-IN')} on this order. Your final total was adjusted accordingly.
+                </div>
+              )}
 
               <div className="pt-2 border-t border-[#EAE5D9] rounded-xl bg-[#FAF5E8] p-3 text-[11px] text-[#524B40]">
                 <span className="font-bold text-[#8C6821]">Payment Pending: </span>
