@@ -9,7 +9,8 @@
     "start": "next start -p 3000",
     "lint": "tsc --noEmit",
     "db:test": "node --env-file=.env scripts/test-mongo.mjs",
-    "db:bootstrap": "node --env-file=.env scripts/bootstrap-db.mjs"
+    "db:bootstrap": "node --env-file=.env scripts/bootstrap-db.mjs",
+    "db:test-promo": "node --env-file=.env scripts/test-promo.mjs"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",
