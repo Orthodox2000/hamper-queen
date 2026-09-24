@@ -8,7 +8,7 @@ import {
   validateOrderPayload,
 } from '../../../lib/orders';
 import { resolveProduct } from '../../../lib/catalog';
-import { isAdminRequest } from '../../../lib/admin';
+import { requireAdmin } from '../../../lib/auth';
 import { OrderLine } from '../../../types/order';
 
 export async function POST(request: NextRequest) {
@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET(request: NextRequest) {
-  if (!isAdminRequest(request)) {
+  if (!(await requireAdmin(request))) {
     return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
   }
   const search = request.nextUrl.searchParams;

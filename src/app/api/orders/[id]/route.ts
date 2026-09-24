@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { isAdminRequest } from '../../../../lib/admin';
+import { requireAdmin } from '../../../../lib/auth';
 import { deleteOrder, lookupOrderById, toOrderRecord, updateOrder } from '../../../../lib/orders';
 
 type RouteContext = { params: Promise<{ id: string }> };
 
 export async function GET(request: NextRequest, { params }: RouteContext) {
-  if (!isAdminRequest(request)) {
+  if (!(await requireAdmin(request))) {
     return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
   }
   const { id } = await params;
@@ -15,7 +15,7 @@ export async function GET(request: NextRequest, { params }: RouteContext) {
 }
 
 export async function PATCH(request: NextRequest, { params }: RouteContext) {
-  if (!isAdminRequest(request)) {
+  if (!(await requireAdmin(request))) {
     return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
   }
   const { id } = await params;
@@ -45,7 +45,7 @@ export async function PATCH(request: NextRequest, { params }: RouteContext) {
 }
 
 export async function DELETE(request: NextRequest, { params }: RouteContext) {
-  if (!isAdminRequest(request)) {
+  if (!(await requireAdmin(request))) {
     return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
   }
   const { id } = await params;

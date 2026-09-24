@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { isAdminRequest } from '../../../../../lib/admin';
+import { requireAdmin } from '../../../../../lib/auth';
 import { getCatalogOverridesCollection } from '../../../../../lib/mongo';
 
 type RouteContext = { params: Promise<{ id: string }> };
 
 export async function DELETE(request: NextRequest, { params }: RouteContext) {
-  if (!isAdminRequest(request)) {
+  if (!(await requireAdmin(request))) {
     return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
   }
   const { id } = await params;

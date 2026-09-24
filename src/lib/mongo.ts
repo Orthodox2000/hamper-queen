@@ -98,4 +98,27 @@ export async function getCatalogOverridesCollection() {
   return col;
 }
 
+export async function getPromoCodesCollection() {
+  const db = await getDb();
+  const col = db.collection('promoCodes');
+  await col.createIndex({ code: 1 }, { name: 'idx_code' });
+  await col.createIndex({ redeemedAt: 1 }, { name: 'idx_redeemedAt' });
+  return col;
+}
+
+export async function getAdminUsersCollection() {
+  const db = await getDb();
+  const col = db.collection('adminUsers');
+  await col.createIndex({ username: 1 }, { unique: true, name: 'uniq_username' });
+  return col;
+}
+
+export async function getSessionsCollection() {
+  const db = await getDb();
+  const col = db.collection('sessions');
+  await col.createIndex({ token: 1 }, { unique: true, name: 'uniq_token' });
+  await col.createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0, name: 'ttl_expiresAt' });
+  return col;
+}
+
 export { DB_NAME };

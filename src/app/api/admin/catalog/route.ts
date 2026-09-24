@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { isAdminRequest } from '../../../../lib/admin';
+import { requireAdmin } from '../../../../lib/auth';
 import { getCatalogOverridesCollection } from '../../../../lib/mongo';
 import { HAMPER_QUEEN_PRODUCTS, HamperQueenProduct } from '../../../../data/hamperQueenCatalog';
 
@@ -14,7 +14,7 @@ function toDto(d: Record<string, unknown>) {
 }
 
 export async function GET(request: NextRequest) {
-  if (!isAdminRequest(request)) {
+  if (!(await requireAdmin(request))) {
     return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
   }
   try {
@@ -30,7 +30,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  if (!isAdminRequest(request)) {
+  if (!(await requireAdmin(request))) {
     return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
   }
   let body: { productId?: string; fields?: Record<string, unknown> };

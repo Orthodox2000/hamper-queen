@@ -13,14 +13,15 @@ import { Crown, Lock, Loader2, AlertCircle, ArrowLeft } from 'lucide-react';
 
 export function AdminLogin() {
   const router = useRouter();
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!password) {
-      setError('Please enter the admin password.');
+    if (!username.trim() || !password) {
+      setError('Please enter your admin username and password.');
       return;
     }
     setError('');
@@ -29,7 +30,7 @@ export function AdminLogin() {
       const res = await fetch('/api/admin/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify({ username, password }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => null);
@@ -65,13 +66,24 @@ export function AdminLogin() {
           )}
 
           <div className="space-y-2">
+            <label className="block text-[11px] font-semibold text-[#524B40]">Admin Username</label>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="e.g. superadmin"
+              autoFocus
+              className="w-full px-4 py-3 rounded-2xl bg-white border border-[#D4AF37]/70 text-sm focus:outline-hidden focus:border-[#B8860B]"
+            />
+          </div>
+
+          <div className="space-y-2">
             <label className="block text-[11px] font-semibold text-[#524B40]">Admin Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••"
-              autoFocus
               className="w-full px-4 py-3 rounded-2xl bg-white border border-[#D4AF37]/70 text-sm focus:outline-hidden focus:border-[#B8860B]"
             />
           </div>
