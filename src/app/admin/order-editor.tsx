@@ -448,6 +448,14 @@ export function OrderEditor({ orderId }: Props) {
                     {order.totals.deliveryFee === 0 ? 'FREE' : `₹${order.totals.deliveryFee}`}
                   </strong>
                 </div>
+                {order.totals.discount > 0 && (
+                  <div className="flex items-center justify-between text-[#1E7B3C]">
+                    <span>
+                      Coupon {order.promo ? `(${order.promo.code})` : ''}
+                    </span>
+                    <strong>-₹{order.totals.discount.toLocaleString('en-IN')}</strong>
+                  </div>
+                )}
                 <div className="flex items-center justify-between pt-2 border-t border-[#EAE5D9] text-sm">
                   <span className="font-semibold text-[#141414]">Grand Total</span>
                   <strong className="font-cinzel text-[#B8860B]">{order.totals.grandTotal > 0 ? `₹${order.totals.grandTotal.toLocaleString('en-IN')}` : 'On request'}</strong>

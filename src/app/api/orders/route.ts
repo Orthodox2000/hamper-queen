@@ -9,6 +9,7 @@ import {
 } from '../../../lib/orders';
 import { resolveProduct } from '../../../lib/catalog';
 import { requireAdmin } from '../../../lib/auth';
+import { PromoRedeemError } from '../../../lib/promo';
 import { OrderLine } from '../../../types/order';
 
 export async function POST(request: NextRequest) {
@@ -56,6 +57,12 @@ export async function POST(request: NextRequest) {
     const result = await createOrder({ ...body, lines } as CreateOrderPayload, meta);
     return NextResponse.json(result, { status: 201 });
   } catch (err) {
+    if (err instanceof PromoRedeemError) {
+      return NextResponse.json(
+        { error: err.message, promoError: true },
+        { status: 400 }
+      );
+    }
     console.error('createOrder failed:', err);
     return NextResponse.json(
       { error: 'Could not save your order right now. Please try again or order on WhatsApp.' },

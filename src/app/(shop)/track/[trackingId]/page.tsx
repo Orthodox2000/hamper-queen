@@ -260,6 +260,14 @@ export default function TrackStatusPage({ params }: Props) {
                   {order.totals.deliveryFee === 0 ? 'FREE' : `INR ${order.totals.deliveryFee}`}
                 </strong>
               </div>
+              {order.totals.discount > 0 && (
+                <div className="flex items-center justify-between text-[#1E7B3C]">
+                  <span>
+                    Coupon {order.promo ? `(${order.promo.code})` : ''} applied
+                  </span>
+                  <strong>-INR {order.totals.discount.toLocaleString('en-IN')}</strong>
+                </div>
+              )}
               <div className="flex items-center justify-between pt-2 border-t border-[#EAE5D9] text-base">
                 <span className="font-semibold text-[#141414]">Grand Total (approx)</span>
                 <strong className="font-cinzel text-[#B8860B]">{order.totals.grandTotal > 0 ? `INR ${order.totals.grandTotal.toLocaleString('en-IN')}` : 'On request'}</strong>

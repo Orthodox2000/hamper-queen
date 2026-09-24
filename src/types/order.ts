@@ -34,6 +34,16 @@ export const ORDER_STATUS_LABELS: Record<OrderStatus, string> = {
 export type PaymentState = 'awaiting_payment' | 'received';
 export type PaymentMethod = 'upi' | 'bank_transfer' | 'advance_cod' | 'not_set';
 
+export type PromoDiscountKind = 'flat' | 'percent';
+
+/** Promo applied to an order: which coupon was redeemed and by what rule. */
+export interface OrderPromo {
+  code: string;
+  kind: PromoDiscountKind;
+  value: number;
+  couponId: string;
+}
+
 export type OrderLineKind = 'product' | 'custom_hamper' | 'bulk';
 
 export interface OrderLine {
@@ -85,6 +95,7 @@ export interface OrderEvent {
 export interface OrderTotals {
   subtotal: number;
   deliveryFee: number;
+  discount: number;
   grandTotal: number;
 }
 
@@ -125,6 +136,7 @@ export interface OrderRecord {
     customNotes: string;
   };
   totals: OrderTotals;
+  promo?: OrderPromo;
   consent: {
     given: boolean;
     at: string;
@@ -154,6 +166,7 @@ export interface PublicOrder {
   delivery: OrderRecord['delivery'];
   preferences: Omit<OrderRecord['preferences'], 'customNotes'> & { customNotes?: string };
   totals: OrderTotals;
+  promo?: OrderPromo;
   events: OrderEvent[];
   notes?: string;
   createdAt: string;

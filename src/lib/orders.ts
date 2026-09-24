@@ -17,6 +17,13 @@ import {
   PaymentState,
   PublicOrder,
 } from '../types/order';
+import {
+  burnPromoCoupon,
+  claimPromoCode,
+  normalizeCode,
+  PromoRedeemError,
+  rollbackPromoClaim,
+} from './promo';
 
 const TRACKING_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789'; // no 0/O/1/I
 const TRACKING_LENGTH = 6;
@@ -34,7 +41,7 @@ export function parsePriceString(price: string): number {
 export function computeTotals(lines: OrderLine[]) {
   const subtotal = lines.reduce((sum, line) => sum + line.priceValue * Math.max(1, line.qty), 0);
   const deliveryFee = subtotal === 0 ? 0 : subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
-  return { subtotal, deliveryFee, grandTotal: subtotal + deliveryFee };
+  return { subtotal, deliveryFee, discount: 0, grandTotal: subtotal + deliveryFee };
 }
 
 function randomTrackingCode(): string {
@@ -85,6 +92,7 @@ export interface CreateOrderPayload {
   };
   payment: { method: PaymentMethod };
   consent: boolean;
+  promoCode?: string;
   browserLanguage?: string;
 }
 
@@ -126,6 +134,24 @@ export async function createOrder(
   const totals = computeTotals(payload.lines);
   const now = new Date().toISOString();
 
+  let promo: OrderRecord['promo'];
+  let promoClaim: Awaited<ReturnType<typeof claimPromoCode>>;
+  const promoCode = normalizeCode(payload.promoCode ?? '');
+  if (promoCode) {
+    promoClaim = await claimPromoCode(promoCode, totals.subtotal, trackingId);
+    if (!promoClaim) {
+      throw new PromoRedeemError('That coupon is invalid, expired, or already used.');
+    }
+    totals.discount = promoClaim.discount;
+    totals.grandTotal = Math.max(0, totals.subtotal + totals.deliveryFee - totals.discount);
+    promo = {
+      code: promoCode,
+      kind: promoClaim.kind,
+      value: promoClaim.value,
+      couponId: promoClaim.couponId,
+    };
+  }
+
   const doc = {
     trackingId,
     status: 'awaiting_payment' as OrderStatus,
@@ -162,6 +188,7 @@ export async function createOrder(
       customNotes: cleanString(payload.preferences.customNotes),
     },
     totals,
+    promo: promo ?? undefined,
     consent: { given: true, at: now },
     meta: {
       ip: meta.ip,
@@ -175,7 +202,14 @@ export async function createOrder(
     updatedAt: now,
   };
 
-  const result = await collection.insertOne(doc as object);
+  let result;
+  try {
+    result = await collection.insertOne(doc as object);
+  } catch (error) {
+    if (promoClaim) await rollbackPromoClaim(promoClaim.couponId);
+    throw error;
+  }
+  if (promoClaim) await burnPromoCoupon(promoClaim.couponId);
   return { trackingId, orderId: String(result.insertedId), status: doc.status };
 }
 
