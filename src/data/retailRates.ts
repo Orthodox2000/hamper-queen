@@ -23,6 +23,69 @@ export const RETAIL_RATES_LOCATION = 'Gurugram';
 
 export const RETAIL_RATES: RetailRateItem[] = [
   {
+    "key": "abu_haami_jannatul_firdaus_attar",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Abu Haami",
+    "name": "Abu Haami Attar (Jannatul Firdaus)",
+    "unit": "6 ml",
+    "price": 295,
+    "mrp": 599,
+    "rating": null,
+    "image": "/retail/abu_haami_jannatul_firdaus_attar.jpg",
+    "prid": 756517,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "6 ml",
+        "price": 295,
+        "mrp": 599
+      }
+    ]
+  },
+  {
+    "key": "abu_haami_white_oudh_attar",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Abu Haami",
+    "name": "Abu Haami White Oudh Attar (Woody)",
+    "unit": "6 ml",
+    "price": 199,
+    "mrp": 599,
+    "rating": null,
+    "image": "/retail/abu_haami_white_oudh_attar.jpg",
+    "prid": 633008,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "6 ml",
+        "price": 199,
+        "mrp": 599
+      }
+    ]
+  },
+  {
+    "key": "alternate_scents_imaginative",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Alternate Scents",
+    "name": "Alternate Scents Perfume (Imaginative)",
+    "unit": "40 ml",
+    "price": 299,
+    "mrp": 999,
+    "rating": null,
+    "image": "/retail/alternate_scents_imaginative.jpg",
+    "prid": 1377489,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "40 ml",
+        "price": 299,
+        "mrp": 999
+      }
+    ]
+  },
+  {
     "key": "amul_dark_35g",
     "note": "retail chocolate SKU",
     "category": "retail chocolate SKU",
@@ -65,6 +128,90 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "and_dainty_glam_body_mist",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "AND",
+    "name": "AND Dainty Glam Body Mist (Fruity Floral)",
+    "unit": "200 ml",
+    "price": 179,
+    "mrp": 400,
+    "rating": null,
+    "image": "/retail/and_dainty_glam_body_mist.jpg",
+    "prid": 795336,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "200 ml",
+        "price": 179,
+        "mrp": 400
+      }
+    ]
+  },
+  {
+    "key": "and_shades_of_me_ajmal",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "AND",
+    "name": "AND Shades of me - Crafted by Ajmal",
+    "unit": "250 ml",
+    "price": 669,
+    "mrp": 1500,
+    "rating": null,
+    "image": "/retail/and_shades_of_me_ajmal.jpg",
+    "prid": 530893,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "250 ml",
+        "price": 669,
+        "mrp": 1500
+      }
+    ]
+  },
+  {
+    "key": "aqualogica_sun_kissed_vanilla",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Aqualogica",
+    "name": "Aqualogica Refresh+ Sun Kissed Vanilla Perfume Body Mist",
+    "unit": "1 unit",
+    "price": 439,
+    "mrp": 499,
+    "rating": null,
+    "image": "/retail/aqualogica_sun_kissed_vanilla.jpg",
+    "prid": 576541,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 439,
+        "mrp": 499
+      }
+    ]
+  },
+  {
+    "key": "arabian_aroma_old_money_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Arabian Aroma",
+    "name": "Arabian Aroma Eau de Parfum (Old Money)",
+    "unit": "50 ml",
+    "price": 299,
+    "mrp": 799,
+    "rating": null,
+    "image": "/retail/arabian_aroma_old_money_edp.jpg",
+    "prid": 738879,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 299,
+        "mrp": 799
+      }
+    ]
+  },
+  {
     "key": "arrabi_glossy_face_mug_set",
     "note": "retail drinkware (mugs & glasses)",
     "category": "drinkware",
@@ -103,6 +250,153 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "1 set",
         "price": 899,
         "mrp": 3989
+      }
+    ]
+  },
+  {
+    "key": "be_bodywise_flora_underarm_rollon",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Be Bodywise",
+    "name": "Be Bodywise Flora 4% AHA BHA Under Arm Roll-On",
+    "unit": "50 ml",
+    "price": 349,
+    "mrp": 349,
+    "rating": null,
+    "image": "/retail/be_bodywise_flora_underarm_rollon.jpg",
+    "prid": 547444,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 349,
+        "mrp": 349
+      }
+    ]
+  },
+  {
+    "key": "beardo_1blade_body_beard_trimmer",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Beardo",
+    "name": "Beardo 1-Blade Body & Beard Trimmer for Men",
+    "unit": "1 unit",
+    "price": 960,
+    "mrp": 1499,
+    "rating": null,
+    "image": "/retail/beardo_1blade_body_beard_trimmer.jpg",
+    "prid": 568034,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 960,
+        "mrp": 1499
+      }
+    ]
+  },
+  {
+    "key": "beardo_chrome_beast_trimmer_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Beardo",
+    "name": "Beardo Chrome Beast Grooming Men's Multi Grooming Trimmer Kit",
+    "unit": "1 unit",
+    "price": 1652,
+    "mrp": 2499,
+    "rating": null,
+    "image": "/retail/beardo_chrome_beast_trimmer_kit.jpg",
+    "prid": 610042,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1652,
+        "mrp": 2499
+      }
+    ]
+  },
+  {
+    "key": "beardo_godfather_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Beardo",
+    "name": "Beardo Long Lasting Perfume for Men EDP (Godfather)",
+    "unit": "50 ml",
+    "price": 300,
+    "mrp": 399,
+    "rating": null,
+    "image": "/retail/beardo_godfather_edp.jpg",
+    "prid": 500615,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 300,
+        "mrp": 399
+      }
+    ]
+  },
+  {
+    "key": "beardo_legend_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Beardo",
+    "name": "Beardo Long Lasting Perfume for Men EDP (Legend)",
+    "unit": "50 ml",
+    "price": 301,
+    "mrp": 449,
+    "rating": null,
+    "image": "/retail/beardo_legend_edp.jpg",
+    "prid": 663657,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 301,
+        "mrp": 449
+      }
+    ]
+  },
+  {
+    "key": "beardo_mustache_beard_wax",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Beardo",
+    "name": "Beardo Mustache & Beard Wax for Styling & Hold",
+    "unit": "50 g",
+    "price": 360,
+    "mrp": 450,
+    "rating": null,
+    "image": "/retail/beardo_mustache_beard_wax.jpg",
+    "prid": 547536,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 g",
+        "price": 360,
+        "mrp": 450
+      }
+    ]
+  },
+  {
+    "key": "bella_vita_date_woman_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Bella Vita",
+    "name": "Bella Vita Eau de Parfum (Date Woman)",
+    "unit": "20 ml",
+    "price": 149,
+    "mrp": 399,
+    "rating": null,
+    "image": "/retail/bella_vita_date_woman_edp.jpg",
+    "prid": 681352,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "20 ml",
+        "price": 149,
+        "mrp": 399
       }
     ]
   },
@@ -166,6 +460,132 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "6 pcs",
         "price": 1199,
         "mrp": 1400
+      }
+    ]
+  },
+  {
+    "key": "blabliblu_love_drunk_perfume",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Bla Bli Blu",
+    "name": "Bla Bli Blu Perfume (Love Drunk)",
+    "unit": "30 ml",
+    "price": 199,
+    "mrp": 275,
+    "rating": null,
+    "image": "/retail/blabliblu_love_drunk_perfume.jpg",
+    "prid": 1367278,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "30 ml",
+        "price": 199,
+        "mrp": 275
+      }
+    ]
+  },
+  {
+    "key": "blabliblu_mens_perfume_gift_set",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Bla Bli Blu",
+    "name": "Bla Bli Blu Men Perfume Gift Set",
+    "unit": "3 x 30 ml",
+    "price": 785,
+    "mrp": 900,
+    "rating": null,
+    "image": "/retail/blabliblu_mens_perfume_gift_set.jpg",
+    "prid": 741155,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "3 x 30 ml",
+        "price": 785,
+        "mrp": 900
+      }
+    ]
+  },
+  {
+    "key": "blabliblu_perfume_gift_set_women",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Bla Bli Blu",
+    "name": "BLA BLI BLU Perfume Gift Set For Women",
+    "unit": "3 x 30 ml",
+    "price": 785,
+    "mrp": 900,
+    "rating": null,
+    "image": "/retail/blabliblu_perfume_gift_set_women.jpg",
+    "prid": 752015,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "3 x 30 ml",
+        "price": 785,
+        "mrp": 900
+      }
+    ]
+  },
+  {
+    "key": "blue_heaven_love_lipstick_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Blue Heaven",
+    "name": "Blue Heaven Love Soft Matte Finish Lipstick Kit",
+    "unit": "10 x 1.3 g",
+    "price": 360,
+    "mrp": 449,
+    "rating": null,
+    "image": "/retail/blue_heaven_love_lipstick_kit.jpg",
+    "prid": 521591,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "10 x 1.3 g",
+        "price": 360,
+        "mrp": 449
+      }
+    ]
+  },
+  {
+    "key": "body_shop_british_rose_bloom_gift",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "The Body Shop",
+    "name": "The Body Shop Floral British Rose Bloom Gift Set",
+    "unit": "1 set",
+    "price": 770,
+    "mrp": 905,
+    "rating": null,
+    "image": "/retail/body_shop_british_rose_bloom_gift.jpg",
+    "prid": 540597,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 770,
+        "mrp": 905
+      }
+    ]
+  },
+  {
+    "key": "body_shop_nutty_shea_delight_gift",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "The Body Shop",
+    "name": "The Body Shop Nutty Shea Delight Gift Set",
+    "unit": "1 pack",
+    "price": 770,
+    "mrp": 905,
+    "rating": null,
+    "image": "/retail/body_shop_nutty_shea_delight_gift.jpg",
+    "prid": 540591,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pack",
+        "price": 770,
+        "mrp": 905
       }
     ]
   },
@@ -355,6 +775,111 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "71.5 g",
         "price": 29,
         "mrp": 30
+      }
+    ]
+  },
+  {
+    "key": "bsc_11in1_multi_grooming_trimmer",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Bombay Shaving Company",
+    "name": "Bombay Shaving Company 11-In-1 Full Men's Multi Grooming Trimmer",
+    "unit": "1 unit",
+    "price": 999,
+    "mrp": 2000,
+    "rating": null,
+    "image": "/retail/bsc_11in1_multi_grooming_trimmer.jpg",
+    "prid": 565294,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 999,
+        "mrp": 2000
+      }
+    ]
+  },
+  {
+    "key": "bsc_beard_styling_pen",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Bombay Shaving Company",
+    "name": "Bombay Shaving Company Beard Styling Pen",
+    "unit": "3 pcs",
+    "price": 250,
+    "mrp": 299,
+    "rating": null,
+    "image": "/retail/bsc_beard_styling_pen.jpg",
+    "prid": 626727,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "3 pcs",
+        "price": 250,
+        "mrp": 299
+      }
+    ]
+  },
+  {
+    "key": "bsc_sensi_smart_razor_12",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Bombay Shaving Company",
+    "name": "Bombay Shaving Company Sensi Smart Men's Razor with 12 Cartridges",
+    "unit": "1 set",
+    "price": 600,
+    "mrp": 999,
+    "rating": null,
+    "image": "/retail/bsc_sensi_smart_razor_12.jpg",
+    "prid": 1400814,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 600,
+        "mrp": 999
+      }
+    ]
+  },
+  {
+    "key": "bsc_type_c_beard_trimmer",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Bombay Shaving Company",
+    "name": "Bombay Shaving Company Type C Beard Trimmer",
+    "unit": "1 unit",
+    "price": 649,
+    "mrp": 1000,
+    "rating": null,
+    "image": "/retail/bsc_type_c_beard_trimmer.jpg",
+    "prid": 554264,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 649,
+        "mrp": 1000
+      }
+    ]
+  },
+  {
+    "key": "bsc_type_c_flash_beard_trimmer",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Bombay Shaving Company",
+    "name": "Bombay Shaving Company Type C Flash Charge Beard Trimmer",
+    "unit": "1 unit",
+    "price": 599,
+    "mrp": 1000,
+    "rating": null,
+    "image": "/retail/bsc_type_c_flash_beard_trimmer.jpg",
+    "prid": 594438,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 599,
+        "mrp": 1000
       }
     ]
   },
@@ -611,6 +1136,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "carlton_london_eternal_mens_gift",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Carlton London",
+    "name": "Carlton London Eternal Men's Gift Box (Woody)",
+    "unit": "50 ml + 1 pc",
+    "price": 749,
+    "mrp": 2490,
+    "rating": null,
+    "image": "/retail/carlton_london_eternal_mens_gift.jpg",
+    "prid": 604366,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml + 1 pc",
+        "price": 749,
+        "mrp": 2490
+      }
+    ]
+  },
+  {
+    "key": "carmesi_fresh_blossom_rollon",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Carmesi",
+    "name": "Carmesi Under Arm Roll-On (Fresh Blossom)",
+    "unit": "50 ml",
+    "price": 175,
+    "mrp": 225,
+    "rating": null,
+    "image": "/retail/carmesi_fresh_blossom_rollon.jpg",
+    "prid": 672169,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 175,
+        "mrp": 225
+      }
+    ]
+  },
+  {
     "key": "celebrations_97g",
     "note": "retail chocolate SKU",
     "category": "retail chocolate SKU",
@@ -733,6 +1300,132 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "2 pcs",
         "price": 399,
         "mrp": 539
+      }
+    ]
+  },
+  {
+    "key": "cerave_hydrating_cleanser",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "CeraVe",
+    "name": "CeraVe Hydrating Non Foaming Face Cleanser for Normal to Dry Skin",
+    "unit": "236 ml",
+    "price": 718,
+    "mrp": 799,
+    "rating": null,
+    "image": "/retail/cerave_hydrating_cleanser.jpg",
+    "prid": 679291,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "236 ml",
+        "price": 718,
+        "mrp": 799
+      }
+    ]
+  },
+  {
+    "key": "cerave_hydrating_cleanser_88ml",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "CeraVe",
+    "name": "CeraVe Hydrating Non Foaming Face Cleanser for Normal to Dry Skin",
+    "unit": "88 ml",
+    "price": 323,
+    "mrp": 359,
+    "rating": null,
+    "image": "/retail/cerave_hydrating_cleanser_88ml.jpg",
+    "prid": 679287,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "88 ml",
+        "price": 323,
+        "mrp": 359
+      }
+    ]
+  },
+  {
+    "key": "cetaphil_gentle_skin_cleanser",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Cetaphil",
+    "name": "Cetaphil Gentle Skin Cleanser",
+    "unit": "59 ml",
+    "price": 199,
+    "mrp": 199,
+    "rating": null,
+    "image": "/retail/cetaphil_gentle_skin_cleanser.jpg",
+    "prid": 764569,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "59 ml",
+        "price": 199,
+        "mrp": 199
+      }
+    ]
+  },
+  {
+    "key": "cetaphil_hydrating_foaming_cleanser",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Cetaphil",
+    "name": "Cetaphil Hydrating Foaming Cream Face Cleanser",
+    "unit": "236 ml",
+    "price": 924,
+    "mrp": 1050,
+    "rating": null,
+    "image": "/retail/cetaphil_hydrating_foaming_cleanser.jpg",
+    "prid": 565289,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "236 ml",
+        "price": 924,
+        "mrp": 1050
+      }
+    ]
+  },
+  {
+    "key": "cetaphil_oily_skin_cleanser",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Cetaphil",
+    "name": "Cetaphil Oily Skin Face Cleanser",
+    "unit": "59 ml",
+    "price": 299,
+    "mrp": 299,
+    "rating": null,
+    "image": "/retail/cetaphil_oily_skin_cleanser.jpg",
+    "prid": 744378,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "59 ml",
+        "price": 299,
+        "mrp": 299
+      }
+    ]
+  },
+  {
+    "key": "chemist_at_play_aqua_rollon",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Chemist At Play",
+    "name": "Chemist At Play Aqua Unisex Under Arm Roll-On",
+    "unit": "40 ml",
+    "price": 348,
+    "mrp": 399,
+    "rating": null,
+    "image": "/retail/chemist_at_play_aqua_rollon.jpg",
+    "prid": 500371,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "40 ml",
+        "price": 348,
+        "mrp": 399
       }
     ]
   },
@@ -1090,6 +1783,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "80 g",
         "price": 47,
         "mrp": 50
+      }
+    ]
+  },
+  {
+    "key": "coco_crush_beard_oil_derma_roller",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Coco Crush",
+    "name": "Coco Crush Beard Oil with Derma Roller",
+    "unit": "1 set",
+    "price": 399,
+    "mrp": 690,
+    "rating": null,
+    "image": "/retail/coco_crush_beard_oil_derma_roller.jpg",
+    "prid": 787472,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 399,
+        "mrp": 690
       }
     ]
   },
@@ -1514,6 +2228,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "denver_8in1_grooming_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Denver",
+    "name": "Denver 8-in-1 Combo Men's Grooming Kit",
+    "unit": "1 set",
+    "price": 528,
+    "mrp": 749,
+    "rating": null,
+    "image": "/retail/denver_8in1_grooming_kit.jpg",
+    "prid": 765704,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 528,
+        "mrp": 749
+      }
+    ]
+  },
+  {
     "key": "desidiya_crystal_ball_curtain",
     "note": "retail decorative lighting",
     "category": "lights",
@@ -1615,6 +2350,216 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "2 pcs",
         "price": 299,
         "mrp": 849
+      }
+    ]
+  },
+  {
+    "key": "engage_mens_luxury_edp_gift_set",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Engage",
+    "name": "Engage Men's Luxury EdP Perfume Gift Set",
+    "unit": "4 x 25 ml",
+    "price": 654,
+    "mrp": 999,
+    "rating": null,
+    "image": "/retail/engage_mens_luxury_edp_gift_set.jpg",
+    "prid": 541347,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "4 x 25 ml",
+        "price": 654,
+        "mrp": 999
+      }
+    ]
+  },
+  {
+    "key": "engage_verona_edp_women",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Engage",
+    "name": "Engage Verona Eau de Parfum for Women (Citrus Fruity)",
+    "unit": "50 ml",
+    "price": 300,
+    "mrp": 449,
+    "rating": null,
+    "image": "/retail/engage_verona_edp_women.jpg",
+    "prid": 740783,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 300,
+        "mrp": 449
+      }
+    ]
+  },
+  {
+    "key": "engage_w1_women_perfume",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Engage",
+    "name": "Engage W1 Perfume Spray for Women 120ml",
+    "unit": "120 ml",
+    "price": 202,
+    "mrp": 240,
+    "rating": null,
+    "image": "/retail/engage_w1_women_perfume.jpg",
+    "prid": 188195,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "120 ml",
+        "price": 202,
+        "mrp": 240
+      }
+    ]
+  },
+  {
+    "key": "engage_w2_women_perfume",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Engage",
+    "name": "Engage W2 Perfume Spray for Women (Floral & Fruity)",
+    "unit": "120 ml",
+    "price": 179,
+    "mrp": 240,
+    "rating": null,
+    "image": "/retail/engage_w2_women_perfume.jpg",
+    "prid": 505202,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "120 ml",
+        "price": 179,
+        "mrp": 240
+      }
+    ]
+  },
+  {
+    "key": "engage_w3_women_perfume",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Engage",
+    "name": "Engage W3 Women's Perfume (Citrus & Aromatic)",
+    "unit": "120 ml",
+    "price": 213,
+    "mrp": 240,
+    "rating": null,
+    "image": "/retail/engage_w3_women_perfume.jpg",
+    "prid": 557907,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "120 ml",
+        "price": 213,
+        "mrp": 240
+      }
+    ]
+  },
+  {
+    "key": "engage_women_luxury_edp_gift_set",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Engage",
+    "name": "Engage Women's Luxury EDP Perfume Gift Set",
+    "unit": "4 x 25 ml",
+    "price": 656,
+    "mrp": 999,
+    "rating": null,
+    "image": "/retail/engage_women_luxury_edp_gift_set.jpg",
+    "prid": 541349,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "4 x 25 ml",
+        "price": 656,
+        "mrp": 999
+      }
+    ]
+  },
+  {
+    "key": "engage_yang_edp_women",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Engage",
+    "name": "Engage Yang Eau de Parfum for Women (Floral & Fruity)",
+    "unit": "50 ml",
+    "price": 327,
+    "mrp": 449,
+    "rating": null,
+    "image": "/retail/engage_yang_edp_women.jpg",
+    "prid": 669150,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 327,
+        "mrp": 449
+      }
+    ]
+  },
+  {
+    "key": "envy_natural_mens_perfume",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Envy",
+    "name": "Envy Natural Men's Perfume",
+    "unit": "70 ml",
+    "price": 299,
+    "mrp": 399,
+    "rating": null,
+    "image": "/retail/envy_natural_mens_perfume.jpg",
+    "prid": 497873,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "70 ml",
+        "price": 299,
+        "mrp": 399
+      }
+    ]
+  },
+  {
+    "key": "faces_canada_beauty_bundle_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Faces Canada",
+    "name": "Faces Canada Beauty Bundle Makeup Kit",
+    "unit": "1 set",
+    "price": 779,
+    "mrp": 1186,
+    "rating": null,
+    "image": "/retail/faces_canada_beauty_bundle_kit.jpg",
+    "prid": 701820,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 779,
+        "mrp": 1186
+      }
+    ]
+  },
+  {
+    "key": "faces_canada_splash_nail_love_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Faces Canada",
+    "name": "Faces Canada Splash Nail Paint Love Kit",
+    "unit": "4 x 8 ml",
+    "price": 304,
+    "mrp": 516,
+    "rating": null,
+    "image": "/retail/faces_canada_splash_nail_love_kit.jpg",
+    "prid": 541342,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "4 x 8 ml",
+        "price": 304,
+        "mrp": 516
       }
     ]
   },
@@ -1804,6 +2749,153 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "40 g",
         "price": 45,
         "mrp": 45
+      }
+    ]
+  },
+  {
+    "key": "forest_essentials_delicate_cleanser",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Forest Essentials",
+    "name": "Forest Essentials Delicate Face Cleanser (Kashmiri Saffron & Neem)",
+    "unit": "50 ml",
+    "price": 495,
+    "mrp": 495,
+    "rating": null,
+    "image": "/retail/forest_essentials_delicate_cleanser.jpg",
+    "prid": 482297,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 495,
+        "mrp": 495
+      }
+    ]
+  },
+  {
+    "key": "forest_essentials_mallika_gift",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Forest Essentials",
+    "name": "Forest Essentials Mallika - Delights Gift Set",
+    "unit": "6 x 50 ml",
+    "price": 3295,
+    "mrp": 3295,
+    "rating": null,
+    "image": "/retail/forest_essentials_mallika_gift.jpg",
+    "prid": 544607,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "6 x 50 ml",
+        "price": 3295,
+        "mrp": 3295
+      }
+    ]
+  },
+  {
+    "key": "forest_essentials_mashobra_cleanser",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Forest Essentials",
+    "name": "Forest Essentials Face Cleanser Mashobra Honey, Lemon & Rosewater",
+    "unit": "50 ml",
+    "price": 495,
+    "mrp": 495,
+    "rating": null,
+    "image": "/retail/forest_essentials_mashobra_cleanser.jpg",
+    "prid": 482298,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 495,
+        "mrp": 495
+      }
+    ]
+  },
+  {
+    "key": "forest_essentials_mini_delights_gift",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Forest Essentials",
+    "name": "Forest Essentials Mini Delights Gift Set",
+    "unit": "4 pcs",
+    "price": 2295,
+    "mrp": 2295,
+    "rating": null,
+    "image": "/retail/forest_essentials_mini_delights_gift.jpg",
+    "prid": 544609,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "4 pcs",
+        "price": 2295,
+        "mrp": 2295
+      }
+    ]
+  },
+  {
+    "key": "fourfive_rose_vanilla_mist",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Four.Five",
+    "name": "Four.Five Active Hygiene Rose Vanilla Body Mist",
+    "unit": "50 ml",
+    "price": 349,
+    "mrp": 499,
+    "rating": null,
+    "image": "/retail/fourfive_rose_vanilla_mist.jpg",
+    "prid": 804174,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 349,
+        "mrp": 499
+      }
+    ]
+  },
+  {
+    "key": "french_essence_bleu_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "French Essence",
+    "name": "French Essence Eau de Parfum (Bleu)",
+    "unit": "60 ml",
+    "price": 199,
+    "mrp": 399,
+    "rating": null,
+    "image": "/retail/french_essence_bleu_edp.jpg",
+    "prid": 740986,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "60 ml",
+        "price": 199,
+        "mrp": 399
+      }
+    ]
+  },
+  {
+    "key": "french_essence_bloom_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "French Essence",
+    "name": "French Essence Luxury Women Eau de Parfum (Bloom)",
+    "unit": "30 ml",
+    "price": 169,
+    "mrp": 249,
+    "rating": null,
+    "image": "/retail/french_essence_bloom_edp.jpg",
+    "prid": 730556,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "30 ml",
+        "price": 169,
+        "mrp": 249
       }
     ]
   },
@@ -2165,6 +3257,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "hira_mens_perfume_gift_set",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Hira",
+    "name": "Hira Men's Perfume Gift Set",
+    "unit": "4 x 10 ml",
+    "price": 799,
+    "mrp": 1599,
+    "rating": null,
+    "image": "/retail/hira_mens_perfume_gift_set.jpg",
+    "prid": 740965,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "4 x 10 ml",
+        "price": 799,
+        "mrp": 1599
+      }
+    ]
+  },
+  {
+    "key": "indra_sugandh_bulgarian_rose_attar",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Indra Sugandh Bhandar",
+    "name": "Indra Sugandh Bhandar Bulgarian Rose Attar (Rose)",
+    "unit": "15 ml",
+    "price": 380,
+    "mrp": 700,
+    "rating": null,
+    "image": "/retail/indra_sugandh_bulgarian_rose_attar.jpg",
+    "prid": 709593,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "15 ml",
+        "price": 380,
+        "mrp": 700
+      }
+    ]
+  },
+  {
     "key": "kavi_old_monk_glass_set",
     "note": "retail drinkware (mugs & glasses)",
     "category": "drinkware",
@@ -2182,6 +3316,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "6 pcs",
         "price": 999,
         "mrp": 1799
+      }
+    ]
+  },
+  {
+    "key": "kimirica_little_heart_gift",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Kimirica",
+    "name": "Kimirica Little Heart Love Story Gift Set",
+    "unit": "3 pcs",
+    "price": 874,
+    "mrp": 949,
+    "rating": null,
+    "image": "/retail/kimirica_little_heart_gift.jpg",
+    "prid": 606109,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "3 pcs",
+        "price": 874,
+        "mrp": 949
+      }
+    ]
+  },
+  {
+    "key": "kimirica_love_story_experience_gift",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Kimirica",
+    "name": "Kimirica Love Story Experience Gift Set",
+    "unit": "5 pcs",
+    "price": 1215,
+    "mrp": 1349,
+    "rating": null,
+    "image": "/retail/kimirica_love_story_experience_gift.jpg",
+    "prid": 505526,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "5 pcs",
+        "price": 1215,
+        "mrp": 1349
+      }
+    ]
+  },
+  {
+    "key": "kimirica_love_story_moment_gift",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Kimirica",
+    "name": "Kimirica Love Story Moment Gift Set",
+    "unit": "7 pcs",
+    "price": 1710,
+    "mrp": 1899,
+    "rating": null,
+    "image": "/retail/kimirica_love_story_moment_gift.jpg",
+    "prid": 539208,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "7 pcs",
+        "price": 1710,
+        "mrp": 1899
       }
     ]
   },
@@ -2648,6 +3845,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "layerr_wottagirl_mystic_mist",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Layer'r",
+    "name": "Layer'r Wottagirl Mystic Island Body Mist",
+    "unit": "150 ml",
+    "price": 263,
+    "mrp": 329,
+    "rating": null,
+    "image": "/retail/layerr_wottagirl_mystic_mist.jpg",
+    "prid": 794871,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "150 ml",
+        "price": 263,
+        "mrp": 329
+      }
+    ]
+  },
+  {
+    "key": "layerr_wottagirl_secret_mist",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Layer'r",
+    "name": "Layer'r Wottagirl Secret Body Mist",
+    "unit": "150 ml",
+    "price": 275,
+    "mrp": 329,
+    "rating": null,
+    "image": "/retail/layerr_wottagirl_secret_mist.jpg",
+    "prid": 793292,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "150 ml",
+        "price": 275,
+        "mrp": 329
+      }
+    ]
+  },
+  {
+    "key": "layerr_wottagirl_vanilla_mist",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Layer'r Wottagirl",
+    "name": "Layer'r Wottagirl Vanilla Body Mist",
+    "unit": "150 ml",
+    "price": 254,
+    "mrp": 329,
+    "rating": null,
+    "image": "/retail/layerr_wottagirl_vanilla_mist.jpg",
+    "prid": 793293,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "150 ml",
+        "price": 254,
+        "mrp": 329
+      }
+    ]
+  },
+  {
     "key": "lays_classic_51g",
     "note": "retail snack/chips SKU",
     "category": "retail snack/chips SKU",
@@ -3005,6 +4265,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "man_company_curated_him_gift",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "The Man Company",
+    "name": "The Man Company Curated for Him Collection Gift Set",
+    "unit": "1 set",
+    "price": 949,
+    "mrp": 1099,
+    "rating": null,
+    "image": "/retail/man_company_curated_him_gift.jpg",
+    "prid": 793665,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 949,
+        "mrp": 1099
+      }
+    ]
+  },
+  {
+    "key": "man_company_no_gas_blanc",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "The Man Company",
+    "name": "The Man Company No Gas Perfume for Men (Blanc)",
+    "unit": "120 ml",
+    "price": 289,
+    "mrp": 399,
+    "rating": null,
+    "image": "/retail/man_company_no_gas_blanc.jpg",
+    "prid": 475624,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "120 ml",
+        "price": 289,
+        "mrp": 399
+      }
+    ]
+  },
+  {
     "key": "mars_40g",
     "note": "retail chocolate SKU",
     "category": "retail chocolate SKU",
@@ -3253,6 +4555,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "80 g",
         "price": 40,
         "mrp": 50
+      }
+    ]
+  },
+  {
+    "key": "miss_nails_mini_nude_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Miss Nails",
+    "name": "Miss Nails Minis Nail Paint Kit (All Nudes)",
+    "unit": "4 x 6 ml",
+    "price": 199,
+    "mrp": 299,
+    "rating": null,
+    "image": "/retail/miss_nails_mini_nude_kit.jpg",
+    "prid": 688913,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "4 x 6 ml",
+        "price": 199,
+        "mrp": 299
       }
     ]
   },
@@ -3509,6 +4832,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "neutrogena_gentle_creamy_cleanser",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Neutrogena",
+    "name": "Neutrogena Ultra Gentle Creamy Cleanser",
+    "unit": "200 ml",
+    "price": 600,
+    "mrp": 600,
+    "rating": null,
+    "image": "/retail/neutrogena_gentle_creamy_cleanser.jpg",
+    "prid": 617234,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "200 ml",
+        "price": 600,
+        "mrp": 600
+      }
+    ]
+  },
+  {
+    "key": "nivea_men_fresh_active_deo",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Nivea Men",
+    "name": "Nivea Men Fresh Active Original Men's Deodorant",
+    "unit": "150 ml",
+    "price": 219,
+    "mrp": 299,
+    "rating": null,
+    "image": "/retail/nivea_men_fresh_active_deo.jpg",
+    "prid": 25181,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "150 ml",
+        "price": 219,
+        "mrp": 299
+      }
+    ]
+  },
+  {
     "key": "nivea_men_rollon",
     "note": "Nivea Men roll-on (alt) - men grooming bouquet",
     "category": null,
@@ -3541,6 +4906,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
     "rating": null,
     "image": "/retail/nivea_men_spray.jpg",
     "prid": 25181,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "150 ml",
+        "price": 219,
+        "mrp": 299
+      }
+    ]
+  },
+  {
+    "key": "nivea_pearl_beauty_rollon_pack",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Nivea",
+    "name": "Nivea Pearl & Beauty Deodorant Roll on - Pack of 2",
+    "unit": "2 x 50 ml",
+    "price": 366,
+    "mrp": 498,
+    "rating": null,
+    "image": "/retail/nivea_pearl_beauty_rollon_pack.jpg",
+    "prid": 456713,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "2 x 50 ml",
+        "price": 366,
+        "mrp": 498
+      }
+    ]
+  },
+  {
+    "key": "nivea_pearl_beauty_women_deo",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Nivea",
+    "name": "Nivea Pearl & Beauty Women's Deodorant",
+    "unit": "150 ml",
+    "price": 219,
+    "mrp": 299,
+    "rating": null,
+    "image": "/retail/nivea_pearl_beauty_women_deo.jpg",
+    "prid": 11661,
     "capturedAt": "2026-09-25",
     "variants": [
       {
@@ -3589,6 +4996,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "6 pcs",
         "price": 659,
         "mrp": 899
+      }
+    ]
+  },
+  {
+    "key": "odeon_empire_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Odeon",
+    "name": "Odeon Eau de Parfum for Men (Empire)",
+    "unit": "50 ml",
+    "price": 315,
+    "mrp": 399,
+    "rating": null,
+    "image": "/retail/odeon_empire_edp.jpg",
+    "prid": 700577,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 315,
+        "mrp": 399
+      }
+    ]
+  },
+  {
+    "key": "odeon_legend_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Odeon",
+    "name": "Odeon Eau de Parfum (Legend)",
+    "unit": "50 ml",
+    "price": 315,
+    "mrp": 399,
+    "rating": null,
+    "image": "/retail/odeon_legend_edp.jpg",
+    "prid": 701152,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 315,
+        "mrp": 399
       }
     ]
   },
@@ -3803,6 +5252,90 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "paradyse_mafia_oud_attar",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Paradyse Perfumes",
+    "name": "Paradyse Perfumes Attar For Men (Mafia Oud)",
+    "unit": "6 ml",
+    "price": 299,
+    "mrp": 499,
+    "rating": null,
+    "image": "/retail/paradyse_mafia_oud_attar.jpg",
+    "prid": 707411,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "6 ml",
+        "price": 299,
+        "mrp": 499
+      }
+    ]
+  },
+  {
+    "key": "park_avenue_good_morning_grooming_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Park Avenue",
+    "name": "Park Avenue Good Morning Men's Grooming Kit",
+    "unit": "1 pc",
+    "price": 569,
+    "mrp": 849,
+    "rating": null,
+    "image": "/retail/park_avenue_good_morning_grooming_kit.jpg",
+    "prid": 374698,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 569,
+        "mrp": 849
+      }
+    ]
+  },
+  {
+    "key": "park_avenue_good_morning_intense",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Park Avenue",
+    "name": "Park Avenue Good Morning Spray Intense Men's Perfume",
+    "unit": "120 ml",
+    "price": 179,
+    "mrp": 225,
+    "rating": null,
+    "image": "/retail/park_avenue_good_morning_intense.jpg",
+    "prid": 394218,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "120 ml",
+        "price": 179,
+        "mrp": 225
+      }
+    ]
+  },
+  {
+    "key": "park_avenue_signature_gift_men",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Park Avenue",
+    "name": "Park Avenue Signature Collection Gift Set For Men",
+    "unit": "3 pcs",
+    "price": 675,
+    "mrp": 899,
+    "rating": null,
+    "image": "/retail/park_avenue_signature_gift_men.jpg",
+    "prid": 536437,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "3 pcs",
+        "price": 675,
+        "mrp": 899
+      }
+    ]
+  },
+  {
     "key": "parle_elaichi_rusk_291g",
     "note": "retail biscuit SKU",
     "category": "retail biscuit SKU",
@@ -3992,6 +5525,153 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "plum_boardroom_bora_bora_mist",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Plum BodyLovin'",
+    "name": "Plum BodyLovin' Body Mist (Boardroom In Bora Bora)",
+    "unit": "100 ml",
+    "price": 383,
+    "mrp": 425,
+    "rating": null,
+    "image": "/retail/plum_boardroom_bora_bora_mist.jpg",
+    "prid": 774987,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "100 ml",
+        "price": 383,
+        "mrp": 425
+      }
+    ]
+  },
+  {
+    "key": "plum_hawaiian_rumba_rollon",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Plum BodyLovin'",
+    "name": "Plum BodyLovin' Hawaiian Rumba Deodorant Roll on",
+    "unit": "50 ml",
+    "price": 311,
+    "mrp": 345,
+    "rating": null,
+    "image": "/retail/plum_hawaiian_rumba_rollon.jpg",
+    "prid": 533278,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 311,
+        "mrp": 345
+      }
+    ]
+  },
+  {
+    "key": "plum_luxe_perfume_gift_set",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Plum",
+    "name": "Plum Luxe Perfume Gift Set",
+    "unit": "3 pcs",
+    "price": 699,
+    "mrp": 999,
+    "rating": null,
+    "image": "/retail/plum_luxe_perfume_gift_set.jpg",
+    "prid": 603734,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "3 pcs",
+        "price": 699,
+        "mrp": 999
+      }
+    ]
+  },
+  {
+    "key": "plum_petals_on_the_rocks_mist",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Plum BodyLovin'",
+    "name": "Plum BodyLovin' Body Mist (Petals On The Rocks)",
+    "unit": "100 ml",
+    "price": 383,
+    "mrp": 425,
+    "rating": null,
+    "image": "/retail/plum_petals_on_the_rocks_mist.jpg",
+    "prid": 775203,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "100 ml",
+        "price": 383,
+        "mrp": 425
+      }
+    ]
+  },
+  {
+    "key": "plum_vanilla_vibes_bath_body_gift",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Plum BodyLovin'",
+    "name": "Plum BodyLovin' Vanilla Vibes Bath & Body Gift Set",
+    "unit": "3 pcs",
+    "price": 675,
+    "mrp": 749,
+    "rating": null,
+    "image": "/retail/plum_vanilla_vibes_bath_body_gift.jpg",
+    "prid": 562679,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "3 pcs",
+        "price": 675,
+        "mrp": 749
+      }
+    ]
+  },
+  {
+    "key": "plum_vanilla_vibes_perfume",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Plum BodyLovin'",
+    "name": "Plum BodyLovin' Vanilla Vibes Perfume (Sweet & Cozy)",
+    "unit": "15 ml",
+    "price": 293,
+    "mrp": 325,
+    "rating": null,
+    "image": "/retail/plum_vanilla_vibes_perfume.jpg",
+    "prid": 544844,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "15 ml",
+        "price": 293,
+        "mrp": 325
+      }
+    ]
+  },
+  {
+    "key": "plum_vanilla_vibes_rollon",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Plum BodyLovin'",
+    "name": "Plum BodyLovin' Vanilla Vibes Deodorant Roll on",
+    "unit": "50 ml",
+    "price": 311,
+    "mrp": 345,
+    "rating": null,
+    "image": "/retail/plum_vanilla_vibes_rollon.jpg",
+    "prid": 538755,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 311,
+        "mrp": 345
+      }
+    ]
+  },
+  {
     "key": "pringles_original_107g",
     "note": "retail snack/chips SKU",
     "category": "retail snack/chips SKU",
@@ -4139,6 +5819,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "renee_edp_madame",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "RENEE",
+    "name": "RENEE Eau de Parfum (Madame)",
+    "unit": "20 ml",
+    "price": 345,
+    "mrp": 399,
+    "rating": null,
+    "image": "/retail/renee_edp_madame.jpg",
+    "prid": 554286,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "20 ml",
+        "price": 345,
+        "mrp": 399
+      }
+    ]
+  },
+  {
+    "key": "renee_frozen_princess_unicorn_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "RENEE",
+    "name": "RENEE Frozen Princess Unicorn Make Up Kit (For Kids) Gift Set",
+    "unit": "1 set",
+    "price": 849,
+    "mrp": 950,
+    "rating": null,
+    "image": "/retail/renee_frozen_princess_unicorn_kit.jpg",
+    "prid": 545776,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 849,
+        "mrp": 950
+      }
+    ]
+  },
+  {
+    "key": "renee_red_noir_perfume",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "RENEE",
+    "name": "RENEE Red Noir Women's Perfume (Red Noir)",
+    "unit": "15 ml",
+    "price": 315,
+    "mrp": 350,
+    "rating": null,
+    "image": "/retail/renee_red_noir_perfume.jpg",
+    "prid": 554180,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "15 ml",
+        "price": 315,
+        "mrp": 350
+      }
+    ]
+  },
+  {
     "key": "roxmac_flickering_leaf_rice",
     "note": "retail decorative lighting",
     "category": "lights",
@@ -4156,6 +5899,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "1 unit",
         "price": 299,
         "mrp": 999
+      }
+    ]
+  },
+  {
+    "key": "rumeha_oudh_attar",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Rumeha",
+    "name": "Oudh Attar by Rumeha",
+    "unit": "5 ml",
+    "price": 99,
+    "mrp": 175,
+    "rating": null,
+    "image": "/retail/rumeha_oudh_attar.jpg",
+    "prid": 615023,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "5 ml",
+        "price": 99,
+        "mrp": 175
+      }
+    ]
+  },
+  {
+    "key": "setwet_ampm_perfume_gift_set",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Set Wet",
+    "name": "Set Wet AM/PM Perfume Gift Set",
+    "unit": "4 x 20 ml",
+    "price": 371,
+    "mrp": 899,
+    "rating": null,
+    "image": "/retail/setwet_ampm_perfume_gift_set.jpg",
+    "prid": 609891,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "4 x 20 ml",
+        "price": 371,
+        "mrp": 899
+      }
+    ]
+  },
+  {
+    "key": "showy_attar_4pk",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "SHOWY",
+    "name": "SHOWY Attar (Rose, Secret, Jasmine, Kasturi)",
+    "unit": "4 x 6 ml",
+    "price": 275,
+    "mrp": 749,
+    "rating": null,
+    "image": "/retail/showy_attar_4pk.jpg",
+    "prid": 731646,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "4 x 6 ml",
+        "price": 275,
+        "mrp": 749
       }
     ]
   },
@@ -4349,6 +6155,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "simple_refreshing_face_wash",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Simple",
+    "name": "Simple Refreshing Face Wash",
+    "unit": "250 ml",
+    "price": 490,
+    "mrp": 699,
+    "rating": null,
+    "image": "/retail/simple_refreshing_face_wash.jpg",
+    "prid": 696476,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "250 ml",
+        "price": 490,
+        "mrp": 699
+      }
+    ]
+  },
+  {
     "key": "sipologie_axis_whiskey_set",
     "note": "retail drinkware (mugs & glasses)",
     "category": "drinkware",
@@ -4496,6 +6323,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "soul_stories_beard_oil",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Soul Stories",
+    "name": "Soul Stories 100% Pure and Organic Beard Oil for Thicker Beard",
+    "unit": "50 ml",
+    "price": 555,
+    "mrp": 700,
+    "rating": null,
+    "image": "/retail/soul_stories_beard_oil.jpg",
+    "prid": 709779,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 555,
+        "mrp": 700
+      }
+    ]
+  },
+  {
     "key": "specialyou_photo_clips_lights",
     "note": "retail decorative lighting",
     "category": "lights",
@@ -4513,6 +6361,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "1 unit",
         "price": 285,
         "mrp": 620
+      }
+    ]
+  },
+  {
+    "key": "sugar_pop_4in1_nail_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Sugar Pop",
+    "name": "Sugar Pop 4-in-1 Nail Paint Kit (01 Nude Nectar)",
+    "unit": "4 x 5 ml",
+    "price": 187,
+    "mrp": 249,
+    "rating": null,
+    "image": "/retail/sugar_pop_4in1_nail_kit.jpg",
+    "prid": 596556,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "4 x 5 ml",
+        "price": 187,
+        "mrp": 249
       }
     ]
   },
@@ -4643,6 +6512,153 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "urbangabru_beard_growth_oil",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "UrbanGabru",
+    "name": "UrbanGabru Beard Growth Oil",
+    "unit": "60 ml",
+    "price": 349,
+    "mrp": 399,
+    "rating": null,
+    "image": "/retail/urbangabru_beard_growth_oil.jpg",
+    "prid": 690862,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "60 ml",
+        "price": 349,
+        "mrp": 399
+      }
+    ]
+  },
+  {
+    "key": "urbangabru_gentleman_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "UrbanGabru",
+    "name": "UrbanGabru Gentleman Eau de Parfum for Men (Citrus)",
+    "unit": "40 ml",
+    "price": 299,
+    "mrp": 499,
+    "rating": null,
+    "image": "/retail/urbangabru_gentleman_edp.jpg",
+    "prid": 804733,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "40 ml",
+        "price": 299,
+        "mrp": 499
+      }
+    ]
+  },
+  {
+    "key": "urbangabru_moustache_beard_wax",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "UrbanGabru",
+    "name": "UrbanGabru Moustache Beard Wax",
+    "unit": "50 g",
+    "price": 299,
+    "mrp": 350,
+    "rating": null,
+    "image": "/retail/urbangabru_moustache_beard_wax.jpg",
+    "prid": 662389,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 g",
+        "price": 299,
+        "mrp": 350
+      }
+    ]
+  },
+  {
+    "key": "villain_hydra_fresh_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Villain",
+    "name": "Villain Hydra Fresh Aquatic Eau de Parfum (Hurricane)",
+    "unit": "50 ml",
+    "price": 300,
+    "mrp": 349,
+    "rating": null,
+    "image": "/retail/villain_hydra_fresh_edp.jpg",
+    "prid": 611875,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 300,
+        "mrp": 349
+      }
+    ]
+  },
+  {
+    "key": "villain_legacy_classic_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Villain",
+    "name": "Villain Legacy Classic Eau de Parfum (Woody)",
+    "unit": "50 ml",
+    "price": 300,
+    "mrp": 349,
+    "rating": null,
+    "image": "/retail/villain_legacy_classic_edp.jpg",
+    "prid": 768332,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 300,
+        "mrp": 349
+      }
+    ]
+  },
+  {
+    "key": "villain_unstoppable_citrus_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Villain",
+    "name": "Villain Unstoppable Citrus Eau de Parfum (Mischief)",
+    "unit": "50 ml",
+    "price": 301,
+    "mrp": 399,
+    "rating": null,
+    "image": "/retail/villain_unstoppable_citrus_edp.jpg",
+    "prid": 769151,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 301,
+        "mrp": 399
+      }
+    ]
+  },
+  {
+    "key": "vniq_shaper_beard_comb_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "VniQ",
+    "name": "VniQ Shaper Tool Beard Comb Kit",
+    "unit": "5 pcs",
+    "price": 275,
+    "mrp": 699,
+    "rating": null,
+    "image": "/retail/vniq_shaper_beard_comb_kit.jpg",
+    "prid": 600434,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "5 pcs",
+        "price": 275,
+        "mrp": 699
+      }
+    ]
+  },
+  {
     "key": "waan_micro_pixel_rice_light",
     "note": "retail decorative lighting",
     "category": "lights",
@@ -4659,6 +6675,132 @@ export const RETAIL_RATES: RetailRateItem[] = [
       {
         "unit": "1 unit",
         "price": 299,
+        "mrp": 699
+      }
+    ]
+  },
+  {
+    "key": "whimsy_makeup_kit_kids",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Whimsy",
+    "name": "Whimsy Make U Pretty Makeup Kit for Kids & Teens",
+    "unit": "15 pcs",
+    "price": 2499,
+    "mrp": 3499,
+    "rating": null,
+    "image": "/retail/whimsy_makeup_kit_kids.jpg",
+    "prid": 618763,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "15 pcs",
+        "price": 2499,
+        "mrp": 3499
+      }
+    ]
+  },
+  {
+    "key": "wild_stone_hydra_energy_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Wild Stone",
+    "name": "Wild Stone Hydra Energy Eau de Parfum",
+    "unit": "50 ml",
+    "price": 350,
+    "mrp": 499,
+    "rating": null,
+    "image": "/retail/wild_stone_hydra_energy_edp.jpg",
+    "prid": 497003,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 350,
+        "mrp": 499
+      }
+    ]
+  },
+  {
+    "key": "wild_stone_premium_perfume_gift_set",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Wild Stone",
+    "name": "Wild Stone Men's Premium Perfume Gift Set",
+    "unit": "4 x 30 ml",
+    "price": 710,
+    "mrp": 999,
+    "rating": null,
+    "image": "/retail/wild_stone_premium_perfume_gift_set.jpg",
+    "prid": 555161,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "4 x 30 ml",
+        "price": 710,
+        "mrp": 999
+      }
+    ]
+  },
+  {
+    "key": "wild_stone_ultra_sensual_edp",
+    "note": "retail fragrance & grooming",
+    "category": "fragrance",
+    "brand": "Wild Stone",
+    "name": "Wild Stone Ultra Sensual Eau de Parfum",
+    "unit": "50 ml",
+    "price": 350,
+    "mrp": 499,
+    "rating": null,
+    "image": "/retail/wild_stone_ultra_sensual_edp.jpg",
+    "prid": 41839,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 350,
+        "mrp": 499
+      }
+    ]
+  },
+  {
+    "key": "yardley_gentleman_gold_grooming_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Yardley",
+    "name": "Yardley London Gentleman Gold Luxury Men's Grooming Kit",
+    "unit": "1 set",
+    "price": 560,
+    "mrp": 699,
+    "rating": null,
+    "image": "/retail/yardley_gentleman_gold_grooming_kit.jpg",
+    "prid": 794538,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 560,
+        "mrp": 699
+      }
+    ]
+  },
+  {
+    "key": "yardley_gentlemen_grooming_kit",
+    "note": "retail item",
+    "category": "grooming",
+    "brand": "Yardley",
+    "name": "Yardley Gentlemen Men's Grooming Kit",
+    "unit": "5 pcs",
+    "price": 497,
+    "mrp": 699,
+    "rating": null,
+    "image": "/retail/yardley_gentlemen_grooming_kit.jpg",
+    "prid": 554988,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "5 pcs",
+        "price": 497,
         "mrp": 699
       }
     ]

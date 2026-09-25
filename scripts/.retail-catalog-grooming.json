@@ -1,0 +1,7104 @@
+[
+  {
+    "pid": 690862,
+    "name": "UrbanGabru Beard Growth Oil",
+    "brand": "UrbanGabru",
+    "unit": "60 ml",
+    "price": 349,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/172f6eab-e049-40f0-99cd-7b1edaef7a89.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit",
+      "beard oil"
+    ]
+  },
+  {
+    "pid": 662389,
+    "name": "UrbanGabru Moustache Beard Wax",
+    "brand": "UrbanGabru",
+    "unit": "50 g",
+    "price": 299,
+    "mrp": 350,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/af0c612f-9755-4d3e-a7b9-19dcd750925f.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 500613,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 335,
+    "mrp": 440,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 629260,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 249,
+    "mrp": 499,
+    "image_url": null,
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 365105,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 309,
+    "mrp": 349,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 709779,
+    "name": "Soul Stories 100% Pure and Organic Beard Oil for Thicker Beard",
+    "brand": "Soul Stories",
+    "unit": "50 ml",
+    "price": 555,
+    "mrp": 700,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a3a45f3c-7ab8-4cc8-977c-bdcd54d054d6.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 787472,
+    "name": "Coco Crush Beard Oil with Derma Roller",
+    "brand": "Coco Crush",
+    "unit": "1 set",
+    "price": 399,
+    "mrp": 690,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/132b72b7fa2549238ee9a6c25eb568d9.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 519335,
+    "name": "Beardo Godfather Beard Wash for Men",
+    "brand": "Beardo",
+    "unit": "100 ml",
+    "price": 245,
+    "mrp": 350,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f408f24c-3883-4ed2-8b7f-46c54fef2a23.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 480742,
+    "name": "Bombay Shaving Company Beard Colour (Natural Black)",
+    "brand": "Bombay Shaving Company",
+    "unit": "60 ml",
+    "price": 350,
+    "mrp": 450,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/96aa5512-48a1-45e8-b78c-029225819f4c.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil"
+    ]
+  },
+  {
+    "pid": 639263,
+    "name": "Rise for Men Touch-Up Beard Wax",
+    "brand": "Rise for Men",
+    "unit": "5 ml",
+    "price": 499,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/32e85f71-2e4a-4ddc-ba6c-aed684c8f27c.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 607371,
+    "name": "Bigen Men's Beard Colour (Dark Brown-B103)",
+    "brand": "Bigen",
+    "unit": "1 pack",
+    "price": 437,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f1e05733-c2e3-4e65-a0ee-c72328a10082.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 600951,
+    "name": "Dapr. Beard Butter",
+    "brand": "Dapr.",
+    "unit": "100 g",
+    "price": 575,
+    "mrp": 649,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/bf132ffd-9aac-4cb0-9ebe-13af973790a6.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 607357,
+    "name": "Bigen Men's Beard Colour (Natural Black B101)",
+    "brand": "Bigen",
+    "unit": "1 pack",
+    "price": 413,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/de93e367-a845-489f-912e-1eaa35ae2463.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 607370,
+    "name": "Bigen Men's Beard Colour (Brown Black - B102)",
+    "brand": "Bigen",
+    "unit": "1 pack",
+    "price": 437,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/63e88caa-04fb-4631-bf70-3a3720c9ac47.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 671795,
+    "name": "Mancode Beard Wash & Conditioner",
+    "brand": "Mancode",
+    "unit": "200 ml",
+    "price": 225,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/82fa6460-2c97-4461-9784-6dc36727d66e.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 671374,
+    "name": "Beardo Natural Black Beard Colour",
+    "brand": "Beardo",
+    "unit": "60 ml",
+    "price": 342,
+    "mrp": 450,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7508ac55-e0aa-4035-b167-26062bdb4a72.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 671258,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 259,
+    "mrp": 350,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 553196,
+    "name": "Man Matters Derma Roller - 1 mm Titanium Needles",
+    "brand": "Man Matters",
+    "unit": "1 pc",
+    "price": 299,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778729709715-626.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 524403,
+    "name": "Streax Pro Vitariche Gloss Hair Serum",
+    "brand": "Streax Pro",
+    "unit": "50 ml",
+    "price": 179,
+    "mrp": 180,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0bb24681-37d4-4860-a47c-3905dec252e7.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 543365,
+    "name": "Minimalist 10% Vitamin C Brightening & Illumination Face Serum",
+    "brand": "Minimalist",
+    "unit": "10 ml",
+    "price": 270,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772678015140-2217.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 637436,
+    "name": "Minimalist 10% Vitamin C Brightening & Illumination Face Serum",
+    "brand": "Minimalist",
+    "unit": "2 x 10 ml",
+    "price": 509,
+    "mrp": 598,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778043464470-413.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 546292,
+    "name": "Wishcare Hair Growth Serum Concentrate",
+    "brand": "WishCare",
+    "unit": "30 ml",
+    "price": 699,
+    "mrp": 885,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784189330239-224.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 566197,
+    "name": "WishCare Hair Growth Serum Concentrate",
+    "brand": "WishCare",
+    "unit": "2 x 30 ml",
+    "price": 1293,
+    "mrp": 1770,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778041150974-8020.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 792538,
+    "name": "Bla Bli Blu Old Money Men's Perfume (Fruity & Wood)",
+    "brand": "Bla Bli Blu",
+    "unit": "30 ml",
+    "price": 199,
+    "mrp": 275,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780915929694-172.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil"
+    ]
+  },
+  {
+    "pid": 830287,
+    "name": "Bla Bli Blu Old Money Men's Perfume (Fruity & Wood)",
+    "brand": "Bla Bli Blu",
+    "unit": "100 ml",
+    "price": 720,
+    "mrp": 750,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785495250546-257.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil"
+    ]
+  },
+  {
+    "pid": 525101,
+    "name": "Vega Compact Hair Brush (Black)",
+    "brand": "Vega",
+    "unit": "1 pc",
+    "price": 199,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a7ccd27e-e5c5-4d30-97f6-dee47afab687.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 128382,
+    "name": "Parachute Advansed After Shower Men's Hair Cream",
+    "brand": "Parachute Advansed",
+    "unit": "100 g",
+    "price": 90,
+    "mrp": 105,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/e3fd68fc-df86-4e3c-b394-6adb634e6c33.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 629255,
+    "name": "Mancode Mustache Beard Wax",
+    "brand": "Mancode",
+    "unit": "50 ml",
+    "price": 249,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3bd4110c-261d-4281-b681-25beba61b59b.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil"
+    ]
+  },
+  {
+    "pid": 547536,
+    "name": "Beardo Mustache & Beard Wax for Styling & Hold",
+    "brand": "Beardo",
+    "unit": "50 g",
+    "price": 360,
+    "mrp": 450,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1c2b470e-ae69-4194-bb5c-c4c87ffc0224.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 500612,
+    "name": "Beardo Hair Serum with Argan Oil",
+    "brand": "Beardo",
+    "unit": "50 ml",
+    "price": 207,
+    "mrp": 295,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/cbe56f16-fbe5-49ea-90be-b58fd550a679.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 500614,
+    "name": "Beardo Long Lasting Perfume for Men EDP (Whisky Smoke)",
+    "brand": "Beardo",
+    "unit": "50 ml",
+    "price": 300,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1b26676e-3613-44f3-92aa-d1d826e7ce92.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard oil",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 499591,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 215,
+    "mrp": 249,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 545172,
+    "name": "Dot & Key Cica Calming Clearing Gel Face Wash - Pack of 2",
+    "brand": "Dot & Key",
+    "unit": null,
+    "price": 394,
+    "mrp": 498,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 1423866,
+    "name": "Dot & Key CICA Calming Blemish Clearing Gel Face Wash",
+    "brand": "Dot & Key",
+    "unit": "175 ml",
+    "price": 308,
+    "mrp": 375,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/e66c0f4af39246a686a90d801894d31b.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 499592,
+    "name": "Dot & Key Watermelon Cooling Gel Face Wash",
+    "brand": "Dot & Key",
+    "unit": "100 ml",
+    "price": 215,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771403964237-160.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 545161,
+    "name": "Dot & Key Watermelon Cooling Gel Face Wash - Pack of 2",
+    "brand": "Dot & Key",
+    "unit": "2 x 100 ml",
+    "price": 394,
+    "mrp": 498,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-3934.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 499590,
+    "name": "Dot & Key Barrier Repair + Hydrating Gentle Face Wash",
+    "brand": "Dot & Key",
+    "unit": "100 ml",
+    "price": 215,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785055027596-50.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 545171,
+    "name": "Dot & Key Barrier Repair + Hydrating Gentle Face Wash - Pack of 2",
+    "brand": "Dot & Key",
+    "unit": "2 x 100 ml",
+    "price": 394,
+    "mrp": 498,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-3962.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 545079,
+    "name": "Dot & Key Vitamin C + E Super Bright Gel Face Wash",
+    "brand": "Dot & Key",
+    "unit": "100 ml",
+    "price": 215,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784826857091-188.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "body wash"
+    ]
+  },
+  {
+    "pid": 545221,
+    "name": "Dot & Key Vitamin C + E Super Bright Gel Face Wash - Pack of 2",
+    "brand": "Dot & Key",
+    "unit": "2 x 100 ml",
+    "price": 394,
+    "mrp": 498,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-3970.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "body wash"
+    ]
+  },
+  {
+    "pid": 664552,
+    "name": "Dot & Key Vitamin C + E Super-Bright Gel Face Wash",
+    "brand": "Dot & Key",
+    "unit": "175 ml",
+    "price": 308,
+    "mrp": 375,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771403964237-195.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 701146,
+    "name": "Dot & Key Vitamin C + E Super-Bright Gel Face Wash - Pack of 2",
+    "brand": "Dot & Key",
+    "unit": "2 x 175 ml",
+    "price": 593,
+    "mrp": 750,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778056825358-3832.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 664490,
+    "name": "Dot & Key Barrier-Repair + Hydrating Gentle Face Wash",
+    "brand": "Dot & Key",
+    "unit": "175 ml",
+    "price": 308,
+    "mrp": 375,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771403964237-186.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 701142,
+    "name": "Dot & Key Barrier-Repair + Hydrating Gentle Face Wash - Pack of 2",
+    "brand": "Dot & Key",
+    "unit": "2 x 175 ml",
+    "price": 593,
+    "mrp": 750,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778058709917-1294.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 1423874,
+    "name": "Dot & Key Strawberry Bright Niacinamide Gel Face Wash",
+    "brand": "Dot & Key",
+    "unit": "100 ml",
+    "price": 215,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/82a457ab34b7469f94319ec18a8566f1.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 564651,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 332,
+    "mrp": 395,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 499586,
+    "name": "Dot & Key Cica Calming Niacinamide Sunscreen (SPF 50+ PA++++)",
+    "brand": "Dot & Key",
+    "unit": "50 g",
+    "price": 388,
+    "mrp": 445,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781523242743-310.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 545167,
+    "name": "Dot & Key Cica Calming Niacinamide Sunscreen (SPF 50+ PA++++) - Pack of 2",
+    "brand": "Dot & Key",
+    "unit": "2 x 50 g",
+    "price": 704,
+    "mrp": 890,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-3943.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 19790,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 184,
+    "mrp": 279,
+    "image_url": null,
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "body wash"
+    ]
+  },
+  {
+    "pid": 563200,
+    "name": "Ghar Soaps De-Tanning Magic Face Wash",
+    "brand": "Ghar Soaps",
+    "unit": "100 ml",
+    "price": 299,
+    "mrp": 333,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/533f78ff-b986-4205-99d9-7211809dd631.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 544535,
+    "name": "Simple Refreshing Face Wash",
+    "brand": "Simple",
+    "unit": "150 ml",
+    "price": 315,
+    "mrp": 450,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/caa43651-1043-4676-863d-2f20321aa97d.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 696476,
+    "name": "Simple Refreshing Face Wash",
+    "brand": "Simple",
+    "unit": "250 ml",
+    "price": 490,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779256334018-551.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 544202,
+    "name": "The Derma Co Sali-Cinamide Anti-Acne Face Wash",
+    "brand": "The Derma Co",
+    "unit": "80 ml",
+    "price": 224,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777534555736-199.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 547458,
+    "name": "The Derma Co Sali-Cinamide Anti-Acne Face Wash - Pack of 2",
+    "brand": "The Derma Co",
+    "unit": "2 x 80 ml",
+    "price": 444,
+    "mrp": 498,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/2836f043-0787-4eff-9c0d-da8910acc0c4.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 35864,
+    "name": "Garnier Men Turbo Bright Anti-Pollution Double Action Face Wash 100 g",
+    "brand": "Garnier Men",
+    "unit": "100 g",
+    "price": 240,
+    "mrp": 319,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786333838724-384.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 52768,
+    "name": "Garnier Bright Complete Face Wash 100 g",
+    "brand": "Garnier",
+    "unit": "100 g",
+    "price": 188,
+    "mrp": 235,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777973870037-436.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 23960,
+    "name": "Nivea Men All-In-1 Charcoal Face Wash 100 g",
+    "brand": "Nivea Men",
+    "unit": "100 g",
+    "price": 199,
+    "mrp": 329,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/23663c7b-902c-48c0-914a-80990fc2f183.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 1023,
+    "name": "Garnier Men Clay D-Tox Deep Cleansing Icy Face Wash 100 g",
+    "brand": "Garnier Men",
+    "unit": "100 g",
+    "price": 240,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770632435673-2175.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 152381,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 122,
+    "mrp": 150,
+    "image_url": null,
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "body wash"
+    ]
+  },
+  {
+    "pid": 610026,
+    "name": "L'Oreal Paris Hyaluron Pure 72H Purifying Shampoo",
+    "brand": "L'Oreal Paris",
+    "unit": "200 ml",
+    "price": 196,
+    "mrp": 230,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771923717021-6204.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 499600,
+    "name": "Dot & Key 2% Salicylic Skin Clearing Face Serum",
+    "brand": "Dot & Key",
+    "unit": "20 ml",
+    "price": 328,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773114156723-589.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 526484,
+    "name": "Oral-B Pro Clean Sensitive & Gums Toothbrush Extra Soft, Colour may Vary",
+    "brand": "Oral-B",
+    "unit": "1 pc",
+    "price": 47,
+    "mrp": 50,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780331131771-196.png",
+    "inventory": 22,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "body wash"
+    ]
+  },
+  {
+    "pid": 580566,
+    "name": "Oral-B Pro Clean Sensitive & Gums Toothbrush Extra Soft, Colour may Vary - Pack of 2",
+    "brand": "Oral-B",
+    "unit": "2 x 1 pc",
+    "price": 75,
+    "mrp": 100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-4775.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "body wash"
+    ]
+  },
+  {
+    "pid": 495492,
+    "name": "Nivea Body Milk Nourishing Body Lotion",
+    "brand": "Nivea",
+    "unit": "120 ml",
+    "price": 130,
+    "mrp": 130,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9b7fcce4-e179-4297-b648-9b449dc4e87a.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "body wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 19934,
+    "name": "Mysore Sandal Soap 75 g",
+    "brand": "Mysore Sandal",
+    "unit": "75 g",
+    "price": 42,
+    "mrp": 42,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/92077089-b1a8-422a-ae62-89dc8ec76d24.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 19664,
+    "name": "Glow & Lovely Advanced Multi Vitamin Skin Treatment Cream",
+    "brand": "Glow & Lovely",
+    "unit": "50 g",
+    "price": 135,
+    "mrp": 135,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/cec7b3e9-c020-4363-bf62-a2f88d6b1883.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 416405,
+    "name": "Glow & Lovely Advanced Multi Vitamin Skin Treatment Cream",
+    "brand": "Glow & Lovely",
+    "unit": "110 g",
+    "price": 355,
+    "mrp": 355,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787118742066-123.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 480504,
+    "name": "MCaffeine Deep Exfoliating Face Scrub (Espresso Coffee)-75 g",
+    "brand": "MCaffeine",
+    "unit": "75 g",
+    "price": 200,
+    "mrp": 229,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8c08a10a-5e60-4743-a20b-f108f08d3355.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 500359,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 270,
+    "mrp": 299,
+    "image_url": null,
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 664150,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 540,
+    "mrp": 599,
+    "image_url": null,
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 578867,
+    "name": "Minimalist 7% ALA & AHA Brightening Face Wash",
+    "brand": "Minimalist",
+    "unit": "100 ml",
+    "price": 360,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7edc06cc-c5ea-49d1-927d-4562d74ce332.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 500363,
+    "name": "Minimalist B12 + 6% Oat Extract Gentle Cleanser",
+    "brand": "Minimalist",
+    "unit": "120 ml",
+    "price": 270,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782891481671-399.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 665632,
+    "name": "Minimalist Aquaporin Booster 05% Cleanser",
+    "brand": "Minimalist",
+    "unit": "100 ml",
+    "price": 270,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771992965724-2393.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 538610,
+    "name": "The Derma Co 1% Salicylic Acid Face Wash",
+    "brand": "The Derma Co",
+    "unit": "100 ml",
+    "price": 296,
+    "mrp": 329,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770696534079-1338.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 544058,
+    "name": "The Derma Co 1% Salicylic Acid Face Wash - Pack of 2",
+    "brand": "The Derma Co",
+    "unit": "2 x 100 ml",
+    "price": 578,
+    "mrp": 658,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770696534079-1411.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 716071,
+    "name": "The Derma Co 2% Salicylic Acid Gel Face Wash",
+    "brand": "The Derma Co",
+    "unit": "100 ml",
+    "price": 296,
+    "mrp": 329,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777639858865-132.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 791779,
+    "name": "The Derma Co 2% Salicylic Acid Gel Face Wash - Pack of 2",
+    "brand": "The Derma Co",
+    "unit": "2 x 100 ml",
+    "price": 578,
+    "mrp": 658,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786943376173-33.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 614196,
+    "name": "Dermatouch Salicylic Acid 2% Face Wash",
+    "brand": "Dermatouch",
+    "unit": "100 ml",
+    "price": 253,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770696534079-2809.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 764569,
+    "name": "Cetaphil Gentle Skin Cleanser",
+    "brand": "Cetaphil",
+    "unit": "59 ml",
+    "price": 199,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773811493178-483.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 482297,
+    "name": "Forest Essentials Delicate Face Cleanser (Kashmiri Saffron & Neem)",
+    "brand": "Forest Essentials",
+    "unit": "50 ml",
+    "price": 495,
+    "mrp": 495,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781839718536-184.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 482298,
+    "name": "Forest Essentials Face Cleanser Mashobra Honey, Lemon & Rosewater",
+    "brand": "Forest Essentials",
+    "unit": "50 ml",
+    "price": 495,
+    "mrp": 495,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/73a2ebbb-2e4a-47b4-a0b1-360a87b899cd.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 703070,
+    "name": "Cetaphil Gentle Exfoliating SA Cleanser",
+    "brand": "Cetaphil",
+    "unit": "29 ml",
+    "price": 99,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780984436863-527.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 544550,
+    "name": "Bioderma Pigmentbio Foaming Cream Cleanser",
+    "brand": "Bioderma",
+    "unit": "200 ml",
+    "price": 1080,
+    "mrp": 1199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778650094414-183.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 744378,
+    "name": "Cetaphil Oily Skin Face Cleanser",
+    "brand": "Cetaphil",
+    "unit": "59 ml",
+    "price": 299,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773735159250-309.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 40990,
+    "name": "Neutrogena Deep Clean Face Cleanser (Normal to Oily Skin)",
+    "brand": "Neutrogena",
+    "unit": "200 ml",
+    "price": 499,
+    "mrp": 580,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771992965724-1540.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 679287,
+    "name": "CeraVe Hydrating Non Foaming Face Cleanser for Normal to Dry Skin",
+    "brand": "CeraVe",
+    "unit": "88 ml",
+    "price": 323,
+    "mrp": 359,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1464b5d8-f04c-4e01-842e-c369b5ab4fd5.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 679291,
+    "name": "CeraVe Hydrating Non Foaming Face Cleanser for Normal to Dry Skin",
+    "brand": "CeraVe",
+    "unit": "236 ml",
+    "price": 718,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f89493a0-4bd7-45db-9948-3eb669ed1190.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 543368,
+    "name": "Minimalist 10% Niacinamide Face Serum",
+    "brand": "Minimalist",
+    "unit": "10 ml",
+    "price": 225,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772678015140-2252.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 500361,
+    "name": "Minimalist Vitamin B5 10% Gel Moisturizer",
+    "brand": "Minimalist",
+    "unit": "50 g",
+    "price": 315,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772099110297-970.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 552870,
+    "name": "Minimalist Vitamin B5 10% Moisturizing Cream - Pack of 2",
+    "brand": "Minimalist",
+    "unit": "2 x 50 g",
+    "price": 594,
+    "mrp": 698,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778222900885-2294.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 620781,
+    "name": "Minimalist Vitamin B5 10% Gel Moisturizer",
+    "brand": "Minimalist",
+    "unit": "100 g",
+    "price": 540,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/55e568ee-ce9d-4d7d-a39b-a95553fdd44d.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 483561,
+    "name": "Minimalist Sunscreen with Niacinamide (SPF 50 PA++++)",
+    "brand": "Minimalist",
+    "unit": "50 g",
+    "price": 360,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771383932793-666.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 617360,
+    "name": "Minimalist Sunscreen with Niacinamide (SPF 50 PA++++)",
+    "brand": "Minimalist",
+    "unit": "100 g",
+    "price": 630,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771383932793-2831.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 690021,
+    "name": "Minimalist Sunscreen with Niacinamide (SPF 50 PA++++) - Pack of 3",
+    "brand": "Minimalist",
+    "unit": "3 x 50 g",
+    "price": 958,
+    "mrp": 1197,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778250493653-520.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 519952,
+    "name": "Minimalist 3% PHA Face Toner for Hydrating Skin",
+    "brand": "Minimalist",
+    "unit": "150 ml",
+    "price": 351,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7e4e2e78-31c1-4909-b0a8-9ca52b3a1022.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 555320,
+    "name": "Deconstruct Lightweight Sunscreen Gel (SPF 50 PA++++)",
+    "brand": "Deconstruct",
+    "unit": "50 g",
+    "price": 332,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780298794907-5.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 650673,
+    "name": "Deconstruct Lightweight Sunscreen Gel (SPF 50 PA++++)",
+    "brand": "Deconstruct",
+    "unit": "80 g",
+    "price": 515,
+    "mrp": 559,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780298794907-44.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 746277,
+    "name": "Deconstruct Lightweight Sunscreen Gel (SPF 50 PA++++) - Pack of 2",
+    "brand": "Deconstruct",
+    "unit": "2 x 50 g",
+    "price": 629,
+    "mrp": 698,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-7046.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 785015,
+    "name": "Deconstruct Lightweight Sunscreen Gel (SPF 50 PA++++)",
+    "brand": "Deconstruct",
+    "unit": "30 g",
+    "price": 266,
+    "mrp": 279,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780298794907-82.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 1419768,
+    "name": "Deconstruct Lightweight Sunscreen Gel (SPF 50 PA++++) - Pack of 3",
+    "brand": "Deconstruct",
+    "unit": "3 x 50 g",
+    "price": 890,
+    "mrp": 1047,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/54cb0537-5cba-4a34-ac64-77471be69a00.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 500378,
+    "name": "Bare Anatomy Anti-Dandruff Shampoo",
+    "brand": "Bare Anatomy",
+    "unit": "250 ml",
+    "price": 441,
+    "mrp": 484,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772803551672-270.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 425137,
+    "name": "Himalaya Purifying Neem Face Wash (400 ml)",
+    "brand": "Himalaya",
+    "unit": "400 ml",
+    "price": 300,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770632435673-2737.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 571168,
+    "name": "Himalaya Dark Spot Clearing Turmeric Face Wash",
+    "brand": "Himalaya",
+    "unit": "100 ml",
+    "price": 144,
+    "mrp": 229,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770696534079-1960.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 536119,
+    "name": "Himalaya Natural Glow Kesar Face Wash",
+    "brand": "Himalaya",
+    "unit": "150 ml",
+    "price": 166,
+    "mrp": 279,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770696534079-1256.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 536117,
+    "name": "Himalaya Moisturising Aloe Vera Face Wash",
+    "brand": "Himalaya",
+    "unit": "200 ml",
+    "price": 225,
+    "mrp": 449,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782854760536-509.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 790159,
+    "name": "Himalaya Brightening Vitamin C Orange Face Wash",
+    "brand": "Himalaya",
+    "unit": "100 ml",
+    "price": 142,
+    "mrp": 219,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8743de1fcfa544ecad41777f55c3f7c3.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 70304,
+    "name": "Everyuth Purifying Neem Face Wash 150 g",
+    "brand": "Everyuth",
+    "unit": "150 g",
+    "price": 136,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783604215037-4.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 476198,
+    "name": "Biotique Fresh Neem Pimple Control Face Wash",
+    "brand": "Biotique",
+    "unit": "200 ml",
+    "price": 253,
+    "mrp": 365,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770638287400-578.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 35347,
+    "name": "Everyuth Tulsi Turmeric Face Wash 150 ml",
+    "brand": "Everyuth",
+    "unit": "150 ml",
+    "price": 136,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783599478682-46.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 11374,
+    "name": "Patanjali Saundarya Face Wash 60 g",
+    "brand": "Patanjali",
+    "unit": "60 g",
+    "price": 70,
+    "mrp": 70,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770632435673-2204.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 507262,
+    "name": "Mamaearth Rice Water & Niacinamide Face Wash",
+    "brand": "Mamaearth",
+    "unit": "100 ml",
+    "price": 256,
+    "mrp": 285,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770638287400-1598.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 511889,
+    "name": "Mamaearth Rice Water & Niacinamide Face Wash - Pack of 2",
+    "brand": "Mamaearth",
+    "unit": "2 x 100 ml",
+    "price": 501,
+    "mrp": 570,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/e1387a58-e379-4979-9ab3-46497940bea4.jpg",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 885,
+    "name": "Tresemme Keratin Smooth Shampoo",
+    "brand": "Tresemme",
+    "unit": "180 ml",
+    "price": 189,
+    "mrp": 189,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785314876361-97.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 499587,
+    "name": "Dot & Key Vitamin C + E Super Bright Sunscreen (SPF 50+ PA++++)",
+    "brand": "Dot & Key",
+    "unit": "50 g",
+    "price": 388,
+    "mrp": 445,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/777e317e-dd8a-4a37-9cd0-b75ed589f3ff.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 614559,
+    "name": "Dot & Key Vitamin C + E Super Bright Sunscreen (SPF 50+ PA++++) - Pack of 2",
+    "brand": "Dot & Key",
+    "unit": "2 x 30 g",
+    "price": 473,
+    "mrp": 598,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776829632782-89.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 545168,
+    "name": "Dot & Key Vitamin C + E Super Bright Sunscreen (SPF 50+ PA++++) - Pack of 2",
+    "brand": "Dot & Key",
+    "unit": "2 x 50 g",
+    "price": 704,
+    "mrp": 890,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776947502299-162.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 558984,
+    "name": "Dot & Key Vitamin C + E Super Bright Sunscreen (SPF 50+ PA++++)",
+    "brand": "Dot & Key",
+    "unit": "80 g",
+    "price": 500,
+    "mrp": 595,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784826857091-201.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 607918,
+    "name": "Dot & Key Vitamin C + E Super Bright Sunscreen (SPF 50+ PA++++)",
+    "brand": "Dot & Key",
+    "unit": "30 g",
+    "price": 264,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785927283924-309.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 506017,
+    "name": "Garnier 30x Vitamin C Booster Face Serum",
+    "brand": "Garnier",
+    "unit": "15 ml",
+    "price": 263,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772678015140-1413.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 19481,
+    "name": "Pears Pure & Gentle Glow Soap",
+    "brand": "Pears",
+    "unit": "3 x 125 g",
+    "price": 186,
+    "mrp": 211,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777632215013-22.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "body wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 475919,
+    "name": "Pears Pure & Gentle Glow Soap - Pack of 3",
+    "brand": "Pears",
+    "unit": "6 x 125 g",
+    "price": 368,
+    "mrp": 422,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6b16d54c-284f-4206-b334-535942c8a2ce.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "body wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 11383,
+    "name": "Everyuth Walnut Exfoliating Face Scrub",
+    "brand": "Everyuth",
+    "unit": "100 g",
+    "price": 189,
+    "mrp": 210,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784004903124-602.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 707417,
+    "name": "Novology Acne Deep Clearing Cleanser",
+    "brand": "Novology",
+    "unit": "150 g",
+    "price": 585,
+    "mrp": 650,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8be0ca21-9c90-402e-a6f1-e36a6e04fc31.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 553218,
+    "name": "The Derma Co 2% Niacinamide Gentle Skin Cleanser",
+    "brand": "The Derma Co",
+    "unit": "125 ml",
+    "price": 359,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771992965724-2067.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 791784,
+    "name": "The Derma Co 2% Niacinamide Gentle Skin Cleanser - Pack of 2",
+    "brand": "The Derma Co",
+    "unit": "2 x 125 ml",
+    "price": 701,
+    "mrp": 798,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786943376173-36.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 559345,
+    "name": "Cetaphil Oily Skin Cleanser",
+    "brand": "Cetaphil",
+    "unit": "236 ml",
+    "price": 1035,
+    "mrp": 1149,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773735159250-282.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 617234,
+    "name": "Neutrogena Ultra Gentle Creamy Cleanser",
+    "brand": "Neutrogena",
+    "unit": "200 ml",
+    "price": 600,
+    "mrp": 600,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771992965724-2191.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 565289,
+    "name": "Cetaphil Hydrating Foaming Cream Face Cleanser",
+    "brand": "Cetaphil",
+    "unit": "236 ml",
+    "price": 924,
+    "mrp": 1050,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771992965724-2123.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 519948,
+    "name": "Minimalist 2% Salicylic-Acid Face Serum for Acne",
+    "brand": "Minimalist",
+    "unit": "30 ml",
+    "price": 483,
+    "mrp": 549,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772678015140-1710.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 548423,
+    "name": "Minimalist Light Fluid Face Sunscreen (SPF 50 PA++++)",
+    "brand": "Minimalist",
+    "unit": "50 ml",
+    "price": 450,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772169697746-139.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 556445,
+    "name": "Minimalist Light Fluid Face Sunscreen (SPF 50 PA++++)",
+    "brand": "Minimalist",
+    "unit": "30 ml",
+    "price": 315,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771383932793-2112.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 764059,
+    "name": "Minimalist Light Fluid Face Sunscreen (SPF 50 PA++++)",
+    "brand": "Minimalist",
+    "unit": "100 ml",
+    "price": 810,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773564350996-423.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 532645,
+    "name": "Plum 3% Niacinamide Toner with Rice Water",
+    "brand": "Plum",
+    "unit": "150 ml",
+    "price": 396,
+    "mrp": 440,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775023416545-669.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 552977,
+    "name": "Plum 3% Niacinamide Toner with Rice Water",
+    "brand": "Plum",
+    "unit": "2 x 150 ml",
+    "price": 748,
+    "mrp": 880,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-6837.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 460097,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 99,
+    "mrp": 99,
+    "image_url": null,
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash",
+      "body wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 614149,
+    "name": "Dermatouch Multivitamin Sunscreen Gel (SPF 50+ PA++++)",
+    "brand": "Dermatouch",
+    "unit": "50 g",
+    "price": 302,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782704175232-147.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face wash"
+    ]
+  },
+  {
+    "pid": 785845,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 650,
+    "mrp": 999,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 555161,
+    "name": "Wild Stone Men's Premium Perfume Gift Set",
+    "brand": "Wild Stone",
+    "unit": "4 x 30 ml",
+    "price": 710,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770300964921-909.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 765704,
+    "name": "Denver 8-in-1 Combo Men's Grooming Kit",
+    "brand": "Denver",
+    "unit": "1 set",
+    "price": 528,
+    "mrp": 749,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773988173143-678.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 374698,
+    "name": "Park Avenue Good Morning Men's Grooming Kit",
+    "brand": "Park Avenue",
+    "unit": "1 pc",
+    "price": 569,
+    "mrp": 849,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8edae61a-b032-4ce6-b875-1703475239c5.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 374697,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 750,
+    "mrp": 1149,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 554956,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 499,
+    "mrp": 949,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 554988,
+    "name": "Yardley Gentlemen Men's Grooming Kit",
+    "brand": "Yardley",
+    "unit": "5 pcs",
+    "price": 497,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/abe134b3-e185-481b-a34e-8d147bae4aa3.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 794538,
+    "name": "Yardley London Gentleman Gold Luxury Men's Grooming Kit",
+    "brand": "Yardley",
+    "unit": "1 set",
+    "price": 560,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5dd63949-ed75-4e03-930d-8ac79b3eb333.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 480373,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 549,
+    "mrp": 799,
+    "image_url": null,
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 752015,
+    "name": "BLA BLI BLU Perfume Gift Set For Women",
+    "brand": "Bla Bli Blu",
+    "unit": "3 x 30 ml",
+    "price": 785,
+    "mrp": 900,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775457726381-640.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 457926,
+    "name": "Bella Vita Organic Women's Luxury Perfume Gift Set",
+    "brand": "Bella Vita Organic",
+    "unit": "4 x 20 ml",
+    "price": 499,
+    "mrp": 849,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787139392158-31.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 541349,
+    "name": "Engage Women's Luxury EDP Perfume Gift Set",
+    "brand": "Engage",
+    "unit": "4 x 25 ml",
+    "price": 656,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780458349701-152.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 562679,
+    "name": "Plum BodyLovin' Vanilla Vibes Bath & Body Gift Set",
+    "brand": "Plum BodyLovin'",
+    "unit": "3 pcs",
+    "price": 675,
+    "mrp": 749,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d43f60a5-825f-407a-a081-9b236e01fd95.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit",
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 578604,
+    "name": "Plum BodyLovin' Vanilla Vibes Bath & Body Gift Set - Pack of 2",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 3 pcs",
+    "price": 1274,
+    "mrp": 1498,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778222900885-2843.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit",
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 609899,
+    "name": "Kimirica Gentlemen Trio Gift Set",
+    "brand": "Kimirica",
+    "unit": "3 pcs",
+    "price": 720,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/32e86ba3-5391-4651-b41d-03799be9ddd0.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 1372165,
+    "name": "Plum BodyLovin' Boardroom In Bora Bora Bath & Body Gift Set",
+    "brand": "Plum BodyLovin'",
+    "unit": "1 set",
+    "price": 900,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/989666e9-9192-45b5-ab01-f7fc4964753a.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 1380983,
+    "name": "Plum BodyLovin' Boardroom In Bora Bora Bath & Body Gift Set - Pack of 2",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 1 set",
+    "price": 1699,
+    "mrp": 1998,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785410330413-27.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 741155,
+    "name": "Bla Bli Blu Men Perfume Gift Set",
+    "brand": "Bla Bli Blu",
+    "unit": "3 x 30 ml",
+    "price": 785,
+    "mrp": 900,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775457726381-443.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 793665,
+    "name": "The Man Company Curated for Him Collection Gift Set",
+    "brand": "The Man Company",
+    "unit": "1 set",
+    "price": 949,
+    "mrp": 1099,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b0eb6bfe2a4a443c927d3711be679229.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 541347,
+    "name": "Engage Men's Luxury EdP Perfume Gift Set",
+    "brand": "Engage",
+    "unit": "4 x 25 ml",
+    "price": 654,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781839718536-2066.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 19679,
+    "name": "Ferrero Rocher Chocolate Gift Pack (4 pieces)",
+    "brand": "Ferrero Rocher",
+    "unit": "50 g",
+    "price": 179,
+    "mrp": 179,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776656742804-880.png",
+    "inventory": 16,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit",
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 450384,
+    "name": "Rose (Flowers & Petals)",
+    "brand": "Freshbury",
+    "unit": "100 g",
+    "price": 39,
+    "mrp": 47,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783600714662-26.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 477889,
+    "name": "Ceramic Diffuser Gift Set (Lemongrass, Cream) (Lemon Aroma, Cream) Auradecor",
+    "brand": "Auradecor",
+    "unit": "5 pcs",
+    "price": 199,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781250417959-190.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit",
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 518716,
+    "name": "Vadilal Chocolate Chips Ice Cream Cake",
+    "brand": "Vadilal",
+    "unit": "500 ml",
+    "price": 285,
+    "mrp": 300,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779075684469-652.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 457771,
+    "name": "Bella Vita Organic CEO Men's Eau de Parfum",
+    "brand": "Bella Vita Organic",
+    "unit": "100 ml",
+    "price": 449,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787139392158-4.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 665896,
+    "name": "Mad Over Print 'I Love You' Greeting Card",
+    "brand": "Mad Over Print",
+    "unit": "1 pc",
+    "price": 69,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/25db397e-37eb-44e4-b917-24329826eafc.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 552860,
+    "name": "Femora Coffee Mug (Ceramic)",
+    "brand": "Femora",
+    "unit": "1 pc",
+    "price": 148,
+    "mrp": 300,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771214347138-3958.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 551219,
+    "name": "Paperpep Birthday Print Gift Wrapping Paper (Multicolour)",
+    "brand": "Paperpep",
+    "unit": "5 pcs",
+    "price": 69,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/49660655-f839-4f05-898a-8bd92ea63fb1.png",
+    "inventory": 15,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 546194,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 149,
+    "mrp": 244,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 1400800,
+    "name": "Bombay Shaving Company Sensi Smart Men's Razor with 3 Cartridges",
+    "brand": "Bombay Shaving Company",
+    "unit": "1 set",
+    "price": 180,
+    "mrp": 314,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b652b1a88376474980934e4d65f88aa0.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 1400814,
+    "name": "Bombay Shaving Company Sensi Smart Men's Razor with 12 Cartridges",
+    "brand": "Bombay Shaving Company",
+    "unit": "1 set",
+    "price": 600,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/35bd46832acc481cb2bb5509fd68ef6e.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 533536,
+    "name": "Bombay Shaving Company Sensi Smart 3 Men's Razor",
+    "brand": "Bombay Shaving Company",
+    "unit": "1 pc",
+    "price": 99,
+    "mrp": 149,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/489c81b4-3e58-4fc0-a892-c00d426e4bbf.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 723937,
+    "name": "Bombay Shaving Company Sensi Go 5 Premium 5-Blade Disposable Men's Razor - Free Post Shave Balm",
+    "brand": "Bombay Shaving Company",
+    "unit": "1 pack",
+    "price": 199,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a7db9ab3-7f35-4d3c-8e45-b9f5aa886b60.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 533537,
+    "name": "Bombay Shaving Company Sensi Smart 3 Men's Razor Cartridge",
+    "brand": "Bombay Shaving Company",
+    "unit": "2 pcs",
+    "price": 99,
+    "mrp": 165,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/769c1c0c-3ee9-47b5-8983-7a87ee4a7617.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 657802,
+    "name": "Bombay Shaving Company Sensi Smart 3 Men's Razor Cartridge - Pack of 2",
+    "brand": "Bombay Shaving Company",
+    "unit": "2 x 2 pcs",
+    "price": 195,
+    "mrp": 330,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-5594.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 657804,
+    "name": "Bombay Shaving Company Sensi Smart 3- Men's Razor Cartridge - Pack of 3",
+    "brand": "Bombay Shaving Company",
+    "unit": "3 x 2 pcs",
+    "price": 293,
+    "mrp": 495,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778243110777-3570.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 501160,
+    "name": "Bombay Shaving Company Charcoal Shaving Foam 428 ml",
+    "brand": "Bombay Shaving Company",
+    "unit": "428 ml",
+    "price": 291,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/668551f9-21be-42e0-bfe7-7bfa285321bb.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 1396979,
+    "name": "Bombay Shaving Company Sensi Smart Men's Razor Cartridge",
+    "brand": "Bombay Shaving Company",
+    "unit": "4 pcs",
+    "price": 179,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/12388f47b764425ea50b98a0f38a1a34.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 955,
+    "name": "Gillette Presto 2-Blade Smoother Shaving Men's Razor",
+    "brand": "Gillette",
+    "unit": "6 pcs",
+    "price": 128,
+    "mrp": 128,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4828fbbb-7869-4718-a5d8-3474c415aea6.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 19722,
+    "name": "Gillette Mach 3 Shaving Men's Razor Cartridge",
+    "brand": "Gillette",
+    "unit": "2 pcs",
+    "price": 338,
+    "mrp": 375,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786977877773-57.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 639018,
+    "name": "Gillette Mach 3 Shaving Men's Razor Cartridge - Pack of 2",
+    "brand": "Gillette",
+    "unit": "2 x 2 pcs",
+    "price": 660,
+    "mrp": 750,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-5480.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 686349,
+    "name": "Gillette Mach 3 Shaving Men's Razor Cartridge - Pack of 3",
+    "brand": "Gillette",
+    "unit": "3 x 2 pcs",
+    "price": 934,
+    "mrp": 1125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778250493653-251.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 583499,
+    "name": "Gillette Guard Manual Shaving Men's Razor - with Blades",
+    "brand": "Gillette",
+    "unit": "1 pc",
+    "price": 133,
+    "mrp": 133,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b1ea65fa-2fd1-412f-a0d9-f67dab79487f.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 426663,
+    "name": "Gillette Fusion5 Men's Razor - Beard Styling Blade",
+    "brand": "Gillette",
+    "unit": "1 pc",
+    "price": 360,
+    "mrp": 450,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786977877773-253.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 406141,
+    "name": "Gillette Mach-3 Men's Razor Cartridge",
+    "brand": "Gillette",
+    "unit": "6 pcs",
+    "price": 806,
+    "mrp": 1019,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787030342804-58.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 639019,
+    "name": "Gillette Mach-3 Men's Razor Cartridge - Pack of 2",
+    "brand": "Gillette",
+    "unit": "2 x 6 pcs",
+    "price": 1590,
+    "mrp": 2038,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778056825358-2541.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 442224,
+    "name": "LetsShave Pro 2 Plus Disposable Twin Blade Shaving Men's Razor",
+    "brand": "LetsShave",
+    "unit": "5 pcs",
+    "price": 99,
+    "mrp": 100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c11556ec-eb5b-43e3-a00c-a78a148ee82f.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 500762,
+    "name": "Gillette Fusion5 Men's Razor Cartridge",
+    "brand": "Gillette",
+    "unit": "2 pcs",
+    "price": 689,
+    "mrp": 689,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786977877773-391.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 639023,
+    "name": "Gillette Fusion5 Men's Razor Cartridge - Pack of 2",
+    "brand": "Gillette",
+    "unit": "2 x 2 pcs",
+    "price": 1282,
+    "mrp": 1378,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778056825358-2552.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 686350,
+    "name": "Gillette Fusion5 Men's Razor Cartridge - Pack of 3",
+    "brand": "Gillette",
+    "unit": "3 x 2 pcs",
+    "price": 1757,
+    "mrp": 2067,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778250493653-261.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 639024,
+    "name": "Gillette Fusion5 Men's Razor Cartridge - Pack of 4",
+    "brand": "Gillette",
+    "unit": "4 x 2 pcs",
+    "price": 2233,
+    "mrp": 2756,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778473839715-2685.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 588659,
+    "name": "Gillette Fusion 5 Proglide Men's Razor",
+    "brand": "Gillette",
+    "unit": "1 pc",
+    "price": 599,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786977877773-839.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 587240,
+    "name": "Gillette Fusion5 Proglide Blade Razor Cartridge",
+    "brand": "Gillette",
+    "unit": "2 pcs",
+    "price": 769,
+    "mrp": 769,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786977877773-796.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 639011,
+    "name": "Gillette Fusion Proglide 5 Blade Men's Razor Cartridge - Pack of 2",
+    "brand": "Gillette",
+    "unit": "2 x 2 pcs",
+    "price": 1415,
+    "mrp": 1538,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778065599967-274.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 10568,
+    "name": "Old Spice Original After Shave Lotion Atomizer",
+    "brand": "Old Spice",
+    "unit": "150 ml",
+    "price": 310,
+    "mrp": 310,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c82c8de6-1cf7-410b-b130-3275350a423a.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 19704,
+    "name": "Gillette Regular Shaving Foam (50 g)",
+    "brand": "Gillette",
+    "unit": "50 g",
+    "price": 95,
+    "mrp": 95,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1dee3676-4682-4a62-a51e-2b9f3814ca2f.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 656357,
+    "name": "Bombay Shaving Company Natural Antiseptic & Astrigent Alum Bar",
+    "brand": "Bombay Shaving Company",
+    "unit": "100 g",
+    "price": 170,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781236349449-110.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 544362,
+    "name": "Bombay Shaving Company Desire Men's Deodorant",
+    "brand": "Bombay Shaving Company",
+    "unit": "150 ml",
+    "price": 129,
+    "mrp": 355,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770915494802-83.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 697032,
+    "name": "GUBB All Purpose Scissors (Blue)",
+    "brand": "GUBB",
+    "unit": "1 pc",
+    "price": 129,
+    "mrp": 135,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772940877141-226.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 493225,
+    "name": "Bombay Shaving Company Charcoal Shaving Cream",
+    "brand": "Bombay Shaving Company",
+    "unit": "78 g",
+    "price": 79,
+    "mrp": 84,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/db5eec8e-8778-4310-b667-a5818e14e8df.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 680377,
+    "name": "Urbanmooch Wooden Shaving Brush",
+    "brand": "Urbanmooch",
+    "unit": "1 pc",
+    "price": 335,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/713fcb4d-48f7-47de-b5c2-40b623928601.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 554264,
+    "name": "Bombay Shaving Company Type C Beard Trimmer",
+    "brand": "Bombay Shaving Company",
+    "unit": "1 unit",
+    "price": 649,
+    "mrp": 1000,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/aca0a8d0-f654-491a-b970-4e08abe53142.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 565294,
+    "name": "Bombay Shaving Company 11-In-1 Full Men's Multi Grooming Trimmer",
+    "brand": "Bombay Shaving Company",
+    "unit": "1 unit",
+    "price": 999,
+    "mrp": 2000,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5187d2b9-9eb5-4455-a8a8-b90e9c8bbe10.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 457925,
+    "name": "Bella Vita Organic Men's Luxury Perfume Gift Set",
+    "brand": "Bella Vita Organic",
+    "unit": "4 x 20 ml",
+    "price": 499,
+    "mrp": 849,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787139392158-23.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 606116,
+    "name": "Kimirica The French Note Trio Gift Set",
+    "brand": "Kimirica",
+    "unit": "3 pcs",
+    "price": 515,
+    "mrp": 559,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7ee41ce5-12ff-4898-8ff8-56b44f6e02a3.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit",
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 497003,
+    "name": "Wild Stone Hydra Energy Eau de Parfum",
+    "brand": "Wild Stone",
+    "unit": "50 ml",
+    "price": 350,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-2431.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 707895,
+    "name": "Wild Stone Eau de Parfum (Hydra Energy)",
+    "brand": "Wild Stone",
+    "unit": "100 ml",
+    "price": 496,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779694507022-150.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit"
+    ]
+  },
+  {
+    "pid": 11732,
+    "name": "Park Avenue Good Morning Shaving Cream",
+    "brand": "Park Avenue",
+    "unit": "84 g",
+    "price": 75,
+    "mrp": 75,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/68636dcf-a457-4ed3-ad60-ca92886f9a25.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 603734,
+    "name": "Plum Luxe Perfume Gift Set",
+    "brand": "Plum",
+    "unit": "3 pcs",
+    "price": 699,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f7246225-c239-4884-9fe8-a41ff42e395e.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 535104,
+    "name": "Bella Vita Organic CEO Man Black Edition Gift Set",
+    "brand": "Bella Vita Organic",
+    "unit": "1 pack",
+    "price": 949,
+    "mrp": 1399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c28c4de9-4c95-433b-92e1-d593e739da6d.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 551222,
+    "name": "Paperpep Gift Boxes Gift Wrapping Paper (Multicolour)",
+    "brand": "Paperpep",
+    "unit": "5 pcs",
+    "price": 89,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c472ce31-31db-4da2-867f-a3fbb276aa37.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 594438,
+    "name": "Bombay Shaving Company Type C Flash Charge Beard Trimmer",
+    "brand": "Bombay Shaving Company",
+    "unit": "1 unit",
+    "price": 599,
+    "mrp": 1000,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0940fcd1-76f3-423b-bc32-272b550ad779.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "shaving kit",
+      "grooming kit",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 544608,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 2220,
+    "mrp": 2220,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 536437,
+    "name": "Park Avenue Signature Collection Gift Set For Men",
+    "brand": "Park Avenue",
+    "unit": "3 pcs",
+    "price": 675,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/921e84c8-a642-4bca-af35-e21e2feae033.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 540375,
+    "name": "Soulflower Bright & Glow Skin Gift Set for Men & Women",
+    "brand": "Soulflower",
+    "unit": "4 pcs",
+    "price": 837,
+    "mrp": 1300,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f6388ed1-5a5f-4451-a87a-e55469067b61.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 604366,
+    "name": "Carlton London Eternal Men's Gift Box (Woody)",
+    "brand": "Carlton London",
+    "unit": "50 ml + 1 pc",
+    "price": 749,
+    "mrp": 2490,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b4054816-e337-47f5-80f7-335db2f5ec4c.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 544609,
+    "name": "Forest Essentials Mini Delights Gift Set",
+    "brand": "Forest Essentials",
+    "unit": "4 pcs",
+    "price": 2295,
+    "mrp": 2295,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4b0b62c5-563a-4bda-bf9c-5bd49d8bf6fa.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 702933,
+    "name": "Forest Essentials Fragrant Shower Ritual Gift Set",
+    "brand": "Forest Essentials",
+    "unit": "150 ml",
+    "price": 1850,
+    "mrp": 1850,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1ad12cd8-b046-4cc9-a5c6-68d2557e1120.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 544607,
+    "name": "Forest Essentials Mallika - Delights Gift Set",
+    "brand": "Forest Essentials",
+    "unit": "6 x 50 ml",
+    "price": 3295,
+    "mrp": 3295,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a0dfc6c0-e245-46c6-a568-8e090a4721cd.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 559617,
+    "name": "Forest Essentials Mashobra Honey & Vanilla Body Care Gift Set",
+    "brand": "Forest Essentials",
+    "unit": "2 pcs",
+    "price": 1075,
+    "mrp": 1075,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/868aca3e-7fce-4ad5-9315-a118ce20c54e.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 606109,
+    "name": "Kimirica Little Heart Love Story Gift Set",
+    "brand": "Kimirica",
+    "unit": "3 pcs",
+    "price": 874,
+    "mrp": 949,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/61db71fc-9454-400d-9d84-0e861ae31f8c.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 505526,
+    "name": "Kimirica Love Story Experience Gift Set",
+    "brand": "Kimirica",
+    "unit": "5 pcs",
+    "price": 1215,
+    "mrp": 1349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d3e634a1-7216-42f3-b641-748ab6767bf5.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 540597,
+    "name": "The Body Shop Floral British Rose Bloom Gift Set",
+    "brand": "The Body Shop",
+    "unit": "1 set",
+    "price": 770,
+    "mrp": 905,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8706dd75-3e2e-469c-89f2-ac896d6a21a5.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 539208,
+    "name": "Kimirica Love Story Moment Gift Set",
+    "brand": "Kimirica",
+    "unit": "7 pcs",
+    "price": 1710,
+    "mrp": 1899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/39bb4ac9-6e05-4eb5-b280-5310fadc955c.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 540591,
+    "name": "The Body Shop Nutty Shea Delight Gift Set",
+    "brand": "The Body Shop",
+    "unit": "1 pack",
+    "price": 770,
+    "mrp": 905,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/88c15a97-3a9d-48a1-a69d-2fb53aa09a1a.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 606115,
+    "name": "Kimirica The Gulistan Bath & Body Care Gift Set",
+    "brand": "Kimirica",
+    "unit": "2 pcs",
+    "price": 630,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7247b93e-208c-4987-b091-9b7ce7c9006a.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 743883,
+    "name": "Kimirica for Bridgerton Lady In Silver Bath & Body Duo Gift Set",
+    "brand": "Kimirica",
+    "unit": "1 set",
+    "price": 490,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771225285496-196.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 553119,
+    "name": "The Body Shop Fruity & Floral Shower Gel Gift Set",
+    "brand": "The Body Shop",
+    "unit": "1 set",
+    "price": 1195,
+    "mrp": 1405,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/27384bbb-dded-4342-8a61-bfb99816b852.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 566272,
+    "name": "Paperpep Geometric Print Paper Gift Bag - Pack of 2 (Blue)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 179,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4e4b4830-e99b-4355-bbe6-d1418e59c319.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 565628,
+    "name": "Paperpep Geometric Print Paper Gift Bag - Pack of 2 (Blue)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 99,
+    "mrp": 120,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c5aebe11-c23c-4b32-bd46-6e3707cb0aaa.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 565631,
+    "name": "Paperpep Geometric Print Paper Gift Bag - Pack of 2 (Blue)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 139,
+    "mrp": 160,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/95073f7d-8aae-461d-8f39-f6664baacbfb.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 560717,
+    "name": "Forest Essentials Luxury Perfume Gift Set",
+    "brand": "Forest Essentials",
+    "unit": "4 x 10 ml",
+    "price": 1995,
+    "mrp": 1995,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6b899149-9f94-40ec-85bd-b49bc59065b1.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 551220,
+    "name": "Paperpep Multiple Eggs Gift Wrapping Paper (Multicolour)",
+    "brand": "Paperpep",
+    "unit": "5 pcs",
+    "price": 69,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8f1aa5db-5928-4a95-96fe-ac857f5c9e6e.png",
+    "inventory": 14,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 549729,
+    "name": "FNP 5 Mixed Roses Bouquet",
+    "brand": "FNP",
+    "unit": "1 pc",
+    "price": 249,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1769857743738-91.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 770709,
+    "name": "Valenium Printed Sling Bag",
+    "brand": "Valenium",
+    "unit": "1 unit",
+    "price": 699,
+    "mrp": 2999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779768610281-166.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 725885,
+    "name": "Paperpep Flower Print Cake Paper Gift Bag",
+    "brand": "Paperpep",
+    "unit": "1 pc",
+    "price": 79,
+    "mrp": 90,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6d4bf9d1-dd9a-4e6e-96c4-b27b0f08336b.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 668302,
+    "name": "Paperpep Peach Rainbow Print Gift Wrapping Paper (Multicolour)",
+    "brand": "Paperpep",
+    "unit": "5 pcs",
+    "price": 89,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/e07d9cce-caaa-45ea-b260-287dae949ad6.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 658839,
+    "name": "FlowerAura - 3 Purple Orchids in Pink Non Woven Paper Bouquet",
+    "brand": "FlowerAura",
+    "unit": "1 pc",
+    "price": 349,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779421790948-3162.png",
+    "inventory": 14,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 19705,
+    "name": "Gillette Sensitive Shaving Foam",
+    "brand": "Gillette",
+    "unit": "418 g",
+    "price": 276,
+    "mrp": 290,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772776645620-659.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 541837,
+    "name": "CrystalPure Alum",
+    "brand": "CrystalPure",
+    "unit": "100 g",
+    "price": 109,
+    "mrp": 109,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/afcb5659-c6bf-4ae7-9d18-ab4820dd5e0b.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 696203,
+    "name": "Denver Hamilton Men's Deodorant",
+    "brand": "Denver",
+    "unit": "150 ml",
+    "price": 169,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ecf00862-7683-422e-b1e5-0d4002191c75.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 146338,
+    "name": "Munix Scissors (Multicolour)",
+    "brand": "Munix",
+    "unit": "1 pc",
+    "price": 53,
+    "mrp": 53,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778348720635-426.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 289190,
+    "name": "Dettol Fresh Shaving Cream",
+    "brand": "Dettol",
+    "unit": "78 g",
+    "price": 82,
+    "mrp": 82,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/752e9529-7c93-439e-ab3e-12267ca0debc.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 19227,
+    "name": "Gillette Shaving Brush",
+    "brand": "Gillette",
+    "unit": "1 pc",
+    "price": 85,
+    "mrp": 85,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/380a7b74-4f40-4cad-8d51-6869e722c549.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "grooming kit"
+    ]
+  },
+  {
+    "pid": 432174,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 387,
+    "mrp": 580,
+    "image_url": null,
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 614842,
+    "name": "Dove Renew Nourishing Body Wash",
+    "brand": "Dove",
+    "unit": "1 ltr",
+    "price": 522,
+    "mrp": 949,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772772544327-2837.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 275702,
+    "name": "Dove Gentle Exfoliating Nourishing Body Wash",
+    "brand": "Dove",
+    "unit": "300 ml",
+    "price": 205,
+    "mrp": 235,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5500b541-c958-4f54-b8a4-51de89c5eb48.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 257025,
+    "name": "Dove Refreshing Body Wash",
+    "brand": "Dove",
+    "unit": "300 ml",
+    "price": 205,
+    "mrp": 235,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6ebc2512-6e70-48f7-aa06-ac309f34741a.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 759780,
+    "name": "Dove Refreshing Sakura Blossom Body Wash",
+    "brand": "Dove",
+    "unit": "1 ltr",
+    "price": 522,
+    "mrp": 949,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772523209442-126.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 601892,
+    "name": "Lux Orchid Obsession Bodywash with Niacinamide (Black Orchid & Juniper Oil)",
+    "brand": "Lux",
+    "unit": "750 ml",
+    "price": 336,
+    "mrp": 420,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6bbe6cc3-8f23-436a-809a-d9e830aafabf.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 277316,
+    "name": "Dove Deep-Moisture Body Wash",
+    "brand": "Dove",
+    "unit": "300 ml",
+    "price": 170,
+    "mrp": 195,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/556252b3-2db9-42ff-aefc-4552213cdce6.png",
+    "inventory": 21,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 599253,
+    "name": "Dove 4% AHA Refining Body Wash",
+    "brand": "Dove",
+    "unit": "300 ml",
+    "price": 340,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3331bf17-e9da-48bd-a005-2af84bda8058.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 599252,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 340,
+    "mrp": 399,
+    "image_url": null,
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 465883,
+    "name": "Nivea Waterlily & Oil Shower Gel (125 ml)",
+    "brand": "Nivea",
+    "unit": "125 ml",
+    "price": 98,
+    "mrp": 110,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772772544327-1263.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 36712,
+    "name": "Fiama Patchouli & Macadamia Shower Gel (with Skin Conditioners)",
+    "brand": "Fiama",
+    "unit": "250 ml",
+    "price": 99,
+    "mrp": 209,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772772544327-615.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 632524,
+    "name": "Cinthol Cool Aqua Foaming Body Wash",
+    "brand": "Cinthol",
+    "unit": "200 ml",
+    "price": 99,
+    "mrp": 120,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778820950977-9.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 524399,
+    "name": "Pears Pure And Gentle Body Wash",
+    "brand": "Pears",
+    "unit": "750 ml",
+    "price": 321,
+    "mrp": 480,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777534555736-95.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 410600,
+    "name": "Pears Soft & Fresh Body Wash",
+    "brand": "Pears",
+    "unit": "250 ml",
+    "price": 108,
+    "mrp": 180,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777632215013-303.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 547535,
+    "name": "Be Bodywise 1% Salicylic Acid Exfoliating Body Wash",
+    "brand": "Be Bodywise",
+    "unit": "250 ml",
+    "price": 349,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775103290922-75.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 566107,
+    "name": "Be Bodywise 1% Salicylic Acid Exfoliating Body Wash - Pack of 2",
+    "brand": "Be Bodywise",
+    "unit": "2 x 250 ml",
+    "price": 664,
+    "mrp": 698,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772772544327-2527.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 568437,
+    "name": "Be Bodywise 1% Salicylic Acid Exfoliating Body Wash",
+    "brand": "Be Bodywise",
+    "unit": "700 ml",
+    "price": 699,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775103290922-173.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 488882,
+    "name": "Chemist At Play Exfoliating Body Wash",
+    "brand": "Chemist At Play",
+    "unit": "236 ml",
+    "price": 348,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772803551672-212.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 578752,
+    "name": "Chemist At Play Exfoliating Body Wash - Pack of 2",
+    "brand": "Chemist At Play",
+    "unit": "2 x 236 ml",
+    "price": 599,
+    "mrp": 798,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-6920.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 525042,
+    "name": "Vega Mini Bath Loofah (Multicolour)",
+    "brand": "Vega",
+    "unit": "2 pcs",
+    "price": 125,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781597301116-118.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 407475,
+    "name": "Nivea Nourishing Body Lotion",
+    "brand": "Nivea",
+    "unit": "600 ml",
+    "price": 482,
+    "mrp": 860,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/e03afcf7-b435-44f2-9beb-1d547930842f.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 482668,
+    "name": "Dove Exfoliating Body Polish Scrub (Pomegranate and Shea Butter)",
+    "brand": "Dove",
+    "unit": "298 g",
+    "price": 720,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/48103a58-a1c2-4e2c-84c4-296b8894a57b.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 525043,
+    "name": "Vega Wooden Handle Bath Brush",
+    "brand": "Vega",
+    "unit": "1 pc",
+    "price": 165,
+    "mrp": 165,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781597301116-129.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 555586,
+    "name": "Bella Vita CEO Man Luxury Collection Shower Gel",
+    "brand": "Bella Vita",
+    "unit": "500 ml",
+    "price": 299,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d80deed0-df3a-4d81-9960-e5433feb1c5c.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 439876,
+    "name": "Dove Deeply Nourishing Moisturising Liquid Hand Wash",
+    "brand": "Dove",
+    "unit": "900 ml",
+    "price": 230,
+    "mrp": 270,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777632215013-379.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 23704,
+    "name": "Sensodyne Sensitive Soft Toothbrush - Buy 2 Get 1 Free",
+    "brand": "Sensodyne",
+    "unit": "3 pcs",
+    "price": 114,
+    "mrp": 130,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784001913751-478.png",
+    "inventory": 8,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 25251,
+    "name": "Dove Intense Repair Shampoo For Dry & Damaged Hair",
+    "brand": "Dove",
+    "unit": "650 ml",
+    "price": 524,
+    "mrp": 1082,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776453616669-158.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 460098,
+    "name": "Lux Magnolia Magic Bodywash with Niacinamide Body Wash",
+    "brand": "Lux",
+    "unit": "245 ml",
+    "price": 99,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778063967419-160.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 599276,
+    "name": "Lux LUX Sandal Spell Bodywash with Niacinamide",
+    "brand": "Lux",
+    "unit": "245 ml",
+    "price": 109,
+    "mrp": 109,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/88ed2db8-8ea6-4bcd-bfc6-745dc5d1865a.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 591772,
+    "name": "Lux Lavender & Vitamin C Brightening Body Wash",
+    "brand": "Lux",
+    "unit": "400 ml",
+    "price": 231,
+    "mrp": 355,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777534555736-345.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 493520,
+    "name": "Mamaearth Vitamin C Daily Glow Face Wash",
+    "brand": "Mamaearth",
+    "unit": "50 ml",
+    "price": 119,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778496956227-425.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 501535,
+    "name": "Mamaearth Vitamin C Daily Glow Face Wash - Pack of 2",
+    "brand": "Mamaearth",
+    "unit": "2 x 50 ml",
+    "price": 225,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770638287400-1373.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash",
+      "face cream"
+    ]
+  },
+  {
+    "pid": 727542,
+    "name": "Jeva Papaya Body Scrub Face & Body Scrub",
+    "brand": "Jeva",
+    "unit": "380 ml",
+    "price": 159,
+    "mrp": 325,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/dc834079-d3c3-40de-a1de-db5a834b5bc9.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 612118,
+    "name": "Bronson Professional Silicone Bath Brush",
+    "brand": "Bronson Professional",
+    "unit": "1 pc",
+    "price": 169,
+    "mrp": 400,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/77c970dc-9334-4048-9614-63561529e782.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 540177,
+    "name": "KLOY Deep Exfoliating Bath Gloves / Mitt",
+    "brand": "KLOY",
+    "unit": "1 pc",
+    "price": 159,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6e8db823-ac7b-4649-aabc-b97181b6298b.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 609022,
+    "name": "Dabur Gulabari Shower Gel (Himalayan Rose & Oudh)",
+    "brand": "Dabur",
+    "unit": "250 ml",
+    "price": 89,
+    "mrp": 219,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/51d4d0d7-9aa7-4894-ba5c-a9c5de153d2c.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 488064,
+    "name": "Santoor Mild Hand Wash Lotus & Tulsi - Buy 1 Get 1 Free",
+    "brand": "Santoor",
+    "unit": "400 ml",
+    "price": 90,
+    "mrp": 105,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787118742066-138.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 524400,
+    "name": "Pears Soft And Fresh Body Wash",
+    "brand": "Pears",
+    "unit": "750 ml",
+    "price": 334,
+    "mrp": 500,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777534555736-105.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 429898,
+    "name": "Pears Naturale Pomegranate Brightening Body Wash",
+    "brand": "Pears",
+    "unit": "250 ml",
+    "price": 135,
+    "mrp": 180,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777632215013-369.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 362297,
+    "name": "Pears Soft & Fresh Soap - Buy 3 Get 1 Free",
+    "brand": "Pears",
+    "unit": "4 x 125 g",
+    "price": 304,
+    "mrp": 380,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777632215013-294.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 211410,
+    "name": "Pears Pure & Gentle Soap (125 g) - Pack of 5",
+    "brand": "Pears",
+    "unit": "5 x 125 g",
+    "price": 293,
+    "mrp": 401,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777632215013-240.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 524401,
+    "name": "Pears Naturale Vitamin C Body Wash",
+    "brand": "Pears",
+    "unit": "750 ml",
+    "price": 420,
+    "mrp": 525,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777534555736-115.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 492134,
+    "name": "MCaffeine Naked & Raw Coffee Body Scrub",
+    "brand": "MCaffeine",
+    "unit": "55 g",
+    "price": 237,
+    "mrp": 279,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1d27172c-1d34-42b6-9a22-25f841550379.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 540034,
+    "name": "GUBB Silicone Exfoliating Bath Brush",
+    "brand": "GUBB",
+    "unit": "1 pc",
+    "price": 336,
+    "mrp": 395,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/52f10153-7e98-4d07-81bf-c3f9b8341752.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 350273,
+    "name": "Dettol pH-Balanced Sensitive Hand Wash",
+    "brand": "Dettol",
+    "unit": "200 ml",
+    "price": 76,
+    "mrp": 79,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/48760484-4ad2-4538-a7b1-4579394edcee.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 612897,
+    "name": "Dettol pH-Balanced Sensitive Hand Wash - Pack of 2",
+    "brand": "Dettol",
+    "unit": "2 x 200 ml",
+    "price": 146,
+    "mrp": 158,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778222900885-3131.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 710846,
+    "name": "Dove 5% Niaciamide Serum Body Wash",
+    "brand": "Dove",
+    "unit": "300 ml",
+    "price": 340,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/51e1b595-33e7-45be-84e3-65dd6fa98d83.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 710842,
+    "name": "Dove 6% Hydrating Serum Body Wash",
+    "brand": "Dove",
+    "unit": "300 ml",
+    "price": 340,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7f273f1c-8f8b-4d3b-9a1d-818bc7d311b2.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 599283,
+    "name": "Dove 1% Salicylic Acid Acne Clear Body Wash",
+    "brand": "Dove",
+    "unit": "300 ml",
+    "price": 340,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7d400671-7669-4dbb-9ce4-542bf0bf00df.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 488879,
+    "name": "Chemist At Play Brightening Body Wash",
+    "brand": "Chemist At Play",
+    "unit": "236 ml",
+    "price": 301,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772803551672-199.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 637423,
+    "name": "Chemist At Play Brightening Body Wash - Pack of 2",
+    "brand": "Chemist At Play",
+    "unit": "2 x 236 ml",
+    "price": 524,
+    "mrp": 698,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-7047.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 124474,
+    "name": "Fiama Blackcurrant & Bearberry Radiant Glow Shower Gel",
+    "brand": "Fiama",
+    "unit": "250 ml",
+    "price": 119,
+    "mrp": 159,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/eb012c3b-6d09-42d8-9734-dd2bc2f0c932.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 568367,
+    "name": "Hula Hoop by Foxtale Brightening Body Wash",
+    "brand": "Hula Hoop by Foxtale",
+    "unit": "250 ml",
+    "price": 304,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784189641417-733.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 533028,
+    "name": "Vaseline Gluta Hya Dewy Radiance Serum Body Lotion",
+    "brand": "Vaseline",
+    "unit": "200 ml",
+    "price": 312,
+    "mrp": 415,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3bdd14f6-8000-4d7d-afcf-e9898931cf4b.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 765706,
+    "name": "Vaseline Gluta Hya Dewy Radiance Serum Body Lotion",
+    "brand": "Vaseline",
+    "unit": "330 ml",
+    "price": 420,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b4c022e5-2dea-4cad-8d86-75df87bc00fb.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 482669,
+    "name": "Dove Exfoliating Body Polish Scrub (Crushed Macadamia and Rice Milk)",
+    "brand": "Dove",
+    "unit": "298 g",
+    "price": 720,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/72c47bc4-f2c9-4ebf-8f15-3c8c2eab546d.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body wash"
+    ]
+  },
+  {
+    "pid": 600434,
+    "name": "VniQ Shaper Tool Beard Comb Kit",
+    "brand": "VniQ",
+    "unit": "5 pcs",
+    "price": 275,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/f60767bb-e830-4852-b816-a9275d9e40d6.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit",
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 682252,
+    "name": "VniQ Styling Hair Comb Set (Black)",
+    "brand": "VniQ",
+    "unit": "10 pcs",
+    "price": 199,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7c54e93b-a9da-4390-929f-3911483a5dde.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 601761,
+    "name": "VniQ Lice Pet Comb Fine Metal Teeth (0..4\" x 2.4\" x 3.3\", Orange)",
+    "brand": "VniQ",
+    "unit": "3 pcs",
+    "price": 199,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c4f7fc1b-2c5a-4f71-b8eb-3a57f3643fc7.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 601968,
+    "name": "VniQ Lice Comb (Silver)",
+    "brand": "VniQ",
+    "unit": "1 pc",
+    "price": 199,
+    "mrp": 465,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/929b90f2-252b-4012-94e1-f1043dbb7a11.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 681436,
+    "name": "Tattvalogy Oil Treated Neem Wood Beard Comb",
+    "brand": "Tattvalogy",
+    "unit": "1 pc",
+    "price": 156,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9b216a02-f65a-430e-92d2-6df7ef665424.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 525100,
+    "name": "Vega Compact Pocket Hair Comb (Black)",
+    "brand": "Vega",
+    "unit": "1 pc",
+    "price": 99,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/816f7519-f9fe-4d34-97ef-b85941305233.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 500616,
+    "name": "Beardo XXtra Strong Hold Hair Wax",
+    "brand": "Beardo",
+    "unit": "50 g",
+    "price": 169,
+    "mrp": 225,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f05d6489-4729-49ff-81e4-c0797448c857.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 540089,
+    "name": "KLOY Round Hair Scalp Massager (Black)",
+    "brand": "KLOY",
+    "unit": "1 pc",
+    "price": 129,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/df3ecdc2-915c-4683-8e8b-48057fe130c0.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 640504,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 499,
+    "mrp": 799,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 626727,
+    "name": "Bombay Shaving Company Beard Styling Pen",
+    "brand": "Bombay Shaving Company",
+    "unit": "3 pcs",
+    "price": 250,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/62739ac8-1c1d-4429-b2bd-603a8efe1624.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 520994,
+    "name": "Beardhood Acne Relief Patches",
+    "brand": "Beardhood",
+    "unit": "72 pcs",
+    "price": 281,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f5ffd86d-8cae-43c9-a6d0-4437ee7a3d7d.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 556678,
+    "name": "LetsShave Pro Styler Disposable Beard Styling Pen - for Men",
+    "brand": "LetsShave",
+    "unit": "3 pcs",
+    "price": 247,
+    "mrp": 259,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773139259592-89.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 786799,
+    "name": "All Man Fuzz Fixer Beard Styling Paste",
+    "brand": "All Man",
+    "unit": "50 g",
+    "price": 379,
+    "mrp": 449,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/cce68717fc514ef098b1c7cfff0f10ea.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 20014,
+    "name": "Old Spice Original Shaving Cream",
+    "brand": "Old Spice",
+    "unit": "70 g",
+    "price": 71,
+    "mrp": 71,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d55de596-8b02-4a69-8d9f-fd44b78a8e16.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 568031,
+    "name": "Beardo Ape-X Prime 3-in-1 Grooming Trimmer for Men",
+    "brand": "Beardo",
+    "unit": "1 unit",
+    "price": 901,
+    "mrp": 1499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/de3b9fdc-4e7e-420e-a523-a4524b18bd33.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 568034,
+    "name": "Beardo 1-Blade Body & Beard Trimmer for Men",
+    "brand": "Beardo",
+    "unit": "1 unit",
+    "price": 960,
+    "mrp": 1499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1eabf755-a703-487a-8add-30046c72abb0.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 610042,
+    "name": "Beardo Chrome Beast Grooming Men's Multi Grooming Trimmer Kit",
+    "brand": "Beardo",
+    "unit": "1 unit",
+    "price": 1652,
+    "mrp": 2499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778664014838-427.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "beard kit"
+    ]
+  },
+  {
+    "pid": 499585,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 344,
+    "mrp": 395,
+    "image_url": null,
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 499593,
+    "name": "Dot & Key Vitamin C + E Super Bright Gel Moisturizing Cream",
+    "brand": "Dot & Key",
+    "unit": "60 ml",
+    "price": 436,
+    "mrp": 495,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ee26b6ed-cb3e-4c0b-ab9b-22774b637c25.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 1410075,
+    "name": "Dot & Key Dragon Fruit Bounce Jelly Moisturizing Cream",
+    "brand": "Dot & Key",
+    "unit": "60 ml",
+    "price": 450,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/aa2f568c-2ce8-4f3d-a4e8-0584351e2ab5.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 664599,
+    "name": "Dot & Key Watermelon Cooling Icy Moisturizing Gel",
+    "brand": "Dot & Key",
+    "unit": "60 ml",
+    "price": 436,
+    "mrp": 495,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772450025964-2682.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 570498,
+    "name": "Dot & Key Strawberry Dew Do-It-All Moisturizing Cream",
+    "brand": "Dot & Key",
+    "unit": "80 g",
+    "price": 356,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772450025964-2640.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 577434,
+    "name": "Dot & Key Strawberry Dew Do-It-All Moisturizing Cream - Pack of 2",
+    "brand": "Dot & Key",
+    "unit": "2 x 80 g",
+    "price": 631,
+    "mrp": 798,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778222900885-2772.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 233478,
+    "name": "Lacto Calamine Face Lotion for Oily Skin",
+    "brand": "Lacto Calamine",
+    "unit": "120 ml",
+    "price": 279,
+    "mrp": 295,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/75c3594c-6178-4295-bac7-dd9710ea927b.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 687720,
+    "name": "Foxtale Lightweight Moisturizing Gel",
+    "brand": "Foxtale",
+    "unit": "50 ml",
+    "price": 370,
+    "mrp": 445,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9fc687ee-3b16-44dc-b12e-b33e126ecc24.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 621097,
+    "name": "Pond's Vitamin C Super Light Moisturizing Gel",
+    "brand": "Pond's",
+    "unit": "100 ml",
+    "price": 272,
+    "mrp": 340,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785352202796-239.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 604685,
+    "name": "Flicka Silk Touch 3 in 1 Milk Moisturizing Cream (& Primer)",
+    "brand": "Flicka",
+    "unit": "60 g",
+    "price": 855,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9ed54496-9c3a-47a0-848e-5bacb89456ff.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 679648,
+    "name": "CeraVe Moisturizing Cream (For Dry Skin with Ceramides)",
+    "brand": "CeraVe",
+    "unit": "50 ml",
+    "price": 422,
+    "mrp": 469,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3d5a3aaf-b265-4071-992a-f126d1f55603.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 1419766,
+    "name": "Re' Equil Ceramide & Hyaluronic Acid Moisturizing Cream",
+    "brand": "Re' Equil",
+    "unit": "50 g",
+    "price": 221,
+    "mrp": 245,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8b064b4f-12d6-4325-ab1b-e9c5dda22267.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 573195,
+    "name": "Re' Equil Ceramide & Hyaluronic Acid Moisturizing Cream",
+    "brand": "Re' Equil",
+    "unit": "100 g",
+    "price": 265,
+    "mrp": 295,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772099110297-1620.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 673982,
+    "name": "Re' Equil Ceramide & Hyaluronic Acid Moisturizing Cream - Pack of 2",
+    "brand": "Re' Equil",
+    "unit": "2 x 100 g",
+    "price": 502,
+    "mrp": 590,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778058709917-396.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 573309,
+    "name": "Re' Equil Moisturizing Gel",
+    "brand": "Re' Equil",
+    "unit": "100 g",
+    "price": 265,
+    "mrp": 295,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772099110297-1626.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 422184,
+    "name": "Lacto Calamine Face Lotion for Normal to Combination Skin",
+    "brand": "Lacto Calamine",
+    "unit": "120 ml",
+    "price": 279,
+    "mrp": 295,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b08966a0-ea47-4c2b-af95-cbd1abb7e37c.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 544546,
+    "name": "Bioderma Atoderm Creme Ultra Moisturizing Cream",
+    "brand": "Bioderma",
+    "unit": "200 ml",
+    "price": 720,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778672299051-129.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 564111,
+    "name": "Bioderma Atoderm Creme Ultra Moisturizing Cream",
+    "brand": "Bioderma",
+    "unit": "500 ml",
+    "price": 1440,
+    "mrp": 1599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774519548008-699.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 664352,
+    "name": "Multibrite Bio Collagen Deep Korean Face Sheet Mask",
+    "brand": "Multibrite",
+    "unit": "1 pc",
+    "price": 199,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771313685905-4034.png",
+    "inventory": 29,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 557394,
+    "name": "The Derma Co 1% Hyaluronic Sunscreen Gel Aqua (30 g) (SPF 50 PA++++)",
+    "brand": "The Derma Co",
+    "unit": "30 g",
+    "price": 275,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/589b24ac-c49b-4306-b342-0b01380edda9.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 544136,
+    "name": "The Derma Co 1% Hyaluronic Sunscreen Gel Aqua (SPF 50 PA++++)",
+    "brand": "The Derma Co",
+    "unit": "80 g",
+    "price": 593,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786845342429-32.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 633400,
+    "name": "The Derma Co 1% Hyaluronic Sunscreen Gel Aqua (30 g) (SPF 50 PA++++) - Pack of 2",
+    "brand": "The Derma Co",
+    "unit": "2 x 30 g",
+    "price": 478,
+    "mrp": 598,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-7038.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 483562,
+    "name": "The Derma Co 1% Hyaluronic Sunscreen Gel Aqua (SPF 50 PA++++)",
+    "brand": "The Derma Co",
+    "unit": "50 g",
+    "price": 429,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786843918347-628.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 544057,
+    "name": "The Derma Co 1% Hyaluronic Sunscreen Gel Aqua (SPF 50 PA++++) - Pack of 2",
+    "brand": "The Derma Co",
+    "unit": "2 x 50 g",
+    "price": 847,
+    "mrp": 998,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778041150974-6607.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 30772,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 84,
+    "mrp": 115,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 30770,
+    "name": "Himalaya Anti Wrinkle Skin Treatment Cream",
+    "brand": "Himalaya",
+    "unit": "50 g",
+    "price": 179,
+    "mrp": 270,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6bd9a3be-9278-44ad-b5a6-6987b29f1bd3.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 495456,
+    "name": "Mamaearth Vitamin C Daily Glow Skin Treatment Cream",
+    "brand": "Mamaearth",
+    "unit": "80 g",
+    "price": 284,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4ea6ec60-f30a-415a-a17c-7b6a715b2969.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 496765,
+    "name": "Mamaearth Vitamin C Daily Glow Skin Treatment Cream",
+    "brand": "Mamaearth",
+    "unit": "2 x 80 g",
+    "price": 537,
+    "mrp": 598,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-17729.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 133189,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 170,
+    "mrp": 199,
+    "image_url": null,
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 555099,
+    "name": "Kozicare Skin Lightening Skin Treatment Cream",
+    "brand": "Kozicare",
+    "unit": "15 g",
+    "price": 139,
+    "mrp": 185,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/50454f81-7341-4552-b881-887303924fec.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 31827,
+    "name": "Biotique Coconut Brightening Instant Glow Skin Treatment Cream",
+    "brand": "Biotique",
+    "unit": "50 g",
+    "price": 288,
+    "mrp": 360,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/857d7d26-27c9-4c4d-b1b4-7aab42e02d29.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 21738,
+    "name": "Biotique Saffron Youth Anti-Ageing Skin Treatment Cream",
+    "brand": "Biotique",
+    "unit": "50 g",
+    "price": 405,
+    "mrp": 450,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9e9b3fea-833c-4ec3-bc94-ca2949c67e16.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 496279,
+    "name": "White Tone Soft & Smooth Skin Treatment Cream",
+    "brand": "White Tone",
+    "unit": "50 g",
+    "price": 150,
+    "mrp": 150,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/bc8b8137-0e93-4b35-9f5d-fbdd737f07b4.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 95833,
+    "name": "Lotus Herbals Whiteglow Skin Whitening & Brightening Gel Face Cream SPF 25 PA+++",
+    "brand": "Lotus Herbals",
+    "unit": "40 g",
+    "price": 300,
+    "mrp": 365,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f2bcfa88-8672-422b-9344-98a56d2e8aae.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 215959,
+    "name": "Lotus Herbals Whiteglow Skin Whitening & Brightening Gel Face Cream SPF 25 PA+++",
+    "brand": "Lotus Herbals",
+    "unit": "60 g",
+    "price": 398,
+    "mrp": 485,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/001f6ee2-11d8-48c3-b72f-989994140c82.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 11414,
+    "name": "Olay Natural Aura Instant Glowing Radiance Skin Treatment Cream",
+    "brand": "Olay",
+    "unit": "40 g",
+    "price": 199,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a974d38a-c2c7-4a7f-a2af-5ee1866b1349.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 24449,
+    "name": "Patanjali Saundarya Aloe Vera Gel",
+    "brand": "Patanjali",
+    "unit": "150 ml",
+    "price": 110,
+    "mrp": 110,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/e4e88e65-6d13-4090-ab1d-31bf78257a8d.png",
+    "inventory": 8,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 697426,
+    "name": "Raw Alchemy Pure Aloe Vera Gel",
+    "brand": "Raw Alchemy",
+    "unit": "100 ml",
+    "price": 285,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3b924d16-e797-479c-be66-5855afa4a06d.png",
+    "inventory": 13,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 428227,
+    "name": "Boroplus Aloe Vera Gel - Skin Soothing & Hydrating",
+    "brand": "Boroplus",
+    "unit": "150 ml",
+    "price": 105,
+    "mrp": 110,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786354100193-93.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 619594,
+    "name": "Shree Delight Glycerine (Unscented)",
+    "brand": "Shree Delight",
+    "unit": "100 g",
+    "price": 175,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780994910964-191.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 688208,
+    "name": "Jovees Herbal 100% Pure Aloe Vera Gel",
+    "brand": "Jovees Herbal",
+    "unit": "200 g",
+    "price": 299,
+    "mrp": 450,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/35c1d702-5b06-4cd8-9eea-95ea8f30b5ed.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 24829,
+    "name": "Vicco Turmeric Skin Treatment Cream with Sandalwood Oil",
+    "brand": "Vicco",
+    "unit": "30 g",
+    "price": 150,
+    "mrp": 150,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/bc1792ba-2812-48b8-9aa8-0bf386534608.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 382881,
+    "name": "Vicco Turmeric Skin Treatment Cream with Sandalwood Oil",
+    "brand": "Vicco",
+    "unit": "70 g",
+    "price": 285,
+    "mrp": 285,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ef7a1ac8-e449-4f9d-a48b-4151162f443e.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 458850,
+    "name": "Wow Skin Science Aloe Vera Gel",
+    "brand": "Wow Skin Science",
+    "unit": "60 ml",
+    "price": 139,
+    "mrp": 139,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781076427833-4.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 21685,
+    "name": "Boroline Ayurvedic Antiseptic Cream",
+    "brand": "Boroline",
+    "unit": "20 g",
+    "price": 45,
+    "mrp": 45,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/672bb06c-c6af-4c4a-96f8-469dd27bd72e.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 496278,
+    "name": "White Tone Pearl Loose Face Powder",
+    "brand": "White Tone",
+    "unit": "75 g",
+    "price": 110,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/132a2085-0b8e-4133-8518-2d2066533aa4.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 60774,
+    "name": "Patanjali Kesh Kanti Natural Hair Cleanser / Shampoo",
+    "brand": "Patanjali",
+    "unit": "180 ml",
+    "price": 95,
+    "mrp": 95,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771923717021-1490.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 19168,
+    "name": "Bajaj Almond Drops Non-Sticky Hair Oil - 95 ml",
+    "brand": "Bajaj",
+    "unit": "95 ml",
+    "price": 89,
+    "mrp": 89,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787118742066-30.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 485352,
+    "name": "Bajaj Almond Drops Non-Sticky Hair Oil - 95 ml - Pack of 2",
+    "brand": "Bajaj",
+    "unit": "2 x 95 ml",
+    "price": 177,
+    "mrp": 178,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771782930535-1461.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 772335,
+    "name": "Re' Equil 0.1% Retinol Night Cream",
+    "brand": "Re' Equil",
+    "unit": "32 g",
+    "price": 472,
+    "mrp": 525,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775716967350-78.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 797664,
+    "name": "Re' Equil 0.1% Retinol Night Cream",
+    "brand": "Re' Equil",
+    "unit": "2 x 32 g",
+    "price": 893,
+    "mrp": 1050,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781167578890-7.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 662722,
+    "name": "Pond's Bright Beauty Anti-Spot Serum Face Cream",
+    "brand": "Pond's",
+    "unit": "50 g",
+    "price": 298,
+    "mrp": 359,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3d8e0b84-61da-4733-986e-6ecedb95c14e.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 553784,
+    "name": "The Face Shop White Seed Brightening Skin Treatment Cream",
+    "brand": "The Face Shop",
+    "unit": "50 ml",
+    "price": 779,
+    "mrp": 779,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/39eb5aad-bab6-47e5-9ebf-455596e0bc92.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 610365,
+    "name": "Wild Organic Pure & Unscented Glycerine",
+    "brand": "Wild Organic",
+    "unit": "100 ml",
+    "price": 192,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/50873395-26d1-43cf-8a3b-3721c860b736.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 458381,
+    "name": "Pond's Bright Beauty Spot-Less Glow Face Wash",
+    "brand": "Pond's",
+    "unit": "150 g",
+    "price": 292,
+    "mrp": 389,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778219433419-270.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 533018,
+    "name": "Pond's Light Moisturizing Cream (For Soft Skin)",
+    "brand": "Pond's",
+    "unit": "100 ml",
+    "price": 289,
+    "mrp": 340,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/008a3665-e43e-492b-89f0-125f9f04d876.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 545081,
+    "name": "Dot & Key Blueberry Hydrate Barrier Repair Sunscreen (SPF 50+ PA++++)",
+    "brand": "Dot & Key",
+    "unit": "50 g",
+    "price": 388,
+    "mrp": 445,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780331131771-314.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 549691,
+    "name": "Dot & Key Blueberry Hydrate Barrier Repair Sunscreen (SPF 50+ PA++++) - Pack of 2",
+    "brand": "Dot & Key",
+    "unit": "2 x 50 g",
+    "price": 704,
+    "mrp": 890,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220050094-4319.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 519983,
+    "name": "Foxtale Nourishing Moisturizing Cream (with Niacinamide)",
+    "brand": "Foxtale",
+    "unit": "50 ml",
+    "price": 229,
+    "mrp": 275,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784093151825-79.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 437998,
+    "name": "Lakme Peach Milk Soft Moisturizing Cream",
+    "brand": "Lakme",
+    "unit": "100 g",
+    "price": 342,
+    "mrp": 380,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772099110297-598.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 499599,
+    "name": "Dot & Key 10% Vitamin C + E & 5% Niacinamide Face Serum",
+    "brand": "Dot & Key",
+    "unit": "20 ml",
+    "price": 405,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773114156723-579.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "face cream"
+    ]
+  },
+  {
+    "pid": 569809,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 189,
+    "mrp": 199,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 689737,
+    "name": "Faces Canada Ultime Pro Splash Mini Nail Paint Kit (Vintage Vibes)",
+    "brand": "Faces Canada",
+    "unit": "4 x 5 ml",
+    "price": 189,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/2c0fd8b0-5174-40b0-af1f-5a9dd7e4785c.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 569813,
+    "name": "Faces Canada Ultime Pro Splash Mini Nail Paint Kit (True Neutrals)",
+    "brand": "Faces Canada",
+    "unit": "4 x 5 ml",
+    "price": 189,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771396342029-328.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 689745,
+    "name": "Faces Canada Ultime Pro Splash Mini Nail Paint Kit (Pink Pop)",
+    "brand": "Faces Canada",
+    "unit": "4 x 5 ml",
+    "price": 189,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b9732cb8-ff22-45f3-84ee-5e74e7508209.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 689742,
+    "name": "Faces Canada Ultime Pro Splash Mini Nail Paint Kit (Pastel Paradise)",
+    "brand": "Faces Canada",
+    "unit": "4 x 5 ml",
+    "price": 189,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/48e34acd-d677-49d5-9d36-067a05995dbf.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 541342,
+    "name": "Faces Canada Splash Nail Paint Love Kit",
+    "brand": "Faces Canada",
+    "unit": "4 x 8 ml",
+    "price": 304,
+    "mrp": 516,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a0ad85de-baf0-4d73-b0ba-9fc97a9d45cd.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 504226,
+    "name": "Faces Canada Ultime Pro Splash Nail Paint (Black Beauty 15)",
+    "brand": "Faces Canada",
+    "unit": "8 ml",
+    "price": 99,
+    "mrp": 129,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/2aa539c9-64e3-4068-8eef-d9595c981780.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 672447,
+    "name": "Faces Canada Ultime Pro Splash Nail Paint (Black Beauty 15)",
+    "brand": "Faces Canada",
+    "unit": "2 x 8 ml",
+    "price": 190,
+    "mrp": 258,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-5718.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 504232,
+    "name": "Faces Canada Ultime Pro Splash Nail Paint (Pink Rouge 103)",
+    "brand": "Faces Canada",
+    "unit": "8 ml",
+    "price": 99,
+    "mrp": 129,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/2c46593e-9705-4bed-8a25-2cf7e10aeac6.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 541303,
+    "name": "Faces Canada Ultime Pro Splash Nail Paint (Marmalade 108)",
+    "brand": "Faces Canada",
+    "unit": "8 ml",
+    "price": 99,
+    "mrp": 129,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8e1cf11f-5403-48a6-a834-4d782f73f948.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 688755,
+    "name": "Miss Nails Minis Nail Paint Kit (Perfect Vibe)",
+    "brand": "Miss Nails",
+    "unit": "4 x 6 ml",
+    "price": 199,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782363634419-449.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 513283,
+    "name": "Miss Nails Minis Nail Paint (Dusty rose)",
+    "brand": "Miss Nails",
+    "unit": "6 ml",
+    "price": 99,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1429d8d5-402e-4e30-b69a-871317c75fc0.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 596556,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 187,
+    "mrp": 249,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 660737,
+    "name": "Elle 18 Nail Pops Nail Paint (Shade-125)",
+    "brand": "Elle 18",
+    "unit": "5 ml",
+    "price": 62,
+    "mrp": 65,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783777892241-367.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 639073,
+    "name": "MARS Cosmetics Euro Nail Paint (Shade-44)",
+    "brand": "MARS Cosmetics",
+    "unit": "6 ml",
+    "price": 69,
+    "mrp": 69,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4f8b678d-e676-4085-860a-5a0edaf4ef23.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 499673,
+    "name": "Elle 18 Nail Pops Nail Paint (Pink 160)",
+    "brand": "Elle 18",
+    "unit": "5 ml",
+    "price": 62,
+    "mrp": 65,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783883653800-275.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 639028,
+    "name": "MARS Cosmetics Euro Nail Paint (Shade-07)",
+    "brand": "MARS Cosmetics",
+    "unit": "6 ml",
+    "price": 69,
+    "mrp": 69,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c1da8fe8-8bdb-4119-9f5b-d0b70f6bb8b4.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 657832,
+    "name": "MARS Cosmetics Cosmic Hues Nail Paint (27 COMET)",
+    "brand": "MARS Cosmetics",
+    "unit": "10 ml",
+    "price": 99,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/077f0b8e-4633-4606-aef4-1c7aca63adc8.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 657822,
+    "name": "MARS Cosmetics Cosmic Hues Nail Paint (03 SCORPIUS RED)",
+    "brand": "MARS Cosmetics",
+    "unit": "10 ml",
+    "price": 99,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/14f6e95d-3e0a-49b9-ba88-fc576bf10ed4.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 605854,
+    "name": "Elle 18 Pops Nail Paint (Color 171)",
+    "brand": "Elle 18",
+    "unit": "5 ml",
+    "price": 62,
+    "mrp": 65,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783883653800-356.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 504228,
+    "name": "Faces Canada Ultime Pro Splash Nail Paint (Floral Dream 56)",
+    "brand": "Faces Canada",
+    "unit": "8 ml",
+    "price": 99,
+    "mrp": 129,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d8872e86-00de-4874-869f-0e7388ec3904.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 672418,
+    "name": "Faces Canada Ultime Pro Splash Nail Paint (Floral Dream 56)",
+    "brand": "Faces Canada",
+    "unit": "2 x 8 ml",
+    "price": 190,
+    "mrp": 258,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778222900885-3783.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 506618,
+    "name": "Insight Cosmetics Nail Paint Remover Wipes (Strawberry)",
+    "brand": "Insight Cosmetics",
+    "unit": "30 wipes",
+    "price": 59,
+    "mrp": 60,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/cabdcdaf-c2b0-45f6-aa02-6995e9a6e6da.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 545520,
+    "name": "RENEE Stay Forever Matte Liquid Lipstick Kit",
+    "brand": "RENEE",
+    "unit": "10 x 1 ml",
+    "price": 659,
+    "mrp": 750,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/fa6100f3-5504-4a83-8a6b-fb5416d7bf58.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 753794,
+    "name": "Neha Gold Mehendi Cone",
+    "brand": "Neha",
+    "unit": "4 x 25 g",
+    "price": 60,
+    "mrp": 60,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770813166901-33.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 530893,
+    "name": "AND Shades of me - Crafted by Ajmal",
+    "brand": "AND",
+    "unit": "250 ml",
+    "price": 669,
+    "mrp": 1500,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774582588565-645.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 528329,
+    "name": "Roop Sagar Bindi - 7 mm (Maroon)",
+    "brand": "Roop Sagar",
+    "unit": "60 pcs",
+    "price": 27,
+    "mrp": 40,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0a9618f1-be28-403c-a818-dee020134f21.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 11425,
+    "name": "Maybelline New York Colossal Kajal (Deep Black)",
+    "brand": "Maybelline New York",
+    "unit": "0.35 g",
+    "price": 152,
+    "mrp": 220,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775102417169-3.png",
+    "inventory": 14,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 619692,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 1499,
+    "mrp": 2250,
+    "image_url": null,
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 618763,
+    "name": "Whimsy Make U Pretty Makeup Kit for Kids & Teens",
+    "brand": "Whimsy",
+    "unit": "15 pcs",
+    "price": 2499,
+    "mrp": 3499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781689282945-86.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 629769,
+    "name": "Handycrafts Nail Arts & Craft DIY Kit",
+    "brand": "Handycrafts",
+    "unit": "1 set",
+    "price": 256,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/bf0b726b-8758-4675-a8f5-cf4cd30193b4.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 596569,
+    "name": "Sugar Pop 4-in-1 Nail Paint Kit (03 Radiant Rainbow)",
+    "brand": "Sugar Pop",
+    "unit": "4 x 5 ml",
+    "price": 187,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786544504762-56.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 545776,
+    "name": "RENEE Frozen Princess Unicorn Make Up Kit (For Kids) Gift Set",
+    "brand": "RENEE",
+    "unit": "1 set",
+    "price": 849,
+    "mrp": 950,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/99247907-3e62-4021-98f9-8cfe32a3c407.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 596557,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 187,
+    "mrp": 249,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 596565,
+    "name": "Sugar Pop 4-in-1 Nail Paint Kit (04 Pastel Paradise)",
+    "brand": "Sugar Pop",
+    "unit": "4 x 5 ml",
+    "price": 187,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786544504762-45.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 766943,
+    "name": "Ekta Nail Salon Kids Press On Nails",
+    "brand": "Ekta",
+    "unit": "1 set",
+    "price": 319,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779094500636-750.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 579077,
+    "name": "King Krab Barbie Beauty Play Set with Suitcase",
+    "brand": "King Krab",
+    "unit": "1 set",
+    "price": 379,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781839718536-1825.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 776436,
+    "name": "LuvLap Soft & Absorbent Baby Wash Cloth (Multicolour)",
+    "brand": "LuvLap",
+    "unit": "7 pcs",
+    "price": 232,
+    "mrp": 260,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776768568332-75.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 705914,
+    "name": "Vivatra Mustard Seeds Baby Pillow (Green, White)",
+    "brand": "Vivatra",
+    "unit": "1 unit",
+    "price": 349,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779708190904-2.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 754459,
+    "name": "BabyPro Cap & Mitten Bootie Set (White)",
+    "brand": "BabyPro",
+    "unit": "1 set",
+    "price": 199,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777445131253-634.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 735698,
+    "name": "Lifelong Cuppy Baby Bath Tub (Pink, Green)",
+    "brand": "Lifelong",
+    "unit": "1 unit",
+    "price": 1612,
+    "mrp": 3499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/57c26a5f-ac22-4cfe-aaff-8092248a5ef4.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 547860,
+    "name": "LuvLap 100% Cotton Baby Caps, Mitten Bootie Set (Multicolour)",
+    "brand": "LuvLap",
+    "unit": "1 set",
+    "price": 280,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8a17f33a-2bc0-4c65-9084-e962f33fd890.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 784937,
+    "name": "Vidhyadevam Baby Toilet Seat (Green)",
+    "brand": "Vidhyadevam",
+    "unit": "1 unit",
+    "price": 299,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/60195737-b8fd-442e-9f77-0ede008a1d8a.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 618968,
+    "name": "Kidology Electric Baby Nail Clipper Set for Kids (Blue)",
+    "brand": "Kidology",
+    "unit": "1 set",
+    "price": 299,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ab8419a3-7d86-4a4a-ae4f-c16297750c14.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 704771,
+    "name": "Mee Mee Baby Powder Puff (Blue)",
+    "brand": "Mee Mee",
+    "unit": "1 unit",
+    "price": 201,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774858847914-380.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 720483,
+    "name": "LuvLap 100% Cotton Baby Caps Mitten Bootie Set (Multicolour)",
+    "brand": "LuvLap",
+    "unit": "2 sets",
+    "price": 280,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3cee0d1c-44e6-4ae5-9696-50a5fc19de40.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 651287,
+    "name": "LuvLap Premium Baby Wash Cloth (Multicolour)",
+    "brand": "LuvLap",
+    "unit": "7 pcs",
+    "price": 229,
+    "mrp": 260,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/85135495-ba14-410d-99e5-11e98137ff57.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 445285,
+    "name": "Mee Mee Caring Baby Wipes with Aloe Vera",
+    "brand": "Mee Mee",
+    "unit": "3 x 72 wipes",
+    "price": 186,
+    "mrp": 297,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d32299b8-3bdf-454a-becf-bd7a85191d9f.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 391754,
+    "name": "Pampers Premium Care Baby Diaper",
+    "brand": "Pampers",
+    "unit": "44 pcs",
+    "price": 790,
+    "mrp": 1499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c4f173c8-a8ce-48c0-be1d-a9b45b6187ab.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 400788,
+    "name": "Pampers Premium Care Baby Diaper",
+    "brand": "Pampers",
+    "unit": "88 pcs",
+    "price": 1652,
+    "mrp": 2849,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/95db7df7-588c-4107-b8fa-bc4ba500e2c3.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 445395,
+    "name": "Mee Mee Mild Baby Laundry Detergent Refill",
+    "brand": "Mee Mee",
+    "unit": "1 ltr",
+    "price": 206,
+    "mrp": 449,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782828277906-196.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 701820,
+    "name": "Faces Canada Beauty Bundle Makeup Kit",
+    "brand": "Faces Canada",
+    "unit": "1 set",
+    "price": 779,
+    "mrp": 1186,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/2d42236b-6d4d-489c-a7f7-5a594081b995.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 478100,
+    "name": "LuvLap Baby Feeding Bottle (Blue)",
+    "brand": "LuvLap",
+    "unit": "1 pc",
+    "price": 160,
+    "mrp": 160,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771992965724-233.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 526558,
+    "name": "Toyshine Smart Sticks Educational Building Set",
+    "brand": "Toyshine",
+    "unit": "1 set",
+    "price": 199,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f7f62760-7f31-4aba-9921-166724f99222.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 5068,
+    "name": "Johnson's Vitamin E Baby Massage Oil",
+    "brand": "Johnson's",
+    "unit": "200 ml",
+    "price": 218,
+    "mrp": 280,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/fe59187a-318c-44cb-b191-628b66c77716.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 476406,
+    "name": "Cetaphil Daily Baby Lotion",
+    "brand": "Cetaphil",
+    "unit": "400 ml",
+    "price": 830,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5993dc7a-0de3-4bd6-ae9a-259273308a86.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 688913,
+    "name": "Miss Nails Minis Nail Paint Kit (All Nudes)",
+    "brand": "Miss Nails",
+    "unit": "4 x 6 ml",
+    "price": 199,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785141161007-75.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 521591,
+    "name": "Blue Heaven Love Soft Matte Finish Lipstick Kit",
+    "brand": "Blue Heaven",
+    "unit": "10 x 1.3 g",
+    "price": 360,
+    "mrp": 449,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/09109545-da2f-4c52-b1f0-0e0b38458c45.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 528331,
+    "name": "Roop Sagar Bindi (4 mm, Maroon)",
+    "brand": "Roop Sagar",
+    "unit": "60 pcs",
+    "price": 27,
+    "mrp": 40,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c7a75abc-118f-4f28-9c3b-7b306e9f2e73.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 10846,
+    "name": "Lakme Nail Paint Remover",
+    "brand": "Lakme",
+    "unit": "27 ml",
+    "price": 99,
+    "mrp": 110,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783777892241-271.png",
+    "inventory": 18,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 477891,
+    "name": "Ceramic Diffuser Gift Set (Jasmine, Brown) (Jasmine Aroma, Brown) Auradecor",
+    "brand": "Auradecor",
+    "unit": "5 pcs",
+    "price": 196,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781468396266-92.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  },
+  {
+    "pid": 537629,
+    "name": "Sindoor Powder (Orange) by ServDharm",
+    "brand": "ServDharm",
+    "unit": "35 g",
+    "price": 49,
+    "mrp": 60,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6c7745fb-ac25-4ee5-89ab-3c8013494e2a.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "nail kit"
+    ]
+  }
+]

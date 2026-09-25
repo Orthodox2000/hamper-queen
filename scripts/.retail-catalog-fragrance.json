@@ -1,0 +1,5300 @@
+[
+  {
+    "pid": 798402,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 1488,
+    "mrp": 1750,
+    "image_url": null,
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 1409722,
+    "name": "Contraband Men's Perfume (Hands Off)",
+    "brand": "Contraband",
+    "unit": null,
+    "price": 2063,
+    "mrp": 2750,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 775041,
+    "name": "Rasasi Perfume (Hawas Atlantis)",
+    "brand": "Rasasi",
+    "unit": "100 ml",
+    "price": 5789,
+    "mrp": 7100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785393351508-42.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 1377489,
+    "name": "Alternate Scents Perfume (Imaginative)",
+    "brand": "Alternate Scents",
+    "unit": "40 ml",
+    "price": 299,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ed9f735a542c44509188305529026f85.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 730213,
+    "name": "Armaf Intense Men Perfume (Club de Nuit)",
+    "brand": "Armaf",
+    "unit": "150 ml",
+    "price": 6800,
+    "mrp": 7700,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d37654b6-8114-4a1f-825a-68979383a8d3.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 792538,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 199,
+    "mrp": 275,
+    "image_url": null,
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "body mist",
+      "attar",
+      "roll on perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 830287,
+    "name": "Bla Bli Blu Old Money Men's Perfume (Fruity & Wood)",
+    "brand": "Bla Bli Blu",
+    "unit": "100 ml",
+    "price": 720,
+    "mrp": 750,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785495250546-257.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "body mist",
+      "attar",
+      "roll on perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 709768,
+    "name": "Bombay Shaving Company Beach EDP Men's Perfume",
+    "brand": "Bombay Shaving Company",
+    "unit": "100 ml",
+    "price": 459,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770915494802-102.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 555753,
+    "name": "Skinn by Titan Tales Men's Perfume (Rio)",
+    "brand": "Skinn by Titan",
+    "unit": "100 ml",
+    "price": 899,
+    "mrp": 1195,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779863033776-134.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 705544,
+    "name": "OG LUXURY Extrait De Parfum (Shadow Intense)",
+    "brand": "OG Luxury",
+    "unit": "100 ml",
+    "price": 539,
+    "mrp": 750,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770889611433-86.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 555748,
+    "name": "Fastrack Bold Men's Perfume (Bold)",
+    "brand": "Fastrack",
+    "unit": "100 ml",
+    "price": 659,
+    "mrp": 895,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777462221505-305.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 394218,
+    "name": "Park Avenue Good Morning Spray Intense Men's Perfume",
+    "brand": "Park Avenue",
+    "unit": "120 ml",
+    "price": 179,
+    "mrp": 225,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0240eaae-585c-4896-b719-f9c001c1315c.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 500614,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 300,
+    "mrp": 399,
+    "image_url": null,
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "attar",
+      "roll on perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 710413,
+    "name": "Bla Bli Blu Men's Perfume Trial Pack (Woody, Musky)",
+    "brand": "Bla Bli Blu",
+    "unit": "6 x 7 ml",
+    "price": 389,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f919f483-1f05-41cb-8c90-43c9d2aeeef8.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 738879,
+    "name": "Arabian Aroma Eau de Parfum (Old Money)",
+    "brand": "Arabian Aroma",
+    "unit": "50 ml",
+    "price": 299,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775646311756-2341.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 1367278,
+    "name": "Bla Bli Blu Perfume (Love Drunk)",
+    "brand": "Bla Bli Blu",
+    "unit": "30 ml",
+    "price": 199,
+    "mrp": 275,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784189641417-585.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "body mist",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 457771,
+    "name": "Bella Vita Organic CEO Men's Eau de Parfum",
+    "brand": "Bella Vita Organic",
+    "unit": "100 ml",
+    "price": 449,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787139392158-4.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "body mist",
+      "attar",
+      "roll on perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 593733,
+    "name": "Skinn by Titan 24 Seven Men's Eau de Parfum (Aqua)",
+    "brand": "Skinn by Titan",
+    "unit": "100 ml",
+    "price": 1449,
+    "mrp": 1745,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-3338.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 740805,
+    "name": "Adidas Ice Dive 48H Body Spray (Aromatic Citrus)",
+    "brand": "Adidas",
+    "unit": "150 ml",
+    "price": 329,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/2c7c36f2-f2a4-4cb8-8070-e4a8494c3d7e.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 568851,
+    "name": "Ajmal Eau de Parfum Men's Perfume (Silver Shade)",
+    "brand": "Ajmal",
+    "unit": "100 ml",
+    "price": 999,
+    "mrp": 2000,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b7e6a5f4-4b09-4922-8ef6-ada0adcd4d31.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 497873,
+    "name": "Envy Natural Men's Perfume",
+    "brand": "Envy",
+    "unit": "70 ml",
+    "price": 299,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ddaef919-5896-4b9f-81bc-d6f5c6722195.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 741091,
+    "name": "Engage Men's Eau de Parfum (Brazilian Maracuja Cognac)",
+    "brand": "Engage",
+    "unit": "50 ml",
+    "price": 392,
+    "mrp": 525,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784533533979-128.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 696643,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 169,
+    "mrp": 250,
+    "image_url": null,
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "body mist"
+    ]
+  },
+  {
+    "pid": 804709,
+    "name": "Phitku Crystal Aloevera Deodorant Roll on",
+    "brand": "Phitku",
+    "unit": "100 g",
+    "price": 749,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782962682138-80.png",
+    "inventory": 18,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 768251,
+    "name": "Bloq Underarm Sweat & Odour Control Deodorant (Citrus)",
+    "brand": "Bloq",
+    "unit": "40 g",
+    "price": 99,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774698464119-4.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "attar",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 131475,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 185,
+    "mrp": 249,
+    "image_url": null,
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 543774,
+    "name": "Kachcha Bela Alcohol Free Attar by Sohum",
+    "brand": "Sohum",
+    "unit": "7 ml",
+    "price": 99,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770109213917-23.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar"
+    ]
+  },
+  {
+    "pid": 520293,
+    "name": "Yardley London Gentleman Classic Men's Deodorant Roll On",
+    "brand": "Yardley",
+    "unit": "50 ml",
+    "price": 165,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/13d17dc7-25f6-4787-92da-60f400ebb48c.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 535688,
+    "name": "The Man Company Luxury Perfume Gift Set - A Gentleman's Moods",
+    "brand": "The Man Company",
+    "unit": "4 x 20 ml",
+    "price": 500,
+    "mrp": 996,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779788502450-311.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar"
+    ]
+  },
+  {
+    "pid": 460097,
+    "name": "Lux Orchid Obsession Bodywash with Niacinamide",
+    "brand": "Lux",
+    "unit": "245 ml",
+    "price": 99,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778063967419-130.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 741155,
+    "name": "Bla Bli Blu Men Perfume Gift Set",
+    "brand": "Bla Bli Blu",
+    "unit": "3 x 30 ml",
+    "price": 785,
+    "mrp": 900,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775457726381-443.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 765050,
+    "name": "Bla Bli Blu My Wingman Perfume Gift Set & Eau De Oil",
+    "brand": "Bla Bli Blu",
+    "unit": "75 ml + 8 ml",
+    "price": 700,
+    "mrp": 750,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775740580866-534.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 751760,
+    "name": "Bla Bli Blu Perfume Gift Set for Him",
+    "brand": "Bla Bli Blu",
+    "unit": "4 x 15 ml",
+    "price": 525,
+    "mrp": 650,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775457726381-688.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 529984,
+    "name": "Ajmal Blu Dreams Men's Eau de Parfum (Blu Dreams)",
+    "brand": "Ajmal",
+    "unit": "100 ml",
+    "price": 519,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781675408571-301.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 740986,
+    "name": "French Essence Eau de Parfum (Bleu)",
+    "brand": "French Essence",
+    "unit": "60 ml",
+    "price": 199,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775646311756-2393.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 706700,
+    "name": "OG Luxury Men's Extrait De Perfume (Woody Intense)",
+    "brand": "OG Luxury",
+    "unit": "100 ml",
+    "price": 539,
+    "mrp": 750,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770976792496-81.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 497003,
+    "name": "Wild Stone Hydra Energy Eau de Parfum",
+    "brand": "Wild Stone",
+    "unit": "50 ml",
+    "price": 350,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-2431.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 707895,
+    "name": "Wild Stone Eau de Parfum (Hydra Energy)",
+    "brand": "Wild Stone",
+    "unit": "100 ml",
+    "price": 496,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779694507022-150.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 619160,
+    "name": "Wild Stone Eau de Parfum for Men (Edge)",
+    "brand": "Wild Stone",
+    "unit": "100 ml",
+    "price": 496,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779688677002-547.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 696203,
+    "name": "Denver Hamilton Men's Deodorant",
+    "brand": "Denver",
+    "unit": "150 ml",
+    "price": 169,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ecf00862-7683-422e-b1e5-0d4002191c75.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "body mist",
+      "attar"
+    ]
+  },
+  {
+    "pid": 242895,
+    "name": "Nivea Whitening Smooth Skin Deodorant Roll on",
+    "brand": "Nivea",
+    "unit": "50 ml",
+    "price": 187,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784542852924-263.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 760021,
+    "name": "Denver Caliber Deodorant",
+    "brand": "Denver",
+    "unit": "150 ml",
+    "price": 169,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772686274048-345.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "body mist",
+      "attar"
+    ]
+  },
+  {
+    "pid": 543796,
+    "name": "Ajmal Dubai Oud Attar (Dubai Oud)",
+    "brand": "Ajmal",
+    "unit": "5 ml",
+    "price": 419,
+    "mrp": 500,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774582588565-667.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar"
+    ]
+  },
+  {
+    "pid": 583518,
+    "name": "Mother Sparsh Natural Vapour Complete Cold Relief Roll On",
+    "brand": "Mother Sparsh",
+    "unit": "15 ml",
+    "price": 156,
+    "mrp": 186,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7024854f-6d71-45ae-8121-58d2c3340bac.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 764080,
+    "name": "Bla Bli Blu Love Drunk Perfumed Body Wash",
+    "brand": "Bla Bli Blu",
+    "unit": "250 ml",
+    "price": 219,
+    "mrp": 275,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784408354269-392.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 712682,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 499,
+    "mrp": 1999,
+    "image_url": null,
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 795355,
+    "name": "EM5 Viking Eau de Parfum (Aromatic, Citrus, Woody)",
+    "brand": "EM5",
+    "unit": "50 ml",
+    "price": 449,
+    "mrp": 1499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785754641835-424.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 701152,
+    "name": "Odeon Eau de Parfum (Legend)",
+    "brand": "Odeon",
+    "unit": "50 ml",
+    "price": 315,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775646311756-1489.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 777948,
+    "name": "Fastrack Eau de Parfum (Night Out)",
+    "brand": "Fastrack",
+    "unit": "50 ml",
+    "price": 439,
+    "mrp": 545,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777129954799-181.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 804733,
+    "name": "UrbanGabru Gentleman Eau de Parfum for Men (Citrus)",
+    "brand": "UrbanGabru",
+    "unit": "40 ml",
+    "price": 299,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/582d89213b3f46f5b79c5cd9bda07f8c.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 769151,
+    "name": "Villain Unstoppable Citrus Eau de Parfum (Mischief)",
+    "brand": "Villain",
+    "unit": "50 ml",
+    "price": 301,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774952596120-68.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 632853,
+    "name": "Ajmal Aristocrat Luxury Eau de Parfum (Citrus)",
+    "brand": "Ajmal",
+    "unit": "75 ml",
+    "price": 3999,
+    "mrp": 5000,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780909545360-87.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 700577,
+    "name": "Odeon Eau de Parfum for Men (Empire)",
+    "brand": "Odeon",
+    "unit": "50 ml",
+    "price": 315,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775646311756-1474.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 768332,
+    "name": "Villain Legacy Classic Eau de Parfum (Woody)",
+    "brand": "Villain",
+    "unit": "50 ml",
+    "price": 300,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774687972123-127.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 684652,
+    "name": "Fraganote Eau de Parfum (Alpha Spade)",
+    "brand": "Fraganote",
+    "unit": "50 ml",
+    "price": 1199,
+    "mrp": 1699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786345532691-326.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 25181,
+    "name": "Nivea Men Fresh Active Original Men's Deodorant",
+    "brand": "Nivea Men",
+    "unit": "150 ml",
+    "price": 219,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779705151382-134.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "body mist",
+      "attar",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 377965,
+    "name": "Nivea Men Fresh Active Original Men's Deodorant - Pack of 2",
+    "brand": "Nivea Men",
+    "unit": "2 x 150 ml",
+    "price": 433,
+    "mrp": 598,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054761-1150.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "body mist",
+      "attar",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 19679,
+    "name": "Ferrero Rocher Chocolate Gift Pack (4 pieces)",
+    "brand": "Ferrero Rocher",
+    "unit": "50 g",
+    "price": 179,
+    "mrp": 179,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776656742804-880.png",
+    "inventory": 16,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 793293,
+    "name": "Layer'r Wottagirl Vanilla Body Mist",
+    "brand": "Layer'r Wottagirl",
+    "unit": "150 ml",
+    "price": 254,
+    "mrp": 329,
+    "image_url": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/1784e76957e54286b2cbb35e9f1f0e1c.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "body mist",
+      "attar",
+      "body mist"
+    ]
+  },
+  {
+    "pid": 729930,
+    "name": "WildHorn RFID Protected Leather Wallet For Men",
+    "brand": "WildHorn",
+    "unit": "1 pc",
+    "price": 499,
+    "mrp": 2499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773208425267-55.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 563200,
+    "name": "Ghar Soaps De-Tanning Magic Face Wash",
+    "brand": "Ghar Soaps",
+    "unit": "100 ml",
+    "price": 299,
+    "mrp": 333,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/533f78ff-b986-4205-99d9-7211809dd631.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 500615,
+    "name": "Beardo Long Lasting Perfume for Men EDP (Godfather)",
+    "brand": "Beardo",
+    "unit": "50 ml",
+    "price": 300,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/566e8327-7b30-4951-bece-098e6ff24c2b.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 663657,
+    "name": "Beardo Long Lasting Perfume for Men EDP (Legend)",
+    "brand": "Beardo",
+    "unit": "50 ml",
+    "price": 301,
+    "mrp": 449,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/94a0aced-f653-49ec-b1bc-11292c6efda5.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 663661,
+    "name": "Beardo Long Lasting Perfume for Men EDP (Blue Blood)",
+    "brand": "Beardo",
+    "unit": "100 ml",
+    "price": 1005,
+    "mrp": 1500,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ae583ea6-9eb1-4c8e-8a80-9b940f94e038.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 535295,
+    "name": "Bella Vita Organic Luxury KLUB Men's Eau de Parfum",
+    "brand": "Bella Vita Organic",
+    "unit": "100 ml",
+    "price": 525,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787139392158-63.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 41839,
+    "name": "Wild Stone Ultra Sensual Eau de Parfum",
+    "brand": "Wild Stone",
+    "unit": "50 ml",
+    "price": 350,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-2338.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 541609,
+    "name": "Denver Hamilton Men's Eau de Parfum (Green, Spicy Floral, Balsamic Woody)",
+    "brand": "Denver",
+    "unit": "100 ml",
+    "price": 489,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-2628.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 520297,
+    "name": "Yardley London Gentleman Classic Men's Perfume",
+    "brand": "Yardley",
+    "unit": "100 ml",
+    "price": 455,
+    "mrp": 649,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/887c3f2c-27e4-4218-9a36-0b39e221a2d3.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 611875,
+    "name": "Villain Hydra Fresh Aquatic Eau de Parfum (Hurricane)",
+    "brand": "Villain",
+    "unit": "50 ml",
+    "price": 300,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776224489956-245.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 544362,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 129,
+    "mrp": 355,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "body mist"
+    ]
+  },
+  {
+    "pid": 543754,
+    "name": "Ruh Gulab Alcohol Free Attar by Sohum",
+    "brand": "Sohum",
+    "unit": "7 ml",
+    "price": 99,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4104134e-80a0-4668-a96f-ca7f96068558.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar"
+    ]
+  },
+  {
+    "pid": 541349,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 656,
+    "mrp": 999,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 591788,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 366,
+    "mrp": 499,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 591793,
+    "name": "Engage Vibes Unisex Perfume Gift Set",
+    "brand": "Engage",
+    "unit": "4 x 25 ml",
+    "price": 511,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/2d7ef96b-ed9c-48b7-8377-0341e75453c5.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 552976,
+    "name": "Engage Femme Eau de Parfum for Women",
+    "brand": "Engage",
+    "unit": "100 ml",
+    "price": 408,
+    "mrp": 649,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-2822.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 188195,
+    "name": "Engage W1 Perfume Spray for Women 120ml",
+    "brand": "Engage",
+    "unit": "120 ml",
+    "price": 202,
+    "mrp": 240,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782457177707-4.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 505202,
+    "name": "Engage W2 Perfume Spray for Women (Floral & Fruity)",
+    "brand": "Engage",
+    "unit": "120 ml",
+    "price": 179,
+    "mrp": 240,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782457177707-15.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "deodorant",
+      "body mist",
+      "attar",
+      "roll on perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 557907,
+    "name": "Engage W3 Women's Perfume (Citrus & Aromatic)",
+    "brand": "Engage",
+    "unit": "120 ml",
+    "price": 213,
+    "mrp": 240,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782457177707-26.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 740783,
+    "name": "Engage Verona Eau de Parfum for Women (Citrus Fruity)",
+    "brand": "Engage",
+    "unit": "50 ml",
+    "price": 300,
+    "mrp": 449,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775646311756-2350.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 669150,
+    "name": "Engage Yang Eau de Parfum for Women (Floral & Fruity)",
+    "brand": "Engage",
+    "unit": "50 ml",
+    "price": 327,
+    "mrp": 449,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775646311756-961.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume"
+    ]
+  },
+  {
+    "pid": 457926,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 499,
+    "mrp": 849,
+    "image_url": null,
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 752015,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 785,
+    "mrp": 900,
+    "image_url": null,
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 562679,
+    "name": "Plum BodyLovin' Vanilla Vibes Bath & Body Gift Set",
+    "brand": "Plum BodyLovin'",
+    "unit": "3 pcs",
+    "price": 675,
+    "mrp": 749,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d43f60a5-825f-407a-a081-9b236e01fd95.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "body mist",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 578604,
+    "name": "Plum BodyLovin' Vanilla Vibes Bath & Body Gift Set - Pack of 2",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 3 pcs",
+    "price": 1274,
+    "mrp": 1498,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778222900885-2843.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "body mist",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 609899,
+    "name": "Kimirica Gentlemen Trio Gift Set",
+    "brand": "Kimirica",
+    "unit": "3 pcs",
+    "price": 720,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/32e86ba3-5391-4651-b41d-03799be9ddd0.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 1372165,
+    "name": "Plum BodyLovin' Boardroom In Bora Bora Bath & Body Gift Set",
+    "brand": "Plum BodyLovin'",
+    "unit": "1 set",
+    "price": 900,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/989666e9-9192-45b5-ab01-f7fc4964753a.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 1380983,
+    "name": "Plum BodyLovin' Boardroom In Bora Bora Bath & Body Gift Set - Pack of 2",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 1 set",
+    "price": 1699,
+    "mrp": 1998,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785410330413-27.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 793665,
+    "name": "The Man Company Curated for Him Collection Gift Set",
+    "brand": "The Man Company",
+    "unit": "1 set",
+    "price": 949,
+    "mrp": 1099,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b0eb6bfe2a4a443c927d3711be679229.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 541347,
+    "name": "Engage Men's Luxury EdP Perfume Gift Set",
+    "brand": "Engage",
+    "unit": "4 x 25 ml",
+    "price": 654,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781839718536-2066.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 374697,
+    "name": "Park Avenue 8 in 1 Luxury Men's Grooming Kit",
+    "brand": "Park Avenue",
+    "unit": "1 pc",
+    "price": 750,
+    "mrp": 1149,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/86f09a36-d1fc-4fb2-8024-d1e3825e93ed.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 603734,
+    "name": "Plum Luxe Perfume Gift Set",
+    "brand": "Plum",
+    "unit": "3 pcs",
+    "price": 699,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f7246225-c239-4884-9fe8-a41ff42e395e.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 596556,
+    "name": "Sugar Pop 4-in-1 Nail Paint Kit (01 Nude Nectar)",
+    "brand": "Sugar Pop",
+    "unit": "4 x 5 ml",
+    "price": 187,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786426172675-845.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 681352,
+    "name": "Bella Vita Eau de Parfum (Date Woman)",
+    "brand": "Bella Vita",
+    "unit": "20 ml",
+    "price": 149,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775646311756-1178.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "body mist",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 664010,
+    "name": "Babique Penguin Super Soft Toy",
+    "brand": "Babique",
+    "unit": "1 pc",
+    "price": 129,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783309185390-166.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 613960,
+    "name": "Wild Stone Code Steel Body Perfume",
+    "brand": "Wild Stone",
+    "unit": "150 ml",
+    "price": 199,
+    "mrp": 350,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771221584742-1039.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "body mist",
+      "attar"
+    ]
+  },
+  {
+    "pid": 725885,
+    "name": "Paperpep Flower Print Cake Paper Gift Bag",
+    "brand": "Paperpep",
+    "unit": "1 pc",
+    "price": 79,
+    "mrp": 90,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6d4bf9d1-dd9a-4e6e-96c4-b27b0f08336b.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 545520,
+    "name": "RENEE Stay Forever Matte Liquid Lipstick Kit",
+    "brand": "RENEE",
+    "unit": "10 x 1 ml",
+    "price": 659,
+    "mrp": 750,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/fa6100f3-5504-4a83-8a6b-fb5416d7bf58.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 740280,
+    "name": "Jewels Galaxy Tear Drop Pendant with Chain (Golden)",
+    "brand": "Jewels Galaxy",
+    "unit": "1 pc",
+    "price": 199,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3c0214ec-2876-4225-9782-71d7b436e6f7.png",
+    "inventory": 19,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 551219,
+    "name": "Paperpep Birthday Print Gift Wrapping Paper (Multicolour)",
+    "brand": "Paperpep",
+    "unit": "5 pcs",
+    "price": 69,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/49660655-f839-4f05-898a-8bd92ea63fb1.png",
+    "inventory": 15,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 249478,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 159,
+    "mrp": 225,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist"
+    ]
+  },
+  {
+    "pid": 311947,
+    "name": "Park Avenue Signature Collection Voyage Premium Men's Deodorant",
+    "brand": "Park Avenue",
+    "unit": "150 ml",
+    "price": 169,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786016931431-92.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 696606,
+    "name": "Denver Victor Sporting Club Men's Deodorant",
+    "brand": "Denver",
+    "unit": "150 ml",
+    "price": 169,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0eaa84a1-e11c-4adf-9df4-ff7dfb5fbfd6.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 696193,
+    "name": "Denver Hamilton Pride Men's Deodorant",
+    "brand": "Denver",
+    "unit": "150 ml",
+    "price": 169,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773840430066-47.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 678924,
+    "name": "Denver Original Black Code Deodorant Spray",
+    "brand": "Denver",
+    "unit": "150 ml",
+    "price": 169,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4583823a-f6d0-404a-bdd4-e6cf9d4d533e.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 365871,
+    "name": "Engage On Cool Marine Men's Pocket Perfume",
+    "brand": "Engage On",
+    "unit": "17 ml",
+    "price": 69,
+    "mrp": 70,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7c75d766-8934-49aa-8321-ae2691571fac.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 158831,
+    "name": "Nike Up or Down Men's Deodorant",
+    "brand": "Nike",
+    "unit": "200 ml",
+    "price": 499,
+    "mrp": 519,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/facce9db-28d8-4af7-86ed-f0b43c359c9f.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist"
+    ]
+  },
+  {
+    "pid": 785709,
+    "name": "Dove Advanced Care Original Deodorant Spray",
+    "brand": "Dove",
+    "unit": "150 ml",
+    "price": 203,
+    "mrp": 289,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779788502450-581.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist"
+    ]
+  },
+  {
+    "pid": 496979,
+    "name": "Wild Stone Code Titanium Men's Deodorant",
+    "brand": "Wild Stone",
+    "unit": "150 ml",
+    "price": 199,
+    "mrp": 350,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771221584742-648.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist"
+    ]
+  },
+  {
+    "pid": 365876,
+    "name": "Engage On Cool Aqua Women's Pocket Perfume",
+    "brand": "Engage On",
+    "unit": "17 ml",
+    "price": 69,
+    "mrp": 70,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ebbd4a43-74b6-4d5d-8eda-8c90b2199479.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 443266,
+    "name": "Nivea Men Deep Impact Freshness Deodorant Roll On",
+    "brand": "Nivea Men",
+    "unit": "50 ml",
+    "price": 187,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b0c0d772-9bed-451c-8849-4fab9c817795.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 18499,
+    "name": "Smart and Handsome Men Bright Charge Men's Face Cream",
+    "brand": "Smart and Handsome Men",
+    "unit": "60 g",
+    "price": 178,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a4a14edc-bdd7-4d56-866e-11321f093522.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 19704,
+    "name": "Gillette Regular Shaving Foam (50 g)",
+    "brand": "Gillette",
+    "unit": "50 g",
+    "price": 95,
+    "mrp": 95,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1dee3676-4682-4a62-a51e-2b9f3814ca2f.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 55336,
+    "name": "Nivea Men Fresh Ocean Men's Deodorant",
+    "brand": "Nivea Men",
+    "unit": "150 ml",
+    "price": 219,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779705151382-181.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 77394,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 185,
+    "mrp": 249,
+    "image_url": null,
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 456713,
+    "name": "Nivea Pearl & Beauty Deodorant Roll on - Pack of 2",
+    "brand": "Nivea",
+    "unit": "2 x 50 ml",
+    "price": 366,
+    "mrp": 498,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220050094-1740.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 760566,
+    "name": "Engage Amber Fresh Under Arm Roll-On (for Men)",
+    "brand": "Engage",
+    "unit": "50 ml",
+    "price": 169,
+    "mrp": 269,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3789ea1d-c361-4217-8a4a-adfa5ff55b02.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 762836,
+    "name": "Engage Aqua Blast Under Arm Roll-On (for Men)",
+    "brand": "Engage",
+    "unit": "50 ml",
+    "price": 169,
+    "mrp": 269,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4065b7bb-df6e-476a-9b02-04f87bd9bd53.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 686475,
+    "name": "Bombay Shaving Company 5% AHA BHA Aqua Under Arm Roll On",
+    "brand": "Bombay Shaving Company",
+    "unit": "40 ml",
+    "price": 119,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/da4d34ff-2663-4cf4-a6c8-095527444e3d.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 807596,
+    "name": "Phitku Crystal Rose Deodorant Roll on",
+    "brand": "Phitku",
+    "unit": "100 g",
+    "price": 749,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a033e626610b4b69ab0e8897b21a1110.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 804710,
+    "name": "Phitku Natural Crystal Deodorant Roll on",
+    "brand": "Phitku",
+    "unit": "100 g",
+    "price": 749,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/898bf4e5a4c94ef19048bafd8c9cd94b.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 804604,
+    "name": "Phitku Charcoal Crystal Deodorant Roll on",
+    "brand": "Phitku",
+    "unit": "100 g",
+    "price": 749,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/27b6d8cb0c5c4602bcf117852b03afe9.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 806684,
+    "name": "Phitku Crystal Turmeric Deodorant Roll on",
+    "brand": "Phitku",
+    "unit": "100 g",
+    "price": 749,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/da750df50de14cf2825e4f686ee593f1.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 316741,
+    "name": "Rexona Shower Fresh Roll On (Women)",
+    "brand": "Rexona",
+    "unit": "50 ml",
+    "price": 120,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785345745206-423.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 753368,
+    "name": "Dove Eventone Deodorant Roll on",
+    "brand": "Dove",
+    "unit": "50 ml",
+    "price": 182,
+    "mrp": 259,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770791453500-64.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 495492,
+    "name": "Nivea Body Milk Nourishing Body Lotion",
+    "brand": "Nivea",
+    "unit": "120 ml",
+    "price": 130,
+    "mrp": 130,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9b7fcce4-e179-4297-b648-9b449dc4e87a.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 42229,
+    "name": "Nivea Men Active Clean Shower Gel",
+    "brand": "Nivea Men",
+    "unit": "250 ml",
+    "price": 219,
+    "mrp": 293,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779705151382-170.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 544364,
+    "name": "Bombay Shaving Company Noir Men's Deodorant",
+    "brand": "Bombay Shaving Company",
+    "unit": "150 ml",
+    "price": 129,
+    "mrp": 355,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770915494802-94.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 522019,
+    "name": "Bombay Shaving Company Men's Deodorant (Red Spice & Black Vibe)",
+    "brand": "Bombay Shaving Company",
+    "unit": "2 x 150 ml",
+    "price": 200,
+    "mrp": 255,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777267443546-111.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 640388,
+    "name": "Wild Stone No Gas Stone Deodorant",
+    "brand": "Wild Stone",
+    "unit": "120 ml",
+    "price": 179,
+    "mrp": 275,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3305f614-8b67-4586-85e0-8431cda218d5.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 496980,
+    "name": "Wild Stone Code Chrome Men's Deodorant",
+    "brand": "Wild Stone",
+    "unit": "150 ml",
+    "price": 199,
+    "mrp": 350,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771221584742-1002.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 241069,
+    "name": "Set Wet Cool Avatar Body Spray Perfume & Men's Deodorant",
+    "brand": "Set Wet",
+    "unit": "150 ml",
+    "price": 137,
+    "mrp": 359,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9ede30e0-98e1-451b-a212-e6577595b894.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 496982,
+    "name": "Wild Stone Night Rider Men's Deodorant",
+    "brand": "Wild Stone",
+    "unit": "150 ml",
+    "price": 149,
+    "mrp": 270,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a07c33e1-bcf9-4d51-86fb-c47cdcaa4ba2.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 670486,
+    "name": "Adulthood Desire Long Lasting Men's Deodorant",
+    "brand": "Adulthood",
+    "unit": "150 ml",
+    "price": 149,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0874a46e-a72b-4981-a98c-235380b76b15.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 623658,
+    "name": "Axe Gold Temptation Deodorant",
+    "brand": "Axe",
+    "unit": "215 ml",
+    "price": 245,
+    "mrp": 350,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785352202796-260.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 493520,
+    "name": "Mamaearth Vitamin C Daily Glow Face Wash",
+    "brand": "Mamaearth",
+    "unit": "50 ml",
+    "price": 119,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778496956227-425.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 501535,
+    "name": "Mamaearth Vitamin C Daily Glow Face Wash - Pack of 2",
+    "brand": "Mamaearth",
+    "unit": "2 x 50 ml",
+    "price": 225,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770638287400-1373.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 371917,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 165,
+    "mrp": 249,
+    "image_url": null,
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 538755,
+    "name": "Plum BodyLovin' Vanilla Vibes Deodorant Roll on",
+    "brand": "Plum BodyLovin'",
+    "unit": "50 ml",
+    "price": 311,
+    "mrp": 345,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779788502450-321.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 541976,
+    "name": "Plum BodyLovin' Vanilla Vibes Deodorant Roll on - Pack of 2",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 50 ml",
+    "price": 587,
+    "mrp": 690,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220050094-3954.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 767600,
+    "name": "Engage Radiant Glow Under Arm Roll-On (for Women)",
+    "brand": "Engage",
+    "unit": "50 ml",
+    "price": 169,
+    "mrp": 269,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/cf86df99-2c64-4f5e-9bcb-28e4d0a400c2.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 533278,
+    "name": "Plum BodyLovin' Hawaiian Rumba Deodorant Roll on",
+    "brand": "Plum BodyLovin'",
+    "unit": "50 ml",
+    "price": 311,
+    "mrp": 345,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d2655ec1-6527-40a7-be65-2ed2a6b5e5a2.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 512871,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 175,
+    "mrp": 225,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 576837,
+    "name": "Carmesi Under Arm Roll-On (Sweet Summer) - Pack of 2",
+    "brand": "Carmesi",
+    "unit": "2 x 50 ml",
+    "price": 270,
+    "mrp": 450,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778041150974-8765.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 567853,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 175,
+    "mrp": 225,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 576838,
+    "name": "Carmesi Under Arm Roll-On (Floral Sunset) - Pack of 2",
+    "brand": "Carmesi",
+    "unit": "2 x 50 ml",
+    "price": 270,
+    "mrp": 450,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778041150974-8773.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 547444,
+    "name": "Be Bodywise Flora 4% AHA BHA Under Arm Roll-On",
+    "brand": "Be Bodywise",
+    "unit": "50 ml",
+    "price": 349,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775103290922-30.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 637495,
+    "name": "Be Bodywise Flora 4% AHA BHA Under Arm Roll-On",
+    "brand": "Be Bodywise",
+    "unit": "2 x 50 ml",
+    "price": 664,
+    "mrp": 698,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-7061.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 648316,
+    "name": "Be Bodywise Flora 4% AHA BHA Under Arm Roll-On",
+    "brand": "Be Bodywise",
+    "unit": "75 ml",
+    "price": 499,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771453276542-462.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 753534,
+    "name": "Dove Original Deodorant Roll on (for Women)",
+    "brand": "Dove",
+    "unit": "50 ml",
+    "price": 182,
+    "mrp": 259,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770807709419-17.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 11661,
+    "name": "Nivea Pearl & Beauty Women's Deodorant",
+    "brand": "Nivea",
+    "unit": "150 ml",
+    "price": 219,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c489ce2c-d67a-477f-b7be-8841b003713e.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "attar",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 464009,
+    "name": "Nivea Pearl & Beauty Women's Deodorant - Pack of 2",
+    "brand": "Nivea",
+    "unit": "2 x 150 ml",
+    "price": 433,
+    "mrp": 598,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054761-1831.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "attar",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 117512,
+    "name": "Gillette Venus Simply Disposable Women's Razor",
+    "brand": "Gillette Venus",
+    "unit": "1 pc",
+    "price": 109,
+    "mrp": 109,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771904678029-779.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 576541,
+    "name": "Aqualogica Refresh+ Sun Kissed Vanilla Perfume Body Mist",
+    "brand": "Aqualogica",
+    "unit": "1 unit",
+    "price": 439,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/46e0f731-6e4b-40a2-8ae6-8f58ed11727e.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume",
+      "body mist"
+    ]
+  },
+  {
+    "pid": 544844,
+    "name": "Plum BodyLovin' Vanilla Vibes Perfume (Sweet & Cozy)",
+    "brand": "Plum BodyLovin'",
+    "unit": "15 ml",
+    "price": 293,
+    "mrp": 325,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-2791.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 682391,
+    "name": "Plum BodyLovin' Vanilla Vibes Perfume (Sweet & Cozy)",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 15 ml",
+    "price": 553,
+    "mrp": 650,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220050094-6061.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant",
+      "body mist",
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 733920,
+    "name": "Denver Sporting Club Men's Deodorant (Pack)",
+    "brand": "Denver",
+    "unit": "3 x 50 ml",
+    "price": 269,
+    "mrp": 425,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b96949be-ba2d-41a9-972b-b5788af2f2a2.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 497877,
+    "name": "Denver Hamilton Deodorant & Perfume Gift Set",
+    "brand": "Denver",
+    "unit": "1 pack",
+    "price": 577,
+    "mrp": 825,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772698047485-215.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 136594,
+    "name": "Fogg Napoleon Men's Deodorant",
+    "brand": "Fogg",
+    "unit": "150 ml",
+    "price": 199,
+    "mrp": 275,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/29effb6e-f36a-4c9d-855c-f217e961b7f8.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 475624,
+    "name": "The Man Company No Gas Perfume for Men (Blanc)",
+    "brand": "The Man Company",
+    "unit": "120 ml",
+    "price": 289,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/11b39665-1d90-4dbe-b47b-194283d47f1c.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "deodorant"
+    ]
+  },
+  {
+    "pid": 617000,
+    "name": "Aqualogica Refresh+ Perfume Body Mist (Sweet Summer Mist)",
+    "brand": "Aqualogica",
+    "unit": "150 ml",
+    "price": 439,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/62e341f9-9663-4c2f-afad-a1ef1805c2cf.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 686887,
+    "name": "Aqualogica refresh+ Perfume Body Mist (Cherry Blossom Bloom)",
+    "brand": "Aqualogica",
+    "unit": "150 ml",
+    "price": 439,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a67608e3-170c-4ffb-b7ea-03dd97f639c2.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 473997,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 495,
+    "mrp": 550,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 489501,
+    "name": "Plum BodyLovin' Body Mist (Warm Vanilla)",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 150 ml",
+    "price": 935,
+    "mrp": 1100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-2754.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 699970,
+    "name": "Kimirica Madagascar Vanilla Perfume Body Mist (Vanilla)",
+    "brand": "Kimirica",
+    "unit": "100 ml",
+    "price": 400,
+    "mrp": 449,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787140713369-380.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 473996,
+    "name": "Plum BodyLovin' Hawaiian Rumba Body Mist (Hawaiian Rumba)",
+    "brand": "Plum BodyLovin'",
+    "unit": "150 ml",
+    "price": 495,
+    "mrp": 550,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/abdfdf27-a14d-4457-a776-8a5af396be23.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 489503,
+    "name": "Plum BodyLovin' Body Mist (Hawaiian Rumba)",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 150 ml",
+    "price": 935,
+    "mrp": 1100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-2767.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 718699,
+    "name": "Bath & Body Works Warm Vanilla Sugar Fine Fragrance Mist",
+    "brand": "Bath & Body Works",
+    "unit": "236 ml",
+    "price": 1099,
+    "mrp": 2299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/2d4a9522-1257-4546-8184-548a93fd076d.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 794871,
+    "name": "Layer'r Wottagirl Mystic Island Body Mist",
+    "brand": "Layer'r",
+    "unit": "150 ml",
+    "price": 263,
+    "mrp": 329,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4ad03aaa7c3b436c99aecb5186fd2fb9.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 793292,
+    "name": "Layer'r Wottagirl Secret Body Mist",
+    "brand": "Layer'r",
+    "unit": "150 ml",
+    "price": 275,
+    "mrp": 329,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9f5d51cb4ff4469bbae48775941ee859.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 530893,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 669,
+    "mrp": 1500,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 607462,
+    "name": "La French Cuddle Women's Eau de Parfum (Citrus/Musky)",
+    "brand": "La French",
+    "unit": "30 ml",
+    "price": 199,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-3774.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 710412,
+    "name": "Bla Bli Blu Women Perfume Trial Pack (Floral, Fresh)",
+    "brand": "Bla Bli Blu",
+    "unit": "42 ml",
+    "price": 389,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0398378a-cd3c-4a4d-b170-2ef3efadaf48.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 730556,
+    "name": "French Essence Luxury Women Eau de Parfum (Bloom)",
+    "brand": "French Essence",
+    "unit": "30 ml",
+    "price": 169,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775646311756-2080.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 560717,
+    "name": "Forest Essentials Luxury Perfume Gift Set",
+    "brand": "Forest Essentials",
+    "unit": "4 x 10 ml",
+    "price": 1995,
+    "mrp": 1995,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6b899149-9f94-40ec-85bd-b49bc59065b1.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 625822,
+    "name": "The Body Shop India Edit Body Mist Gift Set",
+    "brand": "The Body Shop",
+    "unit": "4 x 18 ml",
+    "price": 1271,
+    "mrp": 1495,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770302998984-159.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 731122,
+    "name": "Ajmal Royal Touch Infinity Jewellery + Perfume Gift Set (Serene Love)",
+    "brand": "Ajmal",
+    "unit": "65 ml",
+    "price": 899,
+    "mrp": 1499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785991194367-708.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 457783,
+    "name": "Bella Vita Organic Unisex Eau de Parfum (White Oud)",
+    "brand": "Bella Vita Organic",
+    "unit": "100 ml",
+    "price": 525,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/2abbe15d-d860-45a6-9b89-20f22f569292.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist",
+      "attar",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 492134,
+    "name": "MCaffeine Naked & Raw Coffee Body Scrub",
+    "brand": "MCaffeine",
+    "unit": "55 g",
+    "price": 237,
+    "mrp": 279,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1d27172c-1d34-42b6-9a22-25f841550379.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 555322,
+    "name": "Deconstruct SPF 50 Brightening Lip Balm (Vitamin C)",
+    "brand": "Deconstruct",
+    "unit": "4 g",
+    "price": 194,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777267443546-140.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 488882,
+    "name": "Chemist At Play Exfoliating Body Wash",
+    "brand": "Chemist At Play",
+    "unit": "236 ml",
+    "price": 348,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772803551672-212.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 578752,
+    "name": "Chemist At Play Exfoliating Body Wash - Pack of 2",
+    "brand": "Chemist At Play",
+    "unit": "2 x 236 ml",
+    "price": 599,
+    "mrp": 798,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-6920.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 795336,
+    "name": "AND Dainty Glam Body Mist (Fruity Floral)",
+    "brand": "AND",
+    "unit": "200 ml",
+    "price": 179,
+    "mrp": 400,
+    "image_url": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/bfc11c7b7cb3447cbfcab9dbe6d41913.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist",
+      "attar",
+      "roll on perfume",
+      "body mist"
+    ]
+  },
+  {
+    "pid": 714436,
+    "name": "Bath & Body Works Body Mist (Sweetest Song)",
+    "brand": "Bath & Body Works",
+    "unit": "236 ml",
+    "price": 999,
+    "mrp": 2299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774249107884-28.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 766734,
+    "name": "Bath & Body Works Fine Fragrance Mist (Japanese Cherry Blossom)",
+    "brand": "Bath & Body Works",
+    "unit": "236 ml",
+    "price": 1099,
+    "mrp": 2299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774338616839-213.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 751428,
+    "name": "Bath & Body Works Fine Fragrance Mist (Japanese Cherry Blossom)",
+    "brand": "Bath & Body Works",
+    "unit": "75 ml",
+    "price": 699,
+    "mrp": 1199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774249107884-83.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 779724,
+    "name": "Plum BodyLovin' Body Mist (Boardroom In Bora Bora)",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 100 ml",
+    "price": 723,
+    "mrp": 850,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777450548024-28.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 774987,
+    "name": "Plum BodyLovin' Body Mist (Boardroom In Bora Bora)",
+    "brand": "Plum BodyLovin'",
+    "unit": "100 ml",
+    "price": 383,
+    "mrp": 425,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776844749243-469.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 779722,
+    "name": "Plum BodyLovin' Body Mist (Petals On The Rocks)",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 100 ml",
+    "price": 723,
+    "mrp": 850,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777450548024-22.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 775203,
+    "name": "Plum BodyLovin' Body Mist (Petals On The Rocks)",
+    "brand": "Plum BodyLovin'",
+    "unit": "100 ml",
+    "price": 383,
+    "mrp": 425,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776844749243-476.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 552597,
+    "name": "AND Ethereal Dreamer EDP & Pretty Vogue Body Mist Crafted by Ajmal",
+    "brand": "AND",
+    "unit": "250 ml",
+    "price": 599,
+    "mrp": 1500,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774582588565-705.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 735769,
+    "name": "Bath & Body Works Diamond Shimmer Body Mist (Gingham Glow)",
+    "brand": "Bath & Body Works",
+    "unit": "145 ml",
+    "price": 1099,
+    "mrp": 2299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c93c268f-6569-4642-9ec3-8374f32f1ecf.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 692365,
+    "name": "Victoria's Secret Bombshell Fine Fragrance Mist (Fruity Floral)",
+    "brand": "Victoria's Secret",
+    "unit": "250 ml",
+    "price": 2549,
+    "mrp": 2999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/010dccc0-e2ed-479f-bf66-38d94c88a77b.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 727542,
+    "name": "Jeva Papaya Body Scrub Face & Body Scrub",
+    "brand": "Jeva",
+    "unit": "380 ml",
+    "price": 159,
+    "mrp": 325,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/dc834079-d3c3-40de-a1de-db5a834b5bc9.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 115691,
+    "name": "Vaseline Intensive Care Deep Moisture Body Lotion",
+    "brand": "Vaseline",
+    "unit": "200 ml",
+    "price": 196,
+    "mrp": 280,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785141161007-4.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 700158,
+    "name": "Khadi Natural Sandalwood Massage Body Oil",
+    "brand": "Khadi Natural",
+    "unit": "210 ml",
+    "price": 182,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/825be01a-6dca-4b46-9031-81b4c658d5a5.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 609022,
+    "name": "Dabur Gulabari Shower Gel (Himalayan Rose & Oudh)",
+    "brand": "Dabur",
+    "unit": "250 ml",
+    "price": 89,
+    "mrp": 219,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/51d4d0d7-9aa7-4894-ba5c-a9c5de153d2c.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 794869,
+    "name": "Layer'r Wottagirl Body Mist",
+    "brand": "Layer'r",
+    "unit": "4 x 25 ml",
+    "price": 265,
+    "mrp": 396,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d2fa887bc85a450faf6344a4a9919fae.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 500371,
+    "name": "Chemist At Play Aqua Unisex Under Arm Roll-On",
+    "brand": "Chemist At Play",
+    "unit": "40 ml",
+    "price": 348,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771841412291-42.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 630377,
+    "name": "Plum BodyLovin' Vanilla Vibes Eau de Parfum (Vanilla)",
+    "brand": "Plum BodyLovin'",
+    "unit": "50 ml",
+    "price": 720,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775646311756-183.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 560464,
+    "name": "Plum BodyLovin' Vanilla Caramello Perfume (Sweet & Nutty)",
+    "brand": "Plum BodyLovin'",
+    "unit": "50 ml",
+    "price": 810,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0dcf5dba-5c8e-4af0-8dca-6b84169f325b.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 672423,
+    "name": "Plum BodyLovin' Vanilla Caramello Perfume (Sweet & Nutty)",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 50 ml",
+    "price": 1529,
+    "mrp": 1798,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778222900885-3805.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 535147,
+    "name": "Plum BodyLovin' Vanilla Vibes Body Wash",
+    "brand": "Plum BodyLovin'",
+    "unit": "240 ml",
+    "price": 340,
+    "mrp": 380,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8e870bb1-f8b0-441e-999b-4ea9b147e3bb.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 541361,
+    "name": "Plum BodyLovin' Vanilla Vibes Body Wash - Pack of 2",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 240 ml",
+    "price": 646,
+    "mrp": 760,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-3811.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 496378,
+    "name": "Plum BodyLovin' Vanilla Vibes Body Oil (100 ml)",
+    "brand": "Plum BodyLovin'",
+    "unit": "100 ml",
+    "price": 270,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f0d5f2ba-e552-463a-ba8e-415239d565f0.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 540053,
+    "name": "Plum BodyLovin' Vanilla Vibes Body Oil (100 ml) - Pack of 2",
+    "brand": "Plum BodyLovin'",
+    "unit": "2 x 100 ml",
+    "price": 509,
+    "mrp": 598,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054937-3692.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 802673,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 349,
+    "mrp": 499,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 804174,
+    "name": "Four.Five Active Hygiene Rose Vanilla Body Mist",
+    "brand": "Four.Five",
+    "unit": "50 ml",
+    "price": 349,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783931376046-97.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 554188,
+    "name": "RENEE Body Mist Set",
+    "brand": "RENEE",
+    "unit": "4 x 20 ml",
+    "price": 525,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f93a2dda-fd73-40ce-b045-d73708a9c3e4.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "body mist"
+    ]
+  },
+  {
+    "pid": 712132,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 329,
+    "mrp": 349,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 717007,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 269,
+    "mrp": 349,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 698981,
+    "name": "Ajmal Royal Attar (Misk Rijali)",
+    "brand": "Ajmal",
+    "unit": "10 ml",
+    "price": 1079,
+    "mrp": 1399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774582588565-844.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 708605,
+    "name": "Indra Sugandh Bhandar Natural Attar Set for Pooja",
+    "brand": "Indra Sugandh Bhandar",
+    "unit": "5 x 3 ml",
+    "price": 429,
+    "mrp": 700,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b1b90492-650b-4109-bb72-72bea2eb5ad0.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 594291,
+    "name": "Adil Qadri Assorted Luxury Attar Pack",
+    "brand": "Adil Qadri",
+    "unit": "6 x 5.5 ml",
+    "price": 1499,
+    "mrp": 1799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/14c1d009-e3c6-4e8a-bc19-5be796d9ec4e.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 736423,
+    "name": "Rontyali Attar (Sandalwood)",
+    "brand": "Rontyali",
+    "unit": "10 ml",
+    "price": 799,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/e1dd59fb-e08a-40f4-997e-ce8e68fe60ff.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 633008,
+    "name": "Abu Haami White Oudh Attar (Woody)",
+    "brand": "Abu Haami",
+    "unit": "6 ml",
+    "price": 199,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773806551319-332.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 552953,
+    "name": "Adil Qadri Shanaya Roll-On Attar (Arabic & French Blend)",
+    "brand": "Adil Qadri",
+    "unit": "10 ml",
+    "price": 600,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770637399754-396.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 651409,
+    "name": "Earth Chakra Attar Roll on (White oud)",
+    "brand": "Earth Chakra",
+    "unit": "12 ml",
+    "price": 499,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/65126cd6-0281-4964-9c11-1cd5a0fe4872.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 529187,
+    "name": "Gulab Pooja Itra by ServDharm",
+    "brand": "ServDharm",
+    "unit": "5 ml",
+    "price": 89,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b4de4e84-48cd-40f4-b180-70c3470c897d.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 577750,
+    "name": "The Man Company Eau de Toilette - Black",
+    "brand": "The Man Company",
+    "unit": "100 ml",
+    "price": 475,
+    "mrp": 2499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0af4aa41-cb39-4461-86e5-10cac81159fd.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 455644,
+    "name": "Dabur Gulabari Premium Rose Water Paraben Free Skin Toner",
+    "brand": "Dabur",
+    "unit": "400 ml",
+    "price": 105,
+    "mrp": 149,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f1247dff-39e8-4a51-b593-8c9fc524ee2f.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 18927,
+    "name": "Dabur Gulabari Premium Rose Water Paraben Free Skin Toner",
+    "brand": "Dabur",
+    "unit": "250 ml",
+    "price": 87,
+    "mrp": 96,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/64c5c9d2-ab78-43ef-9fd3-6c247c540b1f.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 464003,
+    "name": "Dabur Gulabari Premium Rose Water Paraben Free Skin Toner",
+    "brand": "Dabur",
+    "unit": "2 x 250 ml",
+    "price": 164,
+    "mrp": 192,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220054761-1801.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 615023,
+    "name": "Oudh Attar by Rumeha",
+    "brand": "Rumeha",
+    "unit": "5 ml",
+    "price": 99,
+    "mrp": 175,
+    "image_url": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar",
+      "attar"
+    ]
+  },
+  {
+    "pid": 615025,
+    "name": "Khus Attar By Rumeha",
+    "brand": "Rumeha",
+    "unit": "5 ml",
+    "price": 99,
+    "mrp": 175,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771857678119-311.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 615019,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 99,
+    "mrp": 175,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 732594,
+    "name": "Abu Haami Masterpiece Collection Attar Set (White Oudh, Turkish, Dream Oud)",
+    "brand": "Abu Haami",
+    "unit": "3 x 6 ml",
+    "price": 489,
+    "mrp": 1599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785977443773-301.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 718386,
+    "name": "Abu Haami White Oud Attar (Fresh, woody, and musky scent with a warm elegant touch.)",
+    "brand": "Abu Haami",
+    "unit": "3 ml",
+    "price": 99,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783283046887-585.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 614879,
+    "name": "Maroon Janamaz Prayer Mat by Rumeha",
+    "brand": "Rumeha",
+    "unit": "1 pc",
+    "price": 349,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/26a1d422-55d2-4388-9069-6e58a7123b13.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 543769,
+    "name": "Namaz Prayer Cap by Sohum",
+    "brand": "Sohum",
+    "unit": "1 pc",
+    "price": 79,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f79ff8d5-7822-46ae-8ea9-cfcbb137e650.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 543771,
+    "name": "Janamaz Prayer Mat (Maroon) Sohum",
+    "brand": "Sohum",
+    "unit": "1 pc",
+    "price": 179,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770109213917-22.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 614988,
+    "name": "White Namaz Prayer Cap By Rumeha",
+    "brand": "Rumeha",
+    "unit": "1 pc",
+    "price": 99,
+    "mrp": 180,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d086c239-d5fa-4597-81e9-61ba76d3525f.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 543777,
+    "name": "Janamaz Prayer Mat Green by Sohum",
+    "brand": "Sohum",
+    "unit": "1 pc",
+    "price": 179,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/e9e51c09-148d-4282-88a8-df31ac75e63a.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 543775,
+    "name": "Kala Bhoot Alcohol Free Attar by Sohum",
+    "brand": "Sohum",
+    "unit": "6 ml",
+    "price": 101,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8fe7bdf2-7ba7-4e82-90e7-71809d8f03cc.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 648306,
+    "name": "Pooja Chandan Itra by ServDharm",
+    "brand": "ServDharm",
+    "unit": "5 ml",
+    "price": 79,
+    "mrp": 120,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/63362460-79e3-4082-a88e-9c8bff555727.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 493530,
+    "name": "Gangajal by Shubhkart",
+    "brand": "Shubhkart",
+    "unit": "100 ml",
+    "price": 20,
+    "mrp": 20,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/be6a207f-75bc-471e-b2f2-419cb7b039a6.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 224602,
+    "name": "Pure Kumkum Chandan Tika by Hari Darshan",
+    "brand": "Hari Darshan",
+    "unit": "40 g",
+    "price": 43,
+    "mrp": 45,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775039083845-524.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 485922,
+    "name": "Moli by Shubhkart",
+    "brand": "Shubhkart",
+    "unit": "1 pc",
+    "price": 19,
+    "mrp": 20,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5fa79681-5dc0-4d4e-b1ad-8cb696efddcd.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 629767,
+    "name": "Bhimseni Sandalwood Camphor / Kapur by Mangalam",
+    "brand": "Mangalam",
+    "unit": "50 g",
+    "price": 143,
+    "mrp": 150,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786977877773-905.png",
+    "inventory": 46,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 450376,
+    "name": "Pooja Flower Mix",
+    "brand": "Freshbury",
+    "unit": "100 g",
+    "price": 35,
+    "mrp": 44,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773548322922-6.png",
+    "inventory": 30,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 687701,
+    "name": "Lifelong Naam Jap Digital Tally Counter (White)",
+    "brand": "Lifelong",
+    "unit": "1 unit",
+    "price": 149,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f7750c32-d30e-479a-a659-c7793d83785c.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 733309,
+    "name": "Abu Haami Dream Oud Attar (Arabic & French Blend)",
+    "brand": "Abu Haami",
+    "unit": "3 ml",
+    "price": 111,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784025780406-15.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 709593,
+    "name": "Indra Sugandh Bhandar Bulgarian Rose Attar (Rose)",
+    "brand": "Indra Sugandh Bhandar",
+    "unit": "15 ml",
+    "price": 380,
+    "mrp": 700,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f8408378-e903-46f7-ab99-f75437a85b8e.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 759166,
+    "name": "Abu Haami Attar (Mogra)",
+    "brand": "Abu Haami",
+    "unit": "3 ml",
+    "price": 111,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786936442425-70.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 731646,
+    "name": "SHOWY Attar (Rose, Secret, Jasmine, Kasturi)",
+    "brand": "SHOWY",
+    "unit": "4 x 6 ml",
+    "price": 275,
+    "mrp": 749,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/88492125-2bb2-40b0-a2d7-23df0abbcf28.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 477889,
+    "name": "Ceramic Diffuser Gift Set (Lemongrass, Cream) (Lemon Aroma, Cream) Auradecor",
+    "brand": "Auradecor",
+    "unit": "5 pcs",
+    "price": 199,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781250417959-190.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 731304,
+    "name": "Ajmal Misk Rijali Attar Gift Set",
+    "brand": "Ajmal",
+    "unit": "4 x 3 ml",
+    "price": 999,
+    "mrp": 1299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774582588565-887.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 529982,
+    "name": "Ajmal Musk Rose Concentrated Attar (Musk Rose)",
+    "brand": "Ajmal",
+    "unit": "12 ml",
+    "price": 799,
+    "mrp": 1000,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774582588565-612.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 614989,
+    "name": "Black Namaz Prayer Cap by Rumeha",
+    "brand": "Rumeha",
+    "unit": "1 pc",
+    "price": 99,
+    "mrp": 180,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f6b7a965-d65d-43bb-9cc1-25d93147b30e.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 529188,
+    "name": "Mogra Pooja Itra by ServDharm",
+    "brand": "ServDharm",
+    "unit": "5 ml",
+    "price": 89,
+    "mrp": 120,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8b4e1a48-eb48-4177-b039-1536f6bd623d.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 529212,
+    "name": "Holy Gangajal by ServDharm",
+    "brand": "ServDharm",
+    "unit": "100 ml",
+    "price": 49,
+    "mrp": 100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1fa49206-2727-4b6c-ac01-a1b791fa1db9.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 495380,
+    "name": "Kesar Chandan Tika by Hari Darshan",
+    "brand": "Hari Darshan",
+    "unit": "40 g",
+    "price": 43,
+    "mrp": 45,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775039083845-558.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 532520,
+    "name": "Kalawa/Mouli Moli by Sohum",
+    "brand": "Sohum",
+    "unit": "2 pcs",
+    "price": 49,
+    "mrp": 75,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b73e3609-ca45-482e-87a4-61ed8e725e50.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 476709,
+    "name": "Small Round Camphor / Kapur by Mangalam",
+    "brand": "Mangalam",
+    "unit": "100 g",
+    "price": 209,
+    "mrp": 220,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786977877773-273.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 763458,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 1199,
+    "mrp": 1999,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 756517,
+    "name": "Abu Haami Attar (Jannatul Firdaus)",
+    "brand": "Abu Haami",
+    "unit": "6 ml",
+    "price": 295,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776754995446-54.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 830235,
+    "name": "Abu Haami Traditional Attar Collection Set",
+    "brand": "Abu Haami",
+    "unit": "6 x 3 ml",
+    "price": 688,
+    "mrp": 1599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/26caa8c3745941ca94388ac02f62ab59.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 674283,
+    "name": "Frabia Attar Roll On (Purple Oud)",
+    "brand": "Frabia",
+    "unit": "6 ml",
+    "price": 199,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/16c3d2e0-58e4-4259-9eaf-ac458394bd1c.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 707411,
+    "name": "Paradyse Perfumes Attar For Men (Mafia Oud)",
+    "brand": "Paradyse Perfumes",
+    "unit": "6 ml",
+    "price": 299,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3d4d4277-a94f-4416-834c-67fb7d95cf5e.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 639356,
+    "name": "Axe Dark Temptation Deodorant",
+    "brand": "Axe",
+    "unit": "215 ml",
+    "price": 245,
+    "mrp": 350,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784708527841-147.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "attar"
+    ]
+  },
+  {
+    "pid": 672169,
+    "name": "Carmesi Under Arm Roll-On (Fresh Blossom)",
+    "brand": "Carmesi",
+    "unit": "50 ml",
+    "price": 175,
+    "mrp": 225,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c359f7c5-5305-4219-abcf-d8adece3b396.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 560963,
+    "name": "Azah Reusable Face Razor for Women with German Blade",
+    "brand": "Azah",
+    "unit": "3 pcs",
+    "price": 95,
+    "mrp": 119,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5b391d04-ce16-476e-81c4-343881d1890a.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 649905,
+    "name": "Rexona Aloe Vera Deodorant Roll on",
+    "brand": "Rexona",
+    "unit": "50 ml",
+    "price": 114,
+    "mrp": 190,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772698047485-589.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 25197,
+    "name": "Yardley English Lavender Body Spray",
+    "brand": "Yardley",
+    "unit": "150 ml",
+    "price": 180,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772218066868-7.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 460098,
+    "name": "Lux Magnolia Magic Bodywash with Niacinamide Body Wash",
+    "brand": "Lux",
+    "unit": "245 ml",
+    "price": 99,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778063967419-160.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 759588,
+    "name": "Be Bodywise Aqua 6% AHA BHA Under Arm Roll-On",
+    "brand": "Be Bodywise",
+    "unit": "50 ml",
+    "price": 399,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780458349701-219.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 767464,
+    "name": "Be Bodywise Aqua 6% AHA BHA Under Arm Roll-On",
+    "brand": "Be Bodywise",
+    "unit": "2 x 50 ml",
+    "price": 759,
+    "mrp": 798,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-7879.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "roll on perfume"
+    ]
+  },
+  {
+    "pid": 740965,
+    "name": "Hira Men's Perfume Gift Set",
+    "brand": "Hira",
+    "unit": "4 x 10 ml",
+    "price": 799,
+    "mrp": 1599,
+    "image_url": "https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=360/da/cms-assets/cms/product/d7d1e093-0dc8-4061-8a5a-46ce49f407ee.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set",
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 777622,
+    "name": "Fastrack Carry Your Vibe Perfume Gift Set",
+    "brand": "Fastrack",
+    "unit": "4 x 8 ml",
+    "price": 439,
+    "mrp": 545,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777021524144-19.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 607441,
+    "name": "Fastrack Perfume Gift Set For Him (Ease, Night Out, Rush)",
+    "brand": "Fastrack",
+    "unit": "3 x 20 ml",
+    "price": 599,
+    "mrp": 845,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770300964921-1490.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 742182,
+    "name": "Archies Luxury Men's EDP Perfume Gift Set",
+    "brand": "Archies",
+    "unit": "4 x 20 ml",
+    "price": 499,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770302998984-1104.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 735851,
+    "name": "Denver Sporting Club Perfume Gift Set",
+    "brand": "Denver",
+    "unit": "4 x 20 ml",
+    "price": 563,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770302998984-906.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 559267,
+    "name": "Park Avenue Men's Luxury Perfume Gift Set",
+    "brand": "Park Avenue",
+    "unit": "4 x 20 ml",
+    "price": 510,
+    "mrp": 849,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770300964921-958.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 609891,
+    "name": "Set Wet AM/PM Perfume Gift Set",
+    "brand": "Set Wet",
+    "unit": "4 x 20 ml",
+    "price": 371,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771221584742-365.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 606214,
+    "name": "Lunaer Men's Luxury Perfume Gift Set",
+    "brand": "Lunaer",
+    "unit": "4 x 15 ml",
+    "price": 494,
+    "mrp": 850,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770300964921-1453.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 731319,
+    "name": "Lunaer Exclusive Edition Men's Perfume Gift Set",
+    "brand": "Lunaer",
+    "unit": "60 ml",
+    "price": 494,
+    "mrp": 850,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1774553171600-111.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 579053,
+    "name": "French Essence Luxury Perfume Gift Set",
+    "brand": "French Essence",
+    "unit": "4 x 25 ml",
+    "price": 529,
+    "mrp": 1399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-3195.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 709400,
+    "name": "Rooted Lavender Daisy Crochet Flower Bouquet",
+    "brand": "Rooted",
+    "unit": "1 pc",
+    "price": 269,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770017428150-125.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 524471,
+    "name": "Babique Octopus Sitting Plush Soft Toy",
+    "brand": "Babique",
+    "unit": "1 pc",
+    "price": 169,
+    "mrp": 378,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770221714496-1104.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 477891,
+    "name": "Ceramic Diffuser Gift Set (Jasmine, Brown) (Jasmine Aroma, Brown) Auradecor",
+    "brand": "Auradecor",
+    "unit": "5 pcs",
+    "price": 196,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781468396266-92.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 665896,
+    "name": "Mad Over Print 'I Love You' Greeting Card",
+    "brand": "Mad Over Print",
+    "unit": "1 pc",
+    "price": 69,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/25db397e-37eb-44e4-b917-24329826eafc.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 450384,
+    "name": "Rose (Flowers & Petals)",
+    "brand": "Freshbury",
+    "unit": "100 g",
+    "price": 39,
+    "mrp": 47,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783600714662-26.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 604418,
+    "name": "AND Ajmal Love Muse Eau de Parfum (White Floral)",
+    "brand": "AND",
+    "unit": "100 ml",
+    "price": 799,
+    "mrp": 1800,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-3678.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 528812,
+    "name": "Carlton London Euphoria Women's EDP Perfume Gift Set (Euphoria)",
+    "brand": "Carlton London",
+    "unit": "4 x 30 ml",
+    "price": 999,
+    "mrp": 2490,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0cebbeb9-7b7b-4d9a-9bb8-4980d36d09f9.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 534715,
+    "name": "Carlton London Women Ecstasy Perfume Gift Set (Ecstasy)",
+    "brand": "Carlton London",
+    "unit": "6 x 8 ml",
+    "price": 769,
+    "mrp": 1090,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/67d555cc-8720-4988-ad63-4a4fbe4d0b59.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 569847,
+    "name": "Secret Temptation Premium Women's Perfume Gift Set",
+    "brand": "Secret Temptation",
+    "unit": "4 x 20 ml",
+    "price": 568,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770300964921-1044.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 546398,
+    "name": "Carlton London Women Exotique EDP Perfume Gift Set (Exotique)",
+    "brand": "Carlton London",
+    "unit": "4 x 30 ml",
+    "price": 1259,
+    "mrp": 1790,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770300964921-826.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 732146,
+    "name": "Nisara Vanilla Rush Eau de Parfum for Women (Ambery -Vanilla)",
+    "brand": "Nisara",
+    "unit": "100 ml",
+    "price": 799,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775646311756-2123.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 569,
+    "name": "Ferrero Rocher Chocolate Gift Pack (16 pieces)",
+    "brand": "Ferrero Rocher",
+    "unit": "200 g",
+    "price": 520,
+    "mrp": 549,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776321270999-311.png",
+    "inventory": 8,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 565628,
+    "name": "Paperpep Geometric Print Paper Gift Bag - Pack of 2 (Blue)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 99,
+    "mrp": 120,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c5aebe11-c23c-4b32-bd46-6e3707cb0aaa.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 565631,
+    "name": "Paperpep Geometric Print Paper Gift Bag - Pack of 2 (Blue)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 139,
+    "mrp": 160,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/95073f7d-8aae-461d-8f39-f6664baacbfb.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 566272,
+    "name": "Paperpep Geometric Print Paper Gift Bag - Pack of 2 (Blue)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 179,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4e4b4830-e99b-4355-bbe6-d1418e59c319.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 775194,
+    "name": "Chubsy Knits Decorative Crochet Flower with Pot",
+    "brand": "Chubsy Knits",
+    "unit": "1 pc",
+    "price": 249,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776343870003-22.png",
+    "inventory": 12,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 558676,
+    "name": "3D Galaxy Crystal Ball Night 3 W Decorative Lamp (Brown) - DesiDiya",
+    "brand": "DesiDiya",
+    "unit": "1 unit",
+    "price": 284,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6df710f6-9896-42ea-87d2-1ad24f4ea197.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 524482,
+    "name": "Babique Cat with Flower Plush Soft Toy",
+    "brand": "Babique",
+    "unit": "1 pc",
+    "price": 249,
+    "mrp": 458,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770221714496-1157.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 606116,
+    "name": "Kimirica The French Note Trio Gift Set",
+    "brand": "Kimirica",
+    "unit": "3 pcs",
+    "price": 515,
+    "mrp": 559,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7ee41ce5-12ff-4898-8ff8-56b44f6e02a3.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 665892,
+    "name": "Mad Over Print 'Cake It Easy - It's your Birthday' Greeting Card",
+    "brand": "Mad Over Print",
+    "unit": "1 pc",
+    "price": 69,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/063d10c1-9722-4c52-953f-3aa67f0a5991.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 529985,
+    "name": "Ajmal Women's Eau de Parfum (Bombay Dreams)",
+    "brand": "Ajmal",
+    "unit": "100 ml",
+    "price": 519,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-2572.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 554180,
+    "name": "RENEE Red Noir Women's Perfume (Red Noir)",
+    "brand": "RENEE",
+    "unit": "15 ml",
+    "price": 315,
+    "mrp": 350,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9591eaad-abad-48e7-bbd3-51222200660e.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 741156,
+    "name": "Bla Bli Blu Perfume Gift Set for Her",
+    "brand": "Bla Bli Blu",
+    "unit": "4 x 15 ml",
+    "price": 525,
+    "mrp": 650,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775457726381-611.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 1388357,
+    "name": "Bla Bli Blu Hot AF Women's Perfume (Fruity & Woody)",
+    "brand": "Bla Bli Blu",
+    "unit": "100 ml",
+    "price": 620,
+    "mrp": 750,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786707063428-406.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 560783,
+    "name": "Bombae Scentsutra Perfume Gift Set For Women",
+    "brand": "Bombae",
+    "unit": "3 x 30 ml",
+    "price": 498,
+    "mrp": 1499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770300964921-994.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 763535,
+    "name": "Swiss Beauty The She Edit Perfume Gift Set (She Leads, She Dreams, She Shines)",
+    "brand": "Swiss Beauty",
+    "unit": "3 x 15 ml",
+    "price": 549,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773492424994-751.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 601548,
+    "name": "Bella Vita Mood Collection Women's Perfume Gift Set",
+    "brand": "Bella Vita",
+    "unit": "3 x 15 ml",
+    "price": 549,
+    "mrp": 849,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770300964921-1355.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 778047,
+    "name": "Fastrack Discovery Perfume Gift Set",
+    "brand": "Fastrack",
+    "unit": "4 x 8 ml",
+    "price": 439,
+    "mrp": 545,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777129954799-236.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 742477,
+    "name": "Moody Perfume Gift Set",
+    "brand": "Moody",
+    "unit": "4 x 20 ml",
+    "price": 420,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778248940843-47.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 569809,
+    "name": "Faces Canada Ultime Pro Splash Mini Nail Paint Kit (Bold Essentials)",
+    "brand": "Faces Canada",
+    "unit": "4 x 5 ml",
+    "price": 189,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771396342029-319.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 524280,
+    "name": "MARS Cosmetics Matte Lipsticks Set (02-Peaches & Nudes)",
+    "brand": "MARS Cosmetics",
+    "unit": "3 x 3.2 g",
+    "price": 390,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8c2a4aa9-a281-4c96-a3ad-9082a782cf21.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 500097,
+    "name": "Bella Vita Eau de Parfum Date Women's Perfume",
+    "brand": "Bella Vita Organic",
+    "unit": "100 ml",
+    "price": 525,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787139392158-56.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 678864,
+    "name": "Bella Vita Gourmet Collection Perfume Gift Set",
+    "brand": "Bella Vita",
+    "unit": "3 pcs",
+    "price": 499,
+    "mrp": 649,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770302998984-340.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 576355,
+    "name": "Bella Vita Discovery Set Women's Eau de Parfum (Floral, Fruity, Fresh)",
+    "brand": "Bella Vita",
+    "unit": "7 x 8 ml",
+    "price": 485,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-3151.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 712248,
+    "name": "Park Avenue Perfume Gift Set for Her",
+    "brand": "Park Avenue",
+    "unit": "4 x 20 ml",
+    "price": 510,
+    "mrp": 849,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770302998984-665.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 554286,
+    "name": "RENEE Eau de Parfum (Madame)",
+    "brand": "RENEE",
+    "unit": "20 ml",
+    "price": 345,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775639803874-2879.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 540820,
+    "name": "FlowerAura Red Rose Single Flower in Red Paper",
+    "brand": "FlowerAura",
+    "unit": "1 pc",
+    "price": 67,
+    "mrp": 149,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779421790948-3097.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 544971,
+    "name": "Salty Infinity Crystal Statement Necklace (Golden)",
+    "brand": "Salty",
+    "unit": "1 pc",
+    "price": 399,
+    "mrp": 560,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1769756024488-318.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 673352,
+    "name": "Mad Over Print I'm so Sorry Greeting Card",
+    "brand": "Mad Over Print",
+    "unit": "1 pc",
+    "price": 69,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0dc225ab-45df-49ce-95a6-eff33462e850.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "perfume gift set"
+    ]
+  },
+  {
+    "pid": 801610,
+    "name": "Blue Heaven Get Matte Lipstick (103R)",
+    "brand": "Blue Heaven",
+    "unit": "4 g",
+    "price": 99,
+    "mrp": 110,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4a8ac9897cf749b4b10386982057d419.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true
+  },
+  {
+    "pid": 801611,
+    "name": "Blue Heaven Get Matte Lipstick (202M)",
+    "brand": "Blue Heaven",
+    "unit": "4 g",
+    "price": 99,
+    "mrp": 110,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/17867e70c41c4c938713b3d3fe65981b.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true
+  },
+  {
+    "pid": 801612,
+    "name": "Blue Heaven Get Matte Lipstick (402PM)",
+    "brand": "Blue Heaven",
+    "unit": "4 g",
+    "price": 99,
+    "mrp": 110,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/e6fec003592a46c28d0484a4c1a32d15.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true
+  },
+  {
+    "pid": 546815,
+    "name": "Fiama Blackcurrant & Bearberry Shower Gel (750 ml)",
+    "brand": "Fiama",
+    "unit": "750 ml",
+    "price": 285,
+    "mrp": 530,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6f5cc89f-fa5c-4857-a84b-21223fabd6d1.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true
+  },
+  {
+    "pid": 710318,
+    "name": "HashWOW Mini Finger Ring Naam Jap Digital Counter",
+    "brand": "HashWOW",
+    "unit": "1 unit",
+    "price": 129,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770637399754-182.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true
+  }
+]
