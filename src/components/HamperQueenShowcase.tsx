@@ -30,6 +30,8 @@ import {
   getHamperQueenSubstitutions,
 } from '../data/hamperQueenCatalog';
 import { HamperQueenGraphic } from './HamperQueenGraphic';
+import { resolveRateLines } from '../utils/retailPricing';
+import { RETAIL_RATES_CAPTURED_AT, RETAIL_RATES_LOCATION } from '../data/retailRates';
 import { LanguageMode, CustomHamper } from '../types';
 import { TRANSLATIONS } from '../data/translations';
 import { royaleLogger } from '../utils/logger';
@@ -56,6 +58,29 @@ export const FEATURED_HOME_IDS = [
   'bouquet-chocolate-kitkat',
   'hamper-1-elegant-pink',
 ];
+
+/** Data-driven category tab labels (counts computed from the live catalog). */
+const CATEGORY_TAB_LABELS: { id: string; label: string }[] = [
+  { id: 'bouquets', label: 'Bouquets' },
+  { id: 'birthday_hampers', label: 'Birthday Hampers' },
+  { id: 'customised_hampers', label: 'Custom Made' },
+  { id: 'specialty_boxes', label: 'Gift Boxes' },
+  { id: 'gourmet_trays', label: 'Celebration Trays' },
+  { id: 'addons_retail', label: 'Snack & Choco Add-ons' },
+  { id: 'mugs_cups', label: 'Mugs & Cups' },
+  { id: 'accessories', label: 'Accessories' },
+  { id: 'clothing', label: 'Clothing & Apparel' },
+];
+
+function categoryTabs(): { id: string; label: string }[] {
+  const count = (id: string) => HAMPER_QUEEN_PRODUCTS.filter((p) => p.category === id).length;
+  return [
+    { id: 'all', label: 'All Offerings' },
+    ...CATEGORY_TAB_LABELS
+      .filter((tab) => count(tab.id) > 0)
+      .map((tab) => ({ id: tab.id, label: `${tab.label} (${count(tab.id)})` })),
+  ];
+}
 
 export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
   language,
@@ -127,7 +152,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
           </h2>
 
           <p className="font-seasons text-lg sm:text-xl text-[#524B40] leading-relaxed">
-            Thoughtful gifts beautifully packed with love and care. Browse our complete menu of 12 customizable birthday hampers, chocolate bouquets, and royal gift boxes with direct maps-based booking.
+            Thoughtful gifts beautifully packed with love and care. Browse our complete menu of customizable birthday hampers, chocolate & snack bouquets, mugs, accessories, clothing and royal gift boxes with direct maps-based booking.
           </p>
 
           {/* Pricing Guarantee Banner */}
@@ -176,14 +201,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
           
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center gap-2">
-            {[
-              { id: 'all', label: 'All Offerings' },
-              { id: 'bouquets', label: 'Bouquets (6)' },
-              { id: 'birthday_hampers', label: '12 Birthday Hampers' },
-              { id: 'customised_hampers', label: 'Custom Made (4)' },
-              { id: 'specialty_boxes', label: 'Gift Boxes (4)' },
-              { id: 'gourmet_trays', label: 'Celebration Trays' },
-            ].map((tab) => (
+            {categoryTabs().map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setSelectedCategory(tab.id)}
@@ -218,6 +236,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
           {visibleProducts.map((prod) => {
             const itemCode = getHamperQueenItemCode(prod);
             const substitutions = getHamperQueenSubstitutions(prod);
+            const rateLines = prod.rateCard ? resolveRateLines(prod.rateCard) : [];
 
             return (
               <div
@@ -294,6 +313,39 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
                       )}
                     </div>
                   </div>
+
+                  {/* REAL RETAIL RATES (image + live rate per item) */}
+                  {rateLines.length > 0 && (
+                    <div className="pt-2 border-t border-[#F0ECE1] space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[11px] font-cinzel font-bold text-[#141414] uppercase tracking-wider">
+                          Real Retail Rates
+                        </span>
+                        <span className="text-[10px] text-[#8C6821] font-semibold">
+                          {RETAIL_RATES_LOCATION} · {RETAIL_RATES_CAPTURED_AT}
+                        </span>
+                      </div>
+                      <div className="flex flex-col gap-1.5">
+                        {rateLines.map((line) => (
+                          <div key={line.key} className="flex items-center gap-2.5 rounded-xl border border-[#EAE5D9] bg-white px-2.5 py-1.5">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={line.image}
+                              alt={line.name}
+                              className="w-9 h-9 rounded-lg object-cover bg-[#F7F5F0] border border-[#EAE5D9] shrink-0"
+                            />
+                            <div className="flex-1 min-w-0">
+                              <p className="text-[11px] font-semibold text-[#141414] truncate">{line.label}</p>
+                              <p className="text-[10px] text-[#6B6559]">
+                                {line.qty} × ₹{line.price}/{line.unit.replace(/[0-9. ]/g, '') || 'pc'}
+                              </p>
+                            </div>
+                            <span className="text-[11px] font-bold text-[#8C6821] shrink-0">₹{line.price}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* ABSTRACTED CUSTOMIZATION HINT */}
                   <div className="pt-2 border-t border-[#F0ECE1]">

@@ -37,6 +37,10 @@ function resolveTheme(product: HamperQueenProduct, graphicId: string): BoxTheme 
   if (id.includes('pocket-delight') || id.includes('sweet-duo') || id.includes('celebration-trio')) {
     return BOX_THEMES.mini;
   }
+  if (id.includes('addon-')) return BOX_THEMES.obsidian;
+  if (id.includes('mug-')) return BOX_THEMES.coffee;
+  if (id.includes('accessory-hair') || id.includes('accessory-jewellery')) return BOX_THEMES.women;
+  if (id.includes('clothing-')) return BOX_THEMES.men;
   return BOX_THEMES.royal;
 }
 

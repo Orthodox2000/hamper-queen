@@ -1,0 +1,386 @@
+[
+  {
+    "key": "kitkat_4f",
+    "prid": 212722,
+    "slug": "nestle-kitkat-grand-break-4-fingers-wafer-chocolate-bar-38.5-g",
+    "note": "Used in KitKat bouquet tiers",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Nestle KitKat 4 Fingers Choco Coated Wafer Bar",
+    "brand": "Nestle KitKat",
+    "unit": "38.5 g",
+    "price": 30,
+    "mrp": 30,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786506151062-353.jpg",
+    "inventory": 50,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "38.5 g",
+        "price": 30,
+        "mrp": 30
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.413333,
+      "lon": 77.072833
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/kitkat_4f.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/nestle-kitkat-grand-break-4-fingers-wafer-chocolate-bar-38.5-g/prid/212722"
+  },
+  {
+    "key": "kitkat_2f",
+    "prid": 17391,
+    "slug": "nestle-kitkat-2-fingers-wafer-bar",
+    "note": "Used in KitKat bouquet tiers",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Nestle KitKat 2 Fingers Wafer Bar",
+    "brand": "Nestle KitKat",
+    "unit": "18 g",
+    "price": 20,
+    "mrp": 20,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784885465537-15.jpg",
+    "inventory": 0,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "18 g",
+        "price": 20,
+        "mrp": 20
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.413333,
+      "lon": 77.072833
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/kitkat_2f.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/nestle-kitkat-2-fingers-wafer-bar/prid/17391"
+  },
+  {
+    "key": "dark_fantasy_230g",
+    "prid": 313249,
+    "slug": "sunfeast-dark-fantasy-choco-fills-chocolate-biscuit-pack",
+    "note": "Dark Fantasy bouquet biscuit packs",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Sunfeast Dark Fantasy Choco Fills Chocolate Biscuit Pack",
+    "brand": "Sunfeast Dark Fantasy",
+    "unit": "230 g",
+    "price": 99,
+    "mrp": 170,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785296870947-450.jpg",
+    "inventory": 12,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "230 g",
+        "price": 99,
+        "mrp": 170
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.4131564,
+      "lon": 77.0726806
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/dark_fantasy_230g.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/sunfeast-dark-fantasy-choco-fills-chocolate-biscuit-pack/prid/313249"
+  },
+  {
+    "key": "dark_fantasy_150g",
+    "prid": 24700,
+    "slug": "sunfeast-dark-fantasy-big-choco-fills-cookies",
+    "note": "Dark Fantasy bouquet biscuit packs (alt)",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Sunfeast Dark Fantasy Big Choco Fills Cookies",
+    "brand": "Sunfeast Dark Fantasy",
+    "unit": "150 g",
+    "price": 71,
+    "mrp": 80,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3ee1fb95-8348-446d-84ed-2c661f191559.jpg",
+    "inventory": 1,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "150 g",
+        "price": 71,
+        "mrp": 80
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.4131564,
+      "lon": 77.0726806
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/dark_fantasy_150g.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/sunfeast-dark-fantasy-big-choco-fills-cookies/prid/24700"
+  },
+  {
+    "key": "kinder_joy_20g",
+    "prid": 19825,
+    "slug": "kinder-joy-blue-20g",
+    "note": "Kinder Joy bouquet surprise eggs",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Kinder Joy Blue 20g",
+    "brand": "Kinder Joy",
+    "unit": "20 g",
+    "price": 50,
+    "mrp": 50,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784201400764-127.jpg",
+    "inventory": 29,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "20 g",
+        "price": 50,
+        "mrp": 50
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.4131564,
+      "lon": 77.0726806
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/kinder_joy_20g.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/kinder-joy-blue-20g/prid/19825"
+  },
+  {
+    "key": "silk_144g",
+    "prid": 11022,
+    "slug": "cadbury-dairy-milk-silk-milk-chocolate-bar",
+    "note": "Cadbury Silk bar for hampers",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Cadbury Dairy Milk Silk Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "144 g",
+    "price": 189,
+    "mrp": 225,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771395208762-1192.jpg",
+    "inventory": 19,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "144 g",
+        "price": 189,
+        "mrp": 225
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.4131564,
+      "lon": 77.0726806
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/silk_144g.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/cadbury-dairy-milk-silk-milk-chocolate-bar/prid/11022"
+  },
+  {
+    "key": "dairy_milk_26g",
+    "prid": 669065,
+    "slug": "cadbury-dairy-milk-chocolate-bar-cricket-pack",
+    "note": "Cadbury Dairy Milk treat",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Cadbury Dairy Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "25 g",
+    "price": 25,
+    "mrp": 25,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5fccba1a-1f4b-4d1f-ada7-153835ebd773.jpg",
+    "inventory": 50,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "25 g",
+        "price": 25,
+        "mrp": 25
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.4131564,
+      "lon": 77.0726806
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/dairy_milk_26g.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/cadbury-dairy-milk-chocolate-bar-cricket-pack/prid/669065"
+  },
+  {
+    "key": "munch_45g",
+    "prid": 496297,
+    "slug": "nestle-munch-max-chocolate-coated-crunchy-wafer-bar",
+    "note": "Nestle Munch bar in celebration hampers",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Nestle Munch Max Choco Coated Crunchy Wafer Bar",
+    "brand": "Nestle Munch",
+    "unit": "38.5 g",
+    "price": 20,
+    "mrp": 20,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/40e94957-853f-4d5b-95f2-b6d13b8e1c2f.jpg",
+    "inventory": 50,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "38.5 g",
+        "price": 20,
+        "mrp": 20
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.4131564,
+      "lon": 77.0726806
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/munch_45g.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/nestle-munch-max-chocolate-coated-crunchy-wafer-bar/prid/496297"
+  },
+  {
+    "key": "munch_max_38g",
+    "prid": 732832,
+    "slug": "nestle-munch-max-crunchies-chocolate-bar",
+    "note": "Nestle Munch Max (alt)",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Nestle Munch Max Crunchies Chocolate Bar",
+    "brand": "Nestle Munch",
+    "unit": "45 g",
+    "price": 40,
+    "mrp": 40,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784001913751-547.jpg",
+    "inventory": 5,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "45 g",
+        "price": 40,
+        "mrp": 40
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.4131564,
+      "lon": 77.0726806
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/munch_max_38g.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/nestle-munch-max-crunchies-chocolate-bar/prid/732832"
+  },
+  {
+    "key": "ferrero_4pc",
+    "prid": 19679,
+    "slug": "ferrero-rocher-chocolate-gift-pack-4-pieces",
+    "note": "Ferrero Rocher gift pair",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Ferrero Rocher Chocolate Gift Pack (4 pieces)",
+    "brand": "Ferrero Rocher",
+    "unit": "50 g",
+    "price": 179,
+    "mrp": 179,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776656742804-880.jpg",
+    "inventory": 16,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "50 g",
+        "price": 179,
+        "mrp": 179
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.4131564,
+      "lon": 77.0726806
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/ferrero_4pc.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/ferrero-rocher-chocolate-gift-pack-4-pieces/prid/19679"
+  },
+  {
+    "key": "nivea_men_spray",
+    "prid": 25181,
+    "slug": "nivea-men-fresh-active-original-mens-deodorant",
+    "note": "Nivea Men deodorant spray - men grooming bouquet",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Nivea Men Fresh Active Original Men's Deodorant",
+    "brand": "Nivea Men",
+    "unit": "150 ml",
+    "price": 219,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779705151382-134.jpg",
+    "inventory": 5,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "150 ml",
+        "price": 219,
+        "mrp": 299
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.4131564,
+      "lon": 77.0726806
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/nivea_men_spray.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/nivea-men-fresh-active-original-mens-deodorant/prid/25181"
+  },
+  {
+    "key": "nivea_men_rollon",
+    "prid": 131475,
+    "slug": "nivea-men-fresh-active-mens-roll-on",
+    "note": "Nivea Men roll-on (alt) - men grooming bouquet",
+    "capturedAt": "2026-09-25",
+    "error": null,
+    "name": "Nivea Men Fresh Active Men's Roll On",
+    "brand": "Nivea Men",
+    "unit": "50 ml",
+    "price": 185,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5a70b3c7-51f1-4257-a1b5-2ba2bdf6970c.jpg",
+    "inventory": 7,
+    "rating": null,
+    "variants": [
+      {
+        "unit": "50 ml",
+        "price": 185,
+        "mrp": 249
+      }
+    ],
+    "locality": {
+      "name": "Gurugram",
+      "lat": 28.4131564,
+      "lon": 77.0726806
+    },
+    "chainId": 1383,
+    "jsonld_fallback": null,
+    "image": "/retail/nivea_men_rollon.jpg",
+    "sourceUrl": "https://www.blinkit.com/prn/nivea-men-fresh-active-mens-roll-on/prid/131475"
+  }
+]

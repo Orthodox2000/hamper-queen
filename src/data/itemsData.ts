@@ -458,10 +458,10 @@ export const BROCHURES: BrochureItem[] = [
     tag: 'Signature Hampers',
     pages: 32,
     description:
-      'Our flagship menu of 12 birthday and celebration hampers, exactly as we wrap them: Self-Care, Jewellery, Coffee-Lover, Elegant Pink, Fashion, Luxury Skincare, Chocolate Indulgence, Wellness & Relaxation, Tea Time, Personalised, Minimal & Chic, and Floral & Lifestyle. Transparent pricing at ≈ INR 70 per curated item.',
+      'Our flagship menu of 12 birthday and celebration hampers, exactly as we wrap them: Self-Care, Jewellery, Coffee-Lover, Elegant Pink, Fashion, Luxury Skincare, Chocolate Indulgence, Wellness & Relaxation, Tea Time, Personalised, Minimal & Chic, and Floral & Lifestyle. Transparent pricing: real retail rates on branded items plus craft fee per curated composition.',
     highlights: [
       '12 hampers with their actual item-by-item menus',
-      '≈ INR 70 per curated item • Signature hampers from INR 499',
+      'Real retail rates on branded items • Signature hampers from INR 499',
       'How It Works: choose your style, select items, share preferences, we deliver with love',
       'Free delivery on orders above INR 499 in Mumbai',
     ],

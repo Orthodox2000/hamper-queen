@@ -849,6 +849,19 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                           </option>
                         ))}
                       </optgroup>
+                      <optgroup label="Snack & Choco, Mugs, Accessories & Clothing">
+                        {HAMPER_QUEEN_PRODUCTS.filter(
+                          (p) =>
+                            p.category === 'addons_retail' ||
+                            p.category === 'mugs_cups' ||
+                            p.category === 'accessories' ||
+                            p.category === 'clothing'
+                        ).map((prod) => (
+                          <option key={prod.id} value={prod.id}>
+                            {prod.itemCode || '#HQ-ADD'} - {prod.name} ({prod.approxPrice})
+                          </option>
+                        ))}
+                      </optgroup>
                     </select>
                     <button
                       type="button"

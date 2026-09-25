@@ -1,9 +1,24 @@
+import {
+  RateCardLine,
+  bouquetSellingPrice,
+  bouquetPricingNote,
+} from '../utils/retailPricing';
+
 export interface HamperQueenProduct {
   id: string;
   itemCode?: string;
   name: string;
   nameHinglish: string;
-  category: 'bouquets' | 'birthday_hampers' | 'specialty_boxes' | 'gourmet_trays' | 'customised_hampers';
+  category:
+    | 'bouquets'
+    | 'birthday_hampers'
+    | 'specialty_boxes'
+    | 'gourmet_trays'
+    | 'customised_hampers'
+    | 'addons_retail'
+    | 'mugs_cups'
+    | 'accessories'
+    | 'clothing';
   categoryLabel: string;
   subtitle: string;
   subtitleHinglish: string;
@@ -12,6 +27,8 @@ export interface HamperQueenProduct {
   customizableSubstitutions?: string[];
   approxPrice: string;
   pricingNote: string;
+  /** Real retail rate card (Blinkit-captured rates) — optional; drives honest pricing & images. */
+  rateCard?: RateCardLine[];
   badge?: string;
   themeColor: {
     bg: string;
@@ -35,7 +52,7 @@ export const HAMPER_QUEEN_OFFICIAL_CONTACT = {
   freeDeliveryThreshold: 499,
   deliveryFeeUnderThreshold: 49,
   pricingPolicy:
-    'Orders start from INR 140 (+delivery) • ≈ INR 70 per curated item • Signature hampers from INR 499 • Free delivery on orders above INR 499!',
+    'Orders start from INR 140 (+delivery) • Real retail item rates applied • Signature hampers from INR 499 • Free delivery on orders above INR 499!',
 };
 
 // Automatic stable item code resolver
@@ -70,6 +87,20 @@ export const getHamperQueenItemCode = (prod: HamperQueenProduct): string => {
   if (prod.id.includes('watch-box')) return 'HQ-BOX-04';
   if (prod.id.includes('snack-tray')) return 'HQ-TRY-01';
 
+  if (prod.id.includes('addon-snack-attack')) return 'HQ-ADD-01';
+  if (prod.id.includes('addon-movie-night')) return 'HQ-ADD-02';
+  if (prod.id.includes('addon-mini-candy')) return 'HQ-ADD-03';
+  if (prod.id.includes('addon-oreo-midnight')) return 'HQ-ADD-04';
+  if (prod.id.includes('addon-choco-trio')) return 'HQ-ADD-05';
+  if (prod.id.includes('addon-binge-basket')) return 'HQ-ADD-06';
+
+  if (prod.id.includes('mug-photo-keepsake')) return 'HQ-MUG-01';
+  if (prod.id.includes('mug-ceramic-cocoa')) return 'HQ-MUG-02';
+  if (prod.id.includes('accessory-jewellery')) return 'HQ-ACC-01';
+  if (prod.id.includes('accessory-hair')) return 'HQ-ACC-02';
+  if (prod.id.includes('clothing-tee')) return 'HQ-CLT-01';
+  if (prod.id.includes('clothing-hoodie')) return 'HQ-CLT-02';
+
   return `#HQ-${prod.id.slice(0, 7).toUpperCase()}`;
 };
 
@@ -95,6 +126,39 @@ export const getHamperQueenSubstitutions = (prod: HamperQueenProduct): string[] 
       'Choice of rigid box color (Blush Rose, Ivory Gold, Classic Black, Forest Green)',
     ];
   }
+  if (prod.category === 'addons_retail') {
+    return [
+      'Mix & match chip/chocolate SKUs from the live retail rate list — swap any pack',
+      'Choice of wrap: kraft paper, cellophane, or rigid gift box',
+      'Add cold beverage (Thums Up/7Up/Sprite) pairing',
+      'Extra Pringles/party-size pack upsell available',
+    ];
+  }
+  if (prod.category === 'mugs_cups') {
+    return [
+      'Custom printed photo / quote / name on mug or cup',
+      'Choice of ceramic color & size (12oz/16oz)',
+      'Personalized name engraving on wooden tag',
+      'Pair with Silk or Ferrero add-on chocolates',
+      'Gift box with satin ribbon & calligraphy note',
+    ];
+  }
+  if (prod.category === 'accessories') {
+    return [
+      'Curated jewellery style swap (gold/silver/rhodium tone)',
+      'Choice of hair accessory colour (blush, ivory, gold)',
+      'Add matching scrunchie set or mini perfume',
+      'Velvet keepsake box with calligraphy card',
+    ];
+  }
+  if (prod.category === 'clothing') {
+    return [
+      'Custom printed design, quote or monogram name print',
+      'Available sizes: S / M / L / XL / XXL',
+      'Fabric option: 100% cotton / cotton-blend / fleece',
+      'Wrapped with tissue in premium rigid gift box',
+    ];
+  }
   return [
     'Customized dimensional size for client-provided garments or timepieces',
     'Custom embroidered family monogram or corporate logo tags',
@@ -102,9 +166,76 @@ export const getHamperQueenSubstitutions = (prod: HamperQueenProduct): string[] 
   ];
 };
 
+// Real retail rate cards for bouquet pricing — item costs from Blinkit (Sep 2026).
+const KITKAT_BOUQUET_RATES: RateCardLine[] = [
+  { key: 'kitkat_4f', qty: 6, label: 'KitKat 4-Finger bars' },
+  { key: 'kitkat_2f', qty: 4, label: 'KitKat 2-Finger bars' },
+];
+
+const DARK_FANTASY_BOUQUET_RATES: RateCardLine[] = [
+  { key: 'dark_fantasy_150g', qty: 2, label: 'Dark Fantasy big packs (150g)' },
+  { key: 'dark_fantasy_230g', qty: 2, label: 'Dark Fantasy choco-fills (230g)' },
+];
+
+const MEN_BOUQUET_RATES: RateCardLine[] = [
+  { key: 'nivea_men_spray', qty: 1, label: 'Nivea Men Deodorant Spray' },
+  { key: 'ferrero_4pc', qty: 1, label: 'Ferrero Rocher gift pack' },
+  { key: 'kitkat_2f', qty: 2, label: 'KitKat 2-Finger bars' },
+];
+
+const KINDER_BOUQUET_RATES: RateCardLine[] = [
+  { key: 'kinder_joy_20g', qty: 6, label: 'Kinder Joy surprise eggs' },
+];
+
+// Add-ons retail rate cards — live Blinkit rates for snack & choco add-on hampers.
+const SNACK_ATTACK_RATES: RateCardLine[] = [
+  { key: 'lays_classic_51g', qty: 3, label: "Lay's Classic Salted" },
+  { key: 'kurkure_masala_75g', qty: 2, label: 'Kurkure Masala Munch' },
+  { key: 'bingo_madangles_60g', qty: 2, label: 'Bingo Mad Angles' },
+  { key: 'kurkure_puffcorn_58g', qty: 1, label: 'Kurkure Puffcorn' },
+];
+
+const MOVIE_NIGHT_RATES: RateCardLine[] = [
+  { key: 'pringles_original_107g', qty: 1, label: 'Pringles Original' },
+  { key: 'pringles_sour_onion_107g', qty: 1, label: 'Pringles Sour Cream & Onion' },
+  { key: 'pringles_peri_102g', qty: 1, label: 'Pringles Peri Peri' },
+  { key: 'lays_classic_51g', qty: 1, label: "Lay's Classic Salted" },
+  { key: 'doritos_sweetchilli_75g', qty: 1, label: 'Doritos Sweet Chilli' },
+];
+
+const MINI_CANDY_RATES: RateCardLine[] = [
+  { key: 'chupa_sour_bites_66g', qty: 2, label: 'Chupa Chups Sour Bites' },
+  { key: 'chupa_sour_belt_58g', qty: 1, label: 'Chupa Chups Sour Belt' },
+  { key: 'gems_duo_25g', qty: 2, label: 'Cadbury Gems Duo' },
+  { key: 'milkybar_butterscotch_45g', qty: 1, label: 'Milkybar Butterscotch' },
+];
+
+const OREO_MIDNIGHT_RATES: RateCardLine[] = [
+  { key: 'oreo_vanilla_125g', qty: 1, label: 'Oreo Vanilla' },
+  { key: 'oreo_choco_125g', qty: 1, label: 'Oreo Chocolate' },
+  { key: 'hide_seek_100g', qty: 1, label: 'Hide & Seek Choco Chip' },
+  { key: 'bourbon_99g', qty: 1, label: 'Sunfeast Bourbon' },
+];
+
+const CHOCO_TRIO_RATES: RateCardLine[] = [
+  { key: 'silk_60g', qty: 1, label: 'Cadbury Silk 60g' },
+  { key: 'dairy_milk_46g', qty: 1, label: 'Cadbury Dairy Milk 46g' },
+  { key: 'milkybar_butterscotch_45g', qty: 1, label: 'Milkybar Butterscotch' },
+  { key: 'galaxy_smooth_30g', qty: 1, label: 'Galaxy Smooth' },
+];
+
+const BINGE_BUNDLE_RATES: RateCardLine[] = [
+  { key: 'pringles_original_107g', qty: 1, label: 'Pringles Original' },
+  { key: 'pringles_sour_onion_107g', qty: 1, label: 'Pringles Sour Cream & Onion' },
+  { key: 'lays_classic_51g', qty: 1, label: "Lay's Classic Salted" },
+  { key: 'doritos_sweetchilli_75g', qty: 1, label: 'Doritos Sweet Chilli' },
+  { key: 'kurkure_masala_75g', qty: 1, label: 'Kurkure Masala Munch' },
+  { key: 'bingo_madangles_60g', qty: 1, label: 'Bingo Mad Angles' },
+];
+
 export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
   // ==========================================
-  // STARTER & BUDGET DELIGHTS (≈ INR 70 per curated item)
+  // STARTER & BUDGET DELIGHTS (real retail rates)
   // ==========================================
   {
     id: 'starter-pocket-delight',
@@ -124,7 +255,12 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Handwritten Calligraphy Message Card',
     ],
     approxPrice: 'INR 280 (+delivery)',
-    pricingNote: 'Smallest order size! ≈ INR 70 per curated item • Free delivery above INR 499',
+    pricingNote:
+      'Real retail floor: Cadbury Dairy Milk ₹25 + KitKat ₹30 (Blinkit q-commerce, Sep 2026) • Hand-packed gift box, satin ribbon & calligraphy',
+    rateCard: [
+      { key: 'dairy_milk_26g', qty: 2, label: 'Cadbury Dairy Milk bars' },
+      { key: 'kitkat_4f', qty: 1, label: 'KitKat 4-Finger bar' },
+    ],
     badge: 'Starting at INR 280',
     themeColor: {
       bg: '#FFFDF9',
@@ -155,7 +291,8 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Crunchy Roasted Almond Nut Mix',
     ],
     approxPrice: 'INR 350 (+delivery)',
-    pricingNote: '≈ INR 70 per curated item • Add items above INR 499 for free delivery!',
+    pricingNote:
+      'Real retail floor: Cadbury Silk bar ₹189 (Blinkit q-commerce, Sep 2026) • Preserved rose, wax seal & hand-packed box + free delivery above INR 499',
     badge: 'Popular • INR 350',
     themeColor: {
       bg: '#FFF8F8',
@@ -188,7 +325,14 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Custom Celebration Topper Card',
     ],
     approxPrice: 'INR 499',
-    pricingNote: '≈ INR 70 per curated item • Eligible for free delivery on orders above INR 499',
+    pricingNote:
+      'Real retail floor: Silk ₹189, KitKat ₹30, Munch ₹40, Ferrero ₹179 (Blinkit q-commerce, Sep 2026) • + warm fairy lights & craft',
+    rateCard: [
+      { key: 'silk_144g', qty: 1, label: 'Cadbury Silk bar' },
+      { key: 'kitkat_4f', qty: 1, label: 'KitKat 4-Finger bar' },
+      { key: 'munch_max_38g', qty: 1, label: 'Munch bar' },
+      { key: 'ferrero_4pc', qty: 1, label: 'Ferrero Rocher golden pair' },
+    ],
     badge: 'Trending • INR 499',
     themeColor: {
       bg: '#FAF5FF',
@@ -220,8 +364,9 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Decorative Floral Sprigs & Heart Embellishments',
       'Customized Calligraphy Message Tag',
     ],
-    approxPrice: 'INR 350 - INR 399',
-    pricingNote: 'About INR 70 per item (Approx.) | Rate depends on chocolate count & wrap style',
+    approxPrice: `INR ${bouquetSellingPrice(KITKAT_BOUQUET_RATES)}`,
+    pricingNote: bouquetPricingNote(KITKAT_BOUQUET_RATES),
+    rateCard: KITKAT_BOUQUET_RATES,
     badge: 'Customer Favorite',
     themeColor: {
       bg: '#FFF8F8',
@@ -250,8 +395,9 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Handcrafted Floral Fillers',
       'Personalized Royal Note Card',
     ],
-    approxPrice: 'INR 350 - INR 399',
-    pricingNote: 'About INR 70 per item (Approx.) | Rate depends on biscuit packs & box styling',
+    approxPrice: `INR ${bouquetSellingPrice(DARK_FANTASY_BOUQUET_RATES)}`,
+    pricingNote: bouquetPricingNote(DARK_FANTASY_BOUQUET_RATES),
+    rateCard: DARK_FANTASY_BOUQUET_RATES,
     badge: 'Indulgent Treat',
     themeColor: {
       bg: '#FAF8F5',
@@ -281,7 +427,8 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Sky-Blue Organza Bow',
     ],
     approxPrice: 'INR 350 - INR 399',
-    pricingNote: 'About INR 70 per item (Approx.) | Rate customized according to jewelry selection',
+    pricingNote:
+      'Curated jewelry & floral stock at wholesale rates • Real retail chocolate/décor add-ons priced from Blinkit q-commerce rates (Sep 2026), not a flat per-item ladder',
     badge: 'Trending Gift',
     themeColor: {
       bg: '#F5FAF7',
@@ -310,8 +457,9 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Matte Navy Blue & Black Structured Wrap',
       'Monochrome Ribbon Accent',
     ],
-    approxPrice: 'INR 350 - INR 399',
-    pricingNote: 'About INR 70 per item (Approx.) | Customizable with branded grooming products',
+    approxPrice: `INR ${bouquetSellingPrice(MEN_BOUQUET_RATES)}`,
+    pricingNote: bouquetPricingNote(MEN_BOUQUET_RATES),
+    rateCard: MEN_BOUQUET_RATES,
     badge: 'For Him Special',
     themeColor: {
       bg: '#F5F7FA',
@@ -340,7 +488,8 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Golden Ribbon Tie & Custom Handwritten Note',
     ],
     approxPrice: 'INR 280 - INR 399',
-    pricingNote: 'About INR 70 per item (Approx.) | Rate based on number of photo prints & lights',
+    pricingNote:
+      'Custom craft — priced by print count & fairy lights, applied to your photo selection (no flat retail ladder)',
     badge: 'Most Sentimental',
     themeColor: {
       bg: '#FDFCF9',
@@ -369,8 +518,9 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Cream Satin Ribbon with Golden Border',
       'Celebration Topper Card',
     ],
-    approxPrice: 'INR 350 - INR 399',
-    pricingNote: 'About INR 70 per item (Approx.) | Available in Pink or Blue theme packaging',
+    approxPrice: `INR ${bouquetSellingPrice(KINDER_BOUQUET_RATES)}`,
+    pricingNote: bouquetPricingNote(KINDER_BOUQUET_RATES),
+    rateCard: KINDER_BOUQUET_RATES,
     badge: 'Joyful & Cute',
     themeColor: {
       bg: '#FFF8FA',
@@ -407,7 +557,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Premium Rigid Gift Box with Satin Ribbon',
     ],
     approxPrice: 'INR 549',
-    pricingNote: 'Custom Hampers | 8 curated items ≈ INR 70 each (INR 549 Approx.)',
+    pricingNote: 'Custom Hampers | 8 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Top Birthday Pick',
     themeColor: {
       bg: '#FFF5F7',
@@ -441,7 +591,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Personalized Birthday Note Card',
     ],
     approxPrice: 'INR 599',
-    pricingNote: 'Custom Hampers | 9 curated items ≈ INR 70 each (INR 599 Approx.)',
+    pricingNote: 'Custom Hampers | 9 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Spa & Wellness',
     themeColor: {
       bg: '#FDF8F6',
@@ -474,7 +624,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Birthday Card & Decorative Storage Basket',
     ],
     approxPrice: 'INR 549',
-    pricingNote: 'Custom Hampers | 8 curated items ≈ INR 70 each (INR 549 Approx.)',
+    pricingNote: 'Custom Hampers | 8 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Morning Brew',
     themeColor: {
       bg: '#FAF7F2',
@@ -507,7 +657,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Calligraphy Birthday Card',
     ],
     approxPrice: 'INR 549',
-    pricingNote: 'Custom Hampers | 8 curated items ≈ INR 70 each (INR 549 Approx.)',
+    pricingNote: 'Custom Hampers | 8 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Glamour & Sparkle',
     themeColor: {
       bg: '#FFFDF9',
@@ -540,7 +690,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Signature Rigid Gift Box with Ribbon',
     ],
     approxPrice: 'INR 549',
-    pricingNote: 'Custom Hampers | 8 curated items ≈ INR 70 each (INR 549 Approx.)',
+    pricingNote: 'Custom Hampers | 8 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Fashionista Special',
     themeColor: {
       bg: '#FFF8F8',
@@ -573,7 +723,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Birthday Wishes Card',
     ],
     approxPrice: 'INR 549',
-    pricingNote: 'Custom Hampers | 8 curated items ≈ INR 70 each (INR 549 Approx.)',
+    pricingNote: 'Custom Hampers | 8 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Radiant Glow',
     themeColor: {
       bg: '#FBFDF9',
@@ -605,7 +755,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Signature Black & Gold Gift Box',
     ],
     approxPrice: 'INR 499',
-    pricingNote: 'Custom Hampers | 7 curated items ≈ INR 70 each (INR 499 Approx.)',
+    pricingNote: 'Custom Hampers | 7 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Pure Indulgence',
     themeColor: {
       bg: '#FDF9F5',
@@ -638,7 +788,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Heartfelt Birthday Note',
     ],
     approxPrice: 'INR 549',
-    pricingNote: 'Custom Hampers | 8 curated items ≈ INR 70 each (INR 549 Approx.)',
+    pricingNote: 'Custom Hampers | 8 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Pure Serenity',
     themeColor: {
       bg: '#F5F9FA',
@@ -670,7 +820,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Classic Decorative Tray Box',
     ],
     approxPrice: 'INR 549',
-    pricingNote: 'Custom Hampers | 8 curated items ≈ INR 70 each (INR 549 Approx.)',
+    pricingNote: 'Custom Hampers | 8 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Cozy Moments',
     themeColor: {
       bg: '#F6FBF6',
@@ -703,7 +853,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Premium Gift Box',
     ],
     approxPrice: 'INR 549',
-    pricingNote: 'Custom Hampers | 8 curated items ≈ INR 70 each (INR 549 Approx.)',
+    pricingNote: 'Custom Hampers | 8 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Custom Name Stamped',
     themeColor: {
       bg: '#FAF5FF',
@@ -735,7 +885,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Birthday Card in Simple Elegant Box',
     ],
     approxPrice: 'INR 499',
-    pricingNote: 'Custom Hampers | 7 curated items ≈ INR 70 each (INR 499 Approx.)',
+    pricingNote: 'Custom Hampers | 7 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Clean Aesthetic',
     themeColor: {
       bg: '#F9FAFB',
@@ -768,7 +918,7 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
       'Signature Luxury Gift Box',
     ],
     approxPrice: 'INR 549',
-    pricingNote: 'Custom Hampers | 8 curated items ≈ INR 70 each (INR 549 Approx.)',
+    pricingNote: 'Custom Hampers | 8 curated items · priced by composition (real retail rates on branded items)',
     badge: 'Complete Delight',
     themeColor: {
       bg: '#FFF7ED',
@@ -1059,5 +1209,394 @@ export const HAMPER_QUEEN_PRODUCTS: HamperQueenProduct[] = [
     },
     graphicId: 'graphic-executive-prestige',
     brochureSource: 'WhatsApp Image - Hamper Queen Corporate Lookbook',
+  },
+
+  // ==============================================================
+  // 4. SNACK & CHOCO ADD-ONS (real retail rates)
+  // ==============================================================
+  {
+    id: 'addon-snack-attack',
+    name: 'Snack Attack Goodie Hamper',
+    nameHinglish: 'Snack Attack Munching Ka Maza',
+    category: 'addons_retail',
+    categoryLabel: 'Snack & Choco Add-on',
+    subtitle: "Lay's, Kurkure, Bingo & Puffcorn — Classic Desi Indulgence",
+    subtitleHinglish: 'Lay\'s, Kurkure, Bingo aur Puffcorn ka desi snack box',
+    description:
+      'Fix-your-cravings basket straight from the party shelf! Lay’s Classic, Kurkure Masala Munch, Bingo Mad Angles and Puffcorn — stacked in a rigid kraft box with satin ribbon and real retail rates.',
+    itemsIncluded: [
+      "Lay's Classic Salted Potato Chips",
+      'Kurkure Masala Munch Crisps',
+      'Bingo Mad Angles Achaari Masti',
+      'Kurkure Puffcorn Cheese Puffs',
+      'Rigid Kraft Gift Box with Satin Ribbon',
+      'Handwritten Celebratory Tag',
+    ],
+    approxPrice: `INR ${bouquetSellingPrice(SNACK_ATTACK_RATES)}`,
+    pricingNote: bouquetPricingNote(SNACK_ATTACK_RATES),
+    rateCard: SNACK_ATTACK_RATES,
+    badge: 'Party Classic',
+    themeColor: {
+      bg: '#FFFBF1',
+      accent: '#D97706',
+      border: '#FDE68A',
+      pillBg: '#FEF3C7',
+      pillText: '#92400E',
+    },
+    graphicId: 'graphic-addon-snack-attack',
+    brochureSource: 'Hamper Queen Add-on Menu',
+  },
+  {
+    id: 'addon-movie-night-chips',
+    name: 'Movie Night Chip Basket',
+    nameHinglish: 'Movie Night Chips & Snacks Basket',
+    category: 'addons_retail',
+    categoryLabel: 'Snack & Choco Add-on',
+    subtitle: 'Triple Pringles, Lay\'s & Doritos — the Ultimate Screen Time Tub',
+    subtitleHinglish: 'Triple Pringles, Lay\'s aur Doritos — bingeing ke liye perfect',
+    description:
+      'Binge-ready trio tub of Pringles Original, Sour Cream & Peri Peri, topped with Lay’s and Doritos Sweet Chilli — packed for cosy movie nights, sports screening, or house parties.',
+    itemsIncluded: [
+      'Pringles Original Potato Chips',
+      'Pringles Sour Cream & Onion',
+      'Pringles Peri Peri Chips',
+      "Lay's Classic Salted Chips",
+      'Doritos Sweet Chilli Nachos',
+      'Serving Cone with Confetti Topper',
+    ],
+    approxPrice: `INR ${bouquetSellingPrice(MOVIE_NIGHT_RATES)}`,
+    pricingNote: bouquetPricingNote(MOVIE_NIGHT_RATES),
+    rateCard: MOVIE_NIGHT_RATES,
+    badge: 'Binge Ready',
+    themeColor: {
+      bg: '#F0F7FF',
+      accent: '#2563EB',
+      border: '#BFDBFE',
+      pillBg: '#DBEAFE',
+      pillText: '#1E40AF',
+    },
+    graphicId: 'graphic-addon-movie-night',
+    brochureSource: 'Hamper Queen Add-on Menu',
+  },
+  {
+    id: 'addon-mini-candy-box',
+    name: 'Mini Candy Surprise Box',
+    nameHinglish: 'Mini Candy & Choco Surprise Box',
+    category: 'addons_retail',
+    categoryLabel: 'Snack & Choco Add-on',
+    subtitle: 'Chupa Chups Sour Mix, Gems Duo & Milkybar Butterscotch',
+    subtitleHinglish: 'Chupa Chups, Gems aur Milkybar ka chhota khushnuma box',
+    description:
+      'A pocket-sized candy treasure for little ones and sweet tooth supporters! Sour belts & bites, Gems Duo and Milkybar Butterscotch — in a mini gift box ready for return gifts and party favours.',
+    itemsIncluded: [
+      'Chupa Chups Sour Bites (2 pc)',
+      'Chupa Chups Sour Belt Mixed Fruit',
+      'Cadbury Gems Duo Chocolates',
+      'Milkybar Butterscotch Bite',
+      'Mini Kraft Gift Box with Bow',
+      'Colourful Celebration Tag',
+    ],
+    approxPrice: `INR ${bouquetSellingPrice(MINI_CANDY_RATES)}`,
+    pricingNote: bouquetPricingNote(MINI_CANDY_RATES),
+    rateCard: MINI_CANDY_RATES,
+    badge: 'Party Favourite',
+    themeColor: {
+      bg: '#FDF2F8',
+      accent: '#DB2777',
+      border: '#FBCFE8',
+      pillBg: '#FCE7F3',
+      pillText: '#9D174D',
+    },
+    graphicId: 'graphic-addon-mini-candy',
+    brochureSource: 'Hamper Queen Add-on Menu',
+  },
+  {
+    id: 'addon-oreo-midnight',
+    name: 'Oreo & Cookie Midnight Box',
+    nameHinglish: 'Oreo Aur Cookie Midnight Box',
+    category: 'addons_retail',
+    categoryLabel: 'Snack & Choco Add-on',
+    subtitle: 'Oreos, Hide & Seek & Bourbon — Late Night Cravings Solved',
+    subtitleHinglish: 'Oreo, Hide & Seek aur Bourbon — midnight cravings ka jawab',
+    description:
+      'For the OG midnight-craving crew: classic Oreo vanilla & chocolate, Hide & Seek Choco Chip and Sunfeast Bourbon stacked in a midnight-blue rigid box with a warm fairy-light accent.',
+    itemsIncluded: [
+      'Oreo Vanilla Sandwich Biscuits',
+      'Oreo Chocolate Sandwich Biscuits',
+      'Hide & Seek Choco Chip Cookies',
+      'Sunfeast Bourbon Dark Fantasy',
+      'Midnight-Blue Rigid Gift Box',
+      'Warm Fairy Light String',
+    ],
+    approxPrice: `INR ${bouquetSellingPrice(OREO_MIDNIGHT_RATES)}`,
+    pricingNote: bouquetPricingNote(OREO_MIDNIGHT_RATES),
+    rateCard: OREO_MIDNIGHT_RATES,
+    badge: 'Midnight Treat',
+    themeColor: {
+      bg: '#F5F3FF',
+      accent: '#4C1D95',
+      border: '#C4B5FD',
+      pillBg: '#EDE9FE',
+      pillText: '#5B21B6',
+    },
+    graphicId: 'graphic-addon-oreo-midnight',
+    brochureSource: 'Hamper Queen Add-on Menu',
+  },
+  {
+    id: 'addon-choco-trio',
+    name: 'Triple Choco Indulgence Box',
+    nameHinglish: 'Triple Choco Indulgence Treat Box',
+    category: 'addons_retail',
+    categoryLabel: 'Snack & Choco Add-on',
+    subtitle: 'Silk, Dairy Milk, Milkybar & Galaxy — A Chocoholic\'s Trio',
+    subtitleHinglish: 'Silk, Dairy Milk, Milkybar aur Galaxy — choco lover ka trio box',
+    description:
+      'The perfect chocolate surprise for a pure chocoholic: Cadbury Silk, Dairy Milk, Milkybar Butterscotch and Galaxy Smooth aligned neatly in a gold-ribboned luxury box. Add to any hamper or gift solo!',
+    itemsIncluded: [
+      'Cadbury Silk Milk Chocolate Bar',
+      'Cadbury Dairy Milk Chocolate Bar',
+      'Milkybar Butterscotch Bite',
+      'Galaxy Smooth Chocolate Bar',
+      'Luxury Gold-Ribboned Gift Box',
+      'Personalized Wish Note Card',
+    ],
+    approxPrice: `INR ${bouquetSellingPrice(CHOCO_TRIO_RATES)}`,
+    pricingNote: bouquetPricingNote(CHOCO_TRIO_RATES),
+    rateCard: CHOCO_TRIO_RATES,
+    badge: 'Chocoholic Pick',
+    themeColor: {
+      bg: '#FFF8F5',
+      accent: '#A16207',
+      border: '#FDE68A',
+      pillBg: '#FFFBEB',
+      pillText: '#854D0E',
+    },
+    graphicId: 'graphic-addon-choco-trio',
+    brochureSource: 'Hamper Queen Add-on Menu',
+  },
+  {
+    id: 'addon-binge-basket',
+    name: 'Family Binge Bundle Basket',
+    nameHinglish: 'Family Binge Snacks Basket',
+    category: 'addons_retail',
+    categoryLabel: 'Snack & Choco Add-on',
+    subtitle: 'Pringles, Lay\'s, Doritos, Kurkure & Bingo — the Whole Family Tub',
+    subtitleHinglish: 'Pringles, Lay\'s, Doritos, Kurkure aur Bingo — family size party tub',
+    description:
+      'The grand family-size snack lineup! Two Pringles classics, Lay’s, Doritos Sweet Chilli, Kurkure and Bingo Mad Angles — arranged festival-style in a jumbo cellophane-wrapped basket with a golden rosette.',
+    itemsIncluded: [
+      'Pringles Original Potato Chips',
+      'Pringles Sour Cream & Onion',
+      "Lay's Classic Salted Chips",
+      'Doritos Sweet Chilli Nachos',
+      'Kurkure Masala Munch Crisps',
+      'Bingo Mad Angles Achaari Masti',
+      'Jumbo Cellophane Basket with Rosette',
+    ],
+    approxPrice: `INR ${bouquetSellingPrice(BINGE_BUNDLE_RATES)}`,
+    pricingNote: bouquetPricingNote(BINGE_BUNDLE_RATES),
+    rateCard: BINGE_BUNDLE_RATES,
+    badge: 'Family Size',
+    themeColor: {
+      bg: '#FEFCE8',
+      accent: '#CA8A04',
+      border: '#FEF08A',
+      pillBg: '#FEF9C3',
+      pillText: '#854D0E',
+    },
+    graphicId: 'graphic-addon-binge-basket',
+    brochureSource: 'Hamper Queen Add-on Menu',
+  },
+
+  // ==============================================================
+  // 5. MUGS, CUPS & KEEPSAKES (wholesale-estimate pricing)
+  // ==============================================================
+  {
+    id: 'mug-photo-keepsake',
+    name: 'Personalised Photo Mug Box',
+    nameHinglish: 'Custom Photo Mug Gift Box',
+    category: 'mugs_cups',
+    categoryLabel: 'Mugs & Cups',
+    subtitle: 'Ceramic Mug with Your Photo Print + Hot Cocoa Sachets',
+    subtitleHinglish: 'Aapki photo wala ceramic mug aur hot cocoa sachets',
+    description:
+      'A keepsake they will use every morning! A premium 12oz ceramic mug printed with your favourite photo, quote or inside joke — paired with hot cocoa sachets and boxed with a handwritten note. Mug retail & print handled at wholesale-estimate rates.',
+    itemsIncluded: [
+      'Premium 12oz Ceramic Photo Mug',
+      'High-Resolution Photo / Quote Print',
+      'Hot Cocoa Sachets (2 pc)',
+      'Crush-Proof Gift Box with Satin Bow',
+      'Handwritten Calligraphy Note',
+    ],
+    approxPrice: 'INR 349 - INR 449',
+    pricingNote: 'Wholesale-estimate pricing (mug ₹260-₹320 + print ₹40) — confirmed on WhatsApp • Admin-editable',
+    badge: 'Personalised Keepsake',
+    themeColor: {
+      bg: '#FFF9F5',
+      accent: '#C2410C',
+      border: '#FED7AA',
+      pillBg: '#FFEDD5',
+      pillText: '#9A3412',
+    },
+    graphicId: 'graphic-mug-photo-keepsake',
+    brochureSource: 'Hamper Queen Mugs & Keepsakes',
+  },
+  {
+    id: 'mug-ceramic-cocoa',
+    name: 'Ceramic Cup & Hot Cocoa Combo',
+    nameHinglish: 'Ceramic Cup Aur Hot Cocoa Box',
+    category: 'mugs_cups',
+    categoryLabel: 'Mugs & Cups',
+    subtitle: 'Designer Ceramic Mug with Artisan Cocoa Mix & Biscotti',
+    subtitleHinglish: 'Designer mug, artisan cocoa mix aur biscotti ka combo',
+    description:
+      'Warm up winter evenings with a designer glazed ceramic cup, artisan drinking-chocolate mix and almond biscotti — stacked in a rustic brown box with a wooden stirrer. Retail of mug & mix at wholesale-estimate rates.',
+    itemsIncluded: [
+      'Designer Glazed Ceramic Mug',
+      'Artisan Drinking Chocolate Mix',
+      'Almond Biscotti Cookies',
+      'Wooden Coffee Stirrer',
+      'Rustic Kraft Box with Twine',
+    ],
+    approxPrice: 'INR 299 - INR 399',
+    pricingNote: 'Wholesale-estimate pricing (mug ₹220-₹280 + cocoa mix) — confirmed on WhatsApp • Admin-editable',
+    badge: 'Cozy Combo',
+    themeColor: {
+      bg: '#FBF7F0',
+      accent: '#78350F',
+      border: '#E7D5C0',
+      pillBg: '#F0E7DB',
+      pillText: '#4A2608',
+    },
+    graphicId: 'graphic-mug-ceramic-cocoa',
+    brochureSource: 'Hamper Queen Mugs & Keepsakes',
+  },
+
+  // ==============================================================
+  // 6. ACCESSORIES (wholesale-estimate pricing)
+  // ==============================================================
+  {
+    id: 'accessory-jewellery-keepbox',
+    name: 'Everyday Jewellery Keepsake Box',
+    nameHinglish: 'Daily Jewellery Keepsake Box',
+    category: 'accessories',
+    categoryLabel: 'Accessories',
+    subtitle: 'Curated Earrings, Studs, Hairpins & a Velvet Keepsake Box',
+    subtitleHinglish: 'Curated earrings, studs, hairpins aur velvet keepsake box',
+    description:
+      'Everyday elegance in one box! A mix of curated fashion earrings, studs and pearl hairpins presented on a velvet pad inside a compact keepsake box. Stock is curated from wholesale accessory lines at estimate pricing.',
+    itemsIncluded: [
+      'Curated Fashion Earrings Pair Set',
+      'Studs / Hoops Selection',
+      'Pearl & Rhinestone Hairpins',
+      'Velvet Pad Keep-Compartment Box',
+      'Satin Ribbon & Wish Card',
+    ],
+    approxPrice: 'INR 349 - INR 499',
+    pricingNote: 'Wholesale-estimate pricing on curated jewellery stock — confirmed on WhatsApp • Admin-editable',
+    badge: 'Everyday Glam',
+    themeColor: {
+      bg: '#FFF5F7',
+      accent: '#BE185D',
+      border: '#FBCFE8',
+      pillBg: '#FDF2F8',
+      pillText: '#9D174D',
+    },
+    graphicId: 'graphic-accessory-jewellery',
+    brochureSource: 'Hamper Queen Accessories Menu',
+  },
+  {
+    id: 'accessory-hair-scarves',
+    name: 'Hair & Scarves Glam Box',
+    nameHinglish: 'Hair Accessories Aur Scarves Box',
+    category: 'accessories',
+    categoryLabel: 'Accessories',
+    subtitle: 'Silk Scarves, Scrunchie Sets, Claw Clips & Headbands',
+    subtitleHinglish: 'Silk scarf, scrunchies, claw clips aur headbands ka glam box',
+    description:
+      'Volume and elegance for every hairstyle! A curated set of printed silk scarves, satin scrunchies, claw clips and delicate headbands in a soft-pink keepsake box.',
+    itemsIncluded: [
+      'Printed Silk Scarf (2 pc)',
+      'Satin Scrunchie Set (6 pc)',
+      'Mini Claw Clips Selection',
+      'Pearl Headband',
+      'Blush Keepsake Gift Box',
+    ],
+    approxPrice: 'INR 299 - INR 399',
+    pricingNote: 'Wholesale-estimate pricing on curated accessory stock — confirmed on WhatsApp • Admin-editable',
+    badge: 'Glam Essentials',
+    themeColor: {
+      bg: '#FDF2F8',
+      accent: '#DB2777',
+      border: '#F5D0FE',
+      pillBg: '#FCE7F3',
+      pillText: '#86198F',
+    },
+    graphicId: 'graphic-accessory-hair',
+    brochureSource: 'Hamper Queen Accessories Menu',
+  },
+
+  // ==============================================================
+  // 7. CLOTHING & APPAREL (wholesale-estimate pricing)
+  // ==============================================================
+  {
+    id: 'clothing-tee-hamper',
+    name: 'Personalised Tee Hamper',
+    nameHinglish: 'Custom Print Tee Gift Hamper',
+    category: 'clothing',
+    categoryLabel: 'Clothing & Apparel',
+    subtitle: 'Custom-Print Cotton Tee + Chocolates in a Premium Box',
+    subtitleHinglish: 'Custom print wali cotton tee aur chocolates ka premium box',
+    description:
+      'A wearable gift they will love! A soft 100% cotton tee printed with a custom quote, photo or monogram — paired with branded chocolates and delivered in a premium rigid box. Sizes S-XXL; wholesale-estimate pricing.',
+    itemsIncluded: [
+      '100% Cotton Custom-Print Tee (S-XXL)',
+      'HD Custom Print / Monogram',
+      'Branded Chocolate Bar',
+      'Premium Rigid Gift Box with Tissue',
+      'Printed Fabric Label',
+    ],
+    approxPrice: 'INR 399 - INR 549',
+    pricingNote: 'Wholesale-estimate pricing (tee ₹250-₹380 + print ₹50) — sizes confirmed on WhatsApp • Admin-editable',
+    badge: 'Trendy & Personal',
+    themeColor: {
+      bg: '#F0F9FF',
+      accent: '#0284C7',
+      border: '#BAE6FD',
+      pillBg: '#E0F2FE',
+      pillText: '#075985',
+    },
+    graphicId: 'graphic-clothing-tee',
+    brochureSource: 'Hamper Queen Apparel Menu',
+  },
+  {
+    id: 'clothing-hoodie-cocoa',
+    name: 'Cozy Hoodie & Hot Cocoa Box',
+    nameHinglish: 'Cozy Hoodie Aur Hot Cocoa Box',
+    category: 'clothing',
+    categoryLabel: 'Clothing & Apparel',
+    subtitle: 'Fleece Hoodie, Hot Cocoa Mix & Socks in a Winter Keepsake',
+    subtitleHinglish: 'Fleece hoodie, hot cocoa mix aur cozy socks ka winter box',
+    description:
+      'The ultimate winter comfort drop! A unisex fleece hoodie (S-XXL) paired with hot cocoa mix, ultra-soft socks and a warm fairy-light accent — perfect for cold nights, housewarming and gifting.',
+    itemsIncluded: [
+      'Unisex Fleece Cozy Hoodie (S-XXL)',
+      'Artisan Hot Cocoa Mix',
+      'Ultra-Soft Cozy Sock Pair',
+      'Warm Fairy Light String',
+      'Premium Gift Box with Ribbon',
+    ],
+    approxPrice: 'INR 499 - INR 699',
+    pricingNote: 'Wholesale-estimate pricing (hoodie ₹380-₹520 + cocoa/socks) — sizes confirmed on WhatsApp • Admin-editable',
+    badge: 'Winter Comfort',
+    themeColor: {
+      bg: '#F5F3EE',
+      accent: '#57534E',
+      border: '#E7E5E4',
+      pillBg: '#F5F5F4',
+      pillText: '#292524',
+    },
+    graphicId: 'graphic-clothing-hoodie',
+    brochureSource: 'Hamper Queen Apparel Menu',
   },
 ];
