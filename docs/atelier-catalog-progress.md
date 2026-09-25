@@ -19,15 +19,18 @@ Purpose: track the zero-CDN Blinkit harvest → curate → bake → verify → c
 | 1 drinkware+lights+chocolate | `b91f864` | 74   | 223 |
 | 2 fragrance+grooming        | `1ac6c1f` | 102  | 325 |
 | 3 electronics               | `e25be9d` | 71   | 396 |
-| 4 women_accessories         | pending | 92 → 339 total | pending (~480) |
+| 4 women_accessories | `764b8c1` | 92 → 339 total | 488 |
 | 5 art_stationery + books    | pending | —     | pending |
 | 6 clothing + home_decor     | pending | —     | pending |
 
-## Batch 4 Status (women accessories)
+## Batch 4 Status (women accessories) — DONE, pushed `764b8c1`
 - Pool harvested: `scripts/.retail-catalog-women_accessories.json` (559 records, 519 with metadata)
 - Recovered 22 anchor targets via search-card scraping (bags, clutches, slings, jewellery, scarves, dupatta, wallets, sunglasses, handkerchiefs, hair accessories, watches incl. Titan Raga/Timex/Casio/Fastrack/Chumbak)
-- Curation complete: 92 picks added, `scripts/.retail-catalog-picks.json` now 339 entries, MISSING: []
-- Remaining: bake → normalize → restore noise → verify → lint → build → Playwright (`verify_batch2_filters.py` add women_accessories tab label) → commit + push
+- 92 picks added → `scripts/.retail-catalog-picks.json` = 339 entries; catalog = **488 records**
+- All gates green: zero-CDN verify, lint, build, Playwright (Ladies Accessories=95 imgs, Fragrance=59, Grooming=49, Electronics=74, Drinkware=51, Lights=49, Chocolates=49, 0 errors, 0 overflow)
+
+## PAUSED — RESUME STATUS (batch 4 committed + pushed)
+All pushed to main. Next session: batch 5, then batch 6, then final `git push`.
 
 ## Batch 5 Plan (art & stationery + books)
 - Harvest queries: "diary", "notebook", "souvenir", "sketchbook", "paint set", "pen set", "book", "novel", "colouring"
