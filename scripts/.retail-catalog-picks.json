@@ -1,0 +1,372 @@
+[
+  {
+    "key": "femora_coffee_mug",
+    "pid": 552860,
+    "category": "drinkware"
+  },
+  {
+    "key": "femora_clear_beer_mug",
+    "pid": 742054,
+    "category": "drinkware"
+  },
+  {
+    "key": "cello_executive_beer_mug_set",
+    "pid": 664526,
+    "category": "drinkware"
+  },
+  {
+    "key": "lifelong_coffee_mug_set",
+    "pid": 697210,
+    "category": "drinkware"
+  },
+  {
+    "key": "larah_orbit_mug_set",
+    "pid": 549028,
+    "category": "drinkware"
+  },
+  {
+    "key": "cello_shooter_shot_glass",
+    "pid": 566558,
+    "category": "drinkware"
+  },
+  {
+    "key": "delibohemi_whiskey_glass_set",
+    "pid": 744109,
+    "category": "drinkware"
+  },
+  {
+    "key": "delibohemi_premium_whiskey_set",
+    "pid": 701943,
+    "category": "drinkware"
+  },
+  {
+    "key": "delibohemi_royal_whiskey_set",
+    "pid": 744171,
+    "category": "drinkware"
+  },
+  {
+    "key": "delibohemi_skull_beer_mug",
+    "pid": 744102,
+    "category": "drinkware"
+  },
+  {
+    "key": "delibohemi_wine_glass_set",
+    "pid": 614748,
+    "category": "drinkware"
+  },
+  {
+    "key": "borosil_chai_time_mug_set",
+    "pid": 763449,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_jaali_mug_set",
+    "pid": 591269,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_hamsa_mug_set",
+    "pid": 606520,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_work_together_mug",
+    "pid": 619359,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_m_mug",
+    "pid": 559046,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_d_mug",
+    "pid": 676720,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_k_mug",
+    "pid": 676751,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_r_mug",
+    "pid": 676743,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_p_mug",
+    "pid": 676758,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_v_mug",
+    "pid": 676757,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_n_mug",
+    "pid": 559047,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_palace_memoirs_mug_set",
+    "pid": 702063,
+    "category": "drinkware"
+  },
+  {
+    "key": "chumbak_valley_bloom_mug_set",
+    "pid": 570745,
+    "category": "drinkware"
+  },
+  {
+    "key": "masai_handcrafted_mug_set",
+    "pid": 710408,
+    "category": "drinkware"
+  },
+  {
+    "key": "masai_forest_fern_mug_set",
+    "pid": 731815,
+    "category": "drinkware"
+  },
+  {
+    "key": "masai_classic_mug_set",
+    "pid": 829606,
+    "category": "drinkware"
+  },
+  {
+    "key": "arrabi_glossy_face_mug_set",
+    "pid": 716386,
+    "category": "drinkware"
+  },
+  {
+    "key": "arrabi_mug_set_with_tray",
+    "pid": 1365920,
+    "category": "drinkware"
+  },
+  {
+    "key": "sipologie_nord_double_wall_mug_set",
+    "pid": 681693,
+    "category": "drinkware"
+  },
+  {
+    "key": "sipologie_nord_mug_set",
+    "pid": 664008,
+    "category": "drinkware"
+  },
+  {
+    "key": "sipologie_axis_whiskey_set",
+    "pid": 806043,
+    "category": "drinkware"
+  },
+  {
+    "key": "glassence_compact_whiskey_set",
+    "pid": 737430,
+    "category": "drinkware"
+  },
+  {
+    "key": "glassence_cut_rock_whiskey_set",
+    "pid": 776449,
+    "category": "drinkware"
+  },
+  {
+    "key": "ocean_centra_whiskey_set",
+    "pid": 507320,
+    "category": "drinkware"
+  },
+  {
+    "key": "binzo_premium_whiskey_set",
+    "pid": 707882,
+    "category": "drinkware"
+  },
+  {
+    "key": "nestasia_crystal_whiskey_set",
+    "pid": 567711,
+    "category": "drinkware"
+  },
+  {
+    "key": "kavi_old_monk_glass_set",
+    "pid": 723106,
+    "category": "drinkware"
+  },
+  {
+    "key": "cello_classix_whiskey_set",
+    "pid": 566539,
+    "category": "drinkware"
+  },
+  {
+    "key": "cello_classix_whiskey_set_325",
+    "pid": 546049,
+    "category": "drinkware"
+  },
+  {
+    "key": "cello_stern_beer_mug_set",
+    "pid": 566545,
+    "category": "drinkware"
+  },
+  {
+    "key": "borosil_velvetto_ash_mug_set",
+    "pid": 722447,
+    "category": "drinkware"
+  },
+  {
+    "key": "borosil_elva_sky_mug_set",
+    "pid": 726111,
+    "category": "drinkware"
+  },
+  {
+    "key": "nestasia_tea_coffee_mug_set",
+    "pid": 789767,
+    "category": "drinkware"
+  },
+  {
+    "key": "earthstore_glam_mug_set",
+    "pid": 568053,
+    "category": "drinkware"
+  },
+  {
+    "key": "lifelong_vacuum_insulated_mug",
+    "pid": 762181,
+    "category": "drinkware"
+  },
+  {
+    "key": "mop_teachers_day_mug",
+    "pid": 1330086,
+    "category": "drinkware"
+  },
+  {
+    "key": "nestasia_ceramic_serving_bowl",
+    "pid": 558604,
+    "category": "drinkware"
+  },
+  {
+    "key": "lexton_copper_string_light_3w",
+    "pid": 564809,
+    "category": "lights"
+  },
+  {
+    "key": "lexton_fairy_copper_led_2w",
+    "pid": 564846,
+    "category": "lights"
+  },
+  {
+    "key": "lexton_star_string_light_2w",
+    "pid": 564769,
+    "category": "lights"
+  },
+  {
+    "key": "lexton_water_drop_string_light",
+    "pid": 564875,
+    "category": "lights"
+  },
+  {
+    "key": "lexton_300led_copper_curtain",
+    "pid": 564881,
+    "category": "lights"
+  },
+  {
+    "key": "lexton_star_curtain_light_4w",
+    "pid": 696170,
+    "category": "lights"
+  },
+  {
+    "key": "lexton_string_lantern_light",
+    "pid": 693086,
+    "category": "lights"
+  },
+  {
+    "key": "lexton_190led_pixel_light",
+    "pid": 696678,
+    "category": "lights"
+  },
+  {
+    "key": "one94store_led_decoration_string",
+    "pid": 623652,
+    "category": "lights"
+  },
+  {
+    "key": "one94store_leaf_curtain_lights",
+    "pid": 629041,
+    "category": "lights"
+  },
+  {
+    "key": "one94store_led_tea_light_candles",
+    "pid": 634233,
+    "category": "lights"
+  },
+  {
+    "key": "litt_curtain_string_lights",
+    "pid": 688562,
+    "category": "lights"
+  },
+  {
+    "key": "tyohaar_fairy_string_light",
+    "pid": 706799,
+    "category": "lights"
+  },
+  {
+    "key": "tyohaar_floating_lotus_lights",
+    "pid": 708286,
+    "category": "lights"
+  },
+  {
+    "key": "pesca_snowflake_fairy_light",
+    "pid": 637146,
+    "category": "lights"
+  },
+  {
+    "key": "pesca_warm_decorative_led_11m",
+    "pid": 592656,
+    "category": "lights"
+  },
+  {
+    "key": "ornalight_serial_star_string",
+    "pid": 707158,
+    "category": "lights"
+  },
+  {
+    "key": "waan_micro_pixel_rice_light",
+    "pid": 829701,
+    "category": "lights"
+  },
+  {
+    "key": "desidiya_crystal_ball_curtain",
+    "pid": 565413,
+    "category": "lights"
+  },
+  {
+    "key": "roxmac_flickering_leaf_rice",
+    "pid": 684343,
+    "category": "lights"
+  },
+  {
+    "key": "specialyou_photo_clips_lights",
+    "pid": 1369887,
+    "category": "lights"
+  },
+  {
+    "key": "pesca_multicolour_led_strip",
+    "pid": 665872,
+    "category": "lights"
+  },
+  {
+    "key": "one94store_wine_bottle_light",
+    "pid": 634595,
+    "category": "lights"
+  },
+  {
+    "key": "silk_bubbly_122g",
+    "pid": 394680,
+    "category": "chocolates"
+  },
+  {
+    "key": "silk_hazelnut_134g",
+    "pid": 404237,
+    "category": "chocolates"
+  },
+  {
+    "key": "dairy_milk_bites_almond",
+    "pid": 501565,
+    "category": "chocolates"
+  }
+]

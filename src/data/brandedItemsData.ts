@@ -13,7 +13,16 @@ export interface BrandedItem {
     | 'party_fun'
     | 'gift_wrap'
     | 'snacks'
-    | 'biscuits';
+    | 'biscuits'
+    | 'drinkware'
+    | 'electronics'
+    | 'fragrance'
+    | 'women_accessories'
+    | 'art_stationery'
+    | 'books'
+    | 'clothing'
+    | 'home_decor'
+    | 'grooming';
   simpleName: string; // Indian audience friendly English name
   description: string; // Pure simple Indian English description
   descriptionHinglish?: string;
@@ -659,7 +668,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     approxPriceRange: 'INR 149 – INR 249 (+delivery)',
     recommendedFor: 'Pocket Surprise, Token of Appreciation, Return Favors',
     popularBadge: 'Starts INR 149',
-    imageUrl: '/packaging/packaging-small-box.jpg',
+    imageUrl: '/packaging/packaging-pocket-box.jpg',
     bgHex: '#FFFDF9',
     borderHex: '#D4AF37',
     illustrationType: 'small_box',

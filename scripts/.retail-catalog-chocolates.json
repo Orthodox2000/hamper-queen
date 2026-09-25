@@ -1,0 +1,3237 @@
+[
+  {
+    "pid": 11025,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 205,
+    "mrp": 215,
+    "image_url": null,
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 394678,
+    "name": "Cadbury Dairy Milk Silk Fruit & Nut Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": null,
+    "price": 379,
+    "mrp": 430,
+    "image_url": null,
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 110016,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 100,
+    "mrp": 100,
+    "image_url": null,
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 414385,
+    "name": "Cadbury Dairy Milk Silk Fruit & Nut Small Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 51 g",
+    "price": 189,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14543.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 544,
+    "name": "Cadbury Dairy Milk Fruit & Nut Chocolate Bar",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "36 g",
+    "price": 50,
+    "mrp": 50,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0ba4b8ec-ab1c-497b-8498-998dc62d2738.png",
+    "inventory": 25,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 11022,
+    "name": "Cadbury Dairy Milk Silk Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "144 g",
+    "price": 189,
+    "mrp": 225,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771395208762-1192.png",
+    "inventory": 19,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 393020,
+    "name": "Cadbury Dairy Milk Silk Large Chocolate Bar - Pack of 2",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 144 g",
+    "price": 360,
+    "mrp": 450,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14055.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 18947,
+    "name": "Cadbury Dairy Milk Fruit & Nut Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "75 g",
+    "price": 99,
+    "mrp": 105,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/bfa30304-2a97-411c-9464-c40e2ea52db8.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 533462,
+    "name": "Cadbury Dairy Milk Fruit & Nut Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "2 x 75 g",
+    "price": 187,
+    "mrp": 210,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778041150974-6111.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 403492,
+    "name": "Cadbury Dairy Milk Silk Roast Almond Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "134 g",
+    "price": 205,
+    "mrp": 215,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771553348655-97.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 415332,
+    "name": "Cadbury Dairy Milk Silk Roast Almond Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 134 g",
+    "price": 379,
+    "mrp": 430,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14560.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 396628,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 205,
+    "mrp": 215,
+    "image_url": null,
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 404237,
+    "name": "Cadbury Dairy Milk Silk Hazelnut Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 134 g",
+    "price": 379,
+    "mrp": 430,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14279.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 545,
+    "name": "Cadbury Dairy Milk Silk Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "60 g",
+    "price": 99,
+    "mrp": 105,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771841412291-319.png",
+    "inventory": 39,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 327859,
+    "name": "Cadbury Dairy Milk Silk Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 60 g",
+    "price": 189,
+    "mrp": 210,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-13533.png",
+    "inventory": 19,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 403491,
+    "name": "Cadbury Dairy Milk Silk Roast Almond Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "52 g",
+    "price": 100,
+    "mrp": 100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771553348655-88.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 410872,
+    "name": "Cadbury Dairy Milk Silk Roast Almond Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 52 g",
+    "price": 189,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14475.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 525881,
+    "name": "Cadbury Dairy Milk Silk Ganache Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "137 g",
+    "price": 204,
+    "mrp": 214,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771553348655-311.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 533463,
+    "name": "Cadbury Dairy Milk Silk Ganache Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 137 g",
+    "price": 377,
+    "mrp": 428,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778041150974-6120.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 381902,
+    "name": "Amul Dark Chocolate Bar",
+    "brand": "Amul",
+    "unit": "35 g",
+    "price": 45,
+    "mrp": 45,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771595609969-1774.png",
+    "inventory": 36,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 353817,
+    "name": "Cadbury Dairy Milk Silk Oreo Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "58.5 g",
+    "price": 100,
+    "mrp": 100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771395208762-1276.png",
+    "inventory": 16,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 372383,
+    "name": "Cadbury Dairy Milk Silk Oreo Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 58.5 g",
+    "price": 189,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-13615.png",
+    "inventory": 8,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 424615,
+    "name": "Cadbury Bournville 70% Dark Dark Chocolate Bar",
+    "brand": "Cadbury Bournville",
+    "unit": "75 g",
+    "price": 140,
+    "mrp": 150,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776059695367-47.png",
+    "inventory": 39,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 482856,
+    "name": "Cadbury Bournville 70% Dark Dark Chocolate Bar",
+    "brand": "Cadbury Bournville",
+    "unit": "2 x 75 g",
+    "price": 270,
+    "mrp": 300,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-6626.png",
+    "inventory": 19,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 706293,
+    "name": "Cadbury Dairy Milk Milkinis Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "34 g",
+    "price": 36,
+    "mrp": 36,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773811093462-102.png",
+    "inventory": 45,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 707088,
+    "name": "Cadbury Dairy Milk Milkinis Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "2 x 34 g",
+    "price": 69,
+    "mrp": 72,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778056825358-4371.png",
+    "inventory": 22,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 1410403,
+    "name": "Cadbury Dairy Milk Milkinis Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "3 x 34 g",
+    "price": 103,
+    "mrp": 108,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4524f07c-6f32-4666-badf-fb8d09b678f0.png",
+    "inventory": 15,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 669065,
+    "name": "Cadbury Dairy Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "25 g",
+    "price": 25,
+    "mrp": 25,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5fccba1a-1f4b-4d1f-ada7-153835ebd773.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 682128,
+    "name": "Cadbury Dairy Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "2 x 25 g",
+    "price": 49,
+    "mrp": 50,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778056825358-3164.png",
+    "inventory": 30,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 682129,
+    "name": "Cadbury Dairy Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "3 x 25 g",
+    "price": 72,
+    "mrp": 75,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778250493653-73.png",
+    "inventory": 20,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 555,
+    "name": "Cadbury Bournville Cranberry Dark Chocolate Bar",
+    "brand": "Cadbury Bournville",
+    "unit": "78 g",
+    "price": 126,
+    "mrp": 135,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d2bea9f6-2e8b-4531-9b18-f85de1d13c51.png",
+    "inventory": 22,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 394681,
+    "name": "Cadbury Bournville Cranberry Dark Chocolate Bar",
+    "brand": "Cadbury Bournville",
+    "unit": "2 x 78 g",
+    "price": 242,
+    "mrp": 270,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14092.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 382050,
+    "name": "Amul Sugar Free Dark Chocolate Bar",
+    "brand": "Amul",
+    "unit": "35 g",
+    "price": 45,
+    "mrp": 45,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771595609969-1817.png",
+    "inventory": 12,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 483022,
+    "name": "Amul Sugar Free Dark Chocolate Bar",
+    "brand": "Amul",
+    "unit": "2 x 35 g",
+    "price": 89,
+    "mrp": 90,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-16082.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 382044,
+    "name": "Amul Sugar Free Dark Chocolate Bar",
+    "brand": "Amul",
+    "unit": "150 g",
+    "price": 180,
+    "mrp": 180,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771595609969-1806.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 487290,
+    "name": "Amul Sugar Free Dark Chocolate Bar",
+    "brand": "Amul",
+    "unit": "2 x 150 g",
+    "price": 357,
+    "mrp": 360,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-17003.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 391806,
+    "name": "Cadbury Dairy Milk Silk Mini Treats Milk Chocolate Pack",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "135 g",
+    "price": 180,
+    "mrp": 214,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771857245207-571.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 406221,
+    "name": "Cadbury Dairy Milk Silk Mini Treats Milk Chocolate Pack",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 135 g",
+    "price": 343,
+    "mrp": 428,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14355.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 560,
+    "name": "Snickers Peanut Nougat & Caramel Chocolate Filled Bar",
+    "brand": "Snickers",
+    "unit": "40 g",
+    "price": 45,
+    "mrp": 45,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776058612378-608.png",
+    "inventory": 40,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 499918,
+    "name": "Hide & Seek Milano Choco Chip Cookies",
+    "brand": "Hide & Seek",
+    "unit": "150 g",
+    "price": 62,
+    "mrp": 120,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776829632782-26.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 546854,
+    "name": "Nestle Milkybar Choo Strawberry Flavoured ShareBag",
+    "brand": "Nestle Milkybar",
+    "unit": "80 g",
+    "price": 40,
+    "mrp": 50,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785901114272-427.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 485485,
+    "name": "Cadbury Dairy Milk Bites Assorted Chocolate Pack - Almond",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "54 g",
+    "price": 81,
+    "mrp": 89,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0a919dfc-0219-4342-a50d-1e68eb7f06c6.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 501565,
+    "name": "Cadbury Dairy Milk Bites Shaped Chocolate Pack - Almond",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "2 x 54 g",
+    "price": 150,
+    "mrp": 178,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-17923.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 116824,
+    "name": "Kurkure Chilli Chatka Crisps",
+    "brand": "Kurkure",
+    "unit": "78.9 g",
+    "price": 20,
+    "mrp": 20,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780634830965-699.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 428248,
+    "name": "Kurkure Chilli Chatka Crisps",
+    "brand": "Kurkure",
+    "unit": "3 x 78.9 g",
+    "price": 54,
+    "mrp": 60,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778243110777-500.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 361832,
+    "name": "Chupa Chups Sour Bites Mixed Fruit Sour Candy",
+    "brand": "Chupa Chups",
+    "unit": "66 g",
+    "price": 34,
+    "mrp": 35,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781593806718-897.png",
+    "inventory": 12,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 378191,
+    "name": "Chupa Chups Sour Bites Mixed Fruit Sour Candy",
+    "brand": "Chupa Chups",
+    "unit": "2 x 66 g",
+    "price": 66,
+    "mrp": 70,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-13670.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 436539,
+    "name": "Chupa Chups Sour Bites Mixed Fruit Sour Candy",
+    "brand": "Chupa Chups",
+    "unit": "3 x 66 g",
+    "price": 93,
+    "mrp": 105,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778243110777-542.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 367837,
+    "name": "Kurkure Puffcorn Yummy Cheese Puffs",
+    "brand": "Kurkure",
+    "unit": "58 g",
+    "price": 20,
+    "mrp": 20,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781075086335-4.png",
+    "inventory": 32,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 375328,
+    "name": "Kurkure Puffcorn Yummy Cheese Puffs",
+    "brand": "Kurkure",
+    "unit": "3 x 58 g",
+    "price": 54,
+    "mrp": 60,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220050094-8757.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 569,
+    "name": "Ferrero Rocher Chocolate Gift Pack (16 pieces)",
+    "brand": "Ferrero Rocher",
+    "unit": "200 g",
+    "price": 520,
+    "mrp": 549,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776321270999-311.png",
+    "inventory": 8,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 437646,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 215,
+    "mrp": 215,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 437645,
+    "name": "Cadbury Dairy Milk Silk Mousse Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "48.5 g",
+    "price": 100,
+    "mrp": 100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771553348655-107.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 482890,
+    "name": "Cadbury Dairy Milk Silk Mousse Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 48.5 g",
+    "price": 189,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-15886.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 555854,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 102,
+    "mrp": 110,
+    "image_url": null,
+    "inventory": 14,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 557787,
+    "name": "Cadbury Dairy Milk Silk Desserts Brownie Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 70 g",
+    "price": 187,
+    "mrp": 220,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778041150974-7467.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 525880,
+    "name": "Cadbury Dairy Milk Silk Ganache Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "54 g",
+    "price": 100,
+    "mrp": 100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771553348655-301.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 539814,
+    "name": "Cadbury Dairy Milk Silk Ganache Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 54 g",
+    "price": 189,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778041150974-6406.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 81081,
+    "name": "Cadbury Dairy Milk Silk Bubbly Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "112 g",
+    "price": 205,
+    "mrp": 215,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771395208762-1239.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 394680,
+    "name": "Cadbury Dairy Milk Silk Bubbly Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 112 g",
+    "price": 379,
+    "mrp": 430,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14084.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 34422,
+    "name": "Cadbury Nutties Milk Chocolate Pack",
+    "brand": "Cadbury Nutties",
+    "unit": "30 g",
+    "price": 45,
+    "mrp": 45,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/deb1c0f4-5cf5-4edf-9445-46298090c42e.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 378236,
+    "name": "Cadbury Nutties Milk Chocolate Pack",
+    "brand": "Cadbury Nutties",
+    "unit": "2 x 30 g",
+    "price": 88,
+    "mrp": 90,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-13700.png",
+    "inventory": 43,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 536255,
+    "name": "Cadbury Nutties Milk Chocolate Pack",
+    "brand": "Cadbury Nutties",
+    "unit": "3 x 30 g",
+    "price": 130,
+    "mrp": 135,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778243110777-1497.png",
+    "inventory": 28,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 589249,
+    "name": "Snickers Peanut Brownie Chocolate Filled Bar",
+    "brand": "Snickers",
+    "unit": "45 g",
+    "price": 68,
+    "mrp": 75,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775719422325-182.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 509,
+    "name": "Sunfeast Dark Fantasy Choco Fill Cookies",
+    "brand": "Sunfeast Dark Fantasy",
+    "unit": "69 g",
+    "price": 39,
+    "mrp": 40,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785296870947-392.png",
+    "inventory": 28,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 531509,
+    "name": "Kinder Schoko Bons Crispy",
+    "brand": "Kinder",
+    "unit": "22.4 g",
+    "price": 50,
+    "mrp": 50,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771598525494-2567.png",
+    "inventory": 17,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 368393,
+    "name": "Chupa Chups Sour Belt Mixed Fruit Sour Candy",
+    "brand": "Chupa Chups",
+    "unit": "57.6 g",
+    "price": 29,
+    "mrp": 30,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781593806718-942.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 378192,
+    "name": "Chupa Chups Sour Belt Mixed Fruit Sour Candy",
+    "brand": "Chupa Chups",
+    "unit": "2 x 57.6 g",
+    "price": 56,
+    "mrp": 60,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-13679.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 490571,
+    "name": "Chupa Chups Sour Belt Mixed Fruit Sour Candy",
+    "brand": "Chupa Chups",
+    "unit": "3 x 57.6 g",
+    "price": 79,
+    "mrp": 90,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778243110777-957.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 396629,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 100,
+    "mrp": 100,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 410869,
+    "name": "Cadbury Dairy Milk Silk Hazelnut Small Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 54 g",
+    "price": 189,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14466.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 35373,
+    "name": "Bingo Mad Angles Achaari Masti Crisps / Chips",
+    "brand": "Bingo Mad Angles",
+    "unit": "60 g",
+    "price": 19,
+    "mrp": 20,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777353225068-27.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 386464,
+    "name": "Bingo Mad Angles Achaari Masti Crisps / Chips",
+    "brand": "Bingo Mad Angles",
+    "unit": "3 x 60 g",
+    "price": 51,
+    "mrp": 60,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777436686892-3.png",
+    "inventory": 27,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly"
+    ]
+  },
+  {
+    "pid": 524861,
+    "name": "Crax Curls Chatpata Masala Puffs Snacks",
+    "brand": "Crax",
+    "unit": "82 g",
+    "price": 30,
+    "mrp": 60,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5b450106-f5f1-4c8d-a60f-43244faa3c67.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 529419,
+    "name": "Crax Curls Chatpata Masala Puffs Snacks",
+    "brand": "Crax",
+    "unit": "2 x 82 g",
+    "price": 59,
+    "mrp": 120,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778041150974-5922.png",
+    "inventory": 26,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 529424,
+    "name": "Crax Curls Chatpata Masala Puffs Snacks",
+    "brand": "Crax",
+    "unit": "3 x 82 g",
+    "price": 87,
+    "mrp": 180,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220050094-9984.png",
+    "inventory": 17,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 542908,
+    "name": "Crax Curls Chatpata Masala Puffs Snacks",
+    "brand": "Crax",
+    "unit": "4 x 82 g",
+    "price": 111,
+    "mrp": 240,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778473839715-1018.png",
+    "inventory": 13,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 19679,
+    "name": "Ferrero Rocher Chocolate Gift Pack (4 pieces)",
+    "brand": "Ferrero Rocher",
+    "unit": "50 g",
+    "price": 179,
+    "mrp": 179,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776656742804-880.png",
+    "inventory": 16,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk bubbly",
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 485486,
+    "name": "Cadbury Dairy Milk Bites Assorted Chocolate Pack - Hazelnut",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "54 g",
+    "price": 81,
+    "mrp": 89,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/317915fc-eb89-4902-a222-5eab54f2272e.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 501566,
+    "name": "Cadbury Dairy Milk Bites Shaped Chocolate Pack - Hazelnut",
+    "brand": "Cadbury Dairy Milk",
+    "unit": "2 x 54 g",
+    "price": 150,
+    "mrp": 178,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-17931.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 480011,
+    "name": "Twix Cookie Caramel Chocolate Filled Bar",
+    "brand": "Twix",
+    "unit": "50 g",
+    "price": 88,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/62025219-1214-4c77-af0a-d3ee5e2a0fd0.png",
+    "inventory": 23,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 483008,
+    "name": "Twix Cookie Caramel Chocolate Filled Bar",
+    "brand": "Twix",
+    "unit": "2 x 50 g",
+    "price": 175,
+    "mrp": 198,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-15999.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 11102,
+    "name": "Hide & Seek Choco Chip Cookies",
+    "brand": "Hide & Seek",
+    "unit": "100 g",
+    "price": 29,
+    "mrp": 30,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785180077784-3.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 67372,
+    "name": "Kurkure Masala Munch Crisps",
+    "brand": "Kurkure",
+    "unit": "75 g",
+    "price": 20,
+    "mrp": 20,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780634830965-687.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 395339,
+    "name": "Kurkure Masala Munch Crisps",
+    "brand": "Kurkure",
+    "unit": "3 x 75 g",
+    "price": 54,
+    "mrp": 60,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220050094-8976.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 11150,
+    "name": "Uncle Chipps Spicy Treat Potato Chips",
+    "brand": "Uncle Chipps",
+    "unit": "53 g",
+    "price": 20,
+    "mrp": 20,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782185292662-91.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 534451,
+    "name": "Uncle Chipps Spicy Treat Potato Chips",
+    "brand": "Uncle Chipps",
+    "unit": "80 g",
+    "price": 34,
+    "mrp": 48,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782185292662-124.png",
+    "inventory": 37,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 353818,
+    "name": "Cadbury Dairy Milk Silk Oreo Large Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "124 g",
+    "price": 205,
+    "mrp": 215,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771857245207-493.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 393022,
+    "name": "Cadbury Dairy Milk Silk Oreo Large Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 124 g",
+    "price": 379,
+    "mrp": 430,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14064.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 531508,
+    "name": "Kinder Schoko Bons Crispy",
+    "brand": "Kinder",
+    "unit": "67.2 g",
+    "price": 141,
+    "mrp": 150,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771598525494-2554.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 86669,
+    "name": "Cadbury Dairy Milk Silk Bubbly Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "46 g",
+    "price": 100,
+    "mrp": 100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771841412291-1133.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 414387,
+    "name": "Cadbury Dairy Milk Silk Bubbly Milk Chocolate Bar",
+    "brand": "Cadbury Dairy Milk Silk",
+    "unit": "2 x 46 g",
+    "price": 189,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14551.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 402563,
+    "name": "Hershey's Kisses Milk Chocolate Pack",
+    "brand": "Hershey's Kisses",
+    "unit": "36 g",
+    "price": 54,
+    "mrp": 55,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/2ce71b3e-1a36-4056-a0e2-b4351dcc03b1.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "silk hazelnut"
+    ]
+  },
+  {
+    "pid": 784770,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 399,
+    "mrp": 750,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 511864,
+    "name": "Eveready DigiLED Bolt Rechargeable 1 W Torch (Cool Daylight)",
+    "brand": "Eveready",
+    "unit": "1 unit",
+    "price": 220,
+    "mrp": 220,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773201429611-200.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 784563,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 179,
+    "mrp": 180,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 784802,
+    "name": "Eveready Rechargeable Lantern 42 W LED Light (Cool Daylight)",
+    "brand": "Eveready",
+    "unit": "1 unit",
+    "price": 1049,
+    "mrp": 2390,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/08bf8e6d-3865-4764-bc7d-c2c9072086be.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 782774,
+    "name": "Eveready 4.8 W Emergency Light Lantern (White)",
+    "brand": "Eveready",
+    "unit": "1 unit",
+    "price": 999,
+    "mrp": 1300,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778138619351-69.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 784768,
+    "name": "Eveready Rechargeable DL89 1 W Head Torch (White)",
+    "brand": "Eveready",
+    "unit": "1 unit",
+    "price": 339,
+    "mrp": 350,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784201400764-97.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 1377381,
+    "name": "Wipro Emerald Plus Rechargeable 5 W Torch (White)",
+    "brand": "Wipro",
+    "unit": "1 unit",
+    "price": 1490,
+    "mrp": 1490,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1c51ee0456114202a8fd330449952553.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 735502,
+    "name": "Wipro Luster LED Rechargeable 3 W Torch (White)",
+    "brand": "Wipro",
+    "unit": "1 unit",
+    "price": 499,
+    "mrp": 590,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/bae413e6-e722-4c70-88ac-fe9e91d64a20.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 620358,
+    "name": "Wipro Emerald Rechargeable Li-ion Battery 5 W Torch (White)",
+    "brand": "Wipro",
+    "unit": "1 unit",
+    "price": 899,
+    "mrp": 1290,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ebeb7b8d-ff04-49c5-8e85-5c93c14ffcb5.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 804425,
+    "name": "Halonix Rechargeable 1 W Torch (Cool Daylight)",
+    "brand": "Halonix",
+    "unit": "1 unit",
+    "price": 139,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/cbba5fc438f64e969b83ad7ceb85f2c2.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 597023,
+    "name": "Wipro 9 W LED Bulb (Warm White)",
+    "brand": "Wipro",
+    "unit": "1 unit",
+    "price": 69,
+    "mrp": 240,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/52cc0198-4a47-459e-b998-aefb45fa27b6.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 507481,
+    "name": "Philips Lighting Ujjwal Neo 20 W LED Batten Light (Cool Daylight)",
+    "brand": "Philips Lighting",
+    "unit": "1 pc",
+    "price": 199,
+    "mrp": 500,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1a73a2d4-a72b-4f6d-af78-b8568063b61b.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 750190,
+    "name": "Halonix Orion Surface Trios 15 W LED Light (Multicolour)",
+    "brand": "Halonix",
+    "unit": "1 unit",
+    "price": 329,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1769961800389-101.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 545159,
+    "name": "Halonix Astron 9 W LED Bulb (Warm Yellow)",
+    "brand": "Halonix",
+    "unit": "1 unit",
+    "price": 49,
+    "mrp": 149,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5381803d-b7b6-4373-b5be-a22400b7aea6.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 710144,
+    "name": "Digitek Video 6 W LED Light - D6W RGB (White)",
+    "brand": "Digitek",
+    "unit": "1 unit",
+    "price": 1299,
+    "mrp": 1995,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/cfc8836a-ffec-4884-99f0-d178de488a7e.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 635814,
+    "name": "Philips Lighting AceSaver 10 W LED Bulb (Cool White)",
+    "brand": "Philips Lighting",
+    "unit": "1 unit",
+    "price": 69,
+    "mrp": 175,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a1e6391e-d073-40d7-b5ff-f318c655e00a.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 357030,
+    "name": "Eveready Ultraslim 20 W LED Batten Light 4 Ft. (Cool Daylight)",
+    "brand": "Eveready",
+    "unit": "1 unit",
+    "price": 154,
+    "mrp": 239,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785124075300-1442.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 524838,
+    "name": "DesiDiya Edison Tungsten Filament Decorative 5 W LED Bulb E27",
+    "brand": "DesiDiya",
+    "unit": "2 pcs",
+    "price": 229,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8a31337c-8b23-49af-9cfa-d407db3054ac.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 1359197,
+    "name": "Philips Lighting 30 W LED Batten Light (Cool Daylight, Warm White, White)",
+    "brand": "Philips Lighting",
+    "unit": "1 unit",
+    "price": 389,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f84771de-c8fa-4986-b746-34195156db40.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 507483,
+    "name": "Philips Lighting Wiz Wi-Fi Enabled 9 W Smart Bulb (Multicolour)",
+    "brand": "Philips Lighting",
+    "unit": "1 unit",
+    "price": 659,
+    "mrp": 1999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/e269bbf3-600d-4f8f-ba9c-b7b7bef28cca.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 992,
+    "name": "Dettol Original Instant Hand Sanitizer",
+    "brand": "Dettol",
+    "unit": "50 ml",
+    "price": 34,
+    "mrp": 35,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5e861d97-44d7-4cd5-a579-17d5b8933e63.png",
+    "inventory": 25,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 458334,
+    "name": "Duracell AA Alkaline Battery",
+    "brand": "Duracell",
+    "unit": "2 pcs",
+    "price": 47,
+    "mrp": 49,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0349c6d0-0c1d-42a9-9bf5-d94f248c5404.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch",
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 387510,
+    "name": "Odomos Fabric Mosquito Repellent Roll On",
+    "brand": "Odomos",
+    "unit": "8 ml",
+    "price": 77,
+    "mrp": 85,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/23456a2f-b251-46f0-9019-db3259480e03.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 11377,
+    "name": "Odomos With Vitamin E Mosquito Repellent Cream",
+    "brand": "Odomos",
+    "unit": "100 g",
+    "price": 116,
+    "mrp": 130,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784006908318-63.png",
+    "inventory": 8,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 423147,
+    "name": "Pee Safe Toilet Seat Sanitizer Spray (Floral)",
+    "brand": "Pee Safe",
+    "unit": "75 ml",
+    "price": 198,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9fce9a74-0dbd-4f2b-8e6e-b1f345c34392.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 526610,
+    "name": "DesiDiya 6 W Emergency Light (White)",
+    "brand": "DesiDiya",
+    "unit": "1 unit",
+    "price": 180,
+    "mrp": 500,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8875e5d0-9289-4e49-ba8b-819b925c8a67.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 555517,
+    "name": "Metallic Spiral Cake Stick Candle Party Propz",
+    "brand": "Party Propz",
+    "unit": "6 pcs",
+    "price": 79,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/2de44ba1-3667-4c26-9598-7a56427ddcf9.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch",
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 15537,
+    "name": "Hit Spray Flies & Mosquito Repellent Spray",
+    "brand": "Hit",
+    "unit": "400 ml",
+    "price": 240,
+    "mrp": 240,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772535388856-611.png",
+    "inventory": 23,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 567034,
+    "name": "Ambrane MagSafe Fast Wireless 10000 mAh Power Bank (WLP-12, 10000 mAh)",
+    "brand": "Ambrane",
+    "unit": "1 unit",
+    "price": 1749,
+    "mrp": 2999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786594976616-3.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 532090,
+    "name": "Bajaj Raftaar Mini LED RC 1.5 W Torch (White)",
+    "brand": "Bajaj",
+    "unit": "1 unit",
+    "price": 199,
+    "mrp": 360,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784884680302-897.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 526611,
+    "name": "DesiDiya LED 3 W Torch (Warm White)",
+    "brand": "DesiDiya",
+    "unit": "1 unit",
+    "price": 161,
+    "mrp": 500,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/41c4dcc1-a993-4ce8-96e3-82426b45bfb7.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 655839,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 299,
+    "mrp": 499,
+    "image_url": null,
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 616941,
+    "name": "Warmfinity Rechargeable Electric Gas Lighter (Stainless Steel)",
+    "brand": "Warmfinity",
+    "unit": "1 pc",
+    "price": 270,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a488c1c6-f535-4bce-aa2f-80dd36f75c2a.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 659064,
+    "name": "Bunsak Electric Rechargeable Gas Lighter (Steel)",
+    "brand": "Bunsak",
+    "unit": "1 pc",
+    "price": 259,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/980ed2a6-1d8c-480d-8eca-263d86d9dfc2.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 699352,
+    "name": "REWOP Rechargeable Electric Gas Lighter (Stainless Steel)",
+    "brand": "REWOP",
+    "unit": "1 pc",
+    "price": 289,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b2ad7d3c-ac56-4335-9514-3882ccf41caa.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 694634,
+    "name": "Tekcool Electric Lighter (Stainless Steel)",
+    "brand": "Tekcool",
+    "unit": "1 pc",
+    "price": 270,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5e942bac-98dd-4a8a-bbe9-11169d7fce7f.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 1368573,
+    "name": "Cpensus Electric Gas Lighter (Polypropylene)",
+    "brand": "Cpensus",
+    "unit": "1 unit",
+    "price": 499,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1fbaf6638494407988101aab3cf221cd.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 703887,
+    "name": "Zulaxy Premium Rechargeable Electric Lighter (Stainless Steel)",
+    "brand": "Zulaxy",
+    "unit": "1 pc",
+    "price": 299,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7998c48b-1e3a-4299-8af0-65eaee75e27d.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 709738,
+    "name": "Makbro Rechargeable Electric Gas Lighter (Stainless Steel)",
+    "brand": "Makbro",
+    "unit": "1 pc",
+    "price": 225,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/97b70076-982b-4839-92a5-80533765a65a.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 752318,
+    "name": "Blaze Up Rechargeable Plasma Gas Lighter (Stainless Steel)",
+    "brand": "Blaze Up",
+    "unit": "1 pc",
+    "price": 249,
+    "mrp": 600,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779685239504-392.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 753363,
+    "name": "Xjarvis Rechargeable Electric Gas Lighter (Stainless Steel)",
+    "brand": "Xjarvis",
+    "unit": "1 pc",
+    "price": 225,
+    "mrp": 1299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1780638810587-307.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 706593,
+    "name": "Clarkia Multipurpose Cheesecloth for Kitchen (Cotton)",
+    "brand": "Clarkia",
+    "unit": "1 pc",
+    "price": 179,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b5efd063-753f-4935-8c98-862516fbfa26.png",
+    "inventory": 8,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 562379,
+    "name": "Fackelmann Happy Kitchen Small Strainer (Stainless Steel)",
+    "brand": "Fackelmann Happy Kitchen",
+    "unit": "1 pc",
+    "price": 110,
+    "mrp": 229,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/271a4041-6438-4701-abec-4b8360f22653.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 658624,
+    "name": "Jaipur Ace Chakla with Wooden Rolling Pin (Marble)",
+    "brand": "Jaipur Ace",
+    "unit": "2 pcs",
+    "price": 449,
+    "mrp": 850,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781256047597-8.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 543994,
+    "name": "Aravi Mortar & Pestle (Steel)",
+    "brand": "Aravi",
+    "unit": "1 pc",
+    "price": 459,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4fef7ea2-0517-46b6-a055-f44550af7e6a.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 562386,
+    "name": "Wonderchef Gas Lighter (Stainless Steel)",
+    "brand": "Wonderchef",
+    "unit": "1 pc",
+    "price": 149,
+    "mrp": 350,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a8d17eb7-3448-4159-8da7-13c1603ef4a1.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 621639,
+    "name": "Unify Soup & Juice Strainer for Kitchen (Stainless Steel)",
+    "brand": "Unify",
+    "unit": "2 pcs",
+    "price": 398,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782840874587-44.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 661709,
+    "name": "Home Lane Tong/Pakad (Stainless Steel)",
+    "brand": "Home Lane",
+    "unit": "1 pc",
+    "price": 193,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d1acd892-38e6-4a1e-94c2-ec7376560110.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 562383,
+    "name": "Fackelmann Happy Kitchen Medium Strainer (Stainless Steel)",
+    "brand": "Fackelmann Happy Kitchen",
+    "unit": "1 pc",
+    "price": 126,
+    "mrp": 279,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/adcca404-a1c6-43c8-84f7-d136a89e127d.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 519979,
+    "name": "Super Mom by Apex Coconut Opener",
+    "brand": "Super Mom by Apex",
+    "unit": "1 pc",
+    "price": 89,
+    "mrp": 150,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c67cf15e-d9a0-4d89-8a3a-6da0129227ce.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 716260,
+    "name": "Tekcool Chopping Board (Stainless Steel)",
+    "brand": "Tekcool",
+    "unit": "1 pc",
+    "price": 299,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/79e711e0-976d-4aaf-a816-33fba5c5612e.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 127083,
+    "name": "Matchbox by Homelites",
+    "brand": "Homelites",
+    "unit": "5 pcs",
+    "price": 10,
+    "mrp": 10,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776925635966-303.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 538790,
+    "name": "Aravi Fabric Cotton Kitchen Cloth",
+    "brand": "Aravi",
+    "unit": "6 pcs",
+    "price": 106,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a13a7c01-8133-4319-b612-74367de11e15.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 146338,
+    "name": "Munix Scissors (Multicolour)",
+    "brand": "Munix",
+    "unit": "1 pc",
+    "price": 53,
+    "mrp": 53,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778348720635-426.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 499911,
+    "name": "Scotch Brite Stainless Steel Scrubber Ball",
+    "brand": "Scotch Brite",
+    "unit": "1 pc",
+    "price": 20,
+    "mrp": 20,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/812ddb1e-8a6f-45de-93bc-0ce442f70b87.png",
+    "inventory": 11,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 761350,
+    "name": "Scotch Brite Stainless Steel Scrubber Ball",
+    "brand": "Scotch Brite",
+    "unit": "6 x 1 pc",
+    "price": 99,
+    "mrp": 120,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778500997468-1976.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 543434,
+    "name": "Fackelmann Happy Kitchen Sharp Vegetable Peeler (Stainless Steel, Plastic)",
+    "brand": "Fackelmann Happy Kitchen",
+    "unit": "1 pc",
+    "price": 39,
+    "mrp": 59,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/67fee5e2-d97e-4297-936b-97cb71843884.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 188759,
+    "name": "Nirosta 2 in 1 Multi-Purpose Scissors (Stainless Steel)",
+    "brand": "Nirosta",
+    "unit": "1 pc",
+    "price": 216,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c33639f4-1ce9-4fc6-8314-fe8d55dfb37e.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 543433,
+    "name": "Fackelmann Happy Kitchen Sharp Vegetable Knife (Stainless Steel, Plastic)",
+    "brand": "Fackelmann Happy Kitchen",
+    "unit": "1 pc",
+    "price": 39,
+    "mrp": 59,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ab54d53f-f94d-4606-836c-d5421b1e1f7f.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "candle torch"
+    ]
+  },
+  {
+    "pid": 564811,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 69,
+    "mrp": 599,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 634595,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 349,
+    "mrp": 999,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 564809,
+    "name": "Warm White Copper String Light (3 W) - Lexton",
+    "brand": "Lexton",
+    "unit": "1 unit",
+    "price": 79,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f2f0f14f-47f3-4a8d-9a10-0287b5ee211a.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 564846,
+    "name": "Warm White Fairy Copper LED String Light (2 W) - Lexton",
+    "brand": "Lexton",
+    "unit": "1 unit",
+    "price": 79,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a9762da1-9892-43b5-a6fd-c47d2f6ecf92.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 623652,
+    "name": "Warm White LED Decoration String Light (2 W) - One94Store",
+    "brand": "One94Store",
+    "unit": "1 pack",
+    "price": 179,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5e8cb4c4-841d-429a-a055-1d9ff87c9935.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 829701,
+    "name": "Warm White Micro Pixel Rice String Light (1 W) - WAAN",
+    "brand": "WAAN",
+    "unit": "1 unit",
+    "price": 299,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0bb8e21d4cfb4d5b802623e3c6509b45.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 706799,
+    "name": "LED 3W Fairy String Light - TYOHAAR",
+    "brand": "Tyohaar",
+    "unit": "2 pcs",
+    "price": 329,
+    "mrp": 500,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/14374693-220e-4c80-849e-97c99767f259.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 749633,
+    "name": "Warm White LED String Light (3 W) - DesiDiya",
+    "brand": "DesiDiya",
+    "unit": "4 pcs",
+    "price": 299,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771444881906-241.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 637146,
+    "name": "Warm White Snowflake Fairy 4m LED String Light (4 W) - Pesca",
+    "brand": "Pesca",
+    "unit": "1 unit",
+    "price": 249,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/cbff9075-72b4-4816-b287-1042ce97a984.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 707158,
+    "name": "Warm White Serial Star String Light (9 W) - Ornalight",
+    "brand": "Ornalight",
+    "unit": "1 unit",
+    "price": 179,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ca89d6b6-c77d-46a6-be0a-2ae281b4fc69.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 696714,
+    "name": "Warm White LED Curtain String Lights (5 W) - Ornalight",
+    "brand": "Ornalight",
+    "unit": "1 unit",
+    "price": 339,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ebecfe37-6f2c-441b-8d33-25a537c2f932.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 634233,
+    "name": "Warm White Led Tea Light Candles (2 W) - One94Store",
+    "brand": "One94Store",
+    "unit": "12 pcs",
+    "price": 349,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/28f054ea-03f4-4b17-bd87-3a94225b4e40.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 684343,
+    "name": "Warm White Yellow Flickering Leaf Rice Lights (3 meter, 45 W) - Roxmac",
+    "brand": "Roxmac",
+    "unit": "1 unit",
+    "price": 299,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5d2ba5c3-96d8-4203-82ea-4ffb6408129b.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 695233,
+    "name": "Warm White Motion Sensor LED Strip Lights (3 W) - Flyngo",
+    "brand": "Flyngo",
+    "unit": "1 unit",
+    "price": 499,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d4318128-a7c6-450a-ae03-5b2f335bede3.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 830274,
+    "name": "Orange LED String Pixel Light (5 W) - WAAN",
+    "brand": "WAAN",
+    "unit": "1 unit",
+    "price": 99,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8f58301f0c7047dba0d55af257440b1b.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 541693,
+    "name": "Multicolour Moving Sand Art Picture Showpiece - DesiDiya",
+    "brand": "DesiDiya",
+    "unit": "1 unit",
+    "price": 389,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782724806207-188.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 629041,
+    "name": "Warm White Home Decor Leaf Curtain String Lights (6 W) - One94Store",
+    "brand": "One94Store",
+    "unit": "1 unit",
+    "price": 319,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d230564f-0a7e-4063-b75e-c3cd91f8653c.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 630531,
+    "name": "Clip-On Portable 5W Book Lamp (White) - One94Store",
+    "brand": "One94Store",
+    "unit": "1 unit",
+    "price": 299,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775818594487-2.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 757162,
+    "name": "Multicolour Smart RGB Neon LED Strip Lights (2 W) - Ornalight",
+    "brand": "Ornalight",
+    "unit": "1 unit",
+    "price": 999,
+    "mrp": 1499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771925205018-91.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 539698,
+    "name": "Creative Space Wall Hooks",
+    "brand": "Creative Space",
+    "unit": "5 pcs",
+    "price": 49,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f49afb13-a93f-4b84-903a-bb7b946c36f2.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 687673,
+    "name": "Tea Light Candles (Unscented) by Auradecor",
+    "brand": "Auradecor",
+    "unit": "30 pcs",
+    "price": 89,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/637de531-49ff-4d58-bf04-180590390ab1.png",
+    "inventory": 8,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 555516,
+    "name": "Rose Gold & Confetti Balloons Combo Party Propz",
+    "brand": "Party Propz",
+    "unit": "1 pack",
+    "price": 139,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8cfa993d-9926-41f5-99f9-24ffdbc76e34.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 532063,
+    "name": "Happy Birthday Banner (16 Inches) by Party Propz",
+    "brand": "Party Propz",
+    "unit": "1 pc",
+    "price": 59,
+    "mrp": 663,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/82ffaefa-3470-4f1a-8b5b-2ce8af37d20f.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 541417,
+    "name": "Confetti Party Poppers (Multicolor) Party Propz",
+    "brand": "Party Propz",
+    "unit": "1 pc",
+    "price": 69,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/26aeac93-7363-42b3-8ebc-abb2689f9229.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 477936,
+    "name": "Scotch 3M Double Sided Tape (1M Holds 4.5Kg) (Grey)",
+    "brand": "Scotch",
+    "unit": "1 pc",
+    "price": 187,
+    "mrp": 190,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a0b8f760-d26d-4bdc-a46e-39e71b430d43.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 484078,
+    "name": "Scotch 3M Double Sided Tape (1M Holds 4.5Kg) (Grey)",
+    "brand": "Scotch",
+    "unit": "2 x 1 pc",
+    "price": 299,
+    "mrp": 380,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778219433419-225.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 708286,
+    "name": "Warm White Floating Lotus Decorative LED Lights (7.5 W) - Tyohaar",
+    "brand": "Tyohaar",
+    "unit": "5 pcs",
+    "price": 649,
+    "mrp": 900,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0182ac68-dc74-4efd-a391-ef45897c631b.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 1388353,
+    "name": "Warm White Decorative LED Lights (5 W) - DesiDiya",
+    "brand": "DesiDiya",
+    "unit": "1 unit",
+    "price": 349,
+    "mrp": 1199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c0e78a324a1f4921b05175637e19f203.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 541749,
+    "name": "Warm White Pendant Rope Decorative LED Lights (40 W) - DesiDiya",
+    "brand": "DesiDiya",
+    "unit": "2 pcs",
+    "price": 399,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/22be6dd3-f749-4533-9939-19d7f8cb28df.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 1369887,
+    "name": "Warm White Photo Clips Decorative Lights (3 W) - SpecialYou",
+    "brand": "SpecialYou",
+    "unit": "1 unit",
+    "price": 285,
+    "mrp": 620,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/81472a2cf67a4f46b29b32659188ffe1.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 592656,
+    "name": "Warm White Decorative LED Lights (11 mtrs, 6 W) - Pesca",
+    "brand": "Pesca",
+    "unit": "5 pcs",
+    "price": 499,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/583d7475-2cc3-49ed-9eee-ffd4fec9d38e.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 711587,
+    "name": "Warm White Decorative LED Lights (40 W) - Bunsak",
+    "brand": "Bunsak",
+    "unit": "1 unit",
+    "price": 189,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c293c125-6ba7-42aa-871f-2f3fad5b4e30.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 565413,
+    "name": "Warm White Crystal Ball Curtain Decorative Lights (5 W) - DesiDiya",
+    "brand": "DesiDiya",
+    "unit": "1 unit",
+    "price": 633,
+    "mrp": 1499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f0330826-0a4c-4ff5-a294-05c15f0bf975.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 545856,
+    "name": "GM Spice 3 Pin Multi Plug (With LED Indicator, White, 6A)",
+    "brand": "GM",
+    "unit": "1 unit",
+    "price": 129,
+    "mrp": 179,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f4dc69ee-9b42-4b2e-9387-651b06f9f63c.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 697878,
+    "name": "Votive Pillar Candle (Raspberry) by Parkash Candles",
+    "brand": "Parkash Candles",
+    "unit": "6 pcs",
+    "price": 79,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f2298d54-7fcd-4144-a291-5379ae1b4ed4.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 689875,
+    "name": "Small Diya By Divyamrit",
+    "brand": "Divyamrit",
+    "unit": "12 pcs",
+    "price": 69,
+    "mrp": 149,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7fa8f3e3-5c0f-4459-bf4d-41aa2bb5ad54.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 692660,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 319,
+    "mrp": 799,
+    "image_url": null,
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 564867,
+    "name": "Warm White 600 LED Rope Light (5 W) - Lexton",
+    "brand": "Lexton",
+    "unit": "1 pc",
+    "price": 269,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9e3c2d01-6cca-415a-aee5-6124577a74d2.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 696493,
+    "name": "Warm White Waterproof Neon LED Rope Light (5 W) - Lexton",
+    "brand": "Lexton",
+    "unit": "1 unit",
+    "price": 329,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b1a46e69-5ec0-4b03-81b4-951665780ddf.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 802576,
+    "name": "Blue Waterproof Rope Light (20 W) - Ornalight",
+    "brand": "Ornalight",
+    "unit": "1 unit",
+    "price": 299,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/91820f06874a4c2f8ad5f9563d73d37d.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 699006,
+    "name": "Warm White SMD Rope LED Strip Lights (80 W) - One94Store",
+    "brand": "One94Store",
+    "unit": "1 unit",
+    "price": 699,
+    "mrp": 1999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/aeea430e-8bd6-4007-8858-abb84bd270ec.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 706497,
+    "name": "Warm White LED Rope Light (9 W) - Forus",
+    "brand": "Forus",
+    "unit": "1 unit",
+    "price": 399,
+    "mrp": 1000,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/535c10d4-4ac7-4be4-bc7c-8ac848ff38c3.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 757555,
+    "name": "Warm White Flexible LED Strip Lights (20 W) - Ornalight",
+    "brand": "Ornalight",
+    "unit": "1 unit",
+    "price": 599,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772015920716-320.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 516680,
+    "name": "Scotch Easy To Tear Tape (Transparent, 25 m)",
+    "brand": "Scotch",
+    "unit": "1 pc",
+    "price": 45,
+    "mrp": 45,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/fe3302e7-ad1d-4d0f-bc33-0c5d0d47471c.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 750920,
+    "name": "Scotch Easy To Tear Tape (Transparent, 25 m)",
+    "brand": "Scotch",
+    "unit": "2 x 1 pc",
+    "price": 81,
+    "mrp": 90,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778220050094-7295.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  },
+  {
+    "pid": 425578,
+    "name": "Steelgrip PVC Electrical Insulation Tape",
+    "brand": "Steelgrip",
+    "unit": "1 pc",
+    "price": 14,
+    "mrp": 15,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4296149b-03bf-4ed2-ac31-4dda4377c88a.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "golden cork light"
+    ]
+  }
+]

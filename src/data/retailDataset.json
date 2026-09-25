@@ -7,6 +7,7 @@
     {
       "key": "amul_dark_35g",
       "prid": 381902,
+      "category": "retail chocolate SKU",
       "brand": "Amul",
       "name": "Amul Dark Chocolate Bar",
       "unit": "35 g",
@@ -21,6 +22,7 @@
     {
       "key": "amul_sugarfree_35g",
       "prid": 382050,
+      "category": "retail chocolate SKU",
       "brand": "Amul",
       "name": "Amul Sugar Free Dark Chocolate Bar",
       "unit": "35 g",
@@ -33,8 +35,39 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "arrabi_glossy_face_mug_set",
+      "prid": 716386,
+      "category": "drinkware",
+      "brand": "Arrabi",
+      "name": "Arrabi Glossy Face Coffee Mug Set (Ceramic)",
+      "unit": "2 pcs",
+      "price": 449,
+      "mrp": 2159,
+      "rating": null,
+      "localImage": "/retail/arrabi_glossy_face_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-1106.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "arrabi_mug_set_with_tray",
+      "prid": 1365920,
+      "category": "drinkware",
+      "brand": "Arrabi",
+      "name": "Arrabi Gifting Coffee Mug Set With Tray (Ceramic)",
+      "unit": "1 set",
+      "price": 899,
+      "mrp": 3989,
+      "rating": null,
+      "localImage": "/retail/arrabi_mug_set_with_tray.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/f7df77c3eadb4f63ae790497590a5470.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "bingo_madangles_106g",
       "prid": 407554,
+      "category": "retail snack/chips SKU",
       "brand": "Bingo Mad Angles",
       "name": "Bingo Mad Angles Achaari Masti Crisps",
       "unit": "106 g",
@@ -49,6 +82,7 @@
     {
       "key": "bingo_madangles_60g",
       "prid": 35373,
+      "category": "retail snack/chips SKU",
       "brand": "Bingo Mad Angles",
       "name": "Bingo Mad Angles Achaari Masti Crisps / Chips",
       "unit": "60 g",
@@ -61,8 +95,69 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "binzo_premium_whiskey_set",
+      "prid": 707882,
+      "category": "drinkware",
+      "brand": "BINZO",
+      "name": "BINZO Premium Whiskey Glass Set (Glass)",
+      "unit": "6 pcs",
+      "price": 1199,
+      "mrp": 1400,
+      "rating": null,
+      "localImage": "/retail/binzo_premium_whiskey_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/9e40484b-f010-4bc4-bd58-29e53362de18.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "borosil_chai_time_mug_set",
+      "prid": 763449,
+      "category": "drinkware",
+      "brand": "Borosil",
+      "name": "Borosil Chai Time Coffee Mug Set (Borosilicate Glass)",
+      "unit": "6 pcs",
+      "price": 719,
+      "mrp": 895,
+      "rating": null,
+      "localImage": "/retail/borosil_chai_time_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773492424994-257.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "borosil_elva_sky_mug_set",
+      "prid": 726111,
+      "category": "drinkware",
+      "brand": "Borosil Porcelia",
+      "name": "Borosil Porcelia Elva Sky Coffee Mug Set (Porcelain)",
+      "unit": "2 pcs",
+      "price": 579,
+      "mrp": 695,
+      "rating": null,
+      "localImage": "/retail/borosil_elva_sky_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-1227.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "borosil_velvetto_ash_mug_set",
+      "prid": 722447,
+      "category": "drinkware",
+      "brand": "Borosil Porcelia",
+      "name": "Borosil Porcelia Velvetto Ash Coffee Mug Set (Porcelain)",
+      "unit": "2 pcs",
+      "price": 579,
+      "mrp": 695,
+      "rating": null,
+      "localImage": "/retail/borosil_velvetto_ash_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-1217.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "bounty_50g",
       "prid": 19527,
+      "category": "retail item",
       "brand": "Bounty",
       "name": "Bounty Coconut Chocolate Filled Bar",
       "unit": "50 g",
@@ -77,6 +172,7 @@
     {
       "key": "bounty_minis_100g",
       "prid": 3299,
+      "category": "retail item",
       "brand": "Bounty",
       "name": "Bounty Miniatures Coconut Filled Bar Chocolate Pack",
       "unit": "100 g",
@@ -91,6 +187,7 @@
     {
       "key": "bourbon_99g",
       "prid": 206572,
+      "category": "retail biscuit SKU",
       "brand": "Sunfeast Bourbon",
       "name": "Sunfeast Bourbon Dark Fantasy Biscuit",
       "unit": "99 g",
@@ -105,6 +202,7 @@
     {
       "key": "brit_gobbles_fruit_100g",
       "prid": 336628,
+      "category": "retail biscuit SKU",
       "brand": "Britannia",
       "name": "Britannia Gobbles Fruit Slice Cake",
       "unit": "100 g",
@@ -119,6 +217,7 @@
     {
       "key": "brit_gobbles_fruity_55g",
       "prid": 108085,
+      "category": "retail biscuit SKU",
       "brand": "Britannia",
       "name": "Britannia Gobbles Fruity Fun Slice Cake",
       "unit": "55 g",
@@ -133,6 +232,7 @@
     {
       "key": "brit_potazos_71g",
       "prid": 480017,
+      "category": "retail item",
       "brand": "Britannia 5050",
       "name": "Britannia 5050 Potazos Masti Masala Potato Biscuit",
       "unit": "71.5 g",
@@ -147,6 +247,7 @@
     {
       "key": "cadbury_5star_2pk",
       "prid": 374402,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury 5 Star",
       "name": "Cadbury 5 Star Chocolate Filled Bar",
       "unit": "2 x 35.2 g",
@@ -161,6 +262,7 @@
     {
       "key": "cadbury_5star_96g",
       "prid": 548961,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury 5 Star",
       "name": "Cadbury 5 Star Kitted Pack Chocolatey Bars",
       "unit": "96 g",
@@ -175,6 +277,7 @@
     {
       "key": "cadbury_5star_oreo_87g",
       "prid": 483021,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury 5 Star",
       "name": "Cadbury 5 Star Oreo Chocolate Filled Bar",
       "unit": "2 x 40 g",
@@ -189,6 +292,7 @@
     {
       "key": "cadbury_bournville_cran_78g",
       "prid": 555,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Bournville",
       "name": "Cadbury Bournville Cranberry Dark Chocolate Bar",
       "unit": "78 g",
@@ -203,6 +307,7 @@
     {
       "key": "cadbury_bournville_dark_75g",
       "prid": 424615,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Bournville",
       "name": "Cadbury Bournville 70% Dark Dark Chocolate Bar",
       "unit": "75 g",
@@ -217,6 +322,7 @@
     {
       "key": "cadbury_celebrations_119g",
       "prid": 391905,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Celebrations",
       "name": "Cadbury Celebrations Assorted Chocolate Gift Pack",
       "unit": "119.2 g",
@@ -231,6 +337,7 @@
     {
       "key": "cadbury_celebrations_prem_163g",
       "prid": 802440,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Celebrations",
       "name": "Cadbury Celebrations Premium Selections Assorted Chocolate Gift Pack",
       "unit": "163 g",
@@ -245,6 +352,7 @@
     {
       "key": "cadbury_chocobakes_167g",
       "prid": 499373,
+      "category": "retail biscuit SKU",
       "brand": "Cadbury Chocobakes",
       "name": "Cadbury Chocobakes Choc Chip Cookies",
       "unit": "167 g",
@@ -259,6 +367,7 @@
     {
       "key": "cadbury_gems_ball_14g",
       "prid": 108643,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Gems",
       "name": "Cadbury Gems Surprise Chocolates Ball",
       "unit": "14.69 g",
@@ -273,6 +382,7 @@
     {
       "key": "cadbury_gems_mini_94g",
       "prid": 442668,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Gems",
       "name": "Cadbury Gems Mini Treats Shaped Chocolate Pack",
       "unit": "94.04 g",
@@ -287,6 +397,7 @@
     {
       "key": "cadbury_perk_mini_115g",
       "prid": 225506,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Perk",
       "name": "Cadbury Perk Mini Treats Coated Wafer Chocolate Pack",
       "unit": "115.5 g",
@@ -301,6 +412,7 @@
     {
       "key": "cadbury_temptations_70g",
       "prid": 156106,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Temptations",
       "name": "Cadbury Temptations Almond Treat Premium Milk Chocolate Bar",
       "unit": "70 g",
@@ -315,6 +427,7 @@
     {
       "key": "celebrations_97g",
       "prid": 676137,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Celebrations",
       "name": "Cadbury Celebrations Assorted Chocolate Gift Pack",
       "unit": "97.02 g",
@@ -327,8 +440,264 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "cello_classix_whiskey_set",
+      "prid": 566539,
+      "category": "drinkware",
+      "brand": "Cello",
+      "name": "Cello Classix Whiskey Glass Set",
+      "unit": "6 pcs",
+      "price": 369,
+      "mrp": 375,
+      "rating": null,
+      "localImage": "/retail/cello_classix_whiskey_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/0c042217-f412-4a27-8fce-1f1467eaeff0.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "cello_classix_whiskey_set_325",
+      "prid": 546049,
+      "category": "drinkware",
+      "brand": "Cello",
+      "name": "Cello Classix Whiskey Glass Set (325 ml)",
+      "unit": "6 pcs",
+      "price": 439,
+      "mrp": 515,
+      "rating": null,
+      "localImage": "/retail/cello_classix_whiskey_set_325.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/a2e1784b-7050-4cf9-9c0a-ab99dd486f63.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "cello_executive_beer_mug_set",
+      "prid": 664526,
+      "category": "drinkware",
+      "brand": "Cello",
+      "name": "Cello Executive Beer Mug Set (Glass)",
+      "unit": "2 pcs",
+      "price": 279,
+      "mrp": 339,
+      "rating": null,
+      "localImage": "/retail/cello_executive_beer_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/048f0835-5a9f-409a-8643-30c8576505be.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "cello_shooter_shot_glass",
+      "prid": 566558,
+      "category": "drinkware",
+      "brand": "Cello",
+      "name": "Cello Shooter Shot Glass (Glass)",
+      "unit": "6 pcs",
+      "price": 199,
+      "mrp": 249,
+      "rating": null,
+      "localImage": "/retail/cello_shooter_shot_glass.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/b29a692b-6aaa-4055-98a8-0849e7f0f773.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "cello_stern_beer_mug_set",
+      "prid": 566545,
+      "category": "drinkware",
+      "brand": "Cello",
+      "name": "Cello Stern Beer Mug Set (Glass)",
+      "unit": "2 pcs",
+      "price": 399,
+      "mrp": 539,
+      "rating": null,
+      "localImage": "/retail/cello_stern_beer_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772120332323-166.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_d_mug",
+      "prid": 676720,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak D Alphabet Coffee Mug (Ceramic)",
+      "unit": "1 pc",
+      "price": 562,
+      "mrp": 695,
+      "rating": null,
+      "localImage": "/retail/chumbak_d_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786353619329-362.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_hamsa_mug_set",
+      "prid": 606520,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak Hamsa Coffee Mug Set (Ceramic)",
+      "unit": "1 set",
+      "price": 699,
+      "mrp": 1115,
+      "rating": null,
+      "localImage": "/retail/chumbak_hamsa_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786353619329-224.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_jaali_mug_set",
+      "prid": 591269,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak Jaali Gift Set Coffee Mug (Ceramic)",
+      "unit": "3 pcs",
+      "price": 933,
+      "mrp": 1795,
+      "rating": null,
+      "localImage": "/retail/chumbak_jaali_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786353619329-195.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_k_mug",
+      "prid": 676751,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak K Alphabet Coffee Mug (Ceramic)",
+      "unit": "1 pc",
+      "price": 569,
+      "mrp": 695,
+      "rating": null,
+      "localImage": "/retail/chumbak_k_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-224.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_m_mug",
+      "prid": 559046,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak M Alphabet Coffee Mug (Ceramic)",
+      "unit": "1 pc",
+      "price": 549,
+      "mrp": 695,
+      "rating": null,
+      "localImage": "/retail/chumbak_m_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-306.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_n_mug",
+      "prid": 559047,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak N Alphabet Coffee Mug (Ceramic)",
+      "unit": "1 pc",
+      "price": 649,
+      "mrp": 695,
+      "rating": null,
+      "localImage": "/retail/chumbak_n_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-168.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_p_mug",
+      "prid": 676758,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak P Alphabet Coffee Mug (Ceramic)",
+      "unit": "1 pc",
+      "price": 569,
+      "mrp": 695,
+      "rating": null,
+      "localImage": "/retail/chumbak_p_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-242.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_palace_memoirs_mug_set",
+      "prid": 702063,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak Palace Memoirs Mugs Gift Set (220 ml)",
+      "unit": "6 pcs",
+      "price": 1124,
+      "mrp": 1799,
+      "rating": null,
+      "localImage": "/retail/chumbak_palace_memoirs_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-919.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_r_mug",
+      "prid": 676743,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak R Alphabet Coffee Mug (Ceramic)",
+      "unit": "1 pc",
+      "price": 569,
+      "mrp": 695,
+      "rating": null,
+      "localImage": "/retail/chumbak_r_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786353619329-372.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_v_mug",
+      "prid": 676757,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak V Alphabet Coffee Mug (Ceramic)",
+      "unit": "1 pc",
+      "price": 569,
+      "mrp": 695,
+      "rating": null,
+      "localImage": "/retail/chumbak_v_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-233.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_valley_bloom_mug_set",
+      "prid": 570745,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak Valley Bloom Coffee Mug Set (Ceramic)",
+      "unit": "6 pcs",
+      "price": 1218,
+      "mrp": 2595,
+      "rating": null,
+      "localImage": "/retail/chumbak_valley_bloom_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783654884512-1035.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "chumbak_work_together_mug",
+      "prid": 619359,
+      "category": "drinkware",
+      "brand": "Chumbak",
+      "name": "Chumbak Let's Work Together Coffee Mug (Ceramic)",
+      "unit": "1 pc",
+      "price": 299,
+      "mrp": 395,
+      "rating": null,
+      "localImage": "/retail/chumbak_work_together_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-195.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "chupa_lollipop_2x96g",
       "prid": 483012,
+      "category": "retail item",
       "brand": "Chupa Chups",
       "name": "Chupa Chups Bubble Gum Filled Lollipop Sour Candy (Assorted Flavours)",
       "unit": "2 x 96 g",
@@ -343,6 +712,7 @@
     {
       "key": "chupa_sour_belt_58g",
       "prid": 368393,
+      "category": "retail item",
       "brand": "Chupa Chups",
       "name": "Chupa Chups Sour Belt Mixed Fruit Sour Candy",
       "unit": "57.6 g",
@@ -357,6 +727,7 @@
     {
       "key": "chupa_sour_bites_66g",
       "prid": 361832,
+      "category": "retail item",
       "brand": "Chupa Chups",
       "name": "Chupa Chups Sour Bites Mixed Fruit Sour Candy",
       "unit": "66 g",
@@ -371,6 +742,7 @@
     {
       "key": "chupa_sour_crawlers_99g",
       "prid": 559783,
+      "category": "retail item",
       "brand": "Chupa Chups",
       "name": "Chupa Chups Assorted Flavour Sour Crawlers Soft Sour Candy",
       "unit": "99 g",
@@ -385,6 +757,7 @@
     {
       "key": "chupa_strawberry_watermelon_80g",
       "prid": 523829,
+      "category": "retail item",
       "brand": "Chupa Chups",
       "name": "Chupa Chups Strawberry And Watermelon Soft Sour Candy",
       "unit": "80 g",
@@ -399,6 +772,7 @@
     {
       "key": "colossal_5050_maska_114g",
       "prid": 19176,
+      "category": "retail item",
       "brand": "Britannia 5050",
       "name": "Britannia 5050 Maska Chaska Biscuit",
       "unit": "114.1 g",
@@ -413,6 +787,7 @@
     {
       "key": "cornitos_cheese_balls_52g",
       "prid": 591988,
+      "category": "retail item",
       "brand": "Cornitos",
       "name": "Cornitos Crusties Classic Cheese Balls Puffs",
       "unit": "52 g",
@@ -427,6 +802,7 @@
     {
       "key": "cornitos_sweet_chili_78g",
       "prid": 521416,
+      "category": "retail item",
       "brand": "Cornitos",
       "name": "Cornitos Sweet Chili Nachos Chips",
       "unit": "78 g",
@@ -441,6 +817,7 @@
     {
       "key": "crax_corn_rings_57g",
       "prid": 458322,
+      "category": "retail snack/chips SKU",
       "brand": "Crax",
       "name": "Crax Corn Rings Masala Mania Puffs Snacks with Super Toys",
       "unit": "57 g",
@@ -455,6 +832,7 @@
     {
       "key": "crax_curls_82g",
       "prid": 524861,
+      "category": "retail snack/chips SKU",
       "brand": "Crax",
       "name": "Crax Curls Chatpata Masala Puffs Snacks",
       "unit": "82 g",
@@ -469,6 +847,7 @@
     {
       "key": "dairy_milk_26g",
       "prid": 669065,
+      "category": null,
       "brand": "Cadbury Dairy Milk",
       "name": "Cadbury Dairy Milk Chocolate Bar",
       "unit": "25 g",
@@ -483,6 +862,7 @@
     {
       "key": "dairy_milk_46g",
       "prid": 313400,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Dairy Milk",
       "name": "Cadbury Dairy Milk Milk Chocolate Bar",
       "unit": "46 g",
@@ -495,8 +875,24 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "dairy_milk_bites_almond",
+      "prid": 501565,
+      "category": "chocolates",
+      "brand": "Cadbury Dairy Milk",
+      "name": "Cadbury Dairy Milk Bites Shaped Chocolate Pack - Almond",
+      "unit": "2 x 54 g",
+      "price": 150,
+      "mrp": 178,
+      "rating": null,
+      "localImage": "/retail/dairy_milk_bites_almond.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-17923.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "dairy_milk_crackle_36g",
       "prid": 543,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Dairy Milk",
       "name": "Cadbury Dairy Milk Crackle Milk Chocolate Bar",
       "unit": "36 g",
@@ -511,6 +907,7 @@
     {
       "key": "dairy_milk_crispello_35g",
       "prid": 440219,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Dairy Milk",
       "name": "Cadbury Dairy Milk Crispello Milk Chocolate Bar",
       "unit": "35 g",
@@ -525,6 +922,7 @@
     {
       "key": "dark_fantasy_150g",
       "prid": 24700,
+      "category": null,
       "brand": "Sunfeast Dark Fantasy",
       "name": "Sunfeast Dark Fantasy Big Choco Fills Cookies",
       "unit": "150 g",
@@ -539,6 +937,7 @@
     {
       "key": "dark_fantasy_230g",
       "prid": 313249,
+      "category": null,
       "brand": "Sunfeast Dark Fantasy",
       "name": "Sunfeast Dark Fantasy Choco Fills Chocolate Biscuit Pack",
       "unit": "230 g",
@@ -553,6 +952,7 @@
     {
       "key": "dark_fantasy_69g",
       "prid": 509,
+      "category": "retail biscuit SKU",
       "brand": "Sunfeast Dark Fantasy",
       "name": "Sunfeast Dark Fantasy Choco Fill Cookies",
       "unit": "69 g",
@@ -567,6 +967,7 @@
     {
       "key": "dark_fantasy_desserts_100g",
       "prid": 479090,
+      "category": "retail biscuit SKU",
       "brand": "Sunfeast Dark Fantasy",
       "name": "Sunfeast Dark Fantasy Desserts Choconut Dipped Cookies",
       "unit": "100 g",
@@ -581,6 +982,7 @@
     {
       "key": "dark_fantasy_yumfills_242g",
       "prid": 409925,
+      "category": "retail biscuit SKU",
       "brand": "Sunfeast Dark Fantasy",
       "name": "Sunfeast Dark Fantasy Yumfills Choco Pie",
       "unit": "242 g",
@@ -593,8 +995,99 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "delibohemi_premium_whiskey_set",
+      "prid": 701943,
+      "category": "drinkware",
+      "brand": "DeliBohemi",
+      "name": "DeliBohemi Whiskey Glass Set (Glass)",
+      "unit": "6 pc",
+      "price": 389,
+      "mrp": 1799,
+      "rating": null,
+      "localImage": "/retail/delibohemi_premium_whiskey_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/b8738d7f-0142-4370-abe0-30fc18771e3a.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "delibohemi_royal_whiskey_set",
+      "prid": 744171,
+      "category": "drinkware",
+      "brand": "DeliBohemi",
+      "name": "DeliBohemi Premium Whiskey Glass Set (Glass)",
+      "unit": "6 pcs",
+      "price": 459,
+      "mrp": 1799,
+      "rating": null,
+      "localImage": "/retail/delibohemi_royal_whiskey_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/bb039cb9-5997-4edf-824e-4c2e905f9091.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "delibohemi_skull_beer_mug",
+      "prid": 744102,
+      "category": "drinkware",
+      "brand": "DeliBohemi",
+      "name": "DeliBohemi Skull Beer Mug (Glass)",
+      "unit": "1 pc",
+      "price": 169,
+      "mrp": 499,
+      "rating": null,
+      "localImage": "/retail/delibohemi_skull_beer_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/fc21dbad-c242-4b1f-b57d-0f529d3559a4.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "delibohemi_whiskey_glass_set",
+      "prid": 744109,
+      "category": "drinkware",
+      "brand": "DeliBohemi",
+      "name": "DeliBohemi Whiskey Glass Set (Glass)",
+      "unit": "2 pcs",
+      "price": 179,
+      "mrp": 599,
+      "rating": null,
+      "localImage": "/retail/delibohemi_whiskey_glass_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/31766c3d-8e3c-4974-a3d4-a963dd116518.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "delibohemi_wine_glass_set",
+      "prid": 614748,
+      "category": "drinkware",
+      "brand": "DeliBohemi",
+      "name": "DeliBohemi Wine Glass Set",
+      "unit": "2 pcs",
+      "price": 279,
+      "mrp": 899,
+      "rating": null,
+      "localImage": "/retail/delibohemi_wine_glass_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/86806804-0340-4fcc-ae59-83edeffc2eff.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "desidiya_crystal_ball_curtain",
+      "prid": 565413,
+      "category": "lights",
+      "brand": "DesiDiya",
+      "name": "Warm White Crystal Ball Curtain Decorative Lights (5 W) - DesiDiya",
+      "unit": "1 unit",
+      "price": 633,
+      "mrp": 1499,
+      "rating": null,
+      "localImage": "/retail/desidiya_crystal_ball_curtain.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/f0330826-0a4c-4ff5-a294-05c15f0bf975.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "dm_minitreats_98g",
       "prid": 11020,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Dairy Milk",
       "name": "Cadbury Dairy Milk Mini Treats Chocolate Pack",
       "unit": "98 g",
@@ -609,6 +1102,7 @@
     {
       "key": "doritos_2x75g",
       "prid": 381269,
+      "category": "retail snack/chips SKU",
       "brand": "Doritos",
       "name": "Doritos Sweet Chilli Flavour Nachos",
       "unit": "2 x 75 g",
@@ -623,6 +1117,7 @@
     {
       "key": "doritos_sweetchilli_75g",
       "prid": 373410,
+      "category": "retail snack/chips SKU",
       "brand": "Doritos",
       "name": "Doritos Sweet Chilli Flavour Nachos",
       "unit": "75 g",
@@ -635,8 +1130,54 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "earthstore_glam_mug_set",
+      "prid": 568053,
+      "category": "drinkware",
+      "brand": "The Earth Store",
+      "name": "The Earth Store Glam Studio Coffee Mug Set (Ceramic)",
+      "unit": "2 pcs",
+      "price": 299,
+      "mrp": 849,
+      "rating": null,
+      "localImage": "/retail/earthstore_glam_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786342682553-102.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "femora_clear_beer_mug",
+      "prid": 742054,
+      "category": "drinkware",
+      "brand": "Femora",
+      "name": "Femora Clear Beer Mug (Glass)",
+      "unit": "1 pc",
+      "price": 119,
+      "mrp": 180,
+      "rating": null,
+      "localImage": "/retail/femora_clear_beer_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/f3dcc46d-b7be-47c8-961f-96d3564c3bd6.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "femora_coffee_mug",
+      "prid": 552860,
+      "category": "drinkware",
+      "brand": "Femora",
+      "name": "Femora Coffee Mug (Ceramic)",
+      "unit": "1 pc",
+      "price": 148,
+      "mrp": 300,
+      "rating": null,
+      "localImage": "/retail/femora_coffee_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771214347138-3958.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "ferrero_100g_box",
       "prid": 566218,
+      "category": "retail chocolate SKU",
       "brand": "Ferrero Rocher",
       "name": "Ferrero Rocher Chocolate Gift Pack",
       "unit": "100 g",
@@ -651,6 +1192,7 @@
     {
       "key": "ferrero_4pc",
       "prid": 19679,
+      "category": null,
       "brand": "Ferrero Rocher",
       "name": "Ferrero Rocher Chocolate Gift Pack (4 pieces)",
       "unit": "50 g",
@@ -665,6 +1207,7 @@
     {
       "key": "ferrero_bar_90g",
       "prid": 742604,
+      "category": "retail chocolate SKU",
       "brand": "Ferrero Rocher",
       "name": "Ferrero Rocher Hazelnut Milk Chocolate Bar",
       "unit": "90 g",
@@ -679,6 +1222,7 @@
     {
       "key": "ferrero_moments_16pc",
       "prid": 528089,
+      "category": "retail chocolate SKU",
       "brand": "Ferrero Rocher",
       "name": "Ferrero Rocher Moments Chocolate Gift Pack (16 pieces)",
       "unit": "89.6 g",
@@ -693,6 +1237,7 @@
     {
       "key": "ferrero_raffaello_3pcs",
       "prid": 559526,
+      "category": "retail chocolate SKU",
       "brand": "Ferrero Raffaello",
       "name": "Ferrero Raffaello Chocolate Gift Pack",
       "unit": "3 pcs",
@@ -707,6 +1252,7 @@
     {
       "key": "fivestar_35g",
       "prid": 248000,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury 5 Star",
       "name": "Cadbury 5 Star Chocolatey Bar",
       "unit": "35.2 g",
@@ -721,6 +1267,7 @@
     {
       "key": "fivestar_oreo_40g",
       "prid": 449053,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury 5 Star",
       "name": "Cadbury 5 Star Oreo Chocolatey Bar",
       "unit": "40 g",
@@ -735,6 +1282,7 @@
     {
       "key": "fuse_43g",
       "prid": 336631,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Fuse",
       "name": "Cadbury Fuse Peanut & Caramel Chocolate Filled Bar",
       "unit": "43 g",
@@ -749,6 +1297,7 @@
     {
       "key": "galaxy_cookie_50g",
       "prid": 480030,
+      "category": "retail chocolate SKU",
       "brand": "Galaxy",
       "name": "Galaxy Cookie Crumble Milk Chocolate Bar With Cookie Pieces",
       "unit": "50 g",
@@ -763,6 +1312,7 @@
     {
       "key": "galaxy_dark_70_56g",
       "prid": 503768,
+      "category": "retail chocolate SKU",
       "brand": "Galaxy",
       "name": "Galaxy Fusions Dark Chocolate Bar with 70% Cocoa",
       "unit": "56 g",
@@ -777,6 +1327,7 @@
     {
       "key": "galaxy_minis_72g",
       "prid": 525781,
+      "category": "retail chocolate SKU",
       "brand": "Galaxy",
       "name": "Galaxy Smooth Milk Minis Chocolate Pack",
       "unit": "72 g",
@@ -791,6 +1342,7 @@
     {
       "key": "galaxy_smooth_30g",
       "prid": 492467,
+      "category": "retail chocolate SKU",
       "brand": "Galaxy",
       "name": "Galaxy Smooth Milk Chocolate Bar",
       "unit": "30 g",
@@ -805,6 +1357,7 @@
     {
       "key": "gems_duo_25g",
       "prid": 110655,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Gems",
       "name": "Cadbury Gems Duo Chocolates Pack",
       "unit": "24.97 g",
@@ -817,8 +1370,39 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "glassence_compact_whiskey_set",
+      "prid": 737430,
+      "category": "drinkware",
+      "brand": "Glassence",
+      "name": "Glassence Compact Premium Whiskey Glass Set (Glass)",
+      "unit": "6 pcs",
+      "price": 299,
+      "mrp": 699,
+      "rating": null,
+      "localImage": "/retail/glassence_compact_whiskey_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/4940ca7a-0bbd-4d95-b857-7b3df467cb7f.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "glassence_cut_rock_whiskey_set",
+      "prid": 776449,
+      "category": "drinkware",
+      "brand": "Glassence",
+      "name": "Glassence Cut Rock Whiskey Glass Set (Glass)",
+      "unit": "6 pcs",
+      "price": 349,
+      "mrp": 799,
+      "rating": null,
+      "localImage": "/retail/glassence_cut_rock_whiskey_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776789800043-6.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "haldiram_bhujia_400g",
       "prid": 19266,
+      "category": "retail snack/chips SKU",
       "brand": "Haldiram's",
       "name": "Haldiram's Bhujia",
       "unit": "400 g",
@@ -833,6 +1417,7 @@
     {
       "key": "haldiram_lite_mix_150g",
       "prid": 19251,
+      "category": "retail snack/chips SKU",
       "brand": "Haldiram's",
       "name": "Haldiram's Lite Mixture Namkeen",
       "unit": "150 g",
@@ -847,6 +1432,7 @@
     {
       "key": "haldiram_snac_lite_82g",
       "prid": 544712,
+      "category": "retail snack/chips SKU",
       "brand": "Haldiram's",
       "name": "Haldiram's Snac Lite Desi Punch Fun Fries Crisps",
       "unit": "82 g",
@@ -861,6 +1447,7 @@
     {
       "key": "haldiram_takatak_95g",
       "prid": 482828,
+      "category": "retail snack/chips SKU",
       "brand": "Haldiram's",
       "name": "Haldiram's Takatak Chatpata Masala Stick Crisps",
       "unit": "95 g",
@@ -875,6 +1462,7 @@
     {
       "key": "hershey_cnc_90g",
       "prid": 403537,
+      "category": "retail chocolate SKU",
       "brand": "Hershey's",
       "name": "Hershey's Cookies n Creme White Chocolate Bar 90 g",
       "unit": "90 g",
@@ -889,6 +1477,7 @@
     {
       "key": "hershey_cookies_38g",
       "prid": 403536,
+      "category": "retail chocolate SKU",
       "brand": "Hershey's",
       "name": "Hershey's Cookies n Creme White Chocolate Bar",
       "unit": "38 g",
@@ -903,6 +1492,7 @@
     {
       "key": "hershey_creamy_90g",
       "prid": 403538,
+      "category": "retail chocolate SKU",
       "brand": "Hershey's",
       "name": "Hershey's Creamy Milk Chocolate Bar",
       "unit": "90 g",
@@ -917,6 +1507,7 @@
     {
       "key": "hershey_kisses_36g",
       "prid": 402563,
+      "category": "retail chocolate SKU",
       "brand": "Hershey's Kisses",
       "name": "Hershey's Kisses Milk Chocolate Pack",
       "unit": "36 g",
@@ -931,6 +1522,7 @@
     {
       "key": "hide_seek_100g",
       "prid": 11102,
+      "category": "retail biscuit SKU",
       "brand": "Hide & Seek",
       "name": "Hide & Seek Choco Chip Cookies",
       "unit": "100 g",
@@ -943,8 +1535,24 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "kavi_old_monk_glass_set",
+      "prid": 723106,
+      "category": "drinkware",
+      "brand": "Kavi The Poetry-Art Project",
+      "name": "Kavi The Poetry-Art Project Old Monk Glass Set",
+      "unit": "6 pcs",
+      "price": 999,
+      "mrp": 1799,
+      "rating": null,
+      "localImage": "/retail/kavi_old_monk_glass_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/21e18b08-c664-4fcd-9363-c731eaf3a289.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "kinder_bueno_43g",
       "prid": 675830,
+      "category": "retail chocolate SKU",
       "brand": "Kinder",
       "name": "Kinder Bueno Crispy Creamy Chocolate Bar",
       "unit": "43 g",
@@ -959,6 +1567,7 @@
     {
       "key": "kinder_creamy_19g",
       "prid": 436984,
+      "category": "retail chocolate SKU",
       "brand": "Kinder",
       "name": "Kinder Creamy Milky & Crunchy",
       "unit": "19 g",
@@ -973,6 +1582,7 @@
     {
       "key": "kinder_joy_20g",
       "prid": 19825,
+      "category": null,
       "brand": "Kinder Joy",
       "name": "Kinder Joy Blue 20g",
       "unit": "20 g",
@@ -987,6 +1597,7 @@
     {
       "key": "kinder_joy_pink_20g",
       "prid": 16779,
+      "category": "retail chocolate SKU",
       "brand": "Kinder Joy",
       "name": "Kinder Joy Pink 20g",
       "unit": "20 g",
@@ -1001,6 +1612,7 @@
     {
       "key": "kinder_schokobons_22g",
       "prid": 531509,
+      "category": "retail chocolate SKU",
       "brand": "Kinder",
       "name": "Kinder Schoko Bons Crispy",
       "unit": "22.4 g",
@@ -1015,6 +1627,7 @@
     {
       "key": "kitkat_2f",
       "prid": 17391,
+      "category": null,
       "brand": "Nestle KitKat",
       "name": "Nestle KitKat 2 Fingers Wafer Bar",
       "unit": "18 g",
@@ -1029,6 +1642,7 @@
     {
       "key": "kitkat_4f",
       "prid": 212722,
+      "category": null,
       "brand": "Nestle KitKat",
       "name": "Nestle KitKat 4 Fingers Choco Coated Wafer Bar",
       "unit": "38.5 g",
@@ -1043,6 +1657,7 @@
     {
       "key": "kitkat_chunky_40g",
       "prid": 499739,
+      "category": "retail chocolate SKU",
       "brand": "Nestle KitKat",
       "name": "Nestle KitKat Chunky Wafer Chocolate",
       "unit": "40 g",
@@ -1057,6 +1672,7 @@
     {
       "key": "kitkat_dark_50g",
       "prid": 564750,
+      "category": "retail chocolate SKU",
       "brand": "KitKat Delights",
       "name": "KitKat Delights Dark Wafer Chocolate",
       "unit": "50 g",
@@ -1071,6 +1687,7 @@
     {
       "key": "kitkat_delights_50g",
       "prid": 380140,
+      "category": "retail chocolate SKU",
       "brand": "KitKat Delights",
       "name": "Nestle KitKat Delights Rich Wafer Bar",
       "unit": "50 g",
@@ -1085,6 +1702,7 @@
     {
       "key": "kitkat_gift_181g",
       "prid": 701721,
+      "category": "retail chocolate SKU",
       "brand": "Nestle KitKat",
       "name": "Nestle KitKat 2F Mini Chocolate Gift Pack",
       "unit": "181.5 g",
@@ -1099,6 +1717,7 @@
     {
       "key": "kitkat_minis_111g",
       "prid": 383615,
+      "category": "retail chocolate SKU",
       "brand": "Nestle KitKat",
       "name": "Nestle KitKat Minis Choco Coated Wafer Bar",
       "unit": "111 g",
@@ -1113,6 +1732,7 @@
     {
       "key": "kitkat_pops_32g",
       "prid": 733484,
+      "category": "retail chocolate SKU",
       "brand": "Nestle KitKat",
       "name": "Nestle KitKat Choco-Coated Wafer Pops",
       "unit": "32 g",
@@ -1127,6 +1747,7 @@
     {
       "key": "kitkat_share_snap_57g",
       "prid": 425721,
+      "category": "retail chocolate SKU",
       "brand": "Nestle KitKat",
       "name": "Nestle KitKat Share & Snap 2x3 Fingers Wafer Bar",
       "unit": "57 g",
@@ -1141,6 +1762,7 @@
     {
       "key": "kurkure_chilli_79g",
       "prid": 116824,
+      "category": "retail snack/chips SKU",
       "brand": "Kurkure",
       "name": "Kurkure Chilli Chatka Crisps",
       "unit": "78.9 g",
@@ -1155,6 +1777,7 @@
     {
       "key": "kurkure_chilli_chatka_3x",
       "prid": 428248,
+      "category": "retail snack/chips SKU",
       "brand": "Kurkure",
       "name": "Kurkure Chilli Chatka Crisps",
       "unit": "3 x 78.9 g",
@@ -1169,6 +1792,7 @@
     {
       "key": "kurkure_green_chutney_78g",
       "prid": 140943,
+      "category": "retail snack/chips SKU",
       "brand": "Kurkure",
       "name": "Kurkure Green Chutney Crisps",
       "unit": "78.9 g",
@@ -1183,6 +1807,7 @@
     {
       "key": "kurkure_masala_103g",
       "prid": 436909,
+      "category": "retail snack/chips SKU",
       "brand": "Kurkure",
       "name": "Kurkure Masala Munch Crisps",
       "unit": "103.6 g",
@@ -1197,6 +1822,7 @@
     {
       "key": "kurkure_masala_75g",
       "prid": 67372,
+      "category": "retail snack/chips SKU",
       "brand": "Kurkure",
       "name": "Kurkure Masala Munch Crisps",
       "unit": "75 g",
@@ -1211,6 +1837,7 @@
     {
       "key": "kurkure_puffcorn_3x58g",
       "prid": 375328,
+      "category": "retail snack/chips SKU",
       "brand": "Kurkure",
       "name": "Kurkure Puffcorn Yummy Cheese Puffs",
       "unit": "3 x 58 g",
@@ -1225,6 +1852,7 @@
     {
       "key": "kurkure_puffcorn_58g",
       "prid": 367837,
+      "category": "retail snack/chips SKU",
       "brand": "Kurkure",
       "name": "Kurkure Puffcorn Yummy Cheese Puffs",
       "unit": "58 g",
@@ -1237,8 +1865,24 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "larah_orbit_mug_set",
+      "prid": 549028,
+      "category": "drinkware",
+      "brand": "Larah by Borosil",
+      "name": "Larah by Borosil Orbit Coffee Mug Set (Opalware)",
+      "unit": "2 pcs",
+      "price": 199,
+      "mrp": 250,
+      "rating": null,
+      "localImage": "/retail/larah_orbit_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771214347138-3906.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "lays_classic_51g",
       "prid": 57435,
+      "category": "retail snack/chips SKU",
       "brand": "Lay's",
       "name": "Lay's Classic Salted Potato Chips",
       "unit": "51 g",
@@ -1253,6 +1897,7 @@
     {
       "key": "lays_classic_salted_80g",
       "prid": 432780,
+      "category": "retail snack/chips SKU",
       "brand": "Lay's",
       "name": "Lay's Classic Salted Flavor Potato Chips",
       "unit": "80 g",
@@ -1267,6 +1912,7 @@
     {
       "key": "lays_crispz_herb_onion_50g",
       "prid": 223819,
+      "category": "retail snack/chips SKU",
       "brand": "Lay's",
       "name": "Lay's Crispz Herb & Onion Potato Chips",
       "unit": "50.8 g",
@@ -1281,6 +1927,7 @@
     {
       "key": "lays_magic_masala_58g",
       "prid": 240092,
+      "category": "retail snack/chips SKU",
       "brand": "Lay's",
       "name": "Lay's India's Magic Masala Potato Chips",
       "unit": "58 g",
@@ -1295,6 +1942,7 @@
     {
       "key": "lays_magic_masala_75g",
       "prid": 432775,
+      "category": "retail snack/chips SKU",
       "brand": "Lay's",
       "name": "Lay's India's Magic Masala Potato Chips",
       "unit": "75 g",
@@ -1307,8 +1955,174 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "lexton_190led_pixel_light",
+      "prid": 696678,
+      "category": "lights",
+      "brand": "Lexton",
+      "name": "Warm White 190 LED Pixel Light (For Indoor & Outdoor, 5 W) - Lexton",
+      "unit": "1 unit",
+      "price": 339,
+      "mrp": 1999,
+      "rating": null,
+      "localImage": "/retail/lexton_190led_pixel_light.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/8bdeecea-9d5b-4ab0-8388-e518b913181a.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "lexton_300led_copper_curtain",
+      "prid": 564881,
+      "category": "lights",
+      "brand": "Lexton",
+      "name": "Warm White 300 LED Copper Curtain String Lights (5 W) - Lexton",
+      "unit": "1 pc",
+      "price": 299,
+      "mrp": 799,
+      "rating": null,
+      "localImage": "/retail/lexton_300led_copper_curtain.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/3bf5d21d-b522-4d65-9ee0-ed4659fad1f0.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "lexton_copper_string_light_3w",
+      "prid": 564809,
+      "category": "lights",
+      "brand": "Lexton",
+      "name": "Warm White Copper String Light (3 W) - Lexton",
+      "unit": "1 unit",
+      "price": 79,
+      "mrp": 249,
+      "rating": null,
+      "localImage": "/retail/lexton_copper_string_light_3w.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/f2f0f14f-47f3-4a8d-9a10-0287b5ee211a.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "lexton_fairy_copper_led_2w",
+      "prid": 564846,
+      "category": "lights",
+      "brand": "Lexton",
+      "name": "Warm White Fairy Copper LED String Light (2 W) - Lexton",
+      "unit": "1 unit",
+      "price": 79,
+      "mrp": 249,
+      "rating": null,
+      "localImage": "/retail/lexton_fairy_copper_led_2w.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/a9762da1-9892-43b5-a6fd-c47d2f6ecf92.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "lexton_star_curtain_light_4w",
+      "prid": 696170,
+      "category": "lights",
+      "brand": "Lexton",
+      "name": "Warm White Star Curtain String Lights (4 W) - Lexton",
+      "unit": "1 unit",
+      "price": 579,
+      "mrp": 999,
+      "rating": null,
+      "localImage": "/retail/lexton_star_curtain_light_4w.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/4f48b1c8-fbb2-411c-b9f1-7cd5f579cdfc.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "lexton_star_string_light_2w",
+      "prid": 564769,
+      "category": "lights",
+      "brand": "Lexton",
+      "name": "Warm White 20 Stars String LED Shape Light (2 W) - Lexton",
+      "unit": "1 unit",
+      "price": 99,
+      "mrp": 399,
+      "rating": null,
+      "localImage": "/retail/lexton_star_string_light_2w.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/69b742e0-39d7-437b-b741-4792ae327484.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "lexton_string_lantern_light",
+      "prid": 693086,
+      "category": "lights",
+      "brand": "Lexton",
+      "name": "Warm White LED String Lantern Shape Light (2 W) - Lexton",
+      "unit": "1 unit",
+      "price": 209,
+      "mrp": 599,
+      "rating": null,
+      "localImage": "/retail/lexton_string_lantern_light.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/45126040-0119-433a-96ef-c57c17743f09.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "lexton_water_drop_string_light",
+      "prid": 564875,
+      "category": "lights",
+      "brand": "Lexton",
+      "name": "Warm White 14 Bulbs Water Drop String Shape Light (2 W) - Lexton",
+      "unit": "1 pc",
+      "price": 109,
+      "mrp": 399,
+      "rating": null,
+      "localImage": "/retail/lexton_water_drop_string_light.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/0424ae6c-ff37-4f3a-ae4d-1c4ce39dab8c.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "lifelong_coffee_mug_set",
+      "prid": 697210,
+      "category": "drinkware",
+      "brand": "Lifelong",
+      "name": "Lifelong Coffee Mug Set (Ceramic)",
+      "unit": "2 pcs",
+      "price": 262,
+      "mrp": 799,
+      "rating": null,
+      "localImage": "/retail/lifelong_coffee_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-884.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "lifelong_vacuum_insulated_mug",
+      "prid": 762181,
+      "category": "drinkware",
+      "brand": "Lifelong",
+      "name": "Lifelong Vacuum Insulated Travel Mug (Stainless Steel)",
+      "unit": "1 pc",
+      "price": 673,
+      "mrp": 1999,
+      "rating": null,
+      "localImage": "/retail/lifelong_vacuum_insulated_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784637923089-247.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "litt_curtain_string_lights",
+      "prid": 688562,
+      "category": "lights",
+      "brand": "Litt",
+      "name": "Litt 4W Curtain String Lights (Warm White)",
+      "unit": "1 unit",
+      "price": 369,
+      "mrp": 799,
+      "rating": null,
+      "localImage": "/retail/litt_curtain_string_lights.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/c0f68c0b-f61c-494e-ae17-4767fa148922.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "little_hearts_79g",
       "prid": 223327,
+      "category": "retail item",
       "brand": "Britannia Little Hearts",
       "name": "Britannia Little Hearts Classic Crunch Biscuit",
       "unit": "79 g",
@@ -1323,6 +2137,7 @@
     {
       "key": "mars_40g",
       "prid": 1381168,
+      "category": "retail chocolate SKU",
       "brand": "Mars",
       "name": "Mars Nougat & Caramel Chocolate Filled Bar",
       "unit": "40 g",
@@ -1335,8 +2150,54 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "masai_classic_mug_set",
+      "prid": 829606,
+      "category": "drinkware",
+      "brand": "Masai Homes",
+      "name": "Masai Homes Coffee Mug Set (Ceramic)",
+      "unit": "2 pcs",
+      "price": 599,
+      "mrp": 799,
+      "rating": null,
+      "localImage": "/retail/masai_classic_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784686025917-192.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "masai_forest_fern_mug_set",
+      "prid": 731815,
+      "category": "drinkware",
+      "brand": "Masai Homes",
+      "name": "Masai Homes Forest Fern Coffee Mug Set (Ceramic)",
+      "unit": "2 pcs",
+      "price": 449,
+      "mrp": 849,
+      "rating": null,
+      "localImage": "/retail/masai_forest_fern_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787048958771-281.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "masai_handcrafted_mug_set",
+      "prid": 710408,
+      "category": "drinkware",
+      "brand": "Masai Homes",
+      "name": "Masai Homes Handcrafted Coffee Mug Set (Ceramic)",
+      "unit": "2 pcs",
+      "price": 399,
+      "mrp": 799,
+      "rating": null,
+      "localImage": "/retail/masai_handcrafted_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-1039.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "milka_alpine_90g",
       "prid": 777406,
+      "category": "retail chocolate SKU",
       "brand": "Milka",
       "name": "Milka Alpine Milk Chocolate Bar",
       "unit": "90 g",
@@ -1351,6 +2212,7 @@
     {
       "key": "milka_cowspot_90g",
       "prid": 777409,
+      "category": "retail chocolate SKU",
       "brand": "Milka",
       "name": "Milka Cow Spot Milk Chocolate Bar",
       "unit": "90 g",
@@ -1365,6 +2227,7 @@
     {
       "key": "milka_hazelnut_95g",
       "prid": 474411,
+      "category": "retail chocolate SKU",
       "brand": "Milka",
       "name": "Milka Broken Hazelnut Milk Chocolate Bar",
       "unit": "95 g",
@@ -1379,6 +2242,7 @@
     {
       "key": "milka_oreo_90g",
       "prid": 164002,
+      "category": "retail chocolate SKU",
       "brand": "Milka",
       "name": "Milka Oreo Milk Chocolate Bar",
       "unit": "90 g",
@@ -1393,6 +2257,7 @@
     {
       "key": "milkbikis_188g",
       "prid": 11170,
+      "category": "retail item",
       "brand": "Britannia Milk Bikis",
       "name": "Britannia Milk Bikis Milky Sandwich Creme Biscuits",
       "unit": "188 g",
@@ -1407,6 +2272,7 @@
     {
       "key": "milkbikis_190g",
       "prid": 33402,
+      "category": "retail item",
       "brand": "Britannia Milk Bikis",
       "name": "Britannia Milk Bikis - Biscuit",
       "unit": "190.5 g",
@@ -1421,6 +2287,7 @@
     {
       "key": "milkybar_butterscotch_45g",
       "prid": 733485,
+      "category": "retail chocolate SKU",
       "brand": "Nestle Milkybar",
       "name": "Nestle Milkybar Butterscotch Bite White Chocolate Bar",
       "unit": "45 g",
@@ -1435,6 +2302,7 @@
     {
       "key": "milkybar_choo_80g",
       "prid": 546854,
+      "category": "retail chocolate SKU",
       "brand": "Nestle Milkybar",
       "name": "Nestle Milkybar Choo Strawberry Flavoured ShareBag",
       "unit": "80 g",
@@ -1449,6 +2317,7 @@
     {
       "key": "monaco_cheeslings_150g",
       "prid": 246192,
+      "category": "retail biscuit SKU",
       "brand": "Parle Monaco",
       "name": "Parle Monaco Cheeslings Classic Biscuit",
       "unit": "150 g",
@@ -1463,6 +2332,7 @@
     {
       "key": "monaco_cheeslings_2x",
       "prid": 407747,
+      "category": "retail biscuit SKU",
       "brand": "Parle Monaco",
       "name": "Parle Monaco Cheeslings Classic Biscuit",
       "unit": "2 x 150 g",
@@ -1477,6 +2347,7 @@
     {
       "key": "monaco_classic_371g",
       "prid": 396110,
+      "category": "retail biscuit SKU",
       "brand": "Parle Monaco",
       "name": "Parle Monaco Classic Regular Biscuit",
       "unit": "371.2 g",
@@ -1491,6 +2362,7 @@
     {
       "key": "monaco_light_185g",
       "prid": 263545,
+      "category": "retail biscuit SKU",
       "brand": "Parle Monaco",
       "name": "Parle Monaco Light Salty Classic Regular Biscuit",
       "unit": "185.6 g",
@@ -1503,8 +2375,24 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "mop_teachers_day_mug",
+      "prid": 1330086,
+      "category": "drinkware",
+      "brand": "Mad Over Print",
+      "name": "Mad Over Print Coffee Mug for Teacher's Day (Ceramic)",
+      "unit": "1 pc",
+      "price": 149,
+      "mrp": 499,
+      "rating": null,
+      "localImage": "/retail/mop_teachers_day_mug.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/88230fb3b24445a3970d5a9bdfe1209e.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "munch_45g",
       "prid": 496297,
+      "category": null,
       "brand": "Nestle Munch",
       "name": "Nestle Munch Max Choco Coated Crunchy Wafer Bar",
       "unit": "38.5 g",
@@ -1519,6 +2407,7 @@
     {
       "key": "munch_brownie_37g",
       "prid": 553063,
+      "category": "retail chocolate SKU",
       "brand": "Nestle Munch",
       "name": "Nestle Munch Brownie Max Choco Coated Wafer Chocolate",
       "unit": "37.5 g",
@@ -1533,6 +2422,7 @@
     {
       "key": "munch_max_38g",
       "prid": 732832,
+      "category": null,
       "brand": "Nestle Munch",
       "name": "Nestle Munch Max Crunchies Chocolate Bar",
       "unit": "45 g",
@@ -1547,6 +2437,7 @@
     {
       "key": "munch_nuts_37g",
       "prid": 636149,
+      "category": "retail chocolate SKU",
       "brand": "Nestle Munch",
       "name": "Nestle Munch Max Nuts Double Choco Coated Wafer Bar",
       "unit": "37.5 g",
@@ -1559,8 +2450,54 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "nestasia_ceramic_serving_bowl",
+      "prid": 558604,
+      "category": "drinkware",
+      "brand": "Nestasia",
+      "name": "Nestasia Ceramic Serving Bowl with Handle (Blue, Yellow)",
+      "unit": "1 pc",
+      "price": 694,
+      "mrp": 1015,
+      "rating": null,
+      "localImage": "/retail/nestasia_ceramic_serving_bowl.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/1e170e86-ed2c-4792-90fb-10a0ad13920a.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "nestasia_crystal_whiskey_set",
+      "prid": 567711,
+      "category": "drinkware",
+      "brand": "Nestasia",
+      "name": "Nestasia Crystal Whiskey Glass Set (200ml, Amber)",
+      "unit": "6 pcs",
+      "price": 1275,
+      "mrp": 1700,
+      "rating": null,
+      "localImage": "/retail/nestasia_crystal_whiskey_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/497097b1-ff80-463f-829d-80e9d8e1b62a.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "nestasia_tea_coffee_mug_set",
+      "prid": 789767,
+      "category": "drinkware",
+      "brand": "Nestasia",
+      "name": "Nestasia Tea Coffee Mug Set (Ceramic)",
+      "unit": "8 pcs",
+      "price": 1250,
+      "mrp": 1800,
+      "rating": null,
+      "localImage": "/retail/nestasia_tea_coffee_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779776175941-79.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "nivea_men_rollon",
       "prid": 131475,
+      "category": null,
       "brand": "Nivea Men",
       "name": "Nivea Men Fresh Active Men's Roll On",
       "unit": "50 ml",
@@ -1575,6 +2512,7 @@
     {
       "key": "nivea_men_spray",
       "prid": 25181,
+      "category": null,
       "brand": "Nivea Men",
       "name": "Nivea Men Fresh Active Original Men's Deodorant",
       "unit": "150 ml",
@@ -1589,6 +2527,7 @@
     {
       "key": "nutties_30g",
       "prid": 34422,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Nutties",
       "name": "Cadbury Nutties Milk Chocolate Pack",
       "unit": "30 g",
@@ -1601,8 +2540,84 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "ocean_centra_whiskey_set",
+      "prid": 507320,
+      "category": "drinkware",
+      "brand": "Ocean",
+      "name": "Ocean Centra Whiskey Glass Set",
+      "unit": "6 pcs",
+      "price": 659,
+      "mrp": 899,
+      "rating": null,
+      "localImage": "/retail/ocean_centra_whiskey_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/bd477b2e-e57c-4948-aaf2-601e00cbd534.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "one94store_leaf_curtain_lights",
+      "prid": 629041,
+      "category": "lights",
+      "brand": "One94Store",
+      "name": "Warm White Home Decor Leaf Curtain String Lights (6 W) - One94Store",
+      "unit": "1 unit",
+      "price": 319,
+      "mrp": 999,
+      "rating": null,
+      "localImage": "/retail/one94store_leaf_curtain_lights.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/d230564f-0a7e-4063-b75e-c3cd91f8653c.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "one94store_led_decoration_string",
+      "prid": 623652,
+      "category": "lights",
+      "brand": "One94Store",
+      "name": "Warm White LED Decoration String Light (2 W) - One94Store",
+      "unit": "1 pack",
+      "price": 179,
+      "mrp": 999,
+      "rating": null,
+      "localImage": "/retail/one94store_led_decoration_string.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/5e8cb4c4-841d-429a-a055-1d9ff87c9935.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "one94store_led_tea_light_candles",
+      "prid": 634233,
+      "category": "lights",
+      "brand": "One94Store",
+      "name": "Warm White Led Tea Light Candles (2 W) - One94Store",
+      "unit": "12 pcs",
+      "price": 349,
+      "mrp": 599,
+      "rating": null,
+      "localImage": "/retail/one94store_led_tea_light_candles.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/28f054ea-03f4-4b17-bd87-3a94225b4e40.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "one94store_wine_bottle_light",
+      "prid": 634595,
+      "category": "lights",
+      "brand": "One94Store",
+      "name": "Warm White Wine Bottle Decorative LED Lights (3 W) - One94Store",
+      "unit": "10 pcs",
+      "price": 349,
+      "mrp": 999,
+      "rating": null,
+      "localImage": "/retail/one94store_wine_bottle_light.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/d23119f9-43fa-400b-833d-198a1b165abc.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "oreo_bts_pancake_103g",
       "prid": 791499,
+      "category": "retail biscuit SKU",
       "brand": "Oreo",
       "name": "Oreo BTS Korean Sweet Pancake Flavour Cream Biscuits",
       "unit": "103.5 g",
@@ -1617,6 +2632,7 @@
     {
       "key": "oreo_choco_125g",
       "prid": 26059,
+      "category": "retail biscuit SKU",
       "brand": "Oreo",
       "name": "Oreo Chocolate Flavour Sandwich Cream Biscuits",
       "unit": "125.25 g",
@@ -1631,6 +2647,7 @@
     {
       "key": "oreo_golden_108g",
       "prid": 753771,
+      "category": "retail biscuit SKU",
       "brand": "Oreo",
       "name": "Oreo Golden Vanilla Sandwich Cream Biscuits",
       "unit": "108.55 g",
@@ -1645,6 +2662,7 @@
     {
       "key": "oreo_vanilla_125g",
       "prid": 331906,
+      "category": "retail biscuit SKU",
       "brand": "Oreo",
       "name": "Oreo Vanilla Flavour Sandwich Cream Biscuits",
       "unit": "125.25 g",
@@ -1659,6 +2677,7 @@
     {
       "key": "oreo_vanilla_2x125g",
       "prid": 389066,
+      "category": "retail biscuit SKU",
       "brand": "Oreo",
       "name": "Oreo Vanilla Flavour Sandwich Cream Biscuits",
       "unit": "2 x 125.25 g",
@@ -1671,8 +2690,24 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "ornalight_serial_star_string",
+      "prid": 707158,
+      "category": "lights",
+      "brand": "Ornalight",
+      "name": "Warm White Serial Star String Light (9 W) - Ornalight",
+      "unit": "1 unit",
+      "price": 179,
+      "mrp": 999,
+      "rating": null,
+      "localImage": "/retail/ornalight_serial_star_string.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/ca89d6b6-c77d-46a6-be0a-2ae281b4fc69.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "parle_elaichi_rusk_291g",
       "prid": 46074,
+      "category": "retail biscuit SKU",
       "brand": "Parle",
       "name": "Parle Real Elaichi Premium Rusk",
       "unit": "291.2 g",
@@ -1687,6 +2722,7 @@
     {
       "key": "parle_g_250g",
       "prid": 17710,
+      "category": "retail biscuit SKU",
       "brand": "Parle-G",
       "name": "Parle-G Glucose Biscuit",
       "unit": "250 g",
@@ -1701,6 +2737,7 @@
     {
       "key": "parle_g_gold_187g",
       "prid": 18357,
+      "category": "retail biscuit SKU",
       "brand": "Parle-G",
       "name": "Parle-G Gold Biscuit",
       "unit": "187.5 g",
@@ -1715,6 +2752,7 @@
     {
       "key": "parle_g_royale_360g",
       "prid": 539383,
+      "category": "retail biscuit SKU",
       "brand": "Parle-G",
       "name": "Parle-G Royale Glucose Biscuit",
       "unit": "360 g",
@@ -1729,6 +2767,7 @@
     {
       "key": "parle_milk_shakti_350g",
       "prid": 488652,
+      "category": "retail biscuit SKU",
       "brand": "Parle",
       "name": "Parle Milk Shakti Biscuit",
       "unit": "350 g",
@@ -1743,6 +2782,7 @@
     {
       "key": "perk_plus_40g",
       "prid": 593695,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Perk",
       "name": "Cadbury Perk Plus Coated Wafer Chocolate Bar",
       "unit": "40 g",
@@ -1755,8 +2795,54 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "pesca_multicolour_led_strip",
+      "prid": 665872,
+      "category": "lights",
+      "brand": "Pesca",
+      "name": "Multicolour LED Strip Lights (with Mini Controller, 2 m, 3 W) - Pesca",
+      "unit": "1 unit",
+      "price": 449,
+      "mrp": 599,
+      "rating": null,
+      "localImage": "/retail/pesca_multicolour_led_strip.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/7c65d440-7804-4fdc-a7d3-73a7cff976b7.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "pesca_snowflake_fairy_light",
+      "prid": 637146,
+      "category": "lights",
+      "brand": "Pesca",
+      "name": "Warm White Snowflake Fairy 4m LED String Light (4 W) - Pesca",
+      "unit": "1 unit",
+      "price": 249,
+      "mrp": 699,
+      "rating": null,
+      "localImage": "/retail/pesca_snowflake_fairy_light.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/cbff9075-72b4-4816-b287-1042ce97a984.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "pesca_warm_decorative_led_11m",
+      "prid": 592656,
+      "category": "lights",
+      "brand": "Pesca",
+      "name": "Warm White Decorative LED Lights (11 mtrs, 6 W) - Pesca",
+      "unit": "5 pcs",
+      "price": 499,
+      "mrp": 999,
+      "rating": null,
+      "localImage": "/retail/pesca_warm_decorative_led_11m.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/583d7475-2cc3-49ed-9eee-ffd4fec9d38e.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "pringles_original_107g",
       "prid": 594,
+      "category": "retail snack/chips SKU",
       "brand": "Pringles",
       "name": "Pringles Original Potato Chips - Crispy Snack",
       "unit": "107 g",
@@ -1771,6 +2857,7 @@
     {
       "key": "pringles_peri_102g",
       "prid": 373658,
+      "category": "retail snack/chips SKU",
       "brand": "Pringles",
       "name": "Pringles Peri Peri Chips - Crispy Snack",
       "unit": "102 g",
@@ -1785,6 +2872,7 @@
     {
       "key": "pringles_peri_2x102g",
       "prid": 377079,
+      "category": "retail snack/chips SKU",
       "brand": "Pringles",
       "name": "Pringles Peri Peri Chips - Crispy Snack",
       "unit": "2 x 102 g",
@@ -1799,6 +2887,7 @@
     {
       "key": "pringles_scorchin_102g",
       "prid": 694055,
+      "category": "retail snack/chips SKU",
       "brand": "Pringles",
       "name": "Pringles Scorchin’ Potato Chips (Red Hot Chilli)",
       "unit": "102 g",
@@ -1813,6 +2902,7 @@
     {
       "key": "pringles_scorchin_40g",
       "prid": 694053,
+      "category": "retail snack/chips SKU",
       "brand": "Pringles",
       "name": "Pringles Scorchin’ Red Hot Chilli Potato Chips",
       "unit": "40 g",
@@ -1827,6 +2917,7 @@
     {
       "key": "pringles_sour_onion_107g",
       "prid": 33863,
+      "category": "retail snack/chips SKU",
       "brand": "Pringles",
       "name": "Pringles Sour Cream & Onion Potato Chips",
       "unit": "107 g",
@@ -1841,6 +2932,7 @@
     {
       "key": "pringles_sourcream_40g",
       "prid": 538700,
+      "category": "retail snack/chips SKU",
       "brand": "Pringles",
       "name": "Pringles Sour Cream & Onion Potato Chips (40 g)",
       "unit": "40 g",
@@ -1853,8 +2945,24 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "roxmac_flickering_leaf_rice",
+      "prid": 684343,
+      "category": "lights",
+      "brand": "Roxmac",
+      "name": "Warm White Yellow Flickering Leaf Rice Lights (3 meter, 45 W) - Roxmac",
+      "unit": "1 unit",
+      "price": 299,
+      "mrp": 999,
+      "rating": null,
+      "localImage": "/retail/roxmac_flickering_leaf_rice.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/5d2ba5c3-96d8-4203-82ea-4ffb6408129b.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "silk_144g",
       "prid": 11022,
+      "category": null,
       "brand": "Cadbury Dairy Milk Silk",
       "name": "Cadbury Dairy Milk Silk Milk Chocolate Bar",
       "unit": "144 g",
@@ -1869,6 +2977,7 @@
     {
       "key": "silk_60g",
       "prid": 545,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Dairy Milk Silk",
       "name": "Cadbury Dairy Milk Silk Milk Chocolate Bar",
       "unit": "60 g",
@@ -1881,8 +2990,24 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "silk_bubbly_122g",
+      "prid": 394680,
+      "category": "chocolates",
+      "brand": "Cadbury Dairy Milk Silk",
+      "name": "Cadbury Dairy Milk Silk Bubbly Milk Chocolate Bar",
+      "unit": "2 x 112 g",
+      "price": 379,
+      "mrp": 430,
+      "rating": null,
+      "localImage": "/retail/silk_bubbly_122g.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14084.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "silk_fn_51g",
       "prid": 110016,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Dairy Milk Silk",
       "name": "Cadbury Dairy Milk Silk Fruit & Nut Small Milk Chocolate Bar",
       "unit": "51 g",
@@ -1897,6 +3022,7 @@
     {
       "key": "silk_ganache_54g",
       "prid": 525880,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Dairy Milk Silk",
       "name": "Cadbury Dairy Milk Silk Ganache Milk Chocolate Bar",
       "unit": "54 g",
@@ -1909,8 +3035,24 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "silk_hazelnut_134g",
+      "prid": 404237,
+      "category": "chocolates",
+      "brand": "Cadbury Dairy Milk Silk",
+      "name": "Cadbury Dairy Milk Silk Hazelnut Milk Chocolate Bar",
+      "unit": "2 x 134 g",
+      "price": 379,
+      "mrp": 430,
+      "rating": null,
+      "localImage": "/retail/silk_hazelnut_134g.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777953701494-14279.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "silk_mousse_49g",
       "prid": 437645,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Dairy Milk Silk",
       "name": "Cadbury Dairy Milk Silk Mousse Milk Chocolate Bar",
       "unit": "48.5 g",
@@ -1925,6 +3067,7 @@
     {
       "key": "silk_oreo_58g",
       "prid": 353817,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Dairy Milk Silk",
       "name": "Cadbury Dairy Milk Silk Oreo Milk Chocolate Bar",
       "unit": "58.5 g",
@@ -1939,6 +3082,7 @@
     {
       "key": "silk_roast_almond_52g",
       "prid": 403491,
+      "category": "retail chocolate SKU",
       "brand": "Cadbury Dairy Milk Silk",
       "name": "Cadbury Dairy Milk Silk Roast Almond Milk Chocolate Bar",
       "unit": "52 g",
@@ -1951,8 +3095,54 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "sipologie_axis_whiskey_set",
+      "prid": 806043,
+      "category": "drinkware",
+      "brand": "Sipologie",
+      "name": "Sipologie Axis Whiskey Glass Set (Glass)",
+      "unit": "2 pcs",
+      "price": 399,
+      "mrp": 499,
+      "rating": null,
+      "localImage": "/retail/sipologie_axis_whiskey_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/88a36dcfa4ac4b62a657230eaf691a0a.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "sipologie_nord_double_wall_mug_set",
+      "prid": 681693,
+      "category": "drinkware",
+      "brand": "Sipologie",
+      "name": "Sipologie Nord Double Wall Coffee Mug Set (Glass)",
+      "unit": "2 pcs",
+      "price": 499,
+      "mrp": 649,
+      "rating": null,
+      "localImage": "/retail/sipologie_nord_double_wall_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-609.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "sipologie_nord_mug_set",
+      "prid": 664008,
+      "category": "drinkware",
+      "brand": "Sipologie",
+      "name": "Sipologie Nord Coffee Mug Set (Glass)",
+      "unit": "2 pcs",
+      "price": 525,
+      "mrp": 699,
+      "rating": null,
+      "localImage": "/retail/sipologie_nord_mug_set.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-370.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "snickers_40g",
       "prid": 560,
+      "category": "retail chocolate SKU",
       "brand": "Snickers",
       "name": "Snickers Peanut Nougat & Caramel Chocolate Filled Bar",
       "unit": "40 g",
@@ -1967,6 +3157,7 @@
     {
       "key": "snickers_assorted_110g",
       "prid": 678635,
+      "category": "retail chocolate SKU",
       "brand": "Snickers",
       "name": "Snickers Assorted Chocolates Variety Pack",
       "unit": "110 g",
@@ -1981,6 +3172,7 @@
     {
       "key": "snickers_bestofminis_103g",
       "prid": 513015,
+      "category": "retail chocolate SKU",
       "brand": "Snickers",
       "name": "Snickers Best of Minis Assorted Chocolate Pack",
       "unit": "103.5 g",
@@ -1995,6 +3187,7 @@
     {
       "key": "snickers_minis_103g",
       "prid": 503770,
+      "category": "retail chocolate SKU",
       "brand": "Snickers",
       "name": "Snickers Nougat & Caramel Miniature Filled Bar Chocolate Pack",
       "unit": "103.5 g",
@@ -2007,8 +3200,24 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "specialyou_photo_clips_lights",
+      "prid": 1369887,
+      "category": "lights",
+      "brand": "SpecialYou",
+      "name": "Warm White Photo Clips Decorative Lights (3 W) - SpecialYou",
+      "unit": "1 unit",
+      "price": 285,
+      "mrp": 620,
+      "rating": null,
+      "localImage": "/retail/specialyou_photo_clips_lights.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/81472a2cf67a4f46b29b32659188ffe1.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "too_yumm_cream_onion_79g",
       "prid": 536637,
+      "category": "retail snack/chips SKU",
       "brand": "Too Yumm",
       "name": "Too Yumm American Style Cream & Onion Potato Chips",
       "unit": "79 g",
@@ -2021,8 +3230,39 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "tyohaar_fairy_string_light",
+      "prid": 706799,
+      "category": "lights",
+      "brand": "Tyohaar",
+      "name": "LED 3W Fairy String Light - TYOHAAR",
+      "unit": "2 pcs",
+      "price": 329,
+      "mrp": 500,
+      "rating": null,
+      "localImage": "/retail/tyohaar_fairy_string_light.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/14374693-220e-4c80-849e-97c99767f259.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
+      "key": "tyohaar_floating_lotus_lights",
+      "prid": 708286,
+      "category": "lights",
+      "brand": "Tyohaar",
+      "name": "Warm White Floating Lotus Decorative LED Lights (7.5 W) - Tyohaar",
+      "unit": "5 pcs",
+      "price": 649,
+      "mrp": 900,
+      "rating": null,
+      "localImage": "/retail/tyohaar_floating_lotus_lights.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/0182ac68-dc74-4efd-a391-ef45897c631b.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "uncle_chipps_salted_53g",
       "prid": 45377,
+      "category": "retail snack/chips SKU",
       "brand": "Uncle Chipps",
       "name": "Uncle Chipps Potato Chips (Plain Salted)",
       "unit": "53 g",
@@ -2037,6 +3277,7 @@
     {
       "key": "uncle_chipps_spicy_53g",
       "prid": 11150,
+      "category": "retail snack/chips SKU",
       "brand": "Uncle Chipps",
       "name": "Uncle Chipps Spicy Treat Potato Chips",
       "unit": "53 g",
@@ -2051,6 +3292,7 @@
     {
       "key": "uncle_chipps_spicy_80g",
       "prid": 534451,
+      "category": "retail snack/chips SKU",
       "brand": "Uncle Chipps",
       "name": "Uncle Chipps Spicy Treat Potato Chips",
       "unit": "80 g",
@@ -2063,8 +3305,24 @@
       "capturedAt": "2026-09-25"
     },
     {
+      "key": "waan_micro_pixel_rice_light",
+      "prid": 829701,
+      "category": "lights",
+      "brand": "WAAN",
+      "name": "Warm White Micro Pixel Rice String Light (1 W) - WAAN",
+      "unit": "1 unit",
+      "price": 299,
+      "mrp": 699,
+      "rating": null,
+      "localImage": "/retail/waan_micro_pixel_rice_light.jpg",
+      "imageUrlOriginal": "https://cdn.grofers.com/da/cms-assets/cms/product/0bb8e21d4cfb4d5b802623e3c6509b45.png",
+      "sourceUrl": null,
+      "capturedAt": "2026-09-25"
+    },
+    {
       "key": "yellowdiamond_creamonion_75g",
       "prid": 520007,
+      "category": "retail item",
       "brand": "Yellow Diamond",
       "name": "Yellow Diamond Cream N Onion Potato Chips",
       "unit": "75 g",
@@ -2079,6 +3337,7 @@
     {
       "key": "yellowdiamond_salted_75g",
       "prid": 520009,
+      "category": "retail item",
       "brand": "Yellow Diamond",
       "name": "Yellow Diamond Classic Salted Potato Chips",
       "unit": "75 g",

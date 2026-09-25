@@ -12,6 +12,9 @@ import { RETAIL_RATES, RETAIL_RATES_BY_KEY, RetailRateItem } from './retailRates
 const RETAIL_KEY_BY_BRANDED_ID: Record<string, string> = {
   'item-silk-classic': 'silk_60g',
   'item-silk-roast-almond': 'silk_roast_almond_52g',
+  'item-silk-bubbly': 'silk_bubbly_122g',
+  'item-silk-hazelnut': 'silk_hazelnut_134g',
+  'item-almond-chocolate-rocks': 'dairy_milk_bites_almond',
   'item-cadbury-dairy-milk': 'dairy_milk_46g',
   'item-nestle-kitkat-4finger': 'kitkat_4f',
   'item-nestle-kitkat-dessert-delight': 'kitkat_delights_50g',
@@ -19,6 +22,10 @@ const RETAIL_KEY_BY_BRANDED_ID: Record<string, string> = {
   'item-ferrero-rocher-3pack': 'ferrero_4pc',
   'item-ferrero-rocher-box': 'ferrero_moments_16pc',
   'item-snickers-bar': 'snickers_40g',
+  'item-fairy-warm-lights': 'lexton_fairy_copper_led_2w',
+  'item-rgb-party-lights': 'pesca_multicolour_led_strip',
+  'item-golden-cork-lights': 'one94store_wine_bottle_light',
+  'item-neon-heart-clip': 'specialyou_photo_clips_lights',
 };
 
 // Stable color palettes assigned by brand hash so the grid stays colorful yet tasteful.
@@ -41,7 +48,25 @@ function hashPalette(brand: string) {
   return PALETTES[h % PALETTES.length];
 }
 
+const CATEGORY_MAP: Record<string, BrandedItem['category']> = {
+  chocolates: 'chocolates',
+  drinkware: 'drinkware',
+  lights: 'lights',
+  electronics: 'electronics',
+  fragrance: 'fragrance',
+  women_accessories: 'women_accessories',
+  art_stationery: 'art_stationery',
+  books: 'books',
+  clothing: 'clothing',
+  home_decor: 'home_decor',
+  grooming: 'grooming',
+  sweets: 'sweets',
+  snacks: 'snacks',
+  biscuits: 'biscuits',
+};
+
 function categoryFor(r: RetailRateItem): BrandedItem['category'] {
+  if (r.category && CATEGORY_MAP[r.category]) return CATEGORY_MAP[r.category];
   const brand = r.brand ?? '';
   const name = r.name ?? '';
   const n = r.note ?? '';

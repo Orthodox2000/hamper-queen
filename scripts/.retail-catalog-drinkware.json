@@ -1,0 +1,2243 @@
+[
+  {
+    "pid": 526334,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 139,
+    "mrp": 149,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 526333,
+    "name": "Nayasa SQ Ring Printed Bucket (Beige)",
+    "brand": "Nayasa",
+    "unit": "1 pc",
+    "price": 569,
+    "mrp": 704,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/41db4f33-3850-4ecc-bcf5-3e972ac4e73c.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 682309,
+    "name": "RATAN PLASTICWARE Premia Small Bucket (5 ltr, Desert Rose)",
+    "brand": "Ratan Plasticware",
+    "unit": "1 pc",
+    "price": 299,
+    "mrp": 350,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770380474632-593.png",
+    "inventory": 22,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 559343,
+    "name": "Ratan Brooms Simpli Clean Plastic Cloth Brush (Multicolour)",
+    "brand": "Ratan Brooms",
+    "unit": "1 pc",
+    "price": 59,
+    "mrp": 65,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b92a8018-c7e3-46f5-8fc6-8d1403bc7e3b.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 350273,
+    "name": "Dettol pH-Balanced Sensitive Hand Wash",
+    "brand": "Dettol",
+    "unit": "200 ml",
+    "price": 76,
+    "mrp": 79,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/48760484-4ad2-4538-a7b1-4579394edcee.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 612897,
+    "name": "Dettol pH-Balanced Sensitive Hand Wash - Pack of 2",
+    "brand": "Dettol",
+    "unit": "2 x 200 ml",
+    "price": 146,
+    "mrp": 158,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778222900885-3131.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 476087,
+    "name": "Ratan Brooms Broom / Jhadu (Grass)",
+    "brand": "Ratan Brooms",
+    "unit": "1 unit",
+    "price": 99,
+    "mrp": 120,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f36bf75b-00fe-448c-aa46-e895d2995fb2.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 547642,
+    "name": "Link Round 50 mm Double Pad Lock with 3 keys (Silver)",
+    "brand": "Link",
+    "unit": "1 pc",
+    "price": 135,
+    "mrp": 150,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783657200848-286.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 477394,
+    "name": "Aravi Plastic Multicolour Plastic Cloth Clips (Multicolour)",
+    "brand": "Aravi",
+    "unit": "12 pcs",
+    "price": 89,
+    "mrp": 149,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/74d48151-c0da-4ef6-b945-8f6cad3df43b.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 538790,
+    "name": "Aravi Fabric Cotton Kitchen Cloth",
+    "brand": "Aravi",
+    "unit": "6 pcs",
+    "price": 106,
+    "mrp": 199,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a13a7c01-8133-4319-b612-74367de11e15.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 365918,
+    "name": "Gala Super Hockey Toilet Brush (Orange)",
+    "brand": "Gala",
+    "unit": "1 pc",
+    "price": 115,
+    "mrp": 115,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779705151382-409.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 81113,
+    "name": "Gala Leader Plus Floor Wiper with Replaceable Handle",
+    "brand": "Gala",
+    "unit": "1 unit",
+    "price": 239,
+    "mrp": 285,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777014961943-410.png",
+    "inventory": 16,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 559005,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 598,
+    "mrp": 695,
+    "image_url": null,
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 559006,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 598,
+    "mrp": 695,
+    "image_url": null,
+    "inventory": 8,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 559047,
+    "name": "Chumbak N Alphabet Coffee Mug (Ceramic)",
+    "brand": "Chumbak",
+    "unit": "1 pc",
+    "price": 649,
+    "mrp": 695,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-168.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 559046,
+    "name": "Chumbak M Alphabet Coffee Mug (Ceramic)",
+    "brand": "Chumbak",
+    "unit": "1 pc",
+    "price": 549,
+    "mrp": 695,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-306.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 676751,
+    "name": "Chumbak K Alphabet Coffee Mug (Ceramic)",
+    "brand": "Chumbak",
+    "unit": "1 pc",
+    "price": 569,
+    "mrp": 695,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-224.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 676743,
+    "name": "Chumbak R Alphabet Coffee Mug (Ceramic)",
+    "brand": "Chumbak",
+    "unit": "1 pc",
+    "price": 569,
+    "mrp": 695,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786353619329-372.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 676758,
+    "name": "Chumbak P Alphabet Coffee Mug (Ceramic)",
+    "brand": "Chumbak",
+    "unit": "1 pc",
+    "price": 569,
+    "mrp": 695,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-242.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 676720,
+    "name": "Chumbak D Alphabet Coffee Mug (Ceramic)",
+    "brand": "Chumbak",
+    "unit": "1 pc",
+    "price": 562,
+    "mrp": 695,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786353619329-362.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 676757,
+    "name": "Chumbak V Alphabet Coffee Mug (Ceramic)",
+    "brand": "Chumbak",
+    "unit": "1 pc",
+    "price": 569,
+    "mrp": 695,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-233.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 524360,
+    "name": "Mad Over Print Things workout, I don't Coffee Mug (Ceramic)",
+    "brand": "Mad Over Print",
+    "unit": "1 pc",
+    "price": 169,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781494036001-1246.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 552860,
+    "name": "Femora Coffee Mug (Ceramic)",
+    "brand": "Femora",
+    "unit": "1 pc",
+    "price": 148,
+    "mrp": 300,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771214347138-3958.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 728456,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 699,
+    "mrp": 1129,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 552717,
+    "name": "Femora Coffee Mug (Ceramic)",
+    "brand": "Femora",
+    "unit": "1 pc",
+    "price": 148,
+    "mrp": 300,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771214347138-3917.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 619359,
+    "name": "Chumbak Let's Work Together Coffee Mug (Ceramic)",
+    "brand": "Chumbak",
+    "unit": "1 pc",
+    "price": 299,
+    "mrp": 395,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783328948201-195.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 697210,
+    "name": "Lifelong Coffee Mug Set (Ceramic)",
+    "brand": "Lifelong",
+    "unit": "2 pcs",
+    "price": 262,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-884.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 762181,
+    "name": "Lifelong Vacuum Insulated Travel Mug (Stainless Steel)",
+    "brand": "Lifelong",
+    "unit": "1 pc",
+    "price": 673,
+    "mrp": 1999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784637923089-247.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 19679,
+    "name": "Ferrero Rocher Chocolate Gift Pack (4 pieces)",
+    "brand": "Ferrero Rocher",
+    "unit": "50 g",
+    "price": 179,
+    "mrp": 179,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776656742804-880.png",
+    "inventory": 16,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 665896,
+    "name": "Mad Over Print 'I Love You' Greeting Card",
+    "brand": "Mad Over Print",
+    "unit": "1 pc",
+    "price": 69,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/25db397e-37eb-44e4-b917-24329826eafc.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 571242,
+    "name": "Ugaoo Jade Plant with Ibiza Pot",
+    "brand": "Ugaoo",
+    "unit": "1 pc",
+    "price": 189,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3abb076a-680b-4b3a-b52f-e4a804ba8835.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 709400,
+    "name": "Rooted Lavender Daisy Crochet Flower Bouquet",
+    "brand": "Rooted",
+    "unit": "1 pc",
+    "price": 269,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770017428150-125.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 565627,
+    "name": "Paperpep Abstract Print Paper Gift Bag - Pack of 2 (Multicolour)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 99,
+    "mrp": 120,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/288faa1b-0d9e-47d9-a2cd-b3d2fa5c6de4.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 565630,
+    "name": "Paperpep Abstract Print Paper Gift Bag - Pack of 2 (Multicolour)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 139,
+    "mrp": 160,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/8fe6921f-d4c9-4e4a-83ef-b70082d42c83.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 566273,
+    "name": "Paperpep Abstract Print Paper Gift Bag - Pack of 2 (Multicolour)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 179,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/fac1d171-1b92-42e5-b1b7-ae5e592eb6a7.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 551219,
+    "name": "Paperpep Birthday Print Gift Wrapping Paper (Multicolour)",
+    "brand": "Paperpep",
+    "unit": "5 pcs",
+    "price": 69,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/49660655-f839-4f05-898a-8bd92ea63fb1.png",
+    "inventory": 15,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 524471,
+    "name": "Babique Octopus Sitting Plush Soft Toy",
+    "brand": "Babique",
+    "unit": "1 pc",
+    "price": 169,
+    "mrp": 378,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770221714496-1104.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 526400,
+    "name": "FlowerAura 3 Red Roses Bouquet In Premium Paper",
+    "brand": "FlowerAura",
+    "unit": "1 pc",
+    "price": 179,
+    "mrp": 325,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779421790948-3088.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 428152,
+    "name": "Prestige Stainless Steel Electric Kettle (1.5 ltr)",
+    "brand": "Prestige",
+    "unit": "1 unit",
+    "price": 699,
+    "mrp": 1495,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772718054305-708.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 725885,
+    "name": "Paperpep Flower Print Cake Paper Gift Bag",
+    "brand": "Paperpep",
+    "unit": "1 pc",
+    "price": 79,
+    "mrp": 90,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/6d4bf9d1-dd9a-4e6e-96c4-b27b0f08336b.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs",
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 664010,
+    "name": "Babique Penguin Super Soft Toy",
+    "brand": "Babique",
+    "unit": "1 pc",
+    "price": 129,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783309185390-166.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "mugs"
+    ]
+  },
+  {
+    "pid": 570745,
+    "name": "Chumbak Valley Bloom Coffee Mug Set (Ceramic)",
+    "brand": "Chumbak",
+    "unit": "6 pcs",
+    "price": 1218,
+    "mrp": 2595,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783654884512-1035.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 606520,
+    "name": "Chumbak Hamsa Coffee Mug Set (Ceramic)",
+    "brand": "Chumbak",
+    "unit": "1 set",
+    "price": 699,
+    "mrp": 1115,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786353619329-224.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 737024,
+    "name": "Simply Soho Wildflower Coffee Mug Set (Ceramic)",
+    "brand": "Simply Soho",
+    "unit": "2 pcs",
+    "price": 419,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-1377.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 710408,
+    "name": "Masai Homes Handcrafted Coffee Mug Set (Ceramic)",
+    "brand": "Masai Homes",
+    "unit": "2 pcs",
+    "price": 399,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-1039.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 731815,
+    "name": "Masai Homes Forest Fern Coffee Mug Set (Ceramic)",
+    "brand": "Masai Homes",
+    "unit": "2 pcs",
+    "price": 449,
+    "mrp": 849,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1787048958771-281.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 570750,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 1219,
+    "mrp": 2595,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 829606,
+    "name": "Masai Homes Coffee Mug Set (Ceramic)",
+    "brand": "Masai Homes",
+    "unit": "2 pcs",
+    "price": 599,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1784686025917-192.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 702063,
+    "name": "Chumbak Palace Memoirs Mugs Gift Set (220 ml)",
+    "brand": "Chumbak",
+    "unit": "6 pcs",
+    "price": 1124,
+    "mrp": 1799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-919.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 1365920,
+    "name": "Arrabi Gifting Coffee Mug Set With Tray (Ceramic)",
+    "brand": "Arrabi",
+    "unit": "1 set",
+    "price": 899,
+    "mrp": 3989,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f7df77c3eadb4f63ae790497590a5470.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 1330086,
+    "name": "Mad Over Print Coffee Mug for Teacher's Day (Ceramic)",
+    "brand": "Mad Over Print",
+    "unit": "1 pc",
+    "price": 149,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/88230fb3b24445a3970d5a9bdfe1209e.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 673352,
+    "name": "Mad Over Print I'm so Sorry Greeting Card",
+    "brand": "Mad Over Print",
+    "unit": "1 pc",
+    "price": 69,
+    "mrp": 99,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0dc225ab-45df-49ce-95a6-eff33462e850.png",
+    "inventory": 9,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 566272,
+    "name": "Paperpep Geometric Print Paper Gift Bag - Pack of 2 (Blue)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 179,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4e4b4830-e99b-4355-bbe6-d1418e59c319.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 565628,
+    "name": "Paperpep Geometric Print Paper Gift Bag - Pack of 2 (Blue)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 99,
+    "mrp": 120,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c5aebe11-c23c-4b32-bd46-6e3707cb0aaa.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 565631,
+    "name": "Paperpep Geometric Print Paper Gift Bag - Pack of 2 (Blue)",
+    "brand": "Paperpep",
+    "unit": "2 pcs",
+    "price": 139,
+    "mrp": 160,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/95073f7d-8aae-461d-8f39-f6664baacbfb.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 775194,
+    "name": "Chubsy Knits Decorative Crochet Flower with Pot",
+    "brand": "Chubsy Knits",
+    "unit": "1 pc",
+    "price": 249,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776343870003-22.png",
+    "inventory": 12,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 566370,
+    "name": "Judge by Prestige Stainless Steel Spoon Set",
+    "brand": "Judge",
+    "unit": "6 pcs",
+    "price": 179,
+    "mrp": 200,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f7636f55-1109-4f53-8bdd-c4473c865206.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set",
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 562379,
+    "name": "Fackelmann Happy Kitchen Small Strainer (Stainless Steel)",
+    "brand": "Fackelmann Happy Kitchen",
+    "unit": "1 pc",
+    "price": 110,
+    "mrp": 229,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/271a4041-6438-4701-abec-4b8360f22653.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 706345,
+    "name": "HAZEL Stainless Steel Serving Bowl (Silver)",
+    "brand": "HAZEL",
+    "unit": "1 pc",
+    "price": 84,
+    "mrp": 129,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/12da3ddd-010c-4e47-976e-336b2b0536b0.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 795493,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 900,
+    "mrp": 1440,
+    "image_url": null,
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 681693,
+    "name": "Sipologie Nord Double Wall Coffee Mug Set (Glass)",
+    "brand": "Sipologie",
+    "unit": "2 pcs",
+    "price": 499,
+    "mrp": 649,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-609.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 722447,
+    "name": "Borosil Porcelia Velvetto Ash Coffee Mug Set (Porcelain)",
+    "brand": "Borosil Porcelia",
+    "unit": "2 pcs",
+    "price": 579,
+    "mrp": 695,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-1217.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 664008,
+    "name": "Sipologie Nord Coffee Mug Set (Glass)",
+    "brand": "Sipologie",
+    "unit": "2 pcs",
+    "price": 525,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-370.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 789767,
+    "name": "Nestasia Tea Coffee Mug Set (Ceramic)",
+    "brand": "Nestasia",
+    "unit": "8 pcs",
+    "price": 1250,
+    "mrp": 1800,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779776175941-79.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 726111,
+    "name": "Borosil Porcelia Elva Sky Coffee Mug Set (Porcelain)",
+    "brand": "Borosil Porcelia",
+    "unit": "2 pcs",
+    "price": 579,
+    "mrp": 695,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-1227.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 763449,
+    "name": "Borosil Chai Time Coffee Mug Set (Borosilicate Glass)",
+    "brand": "Borosil",
+    "unit": "6 pcs",
+    "price": 719,
+    "mrp": 895,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1773492424994-257.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 549028,
+    "name": "Larah by Borosil Orbit Coffee Mug Set (Opalware)",
+    "brand": "Larah by Borosil",
+    "unit": "2 pcs",
+    "price": 199,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771214347138-3906.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 716386,
+    "name": "Arrabi Glossy Face Coffee Mug Set (Ceramic)",
+    "brand": "Arrabi",
+    "unit": "2 pcs",
+    "price": 449,
+    "mrp": 2159,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1771226423238-1106.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 571243,
+    "name": "Ugaoo Peace Lily Plant with Ibiza Pot",
+    "brand": "Ugaoo",
+    "unit": "1 pc",
+    "price": 239,
+    "mrp": 399,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/26a04f00-d618-4d1b-ba05-d1c5b5ee10ab.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 558604,
+    "name": "Nestasia Ceramic Serving Bowl with Handle (Blue, Yellow)",
+    "brand": "Nestasia",
+    "unit": "1 pc",
+    "price": 694,
+    "mrp": 1015,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1e170e86-ed2c-4792-90fb-10a0ad13920a.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 566630,
+    "name": "Prestige Judge Electric Kettle (1.5 ltr)",
+    "brand": "Prestige",
+    "unit": "1 unit",
+    "price": 599,
+    "mrp": 1265,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/fa26aff6-c5d6-4b15-a19a-db007a2bcdc1.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 591269,
+    "name": "Chumbak Jaali Gift Set Coffee Mug (Ceramic)",
+    "brand": "Chumbak",
+    "unit": "3 pcs",
+    "price": 933,
+    "mrp": 1795,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786353619329-195.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 568053,
+    "name": "The Earth Store Glam Studio Coffee Mug Set (Ceramic)",
+    "brand": "The Earth Store",
+    "unit": "2 pcs",
+    "price": 299,
+    "mrp": 849,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1786342682553-102.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 1365916,
+    "name": "Arrabi Gifting Coffee Mug Set With Tray (Ceramic)",
+    "brand": "Arrabi",
+    "unit": "1 set",
+    "price": 899,
+    "mrp": 3989,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1785131413430-487.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 450384,
+    "name": "Rose (Flowers & Petals)",
+    "brand": "Freshbury",
+    "unit": "100 g",
+    "price": 39,
+    "mrp": 47,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783600714662-26.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 626133,
+    "name": "Parage Stainless Steel Ice Cream Dessert Spoon Set (12 Pcs, Silver)",
+    "brand": "Parage",
+    "unit": "12 pcs",
+    "price": 299,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/1cf6fb89-3e7a-4f56-9146-7f226db0ea4e.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 562383,
+    "name": "Fackelmann Happy Kitchen Medium Strainer (Stainless Steel)",
+    "brand": "Fackelmann Happy Kitchen",
+    "unit": "1 pc",
+    "price": 126,
+    "mrp": 279,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/adcca404-a1c6-43c8-84f7-d136a89e127d.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "coffee mug set"
+    ]
+  },
+  {
+    "pid": 883778,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 699,
+    "mrp": 1999,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 776449,
+    "name": "Glassence Cut Rock Whiskey Glass Set (Glass)",
+    "brand": "Glassence",
+    "unit": "6 pcs",
+    "price": 349,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776789800043-6.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 701943,
+    "name": "DeliBohemi Whiskey Glass Set (Glass)",
+    "brand": "DeliBohemi",
+    "unit": "6 pc",
+    "price": 389,
+    "mrp": 1799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b8738d7f-0142-4370-abe0-30fc18771e3a.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 737430,
+    "name": "Glassence Compact Premium Whiskey Glass Set (Glass)",
+    "brand": "Glassence",
+    "unit": "6 pcs",
+    "price": 299,
+    "mrp": 699,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4940ca7a-0bbd-4d95-b857-7b3df467cb7f.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 744171,
+    "name": "DeliBohemi Premium Whiskey Glass Set (Glass)",
+    "brand": "DeliBohemi",
+    "unit": "6 pcs",
+    "price": 459,
+    "mrp": 1799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/bb039cb9-5997-4edf-824e-4c2e905f9091.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 617374,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 779,
+    "mrp": 995,
+    "image_url": null,
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 806043,
+    "name": "Sipologie Axis Whiskey Glass Set (Glass)",
+    "brand": "Sipologie",
+    "unit": "2 pcs",
+    "price": 399,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/88a36dcfa4ac4b62a657230eaf691a0a.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 744109,
+    "name": "DeliBohemi Whiskey Glass Set (Glass)",
+    "brand": "DeliBohemi",
+    "unit": "2 pcs",
+    "price": 179,
+    "mrp": 599,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/31766c3d-8e3c-4974-a3d4-a963dd116518.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 567711,
+    "name": "Nestasia Crystal Whiskey Glass Set (200ml, Amber)",
+    "brand": "Nestasia",
+    "unit": "6 pcs",
+    "price": 1275,
+    "mrp": 1700,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/497097b1-ff80-463f-829d-80e9d8e1b62a.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 507320,
+    "name": "Ocean Centra Whiskey Glass Set",
+    "brand": "Ocean",
+    "unit": "6 pcs",
+    "price": 659,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/bd477b2e-e57c-4948-aaf2-601e00cbd534.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 546049,
+    "name": "Cello Classix Whiskey Glass Set (325 ml)",
+    "brand": "Cello",
+    "unit": "6 pcs",
+    "price": 439,
+    "mrp": 515,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/a2e1784b-7050-4cf9-9c0a-ab99dd486f63.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 664526,
+    "name": "Cello Executive Beer Mug Set (Glass)",
+    "brand": "Cello",
+    "unit": "2 pcs",
+    "price": 279,
+    "mrp": 339,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/048f0835-5a9f-409a-8643-30c8576505be.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 566558,
+    "name": "Cello Shooter Shot Glass (Glass)",
+    "brand": "Cello",
+    "unit": "6 pcs",
+    "price": 199,
+    "mrp": 249,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/b29a692b-6aaa-4055-98a8-0849e7f0f773.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 614748,
+    "name": "DeliBohemi Wine Glass Set",
+    "brand": "DeliBohemi",
+    "unit": "2 pcs",
+    "price": 279,
+    "mrp": 899,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/86806804-0340-4fcc-ae59-83edeffc2eff.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 566545,
+    "name": "Cello Stern Beer Mug Set (Glass)",
+    "brand": "Cello",
+    "unit": "2 pcs",
+    "price": 399,
+    "mrp": 539,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772120332323-166.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 707882,
+    "name": "BINZO Premium Whiskey Glass Set (Glass)",
+    "brand": "BINZO",
+    "unit": "6 pcs",
+    "price": 1199,
+    "mrp": 1400,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/9e40484b-f010-4bc4-bd58-29e53362de18.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 566539,
+    "name": "Cello Classix Whiskey Glass Set",
+    "brand": "Cello",
+    "unit": "6 pcs",
+    "price": 369,
+    "mrp": 375,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/0c042217-f412-4a27-8fce-1f1467eaeff0.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 744102,
+    "name": "DeliBohemi Skull Beer Mug (Glass)",
+    "brand": "DeliBohemi",
+    "unit": "1 pc",
+    "price": 169,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/fc21dbad-c242-4b1f-b57d-0f529d3559a4.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 742054,
+    "name": "Femora Clear Beer Mug (Glass)",
+    "brand": "Femora",
+    "unit": "1 pc",
+    "price": 119,
+    "mrp": 180,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f3dcc46d-b7be-47c8-961f-96d3564c3bd6.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 482620,
+    "name": "Ice Cubes by Dras Ice",
+    "brand": "Dras Ice",
+    "unit": "1 kg",
+    "price": 75,
+    "mrp": 75,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/50e71b2f-e11f-4f53-88bb-9bf22756e13c.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 532345,
+    "name": "Picfest Peg Maker",
+    "brand": "Picfest",
+    "unit": "1 pc",
+    "price": 69,
+    "mrp": 100,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1783488455000-115.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 10554,
+    "name": "Catch Club Soda Water",
+    "brand": "Catch",
+    "unit": "750 ml",
+    "price": 25,
+    "mrp": 25,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/c0ae6113-5e17-4378-8f18-4bd778547989.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 521828,
+    "name": "Catch Club Soda Water",
+    "brand": "Catch",
+    "unit": "200 ml",
+    "price": 15,
+    "mrp": 15,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5db6f74f-20f1-49a5-bbe1-1bf3946dc44f.png",
+    "inventory": 46,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 536546,
+    "name": "Whole Farm Premium Raw Peanuts",
+    "brand": "Whole Farm",
+    "unit": "200 g",
+    "price": 48,
+    "mrp": 90,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ddc53631-745a-49ba-bef9-56c102ebe385.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 527610,
+    "name": "Whole Farm Premium Raw Peanuts",
+    "brand": "Whole Farm",
+    "unit": "500 g",
+    "price": 99,
+    "mrp": 135,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/5dc74731-3e3f-40ef-bcac-3ebc0a30b90e.png",
+    "inventory": 31,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 427620,
+    "name": "Jimmy's Sex on The Beach Cocktail Mix",
+    "brand": "Jimmy's",
+    "unit": "250 ml",
+    "price": 121,
+    "mrp": 125,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/e7263da4-edc4-4c50-97a6-dab5d6b2666f.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 457637,
+    "name": "Jimmy's Sex on The Beach Cocktail Mix",
+    "brand": "Jimmy's",
+    "unit": "4 x 250 ml",
+    "price": 425,
+    "mrp": 500,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778473839715-684.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 458372,
+    "name": "Jimmy's Sex on The Beach Cocktail Mix",
+    "brand": "Jimmy's",
+    "unit": "2 x 250 ml",
+    "price": 238,
+    "mrp": 250,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/cd8aa7e6-6ca8-47d0-89f0-52339287cc73.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 316,
+    "name": "Schweppes Indian Tonic Water",
+    "brand": "Schweppes",
+    "unit": "300 ml",
+    "price": 57,
+    "mrp": 60,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1777445131253-886.png",
+    "inventory": 41,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 533650,
+    "name": "Schweppes Indian Tonic Water",
+    "brand": "Schweppes",
+    "unit": "4 x 300 ml",
+    "price": 225,
+    "mrp": 240,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1778473839715-919.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 11150,
+    "name": "Uncle Chipps Spicy Treat Potato Chips",
+    "brand": "Uncle Chipps",
+    "unit": "53 g",
+    "price": 20,
+    "mrp": 20,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782185292662-91.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 534451,
+    "name": "Uncle Chipps Spicy Treat Potato Chips",
+    "brand": "Uncle Chipps",
+    "unit": "80 g",
+    "price": 34,
+    "mrp": 48,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1782185292662-124.png",
+    "inventory": 37,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 500005,
+    "name": "Cork Wine Bottle Opener Picfest",
+    "brand": "Picfest",
+    "unit": "1 pc",
+    "price": 129,
+    "mrp": 150,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/444eca5f-a04f-45a4-a633-159bbbb62f77.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 723106,
+    "name": "Kavi The Poetry-Art Project Old Monk Glass Set",
+    "brand": "Kavi The Poetry-Art Project",
+    "unit": "6 pcs",
+    "price": 999,
+    "mrp": 1799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/21e18b08-c664-4fcd-9363-c731eaf3a289.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 605,
+    "name": "Haldiram's Classic Salted Peanuts",
+    "brand": "Haldiram's",
+    "unit": "200 g",
+    "price": 65,
+    "mrp": 65,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/355563a7-3a0c-477e-8e41-1f0df08ecbba.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 518614,
+    "name": "Haldiram's Classic Salted Peanuts",
+    "brand": "Haldiram's",
+    "unit": "1 kg",
+    "price": 268,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/30d06216-2ac7-4281-8ebc-b8bcd4e4074d.png",
+    "inventory": 6,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 432775,
+    "name": "Lay's India's Magic Masala Potato Chips",
+    "brand": "Lay's",
+    "unit": "75 g",
+    "price": 35,
+    "mrp": 35,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776240040304-466.png",
+    "inventory": 35,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 240092,
+    "name": "Lay's India's Magic Masala Potato Chips",
+    "brand": "Lay's",
+    "unit": "58 g",
+    "price": 25,
+    "mrp": 25,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1776398906000-172.png",
+    "inventory": 50,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 491613,
+    "name": "",
+    "brand": null,
+    "unit": null,
+    "price": 378,
+    "mrp": 435,
+    "image_url": null,
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 626843,
+    "name": "Borosil Borosilicate Glass Round Storage Container",
+    "brand": "Borosil",
+    "unit": "1 pc",
+    "price": 279,
+    "mrp": 315,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772769316899-633.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 427640,
+    "name": "Borosil Borosilicate Glass Round Container",
+    "brand": "Borosil",
+    "unit": "1 pc",
+    "price": 419,
+    "mrp": 525,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772769316899-583.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 491612,
+    "name": "Borosil Borosilicate Glass Klip N Store Container (Square)",
+    "brand": "Borosil",
+    "unit": "1 pc",
+    "price": 326,
+    "mrp": 375,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772769316899-607.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 626853,
+    "name": "Borosil Borosilicate Glass Rectangle Storage Container",
+    "brand": "Borosil",
+    "unit": "1 pc",
+    "price": 349,
+    "mrp": 395,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772769316899-645.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 573964,
+    "name": "Femora Glass Round Container",
+    "brand": "Femora",
+    "unit": "1 pc",
+    "price": 313,
+    "mrp": 330,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/53a20dd8-4e57-442d-8663-b316f622d14c.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 427630,
+    "name": "Borosil Borosilicate Glass Square Container Set for Kitchen",
+    "brand": "Borosil",
+    "unit": "1 pc",
+    "price": 449,
+    "mrp": 525,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772769316899-572.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 427629,
+    "name": "Borosil Borosilicate Glass Square Container Set",
+    "brand": "Borosil",
+    "unit": "1 pc",
+    "price": 509,
+    "mrp": 635,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772769316899-560.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 741830,
+    "name": "HomeEssentials Borosilicate Glass Round Container",
+    "brand": "HomeEssentials",
+    "unit": "1 pc",
+    "price": 499,
+    "mrp": 1799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781231417091-316.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 563757,
+    "name": "Cutting Edge Glass Borosilicate Container Set",
+    "brand": "Cutting Edge",
+    "unit": "5 pcs",
+    "price": 1334,
+    "mrp": 2400,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770296355998-776.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 646257,
+    "name": "Majik Plastic Banana Container (Light Yellow, 2 pcs)",
+    "brand": "Majik",
+    "unit": "2 pcs",
+    "price": 199,
+    "mrp": 299,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770297274514-1064.png",
+    "inventory": 8,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 688626,
+    "name": "Fablue Glass Oil Dispenser Spray",
+    "brand": "Fablue",
+    "unit": "1 pc",
+    "price": 295,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/3aca9922-412c-479f-9a49-3614fd9a6e14.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 676619,
+    "name": "Flyngo Glass 2 in 1 Oil Dispenser Spray",
+    "brand": "Flyngo",
+    "unit": "1 pc",
+    "price": 299,
+    "mrp": 799,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/7744fd2b-c8bd-4304-97ae-ead7aca3c906.png",
+    "inventory": 10,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 769783,
+    "name": "Tinums Plastic Kitchen Storage Container Set",
+    "brand": "Tinums",
+    "unit": "6 pcs",
+    "price": 291,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1775110066052-51.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 791716,
+    "name": "Crestal Industries Brown Disposable Food Container & Lid",
+    "brand": "Crestal Industries",
+    "unit": "10 pcs",
+    "price": 349,
+    "mrp": 449,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/4f70bae5fee346dea2cd493068c53459.png",
+    "inventory": 7,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 526328,
+    "name": "Nayasa Plastic Fusion Container Set for Kitchen",
+    "brand": "Nayasa",
+    "unit": "3 pcs",
+    "price": 459,
+    "mrp": 589,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1770296355998-692.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 748395,
+    "name": "Tekcool Plastic Air Tight Container Set",
+    "brand": "Tekcool",
+    "unit": "3 pcs",
+    "price": 299,
+    "mrp": 999,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1769616403407-101.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 795520,
+    "name": "Borosil Borosilicate Glass Storage Container",
+    "brand": "Borosil",
+    "unit": "1 pc",
+    "price": 599,
+    "mrp": 745,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/ae164d7cf5f646f39de64568acfad6fd.png",
+    "inventory": 5,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 549119,
+    "name": "Borosil Universal Glass Lunch Box",
+    "brand": "Borosil",
+    "unit": "4 pcs",
+    "price": 1049,
+    "mrp": 1715,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/d1fb0ee2-6794-4afb-a7e5-91eed50c2868.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 723323,
+    "name": "URGO Medium Food Storage Zip Lock Bag",
+    "brand": "URGO",
+    "unit": "15 pcs",
+    "price": 109,
+    "mrp": 119,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772078357878-485.png",
+    "inventory": 2,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 664565,
+    "name": "Cello Glass Zenith Round Serving Bowl (Transparent)",
+    "brand": "Cello",
+    "unit": "1 pc",
+    "price": 179,
+    "mrp": 269,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/f3ac58b6-5498-4e6d-aa14-b6a0f7465479.png",
+    "inventory": 3,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 754441,
+    "name": "Unify Stainless Steel Lunch Box Set",
+    "brand": "Unify",
+    "unit": "3 pcs",
+    "price": 369,
+    "mrp": 499,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1779213811567-161.png",
+    "inventory": 4,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 559261,
+    "name": "Nestasia Luxe Velvet Lunch Bag (6 ltrs, Grey & Green)",
+    "brand": "Nestasia",
+    "unit": "1 pc",
+    "price": 775,
+    "mrp": 1500,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/877051bb-a736-4d94-bb86-e0cd0dd51a07.png",
+    "inventory": 1,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  },
+  {
+    "pid": 729262,
+    "name": "Ezypac Disposable Food Container",
+    "brand": "Ezypac",
+    "unit": "10 pcs",
+    "price": 189,
+    "mrp": 349,
+    "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1772083611698-61.png",
+    "inventory": 16,
+    "rating": null,
+    "inStock": true,
+    "capturedAt": "2026-09-25",
+    "queries": [
+      "borosil glass"
+    ]
+  }
+]

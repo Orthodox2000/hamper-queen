@@ -113,7 +113,16 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
     | 'snacks'
     | 'biscuits'
     | 'sweets'
+    | 'drinkware'
     | 'lights'
+    | 'electronics'
+    | 'fragrance'
+    | 'women_accessories'
+    | 'art_stationery'
+    | 'books'
+    | 'clothing'
+    | 'home_decor'
+    | 'grooming'
     | 'photos'
     | 'party_fun'
     | 'gift_wrap'
@@ -352,7 +361,16 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
     if (activeCategoryFilter === 'snacks') return item.category === 'snacks';
     if (activeCategoryFilter === 'biscuits') return item.category === 'biscuits';
     if (activeCategoryFilter === 'sweets') return item.category === 'sweets';
+    if (activeCategoryFilter === 'drinkware') return item.category === 'drinkware';
     if (activeCategoryFilter === 'lights') return item.category === 'lights';
+    if (activeCategoryFilter === 'electronics') return item.category === 'electronics';
+    if (activeCategoryFilter === 'fragrance') return item.category === 'fragrance';
+    if (activeCategoryFilter === 'women_accessories') return item.category === 'women_accessories';
+    if (activeCategoryFilter === 'art_stationery') return item.category === 'art_stationery';
+    if (activeCategoryFilter === 'books') return item.category === 'books';
+    if (activeCategoryFilter === 'clothing') return item.category === 'clothing';
+    if (activeCategoryFilter === 'home_decor') return item.category === 'home_decor';
+    if (activeCategoryFilter === 'grooming') return item.category === 'grooming';
     if (activeCategoryFilter === 'photos') return item.category === 'photos';
     if (activeCategoryFilter === 'party_fun') return item.category === 'party_fun';
     if (activeCategoryFilter === 'gift_wrap') return item.category === 'gift_wrap';
@@ -423,6 +441,8 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
     switch (b.category) {
       case 'keepsakes':
       case 'photos':
+      case 'drinkware':
+      case 'home_decor':
         return { category: 'keepsake_vessels', imageSvgId: 'keepsake-crystal-flutes' };
       case 'roses_decor':
         return { category: 'artisanal_bouquets', imageSvgId: 'bouquet-crimson-cascade' };
@@ -875,7 +895,16 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     { id: 'snacks', label: '🍟 Chips & Snacks' },
                     { id: 'biscuits', label: '🍪 Biscuits & Cookies' },
                     { id: 'sweets', label: '🍬 Candy & Sweets' },
+                    { id: 'drinkware', label: '☕ Mugs & Drinkware' },
                     { id: 'lights', label: '✨ Lights' },
+                    { id: 'electronics', label: '🎧 Electronics' },
+                    { id: 'fragrance', label: '🌸 Perfumes & Fragrance' },
+                    { id: 'women_accessories', label: '👜 Ladies Accessories' },
+                    { id: 'art_stationery', label: '🎨 Art & Stationery' },
+                    { id: 'books', label: '📚 Books' },
+                    { id: 'clothing', label: '👗 Clothing' },
+                    { id: 'home_decor', label: '🪴 Home Décor' },
+                    { id: 'grooming', label: '🧴 Grooming & Care' },
                     { id: 'photos', label: '📸 Polaroid Photos' },
                     { id: 'party_fun', label: '🎉 Party & Fun' },
                     { id: 'gift_wrap', label: '🎁 Gift Wrapping' },
