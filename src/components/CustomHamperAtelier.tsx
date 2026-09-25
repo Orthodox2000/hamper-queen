@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
-  BRANDED_ITEMS_CATALOG,
   PACKAGING_SIZE_OPTIONS,
   PRE_MADE_SUGGESTIONS,
   packagingArtSvgId,
   BrandedItem,
   PackagingSizeOption,
 } from '../data/brandedItemsData';
+import { ATELIER_CATALOG } from '../data/atelierCatalog';
 import { BoxVisualizer } from './BoxVisualizer';
 import { BrandedProductGraphic } from './BrandedProductGraphic';
 import { ItemGraphic } from './ItemGraphic';
@@ -73,7 +73,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
 
     if (initialItems && initialItems.length > 0) {
       initialItems.slice(0, PACKAGING_SIZE_OPTIONS[1].slotCount).forEach((item, idx) => {
-        const match = BRANDED_ITEMS_CATALOG.find((b) => b.name.toLowerCase().includes(item.name.toLowerCase())) || {
+        const match = ATELIER_CATALOG.find((b) => b.name.toLowerCase().includes(item.name.toLowerCase())) || {
           id: `custom-${item.id}`,
           name: item.name,
           brand: 'Custom',
@@ -93,9 +93,9 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
       });
     } else {
       // Welcoming starter in Medium box
-      initialSlots[0] = BRANDED_ITEMS_CATALOG[0]; // Silk Classic
-      initialSlots[1] = BRANDED_ITEMS_CATALOG[5]; // KitKat
-      initialSlots[2] = BRANDED_ITEMS_CATALOG.find((i) => i.id === 'item-fairy-warm-lights') || BRANDED_ITEMS_CATALOG[11];
+      initialSlots[0] = ATELIER_CATALOG[0]; // Silk Classic
+      initialSlots[1] = ATELIER_CATALOG.find((i) => i.id === 'item-nestle-kitkat-4finger') || ATELIER_CATALOG[5];
+      initialSlots[2] = ATELIER_CATALOG.find((i) => i.id === 'item-fairy-warm-lights') || ATELIER_CATALOG[11];
     }
     return initialSlots;
   });
@@ -107,7 +107,19 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
 
   // --- 4. STATE: Active Category Filter in Item Catalog ---
   const [activeCategoryFilter, setActiveCategoryFilter] = useState<
-    'all' | 'cadbury' | 'nestle' | 'premium' | 'lights' | 'photos' | 'party_fun' | 'gift_wrap' | 'keepsakes'
+    | 'all'
+    | 'chocolates'
+    | 'premium'
+    | 'snacks'
+    | 'biscuits'
+    | 'sweets'
+    | 'lights'
+    | 'photos'
+    | 'party_fun'
+    | 'gift_wrap'
+    | 'keepsakes'
+    | 'cadbury'
+    | 'nestle'
   >('all');
 
   // --- 5. STATE: Photo Customizer Modal ---
@@ -270,7 +282,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
     setSelectedPackaging(pkg);
     const newSlots = Array(pkg.slotCount).fill(null);
     sugg.itemIds.forEach((id, idx) => {
-      const found = BRANDED_ITEMS_CATALOG.find((item) => item.id === id);
+      const found = ATELIER_CATALOG.find((item) => item.id === id);
       if (found && idx < newSlots.length) {
         newSlots[idx] = found;
       }
@@ -322,16 +334,30 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
   };
 
   // Filter Catalog Items
-  const filteredCatalogItems = BRANDED_ITEMS_CATALOG.filter((item) => {
+  const filteredCatalogItems = ATELIER_CATALOG.filter((item) => {
     if (activeCategoryFilter === 'all') return true;
-    if (activeCategoryFilter === 'cadbury') return item.brand === 'Cadbury';
-    if (activeCategoryFilter === 'nestle') return item.brand === 'Nestle';
-    if (activeCategoryFilter === 'premium') return item.brand === 'Ferrero' || item.category === 'premium_bars';
+    if (activeCategoryFilter === 'cadbury') return item.brand.startsWith('Cadbury');
+    if (activeCategoryFilter === 'nestle')
+      return item.brand.startsWith('Nestle') || item.brand === 'KitKat Delights' || item.brand === 'Milkybar';
+    if (activeCategoryFilter === 'chocolates') return item.category === 'chocolates';
+    if (activeCategoryFilter === 'premium')
+      return (
+        item.brand === 'Ferrero Rocher' ||
+        item.brand === 'Ferrero Raffaello' ||
+        item.brand === 'Milka' ||
+        item.brand === 'Galaxy' ||
+        item.brand === 'Bounty' ||
+        item.category === 'premium_bars'
+      );
+    if (activeCategoryFilter === 'snacks') return item.category === 'snacks';
+    if (activeCategoryFilter === 'biscuits') return item.category === 'biscuits';
+    if (activeCategoryFilter === 'sweets') return item.category === 'sweets';
     if (activeCategoryFilter === 'lights') return item.category === 'lights';
     if (activeCategoryFilter === 'photos') return item.category === 'photos';
     if (activeCategoryFilter === 'party_fun') return item.category === 'party_fun';
     if (activeCategoryFilter === 'gift_wrap') return item.category === 'gift_wrap';
-    if (activeCategoryFilter === 'keepsakes') return item.brand === 'Keepsake' || item.category === 'roses_decor';
+    if (activeCategoryFilter === 'keepsakes')
+      return item.brand === 'Keepsake' || item.category === 'roses_decor' || item.category === 'keepsakes';
     return true;
   });
 
@@ -844,12 +870,16 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     { id: 'all', label: 'All Items' },
                     { id: 'cadbury', label: 'Cadbury & Silk' },
                     { id: 'nestle', label: 'KitKat & Milkybar' },
-                    { id: 'premium', label: 'Ferrero Rocher' },
+                    { id: 'chocolates', label: 'Chocolates' },
+                    { id: 'premium', label: 'Premium Bars' },
+                    { id: 'snacks', label: '🍟 Chips & Snacks' },
+                    { id: 'biscuits', label: '🍪 Biscuits & Cookies' },
+                    { id: 'sweets', label: '🍬 Candy & Sweets' },
                     { id: 'lights', label: '✨ Lights' },
                     { id: 'photos', label: '📸 Polaroid Photos' },
                     { id: 'party_fun', label: '🎉 Party & Fun' },
                     { id: 'gift_wrap', label: '🎁 Gift Wrapping' },
-                    { id: 'keepsakes', label: 'Teddy & Roses' },
+                    { id: 'keepsakes', label: 'Teddy, Roses & Keepsakes' },
                   ].map((cat) => (
                     <button
                       key={cat.id}

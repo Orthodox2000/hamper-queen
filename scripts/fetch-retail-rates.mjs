@@ -1,9 +1,13 @@
-// Bakes retail rates into src/data/retailRates.ts.
+// Bakes retail rates into src/data/retailRates.ts + src/data/retailDataset.json.
 // Merges:
 //   1. scripts/.retail-raw.json  — hand-curated records (notes, bouquet SKUs) from scrape_blinkit.py
 //   2. scripts/.retail-picks.json — curated key->pid picks resolved against scripts/.retail-harvest.json
 //                                  (bulk harvest from Blinkit product pages)
 // Downloads missing product images (cdn.grofers.com is hotlinkable) into public/retail/<key>.jpg.
+//
+// retailDataset.json preserves the ORIGINAL source metadata for every item — the remote
+// image URL, Blinkit product pid, source page, brand/name/unit/prices and capture date —
+// so any local image can be re-downloaded or re-referenced later without re-scraping.
 //
 // Usage: node scripts/fetch-retail-rates.mjs
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
@@ -17,6 +21,7 @@ const PICKS_FILE = path.join(__dirname, '.retail-picks.json');
 const HARVEST_FILE = path.join(__dirname, '.retail-harvest.json');
 const IMG_DIR = path.join(ROOT, 'public', 'retail');
 const OUT_FILE = path.join(ROOT, 'src', 'data', 'retailRates.ts');
+const DATASET_FILE = path.join(ROOT, 'src', 'data', 'retailDataset.json');
 
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36';
@@ -93,6 +98,8 @@ for (const pick of picks) {
     rating: rec.rating ?? null,
     image: rec.localImage,
     prid: rec.pid,
+    imageUrlOriginal: rec.image_url ?? null,
+    sourceUrl: rec.sourceUrl ?? rec.pageUrl ?? null,
     capturedAt: rec.capturedAt ?? '2026-09-25',
     variants: [{ unit: rec.unit ?? '', price: rec.price, mrp: rec.mrp ?? rec.price }],
   });
@@ -156,3 +163,28 @@ export function retailRate(key: string): RetailRateItem | undefined {
 
 await writeFile(OUT_FILE, ts, 'utf8');
 console.log(`Wrote ${data.length} records (${curated.length} curated + ${added.length} picked) -> src/data/retailRates.ts`);
+
+const datasetJson = {
+  source: 'https://www.blinkit.com/',
+  locality: `${locality} (chain ${chainId})`,
+  capturedAt,
+  description:
+    'Original-source catalog manifest. Every retail product image is mirrored locally under /retail/<key>.jpg; imageUrlOriginal/sourceUrl preserve the origin for re-download or re-reference. Do not edit by hand — re-run: node scripts/fetch-retail-rates.mjs',
+  items: data.map((r) => ({
+    key: r.key,
+    prid: r.prid,
+    brand: r.brand,
+    name: r.name,
+    unit: r.unit,
+    price: r.price,
+    mrp: r.mrp,
+    rating: r.rating,
+    localImage: r.image,
+    imageUrlOriginal: [...curated, ...added].find((s) => s.key === r.key)?.imageUrlOriginal ?? null,
+    sourceUrl: [...curated, ...added].find((s) => s.key === r.key)?.sourceUrl ?? null,
+    capturedAt: r.capturedAt,
+  })),
+};
+
+await writeFile(DATASET_FILE, JSON.stringify(datasetJson, null, 2), 'utf8');
+console.log(`Wrote dataset manifest -> src/data/retailDataset.json`);

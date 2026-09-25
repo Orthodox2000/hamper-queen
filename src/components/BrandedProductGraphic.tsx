@@ -22,7 +22,28 @@ export const BrandedProductGraphic: React.FC<BrandedProductGraphicProps> = ({
     lg: 'w-28 h-28 sm:w-32 sm:h-32',
   }[size];
 
-  // 1. Polaroid Photo Keepsake Frame
+  // 1. REAL PRODUCT PHOTO (local /retail/<key>.jpg) — used by every retail-backed item.
+  if (item.image) {
+    return (
+      <div className={`relative flex items-center justify-center ${dimensions} ${className}`}>
+        <div className="w-full h-full bg-white rounded-md overflow-hidden shadow-xs border border-stone-200 group-hover:shadow-md transition-all">
+          <img
+            src={item.image}
+            alt={item.name}
+            loading="lazy"
+            decoding="async"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-contain"
+          />
+          {isLit && (
+            <div className="absolute inset-0 bg-yellow-300/25 mix-blend-screen pointer-events-none animate-pulse" />
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // 2. Polaroid Photo Keepsake Frame
   if (item.isPhoto && item.photoUrl) {
     return (
       <div className={`relative flex items-center justify-center ${dimensions} ${className}`}>

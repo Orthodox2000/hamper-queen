@@ -59,21 +59,21 @@ export const BulkOrdersSection: React.FC<BulkOrdersSectionProps> = ({ onOpenBulk
       icon: Heart,
       desc: 'Opulent return gifts for baraatis, mehendi favors, dry fruit trays, and bridal trousseau trunks tailored to wedding color palettes.',
       tag: 'Weddings',
-      image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=85&w=800&auto=format&fit=crop',
+      image: '/hero/bulk-podium.jpg',
     },
     {
       title: 'Party Gifts & Baby Showers',
       icon: Users,
       desc: 'Theme-coordinated favors for first birthdays, sweet-sixteen celebrations, baby welcoming, and bachelorette party boxes with custom names.',
       tag: 'Celebrations',
-      image: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?q=85&w=800&auto=format&fit=crop',
+      image: '/hero/bulk-celebration.jpg',
     },
     {
       title: 'Corporate & Festive Gifting',
       icon: Building2,
       desc: 'Diwali, Eid, Christmas, and New Year employee appreciation and VIP client luxury gift boxes with company monogram engraving.',
       tag: 'Corporate',
-      image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=85&w=800&auto=format&fit=crop',
+      image: '/packaging/packaging-small-box.jpg',
     },
   ];
 

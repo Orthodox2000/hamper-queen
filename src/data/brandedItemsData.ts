@@ -1,14 +1,26 @@
 export interface BrandedItem {
   id: string;
   name: string;
-  brand: 'Cadbury' | 'Nestle' | 'Ferrero' | 'Amul' | 'Mars' | 'Sunfeast' | 'Keepsake' | 'Custom' | 'PartyQueen' | 'LuxeGlow';
-  category: 'chocolates' | 'premium_bars' | 'sweets' | 'keepsakes' | 'roses_decor' | 'lights' | 'photos' | 'party_fun' | 'gift_wrap';
+  brand: string;
+  category:
+    | 'chocolates'
+    | 'premium_bars'
+    | 'sweets'
+    | 'keepsakes'
+    | 'roses_decor'
+    | 'lights'
+    | 'photos'
+    | 'party_fun'
+    | 'gift_wrap'
+    | 'snacks'
+    | 'biscuits';
   simpleName: string; // Indian audience friendly English name
   description: string; // Pure simple Indian English description
   descriptionHinglish?: string;
   weightOrQty: string;
   unitPriceApprox: number;
   tag?: string;
+  image?: string; // Local product photograph (e.g. /retail/<key>.jpg) rendered when present
   isPhoto?: boolean;
   photoUrl?: string;
   photoCaption?: string;
@@ -72,37 +84,37 @@ export const SAMPLE_POLAROID_PRESETS = [
   {
     id: 'photo-preset-1',
     title: 'Romantic Couple Moment',
-    url: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=800&auto=format&fit=crop',
+    url: '/polaroids/polaroid-preset-1.jpg',
     caption: 'Forever & Always ❤️',
   },
   {
     id: 'photo-preset-2',
     title: 'Birthday Celebration Smile',
-    url: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=800&auto=format&fit=crop',
+    url: '/polaroids/polaroid-preset-2.jpg',
     caption: 'Cheers to another magical year! 🎂',
   },
   {
     id: 'photo-preset-3',
     title: 'Best Friends Golden Hour',
-    url: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop',
+    url: '/polaroids/polaroid-preset-3.jpg',
     caption: 'Friends who become family ✨',
   },
   {
     id: 'photo-preset-4',
     title: 'Sweet Family Milestone',
-    url: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=800&auto=format&fit=crop',
+    url: '/polaroids/polaroid-preset-4.jpg',
     caption: 'Pure family happiness 💖',
   },
   {
     id: 'photo-preset-5',
     title: 'Anniversary Memory',
-    url: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=800&auto=format&fit=crop',
+    url: '/polaroids/polaroid-preset-5.jpg',
     caption: 'Every love story is beautiful 💍',
   },
   {
     id: 'photo-preset-6',
     title: 'Candid Sunshine Laugh',
-    url: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=800&auto=format&fit=crop',
+    url: '/polaroids/polaroid-preset-6.jpg',
     caption: 'Keep shining bright 🌟',
   },
 ];
@@ -404,7 +416,7 @@ export const BRANDED_ITEMS_CATALOG: BrandedItem[] = [
     weightOrQty: '1 Custom Photo Print',
     unitPriceApprox: 80,
     isPhoto: true,
-    photoUrl: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=800&auto=format&fit=crop',
+    photoUrl: '/polaroids/polaroid-preset-1.jpg',
     photoCaption: 'Forever Memories ❤️',
     tag: 'Personal Memory',
     colorScheme: {
@@ -424,7 +436,7 @@ export const BRANDED_ITEMS_CATALOG: BrandedItem[] = [
     weightOrQty: '1 Photo + Wooden Peg',
     unitPriceApprox: 80,
     isPhoto: true,
-    photoUrl: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=800&auto=format&fit=crop',
+    photoUrl: '/polaroids/polaroid-preset-5.jpg',
     photoCaption: 'With All My Heart 💖',
     tag: 'Romantic Keepsake',
     colorScheme: {
@@ -444,7 +456,7 @@ export const BRANDED_ITEMS_CATALOG: BrandedItem[] = [
     weightOrQty: '1 Photo Print',
     unitPriceApprox: 80,
     isPhoto: true,
-    photoUrl: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=800&auto=format&fit=crop',
+    photoUrl: '/polaroids/polaroid-preset-2.jpg',
     photoCaption: 'Happy Birthday to You! 🎂',
     tag: 'Birthday Special',
     colorScheme: {
@@ -647,7 +659,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     approxPriceRange: 'INR 149 – INR 249 (+delivery)',
     recommendedFor: 'Pocket Surprise, Token of Appreciation, Return Favors',
     popularBadge: 'Starts INR 149',
-    imageUrl: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=900&auto=format&fit=crop',
+    imageUrl: '/packaging/packaging-small-box.jpg',
     bgHex: '#FFFDF9',
     borderHex: '#D4AF37',
     illustrationType: 'small_box',
@@ -661,7 +673,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     dimensions: '20 × 15 × 8 cm',
     approxPriceRange: 'INR 199 – INR 349 (+delivery)',
     recommendedFor: 'Birthdays, Thank You Tokens, Rakhi & Return Favors',
-    imageUrl: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=900&auto=format&fit=crop',
+    imageUrl: '/packaging/packaging-small-box.jpg',
     bgHex: '#FFFDF9',
     borderHex: '#D4AF37',
     illustrationType: 'small_box',
@@ -676,7 +688,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     approxPriceRange: 'INR 299 – INR 449',
     recommendedFor: 'Best Friend Birthday, Anniversary, Sweet Surprises',
     popularBadge: 'Most Popular',
-    imageUrl: 'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=80&w=900&auto=format&fit=crop',
+    imageUrl: '/packaging/packaging-medium-box.jpg',
     bgHex: '#FAF8F5',
     borderHex: '#B8860B',
     illustrationType: 'medium_box',
@@ -691,7 +703,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     approxPriceRange: 'INR 399 – INR 599',
     recommendedFor: 'Special Anniversary, Romantic Proposal, Engagement',
     popularBadge: 'Royal Choice',
-    imageUrl: 'https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=900&auto=format&fit=crop',
+    imageUrl: '/packaging/packaging-large-box.jpg',
     bgHex: '#FFFDF9',
     borderHex: '#D4AF37',
     illustrationType: 'large_box',
@@ -706,7 +718,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     approxPriceRange: 'INR 499 – INR 699',
     recommendedFor: 'Milestone Birthdays, Wedding Trousseau, VVIP Gifting',
     popularBadge: 'Luxury Velvet',
-    imageUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=900&auto=format&fit=crop',
+    imageUrl: '/packaging/packaging-velvet-hatbox.jpg',
     bgHex: '#FDF2F8',
     borderHex: '#EC4899',
     illustrationType: 'velvet_hatbox',
@@ -721,7 +733,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     approxPriceRange: 'INR 499 – INR 699',
     recommendedFor: 'Jewelry & Chocolate Surprises, Keepsake Memories',
     popularBadge: 'Crystal Clear',
-    imageUrl: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=900&auto=format&fit=crop',
+    imageUrl: '/packaging/packaging-acrylic-chest.jpg',
     bgHex: '#F0FDFA',
     borderHex: '#0D9488',
     illustrationType: 'acrylic_chest',
@@ -736,7 +748,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     approxPriceRange: 'INR 599 – INR 899',
     recommendedFor: 'Weddings, Trousseau, 50th Birthdays & Corporate Honors',
     popularBadge: 'Prestige Trunk',
-    imageUrl: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=900&auto=format&fit=crop',
+    imageUrl: '/packaging/packaging-xl-trunk.jpg',
     bgHex: '#FAF6EC',
     borderHex: '#8C6821',
     illustrationType: 'xl_trunk',
@@ -752,7 +764,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     dimensions: '35 cm Height',
     approxPriceRange: 'INR 299 – INR 449',
     recommendedFor: 'College Birthday, Congratulations, Sweet Gestures',
-    imageUrl: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?q=80&w=900&auto=format&fit=crop',
+    imageUrl: '/packaging/packaging-mini-bouquet.jpg',
     bgHex: '#FFF5F7',
     borderHex: '#FB7185',
     illustrationType: 'mini_bouquet',
@@ -767,7 +779,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     approxPriceRange: 'INR 399 – INR 549',
     recommendedFor: 'Long-Distance Love, Best Friends, Family Memories',
     popularBadge: 'Only Image Bouquet',
-    imageUrl: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?q=80&w=900&auto=format&fit=crop',
+    imageUrl: '/packaging/packaging-photo-bouquet.jpg',
     bgHex: '#EEF2FF',
     borderHex: '#6366F1',
     illustrationType: 'photo_bouquet',
@@ -782,7 +794,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     approxPriceRange: 'INR 449 – INR 649',
     recommendedFor: 'Birthday Surprise, Valentine Celebrations, Special Milestones',
     popularBadge: 'Bouquet Bestseller',
-    imageUrl: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?q=80&w=900&auto=format&fit=crop',
+    imageUrl: '/packaging/packaging-classic-bouquet.jpg',
     bgHex: '#FFF0F3',
     borderHex: '#E11D48',
     illustrationType: 'classic_bouquet',
@@ -797,7 +809,7 @@ export const PACKAGING_SIZE_OPTIONS: PackagingSizeOption[] = [
     approxPriceRange: 'INR 599 – INR 799',
     recommendedFor: 'Anniversary Surprise, Love Proposal, Big Celebration',
     popularBadge: 'Grand Showstopper',
-    imageUrl: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=900&auto=format&fit=crop',
+    imageUrl: '/packaging/packaging-heart-bouquet.jpg',
     bgHex: '#FFF0F3',
     borderHex: '#BE123C',
     illustrationType: 'heart_bouquet',

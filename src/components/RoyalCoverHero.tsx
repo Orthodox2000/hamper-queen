@@ -49,31 +49,31 @@ const HERO_BACKGROUND_SCENES = [
   {
     id: 'sovereign_hamper',
     label: 'Artisan Hamper',
-    url: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=45&w=1200&auto=format&fit=crop',
+    url: '/packaging/packaging-small-box.jpg',
     alt: 'Opulent celebration hamper with fine ribbons and artisanal chocolates',
   },
   {
     id: 'velvet_roses_bouquet',
     label: 'Handcrafted Bouquet',
-    url: 'https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=45&w=1200&auto=format&fit=crop',
+    url: '/hero/hero-roses-bouquet.jpg',
     alt: 'Hand-tied velvet crimson rose bouquet wrapped in luxury florist paper',
   },
   {
     id: 'bespoke_gourmet_crate',
     label: 'Luxury Gift Box',
-    url: 'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=45&w=1200&auto=format&fit=crop',
+    url: '/packaging/packaging-medium-box.jpg',
     alt: 'Luxury custom presentation gift crate with gold-tied ribbons and warm light',
   },
   {
     id: 'candlelit_keepsake',
     label: 'Keepsake & Lights',
-    url: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=45&w=1200&auto=format&fit=crop',
+    url: '/packaging/packaging-heart-bouquet.jpg',
     alt: 'Romantic candlelit photo and chocolate hamper with fairy lights',
   },
   {
     id: 'imperial_trunk',
     label: 'Imperial Trunk',
-    url: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=45&w=1200&auto=format&fit=crop',
+    url: '/packaging/packaging-xl-trunk.jpg',
     alt: 'Royal vintage leather and gold celebration trunk hamper',
   },
 ];

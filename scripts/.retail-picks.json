@@ -1,52 +1,550 @@
 [
-  { "key": "silk_60g", "pid": 545 },
-  { "key": "silk_oreo_58g", "pid": 353817 },
-  { "key": "silk_roast_almond_52g", "pid": 403491 },
-  { "key": "silk_ganache_54g", "pid": 525880 },
-  { "key": "silk_mousse_49g", "pid": 437645 },
-  { "key": "silk_fn_51g", "pid": 110016 },
-  { "key": "dairy_milk_46g", "pid": 313400 },
-  { "key": "dairy_milk_crackle_36g", "pid": 543 },
-  { "key": "dairy_milk_crispello_35g", "pid": 440219 },
-  { "key": "fivestar_35g", "pid": 248000 },
-  { "key": "fivestar_oreo_40g", "pid": 449053 },
-  { "key": "perk_plus_40g", "pid": 593695 },
-  { "key": "fuse_43g", "pid": 336631 },
-  { "key": "gems_duo_25g", "pid": 110655 },
-  { "key": "nutties_30g", "pid": 34422 },
-  { "key": "celebrations_97g", "pid": 676137 },
-  { "key": "dm_minitreats_98g", "pid": 11020 },
-  { "key": "mars_40g", "pid": 1381168 },
-  { "key": "snickers_40g", "pid": 560 },
-  { "key": "milkybar_choo_80g", "pid": 546854 },
-  { "key": "milkybar_butterscotch_45g", "pid": 733485 },
-  { "key": "kitkat_chunky_40g", "pid": 499739 },
-  { "key": "kitkat_dark_50g", "pid": 564750 },
-  { "key": "kitkat_pops_32g", "pid": 733484 },
-  { "key": "kinder_schokobons_22g", "pid": 531509 },
-  { "key": "galaxy_smooth_30g", "pid": 492467 },
-  { "key": "galaxy_cookie_50g", "pid": 480030 },
-  { "key": "hershey_cookies_38g", "pid": 403536 },
-  { "key": "hershey_kisses_36g", "pid": 402563 },
-  { "key": "ferrero_raffaello_3pcs", "pid": 559526 },
-  { "key": "oreo_vanilla_125g", "pid": 331906 },
-  { "key": "oreo_choco_125g", "pid": 26059 },
-  { "key": "hide_seek_100g", "pid": 11102 },
-  { "key": "bourbon_99g", "pid": 206572 },
-  { "key": "parle_g_250g", "pid": 17710 },
-  { "key": "parle_g_gold_187g", "pid": 18357 },
-  { "key": "monaco_cheeslings_150g", "pid": 246192 },
-  { "key": "monaco_light_185g", "pid": 263545 },
-  { "key": "dark_fantasy_69g", "pid": 509 },
-  { "key": "lays_classic_51g", "pid": 57435 },
-  { "key": "pringles_original_107g", "pid": 594 },
-  { "key": "pringles_sour_onion_107g", "pid": 33863 },
-  { "key": "pringles_peri_102g", "pid": 373658 },
-  { "key": "kurkure_masala_75g", "pid": 67372 },
-  { "key": "kurkure_chilli_79g", "pid": 116824 },
-  { "key": "kurkure_puffcorn_58g", "pid": 367837 },
-  { "key": "bingo_madangles_60g", "pid": 35373 },
-  { "key": "doritos_sweetchilli_75g", "pid": 373410 },
-  { "key": "chupa_sour_bites_66g", "pid": 361832 },
-  { "key": "chupa_sour_belt_58g", "pid": 368393 }
+  {
+    "key": "silk_60g",
+    "pid": 545
+  },
+  {
+    "key": "silk_oreo_58g",
+    "pid": 353817
+  },
+  {
+    "key": "silk_roast_almond_52g",
+    "pid": 403491
+  },
+  {
+    "key": "silk_ganache_54g",
+    "pid": 525880
+  },
+  {
+    "key": "silk_mousse_49g",
+    "pid": 437645
+  },
+  {
+    "key": "silk_fn_51g",
+    "pid": 110016
+  },
+  {
+    "key": "dairy_milk_46g",
+    "pid": 313400
+  },
+  {
+    "key": "dairy_milk_crackle_36g",
+    "pid": 543
+  },
+  {
+    "key": "dairy_milk_crispello_35g",
+    "pid": 440219
+  },
+  {
+    "key": "fivestar_35g",
+    "pid": 248000
+  },
+  {
+    "key": "fivestar_oreo_40g",
+    "pid": 449053
+  },
+  {
+    "key": "perk_plus_40g",
+    "pid": 593695
+  },
+  {
+    "key": "fuse_43g",
+    "pid": 336631
+  },
+  {
+    "key": "gems_duo_25g",
+    "pid": 110655
+  },
+  {
+    "key": "nutties_30g",
+    "pid": 34422
+  },
+  {
+    "key": "celebrations_97g",
+    "pid": 676137
+  },
+  {
+    "key": "dm_minitreats_98g",
+    "pid": 11020
+  },
+  {
+    "key": "mars_40g",
+    "pid": 1381168
+  },
+  {
+    "key": "snickers_40g",
+    "pid": 560
+  },
+  {
+    "key": "milkybar_choo_80g",
+    "pid": 546854
+  },
+  {
+    "key": "milkybar_butterscotch_45g",
+    "pid": 733485
+  },
+  {
+    "key": "kitkat_chunky_40g",
+    "pid": 499739
+  },
+  {
+    "key": "kitkat_dark_50g",
+    "pid": 564750
+  },
+  {
+    "key": "kitkat_pops_32g",
+    "pid": 733484
+  },
+  {
+    "key": "kinder_schokobons_22g",
+    "pid": 531509
+  },
+  {
+    "key": "galaxy_smooth_30g",
+    "pid": 492467
+  },
+  {
+    "key": "galaxy_cookie_50g",
+    "pid": 480030
+  },
+  {
+    "key": "hershey_cookies_38g",
+    "pid": 403536
+  },
+  {
+    "key": "hershey_kisses_36g",
+    "pid": 402563
+  },
+  {
+    "key": "ferrero_raffaello_3pcs",
+    "pid": 559526
+  },
+  {
+    "key": "oreo_vanilla_125g",
+    "pid": 331906
+  },
+  {
+    "key": "oreo_choco_125g",
+    "pid": 26059
+  },
+  {
+    "key": "hide_seek_100g",
+    "pid": 11102
+  },
+  {
+    "key": "bourbon_99g",
+    "pid": 206572
+  },
+  {
+    "key": "parle_g_250g",
+    "pid": 17710
+  },
+  {
+    "key": "parle_g_gold_187g",
+    "pid": 18357
+  },
+  {
+    "key": "monaco_cheeslings_150g",
+    "pid": 246192
+  },
+  {
+    "key": "monaco_light_185g",
+    "pid": 263545
+  },
+  {
+    "key": "dark_fantasy_69g",
+    "pid": 509
+  },
+  {
+    "key": "lays_classic_51g",
+    "pid": 57435
+  },
+  {
+    "key": "pringles_original_107g",
+    "pid": 594
+  },
+  {
+    "key": "pringles_sour_onion_107g",
+    "pid": 33863
+  },
+  {
+    "key": "pringles_peri_102g",
+    "pid": 373658
+  },
+  {
+    "key": "kurkure_masala_75g",
+    "pid": 67372
+  },
+  {
+    "key": "kurkure_chilli_79g",
+    "pid": 116824
+  },
+  {
+    "key": "kurkure_puffcorn_58g",
+    "pid": 367837
+  },
+  {
+    "key": "bingo_madangles_60g",
+    "pid": 35373
+  },
+  {
+    "key": "doritos_sweetchilli_75g",
+    "pid": 373410
+  },
+  {
+    "key": "chupa_sour_bites_66g",
+    "pid": 361832
+  },
+  {
+    "key": "chupa_sour_belt_58g",
+    "pid": 368393
+  },
+  {
+    "key": "kitkat_share_snap_57g",
+    "pid": 425721
+  },
+  {
+    "key": "kitkat_minis_111g",
+    "pid": 383615
+  },
+  {
+    "key": "kitkat_gift_181g",
+    "pid": 701721
+  },
+  {
+    "key": "kitkat_delights_50g",
+    "pid": 380140
+  },
+  {
+    "key": "ferrero_moments_16pc",
+    "pid": 528089
+  },
+  {
+    "key": "ferrero_100g_box",
+    "pid": 566218
+  },
+  {
+    "key": "ferrero_bar_90g",
+    "pid": 742604
+  },
+  {
+    "key": "galaxy_minis_72g",
+    "pid": 525781
+  },
+  {
+    "key": "galaxy_dark_70_56g",
+    "pid": 503768
+  },
+  {
+    "key": "milka_oreo_90g",
+    "pid": 164002
+  },
+  {
+    "key": "milka_alpine_90g",
+    "pid": 777406
+  },
+  {
+    "key": "milka_hazelnut_95g",
+    "pid": 474411
+  },
+  {
+    "key": "milka_cowspot_90g",
+    "pid": 777409
+  },
+  {
+    "key": "bounty_50g",
+    "pid": 19527
+  },
+  {
+    "key": "bounty_minis_100g",
+    "pid": 3299
+  },
+  {
+    "key": "hershey_cnc_90g",
+    "pid": 403537
+  },
+  {
+    "key": "hershey_creamy_90g",
+    "pid": 403538
+  },
+  {
+    "key": "kinder_bueno_43g",
+    "pid": 675830
+  },
+  {
+    "key": "kinder_creamy_19g",
+    "pid": 436984
+  },
+  {
+    "key": "kinder_joy_pink_20g",
+    "pid": 16779
+  },
+  {
+    "key": "parle_elaichi_rusk_291g",
+    "pid": 46074
+  },
+  {
+    "key": "parle_milk_shakti_350g",
+    "pid": 488652
+  },
+  {
+    "key": "parle_g_royale_360g",
+    "pid": 539383
+  },
+  {
+    "key": "monaco_classic_371g",
+    "pid": 396110
+  },
+  {
+    "key": "monaco_cheeslings_2x",
+    "pid": 407747
+  },
+  {
+    "key": "colossal_5050_maska_114g",
+    "pid": 19176
+  },
+  {
+    "key": "brit_potazos_71g",
+    "pid": 480017
+  },
+  {
+    "key": "milkbikis_188g",
+    "pid": 11170
+  },
+  {
+    "key": "milkbikis_190g",
+    "pid": 33402
+  },
+  {
+    "key": "little_hearts_79g",
+    "pid": 223327
+  },
+  {
+    "key": "brit_gobbles_fruit_100g",
+    "pid": 336628
+  },
+  {
+    "key": "brit_gobbles_fruity_55g",
+    "pid": 108085
+  },
+  {
+    "key": "dark_fantasy_yumfills_242g",
+    "pid": 409925
+  },
+  {
+    "key": "dark_fantasy_desserts_100g",
+    "pid": 479090
+  },
+  {
+    "key": "oreo_bts_pancake_103g",
+    "pid": 791499
+  },
+  {
+    "key": "oreo_golden_108g",
+    "pid": 753771
+  },
+  {
+    "key": "oreo_vanilla_2x125g",
+    "pid": 389066
+  },
+  {
+    "key": "cadbury_5star_2pk",
+    "pid": 374402
+  },
+  {
+    "key": "cadbury_5star_96g",
+    "pid": 548961
+  },
+  {
+    "key": "cadbury_5star_oreo_87g",
+    "pid": 483021
+  },
+  {
+    "key": "cadbury_celebrations_119g",
+    "pid": 391905
+  },
+  {
+    "key": "cadbury_celebrations_prem_163g",
+    "pid": 802440
+  },
+  {
+    "key": "cadbury_gems_mini_94g",
+    "pid": 442668
+  },
+  {
+    "key": "cadbury_gems_ball_14g",
+    "pid": 108643
+  },
+  {
+    "key": "cadbury_perk_mini_115g",
+    "pid": 225506
+  },
+  {
+    "key": "cadbury_bournville_dark_75g",
+    "pid": 424615
+  },
+  {
+    "key": "cadbury_bournville_cran_78g",
+    "pid": 555
+  },
+  {
+    "key": "cadbury_temptations_70g",
+    "pid": 156106
+  },
+  {
+    "key": "cadbury_chocobakes_167g",
+    "pid": 499373
+  },
+  {
+    "key": "munch_nuts_37g",
+    "pid": 636149
+  },
+  {
+    "key": "munch_brownie_37g",
+    "pid": 553063
+  },
+  {
+    "key": "amul_dark_35g",
+    "pid": 381902
+  },
+  {
+    "key": "amul_sugarfree_35g",
+    "pid": 382050
+  },
+  {
+    "key": "snickers_assorted_110g",
+    "pid": 678635
+  },
+  {
+    "key": "snickers_minis_103g",
+    "pid": 503770
+  },
+  {
+    "key": "snickers_bestofminis_103g",
+    "pid": 513015
+  },
+  {
+    "key": "lays_magic_masala_58g",
+    "pid": 240092
+  },
+  {
+    "key": "lays_magic_masala_75g",
+    "pid": 432775
+  },
+  {
+    "key": "lays_classic_salted_80g",
+    "pid": 432780
+  },
+  {
+    "key": "lays_crispz_herb_onion_50g",
+    "pid": 223819
+  },
+  {
+    "key": "pringles_peri_2x102g",
+    "pid": 377079
+  },
+  {
+    "key": "pringles_scorchin_40g",
+    "pid": 694053
+  },
+  {
+    "key": "pringles_sourcream_40g",
+    "pid": 538700
+  },
+  {
+    "key": "pringles_scorchin_102g",
+    "pid": 694055
+  },
+  {
+    "key": "kurkure_green_chutney_78g",
+    "pid": 140943
+  },
+  {
+    "key": "kurkure_masala_103g",
+    "pid": 436909
+  },
+  {
+    "key": "kurkure_puffcorn_3x58g",
+    "pid": 375328
+  },
+  {
+    "key": "kurkure_chilli_chatka_3x",
+    "pid": 428248
+  },
+  {
+    "key": "bingo_madangles_106g",
+    "pid": 407554
+  },
+  {
+    "key": "doritos_2x75g",
+    "pid": 381269
+  },
+  {
+    "key": "uncle_chipps_spicy_53g",
+    "pid": 11150
+  },
+  {
+    "key": "uncle_chipps_salted_53g",
+    "pid": 45377
+  },
+  {
+    "key": "uncle_chipps_spicy_80g",
+    "pid": 534451
+  },
+  {
+    "key": "too_yumm_cream_onion_79g",
+    "pid": 536637
+  },
+  {
+    "key": "yellowdiamond_salted_75g",
+    "pid": 520009
+  },
+  {
+    "key": "yellowdiamond_creamonion_75g",
+    "pid": 520007
+  },
+  {
+    "key": "crax_curls_82g",
+    "pid": 524861
+  },
+  {
+    "key": "crax_corn_rings_57g",
+    "pid": 458322
+  },
+  {
+    "key": "cornitos_cheese_balls_52g",
+    "pid": 591988
+  },
+  {
+    "key": "cornitos_sweet_chili_78g",
+    "pid": 521416
+  },
+  {
+    "key": "haldiram_bhujia_400g",
+    "pid": 19266
+  },
+  {
+    "key": "haldiram_lite_mix_150g",
+    "pid": 19251
+  },
+  {
+    "key": "haldiram_takatak_95g",
+    "pid": 482828
+  },
+  {
+    "key": "haldiram_snac_lite_82g",
+    "pid": 544712
+  },
+  {
+    "key": "chupa_sour_crawlers_99g",
+    "pid": 559783
+  },
+  {
+    "key": "chupa_strawberry_watermelon_80g",
+    "pid": 523829
+  },
+  {
+    "key": "chupa_lollipop_2x96g",
+    "pid": 483012
+  }
 ]

@@ -1,0 +1,27 @@
+{
+  "packaging": {
+    "photo-1549465220-1a8b9238cd48": "/packaging/packaging-small-box.jpg",
+    "photo-1513201099705-a9746e1e201f": "/packaging/packaging-medium-box.jpg",
+    "photo-1512909006721-3d6018887383": "/packaging/packaging-large-box.jpg",
+    "photo-1584308666744-24d5c474f2ae": "/packaging/packaging-velvet-hatbox.jpg",
+    "photo-1563245372-f21724e3856d": "/packaging/packaging-acrylic-chest.jpg",
+    "photo-1544816155-12df9643f363": "/packaging/packaging-xl-trunk.jpg",
+    "photo-1526047932273-341f2a7631f9": "/packaging/packaging-mini-bouquet.jpg",
+    "photo-1518895949257-7621c3c786d7": "/packaging/packaging-photo-bouquet.jpg",
+    "photo-1561181286-d3fee7d55364": "/packaging/packaging-classic-bouquet.jpg",
+    "photo-1518199266791-5375a83190b7": "/packaging/packaging-heart-bouquet.jpg"
+  },
+  "polaroids": {
+    "photo-1516589178581-6cd7833ae3b2": "/polaroids/polaroid-preset-1.jpg",
+    "photo-1530103862676-de8c9debad1d": "/polaroids/polaroid-preset-2.jpg",
+    "photo-1529156069898-49953e39b3ac": "/polaroids/polaroid-preset-3.jpg",
+    "photo-1511895426328-dc8714191300": "/polaroids/polaroid-preset-4.jpg",
+    "photo-1522673607200-164d1b6ce486": "/polaroids/polaroid-preset-5.jpg",
+    "photo-1492562080023-ab3db95bfbce": "/polaroids/polaroid-preset-6.jpg"
+  },
+  "extra": {
+    "photo-1582794543139-8ac9cb0f7b11": "/hero/hero-roses-bouquet.jpg",
+    "photo-1583391733956-3750e0ff4e8b": "/hero/bulk-podium.jpg",
+    "photo-1513151233558-d860c5398176": "/hero/bulk-celebration.jpg"
+  }
+}
