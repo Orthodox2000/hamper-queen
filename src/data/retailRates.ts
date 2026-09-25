@@ -65,6 +65,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "akkad_bakkad_clip_ties_kit",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Akkad Bakkad",
+    "name": "Akkad Bakkad Clip & Ties Hair Accessories Kit (Multicolor)",
+    "unit": "17 pcs",
+    "price": 385,
+    "mrp": 499,
+    "rating": null,
+    "image": "/retail/akkad_bakkad_clip_ties_kit.jpg",
+    "prid": 723020,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "17 pcs",
+        "price": 385,
+        "mrp": 499
+      }
+    ]
+  },
+  {
     "key": "alternate_scents_imaginative",
     "note": "retail fragrance & grooming",
     "category": "fragrance",
@@ -250,6 +271,90 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "250 ml",
         "price": 669,
         "mrp": 1500
+      }
+    ]
+  },
+  {
+    "key": "anekaant_bird_embroidered_clutch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Anekaant",
+    "name": "Anekaant Quirky Bird Embroidered Clutch (Multicolor)",
+    "unit": "1 pc",
+    "price": 1399,
+    "mrp": 3199,
+    "rating": null,
+    "image": "/retail/anekaant_bird_embroidered_clutch.jpg",
+    "prid": 784361,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1399,
+        "mrp": 3199
+      }
+    ]
+  },
+  {
+    "key": "anekaant_heart_embroidered_clutch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Anekaant",
+    "name": "Anekaant Heart Shaped Embroidered Clutch (Champagne White)",
+    "unit": "1 pc",
+    "price": 1399,
+    "mrp": 3399,
+    "rating": null,
+    "image": "/retail/anekaant_heart_embroidered_clutch.jpg",
+    "prid": 752864,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1399,
+        "mrp": 3399
+      }
+    ]
+  },
+  {
+    "key": "anekaant_lotus_potli_clutch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Anekaant",
+    "name": "Anekaant Hand Embroidered Lotus Potli Bag (Gold)",
+    "unit": "1 pc",
+    "price": 1399,
+    "mrp": 3199,
+    "rating": null,
+    "image": "/retail/anekaant_lotus_potli_clutch.jpg",
+    "prid": 804070,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1399,
+        "mrp": 3199
+      }
+    ]
+  },
+  {
+    "key": "anekaant_pearl_beaded_clutch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Anekaant",
+    "name": "52% OFF8 minsAnekaant Pearl Beaded Clutch (Off White)1 pc₹1,199 ₹2,499ADD",
+    "unit": "",
+    "price": 1199,
+    "mrp": 2499,
+    "rating": null,
+    "image": "/retail/anekaant_pearl_beaded_clutch.jpg",
+    "prid": 735948,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 1199,
+        "mrp": 2499
       }
     ]
   },
@@ -1451,6 +1556,90 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "caprese_evelyn_tote",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Caprese",
+    "name": "Caprese Evelyn Large Laptop Compatible Tote Bag",
+    "unit": "1 pc",
+    "price": 1499,
+    "mrp": 5999,
+    "rating": null,
+    "image": "/retail/caprese_evelyn_tote.jpg",
+    "prid": 804947,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1499,
+        "mrp": 5999
+      }
+    ]
+  },
+  {
+    "key": "carlton_london_beads_wrap_bracelet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Carlton London",
+    "name": "Carlton London Beads Wraparound Bracelet (Golden)",
+    "unit": "1 pc",
+    "price": 499,
+    "mrp": 895,
+    "rating": null,
+    "image": "/retail/carlton_london_beads_wrap_bracelet.jpg",
+    "prid": 598906,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 499,
+        "mrp": 895
+      }
+    ]
+  },
+  {
+    "key": "carlton_london_chelsea_watch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Carlton London",
+    "name": "Carlton London Chelsea Watch",
+    "unit": "1 pc",
+    "price": 3336,
+    "mrp": 5560,
+    "rating": null,
+    "image": "/retail/carlton_london_chelsea_watch.jpg",
+    "prid": 797636,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 3336,
+        "mrp": 5560
+      }
+    ]
+  },
+  {
+    "key": "carlton_london_cz_necklace_set",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Carlton London",
+    "name": "Carlton London Cubic Zirconia Studded Contemporary Necklace Set (Golden)",
+    "unit": "1 set",
+    "price": 1629,
+    "mrp": 2495,
+    "rating": null,
+    "image": "/retail/carlton_london_cz_necklace_set.jpg",
+    "prid": 646900,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 1629,
+        "mrp": 2495
+      }
+    ]
+  },
+  {
     "key": "carlton_london_eternal_mens_gift",
     "note": "retail item",
     "category": "grooming",
@@ -1489,6 +1678,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "50 ml",
         "price": 175,
         "mrp": 225
+      }
+    ]
+  },
+  {
+    "key": "caruso_italy_embroidered_handkerchiefs",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Caruso Italy",
+    "name": "Caruso Italy Embroidered Handkerchiefs (Multicolour)",
+    "unit": "10 pcs",
+    "price": 395,
+    "mrp": 649,
+    "rating": null,
+    "image": "/retail/caruso_italy_embroidered_handkerchiefs.jpg",
+    "prid": 690285,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "10 pcs",
+        "price": 395,
+        "mrp": 649
+      }
+    ]
+  },
+  {
+    "key": "casio_analog_watch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Casio",
+    "name": "Casio Analog Watch",
+    "unit": "1 unit",
+    "price": 2995,
+    "mrp": 2995,
+    "rating": null,
+    "image": "/retail/casio_analog_watch.jpg",
+    "prid": 790828,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 2995,
+        "mrp": 2995
       }
     ]
   },
@@ -1850,6 +2081,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "chumbak_kilim_owl_tote",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Chumbak",
+    "name": "Chumbak Kilim Owl Tote Bag",
+    "unit": "1 pc",
+    "price": 677,
+    "mrp": 1995,
+    "rating": null,
+    "image": "/retail/chumbak_kilim_owl_tote.jpg",
+    "prid": 677951,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 677,
+        "mrp": 1995
+      }
+    ]
+  },
+  {
     "key": "chumbak_m_mug",
     "note": "retail drinkware (mugs & glasses)",
     "category": "drinkware",
@@ -1930,6 +2182,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "6 pcs",
         "price": 1124,
         "mrp": 1799
+      }
+    ]
+  },
+  {
+    "key": "chumbak_printed_rectangle_scarf",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Chumbak",
+    "name": "8 minsChumbak Printed Rectangle Scarf (Multicolour)1 pc₹992 ₹995ADD",
+    "unit": "",
+    "price": 992,
+    "mrp": 995,
+    "rating": null,
+    "image": "/retail/chumbak_printed_rectangle_scarf.jpg",
+    "prid": 558840,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 992,
+        "mrp": 995
+      }
+    ]
+  },
+  {
+    "key": "chumbak_printed_square_scarf",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Chumbak",
+    "name": "8 minsChumbak Printed Square Scarf (Peach, Cotton)1 pc₹794 ₹795ADD",
+    "unit": "",
+    "price": 794,
+    "mrp": 795,
+    "rating": null,
+    "image": "/retail/chumbak_printed_square_scarf.jpg",
+    "prid": 558837,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 794,
+        "mrp": 795
       }
     ]
   },
@@ -2245,6 +2539,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "82 g",
         "price": 30,
         "mrp": 60
+      }
+    ]
+  },
+  {
+    "key": "dailyobjects_passport_wallet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "DailyObjects",
+    "name": "50% OFF9 minsDailyObjects Check-In Passport Women Wallet (Black)1 pc₹999 ₹1,999ADD",
+    "unit": "",
+    "price": 999,
+    "mrp": 1999,
+    "rating": null,
+    "image": "/retail/dailyobjects_passport_wallet.jpg",
+    "prid": 769036,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 999,
+        "mrp": 1999
       }
     ]
   },
@@ -2606,6 +2921,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "designs_you_clover_solitaire_set",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Designs & You",
+    "name": "Designs & You Clover Shaped Solitaire Contemporary Necklace Set (Black)",
+    "unit": "1 set",
+    "price": 499,
+    "mrp": 1929,
+    "rating": null,
+    "image": "/retail/designs_you_clover_solitaire_set.jpg",
+    "prid": 601993,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 499,
+        "mrp": 1929
+      }
+    ]
+  },
+  {
+    "key": "designs_you_snake_chain_necklace",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Designs & You",
+    "name": "Designs & You Snake Chain Layered Necklace (Golden)",
+    "unit": "1 pc",
+    "price": 299,
+    "mrp": 1369,
+    "rating": null,
+    "image": "/retail/designs_you_snake_chain_necklace.jpg",
+    "prid": 740267,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 299,
+        "mrp": 1369
+      }
+    ]
+  },
+  {
+    "key": "designs_you_statement_hoop_earrings",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Designs & You",
+    "name": "Designs & You Elegant Statement Hoop Earrings (Golden)",
+    "unit": "1 pair",
+    "price": 389,
+    "mrp": 1979,
+    "rating": null,
+    "image": "/retail/designs_you_statement_hoop_earrings.jpg",
+    "prid": 638021,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pair",
+        "price": 389,
+        "mrp": 1979
+      }
+    ]
+  },
+  {
     "key": "digitek_dtr420w_tripod",
     "note": "retail electronics",
     "category": "electronics",
@@ -2770,6 +3148,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "2 pcs",
         "price": 299,
         "mrp": 849
+      }
+    ]
+  },
+  {
+    "key": "ecoright_dragonfly_tote",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Ecoright",
+    "name": "Ecoright Dragon Fly Printed Tote Bag",
+    "unit": "1 pc",
+    "price": 599,
+    "mrp": 999,
+    "rating": null,
+    "image": "/retail/ecoright_dragonfly_tote.jpg",
+    "prid": 559574,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 599,
+        "mrp": 999
+      }
+    ]
+  },
+  {
+    "key": "edel_hair_accessories_kit",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Edel",
+    "name": "45% OFF9 minsEdel Hair Accessories Kit (Multicolor)1 set₹189 ₹349ADD",
+    "unit": "",
+    "price": 189,
+    "mrp": 349,
+    "rating": null,
+    "image": "/retail/edel_hair_accessories_kit.jpg",
+    "prid": 766754,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 189,
+        "mrp": 349
+      }
+    ]
+  },
+  {
+    "key": "edel_twisted_claw_clip",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Edel",
+    "name": "60% OFF9 minsEdel Matte Twisted Claw Clip (Black, Brown)2 pcs₹119 ₹300ADD",
+    "unit": "",
+    "price": 119,
+    "mrp": 300,
+    "rating": null,
+    "image": "/retail/edel_twisted_claw_clip.jpg",
+    "prid": 616645,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 119,
+        "mrp": 300
       }
     ]
   },
@@ -2942,6 +3383,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "fabindia_colourblock_clutch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Fabindia",
+    "name": "Fabindia Colourblock Clutch (Yellow, Beige)",
+    "unit": "1 unit",
+    "price": 1789,
+    "mrp": 1799,
+    "rating": null,
+    "image": "/retail/fabindia_colourblock_clutch.jpg",
+    "prid": 976192,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1789,
+        "mrp": 1799
+      }
+    ]
+  },
+  {
     "key": "faces_canada_beauty_bundle_kit",
     "note": "retail item",
     "category": "grooming",
@@ -2980,6 +3442,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "4 x 8 ml",
         "price": 304,
         "mrp": 516
+      }
+    ]
+  },
+  {
+    "key": "fastrack_analog_watch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Fastrack",
+    "name": "Fastrack Analog Watch",
+    "unit": "1 unit",
+    "price": 2995,
+    "mrp": 2995,
+    "rating": null,
+    "image": "/retail/fastrack_analog_watch.jpg",
+    "prid": 742152,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 2995,
+        "mrp": 2995
+      }
+    ]
+  },
+  {
+    "key": "fastrack_bags_quilted_tote",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Fastrack Bags",
+    "name": "Fastrack Bags PU Structured Quilted Tote Bag",
+    "unit": "1 pc",
+    "price": 1189,
+    "mrp": 1699,
+    "rating": null,
+    "image": "/retail/fastrack_bags_quilted_tote.jpg",
+    "prid": 561338,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1189,
+        "mrp": 1699
       }
     ]
   },
@@ -3509,6 +4013,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "giva_classic_shiny_drop_earrings",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "GIVA",
+    "name": "GIVA Classic Shiny Drop Earrings (Silver)",
+    "unit": "1 pair",
+    "price": 1699,
+    "mrp": 4399,
+    "rating": null,
+    "image": "/retail/giva_classic_shiny_drop_earrings.jpg",
+    "prid": 652752,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pair",
+        "price": 1699,
+        "mrp": 4399
+      }
+    ]
+  },
+  {
+    "key": "giva_golden_butterfly_studs",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "GIVA",
+    "name": "GIVA Golden Butterfly Tiny Studded Affair Studs (Golden)",
+    "unit": "1 pair",
+    "price": 1274,
+    "mrp": 3299,
+    "rating": null,
+    "image": "/retail/giva_golden_butterfly_studs.jpg",
+    "prid": 578246,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pair",
+        "price": 1274,
+        "mrp": 3299
+      }
+    ]
+  },
+  {
+    "key": "giva_star_charmed_anklet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "GIVA",
+    "name": "GIVA Star Charmed Anklet (Silver)",
+    "unit": "1 pc",
+    "price": 1189,
+    "mrp": 2599,
+    "rating": null,
+    "image": "/retail/giva_star_charmed_anklet.jpg",
+    "prid": 767641,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1189,
+        "mrp": 2599
+      }
+    ]
+  },
+  {
     "key": "glassence_compact_whiskey_set",
     "note": "retail drinkware (mugs & glasses)",
     "category": "drinkware",
@@ -4034,6 +4601,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "hidetheory_bi_fold_leather_wallet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "HideTheory",
+    "name": "66% OFF9 minsHideTheory Bi-Fold Men’s Leather Wallet1 pc₹499 ₹1,499ADD",
+    "unit": "",
+    "price": 499,
+    "mrp": 1499,
+    "rating": null,
+    "image": "/retail/hidetheory_bi_fold_leather_wallet.jpg",
+    "prid": 690041,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 499,
+        "mrp": 1499
+      }
+    ]
+  },
+  {
     "key": "hira_mens_perfume_gift_set",
     "note": "retail fragrance & grooming",
     "category": "fragrance",
@@ -4114,6 +4702,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "1 unit",
         "price": 3499,
         "mrp": 4999
+      }
+    ]
+  },
+  {
+    "key": "jewels_galaxy_layered_necklace_set",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Jewels Galaxy",
+    "name": "Jewels Galaxy Gold Plated Layered Necklace Set (Golden)",
+    "unit": "5 pcs",
+    "price": 339,
+    "mrp": 1499,
+    "rating": null,
+    "image": "/retail/jewels_galaxy_layered_necklace_set.jpg",
+    "prid": 546279,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "5 pcs",
+        "price": 339,
+        "mrp": 1499
+      }
+    ]
+  },
+  {
+    "key": "jockey_hk01_handkerchiefs",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Jockey",
+    "name": "8 minsJockey HK01 Handkerchiefs -HK01 (White)3 pcs₹299ADD",
+    "unit": "",
+    "price": 299,
+    "mrp": 299,
+    "rating": null,
+    "image": "/retail/jockey_hk01_handkerchiefs.jpg",
+    "prid": 481129,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 299,
+        "mrp": 299
+      }
+    ]
+  },
+  {
+    "key": "john_jacobs_sunglasses",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "John Jacobs",
+    "name": "John Jacobs Sunglasses (Black, Full Rim, Rectangle)",
+    "unit": "1 pc",
+    "price": 1152,
+    "mrp": 6000,
+    "rating": null,
+    "image": "/retail/john_jacobs_sunglasses.jpg",
+    "prid": 545227,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1152,
+        "mrp": 6000
       }
     ]
   },
@@ -4664,6 +5315,132 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "lavie_betula_tote",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Lavie",
+    "name": "Lavie Women's Betula Tote Bag",
+    "unit": "1 pc",
+    "price": 1249,
+    "mrp": 3499,
+    "rating": null,
+    "image": "/retail/lavie_betula_tote.jpg",
+    "prid": 708127,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1249,
+        "mrp": 3499
+      }
+    ]
+  },
+  {
+    "key": "lavie_bow_frame_clutch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Lavie",
+    "name": "72% OFF8 minsLavie Women's Bow Frame Metallic Clutch Bag (Golden)1 unit₹699 ₹2,499ADD",
+    "unit": "",
+    "price": 699,
+    "mrp": 2499,
+    "rating": null,
+    "image": "/retail/lavie_bow_frame_clutch.jpg",
+    "prid": 708020,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 699,
+        "mrp": 2499
+      }
+    ]
+  },
+  {
+    "key": "lavie_broxa_flap_sling",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Lavie",
+    "name": "Lavie Women's Broxa Flap Sling Bag",
+    "unit": "1 pc",
+    "price": 899,
+    "mrp": 3199,
+    "rating": null,
+    "image": "/retail/lavie_broxa_flap_sling.jpg",
+    "prid": 708138,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 899,
+        "mrp": 3199
+      }
+    ]
+  },
+  {
+    "key": "lavie_georgia_crossbody_sling",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Lavie",
+    "name": "Lavie Signature Georgia Sling Bag",
+    "unit": "1 unit",
+    "price": 1099,
+    "mrp": 1999,
+    "rating": null,
+    "image": "/retail/lavie_georgia_crossbody_sling.jpg",
+    "prid": 799113,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1099,
+        "mrp": 1999
+      }
+    ]
+  },
+  {
+    "key": "lavie_marma_crossbody_sling",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Lavie",
+    "name": "Lavie Women's Marma Crossbody Sling Bag",
+    "unit": "1 pc",
+    "price": 899,
+    "mrp": 2999,
+    "rating": null,
+    "image": "/retail/lavie_marma_crossbody_sling.jpg",
+    "prid": 708144,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 899,
+        "mrp": 2999
+      }
+    ]
+  },
+  {
+    "key": "lavie_tinsel_frame_clutch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Lavie",
+    "name": "72% OFF8 minsLavie Women's Tinsel Frame Clutch (Golden)1 pc₹695 ₹2,499ADD",
+    "unit": "",
+    "price": 695,
+    "mrp": 2499,
+    "rating": null,
+    "image": "/retail/lavie_tinsel_frame_clutch.jpg",
+    "prid": 708143,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 695,
+        "mrp": 2499
+      }
+    ]
+  },
+  {
     "key": "layerr_wottagirl_mystic_mist",
     "note": "retail fragrance & grooming",
     "category": "fragrance",
@@ -4870,6 +5647,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "1 unit",
         "price": 1649,
         "mrp": 3090
+      }
+    ]
+  },
+  {
+    "key": "lenskart_grey_round_sunglasses",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Lenskart Vincent Chase",
+    "name": "Lenskart Vincent Chase Sunglasses (Grey, Full Rim, Round)",
+    "unit": "1 pc",
+    "price": 923,
+    "mrp": 1999,
+    "rating": null,
+    "image": "/retail/lenskart_grey_round_sunglasses.jpg",
+    "prid": 597612,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 923,
+        "mrp": 1999
+      }
+    ]
+  },
+  {
+    "key": "lenskart_havana_sunglasses",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Lenskart Vincent Chase",
+    "name": "60% OFF9 minsLenskart Vincent Chase Havana Sunglasses (Black, Full Rim, Square)1 pc₹799 ₹1,999ADD",
+    "unit": "",
+    "price": 799,
+    "mrp": 1999,
+    "rating": null,
+    "image": "/retail/lenskart_havana_sunglasses.jpg",
+    "prid": 545346,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 799,
+        "mrp": 1999
+      }
+    ]
+  },
+  {
+    "key": "lenskart_vincent_chase_sunglasses",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Lenskart Vincent Chase",
+    "name": "60% OFF9 minsLenskart Vincent Chase Sunglasses (Black, Full Rim, Square)1 pc₹799 ₹1,999ADD",
+    "unit": "",
+    "price": 799,
+    "mrp": 1999,
+    "rating": null,
+    "image": "/retail/lenskart_vincent_chase_sunglasses.jpg",
+    "prid": 545371,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 799,
+        "mrp": 1999
       }
     ]
   },
@@ -5252,6 +6092,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "louis_stitch_leather_bifold_wallet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Louis Stitch",
+    "name": "Louis Stitch Leather Bifold Wallet",
+    "unit": "1 pc",
+    "price": 1499,
+    "mrp": 2499,
+    "rating": null,
+    "image": "/retail/louis_stitch_leather_bifold_wallet.jpg",
+    "prid": 731405,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1499,
+        "mrp": 2499
+      }
+    ]
+  },
+  {
     "key": "man_company_curated_him_gift",
     "note": "retail item",
     "category": "grooming",
@@ -5567,6 +6428,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "mokobara_stash_bifold_wallet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Mokobara",
+    "name": "Mokobara Stash Bifold Men's Wallet",
+    "unit": "1 pc",
+    "price": 1999,
+    "mrp": 2999,
+    "rating": null,
+    "image": "/retail/mokobara_stash_bifold_wallet.jpg",
+    "prid": 791579,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1999,
+        "mrp": 2999
+      }
+    ]
+  },
+  {
     "key": "monaco_cheeslings_150g",
     "note": "retail biscuit SKU",
     "category": "retail biscuit SKU",
@@ -5836,6 +6718,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "200 ml",
         "price": 600,
         "mrp": 600
+      }
+    ]
+  },
+  {
+    "key": "nilus_charm_bracelet_rosegold",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Nilu's Collection",
+    "name": "Nilu's Collection Charm Bracelet (Rose Gold)",
+    "unit": "1 pc",
+    "price": 359,
+    "mrp": 1385,
+    "rating": null,
+    "image": "/retail/nilus_charm_bracelet_rosegold.jpg",
+    "prid": 733187,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 359,
+        "mrp": 1385
+      }
+    ]
+  },
+  {
+    "key": "nilus_infinity_charm_bracelet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Nilu's Collection",
+    "name": "76% OFF8 minsNilu's Collection Infinity Charm Bracelet (Golden)1 pc₹299 ₹1,257ADD",
+    "unit": "",
+    "price": 299,
+    "mrp": 1257,
+    "rating": null,
+    "image": "/retail/nilus_infinity_charm_bracelet.jpg",
+    "prid": 623970,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 299,
+        "mrp": 1257
       }
     ]
   },
@@ -6407,6 +7331,363 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "palmonas_cluster_hoop_earrings",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Gilded Cluster Hoop Earrings (Golden)",
+    "unit": "1 pair",
+    "price": 1469,
+    "mrp": 4499,
+    "rating": null,
+    "image": "/retail/palmonas_cluster_hoop_earrings.jpg",
+    "prid": 808197,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pair",
+        "price": 1469,
+        "mrp": 4499
+      }
+    ]
+  },
+  {
+    "key": "palmonas_crystal_harmony_bracelet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Crystal Harmony Men's Bracelet (Golden)",
+    "unit": "1 pc",
+    "price": 1249,
+    "mrp": 3199,
+    "rating": null,
+    "image": "/retail/palmonas_crystal_harmony_bracelet.jpg",
+    "prid": 741748,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1249,
+        "mrp": 3199
+      }
+    ]
+  },
+  {
+    "key": "palmonas_cuban_chain_necklace",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Cuban Chain Hollow Heart Statement Necklace (Golden)",
+    "unit": "1 pc",
+    "price": 1039,
+    "mrp": 3351,
+    "rating": null,
+    "image": "/retail/palmonas_cuban_chain_necklace.jpg",
+    "prid": 739661,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1039,
+        "mrp": 3351
+      }
+    ]
+  },
+  {
+    "key": "palmonas_dainty_layered_necklace",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Dainty Layered Necklace (Golden)",
+    "unit": "1 pc",
+    "price": 1749,
+    "mrp": 5299,
+    "rating": null,
+    "image": "/retail/palmonas_dainty_layered_necklace.jpg",
+    "prid": 806045,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1749,
+        "mrp": 5299
+      }
+    ]
+  },
+  {
+    "key": "palmonas_daisy_flower_necklace",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Daisy Flower Anti Tarnish Statement Necklace (Golden)",
+    "unit": "1 pc",
+    "price": 1059,
+    "mrp": 3016,
+    "rating": null,
+    "image": "/retail/palmonas_daisy_flower_necklace.jpg",
+    "prid": 740197,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1059,
+        "mrp": 3016
+      }
+    ]
+  },
+  {
+    "key": "palmonas_diamond_huggie_earrings",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Diamond Huggie Hoop Earrings (Golden)",
+    "unit": "1 unit",
+    "price": 1699,
+    "mrp": 3351,
+    "rating": null,
+    "image": "/retail/palmonas_diamond_huggie_earrings.jpg",
+    "prid": 800174,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1699,
+        "mrp": 3351
+      }
+    ]
+  },
+  {
+    "key": "palmonas_drop_earrings",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Drop Earrings (Golden)",
+    "unit": "1 pair",
+    "price": 1999,
+    "mrp": 4723,
+    "rating": null,
+    "image": "/retail/palmonas_drop_earrings.jpg",
+    "prid": 709643,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pair",
+        "price": 1999,
+        "mrp": 4723
+      }
+    ]
+  },
+  {
+    "key": "palmonas_heart_hoop_earrings",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Small Heart Hoop Earrings (Golden)",
+    "unit": "1 pair",
+    "price": 1699,
+    "mrp": 3686,
+    "rating": null,
+    "image": "/retail/palmonas_heart_hoop_earrings.jpg",
+    "prid": 800173,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pair",
+        "price": 1699,
+        "mrp": 3686
+      }
+    ]
+  },
+  {
+    "key": "palmonas_infinity_necklace",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Infinity Statement Necklace (Golden)",
+    "unit": "1 pc",
+    "price": 1119,
+    "mrp": 3193,
+    "rating": null,
+    "image": "/retail/palmonas_infinity_necklace.jpg",
+    "prid": 739675,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1119,
+        "mrp": 3193
+      }
+    ]
+  },
+  {
+    "key": "palmonas_interlock_necklace",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Interlock Statement Necklace (Golden)",
+    "unit": "1 pc",
+    "price": 1259,
+    "mrp": 3000,
+    "rating": null,
+    "image": "/retail/palmonas_interlock_necklace.jpg",
+    "prid": 690145,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1259,
+        "mrp": 3000
+      }
+    ]
+  },
+  {
+    "key": "palmonas_ocean_muse_necklace",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Ocean Muse Seashell & Starfish Charm Statement Necklace (Golden)",
+    "unit": "1 pc",
+    "price": 1229,
+    "mrp": 2899,
+    "rating": null,
+    "image": "/retail/palmonas_ocean_muse_necklace.jpg",
+    "prid": 738328,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1229,
+        "mrp": 2899
+      }
+    ]
+  },
+  {
+    "key": "palmonas_textured_hoop_earrings",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Palmonas",
+    "name": "Palmonas Classic Textured Hoop Earrings (Golden)",
+    "unit": "1 pair",
+    "price": 1189,
+    "mrp": 1907,
+    "rating": null,
+    "image": "/retail/palmonas_textured_hoop_earrings.jpg",
+    "prid": 690304,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pair",
+        "price": 1189,
+        "mrp": 1907
+      }
+    ]
+  },
+  {
+    "key": "panash_choker_necklace_set",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Panash",
+    "name": "Panash Choker Ethnic Necklace Set (Golden)",
+    "unit": "1 set",
+    "price": 799,
+    "mrp": 3399,
+    "rating": null,
+    "image": "/retail/panash_choker_necklace_set.jpg",
+    "prid": 678452,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 799,
+        "mrp": 3399
+      }
+    ]
+  },
+  {
+    "key": "panash_kundan_embellished_necklace",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Panash",
+    "name": "Panash Kundan Studded Embellished Ethnic Necklace Set (White)",
+    "unit": "1 set",
+    "price": 999,
+    "mrp": 4999,
+    "rating": null,
+    "image": "/retail/panash_kundan_embellished_necklace.jpg",
+    "prid": 678433,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 999,
+        "mrp": 4999
+      }
+    ]
+  },
+  {
+    "key": "panash_lakshmi_necklace_set",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Panash",
+    "name": "Panash Goddess Lakshmi Ethnic Necklace Set (Golden)",
+    "unit": "1 set",
+    "price": 699,
+    "mrp": 2749,
+    "rating": null,
+    "image": "/retail/panash_lakshmi_necklace_set.jpg",
+    "prid": 678440,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 699,
+        "mrp": 2749
+      }
+    ]
+  },
+  {
+    "key": "panash_peacock_necklace_set",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Panash",
+    "name": "Panash Gold-Plated Stone Studded Peacock-Shaped Ethnic Necklace Set (Golden)",
+    "unit": "1 set",
+    "price": 759,
+    "mrp": 2999,
+    "rating": null,
+    "image": "/retail/panash_peacock_necklace_set.jpg",
+    "prid": 577344,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 759,
+        "mrp": 2999
+      }
+    ]
+  },
+  {
+    "key": "panash_stone_ethnic_necklace",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Panash",
+    "name": "75% OFF8 minsPanash Stone Studded Ethnic Necklace Set (Golden)1 set₹669 ₹2,699ADD",
+    "unit": "",
+    "price": 669,
+    "mrp": 2699,
+    "rating": null,
+    "image": "/retail/panash_stone_ethnic_necklace.jpg",
+    "prid": 806978,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 669,
+        "mrp": 2699
+      }
+    ]
+  },
+  {
     "key": "paradyse_mafia_oud_attar",
     "note": "retail fragrance & grooming",
     "category": "fragrance",
@@ -6592,6 +7873,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "350 g",
         "price": 57,
         "mrp": 100
+      }
+    ]
+  },
+  {
+    "key": "pashtush_jamawar_ethnic_stole",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Pashtush",
+    "name": "Pashtush Womens Jamawar Design Ethnic Stole (Black)",
+    "unit": "1 pc",
+    "price": 1536,
+    "mrp": 2999,
+    "rating": null,
+    "image": "/retail/pashtush_jamawar_ethnic_stole.jpg",
+    "prid": 601861,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1536,
+        "mrp": 2999
+      }
+    ]
+  },
+  {
+    "key": "pashtush_jamawar_stole_gift_set",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Pashtush",
+    "name": "Pashtush Jamawar Design Stole Gift Set for Men & Women (Multicolour)",
+    "unit": "2 pcs",
+    "price": 2879,
+    "mrp": 5998,
+    "rating": null,
+    "image": "/retail/pashtush_jamawar_stole_gift_set.jpg",
+    "prid": 601866,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "2 pcs",
+        "price": 2879,
+        "mrp": 5998
       }
     ]
   },
@@ -7058,6 +8381,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "provogue_bolt_crossbody_sling",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Provogue",
+    "name": "Provogue Bolt Crossbody Sling Bag",
+    "unit": "1 pc",
+    "price": 799,
+    "mrp": 1349,
+    "rating": null,
+    "image": "/retail/provogue_bolt_crossbody_sling.jpg",
+    "prid": 762163,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 799,
+        "mrp": 1349
+      }
+    ]
+  },
+  {
     "key": "renee_edp_madame",
     "note": "retail fragrance & grooming",
     "category": "fragrance",
@@ -7159,6 +8503,153 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "5 ml",
         "price": 99,
         "mrp": 175
+      }
+    ]
+  },
+  {
+    "key": "salty_alpha_twisted_bracelet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Salty",
+    "name": "50% OFF8 minsSalty Alpha Twisted & Sleek Cuff Men's Bracelet (Golden)2 pcs₹649 ₹1,299ADD",
+    "unit": "",
+    "price": 649,
+    "mrp": 1299,
+    "rating": null,
+    "image": "/retail/salty_alpha_twisted_bracelet.jpg",
+    "prid": 743520,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 649,
+        "mrp": 1299
+      }
+    ]
+  },
+  {
+    "key": "salty_evil_eye_bracelet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Salty",
+    "name": "Salty Evil Eye (Navy Blue, Off-White)",
+    "unit": "1 pc",
+    "price": 399,
+    "mrp": 910,
+    "rating": null,
+    "image": "/retail/salty_evil_eye_bracelet.jpg",
+    "prid": 806051,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 399,
+        "mrp": 910
+      }
+    ]
+  },
+  {
+    "key": "salty_love_box_necklace_set",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Salty",
+    "name": "Salty Love Box Necklace & Ring Set (Rose Gold)",
+    "unit": "1 set",
+    "price": 499,
+    "mrp": 1999,
+    "rating": null,
+    "image": "/retail/salty_love_box_necklace_set.jpg",
+    "prid": 544912,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 499,
+        "mrp": 1999
+      }
+    ]
+  },
+  {
+    "key": "salty_tennis_bracelet_necklace_set",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Salty",
+    "name": "Salty Tennis Studded Bracelet & Contemporary Necklace Set (Golden)",
+    "unit": "1 pack",
+    "price": 669,
+    "mrp": 1499,
+    "rating": null,
+    "image": "/retail/salty_tennis_bracelet_necklace_set.jpg",
+    "prid": 774418,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pack",
+        "price": 669,
+        "mrp": 1499
+      }
+    ]
+  },
+  {
+    "key": "sam_marshall_gold_sunglasses",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Sam And Marshall",
+    "name": "Sam And Marshall Sunglasses (Gold, Full Rim, Square)",
+    "unit": "1 pc",
+    "price": 1499,
+    "mrp": 2500,
+    "rating": null,
+    "image": "/retail/sam_marshall_gold_sunglasses.jpg",
+    "prid": 629021,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1499,
+        "mrp": 2500
+      }
+    ]
+  },
+  {
+    "key": "sam_marshall_matte_black_sunglasses",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Sam And Marshall",
+    "name": "50% OFF9 minsSam And Marshall Sunglasses (Matte Black, Rimless, Rectangle)1 pc₹999 ₹1,998ADD",
+    "unit": "",
+    "price": 999,
+    "mrp": 1998,
+    "rating": null,
+    "image": "/retail/sam_marshall_matte_black_sunglasses.jpg",
+    "prid": 686409,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 999,
+        "mrp": 1998
+      }
+    ]
+  },
+  {
+    "key": "satya_paul_twofold_wallet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Satya Paul",
+    "name": "Satya Paul Two Fold Textured Wallet",
+    "unit": "1 pc",
+    "price": 1809,
+    "mrp": 2500,
+    "rating": null,
+    "image": "/retail/satya_paul_twofold_wallet.jpg",
+    "prid": 670880,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1809,
+        "mrp": 2500
       }
     ]
   },
@@ -7667,6 +9158,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "sunshine_slings",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Teal By Chumbak",
+    "name": "Teal By Chumbak Sunshine State Sling Bag",
+    "unit": "1 pc",
+    "price": 798,
+    "mrp": 1995,
+    "rating": null,
+    "image": "/retail/sunshine_slings.jpg",
+    "prid": 677949,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 798,
+        "mrp": 1995
+      }
+    ]
+  },
+  {
     "key": "tapo_p110_wifi_plug",
     "note": "retail electronics",
     "category": "electronics",
@@ -7688,6 +9200,237 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "teal_chumbak_jungle_flowers_watch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Teal By Chumbak",
+    "name": "Teal By Chumbak Jungle Flowers Watch",
+    "unit": "1 pc",
+    "price": 1258,
+    "mrp": 2795,
+    "rating": null,
+    "image": "/retail/teal_chumbak_jungle_flowers_watch.jpg",
+    "prid": 617799,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1258,
+        "mrp": 2795
+      }
+    ]
+  },
+  {
+    "key": "teal_chumbak_ombra_green_watch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Teal By Chumbak",
+    "name": "Teal By Chumbak Ombra Green Wrist Watch",
+    "unit": "1 pc",
+    "price": 1264,
+    "mrp": 2795,
+    "rating": null,
+    "image": "/retail/teal_chumbak_ombra_green_watch.jpg",
+    "prid": 559608,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1264,
+        "mrp": 2795
+      }
+    ]
+  },
+  {
+    "key": "teal_chumbak_sling_bag",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Teal By Chumbak",
+    "name": "Teal By Chumbak Sling Bag",
+    "unit": "1 pc",
+    "price": 839,
+    "mrp": 1995,
+    "rating": null,
+    "image": "/retail/teal_chumbak_sling_bag.jpg",
+    "prid": 677950,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 839,
+        "mrp": 1995
+      }
+    ]
+  },
+  {
+    "key": "teal_chumbak_urban_feathers_watch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Teal By Chumbak",
+    "name": "Teal By Chumbak Urban Feathers Wrist Watch",
+    "unit": "1 pc",
+    "price": 1439,
+    "mrp": 2995,
+    "rating": null,
+    "image": "/retail/teal_chumbak_urban_feathers_watch.jpg",
+    "prid": 559601,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1439,
+        "mrp": 2995
+      }
+    ]
+  },
+  {
+    "key": "timex_trendline_rosegold_watch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Timex",
+    "name": "Timex Trendline Women Rose Gold Watch",
+    "unit": "1 pc",
+    "price": 4316,
+    "mrp": 4795,
+    "rating": null,
+    "image": "/retail/timex_trendline_rosegold_watch.jpg",
+    "prid": 757544,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 4316,
+        "mrp": 4795
+      }
+    ]
+  },
+  {
+    "key": "titan_quartz_rosegold_watch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Titan",
+    "name": "Titan Quartz Watch for Women (Rose Gold)",
+    "unit": "1 pc",
+    "price": 5845,
+    "mrp": 5845,
+    "rating": null,
+    "image": "/retail/titan_quartz_rosegold_watch.jpg",
+    "prid": 664745,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 5845,
+        "mrp": 5845
+      }
+    ]
+  },
+  {
+    "key": "titan_raga_showstopper_analog",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Titan",
+    "name": "Titan Raga Showstopper Analog Watch",
+    "unit": "1 pc",
+    "price": 5945,
+    "mrp": 5945,
+    "rating": null,
+    "image": "/retail/titan_raga_showstopper_analog.jpg",
+    "prid": 665619,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 5945,
+        "mrp": 5945
+      }
+    ]
+  },
+  {
+    "key": "titan_raga_showstopper_watch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Titan",
+    "name": "Titan Raga Showstopper Watch",
+    "unit": "1 pc",
+    "price": 6195,
+    "mrp": 6195,
+    "rating": null,
+    "image": "/retail/titan_raga_showstopper_watch.jpg",
+    "prid": 794498,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 6195,
+        "mrp": 6195
+      }
+    ]
+  },
+  {
+    "key": "titan_sparkle_analog_watch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Titan",
+    "name": "Titan Sparkle Analog Watch",
+    "unit": "1 pc",
+    "price": 5995,
+    "mrp": 5995,
+    "rating": null,
+    "image": "/retail/titan_sparkle_analog_watch.jpg",
+    "prid": 664776,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 5995,
+        "mrp": 5995
+      }
+    ]
+  },
+  {
+    "key": "titan_sundial_watch",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Titan",
+    "name": "Titan Sundial Watch",
+    "unit": "1 unit",
+    "price": 6995,
+    "mrp": 6995,
+    "rating": null,
+    "image": "/retail/titan_sundial_watch.jpg",
+    "prid": 793291,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 6995,
+        "mrp": 6995
+      }
+    ]
+  },
+  {
+    "key": "tommy_hilfiger_mens_wallet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Tommy Hilfiger",
+    "name": "Tommy Hilfiger Men's Wallet",
+    "unit": "1 pc",
+    "price": 1749,
+    "mrp": 2799,
+    "rating": null,
+    "image": "/retail/tommy_hilfiger_mens_wallet.jpg",
+    "prid": 746381,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1749,
+        "mrp": 2799
+      }
+    ]
+  },
+  {
     "key": "too_yumm_cream_onion_79g",
     "note": "retail snack/chips SKU",
     "category": "retail snack/chips SKU",
@@ -7705,6 +9448,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "79 g",
         "price": 47,
         "mrp": 49
+      }
+    ]
+  },
+  {
+    "key": "travalate_crossbody_sling",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Travalate",
+    "name": "64% OFF8 minsTravalate Trendy Crossbody Sling Bag1 pc₹498 ₹1,399ADD",
+    "unit": "",
+    "price": 498,
+    "mrp": 1399,
+    "rating": null,
+    "image": "/retail/travalate_crossbody_sling.jpg",
+    "prid": 604184,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 498,
+        "mrp": 1399
+      }
+    ]
+  },
+  {
+    "key": "travel_blue_dariel_women_wallet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Travel Blue",
+    "name": "Travel Blue Dariel Ladies Zip Around Women Wallet (Black)",
+    "unit": "1 pc",
+    "price": 1153,
+    "mrp": 2495,
+    "rating": null,
+    "image": "/retail/travel_blue_dariel_women_wallet.jpg",
+    "prid": 623496,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 1153,
+        "mrp": 2495
+      }
+    ]
+  },
+  {
+    "key": "truebrowns_zari_jacquard_dupatta",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "trueBrowns",
+    "name": "39% OFF8 minstrueBrowns Zari Jacquard Dupatta (Navy)1 pc₹600 ₹999ADD",
+    "unit": "",
+    "price": 600,
+    "mrp": 999,
+    "rating": null,
+    "image": "/retail/truebrowns_zari_jacquard_dupatta.jpg",
+    "prid": 707544,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 600,
+        "mrp": 999
       }
     ]
   },
@@ -7982,6 +9788,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "valenium_printed_sling",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Valenium",
+    "name": "Valenium Printed Sling Bag",
+    "unit": "1 unit",
+    "price": 699,
+    "mrp": 2999,
+    "rating": null,
+    "image": "/retail/valenium_printed_sling.jpg",
+    "prid": 770709,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 699,
+        "mrp": 2999
+      }
+    ]
+  },
+  {
+    "key": "van_heusen_handkerchiefs",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Van Heusen",
+    "name": "8 minsVan Heusen Men's Handkerchiefs (White)3 pcs₹379ADD",
+    "unit": "",
+    "price": 379,
+    "mrp": 379,
+    "rating": null,
+    "image": "/retail/van_heusen_handkerchiefs.jpg",
+    "prid": 650919,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 379,
+        "mrp": 379
+      }
+    ]
+  },
+  {
     "key": "villain_hydra_fresh_edp",
     "note": "retail fragrance & grooming",
     "category": "fragrance",
@@ -8171,6 +10019,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "wildhorn_rfid_leather_wallet",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "WildHorn",
+    "name": "WildHorn RFID Protected Leather Wallet for Men",
+    "unit": "1 pc",
+    "price": 499,
+    "mrp": 2499,
+    "rating": null,
+    "image": "/retail/wildhorn_rfid_leather_wallet.jpg",
+    "prid": 737959,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 499,
+        "mrp": 2499
+      }
+    ]
+  },
+  {
     "key": "wipro_wifi_12w_smart_bulb",
     "note": "retail electronics",
     "category": "electronics",
@@ -8318,6 +10187,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "zavya_daily_delight_studs",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Zavya",
+    "name": "Zavya A Little Daily Delight Studs (Golden)",
+    "unit": "1 pair",
+    "price": 1549,
+    "mrp": 3999,
+    "rating": null,
+    "image": "/retail/zavya_daily_delight_studs.jpg",
+    "prid": 734693,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pair",
+        "price": 1549,
+        "mrp": 3999
+      }
+    ]
+  },
+  {
     "key": "zebronics_companion_301",
     "note": "retail electronics",
     "category": "electronics",
@@ -8335,6 +10225,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "1 set",
         "price": 1219,
         "mrp": 3399
+      }
+    ]
+  },
+  {
+    "key": "zouk_bidri_kaiser_shoulder_bag",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Zouk",
+    "name": "55% OFF8 minsZouk Bidri Kaiser Statement Office Shoulder Bag (Black, White)1 pc₹1,799 ₹3,999ADD",
+    "unit": "",
+    "price": 1799,
+    "mrp": 3999,
+    "rating": null,
+    "image": "/retail/zouk_bidri_kaiser_shoulder_bag.jpg",
+    "prid": 563675,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 1799,
+        "mrp": 3999
+      }
+    ]
+  },
+  {
+    "key": "zouk_tote_bag",
+    "note": "retail women accessories",
+    "category": "women_accessories",
+    "brand": "Zouk",
+    "name": "67% OFF8 minsZouk Women's Office Tote Bag1 pc₹1,599 ₹4,863ADD",
+    "unit": "",
+    "price": 1599,
+    "mrp": 4863,
+    "rating": null,
+    "image": "/retail/zouk_tote_bag.jpg",
+    "prid": 577125,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 1599,
+        "mrp": 4863
       }
     ]
   }
