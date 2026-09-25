@@ -878,5 +878,360 @@
     "key": "vniq_shaper_beard_comb_kit",
     "pid": 600434,
     "category": "grooming"
+  },
+  {
+    "key": "bose_soundlink_flex2",
+    "pid": 693947,
+    "category": "electronics"
+  },
+  {
+    "key": "portronics_party_speaker_dash4",
+    "pid": 567259,
+    "category": "electronics"
+  },
+  {
+    "key": "jbl_flip_essential_2",
+    "pid": 561514,
+    "category": "electronics"
+  },
+  {
+    "key": "boat_stone_350_pro",
+    "pid": 617536,
+    "category": "electronics"
+  },
+  {
+    "key": "boat_party_pal_30",
+    "pid": 707976,
+    "category": "electronics"
+  },
+  {
+    "key": "hammer_boom_30w_speaker",
+    "pid": 716467,
+    "category": "electronics"
+  },
+  {
+    "key": "ubon_dual_speaker_sp85",
+    "pid": 689131,
+    "category": "electronics"
+  },
+  {
+    "key": "boat_aavante_150",
+    "pid": 702621,
+    "category": "electronics"
+  },
+  {
+    "key": "ubon_karaoke_soundbar_sp90",
+    "pid": 733864,
+    "category": "electronics"
+  },
+  {
+    "key": "ubon_wireless_soundbar_sp80",
+    "pid": 661781,
+    "category": "electronics"
+  },
+  {
+    "key": "apple_airpods_4",
+    "pid": 626968,
+    "category": "electronics"
+  },
+  {
+    "key": "hammer_screen_anc_earbuds_black",
+    "pid": 674203,
+    "category": "electronics"
+  },
+  {
+    "key": "hammer_screen_anc_earbuds_white",
+    "pid": 672667,
+    "category": "electronics"
+  },
+  {
+    "key": "hammer_aura_air_ows_earbuds",
+    "pid": 1385416,
+    "category": "electronics"
+  },
+  {
+    "key": "goboult_astra_earbuds_black",
+    "pid": 549652,
+    "category": "electronics"
+  },
+  {
+    "key": "goboult_z40_pro_earbuds",
+    "pid": 560048,
+    "category": "electronics"
+  },
+  {
+    "key": "boat_airdopes_311_pro",
+    "pid": 561089,
+    "category": "electronics"
+  },
+  {
+    "key": "hamm_emerald_aurflow_plus_earbuds",
+    "pid": 731204,
+    "category": "electronics"
+  },
+  {
+    "key": "sony_wh_ch520",
+    "pid": 565365,
+    "category": "electronics"
+  },
+  {
+    "key": "jbl_tune_520bt",
+    "pid": 559909,
+    "category": "electronics"
+  },
+  {
+    "key": "boat_rockerz_650_pro",
+    "pid": 608704,
+    "category": "electronics"
+  },
+  {
+    "key": "noise_two_headphones",
+    "pid": 599078,
+    "category": "electronics"
+  },
+  {
+    "key": "hammer_bash_vivid_anc",
+    "pid": 711514,
+    "category": "electronics"
+  },
+  {
+    "key": "goboult_thunder_headphones",
+    "pid": 813963,
+    "category": "electronics"
+  },
+  {
+    "key": "hammer_vibe_enc_headphones",
+    "pid": 717546,
+    "category": "electronics"
+  },
+  {
+    "key": "noise_fit_diva_pearl",
+    "pid": 549094,
+    "category": "electronics"
+  },
+  {
+    "key": "noise_fit_crew_hd",
+    "pid": 549100,
+    "category": "electronics"
+  },
+  {
+    "key": "noise_colorfit_icon2",
+    "pid": 524049,
+    "category": "electronics"
+  },
+  {
+    "key": "boat_storm_blaze_hd",
+    "pid": 802538,
+    "category": "electronics"
+  },
+  {
+    "key": "boat_lunar_discovery_neo",
+    "pid": 777846,
+    "category": "electronics"
+  },
+  {
+    "key": "boat_storm_call3",
+    "pid": 548267,
+    "category": "electronics"
+  },
+  {
+    "key": "goboult_mustang_stallion",
+    "pid": 753515,
+    "category": "electronics"
+  },
+  {
+    "key": "goboult_crown_bt_calling",
+    "pid": 552700,
+    "category": "electronics"
+  },
+  {
+    "key": "ambrane_orbit_20k",
+    "pid": 769289,
+    "category": "electronics"
+  },
+  {
+    "key": "ambrane_pocket_20000",
+    "pid": 769447,
+    "category": "electronics"
+  },
+  {
+    "key": "xiaomi_4i_fast_10000",
+    "pid": 563426,
+    "category": "electronics"
+  },
+  {
+    "key": "belkin_20000_powerbank",
+    "pid": 601265,
+    "category": "electronics"
+  },
+  {
+    "key": "ambrane_magsafe_wireless",
+    "pid": 769405,
+    "category": "electronics"
+  },
+  {
+    "key": "logitech_mx_keys_s",
+    "pid": 569705,
+    "category": "electronics"
+  },
+  {
+    "key": "logitech_pebble_2_combo",
+    "pid": 569704,
+    "category": "electronics"
+  },
+  {
+    "key": "logitech_pebble_keys_380s",
+    "pid": 569695,
+    "category": "electronics"
+  },
+  {
+    "key": "logitech_pebble_2_mouse",
+    "pid": 538991,
+    "category": "electronics"
+  },
+  {
+    "key": "zebronics_companion_301",
+    "pid": 698399,
+    "category": "electronics"
+  },
+  {
+    "key": "lenovo_210_combo",
+    "pid": 1375025,
+    "category": "electronics"
+  },
+  {
+    "key": "lenovo_600bt_silent_mouse",
+    "pid": 628255,
+    "category": "electronics"
+  },
+  {
+    "key": "portronics_conch_theta",
+    "pid": 567204,
+    "category": "electronics"
+  },
+  {
+    "key": "wipro_wifi_12w_smart_bulb",
+    "pid": 620352,
+    "category": "electronics"
+  },
+  {
+    "key": "philips_wiz_smart_plug",
+    "pid": 1359208,
+    "category": "electronics"
+  },
+  {
+    "key": "tapo_p110_wifi_plug",
+    "pid": 542570,
+    "category": "electronics"
+  },
+  {
+    "key": "casio_mtp_v300l",
+    "pid": 790832,
+    "category": "electronics"
+  },
+  {
+    "key": "fastrack_quartz_analog",
+    "pid": 664287,
+    "category": "electronics"
+  },
+  {
+    "key": "fastrack_go_skate_watch",
+    "pid": 664273,
+    "category": "electronics"
+  },
+  {
+    "key": "fujifilm_instax_mini_20sheets",
+    "pid": 543541,
+    "category": "electronics"
+  },
+  {
+    "key": "digitek_ring_light",
+    "pid": 618977,
+    "category": "electronics"
+  },
+  {
+    "key": "digitek_led_ring_light_stand",
+    "pid": 566367,
+    "category": "electronics"
+  },
+  {
+    "key": "ubon_speaker_with_mic_sp29",
+    "pid": 690056,
+    "category": "electronics"
+  },
+  {
+    "key": "hammer_drop_5w_speaker",
+    "pid": 672101,
+    "category": "electronics"
+  },
+  {
+    "key": "ubon_rgb_speaker_sp65",
+    "pid": 661782,
+    "category": "electronics"
+  },
+  {
+    "key": "nu_republic_cyberstud_x8",
+    "pid": 577749,
+    "category": "electronics"
+  },
+  {
+    "key": "dubstep_buzz_x8_earbuds",
+    "pid": 660463,
+    "category": "electronics"
+  },
+  {
+    "key": "noise_twist_go_gold",
+    "pid": 546672,
+    "category": "electronics"
+  },
+  {
+    "key": "noise_20000_cable_powerbank",
+    "pid": 1407003,
+    "category": "electronics"
+  },
+  {
+    "key": "lifelong_zencharge_compact",
+    "pid": 581604,
+    "category": "electronics"
+  },
+  {
+    "key": "xiaomi_20000_sonic_charge",
+    "pid": 572098,
+    "category": "electronics"
+  },
+  {
+    "key": "logitech_m196_mouse",
+    "pid": 702803,
+    "category": "electronics"
+  },
+  {
+    "key": "orient_wifi_10w_smart_bulb",
+    "pid": 523805,
+    "category": "electronics"
+  },
+  {
+    "key": "philips_wiz_9w_smart_bulb",
+    "pid": 507483,
+    "category": "electronics"
+  },
+  {
+    "key": "havells_9w_wifi_smart_bulb",
+    "pid": 565304,
+    "category": "electronics"
+  },
+  {
+    "key": "digitek_dtr420w_tripod",
+    "pid": 752018,
+    "category": "electronics"
+  },
+  {
+    "key": "striff_multi_angle_stand",
+    "pid": 548153,
+    "category": "electronics"
+  },
+  {
+    "key": "ambrane_twistand_stand",
+    "pid": 556913,
+    "category": "electronics"
   }
 ]

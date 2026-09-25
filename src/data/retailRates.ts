@@ -86,6 +86,90 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "ambrane_magsafe_wireless",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Ambrane",
+    "name": "Ambrane Qi2 & MagSafe Wireless 10000 mAh Power Bank",
+    "unit": "1 unit",
+    "price": 1999,
+    "mrp": 3999,
+    "rating": null,
+    "image": "/retail/ambrane_magsafe_wireless.jpg",
+    "prid": 769405,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1999,
+        "mrp": 3999
+      }
+    ]
+  },
+  {
+    "key": "ambrane_orbit_20k",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Ambrane",
+    "name": "Ambrane Orbit 20K 20000 mAh Power Bank (Titanium)",
+    "unit": "1 unit",
+    "price": 3199,
+    "mrp": 4999,
+    "rating": null,
+    "image": "/retail/ambrane_orbit_20k.jpg",
+    "prid": 769289,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 3199,
+        "mrp": 4999
+      }
+    ]
+  },
+  {
+    "key": "ambrane_pocket_20000",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Ambrane",
+    "name": "Ambrane Pocket 20000 mAh Power Bank",
+    "unit": "1 unit",
+    "price": 1999,
+    "mrp": 3800,
+    "rating": null,
+    "image": "/retail/ambrane_pocket_20000.jpg",
+    "prid": 769447,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1999,
+        "mrp": 3800
+      }
+    ]
+  },
+  {
+    "key": "ambrane_twistand_stand",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Ambrane",
+    "name": "60% OFF8 minsAmbrane Twistand Mobile Stand (White)1 unit₹199 ₹499ADD",
+    "unit": "",
+    "price": 199,
+    "mrp": 499,
+    "rating": null,
+    "image": "/retail/ambrane_twistand_stand.jpg",
+    "prid": 556913,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 199,
+        "mrp": 499
+      }
+    ]
+  },
+  {
     "key": "amul_dark_35g",
     "note": "retail chocolate SKU",
     "category": "retail chocolate SKU",
@@ -166,6 +250,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "250 ml",
         "price": 669,
         "mrp": 1500
+      }
+    ]
+  },
+  {
+    "key": "apple_airpods_4",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Apple",
+    "name": "Apple AirPods 4",
+    "unit": "1 pair",
+    "price": 12499,
+    "mrp": 12900,
+    "rating": null,
+    "image": "/retail/apple_airpods_4.jpg",
+    "prid": 626968,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pair",
+        "price": 12499,
+        "mrp": 12900
       }
     ]
   },
@@ -380,6 +485,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "belkin_20000_powerbank",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Belkin",
+    "name": "Belkin 20000 mAh Power Bank",
+    "unit": "1 unit",
+    "price": 2659,
+    "mrp": 7999,
+    "rating": null,
+    "image": "/retail/belkin_20000_powerbank.jpg",
+    "prid": 601265,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 2659,
+        "mrp": 7999
+      }
+    ]
+  },
+  {
     "key": "bella_vita_date_woman_edp",
     "note": "retail fragrance & grooming",
     "category": "fragrance",
@@ -548,6 +674,174 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "boat_aavante_150",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "boAt",
+    "name": "boAt Aavante 2.0 Bluetooth Speaker (Aavante 2.0 150)",
+    "unit": "1 unit",
+    "price": 1349,
+    "mrp": 3990,
+    "rating": null,
+    "image": "/retail/boat_aavante_150.jpg",
+    "prid": 702621,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1349,
+        "mrp": 3990
+      }
+    ]
+  },
+  {
+    "key": "boat_airdopes_311_pro",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "boAt",
+    "name": "boAt Airdopes 311 Pro TWS Earbuds (Dusk Blue)",
+    "unit": "1 unit",
+    "price": 899,
+    "mrp": 4990,
+    "rating": null,
+    "image": "/retail/boat_airdopes_311_pro.jpg",
+    "prid": 561089,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 899,
+        "mrp": 4990
+      }
+    ]
+  },
+  {
+    "key": "boat_lunar_discovery_neo",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "boAt",
+    "name": "boAt Lunar Discovery Neo Smart Watch (Black)",
+    "unit": "1 unit",
+    "price": 1499,
+    "mrp": 6999,
+    "rating": null,
+    "image": "/retail/boat_lunar_discovery_neo.jpg",
+    "prid": 777846,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1499,
+        "mrp": 6999
+      }
+    ]
+  },
+  {
+    "key": "boat_party_pal_30",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "boAt",
+    "name": "boAt Bluetooth Speaker (Party Pal 30)",
+    "unit": "1 unit",
+    "price": 2399,
+    "mrp": 8490,
+    "rating": null,
+    "image": "/retail/boat_party_pal_30.jpg",
+    "prid": 707976,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 2399,
+        "mrp": 8490
+      }
+    ]
+  },
+  {
+    "key": "boat_rockerz_650_pro",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "boAt",
+    "name": "boAt Rockerz 650 Pro Bluetooth Headphones (Iris Black)",
+    "unit": "1 unit",
+    "price": 2799,
+    "mrp": 8990,
+    "rating": null,
+    "image": "/retail/boat_rockerz_650_pro.jpg",
+    "prid": 608704,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 2799,
+        "mrp": 8990
+      }
+    ]
+  },
+  {
+    "key": "boat_stone_350_pro",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "boAt",
+    "name": "boAt Stone 350 Pro Bluetooth Speaker (Raging Black)",
+    "unit": "1 unit",
+    "price": 1599,
+    "mrp": 4990,
+    "rating": null,
+    "image": "/retail/boat_stone_350_pro.jpg",
+    "prid": 617536,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1599,
+        "mrp": 4990
+      }
+    ]
+  },
+  {
+    "key": "boat_storm_blaze_hd",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "boAt",
+    "name": "boAt Storm Blaze HD Smart Watch (Cherry Blossom)",
+    "unit": "1 unit",
+    "price": 1503,
+    "mrp": 5999,
+    "rating": null,
+    "image": "/retail/boat_storm_blaze_hd.jpg",
+    "prid": 802538,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1503,
+        "mrp": 5999
+      }
+    ]
+  },
+  {
+    "key": "boat_storm_call3",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "boAt",
+    "name": "boAt Storm Call-3 HD Smart Watch (Active Black)",
+    "unit": "1 unit",
+    "price": 1399,
+    "mrp": 8499,
+    "rating": null,
+    "image": "/retail/boat_storm_call3.jpg",
+    "prid": 548267,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1399,
+        "mrp": 8499
+      }
+    ]
+  },
+  {
     "key": "body_shop_british_rose_bloom_gift",
     "note": "retail item",
     "category": "grooming",
@@ -649,6 +943,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "2 pcs",
         "price": 579,
         "mrp": 695
+      }
+    ]
+  },
+  {
+    "key": "bose_soundlink_flex2",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Bose",
+    "name": "Bose Bluetooth Speaker (Soundlink Flex 2nd Gen)",
+    "unit": "1 unit",
+    "price": 16900,
+    "mrp": 16900,
+    "rating": null,
+    "image": "/retail/bose_soundlink_flex2.jpg",
+    "prid": 693947,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 16900,
+        "mrp": 16900
       }
     ]
   },
@@ -1174,6 +1489,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "50 ml",
         "price": 175,
         "mrp": 225
+      }
+    ]
+  },
+  {
+    "key": "casio_mtp_v300l",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Casio",
+    "name": "Casio MTP-V300L-7AUDF Analog Watch",
+    "unit": "1 unit",
+    "price": 3795,
+    "mrp": 3795,
+    "rating": null,
+    "image": "/retail/casio_mtp_v300l.jpg",
+    "prid": 790832,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 3795,
+        "mrp": 3795
       }
     ]
   },
@@ -2270,6 +2606,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "digitek_dtr420w_tripod",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Digitek",
+    "name": "39% OFF8 minsDigitek DTR 420LW Tripod With Holder1 unit₹779 ₹1,295ADD",
+    "unit": "",
+    "price": 779,
+    "mrp": 1295,
+    "rating": null,
+    "image": "/retail/digitek_dtr420w_tripod.jpg",
+    "prid": 752018,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 779,
+        "mrp": 1295
+      }
+    ]
+  },
+  {
+    "key": "digitek_led_ring_light_stand",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Digitek",
+    "name": "Digitek LED Ring Light with 5ft Stand & Smartphone Mount",
+    "unit": "1 unit",
+    "price": 1399,
+    "mrp": 3495,
+    "rating": null,
+    "image": "/retail/digitek_led_ring_light_stand.jpg",
+    "prid": 566367,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1399,
+        "mrp": 3495
+      }
+    ]
+  },
+  {
+    "key": "digitek_ring_light",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Digitek",
+    "name": "Digitek LED Ring Light with Remote Control & Stand",
+    "unit": "1 set",
+    "price": 3999,
+    "mrp": 7995,
+    "rating": null,
+    "image": "/retail/digitek_ring_light.jpg",
+    "prid": 618977,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 3999,
+        "mrp": 7995
+      }
+    ]
+  },
+  {
     "key": "dm_minitreats_98g",
     "note": "retail chocolate SKU",
     "category": "retail chocolate SKU",
@@ -2329,6 +2728,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "75 g",
         "price": 39,
         "mrp": 48
+      }
+    ]
+  },
+  {
+    "key": "dubstep_buzz_x8_earbuds",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Dubstep",
+    "name": "83% OFF8 minsDubstep Buzz X8 TWS Earbuds (Neon Green)1 unit₹499 ₹2,999ADD",
+    "unit": "",
+    "price": 499,
+    "mrp": 2999,
+    "rating": null,
+    "image": "/retail/dubstep_buzz_x8_earbuds.jpg",
+    "prid": 660463,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 499,
+        "mrp": 2999
       }
     ]
   },
@@ -2560,6 +2980,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "4 x 8 ml",
         "price": 304,
         "mrp": 516
+      }
+    ]
+  },
+  {
+    "key": "fastrack_go_skate_watch",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Fastrack",
+    "name": "Fastrack Go Skate Analogue Watch with Day & Date",
+    "unit": "1 pc",
+    "price": 3895,
+    "mrp": 3895,
+    "rating": null,
+    "image": "/retail/fastrack_go_skate_watch.jpg",
+    "prid": 664273,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 3895,
+        "mrp": 3895
+      }
+    ]
+  },
+  {
+    "key": "fastrack_quartz_analog",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Fastrack",
+    "name": "Fastrack Quartz Analog Watch",
+    "unit": "1 pc",
+    "price": 5295,
+    "mrp": 5295,
+    "rating": null,
+    "image": "/retail/fastrack_quartz_analog.jpg",
+    "prid": 664287,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 pc",
+        "price": 5295,
+        "mrp": 5295
       }
     ]
   },
@@ -2900,6 +3362,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "fujifilm_instax_mini_20sheets",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Fujifilm",
+    "name": "Fujifilm Instax Mini Camera Films - 20 Sheets",
+    "unit": "20 sheets",
+    "price": 1399,
+    "mrp": 1399,
+    "rating": null,
+    "image": "/retail/fujifilm_instax_mini_20sheets.jpg",
+    "prid": 543541,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "20 sheets",
+        "price": 1399,
+        "mrp": 1399
+      }
+    ]
+  },
+  {
     "key": "fuse_43g",
     "note": "retail chocolate SKU",
     "category": "retail chocolate SKU",
@@ -3068,6 +3551,111 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "goboult_astra_earbuds_black",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "GOBOULT",
+    "name": "GOBOULT Astra TWS Earbuds (Black)",
+    "unit": "1 unit",
+    "price": 1099,
+    "mrp": 3499,
+    "rating": null,
+    "image": "/retail/goboult_astra_earbuds_black.jpg",
+    "prid": 549652,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1099,
+        "mrp": 3499
+      }
+    ]
+  },
+  {
+    "key": "goboult_crown_bt_calling",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "GOBOULT",
+    "name": "GOBOULT Crown BT Calling HD Smart Watch (Orange)",
+    "unit": "1 unit",
+    "price": 1599,
+    "mrp": 4499,
+    "rating": null,
+    "image": "/retail/goboult_crown_bt_calling.jpg",
+    "prid": 552700,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1599,
+        "mrp": 4499
+      }
+    ]
+  },
+  {
+    "key": "goboult_mustang_stallion",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "GOBOULT",
+    "name": "GOBOULT Mustang Stallion HD Smart Watch with Rotating Bezel (Turbo Orange)",
+    "unit": "1 unit",
+    "price": 4499,
+    "mrp": 14999,
+    "rating": null,
+    "image": "/retail/goboult_mustang_stallion.jpg",
+    "prid": 753515,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 4499,
+        "mrp": 14999
+      }
+    ]
+  },
+  {
+    "key": "goboult_thunder_headphones",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "GOBOULT",
+    "name": "GOBOULT Mustang Thunder Bluetooth Headphones (Silver Black)",
+    "unit": "1 unit",
+    "price": 2799,
+    "mrp": 7999,
+    "rating": null,
+    "image": "/retail/goboult_thunder_headphones.jpg",
+    "prid": 813963,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 2799,
+        "mrp": 7999
+      }
+    ]
+  },
+  {
+    "key": "goboult_z40_pro_earbuds",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "GOBOULT",
+    "name": "GOBOULT Z40 Pro TWS Earbuds with 100H Battery (Jungle)",
+    "unit": "1 unit",
+    "price": 1099,
+    "mrp": 5499,
+    "rating": null,
+    "image": "/retail/goboult_z40_pro_earbuds.jpg",
+    "prid": 560048,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1099,
+        "mrp": 5499
+      }
+    ]
+  },
+  {
     "key": "haldiram_bhujia_400g",
     "note": "retail snack/chips SKU",
     "category": "retail snack/chips SKU",
@@ -3148,6 +3736,195 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "95 g",
         "price": 20,
         "mrp": 25
+      }
+    ]
+  },
+  {
+    "key": "hamm_emerald_aurflow_plus_earbuds",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Hammer",
+    "name": "Hammer Airflow Plus TWS Earbuds with Smart Touch (Emerald Green)",
+    "unit": "1 unit",
+    "price": 549,
+    "mrp": 4999,
+    "rating": null,
+    "image": "/retail/hamm_emerald_aurflow_plus_earbuds.jpg",
+    "prid": 731204,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 549,
+        "mrp": 4999
+      }
+    ]
+  },
+  {
+    "key": "hammer_aura_air_ows_earbuds",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Hammer",
+    "name": "Hammer Aura Air OWS Earbuds (Champagne Gold)",
+    "unit": "1 unit",
+    "price": 1299,
+    "mrp": 2999,
+    "rating": null,
+    "image": "/retail/hammer_aura_air_ows_earbuds.jpg",
+    "prid": 1385416,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1299,
+        "mrp": 2999
+      }
+    ]
+  },
+  {
+    "key": "hammer_bash_vivid_anc",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Hammer",
+    "name": "Hammer Bash Vivid ANC Wireless Bluetooth Headphones (Black)",
+    "unit": "1 unit",
+    "price": 1499,
+    "mrp": 4999,
+    "rating": null,
+    "image": "/retail/hammer_bash_vivid_anc.jpg",
+    "prid": 711514,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1499,
+        "mrp": 4999
+      }
+    ]
+  },
+  {
+    "key": "hammer_boom_30w_speaker",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Hammer",
+    "name": "Hammer Boom 30W Wireless Bluetooth Speaker (Blue)",
+    "unit": "1 unit",
+    "price": 2399,
+    "mrp": 5999,
+    "rating": null,
+    "image": "/retail/hammer_boom_30w_speaker.jpg",
+    "prid": 716467,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 2399,
+        "mrp": 5999
+      }
+    ]
+  },
+  {
+    "key": "hammer_drop_5w_speaker",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Hammer",
+    "name": "84% OFF8 minsHammer Drop 5W Wireless Bluetooth Speaker (Green)1 unit₹549 ₹3,499ADD",
+    "unit": "",
+    "price": 549,
+    "mrp": 3499,
+    "rating": null,
+    "image": "/retail/hammer_drop_5w_speaker.jpg",
+    "prid": 672101,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 549,
+        "mrp": 3499
+      }
+    ]
+  },
+  {
+    "key": "hammer_screen_anc_earbuds_black",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Hammer",
+    "name": "Hammer Screen 32dB ANC+ENC TWS Earbuds (Black)",
+    "unit": "1 unit",
+    "price": 1499,
+    "mrp": 8999,
+    "rating": null,
+    "image": "/retail/hammer_screen_anc_earbuds_black.jpg",
+    "prid": 674203,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1499,
+        "mrp": 8999
+      }
+    ]
+  },
+  {
+    "key": "hammer_screen_anc_earbuds_white",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Hammer",
+    "name": "Hammer Screen TWS Earbuds 32dB ANC+ENC (White)",
+    "unit": "1 unit",
+    "price": 1499,
+    "mrp": 8999,
+    "rating": null,
+    "image": "/retail/hammer_screen_anc_earbuds_white.jpg",
+    "prid": 672667,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1499,
+        "mrp": 8999
+      }
+    ]
+  },
+  {
+    "key": "hammer_vibe_enc_headphones",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Hammer",
+    "name": "Hammer Vibe ENC Bluetooth Headphones (Black)",
+    "unit": "1 unit",
+    "price": 949,
+    "mrp": 4999,
+    "rating": null,
+    "image": "/retail/hammer_vibe_enc_headphones.jpg",
+    "prid": 717546,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 949,
+        "mrp": 4999
+      }
+    ]
+  },
+  {
+    "key": "havells_9w_wifi_smart_bulb",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Havells",
+    "name": "78% OFF8 minsHavells 9 W Wi-Fi Smart Bulb (RGB Colours)1 unit₹439 ₹1,999ADD",
+    "unit": "",
+    "price": 439,
+    "mrp": 1999,
+    "rating": null,
+    "image": "/retail/havells_9w_wifi_smart_bulb.jpg",
+    "prid": 565304,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 439,
+        "mrp": 1999
       }
     ]
   },
@@ -3295,6 +4072,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "15 ml",
         "price": 380,
         "mrp": 700
+      }
+    ]
+  },
+  {
+    "key": "jbl_flip_essential_2",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "JBL",
+    "name": "JBL Bluetooth Speaker (Flip Essential 2)",
+    "unit": "1 unit",
+    "price": 4999,
+    "mrp": 9999,
+    "rating": null,
+    "image": "/retail/jbl_flip_essential_2.jpg",
+    "prid": 561514,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 4999,
+        "mrp": 9999
+      }
+    ]
+  },
+  {
+    "key": "jbl_tune_520bt",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "JBL",
+    "name": "JBL Tune 520BT Bluetooth Headphones (Black)",
+    "unit": "1 unit",
+    "price": 3499,
+    "mrp": 4999,
+    "rating": null,
+    "image": "/retail/jbl_tune_520bt.jpg",
+    "prid": 559909,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 3499,
+        "mrp": 4999
       }
     ]
   },
@@ -4013,6 +4832,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "lenovo_210_combo",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Lenovo",
+    "name": "Lenovo 210 Wireless Keyboard & Mouse Combo (Black)",
+    "unit": "1 set",
+    "price": 1199,
+    "mrp": 2590,
+    "rating": null,
+    "image": "/retail/lenovo_210_combo.jpg",
+    "prid": 1375025,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 1199,
+        "mrp": 2590
+      }
+    ]
+  },
+  {
+    "key": "lenovo_600bt_silent_mouse",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Lenovo",
+    "name": "Lenovo 600 BT Silent Wireless Mouse (Grey)",
+    "unit": "1 unit",
+    "price": 1649,
+    "mrp": 3090,
+    "rating": null,
+    "image": "/retail/lenovo_600bt_silent_mouse.jpg",
+    "prid": 628255,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1649,
+        "mrp": 3090
+      }
+    ]
+  },
+  {
     "key": "lexton_190led_pixel_light",
     "note": "retail decorative lighting",
     "category": "lights",
@@ -4223,6 +5084,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "lifelong_zencharge_compact",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Lifelong",
+    "name": "56% OFF8 minsLifelong ZenCharge Compact Pocket Size 10000 mAh Power Bank1 unit₹1,299 ₹2,999ADD",
+    "unit": "",
+    "price": 1299,
+    "mrp": 2999,
+    "rating": null,
+    "image": "/retail/lifelong_zencharge_compact.jpg",
+    "prid": 581604,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 1299,
+        "mrp": 2999
+      }
+    ]
+  },
+  {
     "key": "litt_curtain_string_lights",
     "note": "retail decorative lighting",
     "category": "lights",
@@ -4261,6 +5143,111 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "79 g",
         "price": 26,
         "mrp": 30
+      }
+    ]
+  },
+  {
+    "key": "logitech_m196_mouse",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Logitech",
+    "name": "43% OFF8 minsLogitech M196 Bluetooth Wireless Mouse (Graphite)1 unit₹695 ₹1,229ADD",
+    "unit": "",
+    "price": 695,
+    "mrp": 1229,
+    "rating": null,
+    "image": "/retail/logitech_m196_mouse.jpg",
+    "prid": 702803,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 695,
+        "mrp": 1229
+      }
+    ]
+  },
+  {
+    "key": "logitech_mx_keys_s",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Logitech",
+    "name": "Logitech MX Keys S Bluetooth Wireless Keyboard with Backlit, Quiet Typing (Graphite)",
+    "unit": "1 unit",
+    "price": 10995,
+    "mrp": 13295,
+    "rating": null,
+    "image": "/retail/logitech_mx_keys_s.jpg",
+    "prid": 569705,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 10995,
+        "mrp": 13295
+      }
+    ]
+  },
+  {
+    "key": "logitech_pebble_2_combo",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Logitech",
+    "name": "Logitech Pebble 2 Bluetooth Keyboard & Mouse Combo Quiet & Portable (Graphite)",
+    "unit": "1 unit",
+    "price": 4595,
+    "mrp": 8797,
+    "rating": null,
+    "image": "/retail/logitech_pebble_2_combo.jpg",
+    "prid": 569704,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 4595,
+        "mrp": 8797
+      }
+    ]
+  },
+  {
+    "key": "logitech_pebble_2_mouse",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Logitech",
+    "name": "Logitech Pebble 2 M350S Bluetooth Wireless Mouse (Graphite)",
+    "unit": "1 unit",
+    "price": 1595,
+    "mrp": 2395,
+    "rating": null,
+    "image": "/retail/logitech_pebble_2_mouse.jpg",
+    "prid": 538991,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1595,
+        "mrp": 2395
+      }
+    ]
+  },
+  {
+    "key": "logitech_pebble_keys_380s",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Logitech",
+    "name": "Logitech Pebble Keys 2 K380s Multi Device Wireless Keyboard (Tonal Rose)",
+    "unit": "1 unit",
+    "price": 3195,
+    "mrp": 4595,
+    "rating": null,
+    "image": "/retail/logitech_pebble_keys_380s.jpg",
+    "prid": 569695,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 3195,
+        "mrp": 4595
       }
     ]
   },
@@ -4958,6 +5945,153 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "noise_20000_cable_powerbank",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Noise",
+    "name": "44% OFF8 minsNoise Built in Cable 20000 mAh Power Bank1 unit₹2,799 ₹4,999ADD",
+    "unit": "",
+    "price": 2799,
+    "mrp": 4999,
+    "rating": null,
+    "image": "/retail/noise_20000_cable_powerbank.jpg",
+    "prid": 1407003,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 2799,
+        "mrp": 4999
+      }
+    ]
+  },
+  {
+    "key": "noise_colorfit_icon2",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Noise",
+    "name": "Noise ColorFit Icon 2 LCD Display HD Smart Watch (Jet Black)",
+    "unit": "1 unit",
+    "price": 1499,
+    "mrp": 5999,
+    "rating": null,
+    "image": "/retail/noise_colorfit_icon2.jpg",
+    "prid": 524049,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1499,
+        "mrp": 5999
+      }
+    ]
+  },
+  {
+    "key": "noise_fit_crew_hd",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Noise",
+    "name": "Noise Fit Crew HD Smart Watch (Jet Black)",
+    "unit": "1 unit",
+    "price": 1599,
+    "mrp": 4999,
+    "rating": null,
+    "image": "/retail/noise_fit_crew_hd.jpg",
+    "prid": 549100,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1599,
+        "mrp": 4999
+      }
+    ]
+  },
+  {
+    "key": "noise_fit_diva_pearl",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Noise",
+    "name": "Noise Fit Diva Amoled Smart Watch (Pearl White)",
+    "unit": "1 unit",
+    "price": 2999,
+    "mrp": 5999,
+    "rating": null,
+    "image": "/retail/noise_fit_diva_pearl.jpg",
+    "prid": 549094,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 2999,
+        "mrp": 5999
+      }
+    ]
+  },
+  {
+    "key": "noise_twist_go_gold",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Noise",
+    "name": "62% OFF8 minsNoise NoiseFit Twist Go HD Smart Watch (Gold Link)1 unit₹1,899 ₹4,999ADD",
+    "unit": "",
+    "price": 1899,
+    "mrp": 4999,
+    "rating": null,
+    "image": "/retail/noise_twist_go_gold.jpg",
+    "prid": 546672,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 1899,
+        "mrp": 4999
+      }
+    ]
+  },
+  {
+    "key": "noise_two_headphones",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Noise",
+    "name": "Noise TWO Wireless Bluetooth Headphones (Bold Black)",
+    "unit": "1 unit",
+    "price": 1699,
+    "mrp": 4999,
+    "rating": null,
+    "image": "/retail/noise_two_headphones.jpg",
+    "prid": 599078,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1699,
+        "mrp": 4999
+      }
+    ]
+  },
+  {
+    "key": "nu_republic_cyberstud_x8",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Nu Republic",
+    "name": "76% OFF8 minsNu Republic Cyberstud X8 TWS Earbuds (Sterling Silver)1 unit₹699 ₹2,999ADD",
+    "unit": "",
+    "price": 699,
+    "mrp": 2999,
+    "rating": null,
+    "image": "/retail/nu_republic_cyberstud_x8.jpg",
+    "prid": 577749,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 699,
+        "mrp": 2999
+      }
+    ]
+  },
+  {
     "key": "nutties_30g",
     "note": "retail chocolate SKU",
     "category": "retail chocolate SKU",
@@ -5227,6 +6361,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "2 x 125.25 g",
         "price": 75,
         "mrp": 80
+      }
+    ]
+  },
+  {
+    "key": "orient_wifi_10w_smart_bulb",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Orient Electric",
+    "name": "71% OFF8 minsOrient Electric Wifi 10 W Smart Bulb (Multicolour)1 pc₹579 ₹2,000ADD",
+    "unit": "",
+    "price": 579,
+    "mrp": 2000,
+    "rating": null,
+    "image": "/retail/orient_wifi_10w_smart_bulb.jpg",
+    "prid": 523805,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 579,
+        "mrp": 2000
       }
     ]
   },
@@ -5525,6 +6680,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "philips_wiz_9w_smart_bulb",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Philips Lighting",
+    "name": "Philips Lighting Wiz Wi-Fi Enabled 9 W Smart Bulb (Multicolour)",
+    "unit": "1 unit",
+    "price": 659,
+    "mrp": 1999,
+    "rating": null,
+    "image": "/retail/philips_wiz_9w_smart_bulb.jpg",
+    "prid": 507483,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 659,
+        "mrp": 1999
+      }
+    ]
+  },
+  {
+    "key": "philips_wiz_smart_plug",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Philips Lighting",
+    "name": "Philips Lighting Wi-Fi & Voice Control Smart Plug",
+    "unit": "1 unit",
+    "price": 1129,
+    "mrp": 2199,
+    "rating": null,
+    "image": "/retail/philips_wiz_smart_plug.jpg",
+    "prid": 1359208,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1129,
+        "mrp": 2199
+      }
+    ]
+  },
+  {
     "key": "plum_boardroom_bora_bora_mist",
     "note": "retail fragrance & grooming",
     "category": "fragrance",
@@ -5668,6 +6865,48 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "50 ml",
         "price": 311,
         "mrp": 345
+      }
+    ]
+  },
+  {
+    "key": "portronics_conch_theta",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Portronics",
+    "name": "Portronics Conch Theta C Type C Wired Earphones (White)",
+    "unit": "1 unit",
+    "price": 311,
+    "mrp": 799,
+    "rating": null,
+    "image": "/retail/portronics_conch_theta.jpg",
+    "prid": 567204,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 311,
+        "mrp": 799
+      }
+    ]
+  },
+  {
+    "key": "portronics_party_speaker_dash4",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Portronics",
+    "name": "Portronics Party Bluetooth Speaker with Karaoke Mic (Dash 4)",
+    "unit": "1 unit",
+    "price": 5999,
+    "mrp": 9999,
+    "rating": null,
+    "image": "/retail/portronics_party_speaker_dash4.jpg",
+    "prid": 567259,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 5999,
+        "mrp": 9999
       }
     ]
   },
@@ -6323,6 +7562,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "sony_wh_ch520",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Sony",
+    "name": "Sony WH-CH520/BZ IN Bluetooth Headphones (Black)",
+    "unit": "1 unit",
+    "price": 4489,
+    "mrp": 5990,
+    "rating": null,
+    "image": "/retail/sony_wh_ch520.jpg",
+    "prid": 565365,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 4489,
+        "mrp": 5990
+      }
+    ]
+  },
+  {
     "key": "soul_stories_beard_oil",
     "note": "retail item",
     "category": "grooming",
@@ -6365,6 +7625,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "striff_multi_angle_stand",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Striff",
+    "name": "68% OFF8 minsStriff Multi Angle Mobile Stand (PS2_01, Black)1 unit₹159 ₹499ADD",
+    "unit": "",
+    "price": 159,
+    "mrp": 499,
+    "rating": null,
+    "image": "/retail/striff_multi_angle_stand.jpg",
+    "prid": 548153,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 159,
+        "mrp": 499
+      }
+    ]
+  },
+  {
     "key": "sugar_pop_4in1_nail_kit",
     "note": "retail item",
     "category": "grooming",
@@ -6382,6 +7663,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "4 x 5 ml",
         "price": 187,
         "mrp": 249
+      }
+    ]
+  },
+  {
+    "key": "tapo_p110_wifi_plug",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "TP-Link",
+    "name": "Tapo P110 16A Wi-Fi Smart Plug, Works with Alexa",
+    "unit": "1 unit",
+    "price": 989,
+    "mrp": 1699,
+    "rating": null,
+    "image": "/retail/tapo_p110_wifi_plug.jpg",
+    "prid": 542570,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 989,
+        "mrp": 1699
       }
     ]
   },
@@ -6445,6 +7747,111 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "5 pcs",
         "price": 649,
         "mrp": 900
+      }
+    ]
+  },
+  {
+    "key": "ubon_dual_speaker_sp85",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Ubon",
+    "name": "Ubon Dual Bluetooth Speaker (SP-85)",
+    "unit": "1 unit",
+    "price": 1599,
+    "mrp": 3999,
+    "rating": null,
+    "image": "/retail/ubon_dual_speaker_sp85.jpg",
+    "prid": 689131,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1599,
+        "mrp": 3999
+      }
+    ]
+  },
+  {
+    "key": "ubon_karaoke_soundbar_sp90",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Ubon",
+    "name": "Ubon Karaoke Wireless Soundbar with Mic (SP-90)",
+    "unit": "1 unit",
+    "price": 1099,
+    "mrp": 2599,
+    "rating": null,
+    "image": "/retail/ubon_karaoke_soundbar_sp90.jpg",
+    "prid": 733864,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1099,
+        "mrp": 2599
+      }
+    ]
+  },
+  {
+    "key": "ubon_rgb_speaker_sp65",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Ubon",
+    "name": "40% OFF8 minsUbon Bluetooth Speaker with RGB Lights (SP-65)1 unit₹829 ₹1,399ADD",
+    "unit": "",
+    "price": 829,
+    "mrp": 1399,
+    "rating": null,
+    "image": "/retail/ubon_rgb_speaker_sp65.jpg",
+    "prid": 661782,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 829,
+        "mrp": 1399
+      }
+    ]
+  },
+  {
+    "key": "ubon_speaker_with_mic_sp29",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Ubon",
+    "name": "50% OFF8 minsUbon Bluetooth Speaker with Mic (SP-29)1 unit₹1,999 ₹3,999ADD",
+    "unit": "",
+    "price": 1999,
+    "mrp": 3999,
+    "rating": null,
+    "image": "/retail/ubon_speaker_with_mic_sp29.jpg",
+    "prid": 690056,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 1999,
+        "mrp": 3999
+      }
+    ]
+  },
+  {
+    "key": "ubon_wireless_soundbar_sp80",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Ubon",
+    "name": "Ubon Wireless Soundbar (SP-80)",
+    "unit": "1 unit",
+    "price": 999,
+    "mrp": 2199,
+    "rating": null,
+    "image": "/retail/ubon_wireless_soundbar_sp80.jpg",
+    "prid": 661781,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 999,
+        "mrp": 2199
       }
     ]
   },
@@ -6764,6 +8171,69 @@ export const RETAIL_RATES: RetailRateItem[] = [
     ]
   },
   {
+    "key": "wipro_wifi_12w_smart_bulb",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Wipro",
+    "name": "Wipro B22D Wi-Fi LED 12.5 W Smart Bulb (Multicolour)",
+    "unit": "1 unit",
+    "price": 699,
+    "mrp": 2590,
+    "rating": null,
+    "image": "/retail/wipro_wifi_12w_smart_bulb.jpg",
+    "prid": 620352,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 699,
+        "mrp": 2590
+      }
+    ]
+  },
+  {
+    "key": "xiaomi_20000_sonic_charge",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Xiaomi",
+    "name": "38% OFF8 minsXiaomi 20000 mAh Power Bank (4i Sonic Charge)1 unit₹2,449 ₹3,999ADD",
+    "unit": "",
+    "price": 2449,
+    "mrp": 3999,
+    "rating": null,
+    "image": "/retail/xiaomi_20000_sonic_charge.jpg",
+    "prid": 572098,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "",
+        "price": 2449,
+        "mrp": 3999
+      }
+    ]
+  },
+  {
+    "key": "xiaomi_4i_fast_10000",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Xiaomi",
+    "name": "Xiaomi 4i Fast Charge 10000 mAh Power Bank",
+    "unit": "1 unit",
+    "price": 1499,
+    "mrp": 2499,
+    "rating": null,
+    "image": "/retail/xiaomi_4i_fast_10000.jpg",
+    "prid": 563426,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 unit",
+        "price": 1499,
+        "mrp": 2499
+      }
+    ]
+  },
+  {
     "key": "yardley_gentleman_gold_grooming_kit",
     "note": "retail item",
     "category": "grooming",
@@ -6844,6 +8314,27 @@ export const RETAIL_RATES: RetailRateItem[] = [
         "unit": "75 g",
         "price": 23,
         "mrp": 50
+      }
+    ]
+  },
+  {
+    "key": "zebronics_companion_301",
+    "note": "retail electronics",
+    "category": "electronics",
+    "brand": "Zebronics",
+    "name": "Zebronics Companion 301 Wireless Keyboard & Mouse Combo",
+    "unit": "1 set",
+    "price": 1219,
+    "mrp": 3399,
+    "rating": null,
+    "image": "/retail/zebronics_companion_301.jpg",
+    "prid": 698399,
+    "capturedAt": "2026-09-25",
+    "variants": [
+      {
+        "unit": "1 set",
+        "price": 1219,
+        "mrp": 3399
       }
     ]
   }
