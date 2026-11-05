@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import {
   PACKAGING_SIZE_OPTIONS,
   PRE_MADE_SUGGESTIONS,
@@ -12,35 +12,29 @@ import { BoxVisualizer } from './BoxVisualizer';
 import { BrandedProductGraphic } from './BrandedProductGraphic';
 import { ItemGraphic } from './ItemGraphic';
 import { PhotoCustomizerModal } from './PhotoCustomizerModal';
-import { Packing3DAnimationModal } from './Packing3DAnimationModal';
+
 import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
 import {
   Sparkles,
   Gift,
-  Heart,
   Plus,
   ArrowRight,
   ArrowLeft,
   Check,
-  RotateCcw,
   MessageCircle,
-  Lightbulb,
   Camera,
-  PartyPopper,
-  ShieldCheck,
-  Image as ImageIcon,
-  CheckCircle2,
-  Truck,
-  MapPin,
-  Phone,
-  Calendar,
-  Clock,
-  User,
   GripVertical,
-  Crown,
 } from 'lucide-react';
-import { CustomHamper, LuxuryItem, VesselOption, RibbonOption, WaxSealOption, ItemCategory, PricingTier } from '../types';
-import { VESSEL_OPTIONS, RIBBON_OPTIONS, WAX_SEAL_OPTIONS } from '../data/itemsData';
+import {
+  CustomHamper,
+  LuxuryItem,
+  VesselOption,
+  RibbonOption,
+  WaxSealOption,
+  ItemCategory,
+} from '../types';
+import { RIBBON_OPTIONS, WAX_SEAL_OPTIONS } from '../data/itemsData';
+import { readableOn } from '../utils/color';
 import {
   triggerGoldConfetti,
   triggerPartyPopperConfetti,
@@ -531,17 +525,17 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
   };
 
   return (
-    <div className="bg-white min-h-screen pb-24 text-[#141414]">
+    <div className="bg-white min-h-dvh pb-24 text-ink">
       {/* 1. Header Banner */}
       <section className="border-b border-stone-200 bg-stone-50 py-8 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-100/80 text-amber-900 border border-amber-300 text-xs font-bold uppercase tracking-wider mb-2">
-                <Sparkles className="w-3.5 h-3.5 text-[#B8860B]" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-100/80 text-amber-900 border border-amber-300 text-xs font-semibold mb-2">
+                <Sparkles className="w-3.5 h-3.5 text-gold-700" />
                 Hamper Queen • Custom Gift Builder
               </div>
-              <h1 className="font-seasons text-2xl sm:text-4xl font-bold text-[#141414] tracking-tight">
+              <h1 className="font-seasons text-2xl sm:text-4xl font-bold text-ink tracking-tight">
                 Customise Your Gift Box & Bouquet
               </h1>
               <p className="text-stone-600 text-xs sm:text-sm mt-1 max-w-2xl">
@@ -556,7 +550,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
               href="https://wa.me/918080580105"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-3 text-xs font-bold uppercase tracking-wider hover:bg-[#1EBE5D] transition-colors shadow-sm"
+              className="inline-flex items-center gap-2 bg-whatsapp text-white px-4 py-3 text-xs font-semibold hover:bg-whatsapp-dark transition-colors shadow-soft"
             >
               <MessageCircle className="w-4 h-4" />
               WhatsApp Help: +91 8080580105
@@ -581,9 +575,9 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                   onClick={() => {
                     setCurrentStage(step.num as 1 | 2 | 3 | 4);
                   }}
-                  className={`p-3 text-left border-2 transition-all cursor-pointer ${
+                  className={`p-3 text-left border transition-all cursor-pointer ${
                     isActive
-                      ? 'border-[#B8860B] bg-white ring-1 ring-[#B8860B] shadow-sm'
+                      ? 'border-gold-300 bg-white ring-1 ring-gold-600 shadow-soft'
                       : isPast
                       ? 'border-emerald-500 bg-emerald-50/50 text-emerald-950'
                       : 'border-stone-200 bg-white/70 text-stone-600 hover:border-stone-400'
@@ -593,7 +587,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     <span className="text-xs font-bold">{step.label}</span>
                     {isPast && <Check className="w-3.5 h-3.5 text-emerald-600" />}
                   </div>
-                  <span className="text-[11px] text-stone-500 block mt-0.5">{step.sub}</span>
+                  <span className="text-xs text-stone-500 block mt-0.5">{step.sub}</span>
                 </motion.button>
               );
             })}
@@ -608,7 +602,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
           <div className="space-y-8 animate-fadeIn">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
-                <h2 className="font-seasons text-xl sm:text-2xl font-bold text-[#141414]">
+                <h2 className="font-seasons text-xl sm:text-2xl font-bold text-ink">
                   Stage 1: Choose Your Outer Hamper or Bouquet
                 </h2>
                 <p className="text-xs sm:text-sm text-stone-600">
@@ -630,9 +624,9 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     onClick={() => {
                       setPackagingTypeTab(tab.id as any);
                     }}
-                    className={`px-3 py-1.5 text-xs font-bold transition-all cursor-pointer ${
+                    className={`px-3 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
                       packagingTypeTab === tab.id
-                        ? 'bg-[#B8860B] text-white shadow-xs'
+                        ? 'bg-gold-700 text-white shadow-soft'
                         : 'text-stone-700 hover:text-stone-900'
                     }`}
                   >
@@ -660,10 +654,10 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     whileHover={{ y: -5 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => handleSelectPackaging(pkg)}
-                    className={`relative border-2 cursor-pointer transition-all bg-white shadow-sm flex flex-col justify-between overflow-hidden group ${
+                    className={`relative border cursor-pointer transition-all bg-white shadow-soft flex flex-col justify-between overflow-hidden group ${
                       isSelected
-                        ? 'border-[#B8860B] ring-2 ring-[#B8860B]/50 shadow-lg'
-                        : 'border-stone-200 hover:border-stone-400 hover:shadow-md'
+                        ? 'border-gold-300 ring-2 ring-gold-600/50 shadow-lift'
+                        : 'border-stone-200 hover:border-stone-400 hover:shadow-lift'
                     }`}
                   >
                     {/* Real Hamper Photo or Regenerated Bespoke Art */}
@@ -693,14 +687,14 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
 
                       {/* Top Badges */}
                       <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
-                        <span className="text-[11px] font-bold px-2 py-0.5 bg-black/75 text-white backdrop-blur-xs">
+                        <span className="text-xs font-bold px-2 py-0.5 bg-black/75 text-white backdrop-blur-xs">
                           {pkg.slotCount} Item Slots
                         </span>
                       </div>
 
                       {pkg.popularBadge && (
                         <div className="absolute top-2.5 right-2.5">
-                          <span className="text-[10px] font-bold px-2 py-0.5 bg-[#B8860B] text-white uppercase tracking-wider shadow-sm">
+                          <span className="text-xs font-semibold px-2 py-0.5 bg-gold-700 text-white shadow-soft">
                             {pkg.popularBadge}
                           </span>
                         </div>
@@ -711,7 +705,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                         <span className={`text-xs font-bold drop-shadow-sm ${pkgArtSvgId ? 'bg-black/45 px-2 py-0.5 rounded' : ''}`}>
                           {pkg.dimensions}
                         </span>
-                        <span className={`text-xs font-extrabold text-[#F3E5AB] drop-shadow-sm ${pkgArtSvgId ? 'bg-black/45 px-2 py-0.5 rounded' : ''}`}>
+                        <span className={`text-xs font-bold text-gold-100 drop-shadow-sm ${pkgArtSvgId ? 'bg-black/45 px-2 py-0.5 rounded' : ''}`}>
                           {pkg.approxPriceRange}
                         </span>
                       </div>
@@ -720,14 +714,14 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     {/* Card Body */}
                     <div className="p-4 flex-1 flex flex-col justify-between">
                       <div>
-                        <h3 className="font-seasons text-lg font-bold text-[#141414] group-hover:text-[#B8860B] transition-colors">
+                        <h3 className="font-seasons text-lg font-bold text-ink group-hover:text-gold-700 transition-colors">
                           {pkg.name}
                         </h3>
                         <p className="text-xs text-stone-600 mt-1 line-clamp-2">
                           {pkg.subtitle}
                         </p>
 
-                        <div className="mt-3 pt-2 border-t border-stone-100 text-[11px] text-stone-500">
+                        <div className="mt-3 pt-2 border-t border-stone-100 text-xs text-stone-500">
                           <span className="font-bold text-stone-700">Best For: </span>
                           {pkg.recommendedFor}
                         </div>
@@ -735,9 +729,9 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
 
                       <button
                         type="button"
-                        className={`w-full mt-4 py-3 text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 ${
+                        className={`w-full mt-4 py-3 text-xs font-semibold   transition-colors flex items-center justify-center gap-1.5 ${
                           isSelected
-                            ? 'bg-[#B8860B] text-white'
+                            ? 'bg-gold-700 text-white'
                             : 'bg-stone-100 hover:bg-stone-200 text-stone-800'
                         }`}
                       >
@@ -763,7 +757,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                 onClick={() => {
                   setCurrentStage(2);
                 }}
-                className="bg-[#B8860B] text-white px-8 py-3 text-xs font-bold uppercase tracking-wider hover:bg-[#8C6821] flex items-center gap-2 shadow-sm cursor-pointer"
+                className="bg-gold-700 text-white px-8 py-3 text-xs font-semibold hover:bg-ink flex items-center gap-2 shadow-soft cursor-pointer"
               >
                 Proceed to Fill Slots ({selectedPackaging.slotCount} Slots) <ArrowRight className="w-4 h-4" />
               </motion.button>
@@ -779,7 +773,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
               <div className="flex items-center gap-3">
                 {packagingArtSvgId(selectedPackaging) ? (
                   <div
-                    className="w-12 h-12 flex items-center justify-center border border-[#D4AF37]"
+                    className="w-12 h-12 flex items-center justify-center border border-gold-200"
                     style={{ backgroundColor: selectedPackaging.bgHex }}
                   >
                     <ItemGraphic id={packagingArtSvgId(selectedPackaging)!} size="sm" className="scale-[0.68]" />
@@ -789,13 +783,13 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     src={selectedPackaging.imageUrl}
                     alt={selectedPackaging.name}
                     referrerPolicy="no-referrer"
-                    className="w-12 h-12 object-cover border border-[#D4AF37]"
+                    className="w-12 h-12 object-cover border border-gold-200"
                   />
                 )}
                 <div>
-                  <span className="text-[10px] uppercase font-bold text-[#B8860B]">Selected Packaging</span>
+                  <span className="text-xs font-semibold text-gold-700">Selected Packaging</span>
                   <h4 className="font-seasons text-sm font-bold text-stone-900">{selectedPackaging.name}</h4>
-                  <p className="text-[11px] text-stone-500">{selectedPackaging.dimensions} • {selectedPackaging.slotCount} Slots</p>
+                  <p className="text-xs text-stone-500">{selectedPackaging.dimensions} • {selectedPackaging.slotCount} Slots</p>
                 </div>
               </div>
 
@@ -804,7 +798,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                   onClick={() => {
                     setCurrentStage(1);
                   }}
-                  className="px-3 py-1.5 text-xs font-bold bg-white hover:bg-stone-200 border border-stone-300 text-stone-800 transition-colors"
+                  className="px-3 py-1.5 text-xs font-semibold bg-white hover:bg-stone-200 border border-stone-300 text-stone-800 transition-colors"
                 >
                   Change Hamper Box
                 </button>
@@ -813,37 +807,37 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
 
             {/* 1-Click Pre-made Combos Suggestions */}
             <div className="bg-amber-50/70 border border-amber-300 p-4">
-              <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                 <div className="flex items-center gap-1.5">
-                  <Sparkles className="w-4 h-4 text-[#B8860B]" />
-                  <h3 className="font-seasons text-xs sm:text-sm font-bold text-amber-950 uppercase tracking-wider">
+                  <Sparkles className="w-4 h-4 text-gold-700" />
+                  <h3 className="font-seasons text-xs sm:text-sm font-semibold text-amber-950">
                     Quick Suggestions (1-Click Fill)
                   </h3>
                 </div>
-                <span className="text-[11px] text-stone-500">
+                <span className="text-xs text-stone-500">
                   Tap any combination to automatically populate chocolates and decor:
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 {PRE_MADE_SUGGESTIONS.map((sugg) => (
                   <motion.button
                     key={sugg.id}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => handleApplySuggestion(sugg)}
-                    className="bg-white border border-amber-200 hover:border-[#B8860B] p-3 text-left transition-all shadow-xs group cursor-pointer"
+                    className="bg-white border border-amber-200 hover:border-gold-300 p-3 text-left transition-all shadow-soft group cursor-pointer"
                   >
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-[10px] font-bold text-[#B8860B] uppercase truncate max-w-[120px]">
+                      <span className="text-xs font-semibold text-gold-700 truncate max-w-[120px]">
                         {sugg.tag}
                       </span>
-                      <span className="text-[10px] font-bold text-stone-600">{sugg.approxTotal}</span>
+                      <span className="text-xs font-bold text-stone-600">{sugg.approxTotal}</span>
                     </div>
-                    <h4 className="text-xs font-bold text-stone-900 group-hover:text-[#B8860B] truncate">
+                    <h4 className="text-xs font-bold text-stone-900 group-hover:text-gold-700 truncate">
                       {sugg.title}
                     </h4>
-                    <p className="text-[10px] text-stone-500 line-clamp-1 mt-0.5">
+                    <p className="text-xs text-stone-500 line-clamp-1 mt-0.5">
                       {sugg.subtitle}
                     </p>
                   </motion.button>
@@ -873,7 +867,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
             <div className="space-y-4">
               <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-200 pb-3">
                 <div>
-                  <h3 className="font-seasons text-lg font-bold text-[#141414]">
+                  <h3 className="font-seasons text-lg font-bold text-ink">
                     Add Chocolates, Photos, Lights & Party Props
                   </h3>
                   <p className="text-xs text-stone-500">
@@ -915,9 +909,9 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                       onClick={(e) => {
                         setActiveCategoryFilter(cat.id as any);
                       }}
-                      className={`px-3 py-1 text-xs font-bold border transition-colors cursor-pointer ${
+                      className={`px-3 py-1 text-xs font-semibold border transition-colors cursor-pointer ${
                         activeCategoryFilter === cat.id
-                          ? 'bg-[#141414] text-white border-[#141414]'
+                          ? 'bg-ink text-white border-ink'
                           : 'bg-white text-stone-700 border-stone-300 hover:border-stone-500'
                       }`}
                     >
@@ -932,7 +926,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                       setPhotoModalTargetSlot(target !== -1 ? target : 0);
                       setIsPhotoModalOpen(true);
                     }}
-                    className="px-3 py-1 text-xs font-bold border border-indigo-600 bg-indigo-50 text-indigo-900 hover:bg-indigo-100 flex items-center gap-1 cursor-pointer"
+                    className="px-3 py-1 text-xs font-semibold border border-indigo-600 bg-indigo-50 text-indigo-900 hover:bg-indigo-100 flex items-center gap-1 cursor-pointer"
                   >
                     <Camera className="w-3.5 h-3.5 text-indigo-700" /> + Add Polaroid Photo
                   </button>
@@ -940,7 +934,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                   {/* Custom Gift Request Button */}
                   <button
                     onClick={() => setIsCreatingCustomItem(!isCreatingCustomItem)}
-                    className="px-3 py-1 text-xs font-bold border border-amber-500 bg-amber-50 text-amber-900 hover:bg-amber-100 flex items-center gap-1 cursor-pointer"
+                    className="px-3 py-1 text-xs font-semibold border border-amber-500 bg-amber-50 text-amber-900 hover:bg-amber-100 flex items-center gap-1 cursor-pointer"
                   >
                     <Plus className="w-3.5 h-3.5" /> + Custom Request
                   </button>
@@ -951,7 +945,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
               {isCreatingCustomItem && (
                 <form
                   onSubmit={handleCreateCustomItemSubmit}
-                  className="bg-amber-50 border-2 border-[#D4AF37] p-4 sm:p-5 space-y-3"
+                  className="bg-amber-50 border border-gold-200 p-4 sm:p-5 space-y-3"
                 >
                   <div className="flex items-center justify-between">
                     <h4 className="font-seasons text-sm font-bold text-stone-900">
@@ -960,7 +954,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     <button
                       type="button"
                       onClick={() => setIsCreatingCustomItem(false)}
-                      className="text-xs text-stone-500 hover:text-black font-bold cursor-pointer"
+                      className="text-xs text-stone-500 hover:text-black font-semibold cursor-pointer"
                     >
                       Cancel
                     </button>
@@ -970,7 +964,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div className="sm:col-span-2">
-                      <label className="text-[11px] font-bold text-stone-700 block mb-1">
+                      <label className="text-xs font-bold text-stone-700 block mb-1">
                         Item Name (e.g. Cadbury 5 Star 3D, Personalized Mug, Perfume)
                       </label>
                       <input
@@ -983,7 +977,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                       />
                     </div>
                     <div>
-                      <label className="text-[11px] font-bold text-stone-700 block mb-1">
+                      <label className="text-xs font-bold text-stone-700 block mb-1">
                         Estimated Value (INR )
                       </label>
                       <input
@@ -995,7 +989,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     </div>
                   </div>
                   <div>
-                    <label className="text-[11px] font-bold text-stone-700 block mb-1">
+                    <label className="text-xs font-bold text-stone-700 block mb-1">
                       Special Note or Instructions (Optional)
                     </label>
                     <input
@@ -1008,7 +1002,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                   </div>
                   <button
                     type="submit"
-                    className="bg-[#B8860B] text-white px-4 py-2 text-xs font-bold uppercase tracking-wider hover:bg-[#8C6821] cursor-pointer"
+                    className="bg-gold-700 text-white px-4 py-2 text-xs font-semibold hover:bg-ink cursor-pointer"
                   >
                     Add to Slot
                   </button>
@@ -1029,7 +1023,7 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                     whileHover={{ y: -4 }}
                     whileTap={{ scale: 0.97 }}
                     onClick={(e) => handleAddItem(item, e)}
-                    className="group bg-white border border-stone-200 hover:border-[#B8860B] p-3 flex flex-col justify-between transition-all cursor-grab active:cursor-grabbing shadow-xs hover:shadow-md min-w-0"
+                    className="group bg-white border border-stone-200 hover:border-gold-300 p-3 flex flex-col justify-between transition-all cursor-grab active:cursor-grabbing shadow-soft hover:shadow-lift min-w-0"
                   >
                     <div>
                       {/* Product Graphic */}
@@ -1040,31 +1034,31 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
                       {/* Brand Pill & Drag Indicator */}
                       <div className="flex items-center justify-between mb-1 gap-1">
                         <span
-                          className="text-[9px] font-bold px-1.5 py-0.2 text-white truncate max-w-[70px]"
-                          style={{ backgroundColor: item.colorScheme.bg }}
+                          className="text-xs font-bold px-1.5 py-0.2  truncate max-w-[70px]"
+                          style={{ backgroundColor: item.colorScheme.bg, color: readableOn(item.colorScheme.bg) }}
                         >
                           {item.brand}
                         </span>
-                        <span className="text-[9px] font-bold text-[#8C6821] bg-amber-50/80 px-1 border border-amber-200/80 truncate flex items-center gap-0.5">
-                          <GripVertical className="w-2.5 h-2.5 text-[#B8860B]" /> Drag
+                        <span className="text-xs font-bold text-gold-700 bg-amber-50/80 px-1 border border-amber-200/80 truncate flex items-center gap-0.5">
+                          <GripVertical className="w-2.5 h-2.5 text-gold-700" /> Drag
                         </span>
                       </div>
 
-                      <h4 className="text-xs font-bold text-[#141414] line-clamp-2 group-hover:text-[#B8860B] leading-tight">
+                      <h4 className="text-xs font-bold text-ink line-clamp-2 group-hover:text-gold-700 leading-tight">
                         {item.simpleName}
                       </h4>
-                      <p className="text-[10px] sm:text-[11px] text-stone-500 mt-0.5 line-clamp-2 leading-tight">
+                      <p className="text-xs sm:text-xs text-stone-500 mt-0.5 line-clamp-2 leading-tight">
                         {item.description}
                       </p>
                     </div>
 
                     <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between">
-                      <span className="text-xs font-extrabold text-[#B8860B]">
+                      <span className="text-xs font-bold text-gold-700">
                         INR {item.unitPriceApprox}
                       </span>
                       <button
                         type="button"
-                        className="px-2 py-0.5 bg-stone-100 group-hover:bg-[#B8860B] group-hover:text-white text-stone-700 text-[10px] font-bold flex items-center gap-0.5 transition-colors cursor-pointer"
+                        className="px-2 py-0.5 bg-stone-100 group-hover:bg-gold-600 group-hover:text-white text-stone-700 text-xs font-semibold flex items-center gap-0.5 transition-colors cursor-pointer"
                       >
                         <Plus className="w-3 h-3" /> Add
                       </button>
@@ -1080,14 +1074,14 @@ export const CustomHamperAtelier: React.FC<CustomHamperAtelierProps> = ({
 onClick={() => {
                   setCurrentStage(1);
                 }}
-                className="text-xs font-bold uppercase tracking-wider text-stone-700 hover:text-black flex items-center gap-1.5 cursor-pointer"
+                className="text-xs font-semibold text-stone-700 hover:text-black flex items-center gap-1.5 cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4" /> Back to Hamper Size
               </button>
 
               <div className="flex items-center gap-3">
                 <span className="text-xs font-bold text-stone-600">
-                  Total Value: <span className="text-sm font-extrabold text-[#B8860B]">INR {estimatedGrandTotal}</span>
+                  Total Value: <span className="text-sm font-bold text-gold-700">INR {estimatedGrandTotal}</span>
                 </span>
                 <motion.button
                   whileHover={{ scale: 1.02 }}
@@ -1095,7 +1089,7 @@ onClick={() => {
                   onClick={() => {
                     setCurrentStage(3);
                   }}
-                  className="bg-[#B8860B] text-white px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-[#8C6821] flex items-center gap-2 shadow-sm cursor-pointer"
+                  className="bg-gold-700 text-white px-6 py-3 text-xs font-semibold hover:bg-ink flex items-center gap-2 shadow-soft cursor-pointer"
                 >
                   Next: Wrapping, Lights & Card <ArrowRight className="w-4 h-4" />
                 </motion.button>
@@ -1108,7 +1102,7 @@ onClick={() => {
         {currentStage === 3 && (
           <div className="space-y-8 animate-fadeIn max-w-3xl mx-auto">
             <div>
-              <h2 className="font-seasons text-xl sm:text-2xl font-bold text-[#141414]">
+              <h2 className="font-seasons text-xl sm:text-2xl font-bold text-ink">
                 Stage 3: Luxury Wrapping, Satin Ribbon & Handwritten Card
               </h2>
               <p className="text-xs sm:text-sm text-stone-600">
@@ -1118,7 +1112,7 @@ onClick={() => {
 
             {/* 1. Ribbon Colors */}
             <div className="bg-stone-50 border border-stone-200 p-5 space-y-3">
-              <label className="text-xs font-bold uppercase tracking-wider text-stone-700 block">
+              <label className="text-xs font-semibold text-stone-700 block">
                 1. Choose Handcrafted Satin Ribbon Color
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -1139,9 +1133,9 @@ onClick={() => {
                     onClick={() => {
                       setSelectedRibbon(ribbon);
                     }}
-                    className={`p-3 border-2 text-left flex items-center gap-2.5 transition-all bg-white cursor-pointer ${
+                    className={`p-3 border text-left flex items-center gap-3 transition-all bg-white cursor-pointer ${
                       selectedRibbon.hex === ribbon.hex
-                        ? 'border-[#B8860B] ring-1 ring-[#B8860B] shadow-xs'
+                        ? 'border-gold-300 ring-1 ring-gold-600 shadow-soft'
                         : 'border-stone-200 hover:border-stone-400'
                     }`}
                   >
@@ -1157,14 +1151,14 @@ onClick={() => {
 
             {/* 2. Gift Wrapping & Bedding Options */}
             <div className="bg-stone-50 border border-stone-200 p-5 space-y-4">
-              <label className="text-xs font-bold uppercase tracking-wider text-stone-700 block">
+              <label className="text-xs font-semibold text-stone-700 block">
                 2. Luxury Packaging & Protective Wrapping Options
               </label>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Outer Wrap Sheet */}
                 <div>
-                  <label className="text-[11px] font-bold text-stone-600 block mb-1">
+                  <label className="text-xs font-bold text-stone-600 block mb-1">
                     Outer Wrap Finish
                   </label>
                   <select
@@ -1181,7 +1175,7 @@ onClick={() => {
 
                 {/* Base Bedding Cushion */}
                 <div>
-                  <label className="text-[11px] font-bold text-stone-600 block mb-1">
+                  <label className="text-xs font-bold text-stone-600 block mb-1">
                     Inner Cushion Bedding Fill
                   </label>
                   <select
@@ -1199,38 +1193,38 @@ onClick={() => {
 
               {/* Finishing Add-Ons Checkboxes */}
               <div className="pt-2 border-t border-stone-200 grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <label className="flex items-center gap-2 text-xs font-bold text-stone-800 cursor-pointer">
+                <label className="flex items-center gap-2 text-xs font-semibold text-stone-800 cursor-pointer">
                   <input
                     type="checkbox"
                     checked={hasWaxSeal}
                     onChange={(e) => {
                       setHasWaxSeal(e.target.checked);
                     }}
-                    className="w-4 h-4 accent-[#B8860B]"
+                    className="w-4 h-4 accent-gold-600"
                   />
                   <span>Handmade Gold Wax Seal (+INR 70)</span>
                 </label>
 
-                <label className="flex items-center gap-2 text-xs font-bold text-stone-800 cursor-pointer">
+                <label className="flex items-center gap-2 text-xs font-semibold text-stone-800 cursor-pointer">
                   <input
                     type="checkbox"
                     checked={includeFairyLights}
                     onChange={(e) => {
                       setIncludeFairyLights(e.target.checked);
                     }}
-                    className="w-4 h-4 accent-[#B8860B]"
+                    className="w-4 h-4 accent-gold-600"
                   />
                   <span>Warm Fairy Lights Included</span>
                 </label>
 
-                <label className="flex items-center gap-2 text-xs font-bold text-stone-800 cursor-pointer">
+                <label className="flex items-center gap-2 text-xs font-semibold text-stone-800 cursor-pointer">
                   <input
                     type="checkbox"
                     checked={includePartyPopper}
                     onChange={(e) => {
                       setIncludePartyPopper(e.target.checked);
                     }}
-                    className="w-4 h-4 accent-[#B8860B]"
+                    className="w-4 h-4 accent-gold-600"
                   />
                   <span>Golden Party Popper (+INR 60)</span>
                 </label>
@@ -1239,7 +1233,7 @@ onClick={() => {
 
             {/* 3. Occasion & Greeting Card */}
             <div className="bg-stone-50 border border-stone-200 p-5 space-y-4">
-              <label className="text-xs font-bold uppercase tracking-wider text-stone-700 block">
+              <label className="text-xs font-semibold text-stone-700 block">
                 3. Gifting Occasion & Handwritten Greeting Card
               </label>
               <div className="flex flex-wrap gap-2">
@@ -1257,9 +1251,9 @@ onClick={() => {
                     onClick={() => {
                       setSelectedOccasion(occ);
                     }}
-                    className={`px-3 py-1.5 text-xs font-bold border transition-colors cursor-pointer ${
+                    className={`px-3 py-1.5 text-xs font-semibold border transition-colors cursor-pointer ${
                       selectedOccasion === occ
-                        ? 'bg-[#B8860B] text-white border-[#B8860B]'
+                        ? 'bg-gold-700 text-white border-gold-300'
                         : 'bg-white text-stone-700 border-stone-300 hover:border-stone-400'
                     }`}
                   >
@@ -1271,7 +1265,7 @@ onClick={() => {
               {/* Recipient & Sender Names */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div>
-                  <label className="text-[11px] font-bold text-stone-700 block mb-1">
+                  <label className="text-xs font-bold text-stone-700 block mb-1">
                     To (Recipient Name / Title)
                   </label>
                   <input
@@ -1283,7 +1277,7 @@ onClick={() => {
                   />
                 </div>
                 <div>
-                  <label className="text-[11px] font-bold text-stone-700 block mb-1">
+                  <label className="text-xs font-bold text-stone-700 block mb-1">
                     From (Sender Name)
                   </label>
                   <input
@@ -1298,7 +1292,7 @@ onClick={() => {
 
               {/* Message Note */}
               <div>
-                <label className="text-[11px] font-bold text-stone-700 block mb-1">
+                <label className="text-xs font-bold text-stone-700 block mb-1">
                   Handwritten Greeting Card Message
                 </label>
                 <textarea
@@ -1311,7 +1305,7 @@ onClick={() => {
 
               {/* Quick Preset Messages */}
               <div className="flex flex-wrap gap-2 pt-1">
-                <span className="text-[11px] text-stone-500 font-medium">Quick Suggestions:</span>
+                <span className="text-xs text-stone-500 font-medium">Quick Suggestions:</span>
                 {[
                   'Happy Birthday! Wishing you lots of chocolates, laughter & smiles! 🎂',
                   'Happy Anniversary to the most special person in my life ❤️',
@@ -1324,7 +1318,7 @@ onClick={() => {
                     onClick={() => {
                       setCardMessage(preset);
                     }}
-                    className="text-[10px] text-amber-900 bg-amber-100 hover:bg-amber-200 px-2 py-0.5 border border-amber-300 cursor-pointer"
+                    className="text-xs text-amber-900 bg-amber-100 hover:bg-amber-200 px-2 py-0.5 border border-amber-300 cursor-pointer"
                   >
                     "{preset.slice(0, 32)}..."
                   </button>
@@ -1338,7 +1332,7 @@ onClick={() => {
                 onClick={() => {
                   setCurrentStage(2);
                 }}
-                className="text-xs font-bold uppercase tracking-wider text-stone-700 hover:text-black flex items-center gap-1.5 cursor-pointer"
+                className="text-xs font-semibold text-stone-700 hover:text-black flex items-center gap-1.5 cursor-pointer"
               >
                 <ArrowLeft className="w-4 h-4" /> Back to Slots
               </button>
@@ -1348,7 +1342,7 @@ onClick={() => {
 onClick={() => {
                   setCurrentStage(2);
                 }}
-                className="bg-[#B8860B] text-white px-6 py-3 text-xs font-bold uppercase tracking-wider hover:bg-[#8C6821] flex items-center gap-2 shadow-sm cursor-pointer"
+                className="bg-gold-700 text-white px-6 py-3 text-xs font-semibold hover:bg-ink flex items-center gap-2 shadow-soft cursor-pointer"
               >
                 Next: Review & WhatsApp Order <ArrowRight className="w-4 h-4" />
               </motion.button>
@@ -1360,10 +1354,10 @@ onClick={() => {
         {currentStage === 4 && (
           <div className="space-y-8 animate-fadeIn max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="inline-flex items-center gap-1 px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-2">
+              <div className="inline-flex items-center gap-1 px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-semibold mb-2">
                 <Check className="w-3.5 h-3.5" /> Your Custom Hamper is Ready!
               </div>
-              <h2 className="font-seasons text-2xl sm:text-3xl font-bold text-[#141414]">
+              <h2 className="font-seasons text-2xl sm:text-3xl font-bold text-ink">
                 Hamper Summary & Order Confirmation
               </h2>
               <p className="text-xs sm:text-sm text-stone-600 mt-1">
@@ -1372,17 +1366,17 @@ onClick={() => {
             </div>
 
             {/* Bill / Summary Card */}
-            <div className="bg-white border-2 border-[#D4AF37] p-5 sm:p-8 shadow-lg relative">
+            <div className="bg-white border border-gold-200 p-5 sm:p-8 shadow-lift relative">
               <div className="border-b border-stone-200 pb-4 mb-4 flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
                   <img
                     src={selectedPackaging.imageUrl}
                     alt={selectedPackaging.name}
                     referrerPolicy="no-referrer"
-                    className="w-12 h-12 object-cover border border-[#D4AF37]"
+                    className="w-12 h-12 object-cover border border-gold-200"
                   />
                   <div>
-                    <h3 className="font-seasons text-base sm:text-lg font-bold text-[#141414]">
+                    <h3 className="font-seasons text-base sm:text-lg font-bold text-ink">
                       Hamper Queen Order Receipt
                     </h3>
                     <p className="text-xs text-stone-500">
@@ -1397,7 +1391,7 @@ onClick={() => {
 
               {/* Chosen Items Breakdown */}
               <div className="space-y-2 mb-6">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500">
+                <h4 className="text-xs font-semibold text-stone-500">
                   Selected Items ({filledItems.length} of {selectedPackaging.slotCount} slots)
                 </h4>
 
@@ -1411,7 +1405,7 @@ onClick={() => {
                           <span className="text-stone-400 font-bold">#{idx + 1}</span>
                           <span className="font-bold text-stone-800">{item.name}</span>
                           {item.isPhoto && (
-                            <span className="text-[10px] bg-indigo-50 text-indigo-700 px-1.5 py-0.2 border border-indigo-200">
+                            <span className="text-xs bg-indigo-50 text-indigo-700 px-1.5 py-0.2 border border-indigo-200">
                               Polaroid Photo
                             </span>
                           )}
@@ -1470,9 +1464,9 @@ onClick={() => {
               <div className="border-t-2 border-stone-200 pt-4 flex items-center justify-between">
                 <div>
                   <span className="text-xs text-stone-500 block">Total Approximate Price</span>
-                  <span className="text-xl font-extrabold text-[#B8860B]">INR {estimatedGrandTotal}</span>
+                  <span className="text-xl font-bold text-gold-700">INR {estimatedGrandTotal}</span>
                 </div>
-                <span className="text-[11px] text-stone-500 max-w-xs text-right">
+                <span className="text-xs text-stone-500 max-w-xs text-right">
                   Final price is confirmed on WhatsApp based on packaging and customization availability.
                 </span>
               </div>
@@ -1486,9 +1480,9 @@ onClick={() => {
                   whileTap={{ scale: 0.98 }}
                   onClick={handleAddToCart}
                   disabled={filledItems.length === 0}
-                  className="w-full bg-[#141414] disabled:bg-[#3A3A3A] disabled:cursor-not-allowed text-[#DFBA54] p-4 font-bold text-sm sm:text-base uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer border border-[#D4AF37]"
+                  className="w-full bg-ink disabled:bg-cream-300 disabled:text-stone disabled:cursor-not-allowed text-gold-100 p-4 font-semibold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lift transition-all cursor-pointer"
                 >
-                  <Gift className="w-6 h-6 text-[#DFBA54]" />
+                  <Gift className="w-6 h-6 text-gold-300" />
                   Add This Hamper to Cart
                 </motion.button>
               )}
@@ -1496,7 +1490,7 @@ onClick={() => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleOrderOnWhatsApp}
-                className="w-full bg-[#25D366] hover:bg-[#1EBE5D] text-white p-4 font-bold text-sm sm:text-base uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-all cursor-pointer"
+                className="w-full bg-whatsapp hover:bg-whatsapp-dark text-white p-4 font-semibold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lift transition-all cursor-pointer"
               >
                 <MessageCircle className="w-6 h-6" />
                 Place Order Directly on WhatsApp (+91 8080580105)
@@ -1513,7 +1507,7 @@ onClick={() => {
                 onClick={() => {
                   setCurrentStage(2);
                 }}
-                className="text-xs font-bold text-stone-600 hover:text-black underline flex items-center gap-1 cursor-pointer"
+                className="text-xs font-semibold text-stone-600 hover:text-black underline flex items-center gap-1 cursor-pointer"
               >
                 <ArrowLeft className="w-3.5 h-3.5" /> Modify Chocolates / Edit Slots
               </button>

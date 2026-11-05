@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SITE_URL } from '../../lib/seo';
 import { LegalPageLayout } from '../../components/legal/LegalPageLayout';
 import { LegalSection } from '../../components/legal/LegalSection';
 import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../../data/hamperQueenCatalog';
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Privacy Policy | Hamper Queen',
     description: 'How Hamper Queen collects, uses and protects your personal data.',
-    url: 'https://hamper-queen.vercel.app/privacy-policy',
+    url: `${SITE_URL}/privacy-policy`,
   },
 };
 
@@ -82,7 +83,7 @@ export default function PrivacyPolicyPage() {
       <LegalSection title="9. Contact us">
         <p>
           For privacy questions, contact us at WhatsApp/call <strong>{phoneDisplay}</strong> or email{' '}
-          <a href={`mailto:${email}`} className="text-[#8C6821] underline underline-offset-2">
+          <a href={`mailto:${email}`} className="text-gold-700 underline underline-offset-2">
             {email}
           </a>
           .

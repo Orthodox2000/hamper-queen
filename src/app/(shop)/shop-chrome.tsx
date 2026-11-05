@@ -40,7 +40,7 @@ export function ShopChrome({ children }: { children: React.ReactNode }) {
   } = useShopStore();
 
   return (
-    <div className="min-h-screen bg-white text-[#141414] flex flex-col font-sans selection:bg-[#D4AF37]/30 selection:text-[#111111]">
+    <div className="min-h-dvh bg-white text-ink flex flex-col font-sans selection:bg-gold-400/30 selection:text-ink">
       <Header
         activeHamper={customHamper}
         onOpenHamperDrawer={openHamperDrawer}

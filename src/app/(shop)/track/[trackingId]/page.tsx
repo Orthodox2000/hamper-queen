@@ -8,7 +8,7 @@
  * link. Only public (sanitised) data is shown — never IP/device details.
  */
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import {
   MapPin,
@@ -66,8 +66,8 @@ export default function TrackStatusPage({ params }: Props) {
 
   if (loading) {
     return (
-      <div className="min-h-[70vh] flex flex-col items-center justify-center gap-3 text-[#6B6559]">
-        <Loader2 className="w-8 h-8 animate-spin text-[#B8860B]" />
+      <div className="min-h-[70dvh] flex flex-col items-center justify-center gap-3 text-stone">
+        <Loader2 className="w-8 h-8 animate-spin text-gold-700" />
         <p className="text-sm font-semibold">Looking up your order…</p>
       </div>
     );
@@ -75,19 +75,19 @@ export default function TrackStatusPage({ params }: Props) {
 
   if (notFound || !order) {
     return (
-      <section className="py-16 sm:py-24 bg-white text-[#141414]">
+      <section className="section bg-white text-ink">
         <div className="max-w-xl mx-auto px-4 text-center space-y-5">
-          <div className="w-16 h-16 mx-auto rounded-full bg-[#FBEBEB] border-2 border-red-200 text-[#B3261E] flex items-center justify-center">
+          <div className="w-16 h-16 mx-auto rounded-full bg-[#FBEBEB] border border-red-200 text-[#B3261E] flex items-center justify-center">
             <AlertTriangle className="w-8 h-8" />
           </div>
           <h1 className="font-seasons text-2xl sm:text-3xl font-bold">Tracking ID not found</h1>
-          <p className="text-sm text-[#6B6559]">
-            We could not find an order with the code <strong className="text-[#141414]">{trackingId}</strong>. Please double-check the ID and try again, or reach out to us on WhatsApp.
+          <p className="text-sm text-stone">
+            We could not find an order with the code <strong className="text-ink">{trackingId}</strong>. Please double-check the ID and try again, or reach out to us on WhatsApp.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <Link
               href="/track"
-              className="px-6 py-3 rounded-full bg-[#141414] text-[#DFBA54] border border-[#D4AF37] font-cinzel text-xs font-bold uppercase tracking-wider text-center"
+              className="px-6 py-3 rounded-full bg-ink text-gold-100 font-sans text-xs font-semibold text-center"
             >
               <ChevronLeft className="w-4 h-4 inline -ml-1" /> Try Another ID
             </Link>
@@ -95,7 +95,7 @@ export default function TrackStatusPage({ params }: Props) {
               href={`https://wa.me/91${HAMPER_QUEEN_OFFICIAL_CONTACT.phone}?text=${encodeURIComponent('Hi Hamper Queen, I need help with my tracking ID.')}`}
               target="_blank"
               rel="noreferrer"
-              className="px-6 py-3 rounded-full bg-[#25D366] text-white font-sans text-xs font-bold text-center"
+              className="px-6 py-3 rounded-full bg-whatsapp text-white font-sans text-xs font-semibold text-center"
             >
               <Phone className="w-4 h-4 inline fill-white mr-1" />
               WhatsApp Support
@@ -110,25 +110,25 @@ export default function TrackStatusPage({ params }: Props) {
   const isPaid = order.payment.state === 'received';
 
   return (
-    <section className="py-12 sm:py-16 bg-white text-[#141414]">
+    <section className="section bg-white text-ink">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Back + share header */}
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <Link href="/track" className="inline-flex items-center gap-1 text-xs font-semibold text-[#8C6821] hover:underline">
+          <Link href="/track" className="inline-flex items-center gap-1 text-xs font-semibold text-gold-700 hover:underline">
             <ChevronLeft className="w-4 h-4" />
             Track another order
           </Link>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF5E8] border border-[#EAE0C8] text-[#8C6821] text-[10px] font-bold uppercase tracking-widest">
-            <Crown className="w-3 h-3 text-[#B8860B]" />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-50 border border-line-strong text-gold-700 text-xs font-semibold">
+            <Crown className="w-3 h-3 text-gold-700" />
             Hamper Queen Verified Order
           </span>
         </div>
 
         {/* Order header */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#141414] via-[#241E16] to-[#141414] border border-[#D4AF37]/60 text-white shadow-md">
+        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-ink via-ink-soft to-ink border border-gold-400/60 text-white shadow-lift">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="space-y-1">
-              <span className="text-[11px] text-[#DFBA54] font-cinzel uppercase tracking-widest">Tracking ID</span>
+              <span className="text-xs text-gold-300 font-sans">Tracking ID</span>
               <h1 className="font-seasons text-2xl sm:text-3xl font-bold tracking-wide">{order.trackingId}</h1>
               <p className="text-xs text-white/70">
                 Order placed {new Date(order.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
@@ -149,7 +149,7 @@ export default function TrackStatusPage({ params }: Props) {
                   ? 'Payment Confirmed'
                   : 'Payment Pending'}
               </span>
-              <p className="text-[11px] text-white/60 mt-2">
+              <p className="text-xs text-white/60 mt-2">
                 {order.status === 'cancelled'
                   ? 'This order was cancelled. Please reach out to us for a refund follow-up.'
                   : isPaid
@@ -161,8 +161,8 @@ export default function TrackStatusPage({ params }: Props) {
         </div>
 
         {/* Timeline */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-[#FFFDF9] border-2 border-[#D4AF37]/50 shadow-sm">
-          <h2 className="font-cinzel text-sm font-bold uppercase tracking-widest text-[#141414] mb-6">
+        <div className="p-6 sm:p-8 rounded-3xl bg-cream-50 border border-gold-400/50 shadow-soft">
+          <h2 className="font-sans text-sm font-semibold text-ink mb-6">
             Delivery Progress
           </h2>
 
@@ -171,32 +171,32 @@ export default function TrackStatusPage({ params }: Props) {
               This order was cancelled. Hamper Queen will contact you on WhatsApp to complete refund or re-confirm details if a reorder was discussed.
             </div>
           ) : (
-            <ol className="relative space-y-6 before:absolute before:left-[15px] before:top-2 before:bottom-2 before:w-px before:bg-[#EAE0C8]">
+            <ol className="relative space-y-6 before:absolute before:left-[15px] before:top-2 before:bottom-2 before:w-px before:bg-line-strong">
               {ORDER_STATUSES.map((status, idx) => {
                 const done = idx < statusIndex || order.status === status;
                 const current = order.status === status;
                 return (
                   <li key={status} className="relative pl-12">
-                    <span className={`absolute left-0 top-0 w-8 h-8 rounded-full flex items-center justify-center border-2 ${
+                    <span className={`absolute left-0 top-0 w-8 h-8 rounded-full flex items-center justify-center border ${
                       done
-                        ? 'bg-[#141414] border-[#D4AF37] text-[#DFBA54]'
-                        : 'bg-white border-[#E5E0D6] text-[#C4BCAA]'
+                        ? 'bg-ink border-gold-200 text-gold-300'
+                        : 'bg-white border-line text-mist'
                     }`}>
                       {done ? <Check className="w-4 h-4 stroke-[3]" /> : <span className="w-2 h-2 rounded-full bg-current" />}
                     </span>
                     <div>
-                      <div className="flex items-center gap-2.5">
-                        <span className={`font-cinzel text-sm font-bold ${done ? 'text-[#141414]' : 'text-[#A49B8A]'}`}>
+                      <div className="flex items-center gap-3">
+                        <span className={`font-sans text-sm font-bold ${done ? 'text-ink' : 'text-mist'}`}>
                           {ORDER_STATUS_LABELS[status]}
                         </span>
                         {current && (
-                          <span className="px-2 py-0.5 rounded-full bg-[#FAF5E8] border border-[#D4AF37]/50 text-[#8C6821] text-[9px] font-bold uppercase tracking-wider animate-pulse">
+                          <span className="px-2 py-0.5 rounded-full bg-gold-50 border border-gold-400/50 text-gold-700 text-xs font-semibold animate-pulse">
                             Current
                           </span>
                         )}
                       </div>
                       {current && (
-                        <p className="text-xs text-[#6B6559] mt-1">
+                        <p className="text-xs text-stone mt-1">
                           {status === 'awaiting_payment'
                             ? 'Your order is saved. Share the tracking ID with your recipient — payment receipt and invoice will be shared on WhatsApp shortly.'
                             : status === 'crafting'
@@ -218,72 +218,72 @@ export default function TrackStatusPage({ params }: Props) {
           )}
 
           {order.notes && (
-            <div className="mt-6 p-3.5 rounded-2xl bg-[#FAF5E8] border border-[#EAE0C8] text-xs text-[#524B40]">
-              <span className="font-bold text-[#8C6821]">Note from Hamper Queen: </span>
+            <div className="mt-6 p-4 rounded-2xl bg-gold-50 border border-line-strong text-xs text-cocoa">
+              <span className="font-bold text-gold-700">Note from Hamper Queen: </span>
               {order.notes}
             </div>
           )}
         </div>
 
         {/* Order summary */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-white border-2 border-[#EAE5D9] shadow-sm">
-          <h2 className="font-cinzel text-sm font-bold uppercase tracking-widest text-[#141414] mb-5">
+        <div className="p-6 sm:p-8 rounded-3xl bg-white border border-line shadow-soft">
+          <h2 className="font-sans text-sm font-semibold text-ink mb-5">
             Order Summary
           </h2>
           <div className="space-y-3">
             {order.lines.map((line, idx) => (
-              <div key={idx} className="flex items-center justify-between gap-4 p-3.5 rounded-2xl bg-[#FAF9F5] border border-[#EFE9DC]">
+              <div key={idx} className="flex items-center justify-between gap-4 p-4 rounded-2xl bg-cream-100 border border-cream-200">
                 <div className="min-w-0">
-                  <p className="text-sm font-semibold text-[#141414] truncate">{line.name}</p>
-                  <p className="text-[11px] text-[#8C6821] font-semibold mt-0.5">
+                  <p className="text-sm font-semibold text-ink truncate">{line.name}</p>
+                  <p className="text-xs text-gold-700 font-semibold mt-0.5">
                     {line.itemCode ?? line.productId ?? (line.kind === 'custom_hamper' ? '#HQ-ATELIER-CUSTOM' : '')}
                     {' · Qty '}{line.qty}
                   </p>
                 </div>
                 <div className="text-right shrink-0">
-                  <p className="text-sm font-bold text-[#141414]">
+                  <p className="text-sm font-bold text-ink">
                     {line.priceValue > 0 ? `INR ${(line.priceValue * line.qty).toLocaleString('en-IN')}` : line.priceDisplay}
                   </p>
-                  {line.priceValue > 0 && <p className="text-[10px] text-[#A49B8A]">{line.priceDisplay} each</p>}
+                  {line.priceValue > 0 && <p className="text-xs text-mist">{line.priceDisplay} each</p>}
                 </div>
               </div>
             ))}
 
             <div className="pt-2 space-y-1.5 text-sm">
-              <div className="flex items-center justify-between text-[#524B40]">
+              <div className="flex items-center justify-between text-cocoa">
                 <span>Items Subtotal</span>
-                <strong className="text-[#141414]">{order.totals.subtotal > 0 ? `INR ${order.totals.subtotal.toLocaleString('en-IN')}` : 'On request'}</strong>
+                <strong className="text-ink">{order.totals.subtotal > 0 ? `INR ${order.totals.subtotal.toLocaleString('en-IN')}` : 'On request'}</strong>
               </div>
-              <div className="flex items-center justify-between text-[#524B40]">
+              <div className="flex items-center justify-between text-cocoa">
                 <span>Delivery Fee</span>
-                <strong className={order.totals.deliveryFee === 0 ? 'text-[#1E7B3C]' : 'text-[#141414]'}>
+                <strong className={order.totals.deliveryFee === 0 ? 'text-emerald-800' : 'text-ink'}>
                   {order.totals.deliveryFee === 0 ? 'FREE' : `INR ${order.totals.deliveryFee}`}
                 </strong>
               </div>
               {order.totals.discount > 0 && (
-                <div className="flex items-center justify-between text-[#1E7B3C]">
+                <div className="flex items-center justify-between text-emerald-800">
                   <span>
                     Coupon {order.promo ? `(${order.promo.code})` : ''} applied
                   </span>
                   <strong>-INR {order.totals.discount.toLocaleString('en-IN')}</strong>
                 </div>
               )}
-              <div className="flex items-center justify-between pt-2 border-t border-[#EAE5D9] text-base">
-                <span className="font-semibold text-[#141414]">Grand Total (approx)</span>
-                <strong className="font-cinzel text-[#B8860B]">{order.totals.grandTotal > 0 ? `INR ${order.totals.grandTotal.toLocaleString('en-IN')}` : 'On request'}</strong>
+              <div className="flex items-center justify-between pt-2 border-t border-line text-base">
+                <span className="font-semibold text-ink">Grand Total (approx)</span>
+                <strong className="font-cinzel text-gold-700">{order.totals.grandTotal > 0 ? `INR ${order.totals.grandTotal.toLocaleString('en-IN')}` : 'On request'}</strong>
               </div>
             </div>
           </div>
         </div>
 
         {/* Delivery details & map */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-white border-2 border-[#EAE5D9] shadow-sm space-y-5">
-          <h2 className="font-cinzel text-sm font-bold uppercase tracking-widest text-[#141414]">
+        <div className="p-6 sm:p-8 rounded-3xl bg-white border border-line shadow-soft space-y-5">
+          <h2 className="font-sans text-sm font-semibold text-ink">
             Pinned Delivery Location
           </h2>
-          <div className="space-y-1.5 text-xs text-[#524B40]">
+          <div className="space-y-1.5 text-xs text-cocoa">
             <p className="flex items-start gap-2">
-              <MapPin className="w-4 h-4 text-[#B8860B] shrink-0 mt-0.5" />
+              <MapPin className="w-4 h-4 text-gold-700 shrink-0 mt-0.5" />
               <span>
                 {order.delivery.flatBuilding}, {order.delivery.streetAddress}
                 {order.delivery.landmark ? `, Near ${order.delivery.landmark}` : ''}, {order.delivery.city} - {order.delivery.pincode}
@@ -294,27 +294,27 @@ export default function TrackStatusPage({ params }: Props) {
                 href={`https://maps.google.com/?q=${order.delivery.geo.lat},${order.delivery.geo.lng}`}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-[11px] font-bold text-[#8C6821] hover:underline pt-1"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-700 hover:underline pt-1"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
                 Open exact pin in Google Maps ({order.delivery.geo.lat.toFixed(5)}, {order.delivery.geo.lng.toFixed(5)})
               </a>
             ) : (
-              <p className="text-[11px] text-[#A49B8A]">No exact pin recorded for this order.</p>
+              <p className="text-xs text-mist">No exact pin recorded for this order.</p>
             )}
           </div>
 
-          <div className="pt-4 border-t border-[#EAE5D9] flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div className="text-xs text-[#524B40]">
-              <span className="block text-[10px] font-bold text-[#8C6821] uppercase tracking-wider">Recipient</span>
-              <strong className="text-[#141414]">{order.customer.recipientName || order.customer.fullName}</strong>
+          <div className="pt-4 border-t border-line flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="text-xs text-cocoa">
+              <span className="block text-xs font-semibold text-gold-700">Recipient</span>
+              <strong className="text-ink">{order.customer.recipientName || order.customer.fullName}</strong>
               {order.customer.recipientName && order.customer.recipientName !== order.customer.fullName && (
-                <span className="text-[#A49B8A]"> (ordered by {order.customer.fullName})</span>
+                <span className="text-mist"> (ordered by {order.customer.fullName})</span>
               )}
             </div>
-            <div className="text-xs text-[#524B40] sm:text-right">
-              <span className="block text-[10px] font-bold text-[#8C6821] uppercase tracking-wider">Delivery Window</span>
-              <strong className="text-[#141414]">{new Date(order.preferences.deliveryDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</strong>
+            <div className="text-xs text-cocoa sm:text-right">
+              <span className="block text-xs font-semibold text-gold-700">Delivery Window</span>
+              <strong className="text-ink">{new Date(order.preferences.deliveryDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</strong>
               {' · '}{order.preferences.timeSlot}
             </div>
           </div>
@@ -322,19 +322,19 @@ export default function TrackStatusPage({ params }: Props) {
 
         {/* Help footer */}
         <div className="text-center space-y-3 pt-2">
-          <p className="text-xs text-[#6B6559]">
+          <p className="text-xs text-stone">
             Need to reach us about this order? Tap WhatsApp below and quote your tracking ID.
           </p>
           <a
             href={`https://wa.me/91${HAMPER_QUEEN_OFFICIAL_CONTACT.phone}?text=${encodeURIComponent(`👋 Hi Hamper Queen! I have a question about my order ${order.trackingId}.`)}`}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-sans text-sm font-bold shadow-md transition-all"
+            className="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-whatsapp hover:bg-whatsapp-dark text-white font-sans text-sm font-semibold shadow-lift transition-all"
           >
             <Phone className="w-4 h-4 fill-white" />
             Chat about {order.trackingId} on WhatsApp
           </a>
-          <p className="text-[11px] text-[#A49B8A]">
+          <p className="text-xs text-mist">
             Share this tracking ID with anyone who needs to follow the delivery.
           </p>
         </div>

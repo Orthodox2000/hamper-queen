@@ -9,11 +9,15 @@
 import { MongoClient, ServerApiVersion } from 'mongodb';
 import { randomBytes, scryptSync, timingSafeEqual } from 'node:crypto';
 
-const SHARD_HOSTS = [
+/** Same override as src/lib/mongo.ts: MONGODB_DIRECT_HOSTS=host1:27017,host2:27017 */
+const SHARD_HOSTS = (process.env.MONGODB_DIRECT_HOSTS?.split(',').map((h) => h.trim()).filter(Boolean)) || [
   'ac-apeuakp-shard-00-00.jma7vfa.mongodb.net:27017',
   'ac-apeuakp-shard-00-01.jma7vfa.mongodb.net:27017',
   'ac-apeuakp-shard-00-02.jma7vfa.mongodb.net:27017',
 ];
+
+/** Database name shared by the app and every script (MONGODB_DB, default hamper_queen). */
+export const getDbName = () => process.env.MONGODB_DB?.trim() || 'hamper_queen';
 
 /** Rewrite a mongodb+srv URI into a direct mongodb URI (no DNS SRV/TXT lookup). */
 export function toDirectUri(srv) {

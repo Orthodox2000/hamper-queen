@@ -1,10 +1,14 @@
 import type { Metadata, Viewport } from 'next';
+import '@fontsource-variable/fraunces/soft.css';
+import '@fontsource-variable/fraunces/soft-italic.css';
+import '@fontsource-variable/dancing-script';
+import '@fontsource-variable/plus-jakarta-sans';
 import './globals.css';
+import { SITE_URL } from '../lib/seo';
 
 const SITE_TITLE = 'Custom Gift Hampers & Chocolate Bouquets | Hamper Queen';
 const SITE_DESCRIPTION =
   'Custom gift hampers and chocolate bouquets from INR 140 — velvet trunks, photo keepsakes, same-day dispatch from Mumbai with free delivery above INR 499.';
-const SITE_URL = 'https://hamper-queen.vercel.app';
 
 export const viewport: Viewport = {
   themeColor: '#141210',
@@ -93,13 +97,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="bg-white text-[#141414] antialiased selection:bg-[#D4AF37]/30 selection:text-[#111111]">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
+      <body className="bg-white text-ink antialiased selection:bg-gold-400/30 selection:text-ink">
         <link rel="preload" href="/fonts/TheSeasons-Regular.woff2" as="font" type="font/woff2" crossOrigin="" />
         <link rel="preload" href="/fonts/TheSeasons-Bold.woff2" as="font" type="font/woff2" crossOrigin="" />
         <script

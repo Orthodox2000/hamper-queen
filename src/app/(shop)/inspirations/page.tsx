@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useRouter } from 'next/navigation';
 import { RoyalInspirationGallery } from '../../../components/RoyalInspirationGallery';
 import { useShopStore } from '../../../store/shop-store';
@@ -14,7 +13,7 @@ export default function InspirationsPage() {
   const goScribe = () => {
     royaleLogger.action('Navigation', 'User navigated to tab: scribe');
     router.push('/scribe');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    /* Next resets scroll on navigation */
   };
 
   const handleCustomizeInspiration = (insp: RoyalInspiration) => {
@@ -27,14 +26,17 @@ export default function InspirationsPage() {
     }));
     royaleLogger.action('Inspirations', `Curated inspiration loaded into Customised Atelier: ${insp.titleEn}`);
     router.push('/customised');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    /* Next resets scroll on navigation */
   };
 
   return (
+    <>
+      <h1 className="sr-only">Gift ideas for real occasions</h1>
     <RoyalInspirationGallery
       language={language}
       onCustomizeInspiration={handleCustomizeInspiration}
       onOpenScribe={goScribe}
     />
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SITE_URL } from '../../lib/seo';
 import { LegalPageLayout } from '../../components/legal/LegalPageLayout';
 import { LegalSection } from '../../components/legal/LegalSection';
 import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../../data/hamperQueenCatalog';
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Terms of Service | Hamper Queen',
     description: 'Ordering, payment, delivery, returns and liability terms for Hamper Queen hampers and bouquets.',
-    url: 'https://hamper-queen.vercel.app/terms-of-service',
+    url: `${SITE_URL}/terms-of-service`,
   },
 };
 
@@ -96,7 +97,7 @@ export default function TermsOfServicePage() {
       <LegalSection title="9. Contact us">
         <p>
           For any question about these Terms, reach us at WhatsApp/call <strong>{phoneDisplay}</strong> or email{' '}
-          <a href={`mailto:${email}`} className="text-[#8C6821] underline underline-offset-2">
+          <a href={`mailto:${email}`} className="text-gold-700 underline underline-offset-2">
             {email}
           </a>
           .

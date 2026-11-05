@@ -51,7 +51,9 @@ export async function createSession(username: string): Promise<string> {
     userId: String(user._id),
     username,
     createdAt: new Date(now).toISOString(),
-    expiresAt: new Date(now + ADMIN_COOKIE_MAX_AGE * 1000).toISOString(),
+    // Stored as a real BSON Date: MongoDB's TTL index (ttl_expiresAt) ignores ISO strings,
+    // so a string here meant expired sessions were never purged.
+    expiresAt: new Date(now + ADMIN_COOKIE_MAX_AGE * 1000),
   });
   return token;
 }
@@ -62,7 +64,7 @@ export async function getSessionUser(token: string | undefined | null): Promise<
   const sessions = await getSessionsCollection();
   const session = await sessions.findOne({ token });
   if (!session) return null;
-  if (new Date(session.expiresAt as string).getTime() < Date.now()) {
+  if (new Date(session.expiresAt as string | Date).getTime() < Date.now()) {
     await sessions.deleteOne({ token }).catch(() => {});
     return null;
   }

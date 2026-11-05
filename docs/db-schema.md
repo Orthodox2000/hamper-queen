@@ -61,9 +61,9 @@ Bookings created through the concierge/booking modal (`POST /api/orders`) or see
 ```
 
 Indexes (bootstrap):
-- `trackingId` — **unique** (`trackingId_1`)
-- `createdAt` — desc (dashboard listing)
-- `status` + `createdAt` (filtered listing)
+- `trackingId` — **unique** (`uniq_trackingId`)
+- `status` (`idx_status`, filtered listing)
+- `createdAt` — desc (`idx_createdAt`, dashboard listing)
 
 ### `promoCodes`
 Single-use coupon rows. **The same `code` string may appear on many rows** — one row per attendee/event — each row is consumed independently.
@@ -138,7 +138,7 @@ Signed-in staff sessions (`hq_admin` httpOnly cookie, 7-day expiry).
 
 Indexes (bootstrap):
 - `token` — **unique** (`uniq_token`)
-- `expiresAt` — TTL `expireAfterSeconds: 0` (`ttl_expiresAt`) — Mongo auto-deletes expired sessions.
+- `expiresAt` — TTL `expireAfterSeconds: 0` (`ttl_expiresAt`) — Mongo auto-deletes expired sessions. **`expiresAt` must be a BSON Date** (an ISO string is ignored by TTL indexes). Servers without TTL support still work: expiry is also enforced on read.
 
 ### `catalogOverrides`
 Optional per-product price/availability overrides managed from `/admin/catalog`.
@@ -155,11 +155,11 @@ Optional per-product price/availability overrides managed from `/admin/catalog`.
 ```
 
 Indexes (bootstrap):
-- `productId` — unique (`productId_1`)
+- `productId` — unique (`uniq_productId`)
 
 ## Bootstrap behaviour
 
-Rerunning `npm run db:bootstrap` is safe:
+Index names above are canonical: the app (`src/lib/mongo.ts › ensureIndex`) and the bootstrap use the same ones, and an equivalent index under a different name is accepted. Rerunning `npm run db:bootstrap` is safe:
 - collections/indexes are created only if missing (existing indexes with equivalent keys are kept);
 - the owner admin is created **only when `adminUsers` is empty** (guarded — never overwrites).
 

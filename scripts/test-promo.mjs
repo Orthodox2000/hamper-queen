@@ -136,7 +136,7 @@ async function main() {
   check('got admin session cookie', jar.startsWith('hq_admin='));
 
   const { client } = await connectMongo(process.env.MONGODB_URI);
-  const db = client.db('hamper_queen');
+  const db = client.db(process.env.MONGODB_DB?.trim() || 'hamper_queen');
   const orders = db.collection('orders');
   const coupons = db.collection('promoCodes');
 

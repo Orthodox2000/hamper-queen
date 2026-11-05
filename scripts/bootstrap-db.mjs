@@ -15,14 +15,14 @@
  * interactive prompt when they are absent.
  */
 
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { createInterface } from 'node:readline';
-import { connectMongo, hashPassword } from './lib/db-utils.mjs';
+import { connectMongo, getDbName, hashPassword } from './lib/db-utils.mjs';
 
-const DB_NAME = 'hamper_queen';
+const ENV_FILE = process.env.HQ_ENV_FILE || '.env';
 
-function loadEnv(file = '.env') {
+function loadEnv(file = ENV_FILE) {
   try {
     const raw = readFileSync(resolve(file), 'utf8');
     for (const line of raw.split(/\r?\n/)) {
@@ -98,19 +98,24 @@ async function ensureCollections(db) {
       const equivalent = existing.some(
         (e) => e.key === keyTuple(spec.key) && e.unique === Boolean(spec.unique)
       );
-      if (spec.unique !== true && equivalent) {
-        console.log(`  index exists: ${name}(${keyTuple(spec.key)}) - skipped`);
-        continue;
-      }
-      if (spec.unique === true && equivalent) {
+      if (equivalent) {
         console.log(`  index exists: ${name}(${keyTuple(spec.key)}) - skipped`);
         continue;
       }
       const options = { name: spec.name };
       if (spec.unique) options.unique = true;
       if (typeof spec.expireAfterSeconds === 'number') options.expireAfterSeconds = spec.expireAfterSeconds;
-      await collection.createIndex(spec.key, options);
-      console.log(`  index ok: ${name}.${spec.name}`);
+      try {
+        await collection.createIndex(spec.key, options);
+        console.log(`  index ok: ${name}.${spec.name}`);
+      } catch (err) {
+        // TTL is housekeeping only (the app also checks expiry on read); tolerate servers without it.
+        if (typeof spec.expireAfterSeconds === 'number' && [238, 115, 59].includes(err && err.code)) {
+          console.warn(`  index skipped: ${name}.${spec.name} - TTL indexes are not supported by this server.`);
+          continue;
+        }
+        throw err;
+      }
     }
   }
 }
@@ -128,7 +133,7 @@ async function ensureOwnerAdmin(db) {
 
   const password = process.env.HQ_BOOTSTRAP_ADMIN_PASSWORD || (await question('Owner admin password: '));
   if (!password) throw new Error('Admin password is required (HQ_BOOTSTRAP_ADMIN_PASSWORD or prompt).');
-  if (password.length < 6) throw new Error('Admin password must be at least 6 characters.');
+  if (password.length < 8) throw new Error('Admin password must be at least 8 characters.');
 
   const { salt, hash } = hashPassword(password);
   const now = new Date().toISOString();
@@ -142,6 +147,21 @@ async function ensureOwnerAdmin(db) {
     updatedAt: now,
   });
   console.log(`  adminUsers: created owner account "${String(username).trim().toLowerCase()}".`);
+  scrubBootstrapPassword();
+}
+
+/** Once the owner exists the plaintext bootstrap password has no job left: comment it out of .env. */
+function scrubBootstrapPassword() {
+  try {
+    const raw = readFileSync(resolve(ENV_FILE), 'utf8');
+    const next = raw.replace(/^HQ_BOOTSTRAP_ADMIN_PASSWORD=.*$/m, '# HQ_BOOTSTRAP_ADMIN_PASSWORD=<removed after bootstrap>');
+    if (next !== raw) {
+      writeFileSync(resolve(ENV_FILE), next);
+      console.log(`  ${ENV_FILE}: bootstrap password removed (store it in your password manager).`);
+    }
+  } catch {
+    // No .env file (variables were exported) - nothing to scrub.
+  }
 }
 
 async function run() {
@@ -159,8 +179,8 @@ async function run() {
   console.log(`Connected (${label}).`);
 
   try {
-    const db = client.db(DB_NAME);
-    console.log(`Ensuring collections + indexes in "${DB_NAME}":`);
+    const db = client.db(getDbName());
+    console.log(`Ensuring collections + indexes in "${getDbName()}":`);
     await ensureCollections(db);
     await ensureOwnerAdmin(db);
     console.log('\nBootstrap complete.');

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { SAMPLE_POLAROID_PRESETS, BrandedItem } from '../data/brandedItemsData';
-import { X, Upload, Check, Camera, Sparkles, Image as ImageIcon } from 'lucide-react';
+import { X, Upload, Check, Camera } from 'lucide-react';
 import { triggerRomanticConfetti } from '../utils/confetti';
 
 interface PhotoCustomizerModalProps {
@@ -83,7 +83,7 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
           initial={{ scale: 0.9, opacity: 0, y: 20 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.9, opacity: 0, y: 20 }}
-          className="relative w-full max-w-xl bg-white border-2 border-[#D4AF37] shadow-2xl p-6 overflow-hidden max-h-[90vh] overflow-y-auto"
+          className="relative w-full max-w-xl bg-white border border-gold-200 shadow-float p-6 overflow-hidden max-h-[90dvh] overflow-y-auto"
         >
           {/* Close button */}
           <button
@@ -95,8 +95,8 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
 
           {/* Modal Title */}
           <div className="flex items-center gap-2 mb-1">
-            <Camera className="w-5 h-5 text-[#B8860B]" />
-            <h3 className="font-seasons text-xl sm:text-2xl font-bold text-[#141414]">
+            <Camera className="w-5 h-5 text-gold-700" />
+            <h3 className="font-seasons text-xl sm:text-2xl font-bold text-ink">
               Personalized Polaroid Photo Card
             </h3>
           </div>
@@ -107,9 +107,9 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
             {/* Left: Live Polaroid Preview */}
             <div className="flex flex-col items-center">
-              <div className="relative w-48 bg-white p-3 shadow-xl border border-stone-300 transform -rotate-2 hover:rotate-0 transition-transform">
+              <div className="relative w-48 bg-white p-3 shadow-float border border-stone-300 transform -rotate-2 hover:rotate-0 transition-transform">
                 {/* Vintage Wooden Peg Clip */}
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-6 bg-amber-200 border border-amber-800/40 rounded-xs shadow-xs z-10" />
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-6 bg-amber-200 border border-amber-800/40 rounded-xs shadow-soft z-10" />
                 
                 {/* Photo Image */}
                 <div className="w-full aspect-square overflow-hidden bg-stone-100 border border-stone-200">
@@ -128,7 +128,7 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
                   </p>
                 </div>
               </div>
-              <p className="text-[11px] text-stone-400 mt-3 text-center italic">
+              <p className="text-xs text-stone-400 mt-3 text-center italic">
                 Printed on 300 GSM glossy photo card with mini wooden craft peg
               </p>
             </div>
@@ -137,7 +137,7 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
             <div className="space-y-4">
               {/* Upload Own Photo Button */}
               <div>
-                <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-semibold text-stone-700 mb-2">
                   Upload From Your Device
                 </label>
                 <input
@@ -150,7 +150,7 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
                 <button
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-amber-50 hover:bg-amber-100 border-2 border-dashed border-[#B8860B] text-[#B8860B] text-xs font-bold transition-colors"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-amber-50 hover:bg-amber-100 border border-dashed border-gold-300 text-gold-700 text-xs font-semibold transition-colors"
                 >
                   <Upload className="w-4 h-4" />
                   {isUploading ? 'Uploading Photo...' : 'Click to Upload Photo'}
@@ -159,7 +159,7 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
 
               {/* Or Select Sample Preset Photos */}
               <div>
-                <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-semibold text-stone-700 mb-2">
                   Or Pick a Preset Memory Photo
                 </label>
                 <div className="grid grid-cols-3 gap-2">
@@ -172,9 +172,9 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
                         setCustomPhotoUrl(preset.url);
                         setCaption(preset.caption);
                       }}
-                      className={`relative aspect-square overflow-hidden border-2 transition-all ${
+                      className={`relative aspect-square overflow-hidden border transition-all ${
                         selectedPresetId === preset.id || customPhotoUrl === preset.url
-                          ? 'border-[#B8860B] ring-2 ring-[#B8860B]/50'
+                          ? 'border-gold-300 ring-2 ring-gold-600/50'
                           : 'border-stone-200 hover:border-stone-400 opacity-80 hover:opacity-100'
                       }`}
                       title={preset.title}
@@ -192,7 +192,7 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
 
               {/* Custom Caption Input */}
               <div>
-                <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1">
+                <label className="block text-xs font-semibold text-stone-700 mb-1">
                   Card Caption / Message
                 </label>
                 <input
@@ -201,9 +201,9 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
                   onChange={(e) => setCaption(e.target.value)}
                   maxLength={40}
                   placeholder="e.g. Forever & Always ❤️"
-                  className="w-full px-3 py-2 border border-stone-300 text-xs focus:outline-none focus:border-[#B8860B]"
+                  className="w-full px-3 py-2 border border-stone-300 text-xs focus:outline-none focus:border-gold-300"
                 />
-                <span className="text-[10px] text-stone-400 block text-right mt-0.5">
+                <span className="text-xs text-stone-400 block text-right mt-0.5">
                   {caption.length}/40 characters
                 </span>
               </div>
@@ -215,7 +215,7 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 text-xs font-bold text-stone-600 hover:text-stone-900 border border-stone-300 hover:bg-stone-50 transition-colors"
+              className="px-4 py-2 text-xs font-semibold text-stone-600 hover:text-stone-900 border border-stone-300 hover:bg-stone-50 transition-colors"
             >
               Cancel
             </button>
@@ -224,7 +224,7 @@ export const PhotoCustomizerModal: React.FC<PhotoCustomizerModalProps> = ({
               whileTap={{ scale: 0.98 }}
               type="button"
               onClick={handleSave}
-              className="flex items-center gap-2 px-5 py-2 text-xs font-bold text-white bg-[#B8860B] hover:bg-[#996515] transition-colors shadow-sm"
+              className="flex items-center gap-2 px-5 py-2 text-xs font-bold text-white bg-gold-600 hover:bg-[#996515] transition-colors shadow-soft"
             >
               <Check className="w-4 h-4" />
               Place Photo in Slot #{targetSlotIndex + 1}

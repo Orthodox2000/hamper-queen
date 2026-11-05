@@ -61,7 +61,7 @@ export const HamperQueenLogo: React.FC<HamperQueenLogoProps> = ({
       <div className={`flex flex-col ${isCol ? 'items-center text-center' : 'text-left'} min-w-0`}>
         <div className={`flex items-center ${isCol ? 'justify-center' : ''} gap-1.5 whitespace-nowrap`}>
           <span
-            className={`font-seasons font-bold tracking-widest uppercase leading-none ${
+            className={`font-brand font-bold tracking-widest uppercase leading-none ${
               theme === 'light'
                 ? 'text-[#141414]'
                 : 'text-[#FAF9F5]'
@@ -75,7 +75,7 @@ export const HamperQueenLogo: React.FC<HamperQueenLogoProps> = ({
           <div className="flex items-center gap-1.5 mt-0.5 sm:mt-1 whitespace-nowrap">
             <span className="w-2 sm:w-3 h-[1px] bg-[#D4AF37]/60" />
             <span
-              className={`font-seasons uppercase font-semibold leading-none ${
+              className={`font-brand uppercase font-semibold leading-none ${
                 theme === 'light' ? 'text-[#8C6821]' : 'text-[#DFBA54]'
               } ${subtitleSize}`}
             >

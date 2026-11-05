@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { PackagingSizeOption, BrandedItem, packagingArtSvgId } from '../data/brandedItemsData';
 import { BrandedProductGraphic } from './BrandedProductGraphic';
 import { ItemGraphic } from './ItemGraphic';
+import { readableOn } from '../utils/color';
 import {
   Plus,
   X,
   Sparkles,
-  Box as BoxIcon,
-  Heart,
   CheckCircle2,
   Lightbulb,
   Image as ImageIcon,
@@ -119,7 +118,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                 setSuggestionSlot(null);
                 setSuggestionText('');
               }}
-              className="px-2 py-1.5 rounded-md bg-white border border-[#E5DAC2] text-[#7A7264] text-[10px] font-bold uppercase transition-colors cursor-pointer hover:bg-[#FAF8F2]"
+              className="px-2 py-1.5 rounded-md bg-white border border-[#E5DAC2] text-stone text-[10px] font-bold uppercase transition-colors cursor-pointer hover:bg-[#FAF8F2]"
             >
               Cancel
             </button>
@@ -175,7 +174,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
               <h3 className="font-seasons text-base sm:text-xl font-bold text-[#141414]">
                 {packaging.name}
               </h3>
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#F3EFE6] text-[#8C6821] border border-[#D8CCA8]">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-gold-50 text-gold-700 border border-[#D8CCA8]">
                 {packaging.slotCount} Slots
               </span>
             </div>
@@ -271,8 +270,8 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
 
             {/* Satin Ribbon Band */}
             <div
-              className="absolute top-3.5 left-3.5 px-3.5 py-1.5 rounded-md text-white text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-lg border border-white/20"
-              style={{ backgroundColor: ribbonColorHex }}
+              className="absolute top-3.5 left-3.5 px-3.5 py-1.5 rounded-md  text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-lg border border-white/20"
+              style={{ backgroundColor: ribbonColorHex, color: readableOn(ribbonColorHex) }}
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-200" />
               <span>{packaging.name}</span>
@@ -353,7 +352,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                 </span>
               )}
             </div>
-            <span className="text-xs text-[#7A7264] font-serif italic">
+            <span className="text-xs text-stone font-serif italic">
               {filledCount} of {totalCount} blooms & treats placed
             </span>
           </div>
@@ -450,8 +449,8 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                       {/* Item Information */}
                       <div className="w-full text-center mt-1 pt-1 border-t border-[#F0EAE0]">
                         <span
-                          className="inline-block text-[8px] font-bold px-1.5 py-0.5 rounded text-white truncate max-w-[85%]"
-                          style={{ backgroundColor: item.colorScheme.bg }}
+                          className="inline-block text-[8px] font-bold px-1.5 py-0.5 rounded  truncate max-w-[85%]"
+                          style={{ backgroundColor: item.colorScheme.bg, color: readableOn(item.colorScheme.bg) }}
                         >
                           {item.brand}
                         </span>
@@ -498,7 +497,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                     <span className="text-xs font-bold text-[#141414]">
                       {isPhotoBouquet ? 'Attach Photo' : 'Place Item'}
                     </span>
-                    <span className="text-[10px] text-[#7A7264] mt-0.5">
+                    <span className="text-[10px] text-stone mt-0.5">
                       {isPhotoBouquet ? 'Polaroid Print' : 'Treat or Flower'}
                     </span>
 
@@ -512,8 +511,8 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
             <div className="mt-6 pt-4 border-t border-[#E8DFC9] flex flex-col items-center justify-center text-center">
               {/* Tied 3D Ribbon Bow at the stem handle */}
               <div
-                className="px-5 py-2 rounded-full text-white text-xs font-bold tracking-widest uppercase flex items-center gap-2 shadow-md border border-white/30"
-                style={{ backgroundColor: ribbonColorHex }}
+                className="px-5 py-2 rounded-full  text-xs font-bold tracking-widest uppercase flex items-center gap-2 shadow-md border border-white/30"
+                style={{ backgroundColor: ribbonColorHex, color: readableOn(ribbonColorHex) }}
               >
                 <Sparkles className="w-3.5 h-3.5 text-amber-200" />
                 <span>Hand-Tied Bouquet Ribbon</span>
@@ -523,7 +522,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                   </span>
                 )}
               </div>
-              <p className="text-[11px] text-[#7A7264] font-serif italic mt-2">
+              <p className="text-[11px] text-stone font-serif italic mt-2">
                 Hand-gathered with floral sticks, imported tissue wraps, and golden ribbon bow.
               </p>
 
@@ -566,7 +565,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                 <Sparkles className="w-3.5 h-3.5 text-[#B8860B]" />
                 <span>Semi-2D Hamper Cavity: Drag items from catalog directly onto any slot</span>
               </div>
-              <span className="text-[11px] text-[#7A7264] hidden sm:inline font-sans">
+              <span className="text-[11px] text-stone hidden sm:inline font-sans">
                 (Or click any item to place)
               </span>
             </div>
@@ -666,8 +665,8 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                       {/* Item Information */}
                       <div className="w-full text-center mt-1 pt-1 border-t border-[#F0EAE0]">
                         <span
-                          className="inline-block text-[8px] font-bold px-1.5 py-0.5 rounded text-white truncate max-w-[85%]"
-                          style={{ backgroundColor: item.colorScheme.bg }}
+                          className="inline-block text-[8px] font-bold px-1.5 py-0.5 rounded  truncate max-w-[85%]"
+                          style={{ backgroundColor: item.colorScheme.bg, color: readableOn(item.colorScheme.bg) }}
                         >
                           {item.brand}
                         </span>
@@ -739,7 +738,7 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
                     <span className="text-xs font-bold text-[#141414]">
                       {isDragOver ? 'Drop Item Here!' : 'Available Slot'}
                     </span>
-                    <span className="text-[10px] text-[#7A7264] mt-0.5">
+                    <span className="text-[10px] text-stone mt-0.5">
                       Drag &amp; drop or click
                     </span>
 
@@ -799,12 +798,12 @@ export const BoxVisualizer: React.FC<BoxVisualizerProps> = ({
             disabled={isFull}
             placeholder={isFull ? 'All slots are packed…' : 'Type your own item (auto-fills first empty slot)'}
             aria-label="Type your own item"
-            className="flex-1 text-[11px] px-3 py-2 rounded-lg border bg-white text-[#141414] placeholder:text-stone-400 focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B]/40 outline-none disabled:bg-[#F2ECE0] disabled:text-stone-400"
+            className="flex-1 text-[11px] px-3 py-2 rounded-lg border bg-white text-[#141414] placeholder:text-stone-400 focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B]/40 outline-none disabled:bg-cream-300 disabled:text-stone disabled:text-stone-400"
           />
           <button
             type="submit"
             disabled={isFull || !quickItemText.trim()}
-            className="shrink-0 px-3 py-2 rounded-lg bg-[#B8860B] hover:bg-[#8C6821] disabled:bg-[#E0D9C8] disabled:cursor-not-allowed text-white text-[11px] font-bold uppercase tracking-wide transition-colors cursor-pointer"
+            className="shrink-0 px-3 py-2 rounded-lg bg-[#B8860B] hover:bg-[#8C6821] disabled:bg-cream-300 disabled:text-stone disabled:cursor-not-allowed text-white text-[11px] font-bold uppercase tracking-wide transition-colors cursor-pointer"
           >
             Add
           </button>

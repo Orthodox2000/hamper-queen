@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useRouter } from 'next/navigation';
 import { HamperQueenShowcase } from '../../../components/HamperQueenShowcase';
 import { CatalogSection } from '../../../components/CatalogSection';
@@ -16,7 +15,7 @@ export default function CatalogPage() {
   const goScribe = () => {
     royaleLogger.action('Navigation', 'User navigated to tab: scribe');
     router.push('/scribe');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    /* Next resets scroll on navigation */
   };
 
   const handleCustomizeProduct = (product: HamperQueenProduct) => {
@@ -30,10 +29,12 @@ export default function CatalogPage() {
     setCustomHamper((prev) => ({ ...prev, vessel: matchingVessel }));
     royaleLogger.action('Catalog', `Hamper Queen product selected for Customised Atelier: ${product.name}`);
     router.push('/customised');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    /* Next resets scroll on navigation */
   };
 
   return (
+    <>
+      <h1 className="sr-only">Hamper Queen gift catalogue: custom hampers and chocolate bouquets</h1>
     <>
       <HamperQueenShowcase
         language={language}
@@ -44,6 +45,7 @@ export default function CatalogPage() {
       />
 
       <CatalogSection onAddItemToHamper={addItemToHamper} />
+    </>
     </>
   );
 }

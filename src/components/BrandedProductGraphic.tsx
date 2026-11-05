@@ -2,6 +2,7 @@ import React from 'react';
 import { BrandedItem } from '../data/brandedItemsData';
 import { Sparkles, Heart } from 'lucide-react';
 
+import { readableOn } from '../utils/color';
 interface BrandedProductGraphicProps {
   item: BrandedItem;
   size?: 'sm' | 'md' | 'lg' | 'slot';
@@ -328,8 +329,8 @@ export const BrandedProductGraphic: React.FC<BrandedProductGraphicProps> = ({
       >
         <div className="relative z-10 flex items-center justify-between px-0.5 leading-none">
           <span
-            className="text-[6px] sm:text-[7px] font-bold px-1 py-0.2 rounded-2xs text-white"
-            style={{ backgroundColor: item.colorScheme.accent }}
+            className="text-[6px] sm:text-[7px] font-bold px-1 py-0.2 rounded-2xs"
+            style={{ backgroundColor: item.colorScheme.accent, color: readableOn(item.colorScheme.accent) }}
           >
             {item.brand}
           </span>
@@ -341,7 +342,7 @@ export const BrandedProductGraphic: React.FC<BrandedProductGraphicProps> = ({
         </div>
 
         <div className="relative z-10 my-auto py-0.5">
-          <span className="block font-cinzel font-bold text-white text-[10px] sm:text-xs line-clamp-1 leading-tight">
+          <span className="block font-cinzel font-bold text-[10px] sm:text-xs line-clamp-1 leading-tight" style={{ color: readableOn(item.colorScheme.bg) }}>
             {item.simpleName}
           </span>
           <span className="text-[6.5px] sm:text-[7.5px] text-white/80 line-clamp-1 mt-0.5 leading-none">

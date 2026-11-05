@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Sparkles, Crown, CheckCircle2, Gift, Heart, ArrowRight } from 'lucide-react';
+import { Sparkles, Crown, Gift, ArrowRight } from 'lucide-react';
 import { PackagingSizeOption, BrandedItem } from '../data/brandedItemsData';
 import { triggerGoldConfetti, triggerGrandCelebration } from '../utils/confetti';
 

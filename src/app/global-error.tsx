@@ -13,7 +13,7 @@ export default function GlobalError({
   return (
     <html lang="en">
       <body className="bg-[#FFFDF9] text-[#141414] antialiased selection:bg-[#D4AF37]/30 selection:text-[#111111]">
-        <section className="min-h-screen flex items-center justify-center px-4 py-16">
+        <section className="min-h-dvh flex items-center justify-center px-4 py-16">
           <div className="max-w-xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF5E8] border border-[#EAE0C8] text-[#8C6821] text-[10px] font-cinzel font-bold tracking-widest uppercase">
               <Crown className="w-3.5 h-3.5 text-[#B8860B]" />

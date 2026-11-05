@@ -10,11 +10,17 @@
  * runtime (the storefront must degrade gracefully to static data / clear errors).
  */
 
-import { MongoClient, ServerApiVersion, Db } from 'mongodb';
+import { MongoClient, ServerApiVersion, Db, Collection } from 'mongodb';
 
-const DB_NAME = 'hamper_queen';
+/** Database name. Override with MONGODB_DB (defaults to the production name). */
+const DB_NAME = process.env.MONGODB_DB?.trim() || 'hamper_queen';
 
-const SHARD_HOSTS = [
+/**
+ * Direct shard hosts used ONLY as a fallback when a network blocks the SRV/TXT DNS
+ * lookups behind `mongodb+srv://`. Override with MONGODB_DIRECT_HOSTS=host1:27017,host2:27017
+ * if you move to a different Atlas cluster.
+ */
+const SHARD_HOSTS = (process.env.MONGODB_DIRECT_HOSTS?.split(',').map((h) => h.trim()).filter(Boolean)) || [
   'ac-apeuakp-shard-00-00.jma7vfa.mongodb.net:27017',
   'ac-apeuakp-shard-00-01.jma7vfa.mongodb.net:27017',
   'ac-apeuakp-shard-00-02.jma7vfa.mongodb.net:27017',
@@ -85,39 +91,76 @@ export async function getDb(): Promise<Db> {
 export async function getOrdersCollection() {
   const db = await getDb();
   const col = db.collection('orders');
-  await col.createIndex({ trackingId: 1 }, { unique: true });
-  await col.createIndex({ status: 1 });
-  await col.createIndex({ createdAt: -1 });
+  await ensureIndex(col, { trackingId: 1 }, { name: 'uniq_trackingId', unique: true });
+  await ensureIndex(col, { status: 1 }, { name: 'idx_status' });
+  await ensureIndex(col, { createdAt: -1 }, { name: 'idx_createdAt' });
   return col;
 }
 
 export async function getCatalogOverridesCollection() {
   const db = await getDb();
   const col = db.collection('catalogOverrides');
-  await col.createIndex({ productId: 1 }, { unique: true });
+  await ensureIndex(col, { productId: 1 }, { name: 'uniq_productId', unique: true });
   return col;
 }
 
 export async function getPromoCodesCollection() {
   const db = await getDb();
   const col = db.collection('promoCodes');
-  await col.createIndex({ code: 1 }, { name: 'idx_code' });
-  await col.createIndex({ redeemedAt: 1 }, { name: 'idx_redeemedAt' });
+  await ensureIndex(col, { code: 1 }, { name: 'idx_code' });
+  await ensureIndex(col, { redeemedAt: 1 }, { name: 'idx_redeemedAt' });
   return col;
 }
 
 export async function getAdminUsersCollection() {
   const db = await getDb();
   const col = db.collection('adminUsers');
-  await col.createIndex({ username: 1 }, { unique: true, name: 'uniq_username' });
+  await ensureIndex(col, { username: 1 }, { name: 'uniq_username', unique: true });
   return col;
+}
+
+/** Server codes meaning "this server does not implement TTL indexes". */
+const TTL_UNSUPPORTED = new Set([238, 115, 59]);
+/** 85 = same keys, different name; 86 = same name, different options. Either way an equivalent index exists. */
+const INDEX_CONFLICT = new Set([85, 86]);
+const ensuredIndexes = new Set<string>();
+let warnedNoTtl = false;
+
+/**
+ * Create an index once per process.
+ *  - Index names match scripts/bootstrap-db.mjs, so a freshly bootstrapped database and an
+ *    app-created one converge on the same names.
+ *  - If an equivalent index already exists under another name (databases created before names
+ *    were standardised) the conflict is accepted instead of failing the request.
+ *  - TTL indexes are housekeeping only (auth.ts also rejects expired sessions on read), so servers
+ *    without TTL support must not break login.
+ */
+async function ensureIndex(col: Collection, key: Record<string, 1 | -1>, options: { name: string; unique?: boolean; expireAfterSeconds?: number }) {
+  const id = `${col.collectionName}:${options.name}`;
+  if (ensuredIndexes.has(id)) return;
+  try {
+    await col.createIndex(key, options);
+  } catch (err) {
+    const code = (err as { code?: number }).code;
+    if (typeof code === 'number' && INDEX_CONFLICT.has(code)) {
+      // equivalent index already present
+    } else if (typeof code === 'number' && TTL_UNSUPPORTED.has(code) && options.expireAfterSeconds !== undefined) {
+      if (!warnedNoTtl) {
+        warnedNoTtl = true;
+        console.warn('[mongo] TTL indexes are not supported by this server; expired sessions are only rejected, not purged.');
+      }
+    } else {
+      throw err;
+    }
+  }
+  ensuredIndexes.add(id);
 }
 
 export async function getSessionsCollection() {
   const db = await getDb();
   const col = db.collection('sessions');
-  await col.createIndex({ token: 1 }, { unique: true, name: 'uniq_token' });
-  await col.createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0, name: 'ttl_expiresAt' });
+  await ensureIndex(col, { token: 1 }, { name: 'uniq_token', unique: true });
+  await ensureIndex(col, { expiresAt: 1 }, { name: 'ttl_expiresAt', expireAfterSeconds: 0 });
   return col;
 }
 

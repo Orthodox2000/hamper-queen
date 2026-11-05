@@ -8,13 +8,10 @@
  */
 
 import React, { useCallback, useEffect, useState } from 'react';
-import Link from 'next/link';
 import {
-  TicketPercent,
   Loader2,
   Search,
   Trash2,
-  ArrowLeft,
   Plus,
   Tag,
   BadgeCheck,
@@ -24,6 +21,7 @@ import {
   Wand2,
 } from 'lucide-react';
 
+import { AdminHeader } from './admin-header';
 export interface AdminPromoRow {
   _id: string;
   code: string;
@@ -37,9 +35,8 @@ export interface AdminPromoRow {
   createdAt: string;
 }
 
-const inputCls =
-  'w-full rounded-xl border border-[#E3DCCB] bg-white px-3 py-2.5 text-sm text-[#141414] placeholder-[#A49B8A] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/60 focus:border-[#D4AF37]';
-const labelCls = 'block text-[10px] font-bold uppercase tracking-wider text-[#8C6821] mb-1';
+const inputCls = 'field text-sm';
+const labelCls = 'block text-xs font-semibold text-cocoa mb-1.5';
 
 export default function PromoManager() {
   const [rows, setRows] = useState<AdminPromoRow[]>([]);
@@ -156,32 +153,19 @@ export default function PromoManager() {
     row.discount.kind === 'percent' ? `${row.discount.value}% off` : `INR ${row.discount.value.toLocaleString('en-IN')} off`;
 
   return (
-    <div className="min-h-screen bg-[#FAF9F5]">
-      <header className="sticky top-0 z-20 bg-[#141414] text-white border-b border-[#D4AF37]/50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <Link
-              href="/admin"
-              className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-            </Link>
-            <div className="w-9 h-9 rounded-lg bg-[#DFBA54]/20 border border-[#DFBA54] flex items-center justify-center text-[#DFBA54]">
-              <TicketPercent className="w-5 h-5" />
-            </div>
-            <div>
-              <h1 className="font-cinzel text-sm font-bold tracking-wide">Promo Codes & Coupons</h1>
-              <p className="text-[10px] text-white/60">One code string can carry many single-use rows</p>
-            </div>
-          </div>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-[11px] font-bold">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBA54]" />
-            {total.toLocaleString('en-IN')} row{total === 1 ? '' : 's'}
-          </span>
-        </div>
-      </header>
+    <div className="min-h-dvh bg-cream-100">
+      <AdminHeader
+        title="Promo codes & coupons"
+        subtitle="One code string can carry many single-use rows"
+          actions={
+            <span className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gold-50 text-gold-700 text-xs font-semibold shadow-[inset_0_0_0_1px_var(--color-gold-200)]">
+              <CheckCircle2 className="w-3.5 h-3.5" aria-hidden="true" />
+              {total.toLocaleString('en-IN')} row{total === 1 ? '' : 's'}
+            </span>
+          }
+      />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-6">
+      <main className="container-page py-8 space-y-6">
         {error && (
           <div className="rounded-2xl bg-red-50 border border-red-200 p-4 text-sm text-red-700">{error}</div>
         )}
@@ -189,18 +173,18 @@ export default function PromoManager() {
         {/* Create form */}
         <form
           onSubmit={handleCreate}
-          className="rounded-3xl bg-white border border-[#EAE5D9] p-5 sm:p-6 shadow-sm space-y-4"
+          className="rounded-3xl bg-white border border-line p-5 sm:p-6 shadow-soft space-y-4"
         >
           <div className="flex items-center gap-2">
-            <Plus className="w-4 h-4 text-[#B8860B]" />
-            <h2 className="font-cinzel text-sm font-bold uppercase tracking-widest text-[#141414]">
+            <Plus className="w-4 h-4 text-gold-700" />
+            <h2 className="font-cinzel text-sm font-bold text-ink">
               Create Promo Codes
             </h2>
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#A49B8A]">Mode</span>
-            <div className="flex rounded-xl border border-[#E3DCCB] overflow-hidden">
+            <span className="text-[11px] font-bold text-mist">Mode</span>
+            <div className="flex rounded-xl border border-line overflow-hidden">
               {([
                 { id: 'single', label: 'One code · many rows' },
                 { id: 'generate', label: 'Generate unique codes' },
@@ -209,8 +193,8 @@ export default function PromoManager() {
                   key={m.id}
                   type="button"
                   onClick={() => setMode(m.id)}
-                  className={`flex-1 px-3 py-2 text-xs font-bold uppercase tracking-wide transition-colors cursor-pointer ${
-                    mode === m.id ? 'bg-[#141414] text-[#DFBA54]' : 'bg-white text-[#8C6821] hover:bg-[#FAF5E8]'
+                  className={`flex-1 px-3 py-2 text-xs font-bold   transition-colors cursor-pointer ${
+                    mode === m.id ? 'bg-ink text-gold-100' : 'bg-white text-gold-700 hover:bg-gold-50'
                   }`}
                 >
                   {m.id === 'generate' && <Wand2 className="w-3.5 h-3.5 inline -mt-0.5 mr-1" />}
@@ -255,14 +239,14 @@ export default function PromoManager() {
             </div>
             <div>
               <label className={labelCls}>Type</label>
-              <div className="flex rounded-xl border border-[#E3DCCB] overflow-hidden">
+              <div className="flex rounded-xl border border-line overflow-hidden">
                 {(['flat', 'percent'] as const).map((k) => (
                   <button
                     key={k}
                     type="button"
                     onClick={() => setKind(k)}
-                    className={`flex-1 px-3 py-2.5 text-xs font-bold uppercase tracking-wide transition-colors cursor-pointer ${
-                      kind === k ? 'bg-[#141414] text-[#DFBA54]' : 'bg-white text-[#8C6821] hover:bg-[#FAF5E8]'
+                    className={`flex-1 px-3 py-3 text-xs font-bold   transition-colors cursor-pointer ${
+                      kind === k ? 'bg-ink text-gold-100' : 'bg-white text-gold-700 hover:bg-gold-50'
                     }`}
                   >
                     {k === 'flat' ? 'INR flat' : '% off'}
@@ -312,7 +296,7 @@ export default function PromoManager() {
               <button
                 type="submit"
                 disabled={creating || !value || (mode === 'single' && !code.trim())}
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#141414] hover:bg-[#241E16] disabled:opacity-50 disabled:cursor-not-allowed text-[#DFBA54] border border-[#D4AF37]/60 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                className="btn btn-primary w-full"
               >
                 {creating ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}
                 Create
@@ -320,21 +304,21 @@ export default function PromoManager() {
             </div>
           </div>
 
-          <p className="text-[11px] text-[#A49B8A]">
+          <p className="text-[11px] text-mist">
             {mode === 'generate'
               ? 'Generates one unique single-use code per row (e.g. NEVV25-AB3X9K). Perfect for events & corporate gifting — hand each attendee their own code.'
               : 'Each row is a single-use coupon. The same code string can be created many times (one row per attendee of an event) — same discount, unique redemptions.'}
           </p>
           {createMsg && (
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
-              <p className="text-xs font-bold text-[#1E7B3C] flex items-center gap-1.5">
+              <p className="text-xs font-bold text-emerald-800 flex items-center gap-1.5">
                 <BadgeCheck className="w-4 h-4" /> {createMsg}
               </p>
               {lastCodes.length > 0 && (
                 <button
                   type="button"
                   onClick={() => copyText(lastCodes.join('\n'), 'created')}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#141414] hover:bg-[#241E16] border border-[#D4AF37]/50 text-[#DFBA54] text-[11px] font-bold transition-colors cursor-pointer"
+                  className="btn btn-primary btn-sm"
                 >
                   {copiedKey === 'created' ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                   {copiedKey === 'created' ? 'Copied' : lastCodes.length === 1 ? 'Copy code' : `Copy ${lastCodes.length} codes`}
@@ -345,23 +329,23 @@ export default function PromoManager() {
         </form>
 
         {/* List */}
-        <div className="rounded-3xl bg-white border border-[#EAE5D9] shadow-sm overflow-hidden">
-          <div className="p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-[#EFE9DC]">
-            <h2 className="font-cinzel text-sm font-bold uppercase tracking-widest text-[#141414]">All Coupons</h2>
+        <div className="rounded-3xl bg-white border border-line shadow-soft overflow-hidden">
+          <div className="p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-cream-200">
+            <h2 className="font-cinzel text-sm font-bold text-ink">All Coupons</h2>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
               {rows.length > 0 && (
                 <button
                   type="button"
                   onClick={() => copyText(rows.map((r) => r.code).join('\n'), 'all')}
                   title={`Copy all ${rows.length} visible code${rows.length === 1 ? '' : 's'}`}
-                  className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-[#FAF5E8] hover:bg-[#F3EAD4] border border-[#EAE0C8] text-[#8C6821] text-xs font-bold transition-colors cursor-pointer"
+                  className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-gold-50 hover:bg-[#F3EAD4] border border-line-strong text-gold-700 text-xs font-bold transition-colors cursor-pointer"
                 >
                   {copiedKey === 'all' ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                   {copiedKey === 'all' ? 'Copied' : 'Copy all'}
                 </button>
               )}
               <div className="relative">
-                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[#A49B8A]" />
+                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-mist" />
                 <input
                   className={`${inputCls} pl-9`}
                   value={query}
@@ -369,13 +353,13 @@ export default function PromoManager() {
                   placeholder="Search code…"
                 />
               </div>
-              <div className="flex rounded-xl border border-[#E3DCCB] overflow-hidden">
+              <div className="flex rounded-xl border border-line overflow-hidden">
                 {(['all', 'active', 'used'] as const).map((f) => (
                   <button
                     key={f}
                     onClick={() => setFilter(f)}
-                    className={`px-3 py-2.5 text-xs font-bold uppercase tracking-wide transition-colors cursor-pointer ${
-                      filter === f ? 'bg-[#141414] text-[#DFBA54]' : 'bg-white text-[#8C6821] hover:bg-[#FAF5E8]'
+                    className={`px-3 py-3 text-xs font-bold   transition-colors cursor-pointer ${
+                      filter === f ? 'bg-ink text-gold-100' : 'bg-white text-gold-700 hover:bg-gold-50'
                     }`}
                   >
                     {f}
@@ -386,17 +370,17 @@ export default function PromoManager() {
           </div>
 
           {loading ? (
-            <div className="p-12 flex items-center justify-center text-[#8C6821]">
+            <div className="p-12 flex items-center justify-center text-gold-700">
               <Loader2 className="w-7 h-7 animate-spin" />
             </div>
           ) : rows.length === 0 ? (
             <div className="p-12 text-center space-y-2">
-              <Tag className="w-8 h-8 mx-auto text-[#C4BCAA]" />
-              <p className="text-sm font-semibold text-[#141414]">No coupons{filter !== 'all' ? ` (${filter})` : ''} found.</p>
-              <p className="text-xs text-[#6B6559]">Create a code above to get started.</p>
+              <Tag className="w-8 h-8 mx-auto text-mist" />
+              <p className="text-sm font-semibold text-ink">No coupons{filter !== 'all' ? ` (${filter})` : ''} found.</p>
+              <p className="text-xs text-stone">Create a code above to get started.</p>
             </div>
           ) : (
-            <ul className="divide-y divide-[#F0EBE0]">
+            <ul className="divide-y divide-cream-200">
               {rows.map((row) => {
                 const used = !!row.redeemedAt;
                 const expired = !!row.expiresAt && new Date(row.expiresAt).getTime() < Date.now();
@@ -404,36 +388,36 @@ export default function PromoManager() {
                   <li key={row._id} className="flex flex-col sm:flex-row sm:items-center gap-3 px-5 sm:px-6 py-4">
                     <div className="min-w-0 flex-1 space-y-0.5">
                       <div className="flex flex-wrap items-center gap-2">
-                        <span className="font-mono text-sm font-extrabold tracking-widest text-[#141414]">{row.code}</span>
+                        <span className="font-mono text-sm font-extrabold text-ink">{row.code}</span>
                         <button
                           type="button"
                           onClick={() => copyText(row.code, row._id)}
                           title="Copy code"
-                          className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[#FAF5E8] hover:bg-[#F3EAD4] border border-[#EAE0C8] text-[#8C6821] text-[10px] font-bold transition-colors cursor-pointer"
+                          className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-gold-50 hover:bg-[#F3EAD4] border border-line-strong text-gold-700 text-[11px] font-bold transition-colors cursor-pointer"
                         >
                           {copiedKey === row._id ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
                           {copiedKey === row._id ? 'Copied' : 'Copy'}
                         </button>
-                        <span className="px-2 py-0.5 rounded-full bg-[#FAF5E8] border border-[#EAE0C8] text-[#8C6821] text-[10px] font-bold">
+                        <span className="px-2 py-0.5 rounded-full bg-gold-50 border border-line-strong text-gold-700 text-[11px] font-bold">
                           {discountLabel(row)}
                         </span>
                         {!used && !expired && row.active && (
-                          <span className="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-bold">
+                          <span className="px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-bold">
                             Available
                           </span>
                         )}
                         {used && (
-                          <span className="px-2 py-0.5 rounded-full bg-[#FBEBEB] border border-red-200 text-[#B3261E] text-[10px] font-bold">
+                          <span className="px-2 py-0.5 rounded-full bg-[#FBEBEB] border border-red-200 text-[#B3261E] text-[11px] font-bold">
                             Redeemed
                           </span>
                         )}
                         {expired && !used && (
-                          <span className="px-2 py-0.5 rounded-full bg-[#F0EBE0] border border-[#D8D0BF] text-[#6B6559] text-[10px] font-bold">
+                          <span className="px-2 py-0.5 rounded-full bg-cream-200 border border-[#D8D0BF] text-stone text-[11px] font-bold">
                             Expired
                           </span>
                         )}
                       </div>
-                      <p className="text-[11px] text-[#6B6559]">
+                      <p className="text-[11px] text-stone">
                         {row.eventName ? `${row.eventName} · ` : ''}Created {new Date(row.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}
                         {typeof row.minSubtotal === 'number' && row.minSubtotal > 0 && ` · Min order INR ${row.minSubtotal}`}
                         {row.expiresAt && ` · Expires ${new Date(row.expiresAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}`}

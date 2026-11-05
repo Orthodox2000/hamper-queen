@@ -1,7 +1,18 @@
 import type { Metadata } from 'next';
 
 export const SITE_NAME = 'Hamper Queen';
-export const SITE_URL = 'https://hamper-queen.vercel.app';
+const DEFAULT_SITE_URL = 'https://hamper-queen.vercel.app';
+/**
+ * Public origin used for canonical URLs, sitemap, OpenGraph and robots.
+ * Set HQ_BASE_URL per deployment; a localhost value is ignored in production builds
+ * so a copied dev .env can never leak "localhost" into search results.
+ */
+export const SITE_URL = (() => {
+  const fromEnv = process.env.HQ_BASE_URL?.trim().replace(/\/$/, '');
+  if (!fromEnv) return DEFAULT_SITE_URL;
+  if (process.env.NODE_ENV === 'production' && /localhost|127\.0\.0\.1/.test(fromEnv)) return DEFAULT_SITE_URL;
+  return fromEnv;
+})();
 export const OG_IMAGE = '/opengraph-image';
 const DEFAULT_KEYWORDS = [
   'custom gift hampers',

@@ -8,10 +8,19 @@
  * catalog at runtime), reset overrides, and add brand-new custom products.
  */
 
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Layers, Loader2, Plus, Save, Trash2, Tag, ArrowLeft, ExternalLink, Check } from 'lucide-react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import {
+  Loader2,
+  Plus,
+  Save,
+  Trash2,
+  Tag,
+  ExternalLink,
+  Check,
+} from 'lucide-react';
 import { HAMPER_QUEEN_PRODUCTS, HamperQueenProduct } from '../../data/hamperQueenCatalog';
 
+import { AdminHeader } from './admin-header';
 interface OverrideDto {
   _id: string;
   productId: string;
@@ -208,43 +217,26 @@ export function CatalogManager() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF9F5]">
-      <header className="sticky top-0 z-20 bg-[#141414] text-white border-b border-[#D4AF37]/50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <a href="/admin" className="inline-flex items-center gap-1.5 text-xs font-bold text-white/80 hover:text-white transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-              Admin
-            </a>
-            <div className="w-px h-6 bg-white/20" />
-            <div className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-lg bg-[#DFBA54]/20 border border-[#DFBA54] flex items-center justify-center text-[#DFBA54]">
-                <Layers className="w-5 h-5" />
-              </div>
-              <div>
-                <h1 className="font-cinzel text-sm font-bold tracking-wide">Catalog Overrides</h1>
-                <p className="text-[10px] text-white/60">DB wins over the static catalog · preview via /api/catalog</p>
-              </div>
-            </div>
-          </div>
-          <button
-            onClick={() => setNewOpen((v) => !v)}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#DFBA54] hover:bg-[#C5A059] text-[#141414] text-xs font-bold transition-colors cursor-pointer"
-          >
-            <Plus className="w-4 h-4" />
-            <span className="hidden sm:inline">New Product</span>
-          </button>
-        </div>
-      </header>
+    <div className="min-h-dvh bg-cream-100">
+      <AdminHeader
+        title="Catalog overrides"
+        subtitle="Database entries win over the static catalog · preview via /api/catalog"
+          actions={
+            <button onClick={() => setNewOpen((v) => !v)} className="btn btn-primary btn-sm">
+              <Plus className="w-4 h-4 text-gold-300" aria-hidden="true" />
+              <span className="hidden sm:inline">New product</span>
+            </button>
+          }
+      />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-6">
+      <main className="container-page py-8 space-y-6">
         {error && (
           <div className="p-4 rounded-2xl bg-red-50 border border-red-200 text-red-700 text-xs">{error}</div>
         )}
 
         {newOpen && (
-          <div className="p-6 rounded-2xl bg-white border-2 border-[#D4AF37]/50 shadow-md space-y-4">
-            <h2 className="font-cinzel text-sm font-bold uppercase tracking-widest text-[#141414]">
+          <div className="p-6 rounded-2xl bg-white border border-gold-400/50 shadow-lift space-y-4">
+            <h2 className="font-cinzel text-sm font-bold text-ink">
               Add a Brand-New Custom Product
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -253,41 +245,41 @@ export function CatalogManager() {
                 value={newSlug}
                 onChange={(e) => setNewSlug(e.target.value)}
                 placeholder="Slug / product id (e.g. summer-delight)"
-                className="px-4 py-3 rounded-2xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                className="px-4 py-3 rounded-2xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
               />
               <input
                 type="text"
                 value={newPrice}
                 onChange={(e) => setNewPrice(e.target.value)}
                 placeholder="Price (e.g. INR 649)"
-                className="px-4 py-3 rounded-2xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                className="px-4 py-3 rounded-2xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
               />
               <input
                 type="text"
                 value={newName}
                 onChange={(e) => setNewName(e.target.value)}
                 placeholder="Product name"
-                className="px-4 py-3 rounded-2xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B] md:col-span-2"
+                className="px-4 py-3 rounded-2xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300 md:col-span-2"
               />
               <textarea
                 value={newItems}
                 onChange={(e) => setNewItems(e.target.value)}
                 placeholder="Items included, comma separated"
                 rows={2}
-                className="px-4 py-3 rounded-2xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B] md:col-span-2"
+                className="px-4 py-3 rounded-2xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300 md:col-span-2"
               />
             </div>
             <div className="flex items-center justify-end gap-2">
               <button
                 onClick={() => setNewOpen(false)}
-                className="px-4 py-2.5 rounded-xl bg-white border border-[#E5E0D6] text-xs font-semibold text-[#524B40] hover:bg-[#FAF9F5] cursor-pointer"
+                className="px-4 py-3 rounded-full bg-white border border-line text-xs font-semibold text-cocoa hover:bg-cream-100 cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 onClick={createNewProduct}
                 disabled={saving}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#141414] text-[#DFBA54] border border-[#D4AF37] text-xs font-bold cursor-pointer disabled:opacity-60"
+                className="btn btn-primary"
               >
                 {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}
                 Create Product
@@ -297,8 +289,8 @@ export function CatalogManager() {
         )}
 
         {loading ? (
-          <div className="py-20 flex flex-col items-center gap-3 text-[#6B6559]">
-            <Loader2 className="w-8 h-8 animate-spin text-[#B8860B]" />
+          <div className="py-20 flex flex-col items-center gap-3 text-stone">
+            <Loader2 className="w-8 h-8 animate-spin text-gold-700" />
             <p className="text-xs font-semibold">Loading catalog…</p>
           </div>
         ) : (
@@ -308,23 +300,23 @@ export function CatalogManager() {
               const price = (row.override?.fields.approxPrice as string | undefined) ?? row.product?.approxPrice ?? 'On request';
               const isEditing = editingId === row.productId;
               return (
-                <div key={row.productId} className="rounded-2xl bg-white border border-[#EAE5D9] shadow-2xs overflow-hidden">
+                <div key={row.productId} className="rounded-2xl bg-white border border-line shadow-soft overflow-hidden">
                   <div className="px-5 py-4 flex flex-wrap items-center justify-between gap-3">
                     <div className="flex items-center gap-3 min-w-0">
-                      <div className="w-10 h-10 rounded-xl bg-[#FAF5E8] border border-[#EAE0C8] text-[#8C6821] flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-xl bg-gold-50 border border-line-strong text-gold-700 flex items-center justify-center">
                         <Tag className="w-4 h-4" />
                       </div>
                       <div className="min-w-0">
-                        <p className="font-cinzel text-sm font-bold text-[#141414] truncate">{name}</p>
-                        <p className="text-[11px] text-[#A49B8A] font-mono">
+                        <p className="font-cinzel text-sm font-bold text-ink truncate">{name}</p>
+                        <p className="text-[11px] text-mist font-mono">
                           {row.productId} · {price}
                           {row.override && (
-                            <span className="ml-2 px-2 py-0.5 rounded-full bg-[#FAF5E8] border border-[#D4AF37]/50 text-[9px] font-bold text-[#8C6821] uppercase">
+                            <span className="ml-2 px-2 py-0.5 rounded-full bg-gold-50 border border-gold-400/50 text-[11px] font-bold text-gold-700">
                               Override
                             </span>
                           )}
                           {row.isCustom && (
-                            <span className="ml-2 px-2 py-0.5 rounded-full bg-sky-50 border border-sky-200 text-[9px] font-bold text-sky-700 uppercase">
+                            <span className="ml-2 px-2 py-0.5 rounded-full bg-sky-50 border border-sky-200 text-[11px] font-bold text-sky-700">
                               Custom
                             </span>
                           )}
@@ -335,7 +327,7 @@ export function CatalogManager() {
                       {!isEditing && (
                         <button
                           onClick={() => openEdit(row)}
-                          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#141414] text-[#DFBA54] border border-[#D4AF37] text-xs font-bold hover:bg-[#252525] transition-colors cursor-pointer"
+                          className="btn btn-primary btn-sm"
                         >
                           <Save className="w-3.5 h-3.5" />
                           Edit Fields
@@ -344,7 +336,7 @@ export function CatalogManager() {
                       {row.override && !isEditing && (
                         <button
                           onClick={() => resetOverride(row.productId)}
-                          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white border border-red-200 text-red-600 text-xs font-bold hover:bg-red-50 transition-colors cursor-pointer"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-red-200 text-red-600 text-xs font-bold hover:bg-red-50 transition-colors cursor-pointer"
                         >
                           <Trash2 className="w-3.5 h-3.5" />
                           Reset
@@ -354,61 +346,61 @@ export function CatalogManager() {
                   </div>
 
                   {isEditing && draft && (
-                    <div className="px-5 pb-5 space-y-4 border-t border-[#F0ECE1] pt-4">
+                    <div className="px-5 pb-5 space-y-4 border-t border-line pt-4">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         <div>
-                          <label className="block text-[10px] font-bold uppercase tracking-wider text-[#8C6821] mb-1">Name</label>
+                          <label className="block text-[11px] font-bold text-gold-700 mb-1">Name</label>
                           <input
                             type="text"
                             value={draft.name}
                             onChange={(e) => setDraft({ ...draft, name: e.target.value })}
-                            className="w-full px-3 py-2.5 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                            className="w-full px-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] font-bold uppercase tracking-wider text-[#8C6821] mb-1">Name (Hinglish)</label>
+                          <label className="block text-[11px] font-bold text-gold-700 mb-1">Name (Hinglish)</label>
                           <input
                             type="text"
                             value={draft.nameHinglish}
                             onChange={(e) => setDraft({ ...draft, nameHinglish: e.target.value })}
-                            className="w-full px-3 py-2.5 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                            className="w-full px-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] font-bold uppercase tracking-wider text-[#8C6821] mb-1">Price (approxPrice)</label>
+                          <label className="block text-[11px] font-bold text-gold-700 mb-1">Price (approxPrice)</label>
                           <input
                             type="text"
                             value={draft.approxPrice}
                             onChange={(e) => setDraft({ ...draft, approxPrice: e.target.value })}
                             placeholder="e.g. INR 499"
-                            className="w-full px-3 py-2.5 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                            className="w-full px-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] font-bold uppercase tracking-wider text-[#8C6821] mb-1">Pricing Note</label>
+                          <label className="block text-[11px] font-bold text-gold-700 mb-1">Pricing Note</label>
                           <input
                             type="text"
                             value={draft.pricingNote}
                             onChange={(e) => setDraft({ ...draft, pricingNote: e.target.value })}
-                            className="w-full px-3 py-2.5 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                            className="w-full px-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] font-bold uppercase tracking-wider text-[#8C6821] mb-1">Category Label</label>
+                          <label className="block text-[11px] font-bold text-gold-700 mb-1">Category Label</label>
                           <input
                             type="text"
                             value={draft.categoryLabel}
                             onChange={(e) => setDraft({ ...draft, categoryLabel: e.target.value })}
-                            className="w-full px-3 py-2.5 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                            className="w-full px-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] font-bold uppercase tracking-wider text-[#8C6821] mb-1">Items Included (comma separated)</label>
+                          <label className="block text-[11px] font-bold text-gold-700 mb-1">Items Included (comma separated)</label>
                           <input
                             type="text"
                             value={draft.itemsIncluded.join(', ')}
                             onChange={(e) => setDraft({ ...draft, itemsIncluded: e.target.value.split(',').map((i) => i.trim()) })}
-                            className="w-full px-3 py-2.5 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                            className="w-full px-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                           />
                         </div>
                       </div>
@@ -416,14 +408,14 @@ export function CatalogManager() {
                       <div className="flex items-center justify-end gap-2">
                         <button
                           onClick={() => setEditingId(null)}
-                          className="px-4 py-2.5 rounded-xl bg-white border border-[#E5E0D6] text-xs font-semibold text-[#524B40] hover:bg-[#FAF9F5] cursor-pointer"
+                          className="px-4 py-3 rounded-full bg-white border border-line text-xs font-semibold text-cocoa hover:bg-cream-100 cursor-pointer"
                         >
                           Cancel
                         </button>
                         <button
                           onClick={() => saveOverride(row.productId)}
                           disabled={saving}
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#141414] text-[#DFBA54] border border-[#D4AF37] text-xs font-bold cursor-pointer disabled:opacity-60"
+                          className="btn btn-primary"
                         >
                           {saving ? (
                             <Loader2 className="w-4 h-4 animate-spin" />
@@ -443,7 +435,7 @@ export function CatalogManager() {
           </div>
         )}
 
-        <div className="flex items-center gap-2 text-[11px] text-[#A49B8A] pt-2">
+        <div className="flex items-center gap-2 text-[11px] text-mist pt-2">
           <ExternalLink className="w-3.5 h-3.5" />
           Overrides are live immediately — prices shown on the storefront cart and checkout always recompute from the merged catalog.
         </div>

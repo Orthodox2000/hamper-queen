@@ -5,7 +5,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { requireAdmin, hashPassword, AdminRole } from '../../../../lib/auth';
+import { requireAdmin, hashPassword } from '../../../../lib/auth';
 import { getAdminUsersCollection } from '../../../../lib/mongo';
 
 function cleanString(value: unknown, max: number): string {

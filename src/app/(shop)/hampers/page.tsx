@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useRouter } from 'next/navigation';
 import { HamperQueenShowcase } from '../../../components/HamperQueenShowcase';
 import { useShopStore } from '../../../store/shop-store';
@@ -15,7 +14,7 @@ export default function HampersPage() {
   const goScribe = () => {
     royaleLogger.action('Navigation', 'User navigated to tab: scribe');
     router.push('/scribe');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    /* Next resets scroll on navigation */
   };
 
   const handleCustomizeProduct = (product: HamperQueenProduct) => {
@@ -29,7 +28,7 @@ export default function HampersPage() {
     setCustomHamper((prev) => ({ ...prev, vessel: matchingVessel }));
     royaleLogger.action('Hampers', `Hamper Queen product selected for Customised Atelier: ${product.name}`);
     router.push('/customised');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    /* Next resets scroll on navigation */
   };
 
   return (

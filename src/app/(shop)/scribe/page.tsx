@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { CustomMessagingPlatform } from '../../../components/CustomMessagingPlatform';
 import { useShopStore } from '../../../store/shop-store';
 

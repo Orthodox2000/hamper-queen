@@ -27,7 +27,7 @@
  *    always reads clearly.
  */
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback, useLayoutEffect } from 'react';
 import { Gift, Crown, Sparkles } from 'lucide-react';
 import {
   BOX_THEMES,
@@ -44,6 +44,7 @@ import {
   BAG_COLORS,
 } from '../data/boxThemes';
 import { triggerGoldConfetti } from '../utils/confetti';
+import { BouquetArt } from './BouquetArt';
 
 type BoxSize = 'sm' | 'md' | 'lg';
 
@@ -51,6 +52,8 @@ export type BoxVariant = keyof typeof BOX_THEMES;
 export type { BoxSize };
 
 interface ThreeDGiftBoxProps {
+  /** Dock the unbox button on the stage and leave the hint to the parent. */
+  compact?: boolean;
   onOpenAtelier?: () => void;
   className?: string;
   variant?: BoxVariant;
@@ -91,193 +94,6 @@ const FaceEmblem: React.FC<FaceEmblemProps> = ({ theme, logoClass, withLabel = f
 /* -------------------------------------------------------------------------- */
 /* Hand-tied bouquet assembly — tall & slender, never looks like a trunk.     */
 /* Fully recolourable via the selected BouquetPalette (blooms, cone, satin).  */
-/* -------------------------------------------------------------------------- */
-interface BouquetAssemblyProps {
-  palette: BouquetPalette;
-  isOpen: boolean;
-  W: number;
-  H: number;
-  coneH: number;
-  bloomY: number;
-  className: string;
-}
-
-const BouquetAssembly: React.FC<BouquetAssemblyProps> = ({
-  palette,
-  isOpen,
-  W,
-  H,
-  coneH,
-  bloomY,
-  className,
-}) => {
-  const bloomZ = 26;
-  const lipY = bloomY + 34;
-  const coneR = Math.round(W * 0.24);
-  const mouthY = Math.round(H - coneH * 0.9);
-  const WRAP_RING = Array.from({ length: 10 }, (_, i) => ({
-    theta: i * 36 - 144,
-    w: Math.round(coneR * 0.82),
-  }));
-  return (
-    <div className="absolute inset-0 [transform-style:preserve-3d]">
-      {/* Leaf fan tucked behind the blooms */}
-      <div className="absolute left-1/2 -translate-x-1/2" style={{ top: `${lipY}px`, width: `${W * 0.82}px`, height: `${H * 0.34}px` }}>
-        {[0, 1, 2, 3, 4].map((i) => (
-          <div
-            key={i}
-            className="absolute bottom-0"
-            style={{
-              left: `${12 + i * 17}%`,
-              width: `${W * 0.3}px`,
-              height: `${H * 0.24}px`,
-              background: 'linear-gradient(to top, #3E6723, #5B8A2F 70%, #2E5018)',
-              clipPath: 'polygon(50% 0, 100% 100%, 0 100%)',
-              borderRadius: '50% 50% 0 0',
-              transform: `translateZ(${bloomZ + 6}px) rotate(${i % 2 ? '-' : ''}${6 + i * 3}deg)`,
-              opacity: 0.85,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Bloom mouth-ring — a true 3D sphere of blooms orbiting the wrapper mouth */}
-      <div
-        className="absolute left-1/2"
-        style={{
-          top: `${mouthY - coneR}px`,
-          width: `${coneR * 2}px`,
-          height: `${coneR * 2}px`,
-          transform: 'translateX(-50%)',
-          transformStyle: 'preserve-3d',
-        }}
-      >
-        {Array.from({ length: 8 }, (_, i) => {
-          const s = 20 + (i % 3) * 3;
-          const b = palette.blooms[i % palette.blooms.length];
-          return (
-            <div
-              key={i}
-              className={`absolute rounded-full border border-white/30 shadow-lg transition-transform duration-700 ${isOpen ? 'scale-105' : 'scale-100'}`}
-              style={{
-                left: '50%',
-                top: '50%',
-                width: `${s}px`,
-                height: `${s}px`,
-                marginLeft: `${-s / 2}px`,
-                marginTop: `${-s / 2}px`,
-                background: `radial-gradient(circle at 32% 28%, rgba(255,255,255,0.55), ${b} 58%, ${palette.sashKnot})`,
-                transform: `rotateY(${i * 45}deg) translateZ(${coneR}px)`,
-              }}
-            >
-              <div className="absolute inset-[15%] rounded-full border border-[#F3E5AB]/25" />
-            </div>
-          );
-        })}
-        {/* Glowing fairy-light tips sprinkled through the bloom ring */}
-        {Array.from({ length: 6 }, (_, i) => (
-          <span
-            key={`l-${i}`}
-            className="absolute w-1.5 h-1.5 rounded-full bg-[#FFF6C9] shadow-[0_0_6px_2px_rgba(243,229,171,0.9)]"
-            style={{
-              left: '50%',
-              top: '50%',
-              marginLeft: '-3px',
-              marginTop: '-3px',
-              transform: `rotateY(${i * 60 + 22}deg) translateZ(${Math.round(coneR * 1.14)}px) rotateX(${i % 2 ? -10 : 12}deg)`,
-              animation: `twinkle ${1.6 + i * 0.35}s ease-in-out ${i * 0.2}s infinite`,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Volumetric wrappers — 10 tapered panels radiating to form the paper cone */}
-      <div
-        className="absolute left-1/2 bottom-0 [transform-style:preserve-3d]"
-        style={{ width: `${coneR * 2}px`, height: `${coneH * 0.96}px`, transform: 'translateX(-50%)' }}
-      >
-        {/* Dark hollow read through the flared mouth */}
-        <div
-          className="absolute left-1/2 bottom-0"
-          style={{
-            width: `${Math.round(coneR * 1.8)}px`,
-            height: `${coneH * 0.9}px`,
-            transform: 'translateX(-50%) rotateX(-15deg)',
-            transformOrigin: '50% 100%',
-            background: 'linear-gradient(to bottom, #241A0F 0%, #0C0805 70%, #050302 100%)',
-            clipPath: 'polygon(0 0, 100% 0, 55% 100%, 45% 100%)',
-          }}
-        />
-
-        {/* Tapered wrapper panels — pointed bottom, flared top */}
-        {WRAP_RING.map((p, i) => (
-          <div
-            key={i}
-            className="absolute left-1/2 bottom-0"
-            style={{
-              width: `${p.w}px`,
-              height: `${coneH * 0.96}px`,
-              transform: `translateX(-50%) rotateY(${p.theta}deg) translateZ(${Math.round(coneR * 0.98)}px) rotateX(-15deg)`,
-              transformOrigin: '50% 100%',
-              background: palette.papers[i % palette.papers.length],
-              clipPath: 'polygon(0 0, 100% 0, 57% 100%, 43% 100%)',
-              boxShadow: 'inset 0 0 24px rgba(0,0,0,0.28)',
-            }}
-          >
-            <div className="absolute inset-0" style={{ background: 'linear-gradient(115deg, rgba(255,255,255,0.22) 0%, transparent 48%, rgba(0,0,0,0.24) 100%)' }} />
-            <div className="absolute inset-x-0 top-0 h-px bg-white/40" />
-          </div>
-        ))}
-
-        {/* Satin tie + wax card bound to the front panel */}
-        <div
-          className="absolute left-1/2 top-0"
-          style={{
-            width: `${Math.round(coneR * 0.82)}px`,
-            height: `${Math.round(coneH * 0.96)}px`,
-            transform: `translateX(-50%) translateZ(${Math.round(coneR * 0.98 + 14)}px)`,
-            transformOrigin: '50% 100%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'flex-end',
-            paddingBottom: '8%',
-            gap: '12%',
-          }}
-        >
-          <div className="relative flex items-center justify-center">
-            <div className="w-16 h-3 rounded-full shadow" style={{ background: palette.satin, transform: 'rotate(-9deg)' }} />
-            <div className="w-16 h-3 rounded-full shadow -ml-3" style={{ background: palette.satin, transform: 'rotate(9deg)' }} />
-            <div className="absolute w-5 h-5 rounded-full border border-[#E8B64C]/50 flex items-center justify-center" style={{ background: palette.sashKnot }}>
-              <Crown className="w-2.5 h-2.5 text-[#F3E5AB]" />
-            </div>
-          </div>
-          <div className="rounded-md bg-black/70 border border-[#DFBA54]/70 flex items-center gap-1 px-2.5 py-1">
-            <Sparkles className="w-2.5 h-2.5 text-[#DFBA54]" />
-            <span className="text-[7px] font-bold text-[#F3E5AB] tracking-widest uppercase">Signature Bouquet</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Soft ground shadow */}
-      <div className={`absolute left-1/2 bg-black/60 rounded-full blur-xl pointer-events-none ${className}`} style={{ width: `${W * 0.72}px`, height: `20px`, transform: `translateX(-50%) rotateX(90deg) translateZ(-${H * 0.1}px)` }} />
-
-      {/* Unboxed plaque — dangles in front of the bouquet */}
-      {isOpen && (
-        <div className="absolute left-1/2 top-[8%] -translate-x-1/2 pointer-events-none transition-all duration-700 flex flex-col items-center" style={{ transformStyle: 'preserve-3d', transform: 'translateX(-50%) translateZ(40px)' }}>
-          <div className="px-3 py-1.5 rounded-xl bg-black/85 backdrop-blur-md border border-[#DFBA54] text-center shadow-2xl">
-            <div className="flex items-center justify-center gap-1.5 text-[#F3E5AB] text-[10.5px] font-cinzel font-bold tracking-wider uppercase">
-              <Crown className="w-3.5 h-3.5 text-[#DFBA54]" />
-              <span>Bouquet Unboxed</span>
-            </div>
-            <div className="text-[9px] text-white/80 font-sans mt-0.5">Roses • Chocolates • Fairy Lights • Wax Seal</div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
-
 /* -------------------------------------------------------------------------- */
 /* Wooden / ethnic flat gift tray — wide & low with a cellophane dome         */
 /* -------------------------------------------------------------------------- */
@@ -595,8 +411,87 @@ const BagAssembly: React.FC<BagAssemblyProps> = ({ color, isOpen, W, H, classNam
   );
 };
 
+/* -----------------------------------------------------------------------------
+ * PopOutItems — the "presentation" layer. When a container opens, readable item
+ * cards spring out of it in a staggered arc (with overshoot), float gently,
+ * and tuck back in on close. Lives OUTSIDE the rotating rig so the cards always
+ * face the viewer and stay crisp, and uses transitions so open/close reverse
+ * smoothly instead of popping.
+ * -------------------------------------------------------------------------- */
+const POP_ITEMS: Record<string, { emoji: string; label: string; sub: string }[]> = {
+  box: [
+    { emoji: '🍫', label: 'Cadbury Silk', sub: 'Pure cocoa' },
+    { emoji: '✨', label: 'Ferrero Rocher', sub: 'Golden spheres' },
+    { emoji: '🌹', label: 'Velvet rose', sub: 'Hand-tied ribbon' },
+    { emoji: '💌', label: 'Scribe note', sub: 'Wax-sealed' },
+  ],
+  bouquet: [
+    { emoji: '🍫', label: 'Chocolate blooms', sub: 'Hand-wrapped' },
+    { emoji: '🎀', label: 'Satin ribbon', sub: 'Gold-edged' },
+    { emoji: '💌', label: 'Message card', sub: 'Personalised' },
+    { emoji: '🌸', label: 'Fresh florals', sub: 'Seasonal' },
+  ],
+  tray: [
+    { emoji: '🍬', label: 'Gourmet sweets', sub: 'Assorted' },
+    { emoji: '🪔', label: 'Mini diya', sub: 'Festive glow' },
+    { emoji: '🥜', label: 'Dry fruits', sub: 'Premium mix' },
+    { emoji: '🎁', label: 'Treat box', sub: 'Gift-ready' },
+  ],
+  bag: [
+    { emoji: '🎁', label: 'Wrapped gift', sub: 'Ribbon-tied' },
+    { emoji: '🍫', label: 'Chocolates', sub: 'Dark & milk' },
+    { emoji: '💌', label: 'Greeting card', sub: 'Handwritten' },
+    { emoji: '🧴', label: 'Mini perfume', sub: 'Travel size' },
+  ],
+};
+
+const POP_SLOTS = [
+  { dx: -102, dy: -50, rot: -8 },
+  { dx: -35, dy: -88, rot: -3 },
+  { dx: 35, dy: -88, rot: 3 },
+  { dx: 102, dy: -50, rot: 8 },
+];
+
+const PopOutItems: React.FC<{ type: string; isOpen: boolean }> = ({ type, isOpen }) => {
+  const items = POP_ITEMS[type] ?? POP_ITEMS.box;
+  return (
+    <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 top-9 z-20">
+      <div className="absolute left-1/2 top-[42%]">
+        {items.map((it, i) => {
+          const slot = POP_SLOTS[i];
+          const delay = isOpen ? 380 + i * 130 : (items.length - 1 - i) * 40;
+          return (
+            <div
+              key={`${type}-${i}`}
+              className="absolute left-0 top-0 will-change-transform"
+              style={{
+                zIndex: 20 + i,
+                opacity: isOpen ? 1 : 0,
+                transform: isOpen
+                  ? `translate(calc(-50% + ${slot.dx}px), calc(-50% + ${slot.dy}px)) rotate(${slot.rot}deg) scale(1)`
+                  : 'translate(-50%, calc(-50% + 18px)) rotate(0deg) scale(0.3)',
+                transition: `transform 700ms cubic-bezier(0.34, 1.56, 0.64, 1) ${delay}ms, opacity 280ms ease ${delay}ms`,
+              }}
+            >
+              <div
+                className="w-[72px] rounded-2xl bg-white px-1 py-2 text-center ring-1 ring-gold-200 shadow-[0_10px_24px_rgba(60,40,10,0.22),0_2px_6px_rgba(60,40,10,0.12)]"
+                style={isOpen ? { animation: `hq-bob 3.6s ease-in-out ${i * 0.45}s infinite` } : undefined}
+              >
+                <div className="text-xl leading-none">{it.emoji}</div>
+                <div className="mt-1 text-[11px] font-semibold leading-tight text-ink">{it.label}</div>
+                <div className="text-[10px] leading-tight text-stone">{it.sub}</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
 export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
   onOpenAtelier,
+  compact = false,
   className = '',
   variant = 'royal',
   size = 'md',
@@ -607,11 +502,40 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
   bagColor = 'obsidian',
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [rotateX, setRotateX] = useState(TILT_CLOSED);
-  const [rotateY, setRotateY] = useState(30);
+  // Rotation lives in a ref and is written straight to the DOM (no React
+  // re-render per frame) so the 3D scene animates on the compositor.
+  const rigRef = useRef<HTMLDivElement>(null);
+  const rotRef = useRef({ x: TILT_CLOSED, y: 30 });
   const [isHovered, setIsHovered] = useState(false);
   const [isAutoRotating, setIsAutoRotating] = useState(true);
+  const [inView, setInView] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const paintRotation = useCallback((animated: boolean) => {
+    const el = rigRef.current;
+    if (!el) return;
+    el.style.transition = animated ? 'transform 300ms cubic-bezier(0.22, 1, 0.36, 1)' : 'none';
+    el.style.transform = `rotateX(${rotRef.current.x}deg) rotateY(${rotRef.current.y}deg)`;
+  }, []);
+
+  const setRot = useCallback((x?: number, y?: number) => {
+    if (x !== undefined) rotRef.current.x = x;
+    if (y !== undefined) rotRef.current.y = y;
+    paintRotation(true);
+  }, [paintRotation]);
+
+  useLayoutEffect(() => {
+    paintRotation(false);
+  }, [paintRotation]);
+
+  // Only animate while on screen
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: 0.05 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   const theme = BOX_THEMES[variant as keyof typeof BOX_THEMES] || BOX_THEMES.royal;
   const preset = BOX_SIZE_PRESETS[size];
@@ -672,25 +596,35 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
 
   // Gentle auto-rotation when not hovering or interacting.
   // Bouquets, trays & bags sway softly (never spin edge-on); boxes rotate fully.
+  // Driven by requestAnimationFrame: paused off-screen, in background tabs and
+  // for users who prefer reduced motion.
   useEffect(() => {
-    if (!isAutoRotating || isHovered) return;
-    if (isFlat) {
-      const interval = setInterval(() => {
-        setRotateY((prev) => Math.sin(Date.now() / 850) * 26);
-        setRotateX((prev) => -18 + Math.sin(Date.now() / 1200) * 3);
-      }, 40);
-      return () => clearInterval(interval);
-    }
-    const interval = setInterval(() => {
-      setRotateY((prev) => (prev + 0.6) % 360);
-    }, 30);
-    return () => clearInterval(interval);
-  }, [isAutoRotating, isHovered, isFlat]);
+    if (!isAutoRotating || isHovered || !inView) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let raf = 0;
+    let last = performance.now();
+    const tick = (now: number) => {
+      const dt = Math.min(now - last, 64);
+      last = now;
+      if (!document.hidden) {
+        if (isFlat) {
+          rotRef.current.y = Math.sin(now / 850) * (isBouquet ? 12 : 26);
+          rotRef.current.x = -18 + Math.sin(now / 1200) * 3;
+        } else {
+          rotRef.current.y = (rotRef.current.y + dt * 0.02) % 360; // 20°/s
+        }
+        paintRotation(false);
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [isAutoRotating, isHovered, isFlat, isBouquet, inView, paintRotation]);
 
   // Tilt the camera up into the box while it is open so items stay visible.
   useEffect(() => {
-    setRotateX(isOpen ? TILT_OPEN : TILT_CLOSED);
-  }, [isOpen]);
+    setRot(isOpen ? TILT_OPEN : TILT_CLOSED);
+  }, [isOpen, setRot]);
 
   // Interactive mouse tilt tracking
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -699,15 +633,14 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
     const rect = containerRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
-    setRotateY(Math.max(-45, Math.min(45, x * 0.25)));
     const base = isOpen ? TILT_OPEN : TILT_CLOSED;
-    setRotateX(Math.max(-38, Math.min(15, -y * 0.25 + base)));
+    setRot(Math.max(-38, Math.min(15, -y * 0.25 + base)), Math.max(-45, Math.min(45, x * 0.25)));
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
     setIsAutoRotating(true);
-    setRotateX(isOpen ? TILT_OPEN : TILT_CLOSED);
+    setRot(isOpen ? TILT_OPEN : TILT_CLOSED);
   };
 
   const toggleOpen = () => {
@@ -716,16 +649,16 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
     setIsAutoRotating(!next);
     if (next) {
       if (!isFlat) {
-        const facing = rotateY % 360;
+        const facing = rotRef.current.y % 360;
         if (facing > 20 && facing < 340) {
-          setRotateY(30);
+          setRot(undefined, 30);
         }
       } else {
-        setRotateY(0);
+        setRot(undefined, 0);
       }
       triggerGoldConfetti(0.5, 0.4);
     } else {
-      setRotateX(TILT_CLOSED);
+      setRot(TILT_CLOSED);
     }
   };
 
@@ -737,8 +670,11 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
-      className={`relative flex flex-col items-center justify-center select-none ${className}`}
+      className={`relative flex flex-col items-center justify-center select-none ${compact ? 'h-full w-full' : ''} ${className}`}
     >
+      {/* Headroom wrapper: reserves space so popped-out items never collide with controls */}
+      <div className="relative pt-9">
+      <PopOutItems type={type} isOpen={isOpen} />
       {/* 3D Scene Container with CSS Perspective */}
       <div
         className={`${preset.scene} flex items-center justify-center cursor-grab active:cursor-grabbing`}
@@ -756,16 +692,17 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
       >
         {/* The 3D Box Assembly */}
         <div
-          className="relative transition-transform duration-300 ease-out"
+          ref={rigRef}
+          className="relative will-change-transform"
           style={{
             width: isTray ? `${trayW}px` : isBag ? `${bagW}px` : isBouquet ? `${bouquetW}px` : `${edge}px`,
             height: isTray ? `${trayArchH + trayPlateH}px` : isBag ? `${bagH}px` : isBouquet ? `${bouquetH}px` : `${edge}px`,
             transformStyle: 'preserve-3d',
-            transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+            transform: `rotateX(${TILT_CLOSED}deg) rotateY(30deg)`,
           }}
         >
           {isBouquet ? (
-            <BouquetAssembly palette={bouquetPaletteObj} isOpen={isOpen} W={bouquetW} H={bouquetH} coneH={bouquetConeH} bloomY={bouquetBloomY} className={`${preset.shadow}`} />
+            <BouquetArt palette={bouquetPaletteObj} isOpen={isOpen} width={bouquetW} height={bouquetH} />
           ) : isTray ? (
             <TrayAssembly finish={trayFinishObj} isOpen={isOpen} W={trayW} plateH={trayPlateH} archH={trayArchH} className={`${preset.shadow}`} />
           ) : isBag ? (
@@ -843,12 +780,12 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
           {/* 3D BOX LID — lifts straight up with a gentle lean toward the viewer;
               the decorated top stays fully visible (never inverts) */}
           <div
-            className="absolute inset-0 transition-all duration-700 ease-out"
+            className="absolute inset-0 transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
             style={{
               transformStyle: 'preserve-3d',
               transformOrigin: 'top center',
               transform: isOpen
-                ? `translateY(${lidLift}px) rotateX(14deg) translateZ(12px)`
+                ? `translate3d(${Math.round(boxW * 0.36)}px, ${Math.round(lidLift * 0.55)}px, 40px) rotateZ(10deg) rotateX(14deg)`
                 : 'translateY(0px)',
             }}
           >
@@ -1008,14 +945,15 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
           )}
         </div>
       </div>
+      </div>
 
       {/* Interactive Trigger & Instruction Badge */}
-      <div className="flex flex-col items-center gap-2 mt-2">
+      <div className={compact ? 'absolute bottom-3 left-1/2 z-30 -translate-x-1/2' : 'flex flex-col items-center gap-3 mt-8'}>
         <button
           onClick={toggleOpen}
-          className="px-4 py-1.5 rounded-full bg-black/70 hover:bg-black/90 backdrop-blur-md border border-[#DFBA54]/60 text-[#F3E5AB] text-xs font-cinzel font-bold tracking-wider uppercase transition-all shadow-lg flex items-center gap-1.5 cursor-pointer transform hover:scale-105"
+          className="btn btn-primary btn-sm"
         >
-          <Gift className="w-3.5 h-3.5 text-[#DFBA54]" />
+          <Gift className="w-3.5 h-3.5 text-gold-300" />
           <span>
             {isBouquet
               ? isOpen
@@ -1035,20 +973,22 @@ export const ThreeDGiftBox: React.FC<ThreeDGiftBoxProps> = ({
           </span>
         </button>
 
-        <div className="flex items-center gap-3 text-[10px] text-white/70 font-sans tracking-wide">
+        {!compact && (
+        <div className="flex items-center gap-3 text-xs text-stone">
           <span className="flex items-center gap-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#DFBA54] animate-ping" />
+            <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-ping motion-reduce:animate-none" />
             <span>Interactive 3D View (Drag to Rotate)</span>
           </span>
           {onOpenAtelier && (
             <button
               onClick={onOpenAtelier}
-              className="text-[#F3E5AB] hover:underline font-semibold cursor-pointer"
+              className="text-gold-700 hover:text-ink font-semibold underline-offset-4 hover:underline"
             >
               Build Your Own →
             </button>
           )}
         </div>
+        )}
       </div>
     </div>
   );

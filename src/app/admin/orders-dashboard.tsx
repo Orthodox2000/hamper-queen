@@ -7,11 +7,9 @@
  * full order table. Reads /api/orders; links into /admin/orders/:id.
  */
 
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import {
-  Crown,
-  LogOut,
   Package,
   Loader2,
   Search,
@@ -22,19 +20,17 @@ import {
   Clock,
   XCircle,
   Truck,
-  Layers,
-  TicketPercent,
-  Users,
 } from 'lucide-react';
 import { OrderRecord, ORDER_STATUSES, ORDER_STATUS_LABELS } from '../../types/order';
 
+import { AdminHeader } from './admin-header';
 const STATUS_BADGE: Record<string, string> = {
-  awaiting_payment: 'bg-amber-50 text-[#8C6821] border-[#D4AF37]/60',
+  awaiting_payment: 'bg-amber-50 text-gold-700 border-gold-400/60',
   confirmed: 'bg-sky-50 text-sky-700 border-sky-200',
   crafting: 'bg-violet-50 text-violet-700 border-violet-200',
   dispatched: 'bg-indigo-50 text-indigo-700 border-indigo-200',
   out_for_delivery: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-  delivered: 'bg-[#ECFDF5] text-[#1E7B3C] border-[#A7F3D0]',
+  delivered: 'bg-[#ECFDF5] text-emerald-800 border-[#A7F3D0]',
   cancelled: 'bg-red-50 text-red-700 border-red-200',
 };
 
@@ -63,11 +59,6 @@ export function OrdersDashboard() {
   useEffect(() => {
     load();
   }, [load]);
-
-  const handleLogout = async () => {
-    await fetch('/api/admin/logout', { method: 'POST' });
-    window.location.href = '/admin';
-  };
 
   const stats = useMemo(() => {
     const s = {
@@ -105,63 +96,16 @@ export function OrdersDashboard() {
   const statusCounts = (key: string) => (key === 'all' ? orders.length : stats[key as keyof typeof stats] ?? 0);
 
   return (
-    <div className="min-h-screen bg-[#FAF9F5]">
+    <div className="min-h-dvh bg-cream-100">
       {/* Top bar */}
-      <header className="sticky top-0 z-20 bg-[#141414] text-white border-b border-[#D4AF37]/50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-[#DFBA54]/20 border border-[#DFBA54] flex items-center justify-center text-[#DFBA54]">
-              <Crown className="w-5 h-5" />
-            </div>
-            <div>
-              <h1 className="font-cinzel text-sm font-bold tracking-wide">Hamper Queen Admin</h1>
-              <p className="text-[10px] text-white/60">Orders & Catalog Management</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <Link
-              href="/admin/promo"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-bold transition-colors"
-            >
-              <TicketPercent className="w-4 h-4 text-[#DFBA54]" />
-              <span className="hidden sm:inline">Promo Codes</span>
-            </Link>
-            <Link
-              href="/admin/staff"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-bold transition-colors"
-            >
-              <Users className="w-4 h-4 text-[#DFBA54]" />
-              <span className="hidden sm:inline">Staff</span>
-            </Link>
-            <Link
-              href="/admin/catalog"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-bold transition-colors"
-            >
-              <Layers className="w-4 h-4 text-[#DFBA54]" />
-              <span className="hidden sm:inline">Catalog Overrides</span>
-            </Link>
-            <a
-              href="/"
-              target="_blank"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-bold transition-colors"
-            >
-              <ExternalLink className="w-4 h-4 text-[#DFBA54]" />
-              <span className="hidden sm:inline">Storefront</span>
-            </a>
-            <button
-              onClick={handleLogout}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-red-500/15 hover:bg-red-500/25 border border-red-400/40 text-xs font-bold text-red-300 transition-colors cursor-pointer"
-            >
-              <LogOut className="w-4 h-4" />
-              <span className="hidden sm:inline">Logout</span>
-            </button>
-          </div>
-        </div>
-      </header>
+      <AdminHeader
+        title="Orders"
+        subtitle="Track, filter and fulfil every Hamper Queen order"
+      />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-6">
+      <main className="container-page py-8 space-y-6">
         {/* KPI cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-3">
           {[
             { key: 'total', label: 'All Orders', icon: ShoppingBag },
             ...ORDER_STATUSES.map((s) => ({ key: s, label: ORDER_STATUS_LABELS[s], icon: null })),
@@ -172,32 +116,29 @@ export function OrdersDashboard() {
             return (
               <div
                 key={card.key}
-                className="rounded-2xl bg-white border border-[#EAE5D9] p-4 shadow-2xs"
+                className="rounded-2xl bg-white border border-line p-4 shadow-soft"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#8C6821]">
+                  <span className="text-[11px] font-bold text-gold-700">
                     {card.label}
                   </span>
-                  {Icon && <Icon className="w-4 h-4 text-[#B8860B]" />}
+                  {Icon && <Icon className="w-4 h-4 text-gold-700" />}
                 </div>
-                <p className="font-cinzel text-2xl font-bold text-[#141414] mt-1">{count}</p>
+                <p className="font-cinzel text-2xl font-bold text-ink mt-1">{count}</p>
               </div>
             );
           })}
         </div>
 
         {/* Filter bar */}
-        <div className="p-4 rounded-2xl bg-white border border-[#EAE5D9] shadow-2xs flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="p-4 rounded-2xl bg-white border border-line shadow-soft flex flex-col md:flex-row items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-2">
             {['all', ...ORDER_STATUSES, 'cancelled'].map((status) => (
               <button
                 key={status}
                 onClick={() => setStatusFilter(status)}
-                className={`px-3 py-1.5 rounded-full text-[11px] font-cinzel font-bold transition-colors cursor-pointer border ${
-                  statusFilter === status
-                    ? 'bg-[#141414] text-[#F3E5AB] border-[#D4AF37]'
-                    : 'bg-white text-[#524B40] border-[#E5E0D6] hover:bg-[#FAF9F5]'
-                }`}
+                aria-pressed={statusFilter === status}
+                className={`chip text-xs font-semibold ${statusFilter === status ? 'chip-active' : ''}`}
               >
                 {status === 'all' ? `All (${statusCounts('all')})` : `${ORDER_STATUS_LABELS[status]} (${statusCounts(status)})`}
               </button>
@@ -205,13 +146,13 @@ export function OrdersDashboard() {
           </div>
 
           <div className="relative w-full md:w-64">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8C6821]" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-700" />
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search ID, name, phone, email…"
-              className="w-full pl-10 pr-4 py-2 rounded-full bg-[#FAF9F5] border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+              className="w-full pl-10 pr-4 py-2 rounded-full bg-cream-100 border border-line text-xs focus:outline-hidden focus:border-gold-300"
             />
           </div>
         </div>
@@ -223,22 +164,22 @@ export function OrdersDashboard() {
         )}
 
         {loading ? (
-          <div className="py-20 flex flex-col items-center gap-3 text-[#6B6559]">
-            <Loader2 className="w-8 h-8 animate-spin text-[#B8860B]" />
+          <div className="py-20 flex flex-col items-center gap-3 text-stone">
+            <Loader2 className="w-8 h-8 animate-spin text-gold-700" />
             <p className="text-xs font-semibold">Loading orders…</p>
           </div>
         ) : filtered.length === 0 ? (
           <div className="py-16 text-center space-y-2">
-            <Package className="w-10 h-10 mx-auto text-[#C4BCAA]" />
-            <p className="text-sm font-semibold text-[#524B40]">No orders match this filter yet.</p>
-            <p className="text-xs text-[#A49B8A]">New bookings will appear here the moment customers confirm on the storefront.</p>
+            <Package className="w-10 h-10 mx-auto text-mist" />
+            <p className="text-sm font-semibold text-cocoa">No orders match this filter yet.</p>
+            <p className="text-xs text-mist">New bookings will appear here the moment customers confirm on the storefront.</p>
           </div>
         ) : (
-          <div className="rounded-2xl bg-white border border-[#EAE5D9] shadow-sm overflow-hidden">
+          <div className="rounded-2xl bg-white border border-line shadow-soft overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
                 <thead>
-                  <tr className="bg-[#FAF9F5] text-[10px] uppercase tracking-wider text-[#8C6821] font-bold border-b border-[#EAE5D9]">
+                  <tr className="bg-cream-100 text-[11px] text-gold-700 font-bold border-b border-line">
                     <th className="px-4 py-3">Tracking ID</th>
                     <th className="px-4 py-3">Placed</th>
                     <th className="px-4 py-3">Customer</th>
@@ -255,43 +196,43 @@ export function OrdersDashboard() {
                     return (
                       <tr
                         key={o.orderId}
-                        className={`border-b border-[#F0ECE1] hover:bg-[#FFFDF9] ${
+                        className={`border-b border-line hover:bg-cream-50 ${
                           o.status === 'awaiting_payment' ? 'bg-amber-50/40' : ''
                         }`}
                       >
-                        <td className="px-4 py-3.5">
-                          <Link href={`/admin/orders/${o.orderId}`} className="font-mono text-[13px] font-bold text-[#B8860B] hover:underline">
+                        <td className="px-4 py-4">
+                          <Link href={`/admin/orders/${o.orderId}`} className="font-mono text-[13px] font-bold text-gold-700 hover:underline">
                             {o.trackingId}
                           </Link>
                         </td>
-                        <td className="px-4 py-3.5 text-[#524B40] whitespace-nowrap">
+                        <td className="px-4 py-4 text-cocoa whitespace-nowrap">
                           {new Date(o.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}
-                          <span className="block text-[10px] text-[#A49B8A]">
+                          <span className="block text-[11px] text-mist">
                             {new Date(o.createdAt).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })}
                           </span>
                         </td>
-                        <td className="px-4 py-3.5">
-                          <strong className="text-[#141414]">{o.customer.fullName}</strong>
-                          <span className="block text-[11px] text-[#A49B8A]">{o.customer.mobilePhone}</span>
+                        <td className="px-4 py-4">
+                          <strong className="text-ink">{o.customer.fullName}</strong>
+                          <span className="block text-[11px] text-mist">{o.customer.mobilePhone}</span>
                         </td>
-                        <td className="px-4 py-3.5 text-[#524B40] max-w-[220px] truncate" title={lineSummary}>
+                        <td className="px-4 py-4 text-cocoa max-w-[220px] truncate" title={lineSummary}>
                           {lineSummary}
                         </td>
-                        <td className="px-4 py-3.5 font-bold text-[#141414] whitespace-nowrap">
+                        <td className="px-4 py-4 font-bold text-ink whitespace-nowrap">
                           {o.totals.grandTotal > 0 ? `₹${o.totals.grandTotal.toLocaleString('en-IN')}` : 'On request'}
                         </td>
-                        <td className="px-4 py-3.5">
-                          <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-bold border ${
+                        <td className="px-4 py-4">
+                          <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-[11px] font-bold border ${
                             o.payment.state === 'received'
-                              ? 'bg-emerald-50 text-[#1E7B3C] border-emerald-200'
-                              : 'bg-amber-50 text-[#8C6821] border-[#D4AF37]/60'
+                              ? 'bg-emerald-50 text-emerald-800 border-emerald-200'
+                              : 'bg-amber-50 text-gold-700 border-gold-400/60'
                           }`}>
                             {o.payment.state === 'received' ? <CheckCircle2 className="w-3 h-3" /> : <Clock className="w-3 h-3" />}
                             {o.payment.state === 'received' ? 'Paid' : 'Pending'}
                           </span>
                         </td>
-                        <td className="px-4 py-3.5">
-                          <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold border ${STATUS_BADGE[o.status] ?? 'bg-white text-[#524B40] border-[#E5E0D6]'}`}>
+                        <td className="px-4 py-4">
+                          <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold border ${STATUS_BADGE[o.status] ?? 'bg-white text-cocoa border-line'}`}>
                             {o.status === 'out_for_delivery' && <Truck className="w-3 h-3" />}
                             {o.status === 'delivered' && <CheckCircle2 className="w-3 h-3" />}
                             {o.status === 'cancelled' && <XCircle className="w-3 h-3" />}
@@ -299,10 +240,10 @@ export function OrdersDashboard() {
                             {ORDER_STATUS_LABELS[o.status]}
                           </span>
                         </td>
-                        <td className="px-4 py-3.5">
+                        <td className="px-4 py-4">
                           <Link
                             href={`/admin/orders/${o.orderId}`}
-                            className="inline-flex items-center gap-1 text-[11px] font-bold text-[#8C6821] hover:underline"
+                            className="inline-flex items-center gap-1 text-[11px] font-bold text-gold-700 hover:underline"
                           >
                             Open <ExternalLink className="w-3 h-3" />
                           </Link>
@@ -313,7 +254,7 @@ export function OrdersDashboard() {
                 </tbody>
               </table>
             </div>
-            <div className="px-4 py-3 bg-[#FAF9F5] text-[10px] text-[#8C6821] font-semibold flex items-center gap-2">
+            <div className="px-4 py-3 bg-cream-100 text-[11px] text-gold-700 font-semibold flex items-center gap-2">
               <Package className="w-3.5 h-3.5" />
               Showing {filtered.length} of {orders.length} orders · {stats.paid} payment(s) received
             </div>

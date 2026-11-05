@@ -21,7 +21,7 @@ export function RootHome() {
     router.push(`/${tab === "home" ? "" : tab}`);
   };
 
-  const goTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const goTop = () => undefined;
 
   const handleStartBuilderWithInspiration = (insp: RoyalInspiration) => {
     setCustomHamper((prev) => ({

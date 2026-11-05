@@ -1,10 +1,27 @@
 import React, { useState } from 'react';
-import { Sparkles, Trash2, Plus, Check, Shield, FileText, ArrowRight, RefreshCw, PenTool, Gift } from 'lucide-react';
-import { CustomHamper, LuxuryItem, VesselOption, RibbonOption, WaxSealOption, CalligraphyCard } from '../types';
+import {
+  Sparkles,
+  Trash2,
+  Plus,
+  Check,
+  FileText,
+  ArrowRight,
+  RefreshCw,
+  PenTool,
+  Gift,
+} from 'lucide-react';
+import {
+  CustomHamper,
+  LuxuryItem,
+  VesselOption,
+  RibbonOption,
+  WaxSealOption,
+} from '../types';
 import { VESSEL_OPTIONS, RIBBON_OPTIONS, WAX_SEAL_OPTIONS, LUXURY_ITEMS } from '../data/itemsData';
 import { ItemGraphic } from './ItemGraphic';
 import { royaleLogger } from '../utils/logger';
 
+import { readableOn } from '../utils/color';
 interface HamperBuilderProps {
   customHamper: CustomHamper;
   onUpdateHamper: (hamper: CustomHamper) => void;
@@ -107,19 +124,19 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
   );
 
   return (
-    <section id="atelier-builder-section" className="py-16 bg-white border-b border-[#EAE5D9]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="atelier-builder-section" className="section bg-white">
+      <div className="container-page">
         
         {/* Atelier Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF5E8] border border-[#EAE0C8] text-[#8C6821] text-xs uppercase tracking-widest font-cinzel font-bold mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[#B8860B]" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-50 border border-line-strong text-gold-700 text-xs font-sans font-semibold mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-gold-700" />
             <span>Interactive Hamper & Bouquet Maker</span>
           </div>
-          <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#141414] tracking-tight">
+          <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-ink tracking-tight">
             Build Your Hamper
           </h2>
-          <p className="font-cormorant text-lg text-[#554F42] mt-2">
+          <p className="font-cormorant text-lg text-cocoa mt-2">
             Compose an heirloom presentation. Select your presentation trunk or wrap, assemble artisanal stems and gourmet indulgences, and seal with your choice of royal wax.
           </p>
         </div>
@@ -129,28 +146,28 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
           
           {/* Left Column: Interactive Visual Hamper Stage (5 cols) */}
           <div className="lg:col-span-5 space-y-4 sticky top-28">
-            <div className="bg-white rounded-3xl border border-[#C5A059]/70 p-6 shadow-xl relative overflow-hidden">
+            <div className="bg-white rounded-3xl border border-gold-500/70 p-6 shadow-float relative overflow-hidden">
               
               <div className="flex items-center justify-between pb-3 border-b border-[#F2EDE1]">
                 <div className="flex flex-col">
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#8C6821]">
+                  <span className="text-xs font-semibold text-gold-700">
                     Live Arrangement Stage
                   </span>
-                  <span className="font-cinzel text-base font-bold text-[#141414]">
+                  <span className="font-cinzel text-base font-bold text-ink">
                     {customHamper.vessel.name}
                   </span>
                 </div>
                 <button
                   onClick={handleResetHamper}
                   title="Reset Curation"
-                  className="p-1.5 rounded-full hover:bg-[#F3EFE6] text-[#787163] hover:text-[#800E17] transition-colors cursor-pointer"
+                  className="p-1.5 rounded-full hover:bg-cream-200 text-stone hover:text-crimson transition-colors cursor-pointer"
                 >
                   <RefreshCw className="w-4 h-4" />
                 </button>
               </div>
 
               {/* Visual Hamper Assembly Canvas */}
-              <div className="relative w-full h-80 bg-gradient-to-b from-[#FAF9F5] to-[#F3EFE6] rounded-2xl border border-[#E8E1CE] my-4 p-4 flex flex-col items-center justify-center overflow-hidden">
+              <div className="relative w-full h-80 bg-gradient-to-b from-cream-100 to-cream-200 rounded-2xl border border-line my-4 p-4 flex flex-col items-center justify-center overflow-hidden">
                 {/* Contact shadow */}
                 <div className="absolute bottom-6 w-48 h-8 rounded-full bg-black/10 filter blur-md" />
 
@@ -161,19 +178,19 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
 
                 {/* Layered Nested Items Grid overlay */}
                 {customHamper.items.length > 0 && (
-                  <div className="absolute top-6 inset-x-8 z-20 flex flex-wrap items-center justify-center gap-1.5 p-2 bg-white/85 backdrop-blur-xs rounded-xl border border-[#D4AF37]/30 shadow-md">
+                  <div className="absolute top-6 inset-x-8 z-20 flex flex-wrap items-center justify-center gap-1.5 p-2 bg-white/85 backdrop-blur-xs rounded-xl border border-gold-400/30 shadow-lift">
                     {customHamper.items.map((it, idx) => (
                       <div
                         key={idx}
-                        className="relative group p-1 bg-[#FAF9F5] rounded-lg border border-[#E5DAC2] flex items-center gap-1.5"
+                        className="relative group p-1 bg-cream-100 rounded-lg border border-line-strong flex items-center gap-1.5"
                       >
                         <ItemGraphic id={it.imageSvgId} size="sm" className="w-8 h-8" />
-                        <span className="text-[10px] font-medium text-[#141414] max-w-[80px] truncate">
+                        <span className="text-xs font-medium text-ink max-w-[80px] truncate">
                           {it.name}
                         </span>
                         <button
                           onClick={() => handleRemoveItem(idx)}
-                          className="text-[#800E17] hover:text-red-700 p-0.5 rounded cursor-pointer"
+                          className="text-crimson hover:text-red-700 p-0.5 rounded cursor-pointer"
                           title="Remove item"
                         >
                           <Trash2 className="w-3 h-3" />
@@ -184,17 +201,17 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                 )}
 
                 {/* Ribbon and Wax Seal Accent Overlay at bottom */}
-                <div className="absolute bottom-3 left-4 right-4 z-20 flex items-center justify-between px-3 py-1.5 bg-white/90 backdrop-blur-xs rounded-full border border-[#D8CCA8] shadow-xs text-xs">
+                <div className="absolute bottom-3 left-4 right-4 z-20 flex items-center justify-between px-3 py-1.5 bg-white/90 backdrop-blur-xs rounded-full border border-line-strong shadow-soft text-xs">
                   <div className="flex items-center gap-2">
                     <span
                       className="w-3.5 h-3.5 rounded-full border border-black/20"
                       style={{ backgroundColor: customHamper.ribbon.colorHex }}
                     />
-                    <span className="text-[11px] font-medium text-[#443E33]">
+                    <span className="text-xs font-medium text-cocoa">
                       {customHamper.ribbon.name}
                     </span>
                   </div>
-                  <div className="flex items-center gap-1 text-[11px] font-semibold text-[#8C6821]">
+                  <div className="flex items-center gap-1 text-xs font-semibold text-gold-700">
                     <span>Seal:</span>
                     <span
                       className="w-3 h-3 rounded-full inline-block"
@@ -209,22 +226,22 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
               <div className="space-y-1.5">
                 <div className="flex justify-between text-xs">
                   <span className="font-semibold text-[#5A5447]">Hamper Fill Capacity</span>
-                  <span className="font-bold text-[#141414]">
+                  <span className="font-bold text-ink">
                     {customHamper.items.length} of {customHamper.vessel.capacity} slots filled
                   </span>
                 </div>
                 <div className="w-full h-2 bg-[#EAE4D5] rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-[#F3E5AB] via-[#D4AF37] to-[#AA771C] transition-all duration-300"
+                    className="h-full bg-gradient-to-r from-gold-100 via-gold-400 to-[#AA771C] transition-all duration-250"
                     style={{ width: `${capacityPercentage}%` }}
                   />
                 </div>
               </div>
 
               {/* Card status notice */}
-              <div className="mt-4 p-3 bg-[#FAF8F2] rounded-xl border border-[#D4AF37]/30 flex items-center justify-between text-xs">
+              <div className="mt-4 p-3 bg-cream-100 rounded-xl border border-gold-400/30 flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
-                  <PenTool className="w-4 h-4 text-[#800E17]" />
+                  <PenTool className="w-4 h-4 text-crimson" />
                   <span>
                     {customHamper.card
                       ? `Card for: "${customHamper.card.recipient || 'Beloved Recipient'}"`
@@ -233,7 +250,7 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                 </div>
                 <button
                   onClick={onOpenScribe}
-                  className="text-xs font-semibold text-[#800E17] hover:underline cursor-pointer"
+                  className="text-xs font-semibold text-crimson hover:underline cursor-pointer"
                 >
                   {customHamper.card ? 'Edit Card' : 'Compose'}
                 </button>
@@ -243,20 +260,20 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
               {customHamper.items.length > 0 && (
                 <button
                   onClick={() => setActiveStep('summary')}
-                  className="w-full mt-4 py-3 rounded-xl bg-[#141414] hover:bg-[#252525] text-[#E5C07B] text-xs font-semibold uppercase tracking-wider border border-[#C5A059] flex items-center justify-center gap-2 cursor-pointer shadow-md transition-all"
+                  className="w-full mt-4 py-3 rounded-xl bg-ink hover:bg-ink-soft text-gold-100 text-xs font-semibold border border-gold-500 flex items-center justify-center gap-2 cursor-pointer shadow-lift transition-all"
                 >
                   <span>Review & Finalize Commission</span>
-                  <ArrowRight className="w-4 h-4 text-[#DFBA54]" />
+                  <ArrowRight className="w-4 h-4 text-gold-300" />
                 </button>
               )}
             </div>
           </div>
 
           {/* Right Column: Interactive Configuration Tabs (7 cols) */}
-          <div className="lg:col-span-7 bg-white rounded-3xl border border-[#D4AF37]/30 p-6 sm:p-8 shadow-sm">
+          <div className="lg:col-span-7 bg-white rounded-3xl border border-gold-400/30 p-6 sm:p-8 shadow-soft">
             
             {/* Step Navigation Tabs */}
-            <div className="flex items-center justify-between border-b border-[#F0EAE0] pb-4 mb-6 overflow-x-auto gap-2 scrollbar-none">
+            <div className="flex items-center justify-between border-b border-cream-200 pb-4 mb-6 overflow-x-auto gap-2 scrollbar-none">
               {[
                 { id: 'vessel', label: '1. Vessel & Base' },
                 { id: 'items', label: `2. Curate Items (${customHamper.items.length})` },
@@ -270,10 +287,10 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                     setActiveStep(tab.id as any);
                     royaleLogger.action('HamperBuilder', `Navigated to step: ${tab.label}`);
                   }}
-                  className={`px-4 py-2 rounded-xl text-xs font-bold tracking-wider whitespace-nowrap transition-all cursor-pointer ${
+                  className={`px-4 py-2 rounded-full text-xs font-semibold  whitespace-nowrap transition-all cursor-pointer ${
                     activeStep === tab.id
-                      ? 'bg-[#141414] text-[#E5C07B] shadow-xs'
-                      : 'text-[#615A4C] hover:bg-[#F3EFE6]'
+                      ? 'bg-ink text-gold-100 shadow-soft'
+                      : 'text-[#615A4C] hover:bg-cream-200'
                   }`}
                 >
                   {tab.label}
@@ -285,10 +302,10 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
             {activeStep === 'vessel' && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-cinzel text-xl font-bold text-[#141414]">
+                  <h3 className="font-cinzel text-xl font-bold text-ink">
                     Select Your Presentation Vessel
                   </h3>
-                  <p className="font-cormorant text-sm text-[#5C5648] mt-1">
+                  <p className="font-cormorant text-sm text-cocoa mt-1">
                     The box sets the size and style of your hamper. All vessels are sturdy and reusable—built to be kept.
                   </p>
                 </div>
@@ -303,22 +320,22 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                         onClick={() => handleSelectVessel(v)}
                         className={`p-5 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between ${
                           isSelected
-                            ? 'border-[#C5A059] bg-[#FAF8F2] ring-2 ring-[#C5A059]/30 shadow-md'
-                            : 'border-[#E5DAC2] bg-white hover:border-[#C5A059] hover:bg-[#FAF9F5]'
+                            ? 'border-gold-500 bg-cream-100 ring-2 ring-gold-500/30 shadow-lift'
+                            : 'border-line-strong bg-white hover:border-gold-500 hover:bg-cream-100'
                         }`}
                       >
                         <div className="flex items-start justify-between">
                           <div>
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-[#8C6821]">
+                            <span className="text-xs font-semibold text-gold-700">
                               {v.tier} Tier
                             </span>
-                            <h4 className="font-cinzel text-base font-bold text-[#141414] mt-0.5">
+                            <h4 className="font-cinzel text-base font-bold text-ink mt-0.5">
                               {v.name}
                             </h4>
                           </div>
                           {isSelected && (
-                            <div className="w-6 h-6 rounded-full bg-[#141414] text-[#E5C07B] flex items-center justify-center">
-                              <Check className="w-3.5 h-3.5 text-[#DFBA54]" />
+                            <div className="w-6 h-6 rounded-full bg-ink text-gold-300 flex items-center justify-center">
+                              <Check className="w-3.5 h-3.5 text-gold-300" />
                             </div>
                           )}
                         </div>
@@ -328,10 +345,10 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                         </div>
 
                         <div className="space-y-1 text-xs">
-                          <p className="font-cormorant text-xs text-[#5C5648] italic">
+                          <p className="font-cormorant text-xs text-cocoa italic">
                             {v.subtitle}
                           </p>
-                          <div className="flex items-center justify-between text-[11px] text-[#7C7465] pt-2 border-t border-[#F0EAE0]">
+                          <div className="flex items-center justify-between text-xs text-[#7C7465] pt-2 border-t border-cream-200">
                             <span>Cap: {v.capacity} items</span>
                             <span>{v.dimensions}</span>
                           </div>
@@ -344,10 +361,10 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                 <div className="pt-4 flex justify-end">
                   <button
                     onClick={() => setActiveStep('items')}
-                    className="px-6 py-3 rounded-full bg-[#141414] text-[#E5C07B] text-xs font-semibold tracking-wider uppercase border border-[#C5A059] flex items-center gap-2 cursor-pointer shadow-sm hover:bg-[#222222]"
+                    className="px-6 py-3 rounded-full bg-ink text-gold-100 text-xs font-semibold border border-gold-500 flex items-center gap-2 cursor-pointer shadow-soft hover:bg-ink-soft"
                   >
                     <span>Proceed to Curate Items</span>
-                    <ArrowRight className="w-4 h-4 text-[#DFBA54]" />
+                    <ArrowRight className="w-4 h-4 text-gold-300" />
                   </button>
                 </div>
               </div>
@@ -358,10 +375,10 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
               <div className="space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div>
-                    <h3 className="font-cinzel text-xl font-bold text-[#141414]">
+                    <h3 className="font-cinzel text-xl font-bold text-ink">
                       Add Luxuries & Stems
                     </h3>
-                    <p className="font-cormorant text-sm text-[#5C5648]">
+                    <p className="font-cormorant text-sm text-cocoa">
                       Pick from Ecuadorian roses, 24K gold confections, crystal flutes, and Grasse fragrances.
                     </p>
                   </div>
@@ -380,8 +397,8 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                         onClick={() => setItemCategoryFilter(tab.id)}
                         className={`px-3 py-1 rounded-full text-xs font-medium cursor-pointer transition-colors ${
                           itemCategoryFilter === tab.id
-                            ? 'bg-[#141414] text-[#E5C07B]'
-                            : 'bg-[#FAF9F5] text-[#554F42] hover:bg-[#EFEAE0]'
+                            ? 'bg-ink text-gold-100'
+                            : 'bg-cream-100 text-cocoa hover:bg-[#EFEAE0]'
                         }`}
                       >
                         {tab.label}
@@ -397,20 +414,20 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                     return (
                       <div
                         key={item.id}
-                        className="p-4 rounded-2xl border border-[#E5DAC2] hover:border-[#C5A059] bg-[#FAF9F5] flex items-center justify-between gap-3 transition-colors"
+                        className="p-4 rounded-2xl border border-line-strong hover:border-gold-500 bg-cream-100 flex items-center justify-between gap-3 transition-colors"
                       >
                         <div className="w-16 h-16 flex-shrink-0 bg-white rounded-xl border border-[#EFECE3] p-1 flex items-center justify-center">
                           <ItemGraphic id={item.imageSvgId} size="sm" />
                         </div>
 
                         <div className="flex-1 min-w-0">
-                          <h4 className="font-cinzel text-xs font-bold text-[#141414] truncate">
+                          <h4 className="font-sans text-xs font-bold text-ink truncate">
                             {item.name}
                           </h4>
                           <p className="font-cormorant text-xs text-[#635D50] truncate">
                             {item.subtitle}
                           </p>
-                          <span className="text-[10px] text-[#8C6821] font-semibold">
+                          <span className="text-xs text-gold-700 font-semibold">
                             ✦ {item.royalHighlights[0]}
                           </span>
                         </div>
@@ -418,29 +435,29 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                         <button
                           id={`btn-add-builder-item-${item.id}`}
                           onClick={() => handleAddItem(item)}
-                          className="p-2 rounded-xl bg-[#141414] hover:bg-[#252525] text-[#E5C07B] transition-colors cursor-pointer flex-shrink-0"
+                          className="p-2 rounded-xl bg-ink hover:bg-ink-soft text-gold-100 transition-colors cursor-pointer flex-shrink-0"
                           title="Add to hamper"
                         >
-                          <Plus className="w-4 h-4 text-[#DFBA54]" />
+                          <Plus className="w-4 h-4 text-gold-300" />
                         </button>
                       </div>
                     );
                   })}
                 </div>
 
-                <div className="pt-4 flex justify-between items-center border-t border-[#F0EAE0]">
+                <div className="pt-4 flex justify-between items-center border-t border-cream-200">
                   <button
                     onClick={() => setActiveStep('vessel')}
-                    className="text-xs font-semibold text-[#665F51] hover:text-[#141414] cursor-pointer"
+                    className="text-xs font-semibold text-[#665F51] hover:text-ink cursor-pointer"
                   >
                     ← Back to Vessel Selection
                   </button>
                   <button
                     onClick={() => setActiveStep('accents')}
-                    className="px-6 py-3 rounded-full bg-[#141414] text-[#E5C07B] text-xs font-semibold tracking-wider uppercase border border-[#C5A059] flex items-center gap-2 cursor-pointer shadow-sm hover:bg-[#222222]"
+                    className="px-6 py-3 rounded-full bg-ink text-gold-100 text-xs font-semibold border border-gold-500 flex items-center gap-2 cursor-pointer shadow-soft hover:bg-ink-soft"
                   >
                     <span>Proceed to Ribbons & Wax Seals</span>
-                    <ArrowRight className="w-4 h-4 text-[#DFBA54]" />
+                    <ArrowRight className="w-4 h-4 text-gold-300" />
                   </button>
                 </div>
               </div>
@@ -450,17 +467,17 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
             {activeStep === 'accents' && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-cinzel text-xl font-bold text-[#141414]">
+                  <h3 className="font-cinzel text-xl font-bold text-ink">
                     Select Finishing Accoutrements
                   </h3>
-                  <p className="font-cormorant text-sm text-[#5C5648] mt-1">
+                  <p className="font-cormorant text-sm text-cocoa mt-1">
                     Every parcel is crowned with an architectural hand-tied satin bow and an authentic molten wax impression.
                   </p>
                 </div>
 
                 {/* Ribbon Selector */}
                 <div className="space-y-3">
-                  <label className="text-xs font-bold uppercase tracking-wider text-[#141414] block">
+                  <label className="text-xs font-semibold text-ink block">
                     Double-Faced Satin Silk Ribbon
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -472,18 +489,18 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                           onClick={() => handleSelectRibbon(ribbon)}
                           className={`p-3 rounded-xl border text-center cursor-pointer transition-all ${
                             isSelected
-                              ? 'border-[#C5A059] bg-[#FAF8F2] ring-2 ring-[#C5A059]/30'
-                              : 'border-[#E5DAC2] bg-white hover:bg-[#FAF9F5]'
+                              ? 'border-gold-500 bg-cream-100 ring-2 ring-gold-500/30'
+                              : 'border-line-strong bg-white hover:bg-cream-100'
                           }`}
                         >
                           <div
-                            className="w-7 h-7 rounded-full mx-auto mb-2 border border-black/10 shadow-xs"
+                            className="w-7 h-7 rounded-full mx-auto mb-2 border border-black/10 shadow-soft"
                             style={{ backgroundColor: ribbon.colorHex }}
                           />
-                          <span className="text-xs font-bold text-[#141414] block truncate">
+                          <span className="text-xs font-bold text-ink block truncate">
                             {ribbon.name.split(' ')[0]}
                           </span>
-                          <span className="text-[10px] text-[#787163] block truncate">
+                          <span className="text-xs text-stone block truncate">
                             {ribbon.material.split(' ')[0]}
                           </span>
                         </div>
@@ -494,7 +511,7 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
 
                 {/* Wax Seal Selector */}
                 <div className="space-y-3 pt-2">
-                  <label className="text-xs font-bold uppercase tracking-wider text-[#141414] block">
+                  <label className="text-xs font-semibold text-ink block">
                     Hand-Stamped Wax Seal Insignia
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -506,20 +523,20 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                           onClick={() => handleSelectWaxSeal(seal)}
                           className={`p-3 rounded-xl border text-center cursor-pointer transition-all ${
                             isSelected
-                              ? 'border-[#C5A059] bg-[#FAF8F2] ring-2 ring-[#C5A059]/30'
-                              : 'border-[#E5DAC2] bg-white hover:bg-[#FAF9F5]'
+                              ? 'border-gold-500 bg-cream-100 ring-2 ring-gold-500/30'
+                              : 'border-line-strong bg-white hover:bg-cream-100'
                           }`}
                         >
                           <div
-                            className="w-8 h-8 rounded-full mx-auto mb-1.5 flex items-center justify-center text-white text-xs font-bold shadow-md"
-                            style={{ backgroundColor: seal.colorHex }}
+                            className="w-8 h-8 rounded-full mx-auto mb-1.5 flex items-center justify-center  text-xs font-bold shadow-lift"
+                            style={{ backgroundColor: seal.colorHex, color: readableOn(seal.colorHex) }}
                           >
                             ✦
                           </div>
-                          <span className="text-xs font-bold text-[#141414] block truncate">
+                          <span className="text-xs font-bold text-ink block truncate">
                             {seal.name}
                           </span>
-                          <span className="text-[10px] text-[#787163] block">
+                          <span className="text-xs text-stone block">
                             {seal.stampDesign.toUpperCase()}
                           </span>
                         </div>
@@ -529,13 +546,13 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                 </div>
 
                 {/* Botanical Sprig & Brass Monogram Inscription */}
-                <div className="space-y-4 pt-4 border-t border-[#F0EAE0]">
+                <div className="space-y-4 pt-4 border-t border-cream-200">
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className="text-xs font-bold text-[#141414] block">
+                      <span className="text-xs font-bold text-ink block">
                         Include Preserved Golden Ruscus Sprig
                       </span>
-                      <span className="text-[11px] text-[#6E685C]">
+                      <span className="text-xs text-stone">
                         Tucked beneath the wax seal ribbon
                       </span>
                     </div>
@@ -548,12 +565,12 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                           botanicalSprig: e.target.checked,
                         })
                       }
-                      className="w-4 h-4 accent-[#C5A059] rounded cursor-pointer"
+                      className="w-4 h-4 accent-gold-500 rounded cursor-pointer"
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-bold text-[#141414] block mb-1">
+                    <label className="text-xs font-bold text-ink block mb-1">
                       Custom Brass Plaque Monogram (Optional)
                     </label>
                     <input
@@ -567,24 +584,24 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                           customEngraving: e.target.value,
                         })
                       }
-                      className="w-full text-xs p-3 bg-[#FAF9F5] border border-[#E5DAC2] rounded-xl text-[#141414] focus:outline-none focus:border-[#C5A059]"
+                      className="w-full text-xs p-3 bg-cream-100 border border-line-strong rounded-xl text-ink focus:outline-none focus:border-gold-500"
                     />
                   </div>
                 </div>
 
-                <div className="pt-4 flex justify-between items-center border-t border-[#F0EAE0]">
+                <div className="pt-4 flex justify-between items-center border-t border-cream-200">
                   <button
                     onClick={() => setActiveStep('items')}
-                    className="text-xs font-semibold text-[#665F51] hover:text-[#141414] cursor-pointer"
+                    className="text-xs font-semibold text-[#665F51] hover:text-ink cursor-pointer"
                   >
                     ← Back to Items
                   </button>
                   <button
                     onClick={() => setActiveStep('summary')}
-                    className="px-6 py-3 rounded-full bg-[#141414] text-[#E5C07B] text-xs font-semibold tracking-wider uppercase border border-[#C5A059] flex items-center gap-2 cursor-pointer shadow-sm hover:bg-[#222222]"
+                    className="px-6 py-3 rounded-full bg-ink text-gold-100 text-xs font-semibold border border-gold-500 flex items-center gap-2 cursor-pointer shadow-soft hover:bg-ink-soft"
                   >
                     <span>Review Royal Manifest</span>
-                    <ArrowRight className="w-4 h-4 text-[#DFBA54]" />
+                    <ArrowRight className="w-4 h-4 text-gold-300" />
                   </button>
                 </div>
               </div>
@@ -594,49 +611,49 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
             {activeStep === 'summary' && (
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-cinzel text-xl font-bold text-[#141414]">
+                  <h3 className="font-cinzel text-xl font-bold text-ink">
                     Royal Commission Manifest
                   </h3>
-                  <p className="font-cormorant text-sm text-[#5C5648] mt-1">
+                  <p className="font-cormorant text-sm text-cocoa mt-1">
                     Your hamper is ready. Review the itemized list below before confirming your order.
                   </p>
                 </div>
 
                 {/* Manifest Card */}
-                <div className="bg-[#FAF9F5] rounded-2xl border border-[#C5A059]/70 p-6 space-y-4">
-                  <div className="flex items-center justify-between border-b border-[#E8DFC9] pb-3">
+                <div className="bg-cream-100 rounded-2xl border border-gold-500/70 p-6 space-y-4">
+                  <div className="flex items-center justify-between border-b border-line-strong pb-3">
                     <div>
-                      <span className="text-[10px] uppercase font-bold tracking-widest text-[#8C6821]">
+                      <span className="text-xs font-semibold text-gold-700">
                         Commission ID
                       </span>
-                      <h4 className="font-cinzel text-base font-bold text-[#141414]">
+                      <h4 className="font-cinzel text-base font-bold text-ink">
                         #ROYALE-ATELIER-{(customHamper.id.slice(-6)).toUpperCase()}
                       </h4>
                     </div>
-                    <span className="text-xs font-semibold px-3 py-1 bg-white rounded-full border border-[#D4AF37]/30 text-[#141414]">
+                    <span className="text-xs font-semibold px-3 py-1 bg-white rounded-full border border-gold-400/30 text-ink">
                       {customHamper.vessel.tier} Tier Commission
                     </span>
                   </div>
 
                   {/* Vessel Specification */}
                   <div className="space-y-1">
-                    <span className="text-xs font-bold text-[#141414]">Selected Presentation Base:</span>
-                    <p className="text-xs text-[#554F42]">
+                    <span className="text-xs font-bold text-ink">Selected Presentation Base:</span>
+                    <p className="text-xs text-cocoa">
                       {customHamper.vessel.name} ({customHamper.vessel.colorName}, {customHamper.vessel.dimensions})
                     </p>
                   </div>
 
                   {/* Included Items Manifest */}
                   <div className="space-y-2">
-                    <span className="text-xs font-bold text-[#141414]">
+                    <span className="text-xs font-bold text-ink">
                       Curated Masterpieces ({customHamper.items.length}):
                     </span>
                     {customHamper.items.length === 0 ? (
-                      <p className="text-xs text-[#800E17] italic">
+                      <p className="text-xs text-crimson italic">
                         No items added yet. Please return to Step 2 to populate your vessel.
                       </p>
                     ) : (
-                      <ul className="space-y-1 pl-3 text-xs text-[#443E33]">
+                      <ul className="space-y-1 pl-3 text-xs text-cocoa">
                         {customHamper.items.map((it, idx) => (
                           <li key={idx} className="list-disc">
                             <strong>{it.name}</strong> — {it.subtitle}
@@ -647,34 +664,34 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                   </div>
 
                   {/* Ribbon & Seal */}
-                  <div className="grid grid-cols-2 gap-3 pt-2 text-xs border-t border-[#E8DFC9]">
+                  <div className="grid grid-cols-2 gap-3 pt-2 text-xs border-t border-line-strong">
                     <div>
-                      <span className="font-bold text-[#141414] block">Satin Ribbon:</span>
-                      <span className="text-[#554F42]">{customHamper.ribbon.name}</span>
+                      <span className="font-bold text-ink block">Satin Ribbon:</span>
+                      <span className="text-cocoa">{customHamper.ribbon.name}</span>
                     </div>
                     <div>
-                      <span className="font-bold text-[#141414] block">Wax Impression:</span>
-                      <span className="text-[#554F42]">{customHamper.waxSeal.name}</span>
+                      <span className="font-bold text-ink block">Wax Impression:</span>
+                      <span className="text-cocoa">{customHamper.waxSeal.name}</span>
                     </div>
                   </div>
 
                   {/* Calligraphy Card summary */}
-                  <div className="pt-2 text-xs border-t border-[#E8DFC9]">
-                    <span className="font-bold text-[#141414] block">Attached Calligraphy Card:</span>
+                  <div className="pt-2 text-xs border-t border-line-strong">
+                    <span className="font-bold text-ink block">Attached Calligraphy Card:</span>
                     {customHamper.card ? (
-                      <div className="bg-white p-3 rounded-lg border border-[#E5DAC2] mt-1 italic text-[#383329]">
+                      <div className="bg-white p-3 rounded-lg border border-line-strong mt-1 italic text-[#383329]">
                         "{customHamper.card.message}" — <strong className="not-italic">{customHamper.card.recipient}</strong>
                       </div>
                     ) : (
-                      <span className="text-[#787163] italic">No personalized card attached.</span>
+                      <span className="text-stone italic">No personalized card attached.</span>
                     )}
                   </div>
 
                   {/* Custom Engraving */}
                   {customHamper.customEngraving && (
-                    <div className="text-xs border-t border-[#E8DFC9] pt-2">
-                      <span className="font-bold text-[#141414] block">Brass Plate Inscription:</span>
-                      <span className="font-serif italic text-[#800E17] tracking-wider">
+                    <div className="text-xs border-t border-line-strong pt-2">
+                      <span className="font-bold text-ink block">Brass Plate Inscription:</span>
+                      <span className="font-serif italic text-crimson">
                         "{customHamper.customEngraving}"
                       </span>
                     </div>
@@ -705,9 +722,9 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                           `User submitted Royal Commission #${customHamper.id} with ${customHamper.items.length} items.`
                         );
                       }}
-                      className="w-full sm:flex-1 py-4 rounded-full bg-[#141414] hover:bg-[#252525] text-[#E5C07B] text-xs font-bold uppercase tracking-wider border border-[#C5A059] shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full sm:flex-1 py-4 rounded-full bg-ink hover:bg-ink-soft text-gold-300 text-xs font-semibold border border-gold-500 shadow-lift transition-all flex items-center justify-center gap-2 cursor-pointer"
                     >
-                      <Gift className="w-4 h-4 text-[#DFBA54]" />
+                      <Gift className="w-4 h-4 text-gold-300" />
                       <span>Confirm Custom Hamper Request</span>
                     </button>
 
@@ -722,9 +739,9 @@ export const HamperBuilder: React.FC<HamperBuilderProps> = ({
                         a.click();
                         royaleLogger.action('HamperBuilder', 'Exported manifest JSON.');
                       }}
-                      className="w-full sm:w-auto px-5 py-4 rounded-full bg-white text-[#141414] text-xs font-semibold uppercase tracking-wider border border-[#D8CCA8] hover:bg-[#FAF9F5] transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full sm:w-auto px-5 py-4 rounded-full bg-white text-ink text-xs font-semibold border border-line-strong hover:bg-cream-100 transition-colors flex items-center justify-center gap-2 cursor-pointer"
                     >
-                      <FileText className="w-4 h-4 text-[#8C6821]" />
+                      <FileText className="w-4 h-4 text-gold-700" />
                       <span>Export Manifest</span>
                     </button>
                   </div>

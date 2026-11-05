@@ -2,6 +2,29 @@
 
 All notable changes to Hamper Queen are documented here. Grouped by audience value.
 
+## 2.2.0 — 2026-11-05 — Party-ready design, server-safe bouquets, one-command environment
+
+### Design & motion
+- **New type system** — Fraunces headlines, a handwritten gold-to-rose script accent (`.accent-script`) and Plus Jakarta Sans body, all self-hosted (no Google Fonts request). Fixed the script accent clipping the descenders of g / p / f.
+- **One design system** — tokens, spacing rhythm, three shadows, one easing curve and shared `.btn` / `.card` / `.chip` / `.field` classes; 377 hard-coded colours collapsed into tokens.
+- **Smoother, more playful interactions** — button sheen sweep, arrow nudge, card lift with gradient-border glow, nav underline, CSS-only scroll reveals. Hover effects are gated for touch screens and everything respects reduced motion.
+- **Hero** — matched column heights, a staged 3D panel with fixed box size, items that pop out of opened boxes, lid that slides aside.
+- **Bouquets rebuilt as SVG** (`BouquetArt`) — four palettes, chocolate roses, gold truffle, satin bow and tag, twinkling sparkles. Server-renderable and hydration-safe.
+- **Checkout** — redesigned booking/payment modal and an **Ola-style pin-drop map** (fixed centre pin, lift/drop, search, locate-me, address auto-fill).
+- **Admin** — one shared header with tabs and logout on every screen; unified fields and buttons.
+
+### Reliability
+- **Fixed: orders failed on a freshly bootstrapped database** — the app and `db:bootstrap` named the same indexes differently (`trackingId_1` vs `uniq_trackingId`), which MongoDB rejects. Index names are now canonical and equivalent indexes are accepted; checks run once per process.
+- **Fixed: admin sessions were never purged** — `expiresAt` was stored as a string, which TTL indexes ignore; it is now a real Date. Servers without TTL support no longer break login.
+- **Fixed: missing `<h1>` on five pages** and the site URL hard-coded in six places; it now comes from `HQ_BASE_URL`.
+- Contrast: WhatsApp green, gold text and chips now meet AA (Customise page 270 → ~10 audit findings).
+- `vh` → `dvh` for mobile browser toolbars; vendor-prefix and `backdrop-filter` fallbacks; `browserslist` baseline declared.
+
+### Tooling & docs
+- `npm run setup`, `db:up`, `db:down`, `db:logs`, `db:setup`, `check:ssr`; `docker-compose.yml`; `MONGODB_DB` / `MONGODB_DIRECT_HOSTS` env vars; `.env.example` is no longer gitignored by mistake; bootstrap scrubs its password from `.env` and requires 8+ characters.
+- New internal docs in `docs/` (environment, architecture, design system, admin, browser support, testing).
+- Removed 58 unused imports.
+
 ## 2.1.0 — 2026-09-23 — Order tracking, admin fulfilment & privacy-safe checkout
 
 Easier to prove where your gift is, and easier for the atelier to fulfil it.

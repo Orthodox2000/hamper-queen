@@ -22,11 +22,11 @@ export default async function AdminStaffPage() {
   if (!authed) return <AdminLogin />;
   if (authed.role !== 'owner') {
     return (
-      <div className="min-h-screen bg-[#FAF9F5] flex items-center justify-center px-4">
-        <div className="max-w-sm w-full p-8 rounded-3xl bg-white border border-[#EAE5D9] text-center space-y-3 shadow-sm">
-          <h1 className="font-cinzel text-lg font-bold text-[#141414]">Owner only</h1>
-          <p className="text-sm text-[#6B6559]">Only the owner account can manage staff. Ask the owner to sign in here.</p>
-          <a href="/admin" className="inline-block mt-2 text-xs font-bold text-[#8C6821] hover:underline">← Back to dashboard</a>
+      <div className="min-h-dvh bg-cream-100 flex items-center justify-center px-4">
+        <div className="max-w-sm w-full p-8 rounded-3xl bg-white border border-line text-center space-y-3 shadow-soft">
+          <h1 className="font-cinzel text-lg font-bold text-ink">Owner only</h1>
+          <p className="text-sm text-stone">Only the owner account can manage staff. Ask the owner to sign in here.</p>
+          <a href="/admin" className="inline-block mt-2 text-xs font-bold text-gold-700 hover:underline">← Back to dashboard</a>
         </div>
       </div>
     );

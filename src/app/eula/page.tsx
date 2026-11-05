@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SITE_URL } from '../../lib/seo';
 import { LegalPageLayout } from '../../components/legal/LegalPageLayout';
 import { LegalSection } from '../../components/legal/LegalSection';
 import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../../data/hamperQueenCatalog';
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'End-User Licence Agreement (EULA) | Hamper Queen',
     description: 'Licence terms for the interactive Hamper Queen atelier tools and digital features.',
-    url: 'https://hamper-queen.vercel.app/eula',
+    url: `${SITE_URL}/eula`,
   },
 };
 
@@ -85,7 +86,7 @@ export default function EulaPage() {
       <LegalSection title="9. Contact us">
         <p>
           For questions about this EULA, contact us at WhatsApp/call <strong>{phoneDisplay}</strong> or email{' '}
-          <a href={`mailto:${email}`} className="text-[#8C6821] underline underline-offset-2">
+          <a href={`mailto:${email}`} className="text-gold-700 underline underline-offset-2">
             {email}
           </a>
           .

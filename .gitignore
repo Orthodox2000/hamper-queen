@@ -8,3 +8,5 @@ coverage/
 *.log
 .env*
 !.env.example
+devserver.log
+tsconfig.tsbuildinfo

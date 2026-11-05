@@ -32,7 +32,7 @@ import {
 import { HamperQueenGraphic } from './HamperQueenGraphic';
 import { resolveRateLines } from '../utils/retailPricing';
 import { RETAIL_RATES_CAPTURED_AT, RETAIL_RATES_LOCATION } from '../data/retailRates';
-import { LanguageMode, CustomHamper } from '../types';
+import { LanguageMode } from '../types';
 import { TRANSLATIONS } from '../data/translations';
 import { royaleLogger } from '../utils/logger';
 import { triggerGoldConfetti } from '../utils/confetti';
@@ -136,68 +136,53 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
   };
 
   return (
-    <section id="hamper-queen-catalog-section" className="py-16 sm:py-20 bg-white text-[#141414] border-b border-[#EAE5D9] content-visibility-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="hamper-queen-catalog-section" className="section bg-cream-100">
+      <div className="container-page">
         
-        {/* Section Header: Pure White & Gold Elegance */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-10">
-          
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF5E8] border border-[#EAE0C8] text-[#8C6821] text-xs font-cinzel font-bold tracking-widest uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-[#B8860B]" />
-            <span>Hamper Queen Lookbook & Offerings</span>
-          </div>
-
-          <h2 className="font-seasons text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#141414]">
-            Gift Ideas & <span className="text-[#B8860B] italic">Chocolate Bouquets</span>
+        {/* Section Header */}
+        <div className="section-head">
+          <span className="eyebrow">
+            <Sparkles className="w-3.5 h-3.5 text-gold-700" aria-hidden="true" />
+            Lookbook &amp; offerings
+          </span>
+          <h2 className="section-title">
+            Gift ideas &amp; <span className="accent-script">chocolate bouquets</span>
           </h2>
-
-          <p className="font-seasons text-lg sm:text-xl text-[#524B40] leading-relaxed">
-            Thoughtful gifts beautifully packed with love and care. Browse our complete menu of customizable birthday hampers, chocolate & snack bouquets, mugs, accessories, clothing and royal gift boxes with direct maps-based booking.
+          <p className="section-lede">
+            Thoughtful gifts beautifully packed with love and care. Browse customizable birthday hampers, chocolate &amp; snack bouquets, mugs, accessories and gift boxes, with direct maps-based booking.
           </p>
-
-          {/* Pricing Guarantee Banner */}
-          <div className="inline-block px-4 py-2 rounded-xl bg-[#FFFDF9] border border-[#D4AF37]/50 shadow-2xs text-xs font-semibold text-[#8C6821]">
-            <span>✨ {HAMPER_QUEEN_OFFICIAL_CONTACT.pricingPolicy}</span>
-          </div>
+          <p className="text-xs sm:text-sm text-gold-700 bg-gold-50 rounded-full px-4 py-2 shadow-[inset_0_0_0_1px_var(--color-gold-200)]">
+            {HAMPER_QUEEN_OFFICIAL_CONTACT.pricingPolicy}
+          </p>
         </div>
 
         {/* BULK ORDERS & PARTY GIFTS NOTIFICATION BANNER */}
         {showCatalogControls && (
-          <div className="mb-12 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#141414] via-[#241E16] to-[#141414] text-white border border-[#D4AF37]/60 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/20 border border-[#D4AF37] flex items-center justify-center text-[#DFBA54] shrink-0">
-              <Package className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-cinzel text-sm font-bold text-[#F3E5AB]">
-                  Available for Bulk Orders & Party Gifts
-                </span>
-                <span className="px-2 py-0.5 rounded-full bg-[#16A34A] text-white text-[9px] font-bold">
-                  Up to 20% Off
-                </span>
+          <div className="mb-10 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-gold-50 to-blush-50 ring-1 ring-line flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <span className="w-11 h-11 rounded-2xl bg-white text-gold-700 shadow-soft flex items-center justify-center shrink-0">
+                <Package className="w-5 h-5" aria-hidden="true" />
+              </span>
+              <div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="font-semibold text-ink">Bulk orders &amp; party gifts</span>
+                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold">Up to 20% off</span>
+                </div>
+                <p className="text-sm text-stone mt-1 max-w-2xl">
+                  Weddings, baby showers, bachelorette favors and corporate hampers with custom branding.
+                </p>
               </div>
-              <p className="text-xs text-white/75 mt-0.5">
-                Weddings, baby shower return gifts, bachelorette favors, and corporate hampers with customized family/company branding.
-              </p>
             </div>
+            <button onClick={() => onOpenBooking?.(undefined, true)} className="btn btn-primary btn-sm w-full sm:w-auto shrink-0">
+              <span>Inquire bulk gifting</span>
+              <ArrowRight className="w-4 h-4 text-gold-300" aria-hidden="true" />
+            </button>
           </div>
-
-          <button
-            onClick={() => {
-              if (onOpenBooking) onOpenBooking(undefined, true);
-            }}
-            className="w-full sm:w-auto px-5 py-3 rounded-full bg-[#DFBA54] hover:bg-[#C5A059] text-[#141414] font-cinzel font-bold text-xs uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-1.5 shrink-0 cursor-pointer"
-          >
-            <span>Inquire Bulk Gifting</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
-        </div>
         )}
 
         {/* Filter Controls & Search Bar */}
         {showCatalogControls && (
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-[#EAE5D9]">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
           
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center gap-2">
@@ -205,11 +190,8 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
               <button
                 key={tab.id}
                 onClick={() => setSelectedCategory(tab.id)}
-                className={`px-4 py-2 rounded-full text-xs font-cinzel font-semibold transition-all cursor-pointer ${
-                  selectedCategory === tab.id
-                    ? 'bg-[#141414] text-[#F3E5AB] shadow-sm border border-[#D4AF37]'
-                    : 'bg-white text-[#524B40] border border-[#E5E0D6] hover:bg-[#FAF9F5]'
-                }`}
+                className={`chip ${selectedCategory === tab.id ? 'chip-active' : ''}`}
+                aria-pressed={selectedCategory === tab.id}
               >
                 {tab.label}
               </button>
@@ -218,13 +200,13 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
 
           {/* Search Input */}
           <div className="relative w-full md:w-72">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8C6821]" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-700" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search hampers, codes, items..."
-              className="w-full pl-10 pr-4 py-2 rounded-full bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B] shadow-2xs"
+              className="field pl-10 !rounded-full"
             />
           </div>
 
@@ -232,7 +214,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
         )}
 
         {/* Product Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid-cards">
           {visibleProducts.map((prod) => {
             const itemCode = getHamperQueenItemCode(prod);
             const substitutions = getHamperQueenSubstitutions(prod);
@@ -241,21 +223,21 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
             return (
               <div
                 key={prod.id}
-                className="group flex flex-col justify-between rounded-3xl bg-white border-2 border-[#EAE5D9] hover:border-[#D4AF37] transition-all duration-300 shadow-sm hover:shadow-lg overflow-hidden"
+                className="group card card-hover flex flex-col overflow-hidden h-full"
               >
                 {/* Card Top: Graphic & Badges */}
-                <div className="p-6 bg-gradient-to-b from-[#FFFDF9] to-white border-b border-[#F0ECE1] flex flex-col items-center relative">
+                <div className="p-6 bg-gradient-to-b from-cream-50 to-white border-b border-line flex flex-col items-center relative">
                   
                   {/* Category & Item Code Badge */}
                   <div className="w-full flex items-center justify-between mb-4">
-                    <span className="inline-flex items-center gap-1 text-[10px] font-cinzel font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#FAF9F5] border border-[#EAE5D9] text-[#141414]">
-                      <Tag className="w-2.5 h-2.5 text-[#B8860B]" />
+                    <span className="inline-flex items-center gap-1 text-xs font-sans font-semibold px-3 py-1 rounded-full bg-cream-100 border border-line text-ink">
+                      <Tag className="w-2.5 h-2.5 text-gold-700" />
                       <span>{itemCode}</span>
                     </span>
 
                     {prod.badge && (
                       <span 
-                        className="text-[10px] font-bold px-2.5 py-1 rounded-full shadow-2xs"
+                        className="text-xs font-bold px-3 py-1 rounded-full shadow-soft"
                         style={{ backgroundColor: prod.themeColor.pillBg, color: prod.themeColor.pillText }}
                       >
                         {prod.badge}
@@ -264,50 +246,50 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
                   </div>
 
                   {/* Clean Background-Removed Graphic Artwork */}
-                  <div className="py-2 transform group-hover:scale-105 transition-transform duration-300 w-full">
+                  <div className="card-art w-full min-h-[300px] lg:h-[320px] flex items-center">
                     <HamperQueenGraphic graphicId={prod.graphicId} product={prod} size="md" />
                   </div>
 
                   {/* Pricing Tag */}
-                  <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFFDF9] border border-[#D4AF37]/50 text-xs font-bold text-[#8C6821] shadow-2xs">
+                  <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cream-50 border border-gold-400/50 text-xs font-bold text-gold-700 shadow-soft">
                     <span>{prod.approxPrice}</span>
-                    <span className="text-[10px] font-normal text-[#6B6559]">• Approx</span>
+                    <span className="text-xs font-normal text-stone">• Approx</span>
                   </div>
                 </div>
 
                 {/* Card Body: Details & Checklist */}
-                <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <div className="p-6 flex-1 flex flex-col gap-5">
                   
                   <div className="space-y-1.5">
                     <div className="flex items-baseline justify-between gap-2">
-                      <h3 className="font-cinzel text-lg sm:text-xl font-bold text-[#141414] group-hover:text-[#8C6821] transition-colors">
+                      <h3 className="font-cinzel text-lg sm:text-xl font-bold text-ink group-hover:text-gold-700 transition-colors">
                         {language === 'hinglish' ? prod.nameHinglish : prod.name}
                       </h3>
                     </div>
-                    <p className="font-cormorant text-sm text-[#6B6559] leading-snug">
+                    <p className="font-cormorant text-sm text-stone leading-snug">
                       {language === 'hinglish' ? prod.subtitleHinglish : prod.subtitle}
                     </p>
                   </div>
 
                   {/* WHAT IS PRESENT (AT-A-GLANCE PILLS) */}
-                  <div className="pt-2 border-t border-[#F0ECE1] space-y-2">
+                  <div className="pt-2 border-t border-line space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-cinzel font-bold text-[#141414] uppercase tracking-wider">
+                      <span className="text-xs font-sans font-semibold text-ink">
                         What's Inside
                       </span>
-                      <span className="text-[10px] text-[#16A34A] font-semibold">
+                      <span className="text-xs text-emerald-700 font-semibold">
                         {prod.itemsIncluded.length} items included
                       </span>
                     </div>
 
                     <div className="flex flex-wrap gap-1.5">
                       {prod.itemsIncluded.slice(0, 3).map((item, idx) => (
-                        <span key={idx} className="px-2.5 py-1 rounded-full bg-[#FAF7F0] border border-[#E8DFC9] text-[10px] text-[#524B40] font-medium leading-none">
+                        <span key={idx} className="px-3 py-1 rounded-full bg-cream-100 border border-line-strong text-xs text-cocoa font-medium leading-none">
                           {item}
                         </span>
                       ))}
                       {prod.itemsIncluded.length > 3 && (
-                        <span className="px-2.5 py-1 rounded-full bg-[#FEF3E2] border border-[#F5D9A9] text-[10px] text-[#8C6821] font-semibold leading-none">
+                        <span className="px-3 py-1 rounded-full bg-[#FEF3E2] border border-[#F5D9A9] text-xs text-gold-700 font-semibold leading-none">
                           +{prod.itemsIncluded.length - 3} more fillers
                         </span>
                       )}
@@ -316,31 +298,31 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
 
                   {/* REAL RETAIL RATES (image + live rate per item) */}
                   {rateLines.length > 0 && (
-                    <div className="pt-2 border-t border-[#F0ECE1] space-y-2">
+                    <div className="pt-2 border-t border-line space-y-2">
                       <div className="flex items-center justify-between">
-                        <span className="text-[11px] font-cinzel font-bold text-[#141414] uppercase tracking-wider">
+                        <span className="text-xs font-sans font-semibold text-ink">
                           Real Retail Rates
                         </span>
-                        <span className="text-[10px] text-[#8C6821] font-semibold">
+                        <span className="text-xs text-gold-700 font-semibold">
                           {RETAIL_RATES_LOCATION} · {RETAIL_RATES_CAPTURED_AT}
                         </span>
                       </div>
                       <div className="flex flex-col gap-1.5">
                         {rateLines.map((line) => (
-                          <div key={line.key} className="flex items-center gap-2.5 rounded-xl border border-[#EAE5D9] bg-white px-2.5 py-1.5">
+                          <div key={line.key} className="flex items-center gap-3 rounded-xl border border-line bg-white px-3 py-1.5">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                               src={line.image}
                               alt={line.name}
-                              className="w-9 h-9 rounded-lg object-cover bg-[#F7F5F0] border border-[#EAE5D9] shrink-0"
+                              className="w-9 h-9 rounded-lg object-cover bg-[#F7F5F0] border border-line shrink-0"
                             />
                             <div className="flex-1 min-w-0">
-                              <p className="text-[11px] font-semibold text-[#141414] truncate">{line.label}</p>
-                              <p className="text-[10px] text-[#6B6559]">
+                              <p className="text-xs font-semibold text-ink truncate">{line.label}</p>
+                              <p className="text-xs text-stone">
                                 {line.qty} × ₹{line.price}/{line.unit.replace(/[0-9. ]/g, '') || 'pc'}
                               </p>
                             </div>
-                            <span className="text-[11px] font-bold text-[#8C6821] shrink-0">₹{line.price}</span>
+                            <span className="text-xs font-bold text-gold-700 shrink-0">₹{line.price}</span>
                           </div>
                         ))}
                       </div>
@@ -348,37 +330,37 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
                   )}
 
                   {/* ABSTRACTED CUSTOMIZATION HINT */}
-                  <div className="pt-2 border-t border-[#F0ECE1]">
-                    <span className="text-[10px] font-cinzel font-bold text-[#8C6821] uppercase tracking-wider">
+                  <div className="pt-2 border-t border-line">
+                    <span className="text-xs font-sans font-semibold text-gold-700">
                       ✦ Fully Customizable
                     </span>
-                    <p className="text-[11px] text-[#6B6559] leading-snug mt-1 font-cormorant italic">
+                    <p className="text-xs text-stone leading-snug mt-1 font-cormorant italic">
                       {substitutions[0]}
                     </p>
                   </div>
 
                   {/* Card Bottom Actions: 3 Actions */}
-                  <div className="pt-4 border-t border-[#F0ECE1] space-y-2">
+                  <div className="mt-auto pt-5 border-t border-line flex flex-col gap-2">
                     
                     {/* Primary Action: Book with Geolocation Form */}
                     <button
                       onClick={() => {
                         if (onOpenBooking) onOpenBooking(prod, false);
                       }}
-                      className="w-full py-3 px-4 rounded-xl bg-[#141414] hover:bg-[#2A2A2A] text-[#DFBA54] border border-[#D4AF37] font-cinzel text-xs font-bold transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                      className="btn btn-primary w-full"
                     >
-                      <CalendarCheck className="w-4 h-4 text-[#DFBA54]" />
+                      <CalendarCheck className="w-4 h-4 text-gold-300" />
                       <span>Book & Pinpoint Delivery</span>
                     </button>
 
-                    <div className={`grid gap-2 ${onAddToCart ? 'grid-cols-3' : 'grid-cols-2'}`}>
+                    <div className={`grid gap-2 ${onAddToCart ? 'grid-cols-3' : 'grid-cols-2'} [&>.btn]:px-2`}>
                       {/* Add to Cart (unified checkout) */}
                       {onAddToCart && (
                         <button
                           onClick={() => onAddToCart(prod)}
-                          className="py-2 px-3 rounded-xl bg-[#FAF5E8] hover:bg-[#F3E5AB] text-[#8C6821] border border-[#D4AF37] font-cinzel text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+                          className="btn btn-ghost btn-sm"
                         >
-                          <ShoppingBag className="w-3.5 h-3.5 text-[#B8860B]" />
+                          <ShoppingBag className="w-3.5 h-3.5 text-gold-700" />
                           <span>Add</span>
                         </button>
                       )}
@@ -386,7 +368,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
                       {/* WhatsApp Inquiry Button */}
                       <button
                         onClick={() => handleWhatsAppOrder(prod)}
-                        className="py-2 px-3 rounded-xl bg-[#25D366] hover:bg-[#20BA5A] text-white font-sans text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+                        className="btn btn-whatsapp btn-sm"
                       >
                         <MessageCircle className="w-3.5 h-3.5 fill-white" />
                         <span>on WA</span>
@@ -395,9 +377,9 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
                       {/* Customize in Studio */}
                       <button
                         onClick={() => onCustomizeProduct(prod)}
-                        className="py-2 px-3 rounded-xl bg-white hover:bg-[#FAF9F5] text-[#141414] border border-[#E5DAC2] font-cinzel text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+                        className="btn btn-ghost btn-sm"
                       >
-                        <Wand2 className="w-3.5 h-3.5 text-[#8C6821]" />
+                        <Wand2 className="w-3.5 h-3.5 text-gold-700" />
                         <span>Customize</span>
                       </button>
                     </div>
@@ -419,12 +401,12 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
                 setShowFeaturedMore(true);
                 royaleLogger.action('Showcase', 'Expanded homepage spotlight to full catalog');
               }}
-              className="group px-7 py-3.5 rounded-full bg-[#141414] hover:bg-[#2A2018] text-[#F3E5AB] border border-[#D4AF37] font-cinzel text-sm font-bold tracking-wider uppercase shadow-md transition-all flex items-center gap-2 cursor-pointer"
+              className="group btn btn-primary"
             >
               <span>Show More Hampers &amp; Bouquets</span>
-              <ArrowRight className="w-4 h-4 text-[#DFBA54] transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 text-gold-300 transition-transform group-hover:translate-x-1" />
             </button>
-            <p className="text-[11px] text-[#6B6559] font-sans">
+            <p className="text-xs text-stone font-sans">
               {HAMPER_QUEEN_PRODUCTS.length - featuredList.length} more options • from INR {HAMPER_QUEEN_PRODUCTS.reduce((min, p) => {
                 const match = p.approxPrice.match(/INR ([0-9,]+)/);
                 const val = match ? Number(match[1].replace(/,/g, '')) : Infinity;
@@ -435,17 +417,17 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
         )}
 
         {/* Custom Order Callout Footer */}
-        <div className="mt-16 p-8 rounded-3xl bg-gradient-to-r from-[#FFFDF9] via-white to-[#FAF8F5] border-2 border-[#D4AF37]/40 shadow-md text-center space-y-4">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FFF0F3] text-[#9D174D] text-xs font-semibold">
+        <div className="mt-16 p-8 sm:p-12 rounded-[2rem] surface-warm ring-1 ring-line text-center flex flex-col items-center gap-4">
+          <span className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-[#FFF0F3] text-[#9D174D] text-xs font-semibold">
             <Heart className="w-3.5 h-3.5 fill-[#E11D48] text-[#E11D48]" />
             <span>Have a Unique Theme or Budget in Mind?</span>
           </span>
 
-          <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-[#141414]">
+          <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-ink">
             "Rate as Per Customization" Promise
           </h3>
 
-          <p className="font-cormorant text-sm sm:text-base text-[#6B6559] max-w-2xl mx-auto leading-relaxed">
+          <p className="font-cormorant text-sm sm:text-base text-stone max-w-2xl mx-auto leading-relaxed">
             Every celebration is distinct. We craft custom hampers ranging from INR 140 to INR 899+ with your preferred chocolates, cosmetics, colors, and personalized photos.
           </p>
 
@@ -454,19 +436,19 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
               onClick={() => {
                 if (onOpenBooking) onOpenBooking(undefined, false);
               }}
-              className="px-6 py-3 rounded-full bg-[#141414] text-[#DFBA54] border border-[#D4AF37] font-cinzel text-xs font-bold uppercase tracking-wider shadow-md hover:bg-[#242424] transition-all flex items-center gap-2 cursor-pointer"
+              className="btn btn-primary"
             >
               <span>Open Custom Booking Form</span>
-              <ArrowRight className="w-4 h-4 text-[#DFBA54]" />
+              <ArrowRight className="w-4 h-4 text-gold-300" />
             </button>
 
             <button
               onClick={() => {
                 if (onOpenBooking) onOpenBooking(undefined, true);
               }}
-              className="px-6 py-3 rounded-full bg-[#FAF5E8] text-[#8C6821] border border-[#D4AF37] font-cinzel text-xs font-bold uppercase tracking-wider shadow-xs hover:bg-[#F3E5AB] transition-all flex items-center gap-2 cursor-pointer"
+              className="btn btn-ghost"
             >
-              <Package className="w-4 h-4 text-[#8C6821]" />
+              <Package className="w-4 h-4 text-gold-700" />
               <span>Bulk & Party Gifting Inquiries</span>
             </button>
           </div>

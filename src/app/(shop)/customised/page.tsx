@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useRouter } from 'next/navigation';
 import { CustomHamperAtelier } from '../../../components/CustomHamperAtelier';
 import { useShopStore } from '../../../store/shop-store';
@@ -20,7 +19,7 @@ export default function CustomisedPage() {
       onOpenScribe={() => {
         royaleLogger.action('Navigation', 'User navigated to tab: scribe');
         router.push('/scribe');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        /* Next resets scroll on navigation */
       }}
     />
   );

@@ -48,31 +48,31 @@ export const Hero: React.FC<HeroProps> = ({
   };
 
   return (
-    <section className="relative overflow-hidden pt-8 pb-16 md:pt-16 md:pb-24 bg-[#FAF9F5]">
+    <section className="relative overflow-hidden pt-8 pb-16 md:pt-16 md:pb-24 bg-cream-100">
       {/* Decorative Royal Guilloche / Filigree Border Line */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
+      <div className="container-page mb-4">
         <div className="flex items-center justify-center gap-3">
-          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#C5A059]/40 to-[#C5A059]" />
-          <div className="flex items-center gap-1.5 text-[#C5A059]">
-            <span className="text-xs tracking-[0.3em] uppercase font-cinzel font-semibold">Atelier Royale</span>
+          <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold-500/40 to-gold-500" />
+          <div className="flex items-center gap-1.5 text-gold-500">
+            <span className="text-xs font-sans font-semibold">Atelier Royale</span>
           </div>
-          <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#C5A059]/40 to-[#C5A059]" />
+          <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-gold-500/40 to-gold-500" />
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-page">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Column: Royal Narrative & Calls to Action */}
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3EFE6] border border-[#D4AF37]/40 text-[#8C6821] text-xs uppercase tracking-widest font-semibold">
-              <Sparkles className="w-3.5 h-3.5 text-[#DFBA54]" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cream-200 border border-gold-400/40 text-gold-700 text-xs font-semibold">
+              <Sparkles className="w-3.5 h-3.5 text-gold-300" />
               <span>Custom Gifts • Same-Day Dispatch • Free Delivery Above INR 499</span>
             </div>
 
-            <h1 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#141414] leading-[1.18]">
+            <h1 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-ink leading-[1.18]">
               Custom Hampers &{' '}
-              <span className="bg-gradient-to-r from-[#DFBA54] via-[#B38728] to-[#876117] bg-clip-text text-transparent block sm:inline">Chocolate Bouquets</span>{' '}
+              <span className="bg-gradient-to-r from-gold-300 via-[#B38728] to-[#876117] bg-clip-text text-transparent block sm:inline">Chocolate Bouquets</span>{' '}
               for Every Occasion
             </h1>
 
@@ -88,10 +88,10 @@ export const Hero: React.FC<HeroProps> = ({
                   royaleLogger.action('Hero', 'Clicked Build Hamper');
                   onStartBuilder();
                 }}
-                className="w-full sm:w-auto px-6 py-4 rounded-full bg-[#141414] text-[#E5C07B] font-medium text-sm tracking-wider uppercase border border-[#C5A059] shadow-md hover:bg-[#262626] transition-all flex items-center justify-center gap-2.5 cursor-pointer group"
+                className="w-full sm:w-auto px-6 py-4 rounded-full bg-ink text-gold-100 font-medium text-sm border border-gold-500 shadow-lift hover:bg-ink-soft transition-all flex items-center justify-center gap-3 cursor-pointer group"
               >
                 <span>Build Your Hamper</span>
-                <ArrowRight className="w-4 h-4 text-[#DFBA54] group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-gold-300 group-hover:translate-x-1 transition-transform" />
               </button>
 
               <button
@@ -100,7 +100,7 @@ export const Hero: React.FC<HeroProps> = ({
                   royaleLogger.action('Hero', 'Clicked Shop Ready-Made');
                   onExploreCatalog();
                 }}
-                className="w-full sm:w-auto px-6 py-4 rounded-full bg-white text-[#141414] font-medium text-sm tracking-wider uppercase border border-[#D8CCA8] hover:border-[#C5A059] hover:bg-[#FAF8F2] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                className="w-full sm:w-auto px-6 py-4 rounded-full bg-white text-ink font-medium text-sm border border-line-strong hover:border-gold-500 hover:bg-cream-100 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-soft"
               >
                 <span>Shop Ready-Made Gifts</span>
               </button>
@@ -111,7 +111,7 @@ export const Hero: React.FC<HeroProps> = ({
                   royaleLogger.action('Hero', 'Clicked Add Gift Message');
                   onOpenScribe();
                 }}
-                className="w-full sm:w-auto px-5 py-4 rounded-full text-[#800E17] hover:bg-[#FBEBEB] text-xs font-semibold tracking-wider uppercase transition-colors cursor-pointer"
+                className="w-full sm:w-auto px-5 py-4 rounded-full text-crimson hover:bg-[#FBEBEB] text-xs font-semibold transition-colors cursor-pointer"
               >
                 Add Gift Message
               </button>
@@ -120,44 +120,44 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Atelier Quality Pillars */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-[#EAE5D8]">
               <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                <ShieldCheck className="w-5 h-5 text-[#C5A059] mb-1.5" />
-                <span className="text-xs font-bold text-[#141414] uppercase tracking-wider">White-Glove</span>
-                <span className="text-[11px] text-[#6E685C]">Chauffeured Delivery</span>
+                <ShieldCheck className="w-5 h-5 text-gold-500 mb-1.5" />
+                <span className="text-xs font-semibold text-ink">White-Glove</span>
+                <span className="text-xs text-stone">Chauffeured Delivery</span>
               </div>
               <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                <Heart className="w-5 h-5 text-[#800E17] mb-1.5" />
-                <span className="text-xs font-bold text-[#141414] uppercase tracking-wider">Grade A+ Fresh</span>
-                <span className="text-[11px] text-[#6E685C]">Volcanic Stems</span>
+                <Heart className="w-5 h-5 text-crimson mb-1.5" />
+                <span className="text-xs font-semibold text-ink">Grade A+ Fresh</span>
+                <span className="text-xs text-stone">Volcanic Stems</span>
               </div>
               <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                <Award className="w-5 h-5 text-[#C5A059] mb-1.5" />
-                <span className="text-xs font-bold text-[#141414] uppercase tracking-wider">24K Pure Gold</span>
-                <span className="text-[11px] text-[#6E685C]">Artisanal Truffles</span>
+                <Award className="w-5 h-5 text-gold-500 mb-1.5" />
+                <span className="text-xs font-semibold text-ink">24K Pure Gold</span>
+                <span className="text-xs text-stone">Artisanal Truffles</span>
               </div>
               <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
                 <Gift className="w-5 h-5 text-[#113357] mb-1.5" />
-                <span className="text-xs font-bold text-[#141414] uppercase tracking-wider">Handmade Paper</span>
-                <span className="text-[11px] text-[#6E685C]">Stamped Wax Seals</span>
+                <span className="text-xs font-semibold text-ink">Handmade Paper</span>
+                <span className="text-xs text-stone">Stamped Wax Seals</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: Hero Graphic Stage with Isolated Background-Removed Presentation */}
           <div className="lg:col-span-5 flex flex-col items-center">
-            <div className="relative w-full max-w-md aspect-square bg-white rounded-3xl border border-[#D4AF37]/30 shadow-lg p-6 flex flex-col items-center justify-center transition-all duration-300">
+            <div className="relative w-full max-w-md aspect-square bg-white rounded-3xl border border-gold-400/30 shadow-lift p-6 flex flex-col items-center justify-center transition-all duration-250">
               
               {/* Subtle background radial aura */}
               <div className="absolute inset-4 rounded-2xl bg-radial from-[#FBF8EE] to-transparent pointer-events-none" />
 
               {/* Tag / Category */}
               <div className="absolute top-4 left-6 z-10">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C6821] bg-[#FAF9F5] px-2.5 py-1 rounded-full border border-[#D4AF37]/30">
+                <span className="text-xs font-semibold text-gold-700 bg-cream-100 px-3 py-1 rounded-full border border-gold-400/30">
                   {currentItem.category}
                 </span>
               </div>
 
               {/* Royal Seal Watermark */}
-              <div className="absolute top-4 right-6 text-xs text-[#C5A059] font-cinzel font-bold">
+              <div className="absolute top-4 right-6 text-xs text-gold-500 font-sans font-bold">
                 ROYALE
               </div>
 
@@ -167,11 +167,11 @@ export const Hero: React.FC<HeroProps> = ({
               </div>
 
               {/* Caption & Description */}
-              <div className="relative z-10 text-center mt-2 border-t border-[#F2ECE0] pt-3 w-full">
-                <h3 className="font-cinzel text-lg font-bold text-[#141414]">
+              <div className="relative z-10 text-center mt-2 border-t border-cream-200 pt-3 w-full">
+                <h3 className="font-cinzel text-lg font-bold text-ink">
                   {currentItem.title}
                 </h3>
-                <p className="font-cormorant text-sm italic text-[#666053] mt-0.5">
+                <p className="font-cormorant text-sm italic text-stone mt-0.5">
                   "{currentItem.quote}"
                 </p>
               </div>
@@ -184,10 +184,10 @@ export const Hero: React.FC<HeroProps> = ({
                   key={item.id}
                   id={`btn-hero-select-${item.id}`}
                   onClick={() => handleSelectFeatured(item.id)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-full text-xs font-medium  transition-all cursor-pointer ${
                     featuredId === item.id
-                      ? 'bg-[#141414] text-[#E5C07B] shadow-xs'
-                      : 'bg-white text-[#5C574C] hover:bg-[#F3EFE6] border border-[#E2DAC6]'
+                      ? 'bg-ink text-gold-100 shadow-soft'
+                      : 'bg-white text-[#5C574C] hover:bg-cream-200 border border-line'
                   }`}
                 >
                   {item.title.split(' ')[1] || item.title}

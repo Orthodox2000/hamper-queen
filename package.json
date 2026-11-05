@@ -10,9 +10,18 @@
     "lint": "tsc --noEmit",
     "db:test": "node --env-file=.env scripts/test-mongo.mjs",
     "db:bootstrap": "node --env-file=.env scripts/bootstrap-db.mjs",
-    "db:test-promo": "node --env-file=.env scripts/test-promo.mjs"
+    "db:test-promo": "node --env-file=.env scripts/test-promo.mjs",
+    "setup": "node scripts/setup-env.mjs",
+    "db:up": "docker compose up -d mongo",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f mongo",
+    "db:setup": "node scripts/setup-env.mjs --if-missing && node --env-file=.env scripts/bootstrap-db.mjs",
+    "check:ssr": "node scripts/ssr-check.mjs"
   },
   "dependencies": {
+    "@fontsource-variable/dancing-script": "^5.3.0",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/canvas-confetti": "^1.9.0",
     "canvas-confetti": "^1.9.4",
@@ -34,5 +43,13 @@
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2"
-  }
+  },
+  "browserslist": [
+    "chrome >= 111",
+    "edge >= 111",
+    "firefox >= 128",
+    "safari >= 16.4",
+    "ios_saf >= 16.4",
+    "not dead"
+  ]
 }

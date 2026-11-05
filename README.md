@@ -33,19 +33,28 @@ Hamper Queen is a high-converting gifting storefront built on the Next.js 16 App
 | Layer | Tech |
 | --- | --- |
 | Framework | [Next.js 16](https://nextjs.org) (App Router, static prerender) |
-| UI | React 19, Tailwind CSS v4, lucide-react icons |
+| UI | React 19, Tailwind CSS v4, lucide-react icons, self-hosted Fraunces / Dancing Script / Plus Jakarta Sans |
 | Motion | CSS 3D transforms, canvas-confetti 1.9, motion 12 |
 | Data | MongoDB Atlas (`mongodb` driver), scrypt-hashed staff accounts + 7-day sessions |
 | Deploy target | Vercel |
+
+## Documentation
+
+Internal guides live in [`docs/`](docs/README.md): environment & MongoDB, architecture (and SSR rules), design system, admin guide, browser support, testing.
 
 ## Getting Started
 
 Prerequisites: Node.js 20+ and npm.
 
 ```bash
-npm install        # install dependencies
-npm run dev        # http://localhost:3000  (binds 127.0.0.1 only)
+npm install --legacy-peer-deps
+npm run setup          # writes .env (local MongoDB, generated owner password - shown once)
+npm run db:up          # starts MongoDB in Docker (skip if you use Atlas)
+npm run db:bootstrap   # collections + indexes + owner admin
+npm run dev            # http://localhost:3000  (binds 127.0.0.1 only)  ·  admin: /admin
 ```
+
+Using Atlas instead? `npm run setup -- --atlas "mongodb+srv://..."`. Full guide: [docs/ENVIRONMENT.md](docs/ENVIRONMENT.md).
 
 Production build:
 
@@ -63,6 +72,10 @@ npm run start      # serves the production build on :3000
 | `npm run db:test` | Ping MongoDB Atlas (reads `MONGODB_URI`) |
 | `npm run db:bootstrap` | Idempotent bootstrap: collections, indexes, owner admin account |
 | `npm run db:test-promo` | Promo integration suite against the running dev server (validates then cleans up) |
+| `npm run setup` | Create `.env` (local or `--atlas`), generate the owner password |
+| `npm run db:up` / `db:down` / `db:logs` | Local MongoDB via Docker Compose |
+| `npm run db:setup` | `setup` (if `.env` missing) + `db:bootstrap` |
+| `npm run check:ssr` | Fetch every public route without JS and verify the server HTML (run against `npm run start` or a deployment via `BASE_URL`) |
 
 ## Environment Variables
 
@@ -70,12 +83,14 @@ Copy `.env.example` to `.env` and fill in values. `.env*` is gitignored — neve
 
 | Variable | Required | Purpose |
 | --- | --- | --- |
-| `MONGODB_URI` | Yes (DB features) | Atlas connection string, e.g. `mongodb+srv://user:<db_password>@cluster0.abcd.mongodb.net/?appName=Cluster0` |
+| `MONGODB_URI` | Yes (DB features) | `mongodb://127.0.0.1:27017/` locally or an Atlas string, e.g. `mongodb+srv://user:<db_password>@cluster0.abcd.mongodb.net/?appName=Cluster0` |
+| `MONGODB_DB` | No | Database name for app + scripts (default `hamper_queen`); use one per environment |
+| `MONGODB_DIRECT_HOSTS` | No | Comma-separated shard hosts for the SRV-DNS fallback (only if you changed Atlas clusters) |
 | `HQ_BOOTSTRAP_ADMIN_USER` | Bootstrap only | First owner-admin username (falls back to an interactive prompt) |
 | `HQ_BOOTSTRAP_ADMIN_PASSWORD` | Bootstrap only | First owner-admin password (falls back to an interactive prompt) |
 | `HQ_ADMIN_USER` / `HQ_ADMIN_PASS` | `db:test-promo` only | Owner credentials used by the promo integration suite |
 | `GEMINI_API_KEY` | No (planned) | Reserved for AI-assisted gifting prompts |
-| `APP_URL` | No | Public origin for absolute links (canonical/SEO) |
+| `HQ_BASE_URL` | Recommended | Public origin for sitemap/robots/OpenGraph/canonical URLs (a `localhost` value is ignored in production) |
 
 ### First-time database setup
 

@@ -47,15 +47,15 @@ export function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-4">
+    <div className="min-h-dvh bg-white flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
-        <form onSubmit={handleSubmit} className="p-8 rounded-3xl bg-[#FFFDF9] border-2 border-[#D4AF37]/50 shadow-md space-y-5">
+        <form onSubmit={handleSubmit} className="p-8 rounded-3xl bg-cream-50 border border-gold-400/50 shadow-lift space-y-5">
           <div className="text-center space-y-2">
-            <div className="w-14 h-14 mx-auto rounded-full bg-[#141414] text-[#DFBA54] flex items-center justify-center shadow-md">
+            <div className="w-14 h-14 mx-auto rounded-full bg-ink text-gold-300 flex items-center justify-center shadow-lift">
               <Crown className="w-7 h-7" />
             </div>
-            <h1 className="font-cinzel text-xl font-bold text-[#141414]">Hamper Queen Admin</h1>
-            <p className="text-xs text-[#6B6559]">Staff panel — restricted access</p>
+            <h1 className="font-cinzel text-xl font-bold text-ink">Hamper Queen Admin</h1>
+            <p className="text-xs text-stone">Staff panel — restricted access</p>
           </div>
 
           {error && (
@@ -66,32 +66,32 @@ export function AdminLogin() {
           )}
 
           <div className="space-y-2">
-            <label className="block text-[11px] font-semibold text-[#524B40]">Admin Username</label>
+            <label className="block text-[11px] font-semibold text-cocoa">Admin Username</label>
             <input
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               placeholder="e.g. superadmin"
               autoFocus
-              className="w-full px-4 py-3 rounded-2xl bg-white border border-[#D4AF37]/70 text-sm focus:outline-hidden focus:border-[#B8860B]"
+              className="w-full px-4 py-3 rounded-2xl bg-white border border-gold-400/70 text-sm focus:outline-hidden focus:border-gold-300"
             />
           </div>
 
           <div className="space-y-2">
-            <label className="block text-[11px] font-semibold text-[#524B40]">Admin Password</label>
+            <label className="block text-[11px] font-semibold text-cocoa">Admin Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••"
-              className="w-full px-4 py-3 rounded-2xl bg-white border border-[#D4AF37]/70 text-sm focus:outline-hidden focus:border-[#B8860B]"
+              className="w-full px-4 py-3 rounded-2xl bg-white border border-gold-400/70 text-sm focus:outline-hidden focus:border-gold-300"
             />
           </div>
 
           <button
             type="submit"
             disabled={submitting}
-            className="w-full py-3.5 rounded-2xl bg-[#141414] hover:bg-[#252525] text-[#DFBA54] font-cinzel font-bold text-xs uppercase tracking-wider border border-[#D4AF37] shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60"
+            className="btn btn-primary w-full"
           >
             {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Lock className="w-4 h-4" />}
             <span>Unlock Panel</span>
@@ -99,7 +99,7 @@ export function AdminLogin() {
 
           <a
             href="/"
-            className="flex items-center justify-center gap-1 text-[11px] text-[#8C6821] hover:underline cursor-pointer pt-1"
+            className="flex items-center justify-center gap-1 text-[11px] text-gold-700 hover:underline cursor-pointer pt-1"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             Back to storefront

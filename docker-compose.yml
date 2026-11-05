@@ -1,0 +1,37 @@
+# Local MongoDB for development.
+#   npm run db:up      start it (data persists in the `mongo_data` volume)
+#   npm run db:down    stop it   (add `-v` to also delete the data)
+#   docker compose --profile tools up -d    also start a web UI at http://localhost:8081
+#
+# Bound to 127.0.0.1 and run WITHOUT auth: for local development only.
+# Production should use MongoDB Atlas (see docs/ENVIRONMENT.md).
+services:
+  mongo:
+    image: mongo:7
+    container_name: hamper-queen-mongo
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 15s
+
+  mongo-express:
+    image: mongo-express:1
+    profiles: ["tools"]
+    depends_on:
+      mongo:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://mongo:27017/
+      ME_CONFIG_BASICAUTH: "false"
+
+volumes:
+  mongo_data:

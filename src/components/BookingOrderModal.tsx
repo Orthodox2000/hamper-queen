@@ -3,12 +3,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import {
   X,
   MapPin,
-  Compass,
   Phone,
   Mail,
   User,
   Calendar,
-  Clock,
   Gift,
   Sparkles,
   CheckCircle2,
@@ -20,11 +18,9 @@ import {
   AlertCircle,
   Package,
   Layers,
-  ChevronRight,
   ChevronLeft,
   ExternalLink,
   Navigation,
-  CheckCircle,
   Plus,
   Minus,
   Loader2,
@@ -34,6 +30,9 @@ import {
   TicketPercent,
   Scissors,
   BadgeCheck,
+  Smartphone,
+  Landmark,
+  Banknote,
 } from 'lucide-react';
 import { HAMPER_QUEEN_PRODUCTS, HamperQueenProduct, HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
 import { CustomHamper } from '../types';
@@ -127,6 +126,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
   const [geoLat, setGeoLat] = useState<number>(19.0760);
   const [geoLng, setGeoLng] = useState<number>(72.8777);
   const [geoLabel, setGeoLabel] = useState<string | undefined>(undefined);
+  const [addressFlash, setAddressFlash] = useState(false);
 
   // Submission state
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -301,6 +301,21 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
       setOrderType('bulk');
     }
   }, [initialBulkMode]);
+
+  // Lock page scroll behind the modal and allow Escape to close it
+  useEffect(() => {
+    if (!isOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -508,7 +523,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
       .join('\n');
 
     const mapLink = `https://maps.google.com/?q=${geoLat},${geoLng}`;
-    const trackLink = `https://hamper-queen.vercel.app/track/${refId}`;
+    const trackLink = `${window.location.origin}/track/${refId}`;
 
     const addOnsList: string[] = [];
     if (addonFairyLights) addOnsList.push('Warm LED Fairy Lights');
@@ -567,88 +582,69 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-6">
-      <div className="relative w-full max-w-4xl bg-[#FAF9F5] rounded-3xl border-2 border-[#D4AF37] shadow-2xl overflow-hidden my-4">
+    <div
+      className="fixed inset-0 z-50 overflow-y-auto bg-ink/60 backdrop-blur-sm flex items-start sm:items-center justify-center p-3 sm:p-6 animate-fade-in"
+      onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Hamper Queen concierge booking"
+    >
+      <div className="relative w-full max-w-4xl bg-white rounded-[2rem] ring-1 ring-line shadow-float overflow-hidden my-4 animate-fade-up">
         
         {/* Modal Top Header */}
-        <div className="bg-gradient-to-r from-[#141414] via-[#1E1B18] to-[#141414] text-white p-5 sm:p-6 flex items-center justify-between border-b border-[#D4AF37]/50">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-[#D4AF37]/20 border border-[#D4AF37] flex items-center justify-center text-[#DFBA54] shrink-0">
+        <div className="bg-gradient-to-r from-gold-50 via-white to-blush-50 px-5 sm:px-8 py-5 flex items-center justify-between gap-4 border-b border-line">
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-11 h-11 rounded-2xl bg-white shadow-soft ring-1 ring-gold-200 flex items-center justify-center text-gold-700 shrink-0">
               <Gift className="w-5 h-5" />
             </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <h3 className="font-cinzel text-lg sm:text-xl font-bold text-[#F3E5AB]">
-                  Hamper Queen Concierge Booking
-                </h3>
-                <span className="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-[#DFBA54]/20 border border-[#DFBA54]/40 text-[#DFBA54] text-[10px] font-cinzel font-bold">
-                  Official Hamper Queen
-                </span>
-              </div>
-              <p className="text-xs text-white/70">
-                Homegrown by Ms. Supriya Khandekar • Fast Handcrafted Delivery to Any Corner
+            <div className="min-w-0">
+              <h3 className="font-seasons text-lg sm:text-xl font-bold text-ink leading-tight truncate">
+                Concierge booking
+              </h3>
+              <p className="text-xs text-stone truncate">
+                Homegrown by Ms. Supriya Khandekar · handcrafted delivery to any corner
               </p>
             </div>
           </div>
-
           <button
             onClick={onClose}
-            className="p-2 rounded-full hover:bg-white/10 text-white/80 hover:text-white transition-colors cursor-pointer"
+            aria-label="Close booking"
+            className="w-10 h-10 shrink-0 inline-flex items-center justify-center rounded-full text-cocoa hover:text-ink hover:bg-white hover:shadow-soft transition-all"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Step Indicator Progress Bar */}
+        {/* Step progress */}
         {!isSubmitted && (
-          <div className="bg-[#1C1A17] border-b border-[#D4AF37]/30 px-5 sm:px-8 py-3 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              {/* Step 1 Indicator */}
-              <div className={`flex items-center gap-2 text-xs font-cinzel font-bold transition-all ${
-                checkoutStep === 1 ? 'text-[#F3E5AB]' : 'text-emerald-400'
-              }`}>
-                <div className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] ${
-                  checkoutStep === 1
-                    ? 'bg-[#B8860B] text-white'
-                    : 'bg-emerald-500 text-white'
-                }`}>
+          <div className="px-5 sm:px-8 pt-4 pb-3 bg-white border-b border-line">
+            <ol className="flex items-center gap-3 text-xs sm:text-sm">
+              <li className={`flex items-center gap-2 font-semibold ${checkoutStep === 1 ? 'text-ink' : 'text-emerald-700'}`}>
+                <span className={`w-7 h-7 rounded-full inline-flex items-center justify-center text-xs transition-colors duration-300 ${checkoutStep === 1 ? 'bg-ink text-gold-100 shadow-soft' : 'bg-emerald-600 text-white'}`}>
                   {checkoutStep === 1 ? '1' : <Check className="w-3.5 h-3.5" />}
-                </div>
-                <span>1. Gift Details & Personalization</span>
-              </div>
-
-              <ChevronRight className="w-4 h-4 text-white/30 hidden sm:inline" />
-
-              {/* Step 2 Indicator */}
-              <div className={`flex items-center gap-2 text-xs font-cinzel font-bold transition-all ${
-                checkoutStep === 2 ? 'text-[#F3E5AB]' : 'text-white/40'
-              }`}>
-                <div className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] ${
-                  checkoutStep === 2
-                    ? 'bg-[#B8860B] text-white'
-                    : 'bg-white/10 text-white/40 border border-white/20'
-                }`}>
-                  2
-                </div>
-                <span>2. Final Buying & Pinpoint Delivery</span>
-              </div>
-            </div>
-
-            <span className="text-[11px] text-[#DFBA54] font-medium hidden md:inline">
-              {checkoutStep === 1 ? 'Step 1 of 2: Select & Personalize' : 'Step 2 of 2: Pin Delivery & Confirm'}
-            </span>
+                </span>
+                <span>Gift details</span>
+              </li>
+              <span className="relative flex-1 h-1 rounded-full bg-cream-200 overflow-hidden" aria-hidden="true">
+                <span className={`absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-gold-300 to-gold-500 transition-[width] duration-500 ease-[var(--ease-soft)] ${checkoutStep === 1 ? 'w-1/2' : 'w-full'}`} />
+              </span>
+              <li className={`flex items-center gap-2 font-semibold ${checkoutStep === 2 ? 'text-ink' : 'text-stone'}`}>
+                <span className={`w-7 h-7 rounded-full inline-flex items-center justify-center text-xs transition-colors duration-300 ${checkoutStep === 2 ? 'bg-ink text-gold-100 shadow-soft' : 'bg-cream-200 text-stone'}`}>2</span>
+                <span>Delivery &amp; payment</span>
+              </li>
+            </ol>
           </div>
         )}
 
         {/* Modal Body */}
         {!isSubmitted ? (
-          <div id="booking-modal-scrollable" className="p-5 sm:p-8 max-h-[75vh] overflow-y-auto">
+          <div id="booking-modal-scrollable" className="p-5 sm:p-8 max-h-[72dvh] overflow-y-auto bg-cream-50">
             
             {/* =========================================================================
                 STEP 1: GIFT SELECTION & PERSONALIZATION (DO NOT ASK LOCATION HERE)
                 ========================================================================= */}
             {checkoutStep === 1 && (
-              <div className="space-y-7">
+              <div key="step-1" className="space-y-8 animate-fade-up">
                 
                 {/* Error Banner if Step 1 validation failed */}
                 {step1Error && (
@@ -661,11 +657,11 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                 {/* 1. ORDER TYPE SELECTOR: INDIVIDUAL VS. BULK & PARTY GIFTS */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <label className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#141414] flex items-center gap-2">
-                      <Package className="w-4 h-4 text-[#B8860B]" />
+                    <label className="text-xs font-sans font-semibold text-ink flex items-center gap-2">
+                      <Package className="w-4 h-4 text-gold-700" />
                       <span>1. Select Order Type & Scale</span>
                     </label>
-                    <span className="text-[11px] text-[#8C6821] font-semibold">
+                    <span className="text-xs text-gold-700 font-semibold">
                       {orderType === 'bulk' ? '✨ Bulk Corporate & Party Gifting Tier' : '✨ Single Custom Gift'}
                     </span>
                   </div>
@@ -674,19 +670,19 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                     {/* Individual Option */}
                     <div
                       onClick={() => setOrderType('individual')}
-                      className={`p-4 rounded-2xl border-2 cursor-pointer transition-all ${
+                      className={`p-4 rounded-2xl border cursor-pointer transition-all ${
                         orderType === 'individual'
-                          ? 'bg-white border-[#D4AF37] shadow-sm'
-                          : 'bg-[#F5F2EA] border-transparent hover:bg-white/60'
+                          ? 'bg-white border-gold-200 shadow-soft'
+                          : 'bg-cream-100 border-transparent hover:bg-white/60'
                       }`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="font-cinzel text-sm font-bold text-[#141414]">
+                        <span className="font-sans text-sm font-bold text-ink">
                           Individual Gift Hamper
                         </span>
-                        <span className="text-xs font-semibold text-[#8C6821]">Qty: 1</span>
+                        <span className="text-xs font-semibold text-gold-700">Qty: 1</span>
                       </div>
-                      <p className="font-cormorant text-xs text-[#6B6559] mt-1">
+                      <p className="font-cormorant text-xs text-stone mt-1">
                         For personal birthdays, anniversaries, romantic gestures, and one-of-a-kind celebrations.
                       </p>
                     </div>
@@ -694,21 +690,21 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                     {/* Bulk Orders & Party Gifts Option */}
                     <div
                       onClick={() => setOrderType('bulk')}
-                      className={`p-4 rounded-2xl border-2 cursor-pointer transition-all relative ${
+                      className={`p-4 rounded-2xl border cursor-pointer transition-all relative ${
                         orderType === 'bulk'
-                          ? 'bg-white border-[#D4AF37] shadow-sm ring-2 ring-[#D4AF37]/30'
-                          : 'bg-[#F5F2EA] border-transparent hover:bg-white/60'
+                          ? 'bg-white border-gold-200 shadow-soft ring-2 ring-gold-400/30'
+                          : 'bg-cream-100 border-transparent hover:bg-white/60'
                       }`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="font-cinzel text-sm font-bold text-[#141414] flex items-center gap-1.5">
+                        <span className="font-sans text-sm font-bold text-ink flex items-center gap-1.5">
                           <span>Bulk & Party Gifts</span>
-                          <span className="px-2 py-0.5 rounded-full bg-[#16A34A] text-white text-[9px] font-bold">
+                          <span className="px-2 py-0.5 rounded-full bg-emerald-700 text-white text-xs font-bold">
                             Special Rates
                           </span>
                         </span>
                       </div>
-                      <p className="font-cormorant text-xs text-[#6B6559] mt-1">
+                      <p className="font-cormorant text-xs text-stone mt-1">
                         Weddings, baby shower return gifts, corporate employee recognition, and grand celebrations.
                       </p>
                     </div>
@@ -716,10 +712,10 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
                   {/* Bulk Quantity Slider and Discount Tier */}
                   {orderType === 'bulk' && (
-                    <div className="p-4 rounded-2xl bg-white border border-[#D4AF37] shadow-xs space-y-3 mt-2">
+                    <div className="p-4 rounded-2xl bg-white border border-gold-200 shadow-soft space-y-3 mt-2">
                       <div className="flex items-center justify-between text-xs">
-                        <span className="font-bold text-[#141414]">Bulk Quantity Needed:</span>
-                        <span className="font-cinzel font-bold text-base text-[#B8860B]">
+                        <span className="font-bold text-ink">Bulk Quantity Needed:</span>
+                        <span className="font-cinzel font-bold text-base text-gold-700">
                           {bulkQuantity} Hampers
                         </span>
                       </div>
@@ -731,18 +727,18 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                         step="5"
                         value={bulkQuantity}
                         onChange={(e) => setBulkQuantity(parseInt(e.target.value))}
-                        className="w-full accent-[#B8860B] cursor-pointer"
+                        className="w-full accent-gold-600 cursor-pointer"
                       />
 
-                      <div className="flex items-center justify-between text-[11px] text-[#6B6559]">
+                      <div className="flex items-center justify-between text-xs text-stone">
                         <span>5 units</span>
-                        <span className="font-semibold text-[#16A34A]">{bulkTier.discount}</span>
+                        <span className="font-semibold text-emerald-700">{bulkTier.discount}</span>
                         <span>200+ units</span>
                       </div>
 
-                      <div className="p-3 rounded-xl bg-[#FAF9F5] border border-[#EAE5D9] text-[11px] text-[#524B40] flex items-center justify-between">
+                      <div className="p-3 rounded-xl bg-cream-100 border border-line text-xs text-cocoa flex items-center justify-between">
                         <span>Applicable Benefit:</span>
-                        <span className="font-bold text-[#141414]">{bulkTier.badge} + Complimentary Custom Branding Tags</span>
+                        <span className="font-bold text-ink">{bulkTier.badge} + Complimentary Custom Branding Tags</span>
                       </div>
                     </div>
                   )}
@@ -750,8 +746,8 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
                 {/* 2. CART ITEMS & WHAT IS INCLUDED */}
                 <div className="space-y-3">
-                  <label className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#141414] flex items-center gap-2">
-                    <Layers className="w-4 h-4 text-[#B8860B]" />
+                  <label className="text-xs font-sans font-semibold text-ink flex items-center gap-2">
+                    <Layers className="w-4 h-4 text-gold-700" />
                     <span>2. Your Cart Items & Quantities</span>
                   </label>
 
@@ -762,20 +758,20 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                   )}
 
                   {checkoutLines.length === 0 ? (
-                    <div className="p-6 rounded-2xl bg-[#FAF9F5] border border-dashed border-[#C5A059] text-center text-xs text-[#6B6559]">
+                    <div className="p-6 rounded-2xl bg-cream-100 border border-dashed border-gold-500 text-center text-xs text-stone">
                       Your cart is empty. Add a hamper or custom items below to continue.
                     </div>
                   ) : (
-                    <div className="space-y-2.5">
+                    <div className="space-y-3">
                       {checkoutLines.map((line) => (
-                        <div key={line.key} className="bg-white p-3.5 rounded-2xl border border-[#D4AF37]/50 shadow-2xs">
+                        <div key={line.key} className="bg-white p-4 rounded-2xl border border-gold-400/50 shadow-soft">
                           <div className="flex items-center justify-between gap-3">
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center gap-2">
-                                <Gift className="w-4 h-4 text-[#B8860B] shrink-0" />
-                                <h5 className="font-cinzel text-xs font-bold text-[#141414] truncate">{line.name}</h5>
+                                <Gift className="w-4 h-4 text-gold-700 shrink-0" />
+                                <h5 className="font-sans text-xs font-bold text-ink truncate">{line.name}</h5>
                               </div>
-                              <p className="text-[10px] text-[#8C6821] font-semibold mt-0.5">
+                              <p className="text-xs text-gold-700 font-semibold mt-0.5">
                                 {line.itemCode ?? (line.kind === 'custom_hamper' ? '#HQ-ATELIER-CUSTOM' : line.productId)}
                                 {' • '}{line.priceDisplay} each
                               </p>
@@ -783,34 +779,34 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                             <button
                               type="button"
                               onClick={() => removeLine(line.key)}
-                              className="p-1.5 text-[#800E17] hover:bg-[#FBEBEB] rounded-lg transition-colors cursor-pointer shrink-0"
+                              className="p-1.5 text-crimson hover:bg-[#FBEBEB] rounded-lg transition-colors cursor-pointer shrink-0"
                               title="Remove item"
                             >
                               <Trash2 className="w-4 h-4" />
                             </button>
                           </div>
 
-                          <div className="mt-2.5 flex items-center justify-between gap-2">
+                          <div className="mt-3 flex items-center justify-between gap-2">
                             <div className="flex items-center gap-2">
                               <button
                                 type="button"
                                 onClick={() => updateLineQty(line.key, -1)}
-                                className="w-7 h-7 rounded-full bg-[#F3EFE6] hover:bg-[#EADFC7] text-[#554F42] flex items-center justify-center transition-colors cursor-pointer"
+                                className="w-7 h-7 rounded-full bg-cream-200 hover:bg-line-strong text-cocoa flex items-center justify-center transition-colors cursor-pointer"
                                 title="Decrease quantity"
                               >
                                 <Minus className="w-3.5 h-3.5" />
                               </button>
-                              <span className="text-sm font-bold text-[#141414] w-5 text-center">{line.qty}</span>
+                              <span className="text-sm font-bold text-ink w-5 text-center">{line.qty}</span>
                               <button
                                 type="button"
                                 onClick={() => updateLineQty(line.key, 1)}
-                                className="w-7 h-7 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] flex items-center justify-center transition-colors cursor-pointer"
+                                className="w-7 h-7 rounded-full bg-ink hover:bg-ink-soft text-gold-100 flex items-center justify-center transition-colors cursor-pointer"
                                 title="Increase quantity"
                               >
                                 <Plus className="w-3.5 h-3.5" />
                               </button>
                             </div>
-                            <span className="text-xs font-cinzel font-bold text-[#141414]">
+                            <span className="text-xs font-sans font-bold text-ink">
                               {line.priceValue > 0 ? `INR ${(line.priceValue * line.qty).toLocaleString('en-IN')}` : 'Value on request'}
                             </span>
                           </div>
@@ -824,7 +820,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                     <select
                       value={selectedProductId}
                       onChange={(e) => setSelectedProductId(e.target.value)}
-                      className="flex-1 px-4 py-3 rounded-2xl bg-white border border-[#D4AF37]/70 text-xs font-semibold text-[#141414] focus:outline-hidden focus:border-[#B8860B] shadow-2xs cursor-pointer"
+                      className="flex-1 px-4 py-3 rounded-2xl bg-white border border-gold-400/70 text-xs font-semibold text-ink focus:outline-hidden focus:border-gold-300 shadow-soft cursor-pointer"
                     >
                       <optgroup label="12 Customizable Birthday Hampers">
                         {HAMPER_QUEEN_PRODUCTS.filter((p) => p.category === 'birthday_hampers').map((prod) => (
@@ -866,21 +862,21 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                     <button
                       type="button"
                       onClick={handleAddLine}
-                      className="px-5 py-3 rounded-2xl bg-[#141414] hover:bg-[#252525] text-[#DFBA54] text-xs font-cinzel font-bold border border-[#D4AF37] transition-all flex items-center justify-center gap-2 cursor-pointer shrink-0"
+                      className="btn btn-primary shrink-0"
                     >
                       <Plus className="w-4 h-4" />
                       <span>Add Item</span>
                     </button>
                   </div>
-                  <p className="text-[10px] text-[#6B6559]">
+                  <p className="text-xs text-stone">
                     Items in your cart are saved to your real Hamper Queen order. Adjust quantities before proceeding — after checkout the cart clears automatically.
                   </p>
 
                   {/* Coupon apply */}
-                  <div className="p-4 rounded-2xl bg-[#FFFDF9] border-2 border-dashed border-[#D4AF37]/60 shadow-2xs">
+                  <div className="p-4 rounded-2xl bg-cream-50 border border-dashed border-gold-400/60 shadow-soft">
                     <div className="flex items-center gap-2 mb-2">
-                      <TicketPercent className="w-4 h-4 text-[#B8860B]" />
-                      <span className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#141414]">
+                      <TicketPercent className="w-4 h-4 text-gold-700" />
+                      <span className="text-xs font-sans font-semibold text-ink">
                         Have a Coupon?
                       </span>
                     </div>
@@ -901,9 +897,9 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                                 animate={{ opacity: 0, scale: 2.4 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 1.3, ease: 'easeOut' }}
-                                className="pointer-events-none absolute inset-0 z-10 rounded-xl border-4 border-dashed border-[#B8860B] bg-white/70 flex items-center justify-center"
+                                className="pointer-events-none absolute inset-0 z-10 rounded-xl border-4 border-dashed border-gold-300 bg-white/70 flex items-center justify-center"
                               >
-                                <span className="font-cinzel text-sm font-black text-[#8C6821] tracking-widest -rotate-6">
+                                <span className="font-sans text-sm font-bold text-gold-700 -rotate-6">
                                   CUT &middot; APPLIED
                                 </span>
                               </motion.div>
@@ -913,15 +909,15 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                             initial={{ opacity: 0, scale: 1.7, y: -8, rotate: -3 }}
                             animate={{ opacity: 1, scale: 1, y: 0, rotate: 0 }}
                             transition={{ type: 'spring', stiffness: 360, damping: 20 }}
-                            className="flex items-center justify-between gap-2 p-3 rounded-xl bg-gradient-to-r from-[#141414] to-[#241E16] border border-[#D4AF37]/70 shadow-sm"
+                            className="flex items-center justify-between gap-2 p-3 rounded-xl bg-gradient-to-r from-ink to-ink-soft border border-gold-400/70 shadow-soft"
                           >
                             <div className="flex items-center gap-2 min-w-0">
-                              <Scissors className="w-4 h-4 text-[#DFBA54] shrink-0" />
+                              <Scissors className="w-4 h-4 text-gold-300 shrink-0" />
                               <div className="min-w-0">
-                                <p className="font-mono text-sm font-extrabold tracking-widest text-[#F3E5AB] truncate">
+                                <p className="font-mono text-sm font-bold text-gold-100 truncate">
                                   {promo.code}
                                 </p>
-                                <p className="text-[10px] text-white/70 truncate">
+                                <p className="text-xs text-white/70 truncate">
                                   {promo.eventName ? `${promo.eventName} · ` : ''}
                                   {promo.kind === 'percent' ? `${promo.value}% off` : `INR ${promo.value} off`}
                                 </p>
@@ -948,13 +944,13 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                             onChange={(e) => setPromoInput(e.target.value.toUpperCase().slice(0, 16))}
                             placeholder="FIRSTHAMPER"
                             maxLength={16}
-                            className="flex-1 rounded-xl bg-white border border-[#E3DCCB] px-3 py-2.5 text-xs font-semibold text-[#141414] placeholder-[#A49B8A] uppercase focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/60 focus:border-[#D4AF37]"
+                            className="flex-1 rounded-xl bg-white border border-line px-3 py-3 text-xs font-semibold text-ink placeholder-mist focus:outline-none focus:ring-2 focus:ring-gold-400/60 focus:border-gold-200"
                           />
                           <button
                             type="button"
                             onClick={handleApplyPromo}
                             disabled={promoStatus === 'checking'}
-                            className="px-4 py-2.5 rounded-xl bg-[#141414] hover:bg-[#252525] disabled:opacity-50 disabled:cursor-not-allowed text-[#DFBA54] text-xs font-cinzel font-bold border border-[#D4AF37] transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                            className="px-4 py-3 rounded-full bg-ink hover:bg-ink-soft disabled:opacity-50 disabled:cursor-not-allowed text-gold-100 text-xs font-sans font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                           >
                             {promoStatus === 'checking' ? (
                               <>
@@ -968,12 +964,12 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                       )}
                     </AnimatePresence>
                     {promoStatus === 'checking' && (
-                      <p className="text-[10px] text-[#8C6821] mt-2 flex items-center gap-1 font-semibold">
+                      <p className="text-xs text-gold-700 mt-2 flex items-center gap-1 font-semibold">
                         Verifying coupon against live inventory…
                       </p>
                     )}
                     {promoError && (
-                      <p className="text-[10px] text-[#B3261E] mt-2 flex items-center gap-1 font-semibold">
+                      <p className="text-xs text-[#B3261E] mt-2 flex items-center gap-1 font-semibold">
                         <AlertCircle className="w-3.5 h-3.5" /> {promoError}
                       </p>
                     )}
@@ -981,14 +977,14 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
                   {/* Order totals preview */}
                   {checkoutLines.length > 0 && (
-                    <div className="p-4 rounded-2xl bg-white border border-[#EAE5D9] shadow-2xs space-y-1.5 text-xs">
-                      <div className="flex items-center justify-between text-[#524B40]">
+                    <div className="p-4 rounded-2xl bg-white border border-line shadow-soft space-y-1.5 text-xs">
+                      <div className="flex items-center justify-between text-cocoa">
                         <span>Items Subtotal</span>
-                        <strong className="text-[#141414]">{orderSubtotal > 0 ? `INR ${orderSubtotal.toLocaleString('en-IN')}` : 'On request'}</strong>
+                        <strong className="text-ink">{orderSubtotal > 0 ? `INR ${orderSubtotal.toLocaleString('en-IN')}` : 'On request'}</strong>
                       </div>
-                      <div className="flex items-center justify-between text-[#524B40]">
+                      <div className="flex items-center justify-between text-cocoa">
                         <span>Delivery Fee</span>
-                        <strong className={orderDeliveryFee === 0 ? 'text-[#1E7B3C]' : 'text-[#141414]'}>
+                        <strong className={orderDeliveryFee === 0 ? 'text-emerald-800' : 'text-ink'}>
                           {orderDeliveryFee === 0 ? 'FREE' : `INR ${orderDeliveryFee}`}
                         </strong>
                       </div>
@@ -1000,7 +996,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0 }}
                             transition={{ type: 'spring', stiffness: 300, damping: 26 }}
-                            className="flex items-center justify-between text-[#1E7B3C]"
+                            className="flex items-center justify-between text-emerald-800"
                           >
                             <span className="inline-flex items-center gap-1.5">
                               <BadgeCheck className="w-3.5 h-3.5" /> Coupon {promo?.code}
@@ -1009,11 +1005,11 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                           </motion.div>
                         )}
                       </AnimatePresence>
-                      <div className="flex items-center justify-between pt-1.5 border-t border-[#EAE5D9] text-sm">
+                      <div className="flex items-center justify-between pt-1.5 border-t border-line text-sm">
                         <span className="font-semibold">Grand Total (approx)</span>
                         <div className="text-right">
                           {orderDiscount > 0 && (
-                            <span className="block text-[11px] text-[#A49B8A] line-through">
+                            <span className="block text-xs text-mist line-through">
                               {orderOriginalGrandTotal > 0 ? `INR ${orderOriginalGrandTotal.toLocaleString('en-IN')}` : ''}
                             </span>
                           )}
@@ -1023,7 +1019,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                               initial={{ opacity: 0, y: 10, scale: 0.9 }}
                               animate={{ opacity: 1, y: 0, scale: 1 }}
                               transition={{ type: 'spring', stiffness: 320, damping: 24 }}
-                              className="block font-cinzel text-[#B8860B]"
+                              className="block font-cinzel text-gold-700"
                             >
                               {orderGrandTotal > 0 ? `INR ${orderGrandTotal.toLocaleString('en-IN')}` : 'On request'}
                             </motion.strong>
@@ -1035,17 +1031,17 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
                   {/* What is Present (Included items preview) */}
                   {primaryProduct && (
-                    <div className="p-4 rounded-2xl bg-white border border-[#EAE5D9] shadow-2xs space-y-2 text-xs">
+                    <div className="p-4 rounded-2xl bg-white border border-line shadow-soft space-y-2 text-xs">
                       <div className="flex items-center justify-between">
-                        <span className="font-cinzel font-bold text-[#141414]">
+                        <span className="font-cinzel font-bold text-ink">
                           What is Present in {primaryProduct.name}:
                         </span>
-                        <span className="font-bold text-[#B8860B]">{primaryProduct.approxPrice}</span>
+                        <span className="font-bold text-gold-700">{primaryProduct.approxPrice}</span>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pt-1">
                         {(primaryProduct.itemsIncluded ?? []).map((item, idx) => (
-                          <div key={idx} className="flex items-start gap-1.5 text-[11px] text-[#524B40]">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#16A34A] shrink-0 mt-0.5" />
+                          <div key={idx} className="flex items-start gap-1.5 text-xs text-cocoa">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 shrink-0 mt-0.5" />
                             <span>{item}</span>
                           </div>
                         ))}
@@ -1056,20 +1052,20 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
                 {/* 3. OCCASION & DELIVERY TIMING */}
                 <div className="space-y-4">
-                  <label className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#141414] flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-[#B8860B]" />
+                  <label className="text-xs font-sans font-semibold text-ink flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-gold-700" />
                     <span>3. Occasion & Desired Delivery Schedule</span>
                   </label>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div>
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Celebration Occasion
                       </label>
                       <select
                         value={occasion}
                         onChange={(e) => setOccasion(e.target.value)}
-                        className="w-full px-3 py-3 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                        className="w-full px-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                       >
                         <option value="Birthday Celebration">Birthday Celebration</option>
                         <option value="Wedding Trousseau & Bridal">Wedding Trousseau & Bridal</option>
@@ -1082,7 +1078,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Desired Delivery Date
                       </label>
                       <input
@@ -1090,18 +1086,18 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                         required
                         value={deliveryDate}
                         onChange={(e) => setDeliveryDate(e.target.value)}
-                        className="w-full px-3 py-2 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                        className="w-full px-3 py-2 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Preferred Time Slot
                       </label>
                       <select
                         value={timeSlot}
                         onChange={(e) => setTimeSlot(e.target.value)}
-                        className="w-full px-3 py-3 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                        className="w-full px-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                       >
                         <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM - 12:00 PM)</option>
                         <option value="Afternoon (12:00 PM - 4:00 PM)">Afternoon (12:00 PM - 4:00 PM)</option>
@@ -1114,14 +1110,14 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
                 {/* 4. RECIPIENT & PERSONALIZATION DETAILS */}
                 <div className="space-y-4">
-                  <label className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#141414] flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-[#B8860B]" />
+                  <label className="text-xs font-sans font-semibold text-ink flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-gold-700" />
                     <span>4. Keepsake Personalization & Add-ons</span>
                   </label>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Recipient's Name (To write on Hamper Tag)
                       </label>
                       <input
@@ -1129,12 +1125,12 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                         value={recipientName}
                         onChange={(e) => setRecipientName(e.target.value)}
                         placeholder="e.g. For Dearest Riya"
-                        className="w-full px-3 py-2 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                        className="w-full px-3 py-2 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Royal Wax Seal Stamp Design
                       </label>
                       <div className="grid grid-cols-3 gap-2">
@@ -1143,10 +1139,10 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                             type="button"
                             key={seal}
                             onClick={() => setWaxSealDesign(seal)}
-                            className={`py-2 px-2 rounded-xl text-xs font-cinzel font-bold border transition-all cursor-pointer ${
+                            className={`py-2 px-2 rounded-xl text-xs font-sans font-semibold border transition-all cursor-pointer ${
                               waxSealDesign === seal
-                                ? 'bg-[#141414] text-[#DFBA54] border-[#D4AF37]'
-                                : 'bg-white text-[#524B40] border-[#E5E0D6]'
+                                ? 'bg-ink text-gold-100 border-gold-200'
+                                : 'bg-white text-cocoa border-line'
                             }`}
                           >
                             {seal}
@@ -1157,7 +1153,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                    <label className="block text-xs font-semibold text-cocoa mb-1">
                       Handwritten Calligraphy Card Message
                     </label>
                     <textarea
@@ -1165,40 +1161,40 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                       value={cardMessage}
                       onChange={(e) => setCardMessage(e.target.value)}
                       placeholder="Enter message to be handwritten in gold ink on deckle-edge card..."
-                      className="w-full px-3 py-2 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                      className="w-full px-3 py-2 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                     />
                   </div>
 
                   {/* Add-ons Checklist */}
-                  <div className="p-4 rounded-2xl bg-white border border-[#EAE5D9] space-y-2.5">
-                    <span className="text-[11px] font-cinzel font-bold text-[#141414] uppercase tracking-wider block">
+                  <div className="p-4 rounded-2xl bg-white border border-line space-y-3">
+                    <span className="text-xs font-sans font-semibold text-ink block">
                       Celebration Add-ons:
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                      <label className="flex items-center gap-2 text-xs text-[#524B40] cursor-pointer p-2 rounded-lg hover:bg-[#FAF9F5]">
+                      <label className="flex items-center gap-2 text-xs text-cocoa cursor-pointer p-2 rounded-lg hover:bg-cream-100">
                         <input
                           type="checkbox"
                           checked={addonFairyLights}
                           onChange={(e) => setAddonFairyLights(e.target.checked)}
-                          className="accent-[#B8860B]"
+                          className="accent-gold-600"
                         />
                         <span>Warm Fairy Lights (+INR 99)</span>
                       </label>
-                      <label className="flex items-center gap-2 text-xs text-[#524B40] cursor-pointer p-2 rounded-lg hover:bg-[#FAF9F5]">
+                      <label className="flex items-center gap-2 text-xs text-cocoa cursor-pointer p-2 rounded-lg hover:bg-cream-100">
                         <input
                           type="checkbox"
                           checked={addonPartyPopper}
                           onChange={(e) => setAddonPartyPopper(e.target.checked)}
-                          className="accent-[#B8860B]"
+                          className="accent-gold-600"
                         />
                         <span>Gold Party Popper (+INR 99)</span>
                       </label>
-                      <label className="flex items-center gap-2 text-xs text-[#524B40] cursor-pointer p-2 rounded-lg hover:bg-[#FAF9F5]">
+                      <label className="flex items-center gap-2 text-xs text-cocoa cursor-pointer p-2 rounded-lg hover:bg-cream-100">
                         <input
                           type="checkbox"
                           checked={addonPolaroids}
                           onChange={(e) => setAddonPolaroids(e.target.checked)}
-                          className="accent-[#B8860B]"
+                          className="accent-gold-600"
                         />
                         <span>Custom Polaroid Prints (+INR 149)</span>
                       </label>
@@ -1207,7 +1203,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
                   {/* Special Instructions / Substitutions */}
                   <div>
-                    <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                    <label className="block text-xs font-semibold text-cocoa mb-1">
                       Customization & Substitutions Instructions
                     </label>
                     <input
@@ -1215,81 +1211,81 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                       value={customNotes}
                       onChange={(e) => setCustomNotes(e.target.value)}
                       placeholder="e.g. 100% Eggless chocolates only, swap ribbon color for emerald green"
-                      className="w-full px-3 py-2 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                      className="w-full px-3 py-2 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                     />
                   </div>
                 </div>
 
                 {/* 5. CLIENT CONTACT INFORMATION */}
                 <div className="space-y-3">
-                  <label className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#141414] flex items-center gap-2">
-                    <User className="w-4 h-4 text-[#B8860B]" />
+                  <label className="text-xs font-sans font-semibold text-ink flex items-center gap-2">
+                    <User className="w-4 h-4 text-gold-700" />
                     <span>5. Your Contact Information</span>
                   </label>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Full Name *
                       </label>
                       <div className="relative">
-                        <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8C6821]" />
+                        <User className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-700" />
                         <input
                           type="text"
                           required
                           value={fullName}
                           onChange={(e) => setFullName(e.target.value)}
                           placeholder="e.g. Ananya Sharma"
-                          className="w-full pl-10 pr-3 py-3 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                          className="w-full pl-10 pr-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Email Address
                       </label>
                       <div className="relative">
-                        <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8C6821]" />
+                        <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-700" />
                         <input
                           type="email"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="e.g. ananya@example.com"
-                          className="w-full pl-10 pr-3 py-3 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                          className="w-full pl-10 pr-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Mobile Contact (WhatsApp enabled) *
                       </label>
                       <div className="relative">
-                        <Phone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8C6821]" />
+                        <Phone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-700" />
                         <input
                           type="tel"
                           required
                           value={mobilePhone}
                           onChange={(e) => setMobilePhone(e.target.value)}
                           placeholder="e.g. +91 98765 43210"
-                          className="w-full pl-10 pr-3 py-3 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                          className="w-full pl-10 pr-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Alternate Contact (Optional)
                       </label>
                       <div className="relative">
-                        <Phone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8C6821]" />
+                        <Phone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gold-700" />
                         <input
                           type="tel"
                           value={altPhone}
                           onChange={(e) => setAltPhone(e.target.value)}
                           placeholder="Secondary contact number"
-                          className="w-full pl-10 pr-3 py-3 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                          className="w-full pl-10 pr-3 py-3 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                         />
                       </div>
                     </div>
@@ -1297,17 +1293,17 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                 </div>
 
                 {/* Step 1 Bottom Action Bar */}
-                <div className="pt-5 border-t border-[#EAE5D9] flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div className="text-xs text-[#6B6559]">
+                <div className="pt-5 border-t border-line flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div className="text-xs text-stone">
                     <span>Questions? Reach Ms. Supriya directly: </span>
-                    <strong className="text-[#141414]">+91 {HAMPER_QUEEN_OFFICIAL_CONTACT.phone}</strong>
+                    <strong className="text-ink">+91 {HAMPER_QUEEN_OFFICIAL_CONTACT.phone}</strong>
                   </div>
 
                   <div className="flex items-center gap-3 w-full sm:w-auto">
                     <button
                       type="button"
                       onClick={onClose}
-                      className="w-full sm:w-auto px-5 py-3 rounded-full bg-white border border-[#E5E0D6] text-xs font-semibold text-[#524B40] hover:bg-[#FAF9F5] transition-all cursor-pointer"
+                      className="btn btn-ghost w-full sm:w-auto"
                     >
                       Cancel
                     </button>
@@ -1315,9 +1311,9 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                     <button
                       type="button"
                       onClick={handleProceedToStep2}
-                      className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] font-cinzel font-bold text-xs uppercase tracking-wider border border-[#D4AF37] shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      className="btn btn-primary w-full sm:w-auto"
                     >
-                      <span>Proceed to Final Details & Pinpoint Delivery →</span>
+                      <span>Continue to delivery &amp; payment</span>
                     </button>
                   </div>
                 </div>
@@ -1329,7 +1325,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                 STEP 2: FINAL BUYING DETAILS & PINPOINT DELIVERY TO ANY CORNER
                 ========================================================================= */}
             {checkoutStep === 2 && (
-              <form onSubmit={handleFinalSubmit} className="space-y-7">
+              <form key="step-2" onSubmit={handleFinalSubmit} className="space-y-8 animate-fade-up">
                 
                 {/* Error Banner if Step 2 validation failed */}
                 {step2Error && (
@@ -1348,43 +1344,43 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                 )}
 
                 {/* Order Recap Banner */}
-                <div className="p-4 rounded-2xl bg-white border border-[#D4AF37] shadow-xs flex flex-wrap items-center justify-between gap-3 text-xs">
-                  <div className="flex items-center gap-2.5">
-                    <Gift className="w-4 h-4 text-[#B8860B]" />
+                <div className="p-4 rounded-2xl bg-white border border-gold-200 shadow-soft flex flex-wrap items-center justify-between gap-3 text-xs">
+                  <div className="flex items-center gap-3">
+                    <Gift className="w-4 h-4 text-gold-700" />
                     <div>
-                      <span className="text-[10px] text-[#8C6821] font-bold uppercase tracking-wider block">Booking For:</span>
-                      <strong className="text-[#141414] font-cinzel">
+                      <span className="text-xs text-gold-700 font-semibold block">Booking For:</span>
+                      <strong className="text-ink font-cinzel">
                         {checkoutLines.length > 0
                           ? checkoutLines.map((l) => `${l.name} × ${l.qty}`).join(' + ')
                           : 'Custom Hamper'}
                       </strong>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4 text-[#524B40]">
+                  <div className="flex items-center gap-4 text-cocoa">
                     <div>
-                      <span className="text-[10px] text-[#8C6821] font-bold uppercase block">Delivery:</span>
+                      <span className="text-xs text-gold-700 font-semibold block">Delivery:</span>
                       <span>{deliveryDate} ({timeSlot.split(' ')[0]})</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-[#8C6821] font-bold uppercase block">Client:</span>
+                      <span className="text-xs text-gold-700 font-semibold block">Client:</span>
                       <span>{fullName}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* HIGH-IMPACT DELIVERY TO ANY CORNER GUARANTEE BANNER */}
-                <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#141414] via-[#2A241C] to-[#141414] text-white border border-[#D4AF37] shadow-md flex items-start sm:items-center gap-3.5">
-                  <div className="w-10 h-10 rounded-xl bg-[#DFBA54]/20 border border-[#DFBA54] flex items-center justify-center text-[#DFBA54] shrink-0 mt-0.5 sm:mt-0">
+                <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-gold-50 to-blush-50 ring-1 ring-gold-200 shadow-soft flex items-start sm:items-center gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-white shadow-soft ring-1 ring-gold-200 flex items-center justify-center text-gold-700 shrink-0 mt-0.5 sm:mt-0">
                     <Navigation className="w-5 h-5 animate-pulse" />
                   </div>
                   <div className="space-y-1">
-                    <h4 className="font-cinzel text-xs sm:text-sm font-bold text-[#F3E5AB] flex items-center gap-2">
+                    <h4 className="font-sans text-xs sm:text-sm font-bold text-ink flex items-center gap-2">
                       <span>Delivering to Every Corner & Doorstep</span>
-                      <span className="px-2 py-0.5 rounded-full bg-[#16A34A] text-white text-[9px] font-sans font-bold">
+                      <span className="px-2.5 py-0.5 rounded-full bg-emerald-700 text-white text-xs font-semibold">
                         Nationwide Reach
                       </span>
                     </h4>
-                    <p className="text-[11px] sm:text-xs text-white/80 font-sans leading-relaxed">
+                    <p className="text-xs sm:text-xs text-cocoa font-sans leading-relaxed">
                       From local Mumbai gullies, residential societies, and coastal suburbs to high-rise corporate towers across India — we deliver to any corner. Pin your spot below and confirm relevant address details!
                     </p>
                   </div>
@@ -1394,15 +1390,15 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                 <div className="space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                     <div>
-                      <label className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#141414] flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-[#B8860B]" />
+                      <label className="text-xs font-sans font-semibold text-ink flex items-center gap-2">
+                        <MapPin className="w-4 h-4 text-gold-700" />
                         <span>1. Pinpoint Exact Delivery Spot on Live Map</span>
                       </label>
-                      <p className="text-[11px] text-[#6B6559] mt-0.5">
-                        Drag the gold pin, search your address, or press locate to drop the exact delivery spot.
+                      <p className="text-xs text-stone mt-0.5">
+                        Move the map so the pin sits on your door, search your address, or tap the locate button.
                       </p>
                     </div>
-                    <span className="text-[10px] px-2 py-1 rounded-full bg-[#16A34A]/10 text-[#1E7B3C] font-bold uppercase tracking-wider self-start sm:self-auto">
+                    <span className="text-xs px-2 py-1 rounded-full bg-[#16A34A]/10 text-emerald-800 font-semibold self-start sm:self-auto">
                       Live Interactive Map
                     </span>
                   </div>
@@ -1416,27 +1412,37 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                       setGeoLng(lng);
                       setGeoLabel(label);
                     }}
+                    onAddressResolved={(a) => {
+                      if (a.street) setStreetAddress(a.street);
+                      if (a.city) setCity(a.city);
+                      if (a.pincode) setPincode(a.pincode);
+                      setFlatBuilding((cur) => cur || a.flatBuilding);
+                      setLandmark((cur) => cur || a.landmark);
+                      setAddressFlash(true);
+                      window.setTimeout(() => setAddressFlash(false), 2200);
+                      window.setTimeout(() => document.getElementById('booking-address-fields')?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 250);
+                    }}
                   />
                 </div>
 
                 {/* PART 2: RELEVANT INFO TO CONFIRM PINNED LOCATION IS 100% ACCURATE */}
-                <div className="space-y-3">
+                <div id="booking-address-fields" className={`space-y-3 rounded-3xl p-4 -m-4 transition-all duration-700 ${addressFlash ? 'bg-gold-50 ring-2 ring-gold-300' : 'ring-0 ring-transparent'}`}>
                   <div className="flex items-center justify-between">
-                    <label className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#141414] flex items-center gap-2">
-                      <ShieldCheck className="w-4 h-4 text-[#B8860B]" />
+                    <label className="text-xs font-sans font-semibold text-ink flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-gold-700" />
                       <span>2. Relevant Info to Confirm Pinned Location</span>
                     </label>
-                    <span className="text-[11px] text-[#8C6821] font-semibold">
+                    <span className="text-xs text-gold-700 font-semibold">
                       Doorstep Courier Verification
                     </span>
                   </div>
-                  <p className="text-[11px] text-[#6B6559]">
+                  <p className="text-xs text-stone">
                     Please provide your building, flat, and landmark so our dispatch rider can pinpoint your exact doorstep without hesitation.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div className="sm:col-span-2">
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Flat / House No., Floor & Building / Society Name *
                       </label>
                       <input
@@ -1445,12 +1451,12 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                         value={flatBuilding}
                         onChange={(e) => setFlatBuilding(e.target.value)}
                         placeholder="e.g. Flat 602, B-Wing, Royal Palms Heights"
-                        className="w-full px-3 py-2 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                        className="w-full px-3 py-2 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Postal Pincode *
                       </label>
                       <input
@@ -1459,12 +1465,12 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                         value={pincode}
                         onChange={(e) => setPincode(e.target.value)}
                         placeholder="e.g. 400050"
-                        className="w-full px-3 py-2 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                        className="w-full px-3 py-2 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                       />
                     </div>
 
                     <div className="sm:col-span-2">
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Street, Colony / Area & Prominent Landmark *
                       </label>
                       <input
@@ -1473,12 +1479,12 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                         value={streetAddress}
                         onChange={(e) => setStreetAddress(e.target.value)}
                         placeholder="e.g. Linking Road, Opposite National College / Metro Pillar 42"
-                        className="w-full px-3 py-2 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                        className="w-full px-3 py-2 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         City / District *
                       </label>
                       <input
@@ -1487,12 +1493,12 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                         value={city}
                         onChange={(e) => setCity(e.target.value)}
                         placeholder="Mumbai / Navi Mumbai / Pune / Delhi"
-                        className="w-full px-3 py-2 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                        className="w-full px-3 py-2 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                       />
                     </div>
 
                     <div className="sm:col-span-3">
-                      <label className="block text-[11px] font-semibold text-[#524B40] mb-1">
+                      <label className="block text-xs font-semibold text-cocoa mb-1">
                         Special Landmark or Gate Entry Details (To double-confirm pin)
                       </label>
                       <input
@@ -1500,62 +1506,62 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                         value={landmark}
                         onChange={(e) => setLandmark(e.target.value)}
                         placeholder="e.g. Enter from Gate 2, inform security it is a birthday surprise for Riya"
-                        className="w-full px-3 py-2 rounded-xl bg-white border border-[#E5E0D6] text-xs focus:outline-hidden focus:border-[#B8860B]"
+                        className="w-full px-3 py-2 rounded-xl bg-white border border-line text-xs focus:outline-hidden focus:border-gold-300"
                       />
                     </div>
                   </div>
                 </div>
 
                 {/* PART 3: PAYMENT FORMALITIES & POLICIES */}
-                <div className="p-4 rounded-2xl bg-[#FAF5E8] border border-[#EAE0C8] space-y-3">
+                <div className="p-4 rounded-2xl bg-gold-50 border border-line-strong space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-cinzel font-bold uppercase tracking-wider text-[#8C6821] flex items-center gap-1.5">
-                      <ShieldCheck className="w-4 h-4 text-[#B8860B]" />
+                    <span className="text-xs font-sans font-semibold text-gold-700 flex items-center gap-1.5">
+                      <ShieldCheck className="w-4 h-4 text-gold-700" />
                       <span>3. Payment Formalities & Hamper Queen Guarantee</span>
                     </span>
-                    <span className="text-[11px] text-[#8C6821] font-semibold">Custom Craft Policy</span>
+                    <span className="text-xs text-gold-700 font-semibold">Custom Craft Policy</span>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                    <label
-                      onClick={() => setPaymentOption('upi')}
-                      className={`p-3 rounded-xl border text-xs cursor-pointer transition-all ${
-                        paymentOption === 'upi'
-                          ? 'bg-white border-[#B8860B] font-bold text-[#141414] shadow-xs'
-                          : 'bg-[#FFFDF9] border-[#EAE5D9] text-[#524B40]'
-                      }`}
-                    >
-                      <span>UPI (GPay / PhonePe / Paytm)</span>
-                    </label>
-                    <label
-                      onClick={() => setPaymentOption('bank_transfer')}
-                      className={`p-3 rounded-xl border text-xs cursor-pointer transition-all ${
-                        paymentOption === 'bank_transfer'
-                          ? 'bg-white border-[#B8860B] font-bold text-[#141414] shadow-xs'
-                          : 'bg-[#FFFDF9] border-[#EAE5D9] text-[#524B40]'
-                      }`}
-                    >
-                      <span>Direct Bank Transfer (IMPS/NEFT)</span>
-                    </label>
-                    <label
-                      onClick={() => setPaymentOption('advance_cod')}
-                      className={`p-3 rounded-xl border text-xs cursor-pointer transition-all ${
-                        paymentOption === 'advance_cod'
-                          ? 'bg-white border-[#B8860B] font-bold text-[#141414] shadow-xs'
-                          : 'bg-[#FFFDF9] border-[#EAE5D9] text-[#524B40]'
-                      }`}
-                    >
-                      <span>50% Advance + Balance on Delivery</span>
-                    </label>
+                  <div role="radiogroup" aria-label="Payment method" className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    {([
+                      { id: 'upi', title: 'UPI', sub: 'GPay · PhonePe · Paytm', Icon: Smartphone },
+                      { id: 'bank_transfer', title: 'Bank transfer', sub: 'IMPS / NEFT', Icon: Landmark },
+                      { id: 'advance_cod', title: '50% advance', sub: 'Balance on delivery', Icon: Banknote },
+                    ] as const).map(({ id, title, sub, Icon }) => {
+                      const selected = paymentOption === id;
+                      return (
+                        <button
+                          type="button"
+                          key={id}
+                          role="radio"
+                          aria-checked={selected}
+                          onClick={() => setPaymentOption(id)}
+                          className={`relative text-left p-4 rounded-2xl transition-all duration-250 ${
+                            selected
+                              ? 'bg-gold-50 shadow-lift ring-2 ring-gold-600'
+                              : 'bg-white shadow-soft ring-1 ring-line-strong hover:ring-gold-300 hover:-translate-y-0.5'
+                          }`}
+                        >
+                          <span className={`w-9 h-9 rounded-xl inline-flex items-center justify-center mb-3 transition-colors ${selected ? 'bg-gold-700 text-white' : 'bg-cream-100 text-gold-700'}`}>
+                            <Icon className="w-4 h-4" />
+                          </span>
+                          <span className="block text-sm font-semibold text-ink">{title}</span>
+                          <span className="block text-xs text-stone mt-0.5">{sub}</span>
+                          <span className={`absolute top-3 right-3 w-5 h-5 rounded-full inline-flex items-center justify-center transition-all duration-250 ${selected ? 'bg-gold-700 text-white scale-100 opacity-100' : 'scale-75 opacity-0'}`}>
+                            <Check className="w-3 h-3" />
+                          </span>
+                        </button>
+                      );
+                    })}
                   </div>
 
-                  <label className="flex items-start gap-2 text-[11px] text-[#524B40] cursor-pointer pt-1">
+                  <label className="flex items-start gap-2 text-xs text-cocoa cursor-pointer pt-1">
                     <input
                       type="checkbox"
                       required
                       checked={formalitiesAccepted}
                       onChange={(e) => setFormalitiesAccepted(e.target.checked)}
-                      className="mt-0.5 accent-[#B8860B]"
+                      className="mt-0.5 w-4 h-4 shrink-0 accent-gold-600"
                     />
                     <span>
                       I understand Hamper Queen makes custom hampers with fresh stock. Rates vary as per exact customization and chocolate counts (approx INR 140 to INR 899). Formal invoice will be verified directly on WhatsApp with Ms. Supriya.
@@ -1563,12 +1569,12 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                   </label>
 
                   {/* Privacy & Data Consent (required) */}
-                  <label className="flex items-start gap-2 text-[11px] text-[#524B40] cursor-pointer pt-1 border-t border-[#EAE0C8]">
+                  <label className="flex items-start gap-2 text-xs text-cocoa cursor-pointer pt-1 border-t border-line-strong">
                     <input
                       type="checkbox"
                       checked={consentGiven}
                       onChange={(e) => setConsentGiven(e.target.checked)}
-                      className="mt-0.5 accent-[#B8860B]"
+                      className="mt-0.5 w-4 h-4 shrink-0 accent-gold-600"
                     />
                     <span className="leading-relaxed">
                       I consent to Hamper Queen storing my order details, delivery address, GPS pin, and device/connection info (server-detected region) solely to process, fulfil, and deliver this order and to contact me on WhatsApp/phone. I will receive a payment receipt and tracking ID for this order.
@@ -1576,8 +1582,8 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                   </label>
 
                   {/* No live payment gateway notice */}
-                  <div className="p-3 rounded-xl bg-white border border-[#D4AF37]/60 text-[11px] text-[#524B40] flex items-start gap-2">
-                    <Lock className="w-4 h-4 text-[#B8860B] shrink-0 mt-0.5" />
+                  <div className="p-3 rounded-xl bg-white border border-gold-400/60 text-xs text-cocoa flex items-start gap-2">
+                    <Lock className="w-4 h-4 text-gold-700 shrink-0 mt-0.5" />
                     <span>
                       Secure ordering — your custom invoice and payment details will be shared by Hamper Queen on WhatsApp shortly after you confirm. No payment is collected on this website yet.
                     </span>
@@ -1585,7 +1591,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                 </div>
 
                 {/* Step 2 Bottom Action Bar */}
-                <div className="pt-4 border-t border-[#EAE5D9] flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="pt-4 border-t border-line flex flex-col sm:flex-row items-center justify-between gap-4">
                   <button
                     type="button"
                     onClick={() => {
@@ -1593,7 +1599,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                       const formEl = document.getElementById('booking-modal-scrollable');
                       if (formEl) formEl.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
-                    className="flex items-center gap-1.5 text-xs text-[#8C6821] hover:underline cursor-pointer order-2 sm:order-1 font-semibold"
+                    className="flex items-center gap-1.5 text-xs text-gold-700 hover:underline cursor-pointer order-2 sm:order-1 font-semibold"
                   >
                     <ChevronLeft className="w-4 h-4" />
                     <span>Back to Gift Details</span>
@@ -1603,7 +1609,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                     <button
                       type="button"
                       onClick={onClose}
-                      className="w-full sm:w-auto px-5 py-3 rounded-full bg-white border border-[#E5E0D6] text-xs font-semibold text-[#524B40] hover:bg-[#FAF9F5] transition-all cursor-pointer"
+                      className="btn btn-ghost w-full sm:w-auto"
                     >
                       Cancel
                     </button>
@@ -1611,7 +1617,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] font-cinzel font-bold text-xs uppercase tracking-wider border border-[#D4AF37] shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-wait"
+                      className="btn btn-primary w-full sm:w-auto"
                     >
                       {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Lock className="w-4 h-4" />}
                       <span>{isSubmitting ? 'Saving Your Order...' : 'Confirm Order & Get Tracking ID →'}</span>
@@ -1629,55 +1635,55 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
              ========================================================================= */
           <div className="p-6 sm:p-10 space-y-6 text-center">
             
-            <div className="w-16 h-16 rounded-full bg-[#ECFDF5] border-2 border-[#10B981] text-[#10B981] mx-auto flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-emerald-50 ring-2 ring-emerald-500 text-emerald-600 mx-auto flex items-center justify-center animate-pop-in">
               <Check className="w-8 h-8 stroke-[3]" />
             </div>
 
             <div className="space-y-2">
-              <span className="text-xs font-cinzel font-bold uppercase tracking-widest text-[#8C6821]">
+              <span className="text-xs font-sans font-semibold text-gold-700">
                 Order Successfully Placed
               </span>
-              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-[#141414]">
+              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-ink">
                 Your Tracking ID is Ready!
               </h3>
-              <p className="text-xs text-[#6B6559] max-w-md mx-auto">
-                Your order <strong className="text-[#141414]">{bookingRef}</strong> is saved. Share this code with your recipient to track delivery. Payment details + formal invoice will be shared on WhatsApp shortly.
+              <p className="text-xs text-stone max-w-md mx-auto">
+                Your order <strong className="text-ink">{bookingRef}</strong> is saved. Share this code with your recipient to track delivery. Payment details + formal invoice will be shared on WhatsApp shortly.
               </p>
             </div>
 
             {/* Official Order Summary Card */}
-            <div className="max-w-xl mx-auto p-5 rounded-2xl bg-white border-2 border-[#D4AF37]/50 shadow-sm text-left space-y-3 text-xs">
-              <div className="flex items-center justify-between pb-2 border-b border-[#EAE5D9]">
-                <span className="font-cinzel font-bold text-sm text-[#141414]">
+            <div className="max-w-xl mx-auto p-5 rounded-2xl bg-white border border-gold-400/50 shadow-soft text-left space-y-3 text-xs">
+              <div className="flex items-center justify-between pb-2 border-b border-line">
+                <span className="font-sans font-bold text-sm text-ink">
                   Tracking ID: {bookingRef}
                 </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-[#FAF5E8] text-[#8C6821] font-bold text-[10px] border border-[#D4AF37]/40">
+                <span className="px-3 py-0.5 rounded-full bg-gold-50 text-gold-700 font-bold text-xs border border-gold-400/40">
                   Awaiting Payment
                 </span>
               </div>
 
-              <div className="grid grid-cols-2 gap-2 text-[#524B40]">
+              <div className="grid grid-cols-2 gap-2 text-cocoa">
                 <div>
-                  <span className="block text-[10px] text-[#8C6821] font-semibold uppercase">Client:</span>
-                  <strong className="text-[#141414]">{fullName}</strong> ({mobilePhone})
+                  <span className="block text-xs text-gold-700 font-semibold">Client:</span>
+                  <strong className="text-ink">{fullName}</strong> ({mobilePhone})
                 </div>
                 <div>
-                  <span className="block text-[10px] text-[#8C6821] font-semibold uppercase">Delivery Date:</span>
-                  <strong className="text-[#141414]">{deliveryDate}</strong> ({timeSlot})
+                  <span className="block text-xs text-gold-700 font-semibold">Delivery Date:</span>
+                  <strong className="text-ink">{deliveryDate}</strong> ({timeSlot})
                 </div>
                 <div>
-                  <span className="block text-[10px] text-[#8C6821] font-semibold uppercase">Order Contents:</span>
-                  <strong className="text-[#141414]">
+                  <span className="block text-xs text-gold-700 font-semibold">Order Contents:</span>
+                  <strong className="text-ink">
                     {checkoutLines.length > 0 ? checkoutLines.map((l) => `${l.name} × ${l.qty}`).join(', ') : 'Custom Hamper'}
                   </strong>
                 </div>
                 <div>
-                  <span className="block text-[10px] text-[#8C6821] font-semibold uppercase">Map Pin Location:</span>
+                  <span className="block text-xs text-gold-700 font-semibold">Map Pin Location:</span>
                   <a
                     href={`https://maps.google.com/?q=${geoLat},${geoLng}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#B8860B] font-bold hover:underline inline-flex items-center gap-1"
+                    className="text-gold-700 font-semibold hover:underline inline-flex items-center gap-1"
                   >
                     <span>Lat: {geoLat}, Lng: {geoLng}</span>
                     <ExternalLink className="w-3 h-3" />
@@ -1685,22 +1691,22 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-[#EAE5D9] text-[11px] text-[#6B6559]">
+              <div className="pt-2 border-t border-line text-xs text-stone">
                 <span>Confirmed Delivery Address: </span>
-                <strong className="text-[#141414]">
+                <strong className="text-ink">
                   {flatBuilding}, {streetAddress}{landmark ? `, Near ${landmark}` : ''}, {city} - {pincode}
                 </strong>
               </div>
 
               {promo && promo.discount > 0 && (
-                <div className="rounded-xl bg-emerald-50 border border-emerald-200 p-3 text-[11px] text-[#1E7B3C]">
+                <div className="rounded-xl bg-emerald-50 border border-emerald-200 p-3 text-xs text-emerald-800">
                   <span className="font-bold">Coupon {promo.code} applied: </span>
                   You saved INR {promo.discount.toLocaleString('en-IN')} on this order. Your final total was adjusted accordingly.
                 </div>
               )}
 
-              <div className="pt-2 border-t border-[#EAE5D9] rounded-xl bg-[#FAF5E8] p-3 text-[11px] text-[#524B40]">
-                <span className="font-bold text-[#8C6821]">Payment Pending: </span>
+              <div className="pt-2 border-t border-line rounded-xl bg-gold-50 p-3 text-xs text-cocoa">
+                <span className="font-bold text-gold-700">Payment Pending: </span>
                 We'll share the payment receipt and final invoice on WhatsApp. Your order is confirmed the moment payment clears.
               </div>
             </div>
@@ -1711,7 +1717,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                 href={`/track/${bookingRef}`}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full sm:w-auto flex-1 py-4 px-6 rounded-full bg-[#141414] hover:bg-[#252525] text-[#DFBA54] font-sans font-bold text-xs border border-[#D4AF37] shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto flex-1 py-4 px-6 rounded-full bg-ink hover:bg-ink-soft text-gold-100 font-sans font-semibold text-xs shadow-lift hover:shadow-lift transition-all flex items-center justify-center gap-2"
               >
                 <Search className="w-4 h-4" />
                 <span>Track This Order Live</span>
@@ -1719,7 +1725,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
               <button
                 onClick={handleLaunchWhatsApp}
-                className="w-full sm:w-auto flex-1 py-4 px-6 rounded-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-sans font-bold text-xs shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto flex-1 py-4 px-6 rounded-full bg-whatsapp hover:bg-whatsapp-dark text-white font-sans font-semibold text-xs shadow-lift hover:shadow-lift transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Send className="w-4 h-4 fill-white" />
                 <span>Confirm on WhatsApp</span>
@@ -1727,15 +1733,15 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
 
               <button
                 onClick={handleCopySummary}
-                className="w-full sm:w-auto p-3.5 rounded-full bg-white border border-[#D4AF37] text-[#524B40] hover:text-[#141414] shadow-xs flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto p-4 rounded-full bg-white border border-gold-200 text-cocoa hover:text-ink shadow-soft flex items-center justify-center gap-2 cursor-pointer"
                 title="Copy Summary"
               >
-                {isCopied ? <Check className="w-4 h-4 text-[#16A34A]" /> : <Copy className="w-4 h-4 text-[#8C6821]" />}
+                {isCopied ? <Check className="w-4 h-4 text-emerald-700" /> : <Copy className="w-4 h-4 text-gold-700" />}
               </button>
 
               <button
                 onClick={() => window.print()}
-                className="w-full sm:w-auto p-3.5 rounded-full bg-white border border-[#E5E0D6] text-[#524B40] hover:text-[#141414] shadow-xs cursor-pointer"
+                className="w-full sm:w-auto p-4 rounded-full bg-white border border-line text-cocoa hover:text-ink shadow-soft cursor-pointer"
                 title="Print Order Slip"
               >
                 <Printer className="w-4 h-4" />
@@ -1748,7 +1754,7 @@ export const BookingOrderModal: React.FC<BookingOrderModalProps> = ({
                 setCheckoutStep(1);
                 onClose();
               }}
-              className="text-xs text-[#8C6821] hover:underline cursor-pointer block mx-auto pt-2"
+              className="text-xs text-gold-700 hover:underline cursor-pointer block mx-auto pt-2"
             >
               Close & Return to Catalog
             </button>
