@@ -35,8 +35,10 @@ render a `sr-only` `<h1>` so every page has exactly one level-1 heading in serve
 
 | File | Role |
 | --- | --- |
-| `components/Header.tsx` | Announcement strip + one sticky bar, animated mobile menu |
-| `components/RoyalCoverHero.tsx` | Hero card: copy column + 3D configurator panel (same height, stage background) |
+| `components/Header.tsx` | Dark gold-accented announcement bar (dispatch / delivery / min order / phone) + one sticky bar, animated mobile menu |
+| `scripts/generate-icons.py` | Builds favicon / apple / PWA / maskable icons from `public/hamper.png` (`npm run icons`) |
+| `components/FounderStrip.tsx` | "Founded by Ms. Supriya Khandekar" band, rendered directly below the hero on the home page |
+| `components/RoyalCoverHero.tsx` | Hero card: copy column + 3D configurator panel (same height, stage background). Sized to fit a 1366x768 desktop viewport below the header |
 | `components/ThreeDGiftBox.tsx` | CSS-3D boxes/trays/bags, rAF rotation, pop-out item cards |
 | `components/BouquetArt.tsx` | SVG bouquet (palette-driven, SSR-safe) |
 | `components/HamperQueenShowcase.tsx` | Catalogue cards, filters, bulk banner |

@@ -17,7 +17,7 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
-import { ArrowRight, MessageCircle, ChevronDown, Gift, Sparkles, Zap, ShieldCheck, Tag } from 'lucide-react';
+import { ArrowRight, MessageCircle, Gift, Sparkles, Zap, ShieldCheck, Tag } from 'lucide-react';
 import { LanguageMode } from '../types';
 import { royaleLogger } from '../utils/logger';
 import { HAMPER_QUEEN_OFFICIAL_CONTACT } from '../data/hamperQueenCatalog';
@@ -154,9 +154,9 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
   const activeSwatchLabel = swatches.find((s) => s.id === activeSwatch)?.label;
 
   return (
-    <section id="homepage-hero" className="surface-warm section-tight pb-8 sm:pb-12">
+    <section id="homepage-hero" className="surface-warm section-tight pb-5 sm:pb-6 lg:pt-4 lg:pb-5">
       <div className="container-page">
-        <div className="relative overflow-hidden rounded-[2rem] bg-white/50 shadow-soft ring-1 ring-line p-5 sm:p-10 lg:p-12">
+        <div className="relative overflow-hidden rounded-[2rem] bg-white/50 shadow-soft ring-1 ring-line p-5 sm:p-8 lg:p-7 xl:p-8">
           {/* Soft photography, faded out towards the copy so text stays crisp */}
           <div
             aria-hidden="true"
@@ -184,21 +184,21 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
           <div aria-hidden="true" className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-gold-200/40 blur-3xl" />
           <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-blush-100 blur-3xl" />
 
-          <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 lg:items-stretch">
+          <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 lg:items-stretch">
             {/* ---------- Copy ---------- */}
-            <div className="lg:col-span-7 flex flex-col items-start justify-center gap-8 lg:gap-10">
-              <div className="flex w-full flex-col items-start gap-6">
+            <div className="lg:col-span-7 flex flex-col items-start justify-center gap-6 lg:gap-6">
+              <div className="flex w-full flex-col items-start gap-5 lg:gap-4">
               <span className="eyebrow">
                 <Sparkles className="w-3.5 h-3.5 text-gold-700" aria-hidden="true" />
                 Experience to remember
               </span>
 
-              <div className="flex flex-col gap-4">
-                <h1 className="font-seasons text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] text-ink">
+              <div className="flex flex-col gap-3 lg:gap-3">
+                <h1 className="font-seasons text-4xl sm:text-5xl lg:text-[2.75rem] xl:text-5xl font-bold leading-[1.08] text-ink">
                   Handcrafted luxury{' '}
                   <span className="accent-script block mt-1">hampers &amp; gift boxes</span>
                 </h1>
-                <p className="text-base sm:text-lg text-stone leading-relaxed max-w-xl">
+                <p className="text-base lg:text-[1.05rem] text-stone leading-relaxed max-w-xl">
                   Handcrafted hampers, chocolate bouquets &amp; photo keepsakes packed with love and dispatched same-day across India.
                 </p>
               </div>
@@ -224,7 +224,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
 
               <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-2xl">
                 {TRUST_POINTS.map(({ icon: Icon, title, sub }) => (
-                  <li key={title} className="flex items-center gap-3 rounded-2xl bg-white/80 backdrop-blur shadow-soft ring-1 ring-line p-3">
+                  <li key={title} className="flex items-center gap-3 rounded-2xl bg-white/80 backdrop-blur shadow-soft ring-1 ring-line p-2.5">
                     <span className="w-9 h-9 shrink-0 rounded-xl bg-gold-50 text-gold-700 flex items-center justify-center">
                       <Icon className="w-4 h-4" aria-hidden="true" />
                     </span>
@@ -239,7 +239,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
 
             {/* ---------- 3D configurator: same height as the copy column ---------- */}
             <div className="lg:col-span-5 flex">
-              <div className="mx-auto flex w-full max-w-md flex-col gap-4 rounded-3xl bg-white/85 p-4 shadow-lift ring-1 ring-line backdrop-blur-md sm:p-5 lg:max-w-none">
+              <div className="mx-auto flex w-full max-w-md flex-col gap-3 rounded-3xl bg-white/85 p-4 shadow-lift ring-1 ring-line backdrop-blur-md lg:max-w-none lg:p-4">
                 {/* Container type: ONE segmented control */}
                 <div
                   role="radiogroup"
@@ -307,7 +307,7 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
                 </div>
 
                 {/* Stage: its own background container, so the box always sits centred and well-sized */}
-                <div className="relative min-h-[330px] flex-1 overflow-hidden rounded-2xl bg-[radial-gradient(ellipse_at_50%_58%,#ffffff_0%,#fdf6e6_55%,#f6e9cd_100%)] shadow-[inset_0_0_0_1px_var(--color-gold-200),inset_0_-24px_40px_-24px_rgba(140,104,33,0.25)]">
+                <div className="relative min-h-[300px] lg:min-h-[250px] flex-1 overflow-hidden rounded-2xl bg-[radial-gradient(ellipse_at_50%_58%,#ffffff_0%,#fdf6e6_55%,#f6e9cd_100%)] shadow-[inset_0_0_0_1px_var(--color-gold-200),inset_0_-24px_40px_-24px_rgba(140,104,33,0.25)]">
                   <ThreeDGiftBox
                     compact
                     variant={boxVariant}
@@ -334,17 +334,6 @@ export const RoyalCoverHero: React.FC<RoyalCoverHeroProps> = ({
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Scroll cue */}
-        <div className="mt-6 flex justify-center">
-          <button
-            onClick={handleScrollToContent}
-            className="group inline-flex items-center gap-2 text-sm font-medium text-cocoa hover:text-ink transition-colors"
-          >
-            <span>Explore the 12 birthday hampers &amp; bouquets</span>
-            <ChevronDown className="w-4 h-4 text-gold-700 transition-transform duration-250 group-hover:translate-y-0.5" aria-hidden="true" />
-          </button>
         </div>
       </div>
     </section>

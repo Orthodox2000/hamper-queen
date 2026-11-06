@@ -1,5 +1,5 @@
 // Auto-generated retail rates captured from Blinkit product pages on 2026-09-25.
-// Price location: Gurugram (chain 1383) — indicative rates; Mumbai may differ a few INR.
+// Indicative retail rates — actual hamper pricing is confirmed at order time.
 // This file is generated — re-run: node scripts/fetch-retail-rates.mjs
 
 export interface RetailRateItem {
@@ -19,7 +19,6 @@ export interface RetailRateItem {
 }
 
 export const RETAIL_RATES_CAPTURED_AT = '2026-09-25';
-export const RETAIL_RATES_LOCATION = 'Gurugram';
 
 export const RETAIL_RATES: RetailRateItem[] = [
   {

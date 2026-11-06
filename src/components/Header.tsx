@@ -3,8 +3,8 @@
 /**
  * Header.tsx
  * -----------------------------------------------------------------------------
- * Site chrome: a quiet announcement strip (scrolls away) + ONE slim sticky
- * navigation bar.
+ * Site chrome: a dark gold-accented announcement bar (scrolls away) + ONE slim
+ * sticky navigation bar. The founder line lives in <FounderStrip /> below the hero.
  *
  *  - Sticky bar is a fixed 4rem (--header-h) so anchors, drawers and sticky
  *    sub-navs can all rely on the same offset — no layout shift.
@@ -18,7 +18,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ShoppingBag, Menu, X, Gift, MessageCircle, Search, Compass, Home, Sparkles } from 'lucide-react';
+import { ShoppingBag, Menu, X, Gift, MessageCircle, Search, Compass, Home, Sparkles, Zap, Truck, Phone } from 'lucide-react';
 import { CustomHamper, LanguageMode } from '../types';
 import { TRANSLATIONS } from '../data/translations';
 import { HamperQueenLogo } from './HamperQueenLogo';
@@ -83,22 +83,31 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <>
-      {/* Announcement strip — scrolls away so only one bar stays pinned */}
-      <div className="bg-cream-100 text-cocoa text-xs">
-        <div className="container-page flex items-center justify-between gap-4 py-2">
-          <p className="flex items-center gap-2 min-w-0">
-            <Sparkles className="w-3.5 h-3.5 text-gold-700 shrink-0" aria-hidden="true" />
-            <span className="truncate">
-              <span className="hidden lg:inline">
-                Founded by <strong className="font-semibold text-ink">Ms. Supriya Khandekar</strong> — homegrown gifting boutique ·{' '}
-              </span>
-              Same-day dispatch from Mumbai · Free delivery above ₹{HAMPER_QUEEN_OFFICIAL_CONTACT.freeDeliveryThreshold}
-            </span>
-          </p>
+      {/* Announcement bar — dark ink with gold accents; scrolls away so only one bar stays pinned */}
+      <div className="relative bg-ink text-gold-100 text-xs overflow-hidden">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold-400/70 to-transparent" />
+        <div className="container-page flex items-center justify-center lg:justify-between gap-6 py-2.5">
+          <ul className="flex items-center justify-center gap-x-5 gap-y-1 min-w-0 font-medium tracking-wide">
+            <li className="flex items-center gap-2 whitespace-nowrap">
+              <Zap className="w-3.5 h-3.5 text-gold-300 shrink-0" aria-hidden="true" />
+              <span>Same-day dispatch from Mumbai</span>
+            </li>
+            <li aria-hidden="true" className="hidden sm:block text-gold-500/60">◆</li>
+            <li className="hidden sm:flex items-center gap-2 whitespace-nowrap">
+              <Truck className="w-3.5 h-3.5 text-gold-300 shrink-0" aria-hidden="true" />
+              <span>Free delivery above ₹{HAMPER_QUEEN_OFFICIAL_CONTACT.freeDeliveryThreshold}</span>
+            </li>
+            <li aria-hidden="true" className="hidden md:block text-gold-500/60">◆</li>
+            <li className="hidden md:flex items-center gap-2 whitespace-nowrap">
+              <Sparkles className="w-3.5 h-3.5 text-gold-300 shrink-0" aria-hidden="true" />
+              <span>Custom hampers from ₹{HAMPER_QUEEN_OFFICIAL_CONTACT.minOrder}</span>
+            </li>
+          </ul>
           <a
             href={`tel:+91${HAMPER_QUEEN_OFFICIAL_CONTACT.phone}`}
-            className="hidden sm:inline-flex shrink-0 font-semibold text-ink hover:text-gold-700 transition-colors"
+            className="hidden lg:inline-flex shrink-0 items-center gap-2 rounded-full px-3 py-1 font-semibold text-gold-100 shadow-[inset_0_0_0_1px_rgba(223,186,84,0.45)] hover:bg-gold-300 hover:text-ink transition-colors"
           >
+            <Phone className="w-3.5 h-3.5" aria-hidden="true" />
             {HAMPER_QUEEN_OFFICIAL_CONTACT.phoneDisplay}
           </a>
         </div>

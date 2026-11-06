@@ -1,0 +1,7 @@
+/* TEAM */
+Founder: Ms. Supriya Khandekar
+Site: Hamper Queen - custom gift hampers & chocolate bouquets, Mumbai
+
+/* SITE */
+Last update: 2026/11/06
+Standards: HTML5, CSS3, Next.js

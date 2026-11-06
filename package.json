@@ -10,13 +10,15 @@
     "lint": "tsc --noEmit",
     "db:test": "node --env-file=.env scripts/test-mongo.mjs",
     "db:bootstrap": "node --env-file=.env scripts/bootstrap-db.mjs",
+    "db:reset-admin": "node --env-file=.env scripts/reset-admin.mjs",
     "db:test-promo": "node --env-file=.env scripts/test-promo.mjs",
     "setup": "node scripts/setup-env.mjs",
     "db:up": "docker compose up -d mongo",
     "db:down": "docker compose down",
     "db:logs": "docker compose logs -f mongo",
     "db:setup": "node scripts/setup-env.mjs --if-missing && node --env-file=.env scripts/bootstrap-db.mjs",
-    "check:ssr": "node scripts/ssr-check.mjs"
+    "check:ssr": "node scripts/ssr-check.mjs",
+    "icons": "python3 scripts/generate-icons.py"
   },
   "dependencies": {
     "@fontsource-variable/dancing-script": "^5.3.0",

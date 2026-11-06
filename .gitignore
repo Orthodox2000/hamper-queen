@@ -10,3 +10,4 @@ coverage/
 !.env.example
 devserver.log
 tsconfig.tsbuildinfo
+!.env.production.example

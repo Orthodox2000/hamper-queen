@@ -31,7 +31,7 @@ import {
 } from '../data/hamperQueenCatalog';
 import { HamperQueenGraphic } from './HamperQueenGraphic';
 import { resolveRateLines } from '../utils/retailPricing';
-import { RETAIL_RATES_CAPTURED_AT, RETAIL_RATES_LOCATION } from '../data/retailRates';
+import { RETAIL_RATES_CAPTURED_AT } from '../data/retailRates';
 import { LanguageMode } from '../types';
 import { TRANSLATIONS } from '../data/translations';
 import { royaleLogger } from '../utils/logger';
@@ -304,7 +304,7 @@ export const HamperQueenShowcase: React.FC<HamperQueenShowcaseProps> = ({
                           Real Retail Rates
                         </span>
                         <span className="text-xs text-gold-700 font-semibold">
-                          {RETAIL_RATES_LOCATION} · {RETAIL_RATES_CAPTURED_AT}
+                          Updated {RETAIL_RATES_CAPTURED_AT}
                         </span>
                       </div>
                       <div className="flex flex-col gap-1.5">

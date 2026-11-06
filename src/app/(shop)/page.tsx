@@ -2,6 +2,7 @@
 
 import React from "react";
 import { RoyalCoverHero } from "../../components/RoyalCoverHero";
+import { FounderStrip } from "../../components/FounderStrip";
 import { HamperQueenShowcase } from "../../components/HamperQueenShowcase";
 import { BulkOrdersSection } from "../../components/BulkOrdersSection";
 import { RoyalInspirationGallery } from "../../components/RoyalInspirationGallery";
@@ -81,6 +82,8 @@ export function RootHome() {
           goTop();
         }}
       />
+
+      <FounderStrip />
 
       <HamperQueenShowcase
         language={language}

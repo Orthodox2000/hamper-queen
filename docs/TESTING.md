@@ -43,7 +43,7 @@ Re-run `npm run db:bootstrap` a second time: it must report existing indexes/own
 ## 4. Visual & accessibility audits
 
 * **Contrast audit:** for every visible text node compute `color` vs the effective background (walk up the DOM, blend alpha, average gradient stops) and flag < 4.5:1 (< 3:1 for ≥ 24px or ≥ 18.66px bold). Ignore text over photos. Release 2.2.0: Customise page 270 → ~10 findings (disabled controls + text over images).
-* **Layout:** check 1440 / 1180 / 1024 / 390. Hero columns must be the same height (verified 558 = 558, 688 = 688 at 1024) and the panel height must not change when switching Hampers / Bouquet / Tray / Gift Bag.
+* **Layout:** check 1440 / 1366x768 / 1180 / 1024 / 390. At 1366x768 the whole hero card must be visible below the header without scrolling. Hero columns must be the same height (verified 558 = 558, 688 = 688 at 1024) and the panel height must not change when switching Hampers / Bouquet / Tray / Gift Bag.
 * **Overflow:** `document.documentElement.scrollWidth <= clientWidth` at 390.
 * **Reduced motion:** enable the OS setting; nothing should animate or auto-rotate.
 
@@ -54,7 +54,8 @@ Re-run `npm run db:bootstrap` a second time: it must report existing indexes/own
 | `npm run setup` | create `.env` |
 | `npm run db:test` | connectivity |
 | `npm run db:bootstrap` / `db:setup` | collections, indexes, owner |
-| `npm run db:test-promo` | promo redemption self-test |
+| `npm run db:test-promo` | promo redemption self-test (also signs in through `/api/admin/login`) |
+| `npm run db:reset-admin` | create/reset an admin login |
 | `npm run check:ssr` | SSR smoke test |
 
 ## 6. Known limits of the current automation
@@ -62,3 +63,11 @@ Re-run `npm run db:bootstrap` a second time: it must report existing indexes/own
 * Automated browser runs were **Chromium only**; Safari/Firefox rely on the checklist in BROWSER_SUPPORT.md.
 * The end-to-end run used a MongoDB-compatible server (FerretDB) because real `mongod`/Atlas weren't reachable from the build sandbox. It supports everything the app uses except TTL indexes, which is why TTL creation is tolerated. Run the checklist once against real MongoDB/Atlas before launch.
 * Reverse geocoding/search use Nominatim; behaviour was verified with mocked responses, not live traffic.
+
+## Admin login checklist
+
+1. Wrong password → 401 "Incorrect username or password." (same message for unknown or deactivated users).
+2. Correct password, any username casing → 200 and an `hq_admin` cookie (HttpOnly, SameSite=Lax, 7 days, `Secure` in production).
+3. `/admin` renders the dashboard with that cookie and the login form without it; `POST /api/admin/logout` clears it.
+4. 8 wrong attempts → 429 for 15 minutes; a different IP is unaffected.
+5. After `db:reset-admin`: the old password fails, the new one works, old sessions are gone.

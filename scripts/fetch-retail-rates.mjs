@@ -200,12 +200,10 @@ const data = [...curated, ...added]
 
 await mkdir(path.dirname(OUT_FILE), { recursive: true });
 
-const locality = curated.find((r) => r.locality)?.locality?.name ?? 'Gurugram';
-const chainId = curated.find((r) => r.chainId)?.chainId ?? 1383;
 const capturedAt = data[0]?.capturedAt ?? new Date().toISOString().slice(0, 10);
 
 const ts = `// Auto-generated retail rates captured from Blinkit product pages on ${capturedAt}.
-// Price location: ${locality} (chain ${chainId}) — indicative rates; Mumbai may differ a few INR.
+// Indicative retail rates — actual hamper pricing is confirmed at order time.
 // This file is generated — re-run: node scripts/fetch-retail-rates.mjs
 
 export interface RetailRateItem {
@@ -225,7 +223,6 @@ export interface RetailRateItem {
 }
 
 export const RETAIL_RATES_CAPTURED_AT = '${capturedAt}';
-export const RETAIL_RATES_LOCATION = '${locality}';
 
 export const RETAIL_RATES: RetailRateItem[] = ${JSON.stringify(data, null, 2)};
 
@@ -243,7 +240,6 @@ console.log(`Wrote ${data.length} records (${curated.length} curated + ${added.l
 
 const datasetJson = {
   source: 'https://www.blinkit.com/',
-  locality: `${locality} (chain ${chainId})`,
   capturedAt,
   description:
     'Original-source catalog manifest. Every retail product image is mirrored locally under /retail/<key>.jpg; imageUrlOriginal/sourceUrl preserve the origin for re-download or re-reference. Do not edit by hand — re-run: node scripts/fetch-retail-rates.mjs',

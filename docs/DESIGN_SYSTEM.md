@@ -72,3 +72,10 @@ White cards must have a ring **and** a shadow; never white-on-white with neither
 2. Cards: `className="card card-hover"`, graphics wrapped in `.card-art`.
 3. Buttons/inputs from the classes above; no raw hex; no `uppercase tracking-widest` labels.
 4. Run the contrast audit (TESTING.md) and check at 390 / 1024 / 1440.
+
+## Icons & app identity
+
+* **Small sizes use the crown only** (gold `#C68F1E` on ink `#141210`); the full seal with text is only used at 192px and above on cream.
+* Files: `src/app/favicon.ico`, `icon.png`, `apple-icon.png` (Next file conventions, auto-linked) and `public/icons/*` (manifest, Windows tile). Maskable icons keep the crown inside the 80% safe zone.
+* Never edit these by hand: replace `public/hamper.png` and run `npm run icons`.
+* After deploying, favicons are cached aggressively: hard-refresh or open in a private window to verify.

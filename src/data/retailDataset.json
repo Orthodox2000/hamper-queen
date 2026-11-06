@@ -1,6 +1,5 @@
 {
   "source": "https://www.blinkit.com/",
-  "locality": "Gurugram (chain 1383)",
   "capturedAt": "2026-09-25",
   "description": "Original-source catalog manifest. Every retail product image is mirrored locally under /retail/<key>.jpg; imageUrlOriginal/sourceUrl preserve the origin for re-download or re-reference. Do not edit by hand — re-run: node scripts/fetch-retail-rates.mjs",
   "items": [

@@ -7,6 +7,23 @@ Open **`/admin`** and sign in. Not linked from the storefront. All admin pages a
 The first **owner** account is created by `npm run db:bootstrap` (see ENVIRONMENT.md). Sessions last 7 days
 (cookie `hq_admin`) and are stored in MongoDB. **Log out** is in the top bar of every admin screen.
 
+### Forgot the password, or can't sign in?
+
+Passwords are stored hashed in MongoDB, so nobody (including the developer) can read them: they can only be reset.
+From a laptop that has the project and the production `MONGODB_URI`:
+
+```bash
+npm run db:reset-admin                      # prompts for username + hidden new password
+# or, against production explicitly:
+HQ_ENV_FILE=.env.production node --env-file=.env.production scripts/reset-admin.mjs
+```
+
+* Existing username → password replaced, account re-activated, all of its old sessions signed out.
+* Unknown username → created (as `owner` if no owner exists yet, otherwise `admin`).
+* Usernames are case-insensitive. Passwords are case-sensitive and must be 8+ characters.
+* After **8 wrong attempts** from one IP for one username the login is locked for 15 minutes (HTTP 429).
+* A deactivated account (Staff page) cannot sign in until the owner re-activates it.
+
 ## The top bar (every screen)
 
 Orders · Catalog · Promo codes · Staff tabs, a **Storefront** link (opens the live site), and **Log out**.

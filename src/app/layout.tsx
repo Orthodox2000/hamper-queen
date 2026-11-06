@@ -19,6 +19,17 @@ export const metadata: Metadata = {
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   manifest: '/manifest.webmanifest',
+  applicationName: 'Hamper Queen',
+  category: 'shopping',
+  authors: [{ name: 'Hamper Queen', url: SITE_URL }],
+  creator: 'Ms. Supriya Khandekar',
+  publisher: 'Hamper Queen',
+  formatDetection: { telephone: false, email: false, address: false },
+  other: {
+    'msapplication-config': '/browserconfig.xml',
+    'msapplication-TileColor': '#141210',
+    'mobile-web-app-capable': 'yes',
+  },
   appleWebApp: {
     title: 'Hamper Queen',
     capable: true,

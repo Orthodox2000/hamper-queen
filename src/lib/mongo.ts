@@ -80,6 +80,12 @@ async function getClient(): Promise<MongoClient> {
     throw lastErr;
   })();
 
+  // A failed first connect (Atlas IP not allow-listed yet, brief network blip) must not be cached:
+  // otherwise every later request on this warm instance fails until the process restarts.
+  clientPromise.catch(() => {
+    clientPromise = null;
+  });
+
   return clientPromise;
 }
 

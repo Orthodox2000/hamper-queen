@@ -8,11 +8,9 @@
  */
 
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { Crown, Lock, Loader2, AlertCircle, ArrowLeft } from 'lucide-react';
 
 export function AdminLogin() {
-  const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -38,8 +36,8 @@ export function AdminLogin() {
         setSubmitting(false);
         return;
       }
-      router.refresh();
-      router.replace('/admin');
+      // Full navigation: guarantees the fresh httpOnly cookie is sent and the server gate re-renders.
+      window.location.replace('/admin');
     } catch {
       setError('Connection error. Please try again.');
       setSubmitting(false);

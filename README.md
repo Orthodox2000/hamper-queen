@@ -71,6 +71,7 @@ npm run start      # serves the production build on :3000
 | `npm run lint` | TypeScript typecheck (`tsc --noEmit`) |
 | `npm run db:test` | Ping MongoDB Atlas (reads `MONGODB_URI`) |
 | `npm run db:bootstrap` | Idempotent bootstrap: collections, indexes, owner admin account |
+| `npm run db:reset-admin` | Create an admin or reset a forgotten password (hidden prompt) |
 | `npm run db:test-promo` | Promo integration suite against the running dev server (validates then cleans up) |
 | `npm run setup` | Create `.env` (local or `--atlas`), generate the owner password |
 | `npm run db:up` / `db:down` / `db:logs` | Local MongoDB via Docker Compose |
@@ -79,7 +80,7 @@ npm run start      # serves the production build on :3000
 
 ## Environment Variables
 
-Copy `.env.example` to `.env` and fill in values. `.env*` is gitignored — never commit real credentials. Runtime admin auth lives entirely in MongoDB (`adminUsers` + `sessions`); no admin passwords are read from the environment by the app.
+Copy `.env.example` to `.env` and fill in values. For deployment use `.env.production.example` (see `docs/ENVIRONMENT.md` → Deployment environment). `.env*` is gitignored — never commit real credentials. Runtime admin auth lives entirely in MongoDB (`adminUsers` + `sessions`); no admin passwords are read from the environment by the app.
 
 | Variable | Required | Purpose |
 | --- | --- | --- |

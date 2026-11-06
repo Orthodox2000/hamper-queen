@@ -2,6 +2,38 @@
 
 All notable changes to Hamper Queen are documented here. Grouped by audience value.
 
+## 2.2.3 — 2026-11-06 — Admin sign-in hardening & password reset
+
+- **Fixed: a failed first database connection was cached forever** — one Atlas hiccup (IP allow-list not applied yet, brief network blip) made every admin/API call fail until the server instance restarted. The client is now retried on the next request.
+- **Fixed: login redirect** — the form now does a full navigation to `/admin` after sign-in, so the fresh httpOnly cookie is always sent.
+- **New: `npm run db:reset-admin`** (`scripts/reset-admin.mjs`) — create an admin or reset a forgotten password with a hidden prompt; revokes the user's old sessions; same scrypt format as the app.
+- **Login rate limit** — 8 failed attempts per IP + username in 15 minutes returns 429; unknown usernames now cost the same time as wrong passwords (no username enumeration by timing).
+- Docs: forgot-password section in the admin guide, new troubleshooting rows (cookie needs https, 429, wrong `MONGODB_DB`), login checklist in the testing guide.
+- Verified with an automated harness against the real route + auth code (14 checks: login, cookie flags, session lookup, deactivated users, lockout, reset).
+
+## 2.2.2 — 2026-11-06 — Favicons, app icons & site metadata
+
+- **New crown favicon set** — the old icons were the full circular seal, unreadable at 16–32px. Small sizes now use the gold crown on ink: `favicon.ico` (16/32/48), `icon.png` (512), opaque `apple-icon.png` (180), `public/icons/favicon-16|32.png`, `mstile-150.png`.
+- **Installable-app icons** — full seal `icon-192/512.png` (purpose `any`) plus new `maskable-192/512.png` so Android no longer crops the logo.
+- **Manifest** — added `id`, `scope`, `lang`, `orientation`, `categories`, maskable icons and three home-screen shortcuts (Customise, Track, Collections).
+- **Metadata** — `applicationName`, `category`, `authors`, `creator`, `publisher`, `formatDetection`, Windows tile (`browserconfig.xml`), `mobile-web-app-capable`.
+- **Extras** — `/.well-known/security.txt` (expires 2027-11-06, renew yearly) and `/humans.txt`.
+- **`npm run icons`** regenerates all icons from `public/hamper.png` (`scripts/generate-icons.py`, needs Pillow + NumPy).
+
+## 2.2.1 — 2026-11-06 — Hero fit, new top bar, founder strip, cleaner bouquet rates
+
+### Design
+- **Hero fits a regular desktop viewport** — tighter card padding, smaller headline (`lg:text-[2.75rem]` / `xl:text-5xl`), shorter 3D stage (`lg:min-h-[250px]`), and the redundant scroll cue was removed. Columns stay equal height.
+- **Top bar redesigned** — dark ink bar with a gold hairline, icon + diamond separated highlights (same-day dispatch, free delivery, custom hampers from the minimum order) and a pill phone button. It still scrolls away so only the nav bar is sticky.
+- **"Founded by Ms. Supriya Khandekar" moved below the hero** into a new `FounderStrip` band (it no longer lives in the top bar).
+
+### Content
+- Removed the "Gurugram" label from the **Real Retail Rates** block on bouquet/hamper cards; it now reads "Updated <date>". `RETAIL_RATES_LOCATION` was deleted, and `scripts/fetch-retail-rates.mjs` no longer emits it (nor the `locality` key in `retailDataset.json`).
+
+### Environment & docs
+- New `.env.production` (gitignored) and `.env.production.example` listing only the variables the running app reads: `MONGODB_URI`, `MONGODB_DB`, `HQ_BASE_URL`, optional `MONGODB_DIRECT_HOSTS`.
+- `docs/ENVIRONMENT.md`: new "Deployment environment" section with a local-to-deployment mapping, plus the test-only `HQ_ADMIN_USER` / `HQ_ADMIN_PASS` and `BASE_URL` variables that were previously undocumented.
+
 ## 2.2.0 — 2026-11-05 — Party-ready design, server-safe bouquets, one-command environment
 
 ### Design & motion
